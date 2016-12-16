@@ -11,3 +11,10 @@
     2. Parsing: turning stream(array) of tokens into an AST (**A**bstract **S**yntax **T**ree) to represent grammatical structure of the programm
        var a = 2; Top-level node: VariableDeclaration ,childnode: Identifier => a, childnode AssignmentExpression, childnode of AssignmentExpression: NumericLiteral => 2 
     3. Code-Generation: turning AST into executable Code
+  - two types of look-ups: LHS (**L**eft-hand side) and (**R**ight-hand side) ==> 'side' refers to an **assignment operation**
+    * LHS: 'who is the target of the assignment ?' a = 2 ==> find a as target for the = 2 assignment operation
+      - failing loop up results in a *TypeError* in strict mode and a global var being created when not
+    * RHS: 'who is the source(retrieve the value) of the assignment ?' console.log(a) ==> Reference to a to retrieve value
+      - failing loop up results in a *ReferenceError*
+    * **Note** the term 'side' does *not* refer to any actual side of an '='
+
