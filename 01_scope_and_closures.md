@@ -1,8 +1,5 @@
-# Programming
-
-## You Don't Know JavaScript
-### Scope and Closures
-* Compiler Theory
+# Scope and Closures
+### Compiler Theory
   - JS falls in the category of dynamic/interpredet languages
   - despite this it is a compiled language too although it is not compiled well in advance
   - Compilation falls into three steps:
@@ -18,12 +15,12 @@
       - failing loop up results in a *ReferenceError*
     * **Note** the term 'side' does *not* refer to any actual side of an '='
 
-* Lexical Scope
+### Lexical Scope
   - happens in the first step of compilation
   - lexical scope is scope that is defined at lexing time ==> based on where variables and blocks of scope are authored(written) at write time and thus set in stone (few exceptions) by the time the lexer proccesses(finishes?) the code 
   - scope look-up starts at the innermost scope and works it way up/outward and stops once it finds a match
 
-* Function Scope (vs Block Scope)
+### Function Scope (vs Block Scope)
   - JS has function-based scope ==> each declaratoin of a function creates a level of scope
   - Variable Shadowing = a variable in a certain scope has the same name(identifier) as a variable declared in an outer scope and thus 'shadows' the outer one
   - scope-based hiding = wrap a function declaration around around some code to tie this code to the scope of the new wrapping function
@@ -95,7 +92,7 @@
       - the use of `let` in a for-loop header binds the variable to the for-loop body, in fact it **re-binds it** to each *iteration* of the loop, making sure to re-assign it the value from the end of the previous loop iteration
     - `const`
       - introduced by ES6 `const` creates a block-scoped variable, whose value is fixed(constant); any attempt to change that value results in an error
-* Hoisting
+### Hoisting
   - the *Engine* compiles JS code before it interprets it
   - part of the compilation phase is to find and associate all declarations with their appropriate scopes (Lexical Scope)
   - best way to think about this:
@@ -116,7 +113,7 @@
     - multiple/duplicate `var` declarations are ignored; subsequent function declarations *do* override previous ones
     - function declarations in normal blocks are hoisted to the enclosing scope rather than being conditional (in an `if` statement)
       - **Note** this is a subject to be changed in future versions of JS; it is best to avoid declaring functions in blocks alltogether
-* Scope Closure
+### Scope Closure
   - *Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.*
   ```js
   function foo() {
