@@ -95,3 +95,24 @@
       - the use of `let` in a for-loop header binds the variable to the for-loop body, in fact it **re-binds it** to each *iteration* of the loop, making sure to re-assign it the value from the end of the previous loop iteration
     - `const`
       - introduced by ES6 `const` creates a block-scoped variable, whose value is fixed(constant); any attempt to change that value results in an error
+* Hoisting
+  - the *Engine* compiles JS code before it interprets it
+  - part of the compilation phase is to find and associate all declarations with their appropriate scopes (Lexical Scope)
+  - best way to think about this:
+    - all declarations (variables, functions) are processed first, before any code gets executed
+    - `var a = 2;` is not one statement but actually two statements ==> `var a;` and `a = 2;` the first statement (the declaration) is processed during compilation and the second statement (assignment) during execution
+    - metaphorically functions and variable declarations are "moved" from where they appear to the top of the code (their scope) ==> **Hoisting**
+  - function expressions are not hoisted 
+    ```js
+    foo(); // not ReferenceError, but TypeError!
+
+    var foo = function bar() {
+      // ...
+    };
+    ```
+    - the variable identifier `foo` is hoisted and attached to the enclosing scope so `foo()` doesn't fail as a `ReferenceError` but `foo` has no value yet so `foo()` is attempting to invoke the `undefined` value which is an illegal operation ==> `TypeError`
+  - Functions First
+    - function declarations are hoisted before normal variable declarations
+    - multiple/duplicate `var` declarations are ignored; subsequent function declarations *do* override previous ones
+    - function declarations in normal blocks are hoisted to the enclosing scope rather than being conditional (in an `if` statement)
+      - **Note** this is a subject to be changed in future versions of JS; it is best to avoid declaring functions in blocks alltogether
