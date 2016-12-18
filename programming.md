@@ -48,4 +48,13 @@
   ```
     - The i = 3 assignment inside of bar(..) overwrites, unexpectedly, the i that was declared in foo(..) at the for-loop. In this case, it will result in an infinite loop, because i is set to a fixed value of 3 and that will forever remain < 10. The assignment inside bar(..) needs to declare a local variable to use, regardless of what identifier name is chosen. var i = 3; would fix the problem (and would create the previously mentioned "shadowed variable" declaration for i) 
   - Functions As Scope
-    
+    - wrapping everything in a function might not be ideal because the declared identifier name of the function (e.g 'foo') pollutes the enclosing scope (e.g global) and it has to be called by its name to execute the code ==> foo()
+    - Better : if the function didnt need a name or the name wouldnt pollute the enclosing scope and get automatically executed
+      ```js
+      (function foo() {
+        ... 
+      })();
+      ```
+    - the function is treated as a function-expression instead of a standard declaration 
+      - if 'function' is the **very** first thing in the statement, then its a function declaration; else it's a function expression
+    - in this case 'foo' is not bound the enclosing (global) scope, but instead only inside of its own function ==> the identifier 'foo' is only found in the '...' not the outer scope (prevent pollution)
