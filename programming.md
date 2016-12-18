@@ -86,3 +86,12 @@
 
      console.log( a ); // 2
     ```
+  - Block scope in JS
+    - ways to utilize block scope in JS
+      1. 'with': the scope created from the object only exists for the lifetime of that *with* statement and not in the enclosing scope; frowned upon
+      2. 'try/catch': variable declarations in `catch` are block-scoped to the `catch` block
+      3. 'let': introduced by ES6; another way to declare variables; attaches the variable declaration to the scope of whatever block it's contained in; **Note** declarations made with `let` wil not hoist the entire scope of the block they appear in
+    - `let` Loops
+      - the use of `let` in a for-loop header binds the variable to the for-loop body, in fact it **re-binds it** to each *iteration* of the loop, making sure to re-assign it the value from the end of the previous loop iteration
+    - `const`
+      - introduced by ES6 `const` creates a block-scoped variable, whose value is fixed(constant); any attempt to change that value results in an error
