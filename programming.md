@@ -57,4 +57,32 @@
       ```
     - the function is treated as a function-expression instead of a standard declaration 
       - if 'function' is the **very** first thing in the statement, then its a function declaration; else it's a function expression
-    - in this case 'foo' is not bound the enclosing (global) scope, but instead only inside of its own function ==> the identifier 'foo' is only found in the '...' not the outer scope (prevent pollution)
+    - in this case 'foo' is not bound the enclosing (global) scope, but instead only inside of its own function ==> the identifier 'foo' is only found in the '...' not the outer scope (preventing pollution)
+  - Anonymous vs Named Functions
+    - **Anonymous Function Expressions** have a few drawbacks
+      1. no useful name to display in stack traces, which complicates debugging
+      2. without a name problems occur at recursion or unbinding an event handler
+      3. a descriptive function name helps in providing more readable Code
+    - Solution: **Inline Function Expressions** have no tangible downsides
+    ```js
+    setTimeout( function timeoutHandler(){ // <-- Look, I have a name!
+        console.log( "I waited 1 second!" );
+        }, 1000 );
+    ```
+  - IIFE (Immediately Invoked Function Expressions)
+    - having a function expression by wrapping it in a ( ) pair, it can be immediately executed by adding another () at the end
+    - IFFE's dont need names but it is considered best practise because of the aforementioned benefits 
+    - IIFE's are in fact just function calls thus arguments can be passed
+    ```js
+    var a = 2;
+
+    (function IIFE( global ){
+
+     var a = 3;
+     console.log( a ); // 3
+     console.log( global.a ); // 2
+
+     })( window );
+
+     console.log( a ); // 2
+    ```
