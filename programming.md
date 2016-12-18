@@ -138,4 +138,91 @@
     - invoking `baz()` invokes the inner function `bar()` *outside* of it's declared scope
     - **However** the entirety scope of the inner scope of `foo()` does not go away after `foo()` has been executed (it is closed into `bar`), because the inner scope is "still used" by **`bar()`**
     - **bar() still has a reference to that scope, and that reference is called closure** ==> thus has access to the author-time lexical scope, so it can access the variable `a`
+  - [Loops + Closure](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md#loops--closure)
+  - Modules
+    - one of the most powerful code patterns that leverage the usefulnes of closure are ***modules***
+    ```js
+    function CoolModule() {
 
+      // private and hidden
+      var something = "cool";
+      var another = [1, 2, 3];
+
+      function doSomething() {
+        console.log( something );
+      }
+
+      function doAnother() {
+        console.log( another.join( " ! " ) );
+      }
+
+      return {
+               doSomething: doSomething,
+               doAnother: doAnother
+      };
+    }
+
+    var foo = CoolModule();
+
+    foo.doSomething(); // cool
+    foo.doAnother(); // 1 ! 2 ! 3
+    ```
+    - this pattern is called the "Revealing Module"
+    - requirements for the module patterns
+       1. There must be an outer enclosing function, and it must be invoked at least once (each time creates a new module instance
+       2. The enclosing function must return back at least one inner function, so that this inner function has closure over the private scope, and can access and/or modify that private state
+    - **Singleton** for when only one instance of a module is needed
+    ```js
+    var foo = (function CoolModule() {
+        var something = "cool";
+        var another = [1, 2, 3];
+
+        function doSomething() {
+            console.log( something );
+        }
+
+        function doAnother() {
+            console.log( another.join( " ! " ) );
+        }
+
+        return {
+            doSomething: doSomething,
+            doAnother: doAnother
+        };
+    })();
+
+    foo.doSomething(); // cool
+    foo.doAnother(); // 1 ! 2 ! 3
+    ```
+    - Modules are just functions, so they can recieve parameters
+    - it can also be useful to name the object that gets returned (e.g publicApi)
+    ```js
+    var foo = (function CoolModule(id) {
+
+      function change() {
+        // modifying the public API
+        publicAPI.identify = identify2;
+      }
+
+      function identify1() {
+        console.log( id );
+      }
+
+      function identify2() {
+        console.log( id.toUpperCase() );
+      }
+
+      var publicAPI = {
+        change: change,
+        identify: identify1
+      };
+
+      return publicAPI;
+    })( "foo module" );
+
+    foo.identify(); // foo module
+    foo.change();
+    foo.identify(); // FOO MODULE
+    ```
+    - by retaining an inner reference to the public API object inside the module instance, it can be modified from the inside, including adding and removing methods, properties, and changing their values
+    - [Modern Modules](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md#modern-modules) & [Future Modules](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md#future-modules)
