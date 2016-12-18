@@ -116,3 +116,4 @@
     - multiple/duplicate `var` declarations are ignored; subsequent function declarations *do* override previous ones
     - function declarations in normal blocks are hoisted to the enclosing scope rather than being conditional (in an `if` statement)
       - **Note** this is a subject to be changed in future versions of JS; it is best to avoid declaring functions in blocks alltogether
+      ~~test~~ 
