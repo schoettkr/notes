@@ -116,4 +116,26 @@
     - multiple/duplicate `var` declarations are ignored; subsequent function declarations *do* override previous ones
     - function declarations in normal blocks are hoisted to the enclosing scope rather than being conditional (in an `if` statement)
       - **Note** this is a subject to be changed in future versions of JS; it is best to avoid declaring functions in blocks alltogether
-      ~~test~~ 
+* Scope Closure
+  - *Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.*
+  ```js
+  function foo() {
+    var a = 2;
+
+    function bar() {
+      console.log( a );
+    }
+
+    return bar;
+  }
+
+  var baz = foo();
+
+  baz(); // 2 -- Whoa, closure was just observed, man.
+  ```
+    - `foo` returns `bar` which references `a`from the lexical scope of `foo`
+    - after execution of `foo()` the returned value (the inner `bar()` function) is assigned to a variable called baz
+    - invoking `baz()` invokes the inner function `bar()` *outside* of it's declared scope
+    - **However** the entirety scope of the inner scope of `foo()` does not go away after `foo()` has been executed (it is closed into `bar`), because the inner scope is "still used" by **`bar()`**
+    - **bar() still has a reference to that scope, and that reference is called closure** ==> thus has access to the author-time lexical scope, so it can access the variable `a`
+
