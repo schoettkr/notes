@@ -92,6 +92,7 @@
       - the use of `let` in a for-loop header binds the variable to the for-loop body, in fact it **re-binds it** to each *iteration* of the loop, making sure to re-assign it the value from the end of the previous loop iteration
     - `const`
       - introduced by ES6 `const` creates a block-scoped variable, whose value is fixed(constant); any attempt to change that value results in an error
+
 ### Hoisting
   - the *Engine* compiles JS code before it interprets it
   - part of the compilation phase is to find and associate all declarations with their appropriate scopes (Lexical Scope)
@@ -113,6 +114,7 @@
     - multiple/duplicate `var` declarations are ignored; subsequent function declarations *do* override previous ones
     - function declarations in normal blocks are hoisted to the enclosing scope rather than being conditional (in an `if` statement)
       - **Note** this is a subject to be changed in future versions of JS; it is best to avoid declaring functions in blocks alltogether
+
 ### Scope Closure
   - *Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.*
   ```js
