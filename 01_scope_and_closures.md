@@ -170,7 +170,7 @@ baz(); // 2 -- Whoa, closure was just observed, man.
   - requirements for the module patterns
      1. There must be an outer enclosing function, and it must be invoked at least once (each time creates a new module instance
      2. The enclosing function must return back at least one inner function, so that this inner function has closure over the private scope, and can access and/or modify that private state
-  - **Singleton** for when only one instance of a module is needed
+  - Example of a  so called ***singleton*** for when only one instance of a module is needed
   ```js
   var foo = (function CoolModule() {
       var something = "cool";
