@@ -203,3 +203,97 @@ foo.call( obj ); // 2
 - arrow functions don't follow the rules above but adopt the `this` from it's enclosing function call (similar to `self = this`)
 - [Softening Binding](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md#softening-binding)
 
+
+## Objects
+- two forms: 
+  1. declarative (literal) form:
+  ```js
+  var myObject = {
+    key: value,
+    key2: value2
+    // ...
+  }
+  ```
+  2. constructed form (uncommon):
+  ```js
+  var myObject = new Object();
+  myObject.key = value;
+  myObject.key2 = value2;
+  ```
+  These result in the same sort of object, the only difference is that the literal can take multiple key/value pairs at once
+- six primary/primitive types (not *object* types): string, number, boolean, null, undefined, object
+  - the first 5 are not themselves objects
+- "everything in JavaScript is an object" **is not true**
+
+### Built-in Objects (object sub-types)
+- String, Number, Boolean, Object, Function, Array, Date, RegExp, Error
+- these are actually just built-in functions
+  - therefore can be used as a constructor (with `new`), which results in a newly *constructed* object of the specified sub-type
+  ```js
+  var strPrimitive = "I am a string";
+  typeof strPrimitive;                            // "string"
+  strPrimitive instanceof String;                 // false
+
+  var strObject = new String( "I am a string" );  // object created by "String" constructor
+  typeof strObject;                               // "object"
+  strObject instanceof String;                    // true
+  ```
+  - `strPrimitive` is  not an object, it is a primitive literal and immutable
+    - to perform operations on it (e.g check length) a `String` object is required
+    - to allow this JS automatically coerces a "string" primitive to a `String` object when necessary
+      - same thing would happen between a literal primitive `42` and a `new Number(42)` object wrapper, when using a method like `12.453.toFixed(2)`
+      - likewise for `Boolean` objects from `"boolean"` primitives
+- `null` and `undefined` have no object wrapper form, only their primitive values
+- `Date` values can *only* be created with the constructing object form (no literal counterpart)
+- `Error` objects are rarely created explicitly (usually created automatically when exceptions are thrown)
+- Arrays
+  - the "." operator requires an `Identifier` compatible property name whereas "[]" can take any UTF-8/unicode compatible strings as the name for the property
+    - that is why arrays use `[ ]` access since their properties are positive integers
+  - in objects, property names are always strings any other value besides a `string`(primitive) will first be converted to a string, including numbers which are used as array indexes
+  - arrays are objects so it is possible to add properties (does not change the result of arr.length)
+    - a string containing a number as a property will end up being added to the array (arr.length will increase)
+- Duplicating Objects
+  - if an object is JSON-safe it can be duplicated by serializing it to a JSON string and then re-parsing it to an Object
+  ```js
+  var newObj = JSON.parse( JSON.stringify( someObj ) );
+  ```
+  - a shallow (not deep) copy is achieved by using ES6's `Object.assign(..)` which takes a *target* object as first parameter and one or more *source* objects as subsequent parameters
+    - it iterates over all enumerable, owned keys (immdediately present) on the `source` objects and copies them via `=` assignment to the target
+
+### Property Descriptors
+- properties are descriped in terms of a **property descriptor**
+  ```js
+  var myObject = {
+    a: 2
+  };
+
+  Object.getOwnPropertyDescriptor( myObject, "a" );
+  // {
+  //    value: 2,
+  //    writable: true,
+  //    enumerable: true,
+  //    configurable: true
+  // }
+  ```
+  - this includes much more than just its `value` of `2`
+- with `Object.defineProperty(..)` new properties can be added, or existing ones modified
+  ```js
+  var myObject = {};
+  Object.defineProperty( myObject, "a", {
+      value: 2,
+      writable: true,
+      enumerable: true,
+      configurable: true
+  } );
+  ```
+
+**Writable**
+- `true` if it's possible to change the property's value, `false` otherwise
+**Configurable**
+- `true` if it's possible to modify the other property descriptor definitions
+- `false` also prevents to use `delete myObject.myProperty` to remove an existing property
+- **Note** even if `configurable` is `false` `writable` can always be changed from `true` to `false` but not back (TypeError)
+**Enumerable**
+-  controls if a property will show up in certain object-property enumerations (e.g `for .. in`)
+- set to false to prevent showing up in such enumerations even though it's still completely accessible, set to true to keep it present
+- normal user-defined properties are defaulted to `enumerable`(true)
