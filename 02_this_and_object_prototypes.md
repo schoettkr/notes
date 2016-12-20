@@ -1,5 +1,5 @@
 # *this* & Object Prototypes
-## Call-site
+### Call-site
 - `this` is a binding made for each function invocation, based entirely on how the function is called (its call-side) ==> inspect the call-site to answer what `this` is referring to
 - to find out where a function is called from inspect the **call-stack** (the stack of functions that have been called to get to the current moment in execution)
   - the relevant call-site is *in* the invocation *before* the currently executing function
@@ -182,4 +182,24 @@ foo.call( obj ); // 2
   2. newly created object is Prototype-linked
   3. newly created object is set as the `this` binding for that function call (*new binding*)
   4. unless the function returns its own alternate object, the `new`-invoked function call will automatically return the newly created object
+
+### Precedence
+- *new binding* is more precedent than *implicit binding*
+  - a hard bound call is able to be overridden with *new*
+  - if the function is called with `new`, `this` is that newly created object
+- *explicit binding* takes precedence over *implicit binding*
+  - if the function is called with `call` or `apply` or even hidden inside a `bind` hard binding `this` is the explicitly specified object
+  - if the function is called with a context (implicit binding) `this` is *that* context object
+- *default binding* has the lowest priority
+  - in strict mode the default `this` will be `undefined` and the `global` object otherwise
+
+### Misc
+- if `null` or `undefined` is passed as a binding parameter to `call`, `apply` and `bind` those values are ignored and instead the *default binding* rule applies
+  - if a function doesnt care about `this` `null` might be a reasonable placeholder
+  - or use a completely empty object(DMZ) for this case to prevent side effects
+- it's quite common to use `apply(...)` for using an array of values as parameters
+  - ES6 has the `...` spread operator to avoid a `this` binding if it's unnecessary => `foo(...[1,2])`
+- `bind(...)` can curry parameters (pre-set values)
+- arrow functions don't follow the rules above but adopt the `this` from it's enclosing function call (similar to `self = this`)
+- [Softening Binding](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md#softening-binding)
 
