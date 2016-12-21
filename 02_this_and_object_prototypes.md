@@ -338,3 +338,72 @@ foo.call( obj ); // 2
   - for accessor-descriptors `value` and `writable` characteristics of the descriptor are ignored and instead the `set` and `get` characteristics of the property (and `configurable` and `enumerable`) are considered 
 - (More)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch3.md#getters--setters]
 
+## Class Theory & Object Oriented Design
+###*Not* JS specific
+- stresses that data has assocciated behavior (different depending on type & nature of the data) that operates on it 
+  - so proper design is to package (encapsulate) the data and the behavior together ==> "data structures"
+  - Example: the characters of a string are the data and the behaviors that can be applied to that string (calculate length, searching, append something) are  all designed as methods of a `String` class
+    - any string is just an instance of this class, whhich means that it's a neatly collected package of both, the data and the functionality
+- an example for **classifying** a certain data structure is the relation between a `Car` and a `Vehicle` class where the former inherits from the latter (ability to carry people, engine, ..)
+- another key concept is **polymorphism** which means that a general behavior from a parent class can be overriden in a child class to make it more specific
+  - class theory suggests that a parent and a child class share the same method name for a certain behavior so that the child overrides the parent
+- a child class is not linked to its parent class, instead it gets a copy of what it needs from the parent class ==> **Class inheritance implies copies**
+###JS "Classes"
+- JavaScript actually does **not** have classes (eventhough there is class-like syntax)
+- since classes are design patterns it is possible to implement approximations for classical class functionality tho
+- JS does not provide a native mechanism for "multiple inheritance"
+###Mixins
+- the name 'mixin' comes from an alternate way of explaining the task 
+  - for example> `Car` has `Vehicle`s contents **mixed-in** 
+- JS's object mechanism does not *automatically* perform copy behavior when you "inherit" or "instantiate" because there are no classes, only objects
+  - objects don't get copied to other objects, they instead get *linked together*
+- JS developers fake the missing copy behavior of classes with mixins (explicit and implicit)
+  - dealing with objects (not classes)
+####Explicit Mixins
+- utility that manually copies behavior from one class (parent) to another (child) (often called `extend(...)`)
+  ```js
+  // vastly simplified `mixin(..)` example:
+  function mixin( sourceObj, targetObj ) {
+    for (var key in sourceObj) {
+        // only copy if not already present
+        if (!(key in targetObj)) {
+            targetObj[key] = sourceObj[key];
+        }
+    }
+
+    return targetObj;
+  }
+
+  var Vehicle = {
+      engines: 1,
+
+      ignition: function() {
+          console.log( "Turning on my engine." );
+      },
+
+      drive: function() {
+          this.ignition();
+          console.log( "Steering and moving forward!" );
+      }
+  };
+
+  var Car = mixin( Vehicle, {
+      wheels: 4,
+
+      drive: function() {
+          Vehicle.drive.call( this );
+          console.log( "Rolling on all " + this.wheels + " wheels!" );
+      }
+  } );
+  ```
+  - `Car` now has a copy of the properties and functions from `Vehicle`
+  - technically functions are not copied but rather *references* to the functions are copied
+  - because both objects have a property(function) `drive` the `this` binding for that function would be the `Vehicle` object instead of the `Car` object so `.call( this )` is used to ensure `drive()` is executed in the context of the `Car` object
+  - **Note:** If the function name identifier for Car.drive() hadn't overlapped with (aka, "shadowed"; see Chapter 5) Vehicle.drive(), we wouldn't have been exercising "method polymorphism". So, a reference to Vehicle.drive() would have been copied over by the mixin(..) call, and we could have accessed directly with this.drive(). The chosen identifier overlap shadowing is why we have to use the more complex *explicit pseudo-polymorphism* approach
+    - this creates brittle(bruechige) linkage(verknuepfungen) and while *explicit pseudo-polymorphism* can emualte "multiple inheritance" it increases complexity und thus should be avoided wherever possible
+- explicit mixins are a fine mechanism in JS but appear more powerful than they really are
+- (Parasitic Inheritance)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#parasitic-inheritance]
+####Implicit Mixins
+- closely related to *explicit pseudo-polymorphism* (same caveats)
+- (More)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#implicit-mixins]
+
