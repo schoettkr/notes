@@ -287,13 +287,54 @@ foo.call( obj ); // 2
   } );
   ```
 
-**Writable**
+####Writable
 - `true` if it's possible to change the property's value, `false` otherwise
-**Configurable**
+####Configurable
 - `true` if it's possible to modify the other property descriptor definitions
 - `false` also prevents to use `delete myObject.myProperty` to remove an existing property
 - **Note** even if `configurable` is `false` `writable` can always be changed from `true` to `false` but not back (TypeError)
-**Enumerable**
--  controls if a property will show up in certain object-property enumerations (e.g `for .. in`)
+####Enumerable
+-  controls if a property will show up in certain object-property enumerations/interations (e.g `for .. in`)
 - set to false to prevent showing up in such enumerations even though it's still completely accessible, set to true to keep it present
 - normal user-defined properties are defaulted to `enumerable`(true)
+- check with `myObject.propertyIsEnumerable("propName")` (checks only *directly* on the object)
+- `Object.keys` returns all *enumerable* properties, whereas `Object.getOwnPropertynames(myObject)` returns an array of `all` properties (both inspect only the direct object)
+
+
+### Immutability (Unveraenderlichkeit)
+- immutable means that an object or properties cannot be changed (either by accident or intentional)
+- they are differently nuanced ways to achieve this since ES5 but all of them create shallow immutability
+  - if an object has a reference to another object (array, object, function, etc) the *contents* of that object can still be changed(remain mutable) unless that object is made immutable aswell
+#### Object Constant
+- combining `writable: false` and `configurable: false` to create a *constant* (cannot be changed, redefined or deleted) as an object property
+#### Prevent Extensions
+- `Object.preventExtensions( myObject )` prevents an object from having new properties added to it, but leaves the of the object's properties alone
+#### Seal 
+- `Object.seal( myObject )` creates a "sealed" object which prevents adding, reconfiguring and deleting any properties
+  - esseantially calls `Object.preventExtensions( myObject )`  on the object **and** marks all existing properties as `configurable: false`
+  - it is still possible to modify a property's value
+#### Freeze
+- `Object.freeze( myObject )` essentially *seals* an object but also marks all "data accessor" properties as `writable: false` so that the values cannot be modified
+  - highest level of immutability
+
+### `[[Get]]` and `[[Put]]`
+- property access actually performs a `[[Get]]` operation 
+  - if it cannot come up with a value for the requested value it returns `undefined`
+    - inspecting only these results you cannot distinguish whether a property exists and just holds the value `undefined` or it does not exist and thus `undefined` is returned
+    - **Solution:** the `in` operator checks to see if a property is present in an objector at any higher level of the prototype-chain
+      ```js 
+      ("presentProp" in myObject); // true
+      ("nonpresentProp" in myObject); // false
+      ```
+      - `hasOwnProperty(...) does the same *without* consulting the prototype-chain
+    - **Note** referencing **variables** that cannot be found the result is a `ReferenceError` 
+- `[[Put]]` behaves differently based on a number factors, including whether the property is already present
+
+### Getters & Setters
+- ES5 introduced a way to override the default ([Get] and [Put]) operations, not on an object level but a per-property level
+- getters are properties which call a hidden function to retrieve a value
+- setters are properties which call a hidden function to set a value
+- defining a property with a getter or setter (or both) it's definition becomes an "accessor descriptor" (opposed to a "data descriptor")
+  - for accessor-descriptors `value` and `writable` characteristics of the descriptor are ignored and instead the `set` and `get` characteristics of the property (and `configurable` and `enumerable`) are considered 
+- (More)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch3.md#getters--setters]
+
