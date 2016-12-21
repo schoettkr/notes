@@ -293,6 +293,7 @@ foo.call( obj ); // 2
 - `true` if it's possible to modify the other property descriptor definitions
 - `false` also prevents to use `delete myObject.myProperty` to remove an existing property
 - **Note** even if `configurable` is `false` `writable` can always be changed from `true` to `false` but not back (TypeError)
+
 ####Enumerable
 -  controls if a property will show up in certain object-property enumerations/interations (e.g `for .. in`)
 - set to false to prevent showing up in such enumerations even though it's still completely accessible, set to true to keep it present
@@ -305,14 +306,18 @@ foo.call( obj ); // 2
 - immutable means that an object or properties cannot be changed (either by accident or intentional)
 - they are differently nuanced ways to achieve this since ES5 but all of them create shallow immutability
   - if an object has a reference to another object (array, object, function, etc) the *contents* of that object can still be changed(remain mutable) unless that object is made immutable aswell
+
 #### Object Constant
 - combining `writable: false` and `configurable: false` to create a *constant* (cannot be changed, redefined or deleted) as an object property
+
 #### Prevent Extensions
 - `Object.preventExtensions( myObject )` prevents an object from having new properties added to it, but leaves the of the object's properties alone
+
 #### Seal 
 - `Object.seal( myObject )` creates a "sealed" object which prevents adding, reconfiguring and deleting any properties
   - esseantially calls `Object.preventExtensions( myObject )`  on the object **and** marks all existing properties as `configurable: false`
   - it is still possible to modify a property's value
+
 #### Freeze
 - `Object.freeze( myObject )` essentially *seals* an object but also marks all "data accessor" properties as `writable: false` so that the values cannot be modified
   - highest level of immutability
@@ -339,6 +344,7 @@ foo.call( obj ); // 2
 - (More)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch3.md#getters--setters]
 
 ## Class Theory & Object Oriented Design
+
 ###*Not* JS specific
 - stresses that data has assocciated behavior (different depending on type & nature of the data) that operates on it 
   - so proper design is to package (encapsulate) the data and the behavior together ==> "data structures"
@@ -348,10 +354,12 @@ foo.call( obj ); // 2
 - another key concept is **polymorphism** which means that a general behavior from a parent class can be overriden in a child class to make it more specific
   - class theory suggests that a parent and a child class share the same method name for a certain behavior so that the child overrides the parent
 - a child class is not linked to its parent class, instead it gets a copy of what it needs from the parent class ==> **Class inheritance implies copies**
+
 ###JS "Classes"
 - JavaScript actually does **not** have classes (eventhough there is class-like syntax)
 - since classes are design patterns it is possible to implement approximations for classical class functionality tho
 - JS does not provide a native mechanism for "multiple inheritance"
+
 ###Mixins
 - the name 'mixin' comes from an alternate way of explaining the task 
   - for example> `Car` has `Vehicle`s contents **mixed-in** 
@@ -359,6 +367,7 @@ foo.call( obj ); // 2
   - objects don't get copied to other objects, they instead get *linked together*
 - JS developers fake the missing copy behavior of classes with mixins (explicit and implicit)
   - dealing with objects (not classes)
+
 ####Explicit Mixins
 - utility that manually copies behavior from one class (parent) to another (child) (often called `extend(...)`)
   ```js
@@ -403,7 +412,9 @@ foo.call( obj ); // 2
     - this creates brittle(bruechige) linkage(verknuepfungen) and while *explicit pseudo-polymorphism* can emualte "multiple inheritance" it increases complexity und thus should be avoided wherever possible
 - explicit mixins are a fine mechanism in JS but appear more powerful than they really are
 - (Parasitic Inheritance)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#parasitic-inheritance]
+
 ####Implicit Mixins
 - closely related to *explicit pseudo-polymorphism* (same caveats)
-- (More)[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#implicit-mixins]
+- More[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#implicit-mixins]
+
 
