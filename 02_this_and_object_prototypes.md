@@ -289,6 +289,7 @@ foo.call( obj ); // 2
 
 ####Writable
 - `true` if it's possible to change the property's value, `false` otherwise
+
 ####Configurable
 - `true` if it's possible to modify the other property descriptor definitions
 - `false` also prevents to use `delete myObject.myProperty` to remove an existing property
@@ -417,4 +418,24 @@ foo.call( obj ); // 2
 - closely related to *explicit pseudo-polymorphism* (same caveats)
 - More[https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md#implicit-mixins]
 
+##Prototypes
+- Objects in JS have an internal property called `Prototype` which is simply a reference to another object
+- if a property is referenced and not directly present on an object the `Get` operations proceeds to follow the `Prototype` **link** of the object
+  - this proceeds until either a matching property is found or the prototypal chain ends and `undefined` is returned
+  - `for..in` also iterates over properties that can be reached over the prototypal chain (if enumerable)
+  - `in` operator checks also for the entire chain (regardless of enumerability)
+- the top-end of every *normal* prototype chain is the built-in `Object.prototype` (all normal/built-in objects descend from that object)
+  - this object includes a variety of common utilities
 
+###Setting & Shadowing Properties
+```js
+myObject.foo = "bar";
+```
+- if `foo` is directly present on `myObject` this assignment changes the value of the existing property
+  - if it exists somewhere higher too, the `foo` property directly on `myObject` *shadows* any `foo` from a higher level
+- if `foo` is not found anywhere it is added directly to `myObject`
+- if `foo` is not directly present the `Prototype` chain is traversed (just like a `Get` operation)
+  1. if `foo` is found anywhere higher and is not marked as readonly (writable) then a new property is added directly to `myObject` ==> shadowed property
+  2. if `foo` is found anywhere higher and is read-only(not writable), then the setting of that existing property as well as the creation of the shadowed property on myObject **are disallowed** ==> no shadowing occurs
+  3. if `foo` is found anywhere higher and is a setter then the setter will always be called ==> no `foo` will be added/shadowed to myObject, nor will the `foo` setter be redefined
+  - to shadow in the cases 2 & 3 use `Object.defineProperty(..)`
