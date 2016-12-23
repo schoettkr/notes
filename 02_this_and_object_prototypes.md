@@ -439,3 +439,54 @@ myObject.foo = "bar";
   2. if `foo` is found anywhere higher and is read-only(not writable), then the setting of that existing property as well as the creation of the shadowed property on myObject **are disallowed** ==> no shadowing occurs
   3. if `foo` is found anywhere higher and is a setter then the setter will always be called ==> no `foo` will be added/shadowed to myObject, nor will the `foo` setter be redefined
   - to shadow in the cases 2 & 3 use `Object.defineProperty(..)`
+
+####"Class" Functions
+- in JS there are no copy-actions performed and no instances of classes created
+  - instead (multiple) objects can be created that `Prototype` *link* to a common object
+    - these objects are not totally seperated but rather ***linked***
+  - **we end up with two objects, linked to each other** ==> calling this *prototypal inheritance* is confusing because *inheritance* (implies copy operation) implies much more than this linkage, adding *prototypal* in front of that does not change the fact that the word "inheritance" does not fit the way JS operates in this case
+    - instead JS creates links, where an object can essentially *delegate* property/function access to another object ==> thus **Delegation** is a much more accurate term for JS's object linking mechanism
+```js
+function Foo() {
+    // ...
+}
+
+Foo.prototype; // { }
+```
+- the property `prototype` points at an otherwise arbitrary object ("object arbitrarily labeled 'Foo dot prototype'")
+  - each object created from `new Foo()` will be prototype-linked to this object (the object that `Foo.prototype` is pointing at)
+  ```js
+  var a = new Foo();
+  Object.getPrototypeOf( a ) === Foo.prototype; // true
+  ```
+
+  - `new Foo()` has almost nothing *direct* to do with the process of creating this link ==> more of an accidental side-effect
+    - more **direct** way: `Object.create(..)` 
+
+####"Constructors"
+- what lead to think `Foo` is a "class"?
+  - `new` keyword (constructs class instances in class-oriented languages)
+  - it appears that a *constructor* method of a class (because `Foo()` is actually a method that gets called) is executed  
+  - capital 'F'oo even though this doesn't mean anything at all to the JS engine
+  - another confusion:
+  ```js
+  Foo.prototype.constructor === Foo; // true
+  var a = new Foo();
+  a.constructor === Foo; // true
+  ```
+    - `a` directly **does not have a**  `.constructor` property on it so it resolves to the `Foo` function 
+    - "constructor" **does not actually mean** "was constructed by"
+- putting `new` in front of a normal function call makes that function call a "constructor call"
+  - `new` hijacks any normal function and calls it in a fasion that constructs an object, **in addition to whatever else it was going to do**
+  ```js
+  function NothingSpecial() {
+    console.log( "Don't mind me!" );
+  }
+
+  var a = new NothingSpecial();
+  // "Don't mind me!"
+
+  a; // {}
+  ```
+  - `NothingSpecial` is just a plain old normal function, but when called with new, it constructs an object, almost as a side-effect, which we happen to assign to a
+  - the call was a constructor call, but NothingSpecial is not, in and of itself, a constructor
