@@ -490,3 +490,66 @@ Foo.prototype; // { }
   ```
   - `NothingSpecial` is just a plain old normal function, but when called with new, it constructs an object, almost as a side-effect, which we happen to assign to a
   - the call was a constructor call, but NothingSpecial is not, in and of itself, a constructor
+
+####Prototypes
+- the Prototype mechanism is an internal link that exists on one object which references some other object
+  - this linkage is (primarily) exercised when a property/method reference is made against the first object, and no such property/method exists
+  - in that case, the Prototype linkage tells the engine to look for the property/method on the linked-to object
+  - in turn, if that object cannot fulfill the look-up, its Prototype is followed, and so on 
+    - this series of links between objects forms what is called the "prototype chain"
+- ways to link `Bar.prototype` to `Foo.prototype`
+```js
+// pre-ES6
+// throws away default existing `Bar.prototype`
+Bar.prototype = Object.create( Foo.prototype );
+
+// ES6+
+/ modifies existing `Bar.prototype`
+Object.setPrototypeOf( Bar.prototype, Foo.prototype );
+```
+- inspect relationship between two object
+```js
+// Simply: does `b` appear anywhere in
+// `c`s [[Prototype]] chain?
+b.isPrototypeOf( c );
+```
+- retrieve prototype of an object
+```js
+Object.getPrototypeOf( a );
+```
+
+###`create( .. `ing Links
+- `Object.create( .. )` creates a new object linked to the object specified as first argument
+  - to use all of the prototype power 
+  - without any of the unnecessary complication of `new` functions acting as classes and constructor calls, confusing `.prototype` and `.constructor` reference or any of that
+  - `Object.create(null)` creates an object that has an empty Prototype Linkage and thus can't delegate anywhere
+    - typically used purely for storing data without side effects
+```js
+var anotherObject = {
+    a: 2
+};
+
+var myObject = Object.create( anotherObject, {
+    b: {
+        enumerable: false,
+        writable: true,
+        configurable: false,
+        value: 3
+    },
+    c: {
+        enumerable: true,
+        writable: false,
+        configurable: false,
+        value: 4
+    }
+} );
+
+myObject.hasOwnProperty( "a" ); // false
+myObject.hasOwnProperty( "b" ); // true
+myObject.hasOwnProperty( "c" ); // true
+
+myObject.a; // 2
+myObject.b; // 3
+myObject.c; // 4
+```
+- second argument to `Object.create( .. )` specifies property names to add to the newly created object, via declaring each new property's *propery descriptor*
