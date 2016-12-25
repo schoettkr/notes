@@ -440,7 +440,7 @@ myObject.foo = "bar";
   3. if `foo` is found anywhere higher and is a setter then the setter will always be called ==> no `foo` will be added/shadowed to myObject, nor will the `foo` setter be redefined
   - to shadow in the cases 2 & 3 use `Object.defineProperty(..)`
 
-####"Class" Functions
+###"Class" Functions
 - in JS there are no copy-actions performed and no instances of classes created
   - instead (multiple) objects can be created that `Prototype` *link* to a common object
     - these objects are not totally seperated but rather ***linked***
@@ -463,7 +463,7 @@ Foo.prototype; // { }
   - `new Foo()` has almost nothing *direct* to do with the process of creating this link ==> more of an accidental side-effect
     - more **direct** way: `Object.create(..)` 
 
-####"Constructors"
+###"Constructors"
 - what lead to think `Foo` is a "class"?
   - `new` keyword (constructs class instances in class-oriented languages)
   - it appears that a *constructor* method of a class (because `Foo()` is actually a method that gets called) is executed  
@@ -491,7 +491,7 @@ Foo.prototype; // { }
   - `NothingSpecial` is just a plain old normal function, but when called with new, it constructs an object, almost as a side-effect, which we happen to assign to a
   - the call was a constructor call, but NothingSpecial is not, in and of itself, a constructor
 
-####Prototypes
+###Prototypes
 - the Prototype mechanism is an internal link that exists on one object which references some other object
   - this linkage is (primarily) exercised when a property/method reference is made against the first object, and no such property/method exists
   - in that case, the Prototype linkage tells the engine to look for the property/method on the linked-to object
@@ -553,3 +553,61 @@ myObject.b; // 3
 myObject.c; // 4
 ```
 - second argument to `Object.create( .. )` specifies property names to add to the newly created object, via declaring each new property's *propery descriptor*
+
+##Behavior Delegation
+- comparison between the classical ("prototypal") Object-Oriented (OO) pattern and the delegation-oriented OLOO (objects-linked-to-other-objects) pattern
+- OO Style
+```js
+function Foo(who) {
+    this.me = who;
+}
+Foo.prototype.identify = function() {
+    return "I am " + this.me;
+};
+
+function Bar(who) {
+    Foo.call( this, who );
+}
+Bar.prototype = Object.create( Foo.prototype );
+
+Bar.prototype.speak = function() {
+    alert( "Hello, " + this.identify() + "." );
+};
+
+var b1 = new Bar( "b1" );
+var b2 = new Bar( "b2" );
+
+// b1 and b2 delegate to Bar.prototype which delegates to Foo.prototype
+
+b1.speak();
+b2.speak();
+```
+
+- exact same functionality using *OLOO* style
+```js
+var Foo = {
+    init: function(who) {
+        this.me = who;
+    },
+    identify: function() {
+        return "I am " + this.me;
+    }
+};
+
+var Bar = Object.create( Foo );
+
+Bar.speak = function() {
+    alert( "Hello, " + this.identify() + "." );
+};
+
+var b1 = Object.create( Bar );
+b1.init( "b1" );
+var b2 = Object.create( Bar );
+b2.init( "b2" );
+
+b1.speak();
+b2.speak();
+```
+  - delegation is the same as in the previous example
+  - but it is greatly simplified because this are just **objects** linked to each other
+    - without all the stuff that looks (but does not behave) like classes, with constructors and prototypes and `new` calls
