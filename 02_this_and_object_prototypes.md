@@ -518,7 +518,7 @@ b.isPrototypeOf( c );
 Object.getPrototypeOf( a );
 ```
 
-###`create( .. `ing Links
+###`create( .. )`ing Links
 - `Object.create( .. )` creates a new object linked to the object specified as first argument
   - to use all of the prototype power 
   - without any of the unnecessary complication of `new` functions acting as classes and constructor calls, confusing `.prototype` and `.constructor` reference or any of that
