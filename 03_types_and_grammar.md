@@ -18,3 +18,5 @@
     var a = null;
     (!a && typeof a === 'object'); // true
     ```
+- in JS variables don't have types, the value that a variable holds has a type
+  - `typeof` operator returns "undefined" for undefined variables *and* even for undeclared variables
