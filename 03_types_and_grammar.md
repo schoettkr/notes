@@ -409,3 +409,44 @@ s2 + "";
 ```
 - `symbol` values cannot coerce to a `number` at all (throws error either way)
 - `symbol` values can bot explicitly and implicitly coercte to `boolean`s (always `true`)
+
+###Loose Equals vs. Strict Equals
+- `==` allows coercion in the equality comparison and `===` disallows coercion
+
+####Abstract Equality (`==`)
+- the `==` operator's behavior is defined as "The Abstract Equality Comparison Algorithm"
+- if two values being compared are of the same type, they are compared via Identity as expected ==> `42` is only equal to `42` and `"abc"` only to `"abc"`
+  - exceptions: `NaN` is never equal to itself, `+0` and `-0` are equal
+- `objects` (including arrays and functions) are only equal if both are references to *the exact same value* (no coerion occurs here)
+  - **Note:** the strict `===` equality comparison **behaves identically** in the case where two `object`s are compared
+- if `==` is used to compare values of different types one or both of the values will need to be implicitly coerced
+  - this coercion happens so that both values eventually end up as the same type, which can then directly be compared using simple value Identity
+
+#####Comparing: `string`s to `number`s
+- when comparing `x` to `y`:
+  - if type of x is `number` and type of y is `string`:
+    - y gets coerced to a number
+  - if type of x is `string` and type of y is `number`:
+    - x gets coerced to a number
+
+#####Comparing: anything to `boolean`
+```js
+var a = true;
+var b = "42";
+a == b; // false
+```
+- even though `a` is a truthy value it is not loose equal to `true`
+- if type of x is boolean:
+  - x gets coerced to a number
+- if type of y is boolean:
+  - y gets coerced to a number
+- in the example above x is booleam so `ToNumber(x)` is performed which coerces `true` to `1` ==> now `1 == "42"` is evaluated which is coerced to `1 == 42` resulting in `false`
+- `ToBoolean` is not even involved here, so the truthiness of `"42"` is irrelevant to the `==` operation
+
+#####Comparing: `null`s to `undefined`s
+- if x is null and y is undefined ==> return true
+- if x is undefined and y is null ==> return true
+- `null` and `undefined` when loose compared coerce to each other (as well as themselves) and no other values
+- the coercion is safe and predictable
+
+#####Comparing: `object`s to non-`object`s
