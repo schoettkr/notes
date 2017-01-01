@@ -462,3 +462,109 @@ a == b; // false
 
 ###Abstract Relational Comparison
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#abstract-relational-comparison)
+
+##Grammar
+- the grammar for JavaScript is a structured way to describe how the syntax (operators, keywords, etc.) fits together into well-formed, valid programs
+
+###Statements & Expressions
+- terminology borrowed from the English language:
+  - a "sentence"(vollständiger Satz mit Prädikat, Subjekt etc.) is one complete formation of words
+    - it is compromised of one or more "phrases"(Ausdruck, Satzteil)
+      - a phrase itself can be made up of smaller phrases
+      - some phrases are incomplete and dont accomplish much by themselves, but others can stand on their own
+    - phrases can be connected with punctuation marks or conjunction words ("and", "or", etc.)
+- so it goes for JS grammar:
+  - statements are sentences
+  - expressions are phrases
+  - operators are conjunctions/punctuation
+- every expression in JS can be evaluated to a single, specific value result:
+```js
+var a = 3 * 6;
+var b = a;
+b;
+```
+- `3 * 6` is an expression (evaluates to 18)
+- `a` on the second line is also an expression, as is `b` on the third
+- the `a` and `b` expressions both evaluate to the values stored in those variables (18)
+- each of the three lines is a statement containing expressions
+  - `var a = 3 * 6` and `var b = a` are called *declaration statements* because they each declare a variable (the value assignments are optional)
+  - the `a = 3 * 6` and `b = a` assignments (minus the `var`s) are called *assignment expressions*
+- the third line contains just the expression `b` but is also a statement all by itself
+  - this is generally called an *expressions statement*
+
+####Statement Completion Values
+- statements all have completion values
+- obvious way to the this value is to type the statement in the browsers console, because the console reports the completion value of the most recent statement executed
+- for example `var a = 18`
+  - the assignment expression `a = 18` results in the assigned value (18) 
+  - but the `var` statement itself results in `undefined` because var statements are defined that way in the JS specification
+- why could it be useful to capture the completion value?
+  - the general idea is to be able to treat statements as expressions so they can show up in other statements (without wrapping them in a function and explicitly returning them)
+- any regular `{ .. }` block has a completion value of its last contained statement/expression
+```js
+var b;
+if (true) {
+  b = 4 + 38;
+}
+```
+- this typed into a console would report `42` since 42 is the completion value of the `if` block which took on the completion value of its last assignment expression statement (`b = ..`)
+  - the completion value of a block is like an *implicit return* of the last statement value in the block
+- for now statement completion values are trivia but they are probably taking on more as JS evolves (ES7 "do expression" proposal)
+
+####Expression Side Effects
+```js
+var a = 42;
+var b = a++;
+```
+- the expression `a++` **first** returns the current value of `a` which is 42 (and then gets assigned to b) and **next** it changes the value of `a` itself to 43
+  - the `++` and the `--` operator are both unary operators which can be used in either a postfix ("after") position or prefix ("before") position
+```js
+var a = 42;
+var b = 42;
+
+a++;    // 42
+a;      // 43
+
+++b;    // 43
+b;      // 43
+```
+- when `++` is used in the prefix position, its side effect (incrementing b) happens *before* the value is returned from the expression, rather *after* as with `a**`
+- the `,` statement-series comma operator allows to string together multiple standalone expression statements into a single statement:
+```js
+var a = 42, b;
+b = ( a++, a );
+
+a;  // 43
+b;  // 43
+```
+- the expressions `a++, a` means that the second `a` statement expression gets evaluated *after* the *side effects* of the first `a++` statement expression took action, which results in `43` getting returned to be assigned to `b`
+- another side-effecting operator is `delete` (removes a property from an object or a slot from an array)
+```js
+var obj = {
+      a: 42
+};
+obj.a;          // 42
+delete obj.a;   // true
+obj.a;          // undefined
+}
+```
+- the result value of the delete operator is true if the requested operation is valid/allowable or false otherwise
+  - but the side effect of the operator is that it removes the property (or array entry)
+- another non-obvious side effecting operator is `=`
+```js
+var a;
+a = 42; // 42
+a; // 42
+```
+- if examined, the result value of the `a = 42` statement, it's the value that was just assigned (42), so the assignment of that same value into `a` is essentially a side effect
+  - **Note:** same reasoning about side effects goes for the compound-assignment operators like `+=`, `-=`, etc
+    - for example, `a = b += 2` is processed first as `b += 2` (which is `b = b + 2`), and the result of that `=` assignment is then assigned to `a`
+- this behavior, that an assignment expression (or statement) results in the assigned value is primarily useful for chained assignments
+```js
+var a, b, c;
+a = b = c = 42;
+```
+- `c = 42` is evaluated to `42` (with the side effect of assigning `42` to `c`)
+- then `b = 42` is evaluated to `42` (with the side effect of assigning `42` to `b`)
+- finally `a = 42` is evaluated (with the side effect of assigning `42` to `a`)
+  - **Note:** that `var a = b = 34` would not declare `b` directly so it has to be declared in the scope somewhere before or else a global variable `b` is created (or error in strict mode)
