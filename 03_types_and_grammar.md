@@ -440,7 +440,7 @@ a == b; // false
   - x gets coerced to a number
 - if type of y is boolean:
   - y gets coerced to a number
-- in the example above x is booleam so `ToNumber(x)` is performed which coerces `true` to `1` ==> now `1 == "42"` is evaluated which is coerced to `1 == 42` resulting in `false`
+- in the example above x is boolean so `ToNumber(x)` is performed which coerces `true` to `1` ==> now `1 == "42"` is evaluated which is coerced to `1 == 42` resulting in `false`
 - `ToBoolean` is not even involved here, so the truthiness of `"42"` is irrelevant to the `==` operation
 
 #####Comparing: `null`s to `undefined`s
@@ -450,3 +450,15 @@ a == b; // false
 - the coercion is safe and predictable
 
 #####Comparing: `object`s to non-`object`s
+- if an `object`/`function`/`array` is compared to a scalar primitive (string, number, boolean)
+  - if type of x is either string or number and type of y is object:
+    - `ToPrimitive` is performed on y
+  - if type of x is object and type of y is either string or number:
+    - `ToPrimitive` is performed on x
+  - if either type is boolean ==> see above (boolean coerced to a number)
+
+####Edge Cases
+- [a few unlikely example cases](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#edge-cases)
+
+###Abstract Relational Comparison
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md#abstract-relational-comparison)
