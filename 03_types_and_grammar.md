@@ -779,3 +779,8 @@ console.log( foo() );
 - the `return 42` runs right away which sets up the completion value from the `foo()` call
 - this action completes the `try` clause and the `finally` clause immediately runs next
 - only then is the `foo()` function complete so that it's completion value is returned back (for the console.log to use)
+- the same happens if there is a `throw` inside the `try` block
+- if an exception is thrown  inside a `finally` clause, it will override as the primary completion of that function
+  - if a previous `return` in the `try` block had set a completion value for the function, that value will be abandoned
+
+[###switch](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#switch)
