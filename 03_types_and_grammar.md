@@ -568,3 +568,214 @@ a = b = c = 42;
 - then `b = 42` is evaluated to `42` (with the side effect of assigning `42` to `b`)
 - finally `a = 42` is evaluated (with the side effect of assigning `42` to `a`)
   - **Note:** that `var a = b = 34` would not declare `b` directly so it has to be declared in the scope somewhere before or else a global variable `b` is created (or error in strict mode)
+
+####Contextual Rules
+- there are places in the JS grammar rules where the same syntax means different things depending ow where/how it's used
+
+##### { .. } Curly Braces
+- the context where `{ .. }` are used determines what they mean, which illustrates the difference between syntax and grammar
+
+######Object Literals
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#object-literals)
+
+######Labels
+- JSON-P makes JSON into valid JS grammar
+
+######Object Destructuring
+- since ES6 another place where `{ .. }` can show up is with "destructuring assignments" (specifically object destructuring)
+```js
+function getData() {
+    // ..
+    return {
+        a: 42,
+        b: "foo"
+    };
+}
+var { a, b } = getData();
+console.log( a, b ); // 42 "foo"
+```
+- `var { a, b } = ..` is a form of destructuring assignment, which is roughly equivalent to:
+```js
+var res = getData();
+var a = res.a;
+var b = res.b;
+```
+- **Note:** `{ a, b }` is actually ES6 destructuring shorthand for `{ a: a, b: b }` 
+- Object destructuring can also be used for named function arguments (nice for implicit object property assignment)
+```js
+function foo({ a, b, c }) {
+    // no need for:
+    // var a = obj.a, b = obj.b, c = obj.c
+    console.log( a, b, c );
+}
+
+foo( {
+    c: [1,2,3],
+    a: 42,
+    b: "foo"
+} );    // 42 "foo" [1, 2, 3]
+```
+
+######else if and Optional Blocks
+- JS does not have an `esle if` clause
+- the hidden characteristic is that `if` and `else` statements are allowed to omit `{ }` around their attached block if they only contain a single statement
+```js
+if (a) doSomething( a );
+```
+- the same grammar rule applies to the `else` clause so the `esle if` form is actually parsed as:
+```js
+if (a) {
+    // ..
+}
+else {
+    if (b) {
+        // ..
+    }
+    else {
+        // ..
+    }
+}
+```
+- the `if (b) { .. } else { .. }` is a single statement that follows the `else` so the the surrounding `{ }` is optional
+
+###Operator Precedence
+- the `-` operator has a lower precedence that the `=` operator, in fact `,` as a statement-series operator has the lowest precedence, meaning every other operator will bind more tightly
+- the `&&` operator has higher precedence than `=` that's why
+```js
+if (str && (matches = str.match( /[aeiou]/g ))) { // ..  }
+```
+requires `( )` around the assignment, because without them the expression would be treated as `(str && matches) = str.match..`
+  - `str && matches` is not going to be a variable but instead a value (in this case `undefined`) so it can't be the left-hand side of an `=` (`str.match..`) assignment (think `34 = arr[0]`)
+- the `&&` operator is evaluated first and then `||`
+
+####Short Circuited
+- for both `&&` and `||` operators, the right-hand operand will **not be evaluated** if the left-hand operand is sufficient to determine the outcome of the operation:
+  - `a && b`: `b` is not evaluated if `a` is falsy because the outcome is already certain so there is no point in checking `b`
+  - `a || b`: if `a` is truthy the result is already certain so there is no reason to check `b`
+- short circuiting can be very useful and can be used as sort of a guard
+```js
+function doSomething(opts) {
+    if (opts && opts.cool) {
+        // ..
+    }
+}
+```
+- if `opts` is unset (or is not an object), `opts.cool` would throw an error, but because of short circuiting `opts.cool` won't even be evaluated if the `opts` test fails
+- similarly `||` short circuiting can be used
+```js
+function doSomething(opts) {
+    if (opts.cache || primeCache()) {
+        // ..
+    }
+}
+```
+- if `opts.cache` is already present, the `primeCache()` isn't called, thus avoiding potentially unnecessary work
+
+####Tighter Binding
+```js
+a && b || c ? c || b ? a : c && b : a
+```
+- is that treated more like this:
+```js
+a && b || (c ? c || (b ? a : c) && b : a)
+```
+- or more like this?
+```js
+(a && b || c) ? (c || b) ? a : (c && b) : a
+```
+- the correct answer is the second one, because `&&` is more precedent than `||` and `||` is more precedent than `? : `
+- so the expression `(a && b || c)` is evaluated *first* before the `? : ` participates
+- another way to describe this that `&&` and `||` "bind more tightly" than ` ? : `
+
+####Associativity
+- what about multiple operators of the same precedence, do they always process left-to-right or right-to-left?
+- in general operators are either *left-associative* or *right-associative*, referring to whether **grouping happens from the left or from the right**
+  - **Note:** Associativity is *not* the same as left-to-right or right-to-left processing
+- why does it matter whether processing is left-to-right or right-to-left?
+  - because expression can have side effects, for example:
+  ```js
+  var a = foo() && bar();
+  ```
+  - `foo()` is evaluated first and then possibly `bar()` (depending on the result of the `foo()` expression) and that could result in different a behavior than if `bar()` was called before foo
+  - but this example just shows left-to-right processing (the default behavior in JS) and it has nothing to do with associativity of `&&` because there is only one `&&` and no relevant grouping
+- with an expression like `a && b && c` grouping will happen implicitly as `(a && b) && c` because `&&` (and `||`) is left-associative
+- the ternary operator ` ? : ` is right-associative
+- another example of right-associativity (grouping) is the `=` operator
+```js
+var a, b, c;
+a = b = c = 42;
+```
+- the `c = 42` assignment is processed first, then `b = ..` and finally `a = ..` because of the right-associativity which actually treats statements like this as `a = (b = (c = 42))`
+- a complex assignment expression:
+```js
+var a = 42;
+var b = "foo";
+var c = false;
+
+var d = a && b || c ? c || b ? a : c && b : a;
+
+d;      // 42
+```
+- broke down into its grouping behavior:
+```js
+((a && b) || c) ? ((c || b) ? a : (c && b)) : a
+```
+- or indented:
+```js
+(
+  (a && b)
+    ||
+  c
+)
+  ?
+(
+  (c || b)
+    ?
+  a
+    :
+  (c && b)
+)
+  :
+a
+```
+- step by step solution:
+1. (a && b) is "foo".
+2. "foo" || c is "foo".
+3. for the first ? test, "foo" is truthy.
+4. (c || b) is "foo".
+5. for the second ? test, "foo" is truthy.
+6. a is 42
+- ==> the answer is `42`
+- use operator precedence/associativity where it leads to cleaner code, but use `( )` manual grouping in places where it helps create clarity and reduce confusion
+
+###Automatic Semicolons
+- ASI (Automatic Semicolon Insertion) is when JS assumes a `;` in certain places even if there isn't one there
+  - ASI allows JS to be tolerant where `;` are'nt commonly thought to be necessary
+  - ASI will only take effect at a line break, semicolons are not inserted in the middle of a line
+- if the JS parser parses a line where a parser error would occur (a missing but expected `;`) and it can reasonably insert one, it does so
+  - reasonable ==> only if there's nothing but whitespace and/or comments between the end of some statement and that line's newline/line break
+- [Error Correction](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#error-correction)
+
+[###Errors](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md#errors)
+
+###`try..finally`
+- `try` requires either `catch` or `finally` (or both)
+- the code in the `finally` clause will *always* run and it always runs right after the `try` (and `catch` if present) finish, before any other code runs
+- `finally` behaves kind of like an callback function that will always be called no matter what
+```js
+function foo() {
+    try {
+        return 42;
+    }
+    finally {
+        console.log( "Hello" );
+    }
+    console.log( "never runs" );
+}
+console.log( foo() );
+// Hello
+// 42
+```
+- the `return 42` runs right away which sets up the completion value from the `foo()` call
+- this action completes the `try` clause and the `finally` clause immediately runs next
+- only then is the `foo()` function complete so that it's completion value is returned back (for the console.log to use)
