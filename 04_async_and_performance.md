@@ -194,4 +194,72 @@ ajax( "..", function(..){
   - at some future moment when the ajax call completes the program will *continue* with the second half (`C`)
 - the callback function wraps/encapsualtes the *continuation* of the program
 
-###Sequential Brain
+###Trying to Save Callbacks
+- some API designs provide for split callbacks to save the callback pattern from imploding on itself
+  - one for success notification
+  - one for the error notification
+```js
+function success(data) {
+    console.log( data );
+}
+function failure(err) {
+    console.error( err );
+}
+ajax( "http://some.url.1", success, failure );
+```
+- this split-callback design is what the ES6 Promise API uses
+
+- another common callback pattern is called "error-first style", where the first argument of a single callback is reserved for an error object (if any)
+  - on success that argument will be empty/falsy and any following arguments will be the success data
+  - on failure the first argument is set/truthy (and usually nothing esle is passed)
+```js
+function response(err,data) {
+    // error?
+    if (err) {
+        console.error( err );
+    }
+    // otherwise, assume success
+    else {
+        console.log( data );
+    }
+}
+ajax( "http://some.url.1", response );
+```
+
+- in both callback patterns the majority of trust issued are not resolved like it may appear
+  - nothing prevents/filters unwanted repeated invocations
+  - more verbose and boilerplate-ish, wichout much reuse
+    - typing that out for every single callback
+  - nothing to prevent being called "too early" before some critical task is complete
+- to prevent the issue of never being called set up a timer that cancels the event after a certain delay:
+```js
+function timeoutify(fn,delay) {
+    var intv = setTimeout( function(){
+            intv = null;
+            fn( new Error( "Timeout!" ) );
+        }, delay )
+    ;
+
+    return function() {
+        // timeout hasn't happened yet?
+        if (intv) {
+            clearTimeout( intv );
+            fn.apply( this, [ null ].concat( [].slice.call( arguments ) ) );
+        }
+    };
+}
+```
+- can be used like this
+```js
+// using "error-first style" callback design
+function foo(err,data) {
+    if (err) {
+        console.error( err );
+    }
+    else {
+        console.log( data );
+    }
+}
+ajax( "http://some.url.1", timeoutify( foo, 500 ) );
+```
+- **Bottom Line:** callbacks can do pretty much anything, but it is hard work to get them there and this effort is often more than what should be spend on such code reasoning
