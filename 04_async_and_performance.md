@@ -177,3 +177,21 @@ schedule( function(){
 
 ###Statement Ordering
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch1.md#statement-ordering)
+
+##Callbacks
+
+###Continuation
+```js
+// A
+ajax( "..", function(..){
+  // C
+})
+// B
+```
+- `A` and `B` represent the first halft of the program (aka the *now*) and `C` marks the second half of the program (aka the *later*)
+  - the first half executes right away
+  - then there's a "pause" of inderterminate length
+  - at some future moment when the ajax call completes the program will *continue* with the second half (`C`)
+- the callback function wraps/encapsualtes the *continuation* of the program
+
+###Sequential Brain
