@@ -263,3 +263,9 @@ function foo(err,data) {
 ajax( "http://some.url.1", timeoutify( foo, 500 ) );
 ```
 - **Bottom Line:** callbacks can do pretty much anything, but it is hard work to get them there and this effort is often more than what should be spend on such code reasoning
+
+##Promises
+- promises are an easily repeatable mechanism for encapsulating and composing *future* values
+  - but of a promise can also be thought of as a flow-control meachnism (for two or more steps in an async task)
+
+###Completion Event
