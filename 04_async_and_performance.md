@@ -106,7 +106,7 @@ response 5
 response 7            <--- Process 2 finishes
 ```
 - Process 1 & 2 run concurrently (taks-level parallel) but their individual events run sequentially on the event loop queue
-- the single-threaded event loop is just one expression of concurrency 
+- the single-threaded event loop is just one expression of concurrency
 
 #####Noninteracting
 - if two or more processes don't interact with each other (are unrelated) nondeterminism is absolutely fine
@@ -269,3 +269,114 @@ ajax( "http://some.url.1", timeoutify( foo, 500 ) );
   - but of a promise can also be thought of as a flow-control meachnism (for two or more steps in an async task)
 
 ###Completion Event
+- imagine calling `foo(..)` to perform some task and wanting to do something else as soon as `foo()` finishes to *continue*
+- in typical JS waiting for a notification until something finishes is likely done by using an event
+  - with callbacks the "notification" would be a callback invoked by some task  `foo(..)`
+- with promises the relationship  gets turned around
+  - expect to listen for an event from `foo(..)` and when notified proceed
+- analogy for a promise:
+```js
+function foo(x) {
+    // start doing something that could take a while
+
+    // make a `listener` event notification
+    // capability to return
+    return listener;
+}
+
+var evt = foo( 42 );
+
+evt.on( "completion", function(){
+    // now we can do the next step!
+} );
+
+evt.on( "failure", function(err){
+    // oops, something went wrong in `foo(..)`
+} );
+```
+- instead of passing the callbacks to `foo(..)`, it returns an event capability (in this example) called `evt`, which recieves the callbacks
+  - one lack of callbacks is the inversion of control (see above), thus this inversion of the inversion of control restores the control back to where it should be
+- multiple seperate parts of the code can be given the event listening capability and they can be notified independently when `foo(..)` completes, to perform subsequent steps
+```js
+var evt = foo( 42 );
+
+// let `bar(..)` listen to `foo(..)`'s completion
+bar( evt );
+// also, let `baz(..)` listen to `foo(..)`'s completion
+baz( evt );
+```
+  - *uninversion of control* enables a nicer *seperation of concerns*
+  - `foo` doesn't need to know that `bar` and `baz` exist and that they're waiting for completion
+  - also `bar` and `baz` don't need to be involved in how `foo` is called
+
+###Promise "Events"
+- in a promised-based approach the previous snippet would have `foo(..)` creating and returning a `Promise` instance and that promise would then be passed to `bar(..)` and `baz(..)`
+- promise resolution "events" aren't strictly events (though they behave like events for these purposes) and typically they are not called "completion" or "error"
+  - instead `then(..)` is used to register a `"then"` event
+    - `then(..)` registers "fullfillment" and/or "rejection" event(s) (though these terms are not seen in the code)
+```js
+function foo(x) {
+    // start doing something that could take a while
+
+    // construct and return a promise
+    return new Promise( function(resolve,reject){
+        // eventually, call `resolve(..)` or `reject(..)`,
+        // which are the resolution callbacks for
+        // the promise.
+    } );
+}
+
+var p = foo( 42 );
+
+bar( p );
+
+baz( p );
+```
+- the pattern shown with `new Promise (function (..) { .. }` is called the *revealing constructor*
+  - the function passsed in is executed immediately
+  - the two passed parameters (in this case named `resolve` and `reject`) are the resolution functions for the promise
+- interal example of `bar ( .. )`/`baz ( .. )`
+```js
+function bar(fooPromise) {
+    // listen for `foo(..)` to complete
+    fooPromise.then(
+        function(){
+            // resolve
+            // `foo(..)` has now finished, so
+            // do `bar(..)`'s task
+        },
+        function(){
+            // reject
+            // oops, something went wrong in `foo(..)`
+        }
+    );
+}
+// ditto for `baz(..)`
+```
+- another way to approach this is:
+```js
+function bar() {
+    // `foo(..)` has definitely finished, so
+    // do `bar(..)`'s task
+}
+
+function oopsBar() {
+    // oops, something went wrong in `foo(..)`,
+    // so `bar(..)` didn't run
+}
+
+// ditto for `baz()` and `oopsBaz()`
+
+var p = foo( 42 );
+
+p.then( bar, oopsBar );
+p.then( baz, oopsBaz );
+```
+- **Note:** the last two lines written as `p.then(..).then(..)`, using chaining, would have an entirely different behavior ==> different async pattern
+- **Note:** the primary difference in the two above snippets is the error handling
+  - in the first approach `bar(..)` and `baz(..)` are called regardless of whether `foo(..)` succeeds or fails and they then handle their own (fallback) logic
+  - in the second approach `bar(..)` and `baz(..)` only get called if `foo(..)` succeeds and otherwise `oopsBar(..)`/`oopsBaz(..)` are called
+- in both cases the promise that is returned frpm `foo(..)` and then assigned to `p` is used to control what happens next
+- the fact that both snippets call `then(..)` against the same promise `p` illustrates that Promises once they are resolved retain their same resolution (fullfillment or rejection)
+
+###Thenable Duck Typing
