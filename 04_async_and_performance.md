@@ -380,3 +380,36 @@ p.then( baz, oopsBaz );
 - the fact that both snippets call `then(..)` against the same promise `p` illustrates that Promises once they are resolved retain their same resolution (fullfillment or rejection)
 
 ###Thenable Duck Typing
+- it is important to know if some value is a promise or not
+  - a non-genuine but promise-like value would still be very important to recognize
+- checking for a promise with `XY instanceof Promise` is not totally sufficient
+  - Promise values can be recieved from another browser window, which would have its own Promise different from the one in the current window/frame
+    - that check would fail to identify the Promise instance
+  - a library or framework may choose to vend its own Promises and not use the native ES6 Promise Implementaion
+- the way to recognize a Promise or something that behaves like a promise would be to define something called a "thenable"
+  - meaning an object or function having `then(..)` method on it
+  - any such value is a Promise-conforming thenable
+- the general term for "type checks" that make assumptions about a value's "type" based on its shape (what properties are present) is called "duck typing"
+  - *"if it looks like a duck and quacks like a duck, it must be a duck"*
+- a troubled and ugly way to check for a Thenable
+```js
+if (
+    p !== null &&
+    (
+        typeof p === "object" ||
+        typeof p === "function"
+    ) &&
+    typeof p.then === "function"
+) {
+    // assume it's a thenable!
+}
+else {
+    // not a thenable
+}
+```
+- Problems:
+  - ugly code
+  - if an object/function happens to already had a `then(..)` function on it, it would pass, even if that's not itended
+    - could happen without realizing because of prototypal linkage!
+
+###Promise Trust
