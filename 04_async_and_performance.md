@@ -413,3 +413,154 @@ else {
     - could happen without realizing because of prototypal linkage!
 
 ###Promise Trust
+- a very important characteristic that the Promise pattern establishes is **trust**
+- recall the trust issues with callbacks-only coding when a callback is passed to a utility `foo(..)` it might:
+  - call the callback too early
+  - call the callback too late or never
+  - call the callback too few or too many times
+  - fail to pass along any necessary environment/parameters
+  - swallow any errors/exceptions that may happen
+- Promises are designed to provide usefeul, repeatable answers to all these concerns
+
+####Calling Too Early
+- this is mainly a concern of whether code can introduce a racing condition, where sometimes a task finishes synchronously and sometimes asynchronously
+- promises are immune to this concern, because even an immediately fulfilled Promise (e.g `new Promise(function(resolve){ resolve(42); })`) cannot be *observed* synchronously
+- when `then(..)` is called on a Promise, even if that Promise was already solved, the callback provided to `then(..)` will **always** be called asynchronously
+
+####Calling Too Late
+- `then(..)` registered callbacks are automatically scheduled when either the `resolve(..)` (first argument to `then(..)`) or `reject(..)` (second, optional argument) functions are called
+- those scheduled callbacks will predictably be fired at the next asynchronous moment (tick)
+- it is not possible for a synchronous chain of task to "delay" another callback from happeing as expected
+  - when a promise is resolved, all `then(..)` registered callbacks on it will be called, in order, immediately at the next asynchronous opportunity
+  - nothing that happens inside of one of those callbacks can affect/delay the calling of the other callbacks
+    - for example here `"C"` cannot interrupt and precede `"B"` because of how Promises are defined to operate
+```js
+p.then( function(){
+    p.then( function(){
+        console.log( "C" );
+    } );
+    console.log( "A" );
+} );
+p.then( function(){
+    console.log( "B" );
+} );
+// A B C
+```
+
+#####Promise Scheduling Quirks
+- there are a lot of nuances of scheduling where the relative ordering between two seperate Promises is not really predictable
+```js
+var p3 = new Promise( function(resolve,reject){
+    resolve( "B" );
+} );
+
+var p1 = new Promise( function(resolve,reject){
+    resolve( p3 );
+} );
+
+var p2 = new Promise( function(resolve,reject){
+    resolve( "A" );
+} );
+
+p1.then( function(v){
+    console.log( v );
+} );
+
+p2.then( function(v){
+    console.log( v );
+} );
+
+// A B  <-- not  B A  as you might expect
+```
+- `p1` is resolved not with an immediate value, but with another promise `p3` which is itself resolved with the value `"B"`
+- the specified behavior *unwraps* `p3` into `p1` asynchronously so `p1`'s callback(s) are *behind* `p2`'s callback(s) in the asynchronous job queue
+  - to avoid such nuanced nighmares, code should not rely on anything about the ordering/sheduling of callbacks accross Promises
+  - a good practise is to code in a way that the ordering of multiple callbacks does *not* matter
+
+####Never Calling the Callback
+- nothing can prevent a Promise from notifying you of its resolution (if it's resolved)
+- if both, fullfillment and rejection callbacks are registered for a Promise and the Promise gets resolved, one of the two callbacks will always be called
+- Promises provide a higher level abstraction called a "race" for when a Promise itself never gets resolved, preventing a Promise from hanging the program indefinetly
+```js
+// a utility for timing out a Promise
+function timeoutPromise(delay) {
+    return new Promise( function(resolve,reject){
+        setTimeout( function(){
+            reject( "Timeout!" );
+        }, delay );
+    } );
+}
+
+// setup a timeout for `foo()`
+Promise.race( [
+    foo(),                  // attempt `foo()`
+    timeoutPromise( 3000 )  // give it 3 seconds
+] )
+.then(
+    function(){
+        // `foo(..)` fulfilled in time!
+    },
+    function(err){
+        // either `foo()` rejected, or it just
+        // didn't finish in time, so inspect
+        // `err` to know which
+    }
+);
+```
+
+####Calling Too Few(= 0 see "Never Calling the Callback") or Too Many Times
+- Promises are defined so they can only be resolved once
+- if for some reason the Promise creation code tries to call `resolve(..)` or `reject(..)` multiple times, or tries to call both, the Promise will accept only the first resolution and will silently ignore any subsequent attempts
+- because a Promise can only be called once, any `then(..)` registered callbacks will only ever be called once (each)
+- of course if the same callback is registered more than once (e.g `p.then(f); p.then(f);`) it will be called as many times as it was registered
+
+####Failing to Pass Along Any Environment/Parameters
+- Promises can have, at most, one resolution value (fullfillment or rejection)
+- if the Promise is not explicitly resolved with a value either way, the value is `undefined`
+  - but whatever the value, it will always be passed to all registered (and appropriate: fullfillment or rejection) callbacks, either now or in the future
+- if `resolve(..)` or `reject(..)` is called with multiple parameters, all subsequent parameters beyond the first one will be ignored
+  - to pass along multiple values they have to be wrapped in another single value such as an `array` or an `object`
+- functions in JS retain their closure of the scope which they're defined in so of course Promises (and callbacks aswell) have access to whatever surrounding state they're provided
+
+####Swallow Any Errors/Exceptions
+- if a promise is rejected with a *reason* (aka error message) that value is passed to the rejection callback(s)
+- if at any point in the creation of a Promise, or in the observation of its resolution a JS error occurs, such as a `TypeError` or `ReferenceError`, that exception will be caught and it will force the Promise in question to become rejected as well as passing along the error message
+```js
+var p = new Promise( function(resolve,reject){
+    foo.bar();  // `foo` is not defined, so error!
+    resolve( 42 );  // never gets here :(
+} );
+
+p.then(
+    function fulfilled(){
+        // never gets here :(
+    },
+    function rejected(err){
+        // `err` will be a `TypeError` exception object
+        // from the `foo.bar()` line.
+    }
+);
+```
+- Promises even turn JS exceptions into asynchronous behavior, thereby reducing the race condition chances greatly
+- even if a Promise is fullfilled, but there's a JS exception error during the observation (in a `then(..)` registered callback), it gets catched
+```js
+var p = new Promise( function(resolve,reject){
+    resolve( 42 );
+} );
+
+p.then(
+    function fulfilled(msg){
+        foo.bar();
+        console.log( msg ); // never gets here :(
+    },
+    function rejected(err){
+        // never gets here either :(
+    }
+);
+```
+- this might seem like the the exception from `foo.bar()` really did get swallowed (got lost), but in reality something deeper is wrong, which is, that it is not listened for
+- the `p.then(..)` call itself returns another promise and it is *that* promise that will be rejected with the `TypeError` exception
+  - the error handler defined in the snippet couldn't be called because that would violate the rule that Promises are **immutable** once resolved
+  - `p` was already fulfilled with the value `42` so it can't later be changed to a rejection, just because there's an error in observing `p`'s resolution
+
+####Trustable Promise?
