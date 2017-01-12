@@ -564,3 +564,97 @@ p.then(
   - `p` was already fulfilled with the value `42` so it can't later be changed to a rejection, just because there's an error in observing `p`'s resolution
 
 ####Trustable Promise?
+- Promises dont get rid of callbacks at all, they just change where the callback is passed to; why would this be more trustable than callbacks alone?
+- Promises have a solution to this issue included with the ES6 `Promise` Implementaion of `Promise.resolve(..)`
+- passing an immediate, non-Promise, non-thenable value to `Promise.resolve(..)` will return a promise that's fulfilled with that value
+```js
+var p1 = new Promise( function(resolve,reject){
+    resolve( 42 );
+} );
+
+var p2 = Promise.resolve( 42 );
+```
+- these two promises above will behabe basically identically
+- and passing a genuine Promise to `Promise.resolve(..)` the same promise gets returned:
+```js
+var p1 = Promise.resolve( 42 );
+
+var p2 = Promise.resolve( p1 );
+
+p1 === p2; // true
+```
+- passing a non-Promise but thenable value to `Promise.resolve(..)`, it will attempt to unwrap that value until a concrete final non-Promise-like value is extracted
+```js
+var p = {
+    then: function(cb) {
+        cb( 42 );
+    }
+};
+
+// this works OK, but only by good fortune
+p
+.then(
+    function fulfilled(val){
+        console.log( val ); // 42
+    },
+    function rejected(err){
+        // never gets here
+    }
+);
+```
+- this `p` is thenable, but it's not a genuine Promise
+- luckily this is reasonable so the use of `Promise.resolve(..)` wouldn't be so obvious here
+```js
+var p = {
+    then: function(cb,errcb) {
+        cb( 42 );
+        errcb( "evil laugh" );
+    }
+};
+
+p
+.then(
+    function fulfilled(val){
+        console.log( val ); // 42
+    },
+    function rejected(err){
+        // oops, shouldn't have run
+        console.log( err ); // evil laugh
+    }
+);
+```
+- in this case it behaves not so well
+- passing either of the above snippets of `p` to `Promise.resolve(..)` though will return a normalized, safe result
+```js
+Promise.resolve( p )
+.then(
+    function fulfilled(val){
+        console.log( val ); // 42
+    },
+    function rejected(err){
+        // never gets here
+    }
+);
+```
+- `Promise.resolve(..)` will accept any thenable and will unwrap it to its non-thenable value and return a **trustable** real, genuine Promise
+  - if what is passed in is already a genuine Promise then just this Promise is returned
+    - so there is no downside by filtering through `Promise.resolve(..)` to gain trust
+- for example calling a `foo(..)` utility and it is not sure whether the return value can be trsted to be a well-behaving Promise, but it is sure that it is at least a thenable
+```js
+// don't just do this:
+foo( 42 )
+.then( function(v){
+    console.log( v );
+} );
+
+// instead, do this:
+Promise.resolve( foo( 42 ) )
+.then( function(v){
+    console.log( v );
+} );
+```
+- `Promise.resolve(..)` will give a trustable Promise wrapper
+- another side effect of wrapping `Promise.resolve(..)` around any function's return value (thenable or not) is that it's an easy way to normalize that function call into a well-behaving async task 
+  - if foo(42) returns an immediate value sometimes, or a Promise other times, Promise.resolve( foo(42) ) makes sure it's always a Promise result (and avoiding Zalgo makes for much better code)
+
+###Chain Flow
