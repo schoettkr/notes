@@ -658,3 +658,65 @@ Promise.resolve( foo( 42 ) )
   - if foo(42) returns an immediate value sometimes, or a Promise other times, Promise.resolve( foo(42) ) makes sure it's always a Promise result (and avoiding Zalgo makes for much better code)
 
 ###Chain Flow
+- it's possible to string multiple Promises together to represent a sequence of async steps
+  - everytime `then(..)` is called on a Promise, it creates and returns a new Promise, whcih can be *chained*
+  - whatever value returned from a `then(..)` call's fullfillment callback (the first parameter) is automatically set as the fullfillment of the *chained* Promise
+```js
+var p = Promise.resolve( 21 );
+
+var p2 = p.then( function(v){
+    console.log( v );   // 21
+
+    // fulfill `p2` with value `42`
+    return v * 2;
+} );
+
+// chain off `p2`
+p2.then( function(v){
+    console.log( v );   // 42
+} );
+```
+- by returning `v * 2` (21 * 2) the `p2` promise, that the first `then(..)` call created and returned, is fulfilled
+- when `p2`'s `then` call runs, it recieves the fulfillment from the `return v * 2` statement
+- of course `p2`  then creates yet another promise, which could have been in stored in a `p3` variable for example
+
+- the steps above (and creating an intermediate var like `p2 p3` everytime) can get a bit annoying so luckily they can be chained together
+```js
+var p = Promise.resolve( 21 );
+
+p
+.then( function(v){
+    console.log( v );   // 21
+
+    // fulfill the chained promise with value `42`
+    return v * 2;
+} )
+// here's the chained promise
+.then( function(v){
+    console.log( v );   // 42
+} );
+```
+- now the first `then(..)` is the first step in an async sequence and the second `then` is the second step
+  - this could keep going for as long as needed just by chaining off a previous `then` with each automatically created Promise
+- [making a Promise sequence truly async capable at everystep](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#chain-flow)
+  - like in waiting for step 1 in a chain to do(finish) something asynchronous and then start with step 2
+
+####Terminology: Resolve, Fulfill and Reject
+- the `Promise(..)` constructor
+```js
+var p = new Promise( function(X,Y){
+    // X() for fulfillment
+    // Y() for rejection
+} );
+```
+- the second provided callback `Y` *always* marks the Promise as rejected
+  - it's almost always called `reject(..)` because that is what it exactly (and only) does
+- the first provided callback `X` is *usually* used to mark the Promise as fulfilled
+  - often labeled as `resolve(..)` which is related to "resolution"
+  - good, accurate name because if `Promise.resolve(..)` unwraps a recieved thenable to a rejected state, the Promise returned from `Promise.resolve(..)` is in fact in the same rejected state
+    - so calling `X` for example `fulfill(..)` wouldn't be accurate because `X` can result in fulfillment or rejection
+
+- the callbacks provided to `then(..)` should be called `fulfilled(..)` and `rejected(..)` because they are unambigous and for the first parameter fulfillment is always the case, as well as it is rejection for the second
+
+###Error Handling
+- the common form of error handling, using the synchronous `try..catch` construct unfortunately fails to help in async code patterns
