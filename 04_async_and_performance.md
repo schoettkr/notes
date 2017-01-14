@@ -719,4 +719,107 @@ var p = new Promise( function(X,Y){
 - the callbacks provided to `then(..)` should be called `fulfilled(..)` and `rejected(..)` because they are unambigous and for the first parameter fulfillment is always the case, as well as it is rejection for the second
 
 ###Error Handling
-- the common form of error handling, using the synchronous `try..catch` construct unfortunately fails to help in async code patterns
+- the common form of error handling, using the synchronous `try..catch` construct unfortunately fails to help in async code patterns:
+```js
+function foo() {
+    setTimeout( function(){
+        baz.bar();
+    }, 100 );
+}
+
+try {
+    foo();
+    // later throws global error from `baz.bar()`
+}
+catch (err) {
+    // never gets here
+}
+```
+
+- in callbacks some standards have emerged for error handling, most notably the "error-first callback" style
+  - this sort of error handling is technically *async capable* but it doesn't compose well
+```js
+function foo(cb) {
+    setTimeout( function(){
+        try {
+            var x = baz.bar();
+            cb( null, x ); // success!
+        }
+        catch (err) {
+            cb( err );
+        }
+    }, 100 );
+}
+
+foo( function(err,val){
+    if (err) {
+        console.error( err ); // bummer :(
+    }
+    else {
+        console.log( val );
+    }
+} );
+```
+- **Note:** the `try..catch` only works here from the perspective that the `baz.bar()` call will either succeed or fail immediately (synchronously)
+  - if `baz.bar()` itself was async, any async errors inside it would not be catchable
+- the callback passed to `foo(..)` expects to recieve a signal of an error by the reserverd first parameter `err`
+  - if present error/failure is assumed, if not success is assumed
+
+- Promises don't use the popular "error-first callback" design style, instead they use "split callbacks" style (one callback for fulfillment and one for rejection)
+```js
+var p = Promise.reject( "Oops" );
+
+p.then(
+    function fulfilled(){
+        // never gets here
+    },
+    function rejected(err){
+        console.log( err ); // "Oops"
+    }
+);
+```
+- the nuances of Promise error handling are often a bit more difficult
+```js
+var p = Promise.resolve( 42 );
+
+p.then(
+    function fulfilled(msg){
+        // numbers don't have string functions,
+        // so will throw an error
+        console.log( msg.toLowerCase() );
+    },
+    function rejected(err){
+        // never gets here
+    }
+);
+```
+- `msg.toLowerCase` throws an error, but the error handler doesn't get notified because *that* error handler is for the `p` promise which has been already fulfilled with the value `42`
+- the `p` promise is immutable so the only promise that can be notified of the error is the one returned from `p.then(..)`, which in this case isn't captured
+  - this is why such error handling with Promises is error-prone (errors get swallowed too easy)
+- some developers claim that a best practise for Promise chains is to always end the chain with a final `catch(..)` like:
+```js
+var p = Promise.resolve( 42 );
+
+p.then(
+    function fulfilled(msg){
+        // numbers don't have string functions,
+        // so will throw an error
+        console.log( msg.toLowerCase() );
+    }
+)
+.catch( handleErrors );
+```
+- because there is no rejection handler explicitly defined, the default handler substitutes which simply propagates the error to the next promise in the chain
+  - both, errors that come into `p` and errors that happen *after* `p` in its resolution (like `msg.toLowerCase`) will be handed down to the final `handleErrors(..)`
+- what happens if `handleErrors(..)` itself has an error in it? There is still yet another uncaptured promise, the one that `catch(..)` returns!
+  - `catch` too could fail so it should not be just sticked at the end of that chain
+  - the last step in any Promise chain always has the possibility of an uncaught error stuck inside an unobserved Promise
+
+####Uncaught Handling
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#uncaught-handling) (no practical information)
+
+####Pit Of Success
+- theoretical outline of how Promises *could* be changed to behave someday
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#pit-of-success)
+
+###Promise Patterns
