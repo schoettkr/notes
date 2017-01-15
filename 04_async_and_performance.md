@@ -823,3 +823,108 @@ p.then(
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#pit-of-success)
 
 ###Promise Patterns
+- there are lots of variations on asynchronous patterns that can be build on top of Promises
+- there two patterns directly coded into the native ES6 Promise Implementaion to simplify the expression of async flow control
+  - helps making code more reasonable and maintainable
+  - can be used as building blocks of other paterns
+
+####Promise.all([..])
+- in any async sequence (Promise chain) only one async task is being coordinate at any given moment, step 2 directly follows step 1 and step 3 strictly follows step
+- but what about doing two or ore steps concurrently/parallel?
+- in classic programming Terminology a "gate" is a mechanism thats waits on two or more parallel tasks to complete before continuing
+  - the order they finish in doesnt matter, just all of them have to comlete for the gate to open and let the flow control through
+- in the Promise API this pattern is called `all([..])`
+  - the main Promise returned from `Promise.all` will only be fulfilled if and when all its constituent promises are fullfilled, if any of these promises is rejected, the main `Promise.all` promise is immediately rejected discarding all results from the other Promises
+- for example making two Ajax requests at the same time and wait for both to finish (regardless of their order) before making a third Ajax request
+```js
+// `request(..)` is a Promise-aware Ajax utility,
+// like we defined earlier in the chapter
+
+var p1 = request( "http://some.url.1/" );
+var p2 = request( "http://some.url.2/" );
+
+Promise.all( [p1,p2] )
+.then( function(msgs){
+    // both `p1` and `p2` fulfill and pass in
+    // their messages here
+    return request(
+        "http://some.url.3/?v=" + msgs.join(",")
+    );
+} )
+.then( function(msg){
+    console.log( msg );
+} );
+```
+- `Promise.all([..])` expects a single array as an argument, generally consisting of Promise instances
+  - the array can also include thenables or even immediate values, because every value is essentially passed through `Promise.resolve` to make sure it's a genuine promise
+    - if the array is empty the main Promise is immediately fulfilled
+- the promise returned from  `Promise.all([..])` call will receive a fulfillment message (`msg` in the above snippet) that is an array of all the fulfillment messages from the passed in Promises (in the order they were specified not the fulfillment order)
+- always attach a rejection/error handler to every promise, especially to the one that comes back from `Promise.all`
+
+####Promise.race([..])
+- not to confuse "race" with as in "racing condition", classically a race in the Promise API is called a "latch"
+- only responds to the first Promise that finishes , letting the other Promises fall away
+- `Promise.race([ .. ])` also expects a single array argument, containing one or more Promises, thenables, or immediate values
+  - obviously the first immediate value listed would win tho
+- **Note::** pass an empty array to `Promise.race([])` because, instead of immediately resolving, the main race promise will never resolve
+```js
+// `request(..)` is a Promise-aware Ajax utility,
+// like we defined earlier in the chapter
+
+var p1 = request( "http://some.url.1/" );
+var p2 = request( "http://some.url.2/" );
+
+Promise.race( [p1,p2] )
+.then( function(msg){
+    // either `p1` or `p2` will win the race
+    return request(
+        "http://some.url.3/?v=" + msg
+    );
+} )
+.then( function(msg){
+    console.log( msg );
+} );
+```
+- because only one promise wins, the fulfillment value is a single message (not an array or smth)
+
+####Timeout Race
+- how `Promise.race([ .. ])` can be used to expres the "promise timeout" pattern:
+```js
+// `foo()` is a Promise-aware function
+
+// `timeoutPromise(..)`, defined ealier, returns
+// a Promise that rejects after a specified delay
+
+// setup a timeout for `foo()`
+Promise.race( [
+    foo(),                  // attempt `foo()`
+    timeoutPromise( 3000 )  // give it 3 seconds
+] )
+.then(
+    function(){
+        // `foo(..)` fulfilled in time!
+    },
+    function(err){
+        // either `foo()` rejected, or it just
+        // didn't finish in time, so inspect
+        // `err` to know which
+    }
+);
+```
+- this timeout pattern works well in most cases but there are some nuances to consider (nd they apply to `Promise.all([ .. ])`) too:
+
+####"Finally"
+- what happens to the promises discarded/ignored from the behavioral perspective?
+  - promises cannot and shouldnt be canceled, s they can only be ignored
+- [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#finally)
+
+###Variations on all([..]) and race([..])
+- while `race` and `all` are built in to native ES6 Promises, there are several other common patterns that can be built using them 
+- `none([..])` is like `all([..])` but fulfillments and rejections are transposed(umgekehrt); all promises need to be rejected and rejections become the fullfillment values(& vica versa)
+- `any([..])` is like `all([..])` but ignores any rejections so it only need to fulfill one instead of all of them
+- `first([..])` ist like a race with `any([..])`, so it ignores any rejections and fulfills s soon as the first Promise fulfills
+- `last([..])` is like `first([..])` but only the last fulfillment wins
+
+###Concurrent Iterations
+- to iterate over fundamentally asynchronous tasks use/define/build aync versions of the usual iterators like `forEach`, `map`, `some` and `every`
+- [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#finally)
