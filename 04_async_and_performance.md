@@ -928,3 +928,95 @@ Promise.race( [
 ###Concurrent Iterations
 - to iterate over fundamentally asynchronous tasks use/define/build aync versions of the usual iterators like `forEach`, `map`, `some` and `every`
 - [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md#finally)
+
+##Generators
+- expressing async flow control in a sequential, synchronous-looking fashion is possible with **generators**
+- in the following example `bar()` runs in between `x++` and `console.log(x)` but if it wasn't there the result would be 2 instead of 3
+```js
+var x = 1;
+
+function foo() {
+    x++;
+    bar();              // <-- what about this line?
+    console.log( "x:", x );
+}
+
+function bar() {
+    x++;
+}
+
+foo();                  // x: 3
+```
+- but what would happen if `bar()` wasn't present in `foo()` but could still somehow run between `x++` and `console.log(x)`?
+```js
+var x = 1;
+
+function *foo() { // the '*' is a stylistic preference to mark a generator
+    x++;
+    yield; // pause!
+    console.log( "x:", x );
+}
+
+function bar() {
+    x++;
+}
+
+// construct an iterator `it` to control the generator
+var it = foo();
+
+// start `foo()` here!
+it.next();
+x;                      // 2
+bar();
+x;                      // 3
+it.next();              // x: 3
+```
+- `yield` suggests a pause point in code
+- the `it = foo()` operation does *not* execute the `*foo()` generator, but it constructs an *iterator* that will control its execution
+- `it.next()` starts the `*foo()` generator until the `yield` statement, at which point the call finishes and `*foo()` is running & active, but in a paused Statement
+- now `bar()` runs and increments `x` by one and then the iterator resumes the `*foo()` generator with the final `it.next()` call and it lets it finish
+  - it is not even required for a generator to finish
+- so a generator is a special kind of function that can start and stop one or more times
+
+###Input and Output
+- a generator function is still a function, so it has some basic tenets that haven't changed
+- for example accepting arguments:
+```js
+function *foo(x,y) {
+    return x * y;
+}
+
+var it = foo( 6, 7 );
+
+var res = it.next();
+
+res.value;      // 42
+```
+- `foo(6,7)` just creates an *iterator* object which is assigned to `it` to control the `*foo(..)` generator, but doesn't actually run it yet as it would've been with a "normal" function
+- `it.next()` instructs the `*foo()` generator to advance from its current location, stopping either at the next `yield` or at the end of the generator
+- the result of that `next(..)` call is an object with a `value` property on it, holding whatever value (if anything) was returned from `*foo(..)`
+  - it also has a `.done` property on it which indicates if the generator has finished or is paused
+
+####Iteration Messaging
+- `yield` and `next(..)` have some more powerful input/output messaging capability
+```js
+function *foo(x) {
+    var y = x * (yield);
+    return y;
+}
+
+var it = foo( 6 );
+
+// start `foo(..)`
+it.next();
+
+var res = it.next( 7 );
+
+res.value;      // 42
+```
+1. after calling `it.next()` for the first time, the `var y = x..` statement starts to be processed but then it runs across a `yield` expression
+2. at that point it pauses `*foo()` (in the middle of that assignment statement) and requests the calling code to provide a result value for the `yield` expression
+3. `it.next(7)` passes the `7` value back in, to *be* that result of the paused `yield` expression
+4. at this point the assignment statement essentially is `var y = 6 * 7`
+5. now `return y` returns that `42` back as the result of `it.next(7)` call
+- **Note:** in general there is going to be one more `next(..)` call than `yield` statements because the first `next(..)` call starts a generator until the first `yield` expression, there is one more `next(..)` call needed to fulfill until the end (or another until `yield`)
