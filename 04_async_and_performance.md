@@ -1076,3 +1076,14 @@ it2.next( val1 / 4 );                   // y:10
 ###Generator'ing Values
 ####Producers and Iterators
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#producers-and-iterators)
+
+####Iterables
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#iterables)
+
+####Generator Iterator
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#generator-iterator)
+
+#####Stopping the Generator
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#stopping-the-generator)
+
+###Iterating Generators Asynchronously
