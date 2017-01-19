@@ -1020,3 +1020,59 @@ res.value;      // 42
 4. at this point the assignment statement essentially is `var y = 6 * 7`
 5. now `return y` returns that `42` back as the result of `it.next(7)` call
 - **Note:** in general there is going to be one more `next(..)` call than `yield` statements because the first `next(..)` call starts a generator until the first `yield` expression, there is one more `next(..)` call needed to fulfill until the end (or another until `yield`)
+
+- `yield ..` and `next(..)` pair together as a two-way message passing system during the execution of a generator
+  - yield can send out messages as a response to a `next` called
+  - next can send values to a paused `yiel` expression
+```js
+function *foo(x) {
+    var y = x * (yield "Hello");    // <-- yield a value!
+    return y;
+}
+
+var it = foo( 6 );
+
+var res = it.next();    // first `next()`, don't pass anything
+res.value;              // "Hello"
+
+res = it.next( 7 );     // pass `7` to waiting `yield`
+res.value;              // 42
+```
+- don't pass anything to the first `next(..)` call because only a paused `yield` could accept such a value but at the beginning of the generator when calling `next()` for the first time, there **is no paused `yield`** to accept such a value
+
+####Multiple Iterators
+- each time you construct an iterator, implicitly an instance of the generator is constructed, which *that iterator* will control
+  - it's possible to have multiple instances of the same generator running at the same time and even interacting, for example:
+```js
+function *foo() {
+    var x = yield 2;
+    z++;
+    var y = yield (x * z);
+    console.log( x, y, z );
+}
+
+var z = 1;
+
+var it1 = foo();
+var it2 = foo();
+
+var val1 = it1.next().value;            // 2 <-- yield 2
+var val2 = it2.next().value;            // 2 <-- yield 2
+
+val1 = it1.next( val2 * 10 ).value;     // 40  <-- x:20,  z:2
+val2 = it2.next( val1 * 5 ).value;      // 600 <-- x:200, z:3
+
+it1.next( val2 / 2 );                   // y:300
+                                        // 20 300 3
+it2.next( val1 / 4 );                   // y:10
+                                        // 200 10 3
+```
+1. Both instances of `*foo()` are started at the same time, and both `next()` calls reveal a `value` of `2` from the `yield 2` statements, respectively.
+2. `val2 * 10` is `2 * 10`, which is sent into the first generator instance `it1`, so that `x` gets value `20`. `z` is incremented from `1` to `2`, and then `20 * 2` is `yield`ed out, setting `val1` to `40`.
+3. `val1 * 5` is `40 * 5`, which is sent into the second generator instance `it2`, so that `x` gets value `200`. `z` is incremented again, from `2` to `3`, and then `200 * 3` is `yield`ed out, setting `val2` to `600`.
+4. `val2 / 2` is `600 / 2`, which is sent into the first generator instance `it1`, so that `y` gets value `300`, then printing out `20 300 3` for its `x y z` values, respectively.
+5. `val1 / 4` is `40 / 4`, which is sent into the second generator instance `it2`, so that `y` gets value `10`, then printing out `200 10 3` for its `x y z` values, respectively.
+
+###Generator'ing Values
+####Producers and Iterators
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#producers-and-iterators)
