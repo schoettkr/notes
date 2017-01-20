@@ -1087,3 +1087,46 @@ it2.next( val1 / 4 );                   // y:10
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#stopping-the-generator)
 
 ###Iterating Generators Asynchronously
+
+
+###Generators + Promises
+- the natural way to get the most out of Promises and generators is **to `yield` a Promise** and wire that Promise to control the generator's *iterator*
+```js
+function foo(x,y) {
+    return request(
+        "http://some.url.1/?x=" + x + "&y=" + y
+    );
+}
+
+function *main() {
+    try {
+        var text = yield foo( 11, 31 );
+        console.log( text );
+    }
+    catch (err) {
+        console.error( err );
+    }
+}
+```
+- the most powerful revelation in this refactor is that the inside `*main()` **did not have to change at all**
+- inside the generator whatever values are `yield`ed out is just an opaque implementation detail, there is no need to worry about it
+- to recieve and wire up the `yield`ed promise so that it resumes the generator upon resolution, some work is still needed
+```js
+var it = main();
+
+var p = it.next().value;
+
+// wait for the `p` promise to resolve
+p.then(
+    function(text){
+        it.next( text );
+    },
+    function(err){
+        it.throw( err );
+    }
+);
+```
+- this takes advantage of the fact the we know that `*main()` only has one Promise-aware step in it
+  - but what if we want to be able to Promise-drive a generator no matter how many steps it has?
+
+####Promise-Aware Generator Runner
