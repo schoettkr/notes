@@ -1087,7 +1087,7 @@ it2.next( val1 / 4 );                   // y:10
 - [see](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#stopping-the-generator)
 
 ###Iterating Generators Asynchronously
-
+- (see)[https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#iterating-generators-asynchronously]
 
 ###Generators + Promises
 - the natural way to get the most out of Promises and generators is **to `yield` a Promise** and wire that Promise to control the generator's *iterator*
@@ -1130,3 +1130,27 @@ p.then(
   - but what if we want to be able to Promise-drive a generator no matter how many steps it has?
 
 ####Promise-Aware Generator Runner
+- there're several libraries that provide a utility that is designed to *run* Promise-yielding generator (in the manner above)
+  - so a generator can be automatically advanced asynchronously until its completion
+- [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#promise-aware-generator-runner)
+
+####Promise Concurrency in Generators
+```js
+function *foo() {
+    var r1 = yield request( "http://some.url.1" );
+    var r2 = yield request( "http://some.url.2" );
+
+    var r3 = yield request(
+        "http://some.url.3/?v=" + r1 + "," + r2
+    );
+
+    console.log( r3 );
+}
+
+// use previously defined `run(..)` utility
+run( foo );
+```
+- this code, to fetch data from two different sources and combining their responses to make a third request, is not optimal because `r1` and `r2` run sequentially but should run concurrently (for performance reasons)
+  - the two requests are indepent so they should run at the same time
+    - but `yield` only is a single pause point in the code so it can't really do two pauses at the same time
+- the most natural and effective solution is to base the async flow on Promises, specifically on their capability to manage state in a time-indepent fashion
