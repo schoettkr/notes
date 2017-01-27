@@ -1126,7 +1126,7 @@ p.then(
     }
 );
 ```
-- this takes advantage of the fact the we know that `*main()` only has one Promise-aware step in it
+- this takes advantage of the fact the we know that *`main()` only has one Promise-aware step in it
   - but what if we want to be able to Promise-drive a generator no matter how many steps it has?
 
 ####Promise-Aware Generator Runner
@@ -1154,3 +1154,115 @@ run( foo );
   - the two requests are indepent so they should run at the same time
     - but `yield` only is a single pause point in the code so it can't really do two pauses at the same time
 - the most natural and effective solution is to base the async flow on Promises, specifically on their capability to manage state in a time-indepent fashion
+```js
+function *foo() {
+    // make both requests "in parallel"
+    var p1 = request( "http://some.url.1" );
+    var p2 = request( "http://some.url.2" );
+
+    // wait until both promises resolve
+    var r1 = yield p1;
+    var r2 = yield p2;
+
+    var r3 = yield request(
+        "http://some.url.3/?v=" + r1 + "," + r2
+    );
+
+    console.log( r3 );
+}
+
+// use previously defined `run(..)` utility that runs a promise-yielding generators
+run( foo );
+```
+- the important difference is where the `yield` is and is not
+  - `p1` and `p2` are promises for Ajax requests which are made concurrently (parallel) so it doesn't matter which one finishes first
+  - then the `yield` statements are used to wait for and retrieve the resolutions from the promises (into `r1` and `r2`)
+  - both finish in order before the `r3 = yield request(..)` is made
+- the gate pattern enabled by the `Promise.all([..])` utility can also express this flow control
+```js
+function *foo() {
+    // make both requests "in parallel," and
+    // wait until both promises resolve
+    var results = yield Promise.all( [
+        request( "http://some.url.1" ),
+        request( "http://some.url.2" )
+    ] );
+
+    var r1 = results[0];
+    var r2 = results[1];
+    // alternatively using ES6's destructuring asssignment:
+    // var [r1, r2] = results
+
+    var r3 = yield request(
+        "http://some.url.3/?v=" + r1 + "," + r2
+    );
+
+    console.log( r3 );
+}
+
+// use previously defined `run(..)` utility
+run( foo );
+```
+- when more than sequential "this-then-that" async flow control steps are required, Promises are a good bet
+
+###Generator Delegation
+- calling a function from inside a generator is a useful technique for abstracting away implementation details (like async Promise flow), but the main drawback of using a normal function is that it has to behave by the normal function rules (it cannot pause itself with `yield` like a generator can)
+- one solution would be to call one generator from another generator
+- integrating two generators `\*foo()` and `\*run()` can be achieved by what's called `yield`-delegation
+  - the special syntax for `yield`-delegation is: `yield \*...` (notice the extra \*)
+```js
+function *foo() {
+    console.log( "`*foo()` starting" );
+    yield 3;
+    yield 4;
+    console.log( "`*foo()` finished" );
+}
+
+function *bar() {
+    yield 1;
+    yield 2;
+    yield *foo();   // `yield`-delegation!
+    yield 5;
+}
+
+var it = bar();
+
+it.next().value;    // 1
+it.next().value;    // 2
+it.next().value;    // `*foo()` starting
+                    // 3
+it.next().value;    // 4
+it.next().value;    // `*foo()` finished
+                    // 5
+```
+- `yield \*foo()` works as follows:
+  1. calling `foo()` creates an *iterator*
+  2. `yield \*` delegates/transfers the *iterator* instance control (of the present `\*bar()` generator) over to this other `\*foo()` *iterator*
+  3. as soon as the `it` *iterator* control exhausts the entire `\*foo()` *iterator*, it automatically returns to controlling `\*bar()`
+- so the first two `it.next()` calls are controlling `bar`, but when the third `it.next()` call is made, now `foo` starts up and is controlled instead of `bar`
+  - that's why it's called delegation - `bar` delegated its iteration to `foo`
+- example using three sequential Ajax requests:
+```js
+function *foo() {
+    var r2 = yield request( "http://some.url.2" );
+    var r3 = yield request( "http://some.url.3/?v=" + r2 );
+
+    return r3;
+}
+
+function *bar() {
+    var r1 = yield request( "http://some.url.1" );
+
+    // "delegating" to `*foo()` via `yield*`
+    var r3 = yield *foo();
+
+    console.log( r3 );
+}
+
+run( bar );
+```
+- **Note:** `yield \*` yields iteration control, not generator control
+  - invoking the `\*foo()` generator `yield`-delegates to its *iterator*
+  - it is actually possible to yield-delegate to any *iterable*, for example `yield \*[1,2,3]` would consume the default *iterator* for the `[1,2,3]` array value
+
+####Why Delegation
