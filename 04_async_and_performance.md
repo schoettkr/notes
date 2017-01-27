@@ -1208,8 +1208,8 @@ run( foo );
 ###Generator Delegation
 - calling a function from inside a generator is a useful technique for abstracting away implementation details (like async Promise flow), but the main drawback of using a normal function is that it has to behave by the normal function rules (it cannot pause itself with `yield` like a generator can)
 - one solution would be to call one generator from another generator
-- integrating two generators `\*foo()` and `\*run()` can be achieved by what's called `yield`-delegation
-  - the special syntax for `yield`-delegation is: `yield \*...` (notice the extra \*)
+- integrating two generators `*foo()` and `*run()` can be achieved by what's called `yield`-delegation
+  - the special syntax for `yield`-delegation is: `yield *...` (notice the extra *)
 ```js
 function *foo() {
     console.log( "`*foo()` starting" );
@@ -1235,10 +1235,10 @@ it.next().value;    // 4
 it.next().value;    // `*foo()` finished
                     // 5
 ```
-- `yield \*foo()` works as follows:
+- `yield *foo()` works as follows:
   1. calling `foo()` creates an *iterator*
-  2. `yield \*` delegates/transfers the *iterator* instance control (of the present `\*bar()` generator) over to this other `\*foo()` *iterator*
-  3. as soon as the `it` *iterator* control exhausts the entire `\*foo()` *iterator*, it automatically returns to controlling `\*bar()`
+  2. `yield *` delegates/transfers the *iterator* instance control (of the present `*bar()` generator) over to this other `*foo()` *iterator*
+  3. as soon as the `it` *iterator* control exhausts the entire `*foo()` *iterator*, it automatically returns to controlling `*bar()`
 - so the first two `it.next()` calls are controlling `bar`, but when the third `it.next()` call is made, now `foo` starts up and is controlled instead of `bar`
   - that's why it's called delegation - `bar` delegated its iteration to `foo`
 - example using three sequential Ajax requests:
@@ -1261,8 +1261,8 @@ function *bar() {
 
 run( bar );
 ```
-- **Note:** `yield \*` yields iteration control, not generator control
-  - invoking the `\*foo()` generator `yield`-delegates to its *iterator*
-  - it is actually possible to yield-delegate to any *iterable*, for example `yield \*[1,2,3]` would consume the default *iterator* for the `[1,2,3]` array value
+- **Note:** `yield *` yields iteration control, not generator control
+  - invoking the `*foo()` generator `yield`-delegates to its *iterator*
+  - it is actually possible to yield-delegate to any *iterable*, for example `yield *[1,2,3]` would consume the default *iterator* for the `[1,2,3]` array value
 
 ####Why Delegation
