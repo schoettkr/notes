@@ -1265,4 +1265,59 @@ run( bar );
   - invoking the `*foo()` generator `yield`-delegates to its *iterator*
   - it is actually possible to yield-delegate to any *iterable*, for example `yield *[1,2,3]` would consume the default *iterator* for the `[1,2,3]` array value
 
-####Why Delegation
+####Delegating Messages
+- yield-delegation also works with two-way message passing
+```
+function *foo() {
+    console.log( "1.inside `*foo()`:", yield "B" );
+
+    console.log( "2.inside `*foo()`:", yield "C" );
+
+    return "D";
+}
+
+function *bar() {
+    console.log( "1.inside `*bar()`:", yield "A" );
+
+    // `yield`-delegation!
+    console.log( "2.inside `*bar()`:", yield *foo() );
+
+    console.log( "3.inside `*bar()`:", yield "E" );
+
+    return "F";
+}
+
+var it = bar();
+
+console.log( "outside:", it.next().value );
+// outside: A
+
+console.log( "outside:", it.next( 1 ).value );
+// 1.inside `*bar()`: 1
+// outside: B
+
+console.log( "outside:", it.next( 2 ).value );
+// 1.inside `*foo()`: 2
+// outside: C
+
+console.log( "outside:", it.next( 3 ).value );
+// 2.inside `*foo()`: 3
+// 2.inside `*bar()`: D
+// outside: E
+
+console.log( "outside:", it.next( 4 ).value );
+// 3.inside `*bar()`: 4
+// outside: F
+```
+- yield-delegation doesn't even have to be directed to another generator, it can be directed to a non-generator, general *iterable* (e.g array)
+
+#####Exceptions Delegation
+- in the same way that yield passes messages through in both directions, errors/exceptions also pass in both directions
+- [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#exceptions-delegated-too)
+
+####[Delegating Asynchrony](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#delegating-asynchrony)
+
+####[Delegating "Recursion"](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#delegating-recursion)
+
+###Generator Concurrency
+
