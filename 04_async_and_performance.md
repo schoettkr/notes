@@ -1387,3 +1387,64 @@ fooThunk( function(sum) {
 - generators can not just be polyfilled like Promises because they are new syntax and not just a new API
 - for new syntax there are tools called transpilers (trans-compilers) that can transform ES6 syntax into equivalent (but uglier) pre ES6 code, so generators can be transpiled into code that will habe the same behavior but works in ES5 and below
 - [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#pre-es6-generators)
+
+
+##Program Performance
+###Benchmarking
+- something like this to "benchmark" a programs performance is dangerous because it could lead to false confidence
+```js
+var start = (new Date()).getTime(); // or `Date.now()`
+
+// do some operation
+
+var end = (new Date()).getTime();
+
+console.log( "Duration:", (end - start) );
+```
+- some platforms don't even have single miliseconds presicions, but instead update the timer in for example every 15ms, which means that the operation has to take at least that long for anything other than 0 to be reported
+- also the result is just approximate that long on that single run
+- looping the test for for example 100 times doesn't help either because a couple of outliers can skew the average duration
+- important things are how long the slowest/fastest sample needed and how far they are apart and multiple samples (quantifiable measure) and also *context is king*
+  - testing *not real* code gives *not real* results
+- any relevant benchmark should be based on statistically sound practises
+
+####Benchmark.js
+- benchmarking tool for performance tests
+```js
+function foo() {
+    // operation(s) to test
+}
+
+var bench = new Benchmark(
+    "foo test",             // test name
+    foo,                    // function to test (just contents)
+    {
+        // ..               // optional extra options (see docs)
+    }
+);
+
+bench.hz;                   // number of operations per second
+bench.stats.moe;            // margin of error
+bench.stats.variance;       // variance across samples
+// ..
+```
+- to compare operation X to operation Y two different tests can be setted up in a "Suite" where they are running head-to-head and compare the statisticts to conclude which one was faster
+- benchmark.js can be used to test JavaScript in a browser and it can also run in non-browser environments like Node.js for example
+- similar to unit tests before deployment, performance can be compared against previous benchmarks to monitor if the application performance is improving or degrading
+#####Setup/Teardown
+- two "extra options" `setup` and `teardown` can be used to define functions to be called before and after the test case runs
+- `setup` and `teardown` code **does not run for reach test iteration**
+  - there's an outer loop(repeating cycles) and an inner loop(repeating test iterations)
+  - `setup` and `teardown` run at the beginning and end of each *outer* loop(aka cycle) but not inside the inner loop
+
+###jsPerf.com
+- while Benchmark.js is useful fo testing the performance of code in whatever JS environment it is currently executed, test results from a lot of differents environments cannot be omitted
+  - Chrome on a high-end desktop is not likely to perform anywhere near Chrome on mobile
+  - even a smartphone with full battery charge is like to perform not anywhere near the same as asmartphone with 2% battery left
+- to make assertions like "X is faster than Y" reasonable, a test in as many as possible real world environments is needed
+- an awesome website for this is jsperf.com it uses Benchmark.js to run statistically accurate and reliable tests, and makes the test on an openly available URL that can be passed around to others
+
+####Sanity Check & Microperformance
+- jsPerf is a fantastic resource, but there's a lot of flawed/bogus tests published
+- [some things to consider](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch6.md#sanity-check)
+- [optimization killers in v8](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers)
