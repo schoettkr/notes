@@ -1390,7 +1390,9 @@ fooThunk( function(sum) {
 
 
 ##Program Performance
-###Benchmarking
+- [Web Workers](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch5.md#web-workers)
+
+##Benchmarking & Tuning
 - something like this to "benchmark" a programs performance is dangerous because it could lead to false confidence
 ```js
 var start = (new Date()).getTime(); // or `Date.now()`
