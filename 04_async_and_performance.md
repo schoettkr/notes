@@ -1267,7 +1267,7 @@ run( bar );
 
 ####Delegating Messages
 - yield-delegation also works with two-way message passing
-```
+```js
 function *foo() {
     console.log( "1.inside `*foo()`:", yield "B" );
 
@@ -1319,5 +1319,71 @@ console.log( "outside:", it.next( 4 ).value );
 
 ####[Delegating "Recursion"](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#delegating-recursion)
 
-###Generator Concurrency
+###[Generator Concurrency](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#generator-concurrency)
 
+###Thunks
+- in general CS there's an old pre-JS concept called a "thunk"
+  - it is a function that, *without* any parameters, is wired to call another function
+  - it wraps a function definition around a function call *with* any parameters it needs (to defer the execution of that call)
+    - that wrapping function is a *thunk*
+    - if the thunk is executed/called, the original function ends up being called
+```js
+function foo(x,y) {
+    return x + y;
+}
+
+function fooThunk() {
+    return foo( 3, 4 );
+}
+
+// later
+
+console.log( fooThunk() );  // 7
+```
+- for async thunk the narrow thunk definition can be extended by including a callback
+```js
+function foo(x,y,cb) {
+    setTimeout( function(){
+        cb( x + y );
+    }, 1000 );
+}
+
+function fooThunk(cb) {
+    foo( 3, 4, cb );
+}
+
+// later
+
+fooThunk( function(sum){
+    console.log( sum );     // 7
+} );
+```
+- `fooThunk` only expects a callback (`cb` parameter) as it already has 3 and 4 for x and y pre-specified and ready to pass to foo
+- it is cumbersome to make thunks manually, here is an utility that does the wrapping
+```js
+function thunkify(fn) {
+    var args = [].slice.call( arguments, 1 );
+    return function(cb) {
+        args.push( cb );
+        return fn.apply( null, args );
+    };
+}
+
+var fooThunk = thunkify( foo, 3, 4 );
+
+// later
+
+fooThunk( function(sum) {
+    console.log( sum );     // 7
+} );
+```
+
+- comparing thunks to promises, they're not directly interchangable 
+  - Promises are more capaable and trustable than bare Thunks
+  - but they both can be seen as a request for a value, which may be async in answering
+  - if there's the option Promises are preferable
+
+###Pre-Es6 Generators
+- generators can not just be polyfilled like Promises because they are new syntax and not just a new API
+- for new syntax there are tools called transpilers (trans-compilers) that can transform ES6 syntax into equivalent (but uglier) pre ES6 code, so generators can be transpiled into code that will habe the same behavior but works in ES5 and below
+- [more](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#pre-es6-generators)
