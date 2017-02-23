@@ -54,6 +54,7 @@ if (!Object.is) {
 
 ##Syntax
 - some of the following features that ES6 provides are not or only partially implemented
+
 ### Block-Scoped Declarations
 - the fundamental unit of variable scoping in JS has always been the `function`
   - to create a block of scope the most prevalent way to do so was (besides a regular function declaration) the immediately invoked function expression (IIFE), for example:
@@ -68,3 +69,96 @@ var a = 2;
 console.log( a );       // 2
 ```
 ####`let` Declarations
+- using `let` creates declarations that are bound to any block (block scoping)
+  - a pair of `{ .. }` and using `let` in that block creates a scope
+```js
+var a = 2;
+{
+  let a = 3;
+  console.log(a); // 3
+}
+console.log(a); // 2
+```
+- it's recommended to put the `let` declarations at the very top of that block to make it clear that this block is only for the purpose of declaring scope for those variables
+```js
+{ let a = 2, b, c;
+  // ...
+}
+```
+- accessing a `let`-declared variable earlier that its `let ..` declaration/initialization causes an error, whereas with `var` declarations the ordering does'nt matter
+  - `var`/`function` declarations are intialised with `undefined` ==> `undefined`
+  - `let`/`const`/`class` stay **uninitialised** ==> `ReferenceError`
+```js
+{
+  console.log( a );   // undefined
+  console.log( b );   // ReferenceError!
+
+  var a;
+  let b;
+}
+```
+#####`let` + `for`
+- an `let i` in a `for` header declares an `i` not just for the `for` loop itself, but it declares a new `i` for each iteration of the loops
+  - that means that closures created inside the loop iteration close over those per-iteration variables as expected
+```js
+var funcs = [];
+for (let i = 0; i < 5; i++) {
+    funcs.push( function(){
+        console.log( i );
+    } );
+}
+funcs[3]();     // 3
+```
+  - the same snippet with `var i` in the for loop header, would result in getting `5` instead of `3`
+    - because there'd only be one `i` in the outer scope that was closed over, instead of a new `i` for each iteration's function to close over
+
+#####Block-scoped Functions
+- function declarations inside of a block are now scoped to that block
+```js
+{
+    foo();                  // works!
+
+    function foo() {
+        // ..
+    }
+}
+foo();                      // ReferenceError
+```
+- the function declaration is scoped to the wrapping block
+  - it is also hoisted within the block (no TDZ error trap)
+
+###Spread/Rest
+- the new `...` operator is referred to as the *spread* or *rest* operator depending on how it's used
+```js
+function foo(x,y,z) {
+    console.log( x, y, z );
+}
+
+foo( ...[1,2,3] );              // 1 2 3
+```
+- when `...` is used in front of an iterable (e.g array) it acts to "spread" it out into its individual values
+- it's typically used to spread out an array as a set of arguments to a function call
+- can also be used in other contexts, such as inside another array declaration
+```js
+var a = [2,3,4];
+var b = [ 1, ...a, 5 ];
+
+console.log( b );                   // [1,2,3,4,5]
+```
+
+- the other common usage of `...` can be seen as the opposite to *gather* a set of values together into an array
+```js
+function foo(x, y, ...z) {
+    console.log( x, y, z );
+}
+
+foo( 1, 2, 3, 4, 5 );           // 1 2 [3,4,5]
+```
+- `...z` says "gather the ***rest*** of the arguments into an array called `z`"
+  - because `x` was assigned 1 and `y` was assigned 2, the rest of the arguments(3,4,5) where gathered into `z`
+- if there aren't any parameters `...` gathers all arguments
+  - this creates a real array, which might be useful to iterate over the arguments or w/e
+
+###Default Parameter Values
+
+
