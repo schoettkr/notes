@@ -270,3 +270,23 @@ console.log( x, y );                // 20 10
 ```
  
 ####Repeated Assignments
+- the object destructuring form allows a source property to be listet multiple times
+```js
+var { a: X, a: Y } = { a: 1 };
+X;  // 1
+Y;  // 1
+```
+####Too Many, Too Few, Just Enough
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#too-many-too-few-just-enough)
+
+####Default Value Assignment
+- destructuring too offers a default value option for an assignment using `=`
+```js
+var [ a = 3, b = 6, c = 9, d = 12 ] = foo();
+var { x = 5, y = 10, z = 15, w = 20 } = bar();
+console.log( a, b, c, d );          // 1 2 3 12
+console.log( x, y, z, w );          // 4 5 6 20
+```
+
+###Object Literal Extensions
+
