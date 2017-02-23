@@ -51,3 +51,20 @@ if (!Object.is) {
 }
 ```
 - [collection of ES6 Shims](https://github.com/paulmillr/es6-shim/) 
+
+##Syntax
+- some of the following features that ES6 provides are not or only partially implemented
+### Block-Scoped Declarations
+- the fundamental unit of variable scoping in JS has always been the `function`
+  - to create a block of scope the most prevalent way to do so was (besides a regular function declaration) the immediately invoked function expression (IIFE), for example:
+```js
+var a = 2;
+
+(function IIFE(){
+    var a = 3;
+    console.log( a );   // 3
+})();
+
+console.log( a );       // 2
+```
+####`let` Declarations
