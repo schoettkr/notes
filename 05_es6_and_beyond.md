@@ -211,3 +211,62 @@ foo();          // 42
 ```
 
 ###Destructuring
+- a structured assignment is for example
+```js
+function foo() {
+    return [1,2,3];
+}
+
+var tmp = foo(),
+    a = tmp[0], b = tmp[1], c = tmp[2];
+
+console.log( a, b, c );             // 1 2 3
+```
+or with objects:
+```js
+function bar() {
+    return {
+        x: 4,
+        y: 5,
+    };
+}
+var tmp = bar(),
+    x   = tmp.x, y = tmp.y;
+console.log( x, y);             // 4 5 
+```
+- this manual assignment always requires a temporal variable
+- ES6 eliminates this need with a dedicated syntax for *destructuring*
+```js
+var [ a, b, c ] = foo();
+var { x: x, y: y, z: z } = bar();
+
+console.log( a, b, c );             // 1 2 3
+console.log( x, y, z );             // 4 5 6
+```
+####Object Property Assignment Pattern
+- if the property name being matched is the same as the variable, the syntax can be shortened
+```js
+var { x, y, z } = bar();
+console.log( x, y, z );             // 4 5 6
+```
+- but is `{ x, ..}` leaving off the `x:` part or leaving off the `: x` part?
+  - it leaves off the `x:` part
+- the longer form allows to assign a property to a different variable name
+```js
+var { x: bam, y: baz, z: bap } = bar();
+console.log( bam, baz, bap );       // 4 5 6
+console.log( x, y, z );             // ReferenceError
+```
+- the way this assignment works is like in a object literal but actually flipped around
+  - in `var obj = { a: xy, b: yx }` `a` & `b` are the targets and `xy` and `yx` are the sources (target <-- source)
+  - the object destructuring assignment inverts this `target: source` pattern
+    - in `var { x: bam, y: baz, z: bap } = bar();` `bam` is the target value that is assigned to (source --> target)
+- if the variables are already declared, then the destructuring only does assignments
+- it can even solve the traditional "swap to variables" task without a temporary variable
+```js
+var x = 10, y = 20;
+[ y, x ] = [ x, y ];
+console.log( x, y );                // 20 10
+```
+ 
+####Repeated Assignments
