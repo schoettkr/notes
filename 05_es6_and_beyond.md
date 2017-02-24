@@ -374,3 +374,102 @@ Object.setPrototypeOf( o2, o1 );
 o2.foo();       // o1:foo
                 // o2:foo
 ```
+
+###Temple Literals
+- alternative name: *interpolated string literals* (or interpoliterals)
+- JS already allows declaring string literals with `"` and `'`
+- ES6 introduces a new type of string literal using the ``` backtick as the delimiter
+  - these string literals allow basic string interpolation expressions to be embedded, which are then automatically parsed & evaluated
+```js
+var name = "Kyle";
+
+var greeting = `Hello ${name}!`;
+
+console.log( greeting );            // "Hello Kyle!"
+console.log( typeof greeting );     // "string"
+```
+- ``..`` around a series of chars to interpret them as a string literal
+- any expression of the form `${..}` are parsed and evaluated inline immediately
+  - this string literal is more like an IIFE in the sense that it's automatically evaluated inline
+- this parsing and evaluating is usually called *interpolation*
+
+####Interpolated Expressions
+- any valid expression is allowed inside a interpolated string literal, including function calls, inline function expression calls and even other interpolated string literals
+  - an interpolated string literal is just lexically scoped where it appears
+```js
+function upper(s) {
+    return s.toUpperCase();
+}
+
+var who = "reader";
+
+var text =
+`A very ${upper( "warm" )} welcome
+to all of you ${upper( `${who}s` )}!`;
+
+console.log( text );
+// A very WARM welcome
+// to all of you READERS!
+```
+####Tagged Template Literals
+- alternative name: *tagged string literals* 
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#tagged-template-literals)
+
+###Arrow Functions
+- comparison between normal functions and arrow Functions
+```js
+function foo(x,y) {
+    return x + y;
+}
+
+// versus
+
+var foo = (x,y) => x + y;
+```
+- the arrow function is just the `(x,y) => x + y` part and that function reference is just assigned to `foo`
+- the body of an arrow function only needs to be enclosed by `{ .. }` if there's more than on expression or if the body consists of a non-expression statement
+- arrow functions are always function expressions, there is no arrow function declaration
+  - they're anonymous functions expressions
+    - no named reference for the purpose of recursion or event binding/unbinding
+- the longer the function, the less `=>` helps, the shorter the function, the more `=>` can shine
+  - it's reasonable to adopt arrow functions for the place in code where a short inline function is needed and leave the rest as it is
+```js
+var a = [1,2,3,4,5];
+
+a = a.map( v => v * 2 );
+
+console.log( a );               // [2,4,6,8,10]
+```
+####Not just shorter syntax, but `this`
+- arrow functions are *primarily designed* to alter `this` behavior in a specific way, solving a particular and common pain point with `this`
+- inside arrow functions the `this` binding is not dynamic (like in normal functions) but is instead lexical
+```js
+var controller = {
+    makeRequest: function(..){
+        btn.addEventListener( "click", () => {
+            // ..
+            this.makeRequest(..);
+        }, false );
+    }
+};
+```
+- lexical `this` in the arrow function callback in the snippet now points to the same value as in the enclosing `makeRequest(..)` function
+  - `=>` is a syntactic stand-in for `var self = this` (or a `.bind(this)` call)
+- **however** using `=>` when `var self = this` *doesn't` need to work in a this-aware function things will get messed up
+```js
+var controller = {
+    makeRequest: (..) => {
+        // ..
+        this.helper(..);
+    },
+    helper: (..) => {
+        // ..
+    }
+};
+
+controller.makeRequest(..);
+```
+- in this case the `this.helper` reference when invoking `controller.makeRequest(..)` fails because t`this` doesn't point to `controller` (as it normally would)
+  - it instead lexically inherits `this` from the surrounding scope (global scope and therefore points a the global object in this case)
+
+###`for .. of` Loops
