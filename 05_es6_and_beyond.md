@@ -289,4 +289,88 @@ console.log( x, y, z, w );          // 4 5 6 20
 ```
 
 ###Object Literal Extensions
+####Concise Properties
+- to define a property that has the same as a lexical identifier (e.g variable) it can be shortened from `x: x` to `x`
+```js
+var x = 2, y = 3,
+    o = {
+        x,
+        y
+    };
+```
+####Concise Methods
+- functions attached to properties in object literals also have a concise Form
+```js
+var o = {
+    x() {   // instead of x: function() { .. }
+        // ..
+    },
+    y() {
+        // ..
+    }
+}
+```
+- concise methods also have special behaviors that the old counterparts dont, e.g the allowance for `super`
+- concise methods are a nice convenience but should only be used if they're not needed to do recursion or event binding/unbinding
 
+####ES5 Getter/Setter
+```js
+var o = {
+    __id: 10,
+    get id() { return this.__id++; },
+    set id(v) { this.__id = v; }
+}
+
+o.id;           // 10
+o.id;           // 11
+o.id = 20;
+o.id;           // 20
+
+// and:
+o.__id;         // 21
+o.__id;         // 21 -- still!
+```
+####Computed Property Names
+- ES6 allows specifying an expression directly in the object literal that should be computed, whose result is the property name assigning
+  - any valid expression can appear inside the `[ ... ]`
+```js
+var prefix = "user_";
+
+var o = {
+    baz: function(..){ .. },
+    [ prefix + "foo" ]: function(..){ .. },
+    [ prefix + "bar" ]: function(..){ .. }
+    ..
+};
+```
+####Setting `[[Prototype]]`
+- setting the `__proto__` property name in the object literal is standardized as of ES6
+```js
+var o1 = {
+    // ..
+};
+var o2 = {
+    __proto__: o1
+};
+```
+- to set the Prototype of an existing object ES6 provides `Object.setPrototypeOf(*obj*, *prototype*)`
+
+####Object `super`
+- `super` is only allowed for concise methods, not regular function expression properties
+```js
+var o1 = {
+    foo() {
+        console.log( "o1:foo" );
+    }
+};
+var o2 = {
+    foo() {
+        super.foo();
+        console.log( "o2:foo" );
+    }
+};
+
+Object.setPrototypeOf( o2, o1 );
+o2.foo();       // o1:foo
+                // o2:foo
+```
