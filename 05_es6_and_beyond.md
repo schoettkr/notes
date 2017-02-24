@@ -455,7 +455,7 @@ var controller = {
 ```
 - lexical `this` in the arrow function callback in the snippet now points to the same value as in the enclosing `makeRequest(..)` function
   - `=>` is a syntactic stand-in for `var self = this` (or a `.bind(this)` call)
-- **however** using `=>` when `var self = this` *doesn't` need to work in a this-aware function things will get messed up
+- **however** using `=>` when `var self = this` *doesn't* need to work in a this-aware function things will get messed up
 ```js
 var controller = {
     makeRequest: (..) => {
@@ -473,3 +473,112 @@ controller.makeRequest(..);
   - it instead lexically inherits `this` from the surrounding scope (global scope and therefore points a the global object in this case)
 
 ###`for .. of` Loops
+- ES6 adds a `for .. of` loop which loops over the set of values produced by an *iterator*
+  - so the value to loop over must be an *iterable* or a vlaue which can be coerced/boxed to an object that is an iterable
+    - an iterable is simply an object that is able to produce an iterator (which the loop then uses)
+- comparison between `for .. in` and `for .. of` 
+```js
+var a = ["a","b","c","d","e"];
+
+for (var idx in a) {
+    console.log( idx );
+}
+// 0 1 2 3 4
+
+for (var val of a) {
+    console.log( val );
+}
+// "a" "b" "c" "d" "e"
+```
+- `for .. in` loops over the keys/indexes in the array and `for .. of` loops over the values
+- standard built-in values in JS that are by default iterables
+  - Arrays
+  - Strings
+  - Generators
+  - Collections / TypedArrays
+- **Note:** plain objects are not by default suitable for `for .. of` looping
+  - that's because they dont have a default iterator (which is intentional, not a mistake)
+
+###Regular Expressions
+- [unicode flag](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#unicode-flag)
+- [sticky flag](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#sticky-flag)
+- [Regular Expression `flags`](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#sticky-flag)
+
+###Number Literal Extensions
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#number-literal-extensions)
+
+###Unicode
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md#unicode)
+
+###Symbols
+- `symbol` is a new primitive type in JS
+  - unlike the other primitive types, symbols don't have a literal form
+```js
+var sym = Symbol("some optional description");
+typeof sym;     // symbol
+```
+- `Symbol(..)` cannot and should not be used with `new`
+  - it is not a constructor, nor it produces an object
+- the parameter passed to `Symbol(..)` is optional and should be a string that gives a description for the symbol's purpose 
+  - the description is solely used for the stringification representation of the symbol
+```js
+sym.toString();     // "Symbol(some optional description)"
+```
+- the `typeof` output is a new value `"symbol"` that is the primary way to identify a symbol
+- similar to how primitive string values are not instances of `String`, symbols are also not instances of `Symbol` 
+- the internal value of a symbol itself (referred to as its `name`) is hidden from the code and cannot be obtained
+  - about symbol value can be though as an automatically generated, unique string value
+- the main point of a symbol is to create a string-like value that can't collide with any other value
+- for example a symbol can be used as a constant represting an event name:
+```js
+const EVT_LOGIN = Symbol( "event.login" );
+```
+- the symbol EVT_LOGIN can then be used instead of a generic string literal like `"event.literal"`
+```js
+evthub.listen( EVT_LOGIN, function(data){
+    // ..
+} );
+```
+- the benefit is that `EVT_LOGIN` holds a value that cannot be duplicated (accidentally or otherwise) by any other value, so any confusion about which event is being dispatched/handled is impossible 
+
+####Symbol Registry
+- one downside to using symbols is that the variables had to be stored in an outer scope, or otherwise somehow stored in a publicly available location, so that all parts of the code that need to use these symbols can access them
+- to help the access to these symbols, symbol values can be created with the *global symbol registry*
+```js
+const EVT_LOGIN = Symbol.for( "event.login" );
+console.log( EVT_LOGIN );       // Symbol(event.login)
+```
+- `Symbol.for(..)` looks in the global symbol registry to see if a symbol is already stored with the provided description text and returns that symbol if so
+  - if there's not then it creates one to return
+  - so any part of the code can retrieve the symbol from the registry using `Symbol.for(..)` (as long as the matching description name is used)
+    - to avoid accidental collisions symbol descriptions should be quite unique for example by using prefixs/context/namespacing 
+- a registered symbol's description text(key) can be retrieved using `Symbol.keyFor(..)`
+```js
+var s = Symbol.for( "something cool" );
+
+var desc = Symbol.keyFor( s );
+console.log( desc );            // "something cool"
+
+// get the symbol from the registry again
+var s2 = Symbol.for( desc );
+
+s2 === s;                       // true
+```
+####Symbols as Object Properties
+- a symbol used as a property/key of an object is stored in a special way so that the property will not show up in a normal enumeration of the object's properties
+```js
+var o = {
+    foo: 42,
+    [ Symbol( "bar" ) ]: "hello world",
+    baz: true
+};
+
+Object.getOwnPropertyNames( o );    // [ "foo","baz" ]
+```
+- an object's symbol properties can be retrieved anyway
+```js
+Object.getOwnPropertySymbols( o );  // [ Symbol(bar) ]
+```
+- so a property symbol is not actually hidden or inaccessible
+
+##Organization
