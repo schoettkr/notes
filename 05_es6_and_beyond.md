@@ -582,3 +582,10 @@ Object.getOwnPropertySymbols( o );  // [ Symbol(bar) ]
 - so a property symbol is not actually hidden or inaccessible
 
 ##Organization
+###Iterators
+- an *iterator* is a structured pattern for pulling information from a source in a one-at-a-time fashion
+- ES6 introduces an implicit standardized interface for iterators
+  - many of JS's built-in data structures will now expose an iterator implementing this standard
+
+####`next()` Iteration
+
