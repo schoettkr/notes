@@ -588,4 +588,122 @@ Object.getOwnPropertySymbols( o );  // [ Symbol(bar) ]
   - many of JS's built-in data structures will now expose an iterator implementing this standard
 
 ####`next()` Iteration
+- an iterable, for example an array, can produce an iterator to consume it values:
+```js
+var arr = [1,2,3];
 
+var it = arr[Symbol.iterator]();
+
+it.next();      // { value: 1, done: false }
+it.next();      // { value: 2, done: false }
+it.next();      // { value: 3, done: false }
+
+it.next();      // { value: undefined, done: true }
+```
+- `it` doesn't report `true` when recieving the `3` value, `next()` has to be called again to get the complete signal `done: true`
+- each time the method located at `Symbol.iterator` is invoked on this `arr` value, it will produce a new fresh iterator  
+  - most structures (including strings or collections for example) will do the same, including all built-in data structures in JS
+
+####Optional: `return(..)` and `throw(..)`
+- these optional methods on the iterator interface are not implemented on most of the built-in iterators
+- `return(..)` sends a signal to an iterator that the consuming code is complete and will not be pulling any more values from it
+  - can be used to notify the producer to perform any cleanup it may need to do
+- `throw(..)` is used to signal an exception/error to an iterator
+  - it does not necessarily imply a complete stop of the iterator as `return(..)` does
+
+####Iterator Loop
+- if an iterator is also an iterable, it can be used directly with the `for .. of` loop
+  - an iterator is made an iterable by giving it a `Symbol.iterator` method that returns the iterator itself
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#iterator-loop)
+
+####Custom Iterators
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#custom-iterators)
+
+###Generators
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#generators)
+- [and especially](https://github.com/schoettker/notes/blob/master/04_async_and_performance.md#generators)
+
+###Modules
+- modules are the single most important code organization pattern in JS
+
+####The Old Way
+- the traditional module pattern is based on an outer function with inner variables and functions and a returned "public API" with methods that have closure over the inner data
+```js
+function Hello(name) {
+    function greeting() {
+        console.log( "Hello " + name + "!" );
+    }
+
+    // public API
+    return {
+        greeting: greeting
+    };
+}
+var me = Hello( "Lenno" );
+me.greeting();          // Hello Lenno!
+```
+- this `Hello(..)` module can produce multiple instances by being called subsequent times
+
+####Moving Forward
+- ES6 does not longer rely on enclosing functions and closure to provide module support
+  - ES6 modules have first class syntactic and functional support
+- there're a few conceptual differences with ES6 modules compared to traditional modules
+  1. ES6 uses file-based modules (one module per file)
+    - there's no standardized way of combining multiple modules into a single file
+    - that means loading ES6 modules in a web application, will be an individual load (not as a large bundle in a single file)
+  2. the API of an ES6 module is static
+  3. ES6 modules are singletons
+    - only one instance of the module, which maintains its state
+  4. the properties and methods exposed an a module's API are not just normal assignments/values/references - they are actual bindings to the identifiers in the inner module definition (almost like pointers)
+  5. importing a module is the same thing as statically requesting it to load
+
+####The New Way
+- the two main new keywords that enable ES6 modules are `import` and `export`
+  - both must always appear in the top-level scope of their respective usage, cannot be inside an `if` conditional for example (outside all blocks & functions)
+
+#####`export`ing API Members
+- `export` is either put in front of a declaration or used as an operator with a special list of bindings to export
+```js
+export function foo() {
+    // ..
+}
+
+export var awesome = 42;
+
+var bar = [1,2,3];
+export { bar };
+```
+- another way to express the same exports:
+```js
+function foo() {
+    // ..
+}
+
+var awesome = 42;
+var bar = [1,2,3];
+
+export { foo, awesome, bar };
+```
+- these are all called *name exports*
+  - because in effect the name binding of the variables/functions/etc. are exported
+- anything that's *not labeled* with `export` stays private inside the scope of the module
+  - although somethink like `var bar = ..` looks like it is declared at the top-level global scope, the top-level scope is actually the module itself, there is no global scope in modules
+    - Modules *do still* have access to `window` and all the "globals" that hang of it, just to as lexical top-level scope (but it is advised to stay away from globals in modules)
+- a module member can also be renamed (aka alias) during named export
+```js
+function foo() { .. }
+export { foo as bar };
+```
+- module exports are not just normal assignments of values or references, actually when exporting something, a binding (kinda like a pointer) to that thing (variable,function,etc) is exported
+- within a module, if the value of a already exported variable (a binding to it) is changed, the imported binding will resolve to the current(updated) value
+```js
+var awesome = 42;
+export { awesome };
+// later
+awesome = 100;
+```
+- when this module is imported, regardless of when, once that `awesome = 100` assignment has happened , the imported binding resolves to the `100` value, not `42`
+  - that's because the binding is in essence a reference/a pointer to the new `awesome` variable itself, rather than a copy of its value
+- although `export` can be used multiple times inside a module's definition, ES6 definitely prefers the approach where a module has a single export (default export)
+  - the name of the binding is literally `default` (they can be renamed which is common)
+  - there can only be one `default` per module definition
