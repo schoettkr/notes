@@ -941,3 +941,159 @@ s.has( y );                     // false
 
 #####WeakSets
 - whereas a WeakMap holds its keys weakly, a WeakSet holds its values weakly
+
+##API Additions
+- ES6 adds many static properties and methods to various built-in natives and objects
+
+###`Array`
+####`Array.of(..)` Static Function
+- one quirk with the `Array(..)` constructor is that if there's only one argument passed and that is a number, instead of making an array with one element holding that number, an empty array is constructed with a `length` property equal to that number
+- `Array.of(..)` replaces `Array(..)` as the preferred function-form constructor for arrays, because it does not have that special single-number-argument case
+
+####`Array.from(..)` Static Function
+- an *"array-like object"* in JS is an object that has a `length` property (zero or higher) on it
+- it's been quite common to need to transform them into an actual array, so that various `Array.prototype` methods (map, indexOf, etc.) are available to use with it
+- `Array.from(..)` approaches this and can also copy an array (new alternative to using slice)
+```js
+var arr = Array.from( arrLike );
+var arrCopy = Array.from( arr );
+```
+- `Array.from(..)` looks to see if the first argument is an iterable and if so, it uses the iterator to procude values to "copy" into the returned array
+- but if an array-like object is passed as the first argument, it behaves basically the same as slice or apply does
+  - which is that it simply loops over the value, accessing numerically named properties from `0` up to whatever the value of `length` is
+- `Array.from(..)` never produces empty slots
+- `Array.from(..)` has another helpful trick: the second argument, if provided, is a mapping callback (almost the same as the regular `Array#map(..)` expects) which is called to map/transform each value from the source to the returned target
+  - an optional third argument can be used to specify the `this` binding for the callback passed as the second argument (`undefined` if omitted)
+```js
+var arrLike = {
+    length: 4,
+    2: "foo"
+};
+
+Array.from( arrLike, function mapper(val,idx){
+    if (typeof val == "string") {
+        return val.toUpperCase();
+    }
+    else {
+        return idx;
+    }
+} );
+// [ 0, 1, "FOO", 3 ]
+```
+- [Creating Arrays and Subtypes](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch6.md#creating-arrays-and-subtypes)
+
+####`copyWithin(..)` Prototype Method
+- is a new mutator method available to all arrays
+- copies a portion of an array to another location in the same array, overwriting whatever was there before
+- the arguments are *target* (the index to copy to), *start* (the inclusive index to start the copying from) and optionally *end* (the exclusive index to stop copying)
+  - if any argument is negative, they're taken to be relative from the end of an array
+```js
+[1,2,3,4,5].copyWithin( 3, 0 );         // [1,2,3,1,2]
+
+[1,2,3,4,5].copyWithin( 3, 0, 1 );      // [1,2,3,1,5]
+
+[1,2,3,4,5].copyWithin( 0, -2 );        // [4,5,3,4,5]
+
+[1,2,3,4,5].copyWithin( 0, -2, -1 );    // [4,2,3,4,5]
+```
+- `copyWithin(..)` does not extend the array's length, copying stops when the end of the array is reached
+
+####`fill(..)` Prototype Method
+- filling an existing array entirely (or partially) with a specified value is natively supported as of ES6
+```js
+var a = Array( 4 ).fill( undefined );
+a;
+// [undefined,undefined,undefined,undefined]
+```
+- `fill(..)` optionally takes *start* and *end* parameters, which indicate a subset portion of the array to fill
+```js
+var a = [ null, null, null, null ].fill( 42, 1, 3 );
+
+a;                                  // [null,42,42,null]
+```
+####`find(..)` Prototype Method
+- the most common way to search for a value in an array has been `indexOf(..)` 
+- ES6's `find(..)` works basically the same as ES5's `some(..)`, except that once the callback returns a `true`/truthy value, the actual array value is returned
+```js
+var a = [1,2,3,4,5];
+
+a.find( function matcher(v){
+    return v == "2";
+} );                                // 2
+a.find( function matcher(v){
+    return v == 7;                  // undefined
+});
+```
+####`findIndex(..)` Prototype Method
+- finds the positional index of the matched value
+```js
+var points = [
+    { x: 10, y: 20 },
+    { x: 20, y: 30 },
+    { x: 30, y: 40 },
+    { x: 40, y: 50 },
+    { x: 50, y: 60 }
+];
+
+points.findIndex( function matcher(point) {
+    return (
+        point.x % 3 == 0 &&
+        point.y % 4 == 0
+    );
+} );                                // 2
+
+points.findIndex( function matcher(point) {
+    return (
+        point.x % 6 == 0 &&
+        point.y % 7 == 0
+    );
+} );                                // -1
+```
+####`entries(..), values(..), keys(..)` Prototype Method
+- `Array` might not be thought of traditionally as a "collection", but it is one in the sense that if provides these same iterator methods: `entries(..), values(..), keys(..)` 
+```js
+var a = [1,2,3];
+[...a.values()];                    // [1,2,3]
+[...a.keys()];                      // [0,1,2]
+[...a.entries()];                   // [ [0,1], [1,2], [2,3] ]
+[...a[Symbol.iterator]()];          // [1,2,3]
+```
+###`Object`
+- a few additional static helpers have been added to `Object`
+
+####`Object.is(..)` Static Function
+- makes value comparisons in an even more stict fashion than `===`
+- shouldn't be used as a replacement for the strict equality operator, however in cases where it's necessary to strictly identify `NaN` and `-0` `Object.is(..)` is the preferred option
+
+####`Object.getOwnPropertySymbols(..)` Static Function
+- symbols are likely going to be mostly used as special(meta) properties on objects, so `Object.getOwnPropertySymbols(..)` was introduced to retrieve only the symbol properties directly on an Object
+```js
+var o = {
+    foo: 42,
+    [ Symbol( "bar" ) ]: "hello world",
+    baz: true
+};
+Object.getOwnPropertySymbols( o );  // [ Symbol(bar) ]
+```
+####`Object.setPrototypeOf(..)` Static Function
+- sets the Prototype of an object for the purposes of *behavior delegation*
+
+####`Object.assign(..)` Static Function
+- simplified algorithm for copying/mixing one object's properties into another
+- the first argument is the *target* and any other arguments passed are the *sources* which will be processed in listed order
+- for each source, its enumerable and own (not inherited) keys, including symbols, are copied as if by plain `=` assignment
+- returns the target object
+
+###`Math`
+- ES6 adds several [new mathematic utilities](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch6.md#math)
+
+###`Number`
+- ES6 adds some additional properties and functions to assist with common numeric operations
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch6.md#number)
+
+###`String`
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch6.md#string)
+
+##[Meta Programming](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch7.md)
+
+##[Beyond ES6](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch8.md)
