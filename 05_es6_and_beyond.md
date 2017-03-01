@@ -707,3 +707,61 @@ awesome = 100;
 - although `export` can be used multiple times inside a module's definition, ES6 definitely prefers the approach where a module has a single export (default export)
   - the name of the binding is literally `default` (they can be renamed which is common)
   - there can only be one `default` per module definition
+- there's a subtle nuance to default export syntax:
+```js
+function foo(..) {
+    // ..
+}
+export default foo;
+```
+vs
+```js
+function foo(..) {
+    // ..
+}
+export { foo as default };
+```
+- the first snippet exports a binding to the function expression value at that moment, *not* to the identifier `foo`
+  - in other words `export default ..` takes an expression
+  - later assigning `foo` to a different value inside the module, the module import still reveals the function originally exposed, not the new value
+- in the second snippet the default export binding is actually to the `foo` identifier rather than its value 
+  - that results in the behavior that if `foo`'s value is changed, the value seen on the import side will also be updated
+- the couraged patterns for exporting APIs with more than one member look like this:
+```js
+export default function foo() { .. }
+export function bar() { .. }
+export function baz() { .. }
+```
+or alternatively
+```js
+function foo() { .. }
+function bar() { .. }
+function baz() { .. }
+export { foo as default, bar, baz, .. };
+```
+#####`import`ing API Members
+- to import certain specific named members of a module's API into your top-level scope, use this syntax
+```js
+import { foo, bar, baz } from "foo";
+```
+- **Note:** the `{ .. }` may look like an object literal, however its form is special just for modules
+- the `foo`, `bar` and `baz` identifiers must match named exports on the module's API
+  - they're bound as top-level identifiers in the current scope
+- the `"foo"` string is called a *module specifier* and can't be a variable holding the string value
+  - the module loader will interpret this string as an instruction of where to find the desired module, either as a URL path or a local filesystem path
+- bound indentifiers can be renamed as:
+```js
+import { foo as theFooFunc } from "foo";
+theFooFunc();
+```
+- ES6 philosophy suggests to only import the specific bindings from a module that are needed
+
+####Circular Module Dependency
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#circular-module-dependency)
+
+####Module Loading
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#module-loading)
+
+###Classes
+- [Notes](https://github.com/schoettker/notes/blob/master/02_this_and_object_prototypes.md#class-theory--object-oriented-design)
+- add this section later: [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#classes)
