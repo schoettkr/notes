@@ -765,3 +765,179 @@ theFooFunc();
 ###Classes
 - [Notes](https://github.com/schoettker/notes/blob/master/02_this_and_object_prototypes.md#class-theory--object-oriented-design)
 - add this section later: [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#classes)
+
+##Async Flow Control
+- already [here](https://github.com/schoettker/notes/blob/master/04_async_and_performance.md)
+- nothing much new, but concise -> [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch4.md)
+
+##Collections
+- in ES6 some of the most useful (and performance optimizing) data structure abstractions have been added as native components of the language
+
+###TypedArrays (ES5)
+- typed arrays *do not mean* an array of specific type of values (`number` or `string`)
+- typed arrays are about providing structured access to binary data using array-like semantics (indexed access etc.)
+  - the "type" refers to a "view" layered on type of the buckets of bits, which is essentially a mapping of whether the bits should be viewed as an array of 8-bit signed integers, 16-bit signed integers and so on
+- such bit-bucket is called a "buffer" and it's most directly constructed with the `ArrayBuffer(..)` constructor
+```js
+var buf = new ArrayBuffer( 32 );
+buf.byteLength;                         // 32
+```
+- `buf` is now a binary buffer that is 32-bytes long (256-bits), that's pre-initialized to all `0`s
+  - a buffer by itself doesn't really allow any interaction except for checking its `byteLength` property
+- on top of this array buffer can be layered a "view", which comes in the form of a typed array
+```js
+var arr = new Uint16Array( buf );
+arr.length;                         // 16
+```
+- `arr` is a typed array of 16-bit unsigned integers mapped over the 256-bit `buf` buffer, resulting in 16 elements
+  - the buffer has a size of 32 bytes (256 bits) 256 : 16 bits = 16 elements
+
+####Endianness (Byte-Reihenfolge)
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch5.md#endianness)
+
+####Multiple Views
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch5.md#multiple-views)
+
+####TypedArray Constructors
+- [see](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch5.md#typedarray-constructors)
+
+###Maps
+- objects are the primary mechanism for creating unordered key/value-pair data structures, otherwise known as maps
+  - the major drawback with objects-as-maps is the inability to use a non-string value as a key
+- ES6 introduces `Map(..)` to overcome this
+```js
+var m = new Map();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+m.set( x, "foo" );
+m.set( y, "bar" );
+
+m.get( x );                     // "foo"
+m.get( y );                     // "bar"
+```
+- the only drawback is that the `[ ]` bracket access syntax for setting and retrieving values can't be used, but `get(..)` and `set(..)` work perfectly
+- deleting an element from a map is achieved by using the `delete(..)` method (not the `delelte` operator)
+```js
+m.set( x, "foo" );
+m.set( y, "bar" );
+m.delete( y );
+```
+- an entire map's contents can be cleared with `clear()` and the length of a map (number of keys) can be retrieved with `size` (not `length`)
+```js
+m.set( x, "foo" );
+m.set( y, "bar" );
+m.size;                         // 2
+m.clear();
+m.size;                         // 0 
+```
+####Map Values
+- to get the list of values from a map, `values(..)` is used, which returns an iterator
+```js
+var m = new Map();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+m.set( x, "foo" );
+m.set( y, "bar" );
+
+var vals = [ ...m.values() ];
+
+vals;                           // ["foo","bar"]
+Array.from( m.values() );       // ["foo","bar"]
+```
+- iterating over a map's entries can be done by using `entries()` 
+```js
+var m = new Map();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+m.set( x, "foo" );
+m.set( y, "bar" );
+
+var vals = [ ...m.entries() ];
+
+vals[0][0] === x;               // true
+vals[0][1];                     // "foo"
+
+vals[1][0] === y;               // true
+vals[1][1];                     // "bar"
+```
+####Map Keys
+- to get the list of keys `keys()` is used, which returns an iterator over the keys in the map
+```js
+var m = new Map();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+m.set( x, "foo" );
+m.set( y, "bar" );
+
+var keys = [ ...m.keys() ];
+
+keys[0] === x;                  // true
+keys[1] === y;                  // true
+```
+- to determine if a map has a given key, use `has(..)`:
+```js
+var m = new Map();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+m.set( x, "foo" );
+
+m.has( x );                     // true
+m.has( y );                     // false
+```
+- Maps essentially allow to associate some extra pieces of information (the value) with an object (the key) without actually putting that information on the object itself
+
+###WeakMaps
+- WeakMaps are a variation on maps and have most of the same external behavior but differ underneath in how the memory allocation works
+  - they do not have a `size` property or `clear()` method
+- WeakMaps only take objects as keys
+  - those objects are held *weakly*
+    - this means if the object itself is garbage-collected(GC) the entry in the WeakMap is also removed
+    - they only hold its *keys* weakly, not its values
+- WeakMaps are particularly useful if the object is not one that's completely controlled by the dev, such as a DOM element
+  - if the object used as a key can be deleted and should be GC-eligible when it is, then a WeakMap is a more appropriate option
+
+###Sets
+- a set is a collection of unique values (duplicates are ignored)
+```js
+var s = new Set();
+
+var x = { id: 1 },
+    y = { id: 2 };
+
+s.add( x );
+s.add( y );
+s.add( x );
+
+s.size;                         // 2
+
+s.delete( y );
+s.size;                         // 1
+
+s.clear();
+s.size;                         // 0
+```
+- the API for a set is similar to map
+  - the `add(..)` method takes the place of the `set(..)` method, and ironically there's no `get(..)` method
+  - a set doesnt need a `get(..)` because you don't retrieve a value from a set, but rather test if it is present or not, using `has(..)`
+```js
+var s = new Set();
+var x = { id: 1 },
+    y = { id: 2 };
+s.add( x );
+s.has( x );                     // true
+s.has( y );                     // false
+```
+- [Set Iterators](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch5.md#set-iterators)
+
+#####WeakSets
+- whereas a WeakMap holds its keys weakly, a WeakSet holds its values weakly
