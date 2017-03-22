@@ -144,3 +144,78 @@
   - Mitentscheidung beim Gesetzgebungsnotstand, Artikel 81GG
   - Anrufungsrecht Bundesverfassungsgericht bei Organstreit, Präsidentenanklage sowie Parteienverbot
 
+## Judikative: Das Bundesverfassungsgericht und das Gerichtssystem
+### Wesentliche Ergebnisse
+- das Bundesverfassungsgericht ist wegen der erforderlichen 2/3-Mehrheit in Bundestag und Bundesrat eher konsensual(einvernehmlich) besetzt
+- es verfügt über ein breites Spektrum an Verfahrensarten
+- Verfassungsgerichte können Gesetze annullieren
+  - die Drohung der Annullierung erzeugt bereits Wirkung auf Parlament & Regierung (Autolimitation)
+
+### Mögliche Klausurfragen
+1. Welche Aussagen lassen sich zu den Verfahrensarten des Bundesverfassungsgerichtes machen?
+  1. Organstreitigkeiten
+    - Umfang & Kompetenzen von obersten Bundesorganen 
+    - Klage mögl. von: Abgeordneten, Parteien, Fraktionen, Bundesregierungsmitgliedern
+  2. Abstrakte Normenkontrolle
+    - Unvereinbarkeit mit höherrangigem Recht
+    - alle Rechtsnormen, auch vorkonstitutionell
+    - Klage mögl. von: Bundesregierung, Landesregierung, 1/3 Bundestag(bis 2009) 1/4 Bundestag(seit 2009)
+  3. Konkrete Normenkontrolle
+    - aktueller Fall vor Gericht nicht vereinbar mit Verfassung aus Sicht des verhandelnen Gerichtes
+    - formelle nachkonstituionelle Gesetze
+    - Verweis durch niedrigeres Gericht an das Bundesverfassungsgericht
+  4. Bund-Länder-Streitigkeiten
+    - Rechte und Pflichten von Bund und Land und Länderstreite
+    - quantitativ selten, aber qualitativ von Bedeutung
+  5. Verfassungsbeschwerde
+    - individuelle Grundrechtsverletzung
+    - Klage mögl. von: jedermann, inländische juristische Personen
+    - hohe Fallzahlen
+  6. Sonstiges
+    - Parteienverbot, Grundrechtsverwirkung, Bundespräsidentenanklage, Richteranklage, Wahlprüfung, Mandatsverlust
+2. Welche Aussagen lassen sich zu den Eigenschaften des Bundesverfassungsgerichtes?
+  - Zwillingsgericht bestehend aus 2 Senaten a 8 Richter
+    - 1. Senat = Grundrechtsschutz
+    - 2. Senat = abstrakte Normenkontrollen, Bund-Länder-Streitigkeiten, Verfassungsbeschwerden bei ÖD, Strafrecht, Ausländerrecht
+    - 6 Kammern
+3. Wie ist das Phänomen der Autolimitation / Justizialisierung zu erklären?
+  - seit 90er Fokus auf Justizialisierung
+  - Justizialisierung bedeutet, dass pol. Entscheidungen immer stärker durch rechtliche Erwägungen durchdrungen werden
+  - Regierung und Parlament passen sich nach Einführung eines Verfassungsgerichtes dessen (vermuteter) Position an, da das Gericht ein Gesetz beanstanden kann
+4. Wie verläuft die Urteilsfindung im Bundesverfassungsgericht?
+  - verschiedene Varianten von Entscheidungen
+    - zB vollständig verfassungswidrig, tlw. verfassungswidrig, verfassungskonform etc.
+  - Entscheidungsfindung im Senat
+    - Annahme von Anträgen bei min. 5:3
+    - Zurückweisung bei 4:4 oder 3:5
+    - abweichende Meinungen sind möglich
+    - keine Veröffentlichung des individuellen Abstimmungsergebnisses
+  - Kammerentscheidungen (Beschlüsse)
+    - nur einstimmig
+    - nur bei zuvor dem Grunde nach entschiedenen Gegenständen
+    - nur bei Verfassungsbeschwerden
+5. Welche Eigenschaften hat die Richterwahl?
+  - mind. 40 Jahre
+  - zweites juristisches Staatsexamen abgeschlossen
+  - 3/8 in jedem Senat ehem. oberste Bundesrichter
+  - Amtszeit: 12 Jahre
+  - keine Wiederwahl
+  - keine Entlassung durch Wahlinstitutionen möglich
+  - Formelles Auswahlverfahren:
+    - Auswahl nach Proporz-Verfahren
+    - 50% Bundestag in beiden Senaten mit 2/3-Mehrheit
+      - Bundestag stimmt mit 12-köpfigem Ausschuss mit Proporz ab
+        - Vertraulichkeit der Beratungen
+        - keine Veröffentlichung der Ergebnisse
+    - 50% Bundesrat in beiden Senaten mit 2/3-Mehrheit
+      - Länderkammer stimmt im Plenum ab
+    - Plenum des BVerG darf Dreierliste vorlegen
+  - Informelles Auswahlverfahren:
+    - BT-Ausschuss ist nur der formale Rahmen
+    - Findungskommission im BT aus Regierung & Opposition und im BR Landesjustizminister
+    - zwang zur Absprache durch 2/3-Mehrheit
+    - Vorschlagsrecht im Wechsel SPD und CDU/CSU
+    - drei von vier "eigenen" Richtern gehören der Partei an, der andere steht ihr nahe
+    - Einbeziehung des kleineren Koalitionspartners im ersten Senat
+
+  
