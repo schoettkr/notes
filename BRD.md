@@ -39,3 +39,63 @@
   - Rechtsverordnungen sind sekundäres Rechts (also untergesetzlich), müssen tlw. Zustimmung vom BT/ BR erhalten
   - mit Rechtsverordnungen werden durch die Exekutive die Inhalte von Gesetzen (d. Legislative) spezifiziert
   - Gesetze können Bundesregierung, Bundesminister o. Landesregierungen ermächtigen Rechtsverordnungen zu erlassen
+
+## Legislative: Bundestag und Bundesrat
+### Wesentliche Ergebnisse
+- der Abgeordnete steht im Spannungsverhältnis zwischen Wahlkreis und Bundestag sowie persönlicher Freiheit und Fraktion 
+  - Parteienartikel (Artikel 20 I GG): Parteien wirken an der pol. Willensbildung des Volkes mit
+  - Freies Mandat (Artikel 38 I GG): Abgeordnete sind Vertreter des ganzen Volkes, an Aufträge und Weisungen nicht gebunden und nur ihrem Gewissen unterworfen
+- der Bundestag ist ein Parlament mit starken Fraktionen, die Bundesregierung kann die Tagesordnung des Bundestages nur bedingt beeinflussen 
+- Ausschüsse spiegeln im Wesentlichen die Ministerien wider; Hilfsdienste arbeiten den Abgeordneten zu 
+  - beides dient zum Ressourcenausgleich gegenüber der Regierung 
+- der Bundestag hat vier Funktionen: Wahl, Artikulation, Kontrolle, Gesetzgebung 
+  - der Bundestag ist ein Arbeitsparlament mit starken Ausschüssen und schwachem Plenum 
+  - Kontrolle erfolgt durch die Opposition im parlamentarischen System
+  - der Gesetzgebungsprozess ist mehrstufig; die überwiegende Zahl der (erfolgreichen) Entwürfe wird durch die Regierung eingebracht 
+
+### Mögliche Klausurfragen
+1. Was sind 5 Kontrollinstrumente der Opposition im Bundestag?
+  - Politische Kontrolle, Effizienzkontrolle, Rechtskontrolle
+  - Konstruktives Misstrauensvotum gegen BK
+  - Parlamentarische Untersuchungsausschüsse (25% der BT-Mitglieder)
+  - Große Anfragen (5% der BT-Mitglieder)
+  - Kleine Anfragen (5% der BT-Mitglieder)
+  - aktuelle Stunden
+  - Fragestunde
+  - indirekt: Bundesrat / Bundesländer
+2. Was sind 4 grundlegende Funktionen des Bundestages?
+  - Wahl
+    - Bundeskanzler (2/3-Mehrheit), Bundespräsident (nur Mitglieder d. Bundesversammlung), Bundesverfassungsrichter (nur die Hälfte, 2/3-Mehrheit), Mitglieder des Vermittlungsauschusses (nur die Hälfte, Parteienproporz), Präsident und Vize des Bundesrechnungshof
+  - Artikulation 
+    - Artikulation von Wahlkreisinteressen und Gruppeninteressen im Spannungsfeld von:
+      - Arbeitsparlament vs Redeparlament
+      - Darstellungspolitik vs Sachverhalte
+  - Kontrolle
+    - Dualismus von Regierung(geht aus Parlamentsmehrheit hervor) und Opposition 
+    - Opposition kontrolliert Regierung und artikuliert Kritik (ist Regierung im Wartestand / Schattenkabinett und eigene alternative Gesetzesentwürfe)
+    - v.a. durch Opposition: Politische Kontrolle, Effizienzkontrolle, Rechtskontrolle
+  - Gesetzgebung (legislative Funktion)
+    - Einspruchsgesetzgebung (Einspruch des Bundesrates kann von gleicher Mehrheit im BT zurückgewiesen werden)
+    - Zustimmungsbedürftige Gesetzgebung (für Gesetze an denen Länder beteiligt sind)
+      - verweigerte Zustimmung des Bundesrates kann nicht zurückgewiesen werden
+      - Blockade durch Opposition möglich, wenn sie Mehrheit im Bundesrat hat
+    - Gesetzesinitiave geht hauptsächlich von der Ministerialbürokratie(Regierung) aus (BT & BR nehmen lediglich Veränderungen vor)
+    - Vermittlungsauschuss wird (meist vom BR) angerufen wenn es zu keiner Einigung kommt
+3. Wie lautet die Formel des Rice-Index und was lässt sich mit ihm berechnen?
+  - die Geschlossenheit des Abstimmungsverhaltens (Standardindex zur Messung von Fraktionskohäsion)
+  -  Ri = | JaStimmen in %  -  NeinStimmen in %| *oder* Betrag von JaStimmen minus NeinStimmen geteilt durch die Stimmanzahl
+    - es geht um **Stimmen (innerhalb) einer Fraktion** (namentliche Abstimmung ist Voraussetzung)
+  - typischer Rice-Wert in Deutschland 98 bis 99 -> Fraktionen kohäsiv
+4. Welche Grundtypen an Ausschüssen kennt der Bundestag und was sind ihre Aufgaben?
+  - Ständige Bundesausschüsse
+    - bearbeiten substantiell inhaltich die Gesetzesentwürfe
+    - Bildung von Expertise als Gegengewicht zur Regierungssystem
+    - keine öffentliche Beratung
+  - Enquete-Ausschüsse
+    - Beratung von allgemeinen Themen mit konkretem Auftrag (Thinktanks/Denkfabrik)
+    - für eine Legislaturperiode eingesetzt
+    - zur Hälfte Experten, zur Hälfte Abgeordnete
+  - Untersuchungsausschüsse
+    - Aufarbeitung von pol. Problemfällen
+    - "Kampinstrument" der Opposition -> hält Themen medial am köcheln
+    - Besetzungsproporz wie im Bundestag (keine Oppositionsmehrheit!)
