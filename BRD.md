@@ -218,4 +218,52 @@
     - drei von vier "eigenen" Richtern gehören der Partei an, der andere steht ihr nahe
     - Einbeziehung des kleineren Koalitionspartners im ersten Senat
 
-  
+## Verwaltung: Bundes -, Landes- und Kommunalverwaltung
+### Wesentliche Ergebnisse
+- der Prinzipal-Agent-Ansatz eignet sich zur Analyse von Beziehungen zwischen Politik und Verwaltung
+- die Bundesministerien implementieren nur einen kleinen Teil der Politik in Deutschland 
+- Kommunen nehmen auf unterschiedlichen Ebenen eigene und übertragene staatliche Aufgaben wahr 
+- die Kommunalverfassungen haben sich in den 1990er Jahren im wesentlichen der süddeutschen Bürgermeisterverfassung angepasst 
+  - die Direktwahl des Bürgermeisters als Leiter der Verwaltung wurde flächendeckend eingeführt 
+
+### Mögliche Klausurfragen
+1. Was sind die 5 Typen der Fachgerichtsbarkeit in Deutschland?
+  - Ordentliche Gerichte
+  - Sozialgerichte
+  - Arbeitsgerichte
+  - Finanzgerichte
+  - Verwaltungsgericht
+2. Welche Aussagen lassen sich zur süddeutschen (und anderen) Bürgermeisterverfassungen machen?
+  - Süddeutsche Bürgermeisterverfassung
+    - direkt gewählter Bürgermeister, welcher Rat & Verwaltung leitet (längere Amtszeit als Rat)
+  - Dualistische Bürgermeisterverfassung
+    - Direktwahl v. Bürgermeister, Leitung des Rates durch Ratsmitglied
+  - Ratsverfassung mit volksgewähltem Bürgermeister
+    - starke Stellung des Rates bei Direktwahl v. Bürgermeister
+  - Unechte Magistratsverfassung mit volksgewähltem Bürgermeister
+    - Direktwahl Bürgermeister, der Verwaltung im Kollegium/Magistrat leitet
+  - Norddeutsche Ratsverfassung
+    - Bürgermeister wird vom Rat gewählt, hat selbe Amtszeit und leitet nur den Rat (Verwaltung wird vom Gemeindedirektor geleitet)
+  - Unechte Magistratsverfassung
+    - hauptamtlich direkt gewählter Bürgermeister mit tlw. eherenamtlichen Beigeordneten, strikte Trennung von Rat und Bürgermeister/Magistrat
+  - Rheinische Bürgermeisterverfassung
+    - analog zum süddeutschen Modell, aber Wahl des Bürgermeisters durch Rat
+3. Wie lautet die Funktionsweise des Prinzipal-Agent-Ansatzes?
+  - Prinzipal (Auftragsgeber) delegiert eine Aufgabe an einen Agenten (Auftragnehmer)
+  - der Agent soll den Auftrag für eine Gegenleistung ausführen und ist dem Auftraggeber ggü. verantwortlich
+  - Probleme: 
+    - Ziel/Präferenzen des Auftragnehmers weichen vom Auftragsgeber ab
+      - Agency Loss = Agent integriert seine eigenen Vorstellungen und setzt Ziele des Prinzipals nicht vollständig um
+      - Adverse Selection = bestimmte Eigenschaften/Einstellungen des Agenten sind dem Prinzipal nicht bekannt
+    - Informationsasymmetrie
+      - Moral Hazard: Agent kann Handlungen durchführen, die dem Prinzipal verborgen bleiben
+    - keine vollständige Überwachung des Agenten mögl. (erhöhte Transaktionskosten)
+      - Transaktionskosten = Kosten für Vertragsschließung + Überwachung
+  - Überwachungsmechanismen des Prinzipal
+    - ex-ante: Auswahl des Agenten
+    - ex-post: Kontrolle des Agenten (fire alarm = Kontrolle nach Alarmmeldung, police patrol = regelmäßige Kontrolle)
+4. Was sind 4 kommunale Einnahmequellen?
+  - Steuereinnahmen (Gewerbesteuer, Einkommenssteueranteil, Umsatzsteueranteil, Grundsteuer)
+  - Gebühren / Beiträge
+  - laufende Zuweisungen / kommunaler Finanzausgleich
+  - Investitionszuweisungen
