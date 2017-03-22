@@ -29,7 +29,7 @@
   - Ausfertigung von Gesetzen & rechtliche Prüfung
   - Auflösung des Parlaments (nur in Krisenzeiten)
   - Erklärung des Gesetzgebungsnotstand (nur in Krisenzeiten)
-[BP's]: ./img/bps.png
+![BP's](/img/bps.png)
 4. Was sind 4 Aufgaben des Bundeskanzlers?
   - schlägt Minister vor und "lässt" sie durch BP ernennen/entlassen
   - hat Organisationsgewalt über Geschäftsbereiche der Regierung
