@@ -99,3 +99,48 @@
     - Aufarbeitung von pol. Problemfällen
     - "Kampinstrument" der Opposition -> hält Themen medial am köcheln
     - Besetzungsproporz wie im Bundestag (keine Oppositionsmehrheit!)
+
+## Föderalismus: Länder und Kommunen
+### Wesentliche Ergebnisse
+- Föderalismus = ein Staat, in dem staatliche Macht (Souveränität) auf mind. 2 Ebenen verteilt ist
+- der deutsche Föderalismus ist symmetrisch, kooperativ und exekutivenzentriert 
+  - symmetrisch = alle Gliedstaaten haben gleiche Rechte
+  - kooperativ = Bundes- und Landesebene kooperieren eng (Länder für Implementation von Gesetzen zuständig)
+  - Exekutivföderalismus = föderale Zusammenarbeit wird durch die Exekutiven in Bund & Land durchgeführt
+  - unitarischer Bundesstaat = starke Verflechtung bei Gesetzgebung, Finanzierung & Durchführung zur Herstellung einheitlicher Lebensverhältnisse
+- er ist das Ergebnis der historischen Kleinstaaterei in deutschem Sprachraum 
+- der Bundesrat vertritt die Exekutiven der Länder und wirkt über Einspruchs- und zustimmungsbedürftige Gesetzgebungsverfahren mit  
+- die Opposition kann – wenn sie dort über eine Mehrheit verfügt und es sich um ein zustimmungspflichtiges Verfahren handelt – den Bundesrat als Blockadeinstrument nutzen
+  - eine Drohung mit einem Veto erzeugt auch autonom Wirkung (Autolimitation) 
+    - antizipative Effekte, die Blockaden vermeiden sollen
+    - Regierung beschränkt sich selbst und versucht Position der Opposition (wenn diese Bundesrat kontrolliert), zu antizipieren (Autolimitation = Selbstbeschränkung)
+      - Einfluss des Bundesrats tatsächlich größer als es es scheint
+
+### Mögliche Klausurfragen
+1. Aus welchen Gründen entstehen föderale Systeme?
+  - Coming together These
+    - Aushandlungsprozess kleinerer Staaten zur Konzentration(Fusion)
+    - zB. Deutschland, EU, Schweiz
+  - Holding together These
+    - auseinander strebende Teile eines Einheitsstaates sollen durch föderale Arrangements zusammengehalten werden
+    - zB. Spanien, Belgien, Schweiz
+2. Aus welchen Gründen treten zweite Kammern auf?
+  - historische Gründe der Repräsentation unterschiedlicher Gesellschaftsschichten(Stände) oder Territorien
+  - im Zuge d. Demokratisierung wurden die ehem., meist den Adel repräsentierenden, Kammern um eine weitere "demokratische" Kammer ergänzt
+    - in einigen Fällen kam es auch zur Demokratisierung der bestehenden Kammer
+  - zweite Kammern finden sich immer in föderalen Systemen zur Repräsentation der Gliedstaaten (zB Deutschland)
+  - Symmetrie = beide Kammern sind gleichberechtigt -> zweite Kammer hat Veto
+  - Asymmetrie = eine Kammer kann die andere überstimmen -> zweite Kammer hat nur suspensives Veto
+  - Kongruenz = beide Kammern werden gleichermaßen zusammengesetzt
+  - Inkongruenz = unterschiedliche Zusammensetzung
+  - im Fall Deutschland: Starker Bikameralismus (Inkongruenz & Symmetrie) wenn es um zustimmungsbedürftige Gesetze geht und schwacher Bikameralismus (Inkongruenz & Asymmetrie) wenn es um Einspruchsgesetzgebung geht (keine Blockade durch Opposition im Bundesrat moeglich da Bundestag überstimmen/zurückweisen kann)
+    - die meisten Gesetze werden von Ländern ausgeführt, dies macht sie zustimmungspflichtig im Bundesrat
+    - Formal ist der Bundesrat keine zweite Kammer, wird jedoch als solche wahrgenommen
+3. Welche Stimmanteile werden für die Wahlfunktionen des Bundesrates benötigt?
+  - Wahl der Hälfte der Bundesverfassungsrichter(2/3-Mehrheit)
+  - Wahl der Richter an anderen obersten Gerichten (50% Richterwahlausschuss)
+  - Mitwirkung bei Generalbundesanwalt, Präsidenten d. Landeszentralbanken etc.
+  - 1/3-Mitwirkung im Notstandsparlament (gemeinsamer Ausschuss), Artikel 53a
+  - Mitentscheidung beim Gesetzgebungsnotstand, Artikel 81GG
+  - Anrufungsrecht Bundesverfassungsgericht bei Organstreit, Präsidentenanklage sowie Parteienverbot
+
