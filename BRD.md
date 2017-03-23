@@ -267,3 +267,50 @@
   - Gebühren / Beiträge
   - laufende Zuweisungen / kommunaler Finanzausgleich
   - Investitionszuweisungen
+
+# III. Politische Akteure und Prozesse
+## Wahlrecht, Wahlsystem und Wahlverhalten
+### Wesentliche Ergebnisse
+- das Wahlsystem der Bundesrepublik ist ein kompensatorisches gemischtes Wahlsystem mit einem immer stärkeren Trend zur Proportionalisierung 
+  - kompensatorische gemischte Wahlsystemtypen (abhängige) = 
+  - Verhältniswahl weist hohe Proportionalisierung bei der Übersetzung von Stimmen in Mandate auf (erzeugt mehr Parteien)
+- es handelt sich um ein personalisiertes Verhältniswahlsystem mit starren Listen, 5% Sperrhürde, Grundmandatsklausel, Reststimmenverrechnung nach St.  Lague , Überhangmandate werden durch Ausgleichsmandate kompensiert
+  - personalisierte Verhältniswahl (D)
+    - BRD ist in 299 Wahlkreise eingeteilt
+    - Erststimme = Wahl eines Direktkandidaten; 299 Einerwahlkreise
+      - Wahl nach relativer Mehrheitswahl
+    - Zweitstimme = Parteipräferenz (Mandatsverteilung) auf einer starren Parteiliste; 299 Proporzabgeordnete
+      - Wahl erfolgt über Verhältniswahl
+      - zentrale Grundlage für Mandatsvergabe
+      - Listenmandate stellen sicher, dass die Gesamtzahl der Sitze einer Partei proportional zu ihrem landesweitem Stimmenanteil ist (*kompensatorisches* System)
+    - Bundestagsgröße = 299 + 299 = 598 + Überhangmandate + Ausgleichsmandate
+  - Wahlhürde = 5% Sperrklausel mit Grundmandatsklausel
+    - Bezugsgröße = 5% der abgegebenen Stimmen im Bundesgebiet
+    - erreicht eine Partei 5%(Fraktionsstatus) **oder** 3 Direktmandate(Gruppenstatus) zieht sie analog zur Stimmenstärke in BT ein 
+    - direkt gewonnene Mandate erhält sie unabhängig vom Einzug
+  - Wahlformel = Saint-Laguë seit 2009 
+  - Kandidatenwahl = starre Listen auf Landesebene
+  - Verrechnungsebene = Gesamt BRD, Überhang- sowie Ausgleichsmandate möglich
+  - Fazit -> kompensatorisches System, kein Grabensystem
+- das Wahlverhalten wird durch Beruf, Einkommen, Bildungsstand, Religion sowie Migrationshintergrund bestimmt
+  - darüberhinaus spielen demographische Faktoren eine Rolle
+  - Wahlbeteiligung in neuen Bdsl. durchschn. niedriger
+  - Veriablen im Wahlverhalten = strateg. Wählen, soziale Schicht & Parteipräferenz, Konfession und Parteipräferenz, demographische Faktoren
+- Stimmenauszählung und -verrechnung
+Doppeltes Verrechnungsverfahren 
+  - Schritt 1: Anzahl der einer Partei zustehenden Mandate wird für das gesamte Bundesgebiet auf Basis der Zweitstimmen berechnet (nach Saint-Laguë) 
+  - Schritt 2: Anzahl der einer Partei zustehenden Mandate wird für alle Bundesländer berechnet (nach Saint-Laguë) 
+  - Schritt 3: Anrechnung der Direktmandate auf das Zweitstimmenergebnis. Abarbeitung der Landeslisten. Ggf.  Identifikation von Überhangmandaten 
+    - Überhangmandate entstehen wenn eine Partei mehr Mandate über Direktwahl gewinnt, als ihr rechnerisch entsprechend der Grundverteilung zustehen würde
+      - insbsd. dann wenn eine Partei viele Direktmandate in einem Mehrparteiensystem gewinnt
+      - führt zu Disproportionalität deshalb Ausgleichsmandate
+  - Schritt 4 (neu): Ausgleich der Überhangmandate 
+
+### Mögliche Klausurfragen
+1. Welche Elemente charakterisieren das deutsche Wahlsystem hisnchtlich Wahlhürde , Kandidatenauswahl, Wahlsystem und Reststimmenverrechnung? 
+  - siehe oben
+2. Was berechnet der Gallagher-Index und wie lautet die Formel?
+  - Index für die Disproportionalität eines Wahlsystems ist der *Gallagher-Index* G
+  - die Disproportionalität für Partei i ist die Differenz zw. ihrem Anteil an Wählerstimmen (v) und ihrem Anteil an Mandaten(s)
+  - diese Differenzen werden quadriert, um große Abweichungen stärker zu gewichten, und dann summiert
+![Gallagher](img/gallagher.png)
