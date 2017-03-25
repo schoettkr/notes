@@ -314,3 +314,51 @@ Doppeltes Verrechnungsverfahren
   - die Disproportionalität für Partei i ist die Differenz zw. ihrem Anteil an Wählerstimmen (v) und ihrem Anteil an Mandaten(s)
   - diese Differenzen werden quadriert, um große Abweichungen stärker zu gewichten, und dann summiert
 ![Gallagher](img/gallagher.png)
+
+## Politische Parteien und Parteiensystem
+### Wesentliche Ergebnisse
+- das Cleavage-Konzept geht von vier klassischen Hauptcleavages aus sowie einem neuen 
+  - Ziel: makrosoziologische Erklärung der Unterschiede in pol. Systemen
+  - funktionale Cleavages wichtiger als territoriale
+  - der neue Cleavage befindet sich zwischen Materialismus und Postmaterialismus
+- die effektive Parteienzahl kann mit der ENP Kennzahl ermittelt werden
+- das Parteiensystem in Deutschland hat sich in 5 Phasen entwickelt
+  - Phase 1: Kontinuität und Neubeginn 1945-1951
+  - Phase 2: Konzentration des Parteienystems 1952-1961
+    - hauptsächlich CDU/CSU, FDP und SPD
+  - Phase 3: Das Zweieinhalb-Parteiensystem 1961-1983
+    - CDU/CSU, FDP und SPD
+  - Phase 4: Das Zwei-Parteigruppensystem 1983-2006
+    - im Westen: CDU/FDP vs SPD/Grüne
+    - im Osten: CDU, SPD und PDS
+    - im Bund: Erhaltung beider volksparteilicher Pole
+  - Phase 5: Weiterentwicklung zum nationalen 5/6-Parteiensystem 2006-heute(?)
+    - Stabilisierung der Linken auch im Westen
+    - geringere Sitzanteile der großen Parteien zwingen zu neuen Koalitionen
+- Kenntnis der Sartori-Klassifikation zu Parteiensystemen 
+  - Typologie mit zwei Dimensionen:
+    - Anzahl der Parteien
+    - ideolog. Distanz zw. Parteien
+  - die zwei Dimensionen werden nicht unabhängig gedacht, denn die Anzahl der Parteien beeinflusst die ideologische Polarisierung und ist der Hauptgrund, warum die Anzahl überhaupt relevant ist
+- Kenntnis der grundlegenden Theorien und Regeln zu Interessengruppenwettbewerb 
+- Kenntnis grundlegender Funktionen von Parteien
+  - Rekrutierungsfunktion, Programmfunktion, Meinungsbildungsfunktion, Einflussnahmefunktion
+ 
+### Mögliche Klausurfragen
+1. Welche Opfer der 5% Sperrklausel gab es seit 1983 von Parteien, die zuvor im Bundestag vertreten waren? 
+  - FDP 2013
+  - PDS 2002
+  - (West-)Grüne/B90 1990
+2. Ordnen Sie den Entwicklungsphasen des deutschen Parteiensystems die jeweiligen Parteien und Zeiträume zu
+  - siehe oben
+3. Was sind die 4 klassischen Cleavages nach Lipset/Rokkan?
+  - Zentrum / Peripherie (entstanden aus nationalen Revolutionen)
+  - Kirche / Staat (entstanden aus nationalen Revolutionen)
+  - Stadt / Land (entstanden aus industriellen Revolutionen)
+  - Kapitaleigentümer / Land (entstanden aus industriellen Revolutionen)
+4. Wie berechnet sich die ENP und was ist ihre Zielsetzung
+  - empirische Messung der Zahl der Parteien mit dem Indikator "effectie number of parties"(ENP)
+    - nicht nur Zahl der Parteien alleine, sondern auch deren relative Größe ist relevant
+![ENP](/img/enp.png)
+  - **wichtig:** bei ungleichen Gewichten ist die ENP **kleiner** als die tatsächliche Anzahl v. Parteien
+  
