@@ -21,7 +21,15 @@
   - BP wird von Bundesversammlung gewählt (bestehend aus Bundestagsmitgliedern & Mitglieder der Landesparlamente)
   - BP kann auf Antrag von mind. 1/4 des Bundestags oder einem Viertel der Stimmen des Bundesrates mit einer 2/3 Mehrheit im Bundestag oder Bundesrat beim Bundesverfassungsgericht angeklagt werden und infolge dessen von seinem Amt enthoben werden
 2. Welches sind die drei Prinzipien der Exekutivorganisation?
-  - **to be added**
+  - normiert die Gestaltungsprinzipien der Bundesregierung
+  - Kanzlerprinzip
+    - verleiht Bundeskanzler die Kompetenz, die Richtlinien der Politik zu bestimmen(Richtlinienkompetenz)
+  - Ressortprinzip
+    - besagt, dass jeder Bundesminister seinen Geschäftsbereich innerhalb der durch den BK vorgegebenen Richtlinien der Politik *selbstständig* und unter *eigener Verantwortung* leitet
+    - die Minister haben die Organisationsgewalt für ihre Ressorts
+  - Kollegialprinzip
+    - bestimmt, dass alle wichtigen Fragen im gesamten Kabinett entschieden werden
+      - gemeinsam gefasste Entschlüsse werden nach außen mit einer Stimme vertreten
 3. Was sind 4 Aufgaben des Bundespräsidenten?
   - Repräsentation & Integration
   - Vorschlagen eines Kanzlerkandidatens
