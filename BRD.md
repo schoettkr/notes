@@ -362,3 +362,89 @@ Doppeltes Verrechnungsverfahren
 ![ENP](/img/enp.png)
   - **wichtig:** bei ungleichen Gewichten ist die ENP **kleiner** als die tatsächliche Anzahl v. Parteien
   
+## Interessengruppen und Eliten
+### Wesentliche Ergebnisse
+- Rolle von Verbänden
+  - Artikulation & Bündelung von Interessen, die eher partikularisch und im Gegensatz zu Parteien keinen umfassenden Anspruch haben
+  - intermediäre Institutionen im pol. System
+- grundlegende Theorien zu Interessengruppenwettbewerb
+  - Logik des kollektiven Handelns (Mancur Olson, 1965)
+    - konzentrierte Interessen unterscheiden sich von diffusen Interessen in der Organisationsfähigkeit => kleine Gruppen können sich leichter organisieren als größere Gruppen
+    - exklusive Interessen sind leichter zu organisieren als kollektive Interessen (CBDC =  Concentrated Benefits - Deconcentrated Costs)
+- Regeln zur Interessengruppenbeteiligung(Verbandsbeteiligung) in Deutschland
+  - Deutschland gehört laut Meta-Index von Siaroff eher zu korporatistischen Ländern
+    - starke Vertretung von Interessen im BT durch Mitgliedschaft der BT-Abgeordneten (ca. 1/3 Gewerkschaftsmitglieder)
+  - Einfluss im vorparlamentarischen Prozess
+  - gemeinsame Geschäftsordnung der Bundesministerien (GGOBM)
+    - Beteiligung von Ländern, kommunalen Spitzenverbänden, Fachkreisen und Verbänden bleibt, soweit keine Sondervorschriften bestehen, dem Ermessen des federführenden Bundesministeriums überlassen
+    - für Gesetzesentwurf zuständige Bundesministerien haben Angaben zu den beteiligten Fachkreisen & Verbänden zu machen
+  - Zugang zu Parlamentariern & Parteien während des Gesetzgebungsprozesses
+    - im parlamentarischen Prozess indirekter Einfluss über Verbandsmitgliedschaft von Abgeordneten
+    - Anhörung von Experten und Beteiligten in der Ausschussphase des Parlaments
+- Grundcharakteristika von deutschen Eliten
+  - Wertorientierungen
+    - insgesamt sehr pro-demokratisch eingestellt
+    - säkulare Wertvorstellungen der Eliten (Ausnahme: CDU-affine Eliten)
+    - 49% der Eliten sind postmaterialistisch, 28% gemischt postmaterialistisch-materialistisch
+    - Eliten sind liberaler als angenommen
+  - Parteinähe
+    - Parteinäh & Parteimitgliedschaft nehmen zu
+    - 51,4% der nicht-politischen Eliten sind Parteimitglied
+    - mit Ausnahme von Gewerkschaften sind Eliten eher konservativ und bevorzugen CDU und FDP
+
+### Mögliche Klausurfragen
+1. Wie lautet die Definition von Pluralismus und Korporatismus ?
+  - Pluralismus (Bentley 1908, Truman 1951)
+    - innerhalb einer Gesellschaft eines Staates vorhanden
+    - ist die Vielfalt der nebeneinander bestehenden und miteinander um Einfluss & Macht konkurrierender Gruppen/Organisationen/Institutionen
+    - keine staatliche Intervention
+  - Korporatismus (Schmitter 1974)
+    - ist auf Arbeit-Kapital Beziehungen beschränkt
+    - System der Interessenvermittlung zw. Staat und Interessengruppen
+      - Staat delegiert Aufgaben an einzelne Interessengruppen
+      - Interessenvermittlung ist durch Aushandlungsprozesse geprägt
+    - begrenzte Zahl an Verbänden und Zwangsmitgliedschaft
+    - Entscheidungsprozesse sind außerparlamentarisch institutionalisiert
+2. Welche gängigen Interessenverbände gibt es?    
+  - vier einflussreiche Hauptgruppen:
+  - Arbeitgeber
+    - BDA (Bundesvereinigung der Deutschen Arbeitgeberverbände) vertritt Arbeitgeber in sozialpol. Hinsicht
+    - BDI (Bundesverband der Deutschen Industrie) vertritt 90% der Arbeitgeber der Industrie
+    - DIHK (Deutscher Industrie- und Handelskammertag) vertritt v.a. gewerbliche Wirtschaft, ist aber halbstaatlich (Zwangsmitgliedschaft)
+  - Arbeitnehmer, Gewerkschaften
+    - DGB (Deutscher Gewerkschaftsbund) bestehend aus 8 Einzelgewerkschaften (größte Einzelgewerkschaft: IG Metall)
+    - DBB (Beamtenbund und Tarifunion)
+    - CGB (Christlicher Gewerkschaftsbund)
+  - Kirchen
+    - Säkularisierung und Wertewandel führt zu Mitgliederverlurst
+    - CDU affinzer zur kath. Kirche, SPD zur evang. Kirche
+    - Finanzierung durch Kirchensteuer
+  - Deutscher Bauernverband (DB)
+    - rasanter Strukturwandel durch Schrumpfen des ersten Sektors
+    - Einflussverlust durch Stärkung von Verbraucherschutz
+3. Welche Typen von Eliten gibt es?
+  - Politische Eliten
+    - Mitglieder d. Bundes- und Landesregierungen
+    - leitende Mitglieder des Bundestages
+    - Partei- und Fraktionsspitzen
+    - Spitzen in der EU und in den Kommunen
+    - **nicht** alle BT- und LT-Abgeordneten
+  - Verwaltungs- und Justizelite
+  - wirtschaftl. Eliten
+  - kirchliche Eliten
+  - militärische Eliten
+  - wissenschaftliche Eliten
+4. Woraus setzen sich Eliten zusammen(Rekrutierung)?
+  - Kontinuität nach Systemumbrüchen
+    - nach Weimar blieben die alten Eliten an der Macht, nach 1945 wurden die pol. Eliten getauscht, nicht aber die Eliten in Wirtschaft, Justiz und Verwaltung
+    - nach 1990 Entmachtung der alten ostdeutschen Eliten
+    - Frauenanteil unter pol. Eliten steigend
+  - soziale Herkunft
+    - insgesamt eher aus Mittel- und Oberschicht
+    - soziale Differenzen zw. Eliten & Bevölkerung nehmen ab
+    - *aber* starke Differenzen zw. Sektoren
+      - FDP zb. 42.6% der Elite aus Oberschicht, obwohl nur 6.2% der Bevölkerung Oberschicht ist
+    - insgesamt deutlich bessere Durchlässigkeit in Politik als in Wirtschaft
+    - Professionalisierung pol. Eliten
+      - Zunahme der Professionalisierung d. pol. Elite (Berufspolitiker)
+      - *aber:* mit wenigen Ausnahmen altern pol. Eliten schnell und befinden sich in einer instablien, "prekären" Situation
