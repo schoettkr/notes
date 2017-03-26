@@ -448,3 +448,64 @@ Doppeltes Verrechnungsverfahren
     - Professionalisierung pol. Eliten
       - Zunahme der Professionalisierung d. pol. Elite (Berufspolitiker)
       - *aber:* mit wenigen Ausnahmen altern pol. Eliten schnell und befinden sich in einer instablien, "prekären" Situation
+
+## Grundgesetzänderungen und Staatsfinanzen
+### Wesentliche Ergebnisse
+- die wesentlichen Einkommensarten sind Steuern und Sozialabgaben, davon insbesondere die Gemeinschaftssteuern:
+  - Einkommenssteuer, Körperschaftssteuer und Umsatzsteuer
+  - Einnahmeseite(2004) 46.4% Steuern, 38.1% Sozialabgaben
+- Ausgaben werden zu >50% für Sozialpolitik getätigt
+- Staatsquote (Anteil des Staates am BIP) betrug 2005 46.8%, was im internationalen Vergleich mittelhoch ist (Schweden 57.2%, USA 34%)
+  - aber Bildungsausgaben sind auf den untersten Plätzen in der OECD-Skala
+![finanz](/img/finanz.png)
+- Finanzverfassung ist föderal und die Einheiten sind unabhängig voneinander
+  - es gibt kein nationales Budget im engeren Sinne
+  - Bund und Länder in Haushaltsführung prinzipiell unabhängig voneinander, müssen sich aber zur Sicherstellung des gemeinwirtschaftlichen Gleichgewichtes koordinieren
+  - Schuldenbremse (2006 mit Föderalismusreform eingeführt, ab 2016 für Bund, 2020 für Länder)
+    - *Einnahmen und Ausgaben sind grundsätzlich ohne Einnahmen aus Krediten auszugleichen*
+- die Verfassung wird auf unterschiedlichen Skalen eher als rigide eingestuft, trotzdem ist die Änderungsrate eher hoch
+  - 51 Änderungsgesetze, 246 Änderungen, 37 neue Artikel, Verdoppelung der Länge
+    - sehr häufig Änderungen in Verfahren der Gesetzgebung
+    - kaum Änderungen an der institutionellen Grobstruktur
+    - Änderungen an Grundrechten mittel
+  - neue Bereiche: Wiederbewaffnung, Notstandsverfassung, Finanzausgleich, Gemeinschaftsausgaben, Beziehungen zur EU
+- aufgrund des identischen Parteiensystems in Bund & Ländern ist die Große Koalition ein Türöffner für Verfassungsänderungen
+  - ansonsten große Oppositionspartei ohne Sperrminorität im BT & Mehrheit im BR **oder** Einvernehmen von Regierung & Opposition
+
+### Mögliche Klausurfragen
+1. Nennen Sie die drei Gemeinschaftssteuern. Nach welchem Schlüssel werden die drei Steuern auf Bund, Länder und Kommunen verteilt? Nach welchem Schlüssel wird der Länderanteil zwischen den Ländern verteilt? 
+
+  - Gemeinschaftssteuern werden auf die einzelnen Ebenen nach Anteilen verteilt und sind die wesentlichen Einkommensquellen
+    - Lohn/-Einkommenssteuer 42.5% Bund, 42.5% Länder, 15% Kommunen
+    - Körperschaftssteuer 50% Bund, 50% Länder
+    - Umsatzsteuer 53.2% Bund, 46.6% Länder, 2.2% Kommunen
+  - die Anteile eines Landes am Einkommenssteueranteil der Länder bemisst sich nach örtlichem Aufkommen
+  - die Anteile eines Landes am Körperschaftssteueranteil der Länder bemisst sich nach örtlichem Aufkommen
+  - die Anteile eines Landes am Umsatzsteueranteil der Länder bemisst sich nach der Einwohnerzahl
+
+
+2. Was sind zwei Beispiele für Bundes- und Landessteuern
+  - Steuereinnahmen nach Trenn- und Verbundsystem
+  - Bundesteuern:
+    - Zölle, EU Steuern, KfZ Steuer, Kapitalverkehrsteuer
+  - Landessteuern:
+    - Vermögenssteuer, Erbschaftssteuer, Biersteuer, Spielbankenabgabe
+
+3. Aus welchen drei Finanzquellen wird über die Verteilung der Gemeinschaftssteuern hinaus finanzschwachen Ländern geholfen? 
+  - Sekundärer vertikaler Finanzausgleich: **Länderfinanzausgleich**
+    - Umverteilung von reichen zu armen Ländern zum Ausgleich der Finanzkraft
+    - Geberländer: Bayern, BaWü, Hessen
+    - Nehmerländer: Berlin, Sachsen, NRW
+  - Sekundärer horizontaler Finanzausgleich: **Bundesergänzungszuweisungen**
+    - Förderung von finanzschwachen Ländern zur Deckung ihres allg. Finanzbedarfs
+    - für Länder, deren Finanzkraft auch nach Länderfinanzausgleich noch zu 100% unter Länderdurchschnitt liegt
+  - **Sonderbedarfs-Bundesergänzungszuweisungen**
+    - Förderung von *besonders* finanzschwachen Ländern zur Deckung ihres allgemeinen Finanzbedarfs (Berlin, Bremen, Saarland)
+
+4. Welche Regelungen gelten für das Grundgesetz hinsichtlich Änderungsraten, Änderungsverboten und richterlichen Kontrollen?
+  - Mehrheitserfordernis Artikel 79 II
+    - 2/3-Mehrheit im Bundestag und
+    - 2/3-Mehrheit im Bundesrat
+    - **aber:** Ewigkeitsklausel Art. 79 III
+      - *"Eine Änderung dieses Grundgesetzes, durch welche die Gliederung des Bundes in Länder, die grundsätzliche Mitwirkung der Länder bei der Gesetzgebung oder die in den Artikeln 1 und 20 niedergelegten Grundsätze berührt werden, ist unzulässig"*
+  - Verfassungsrigidität bezeichnet die Schwierigkeit, eine Verfassung zu ändern
