@@ -191,3 +191,122 @@
 - ID = (5000/50) * 100 = 10.000
 
 4. Ist die Messung eines minimalistischen Demokratiekonzeptes mit Freedom House valide?
+
+## Exekutive und Legislative im Parlamentarismus (1)
+### Wesentliche Ergebnisse
+- Klassifikation demokratischer Systemtypen (Cheibub et. al)
+![Klassifikation](/img/klassifikation.png)
+#### Parlamentarismus
+- zwei primäre Merkmale
+  - Exekutive (Regierung) geht aus der Legislative (Parlament) hervor 
+    - Investiturabstimmung nicht unbedingt erforderlich
+      - Investiturabstimmung = Abstimmung über Regierungschef und/oder Kabinett zu Beginn der Legislaturperiode durch das Parlament
+  - Abberufbarkeit der Regierung durch Parlament
+    - Regierung kann zu jedem Zeitpunkt aus pol. Gründen durch einfaches/konstruktives Misstrauensvotum der Parlamentsmehrheit abgewählt werden
+      - einfaches Misstrauensvotum = Abwahl des Regierungschef bzw. einzelner Minister durch Parlament
+      - konstruktives Misstrauensvotum = Abwahl der alten Regierung durch Wahl einer neuen Regierung vom Parlament
+      - Vertrauensfrage: durch Regierungschef ggü. der Parlamentsmehrheit, bei Niederlage Parlamentsauflösung
+      - Parlamentsauflösung = Parlamentsauflösung durch Regierungschef/Kabinett (nicht immer möglich)
+- es gibt neben den primären Merkmalen noch einige, nicht überall vorhandene, sekundäre Merkmale, sowie einige Ausnahmeländer
+- Sekundärmerkmale müssen nicht erfüllt werden, aber werden es meist, es gibt 5 mögliche:
+  - Wahl des Regierungschefs durchs Parlament
+  - Auflösbarkeit des Parlaments durch Regierungschef
+  - Zugehörigkeit der Minister zum Parlament
+  - überwiegende Herkunft der Minister aus dem Parlament
+- Idealypische Delegationskette im parlamentarischen System:
+![delegation](/img/delegation.png)
+- 5 Grundtypen von Regierungen im Parlamentarismus, kombiniert durch Mehrheitsstatus und Parteienzahl
+![Grundtypen](/img/grundtypen.png)
+- Übergroße Regierungen:
+  - kommen eher selten vor
+  - beinhalten mehr Parteien, als zur Aufrechterhaltung des Regierungsstatus nötig wären
+  - Variablen die Auftreten von übergroßen Koalitionen beeinflussen:
+    - Policy-Variablen:
+      - nationale Krise / Krieg
+      - umstrittene Policies
+      - Senkund des Erpressungspotenzials
+    - Institutionelle Variablen:
+      - Supermajorität oft erforderlich
+      - geheime Abstimmung
+- Minderheitsregierungen:
+  - sind recht normales Phänomen in Europa (ca. 17% aller Regierungen sind Minderheitsregierungen)
+- Variablen die Auftreten von Minderheitsregierungen beeinflussen:
+    - Policy-Variablen:
+      - Zersplitterung der Opposition
+      - zentrale Lage der Regierungsparteien
+    - Institutionelle Variablen:
+      - Investiturabstimmung (senkt Wahrscheinlichkeit!)
+      - hoher Oppositionseinfluss
+      - Agendakontrolle der Regierung
+      - wenn ein Land korporatistisch ist, treten Minderheitsregierungen öfter auf
+- Regierungsbildung 
+  - Handlungsmotive von Politikern: Vote (entfällt da bereits gewählt), Office (Ämter sind ein pol. Preis), Policy (Politik kann endlich umgesetzt werden)
+  -  diverse institutionelle Regeln, zB Investiturabstimmung, Formateur(schlägt Koalitionsbildnder vor) etc.
+  - Office-gebundene Koalitionstheorien
+    - minimal-winning = es werden nur soviele Parteien in die Regierung geholt, wie zur Bildung einer Mehrheit (50% + 1) notwendig sind
+    - minimum-size = Minimierung der Sitzzahl
+    - bargaining proposition = Minimierung der Parteinzahl
+  - Policy-gebundene Koalitionstheorien
+    - office-gebundene Theorien könnten zu Kombinationen führen die ideologisch keinen Sinn machen (zB. Die Linke & CDU)
+      - deshalb zusätzliche Heranziehung pol. Positionen zur Erklärung
+    - minimal-connected winning = es bilden sich Koalitionen von nebeneinander liegenden Parteien, die minimal winning sind (50% + 1)
+    - minimum-range =  Minimierung des Abstandes auf der ideologischen Achse
+    - policy-viable = starke Parteien, die den Medianabgeordneten beinhalten, sind zentral bei Koalitionsbildung
+- Kabinettszusammensetzung
+  - Kabinettsallokation ist wichtig, weil in Ministerien Gesetze entworfen werden und der jeweilige Fachminister Ressortverantwortung besitzt (er besitzt also Agendasetzungsrechte)
+  - Ressortverteilung hat auch starke Effekte auf die tatsächliche Politik einer Regierung
+  - Gamson's Law bestimmt Kabinettsverteilung =  Kabinettsanteil einer Regierungspartei ist so hoch wie ihr Sitzanteil im Parlament
+- Regierungsstabilität
+  - zwei Operationalisierungsvarianten zur Messung finden sich in der Literatur (z.B. Lijphart 1999) 
+    - Variante 1: jedes formale Ende (Ende einer Legislaturperiode, Austausch des Premiers...), z.B. Rot-Grün 1998-2002 nach 2002-2005, Übergang von Thatcher zu Major in Großbritannien 
+    - Variante 2: Wechsel Regierungspartei, z.B. von CDU/FDP nach SPD/Grüne und zu CDU/SPD bzw. Tories zu Labour in Großbritannien 
+  - Variablen die Überlebensfähigkeit einer Regierung beeinflussen:
+    - Kabinettstyp
+      - Mehrheitsstatus der Regierung
+      - inhaltliche Distanzen
+    - pol. Umfeld
+      - pol. Krisen
+      - Struktur des Parteiensystems
+
+#### Präsidentialismus
+- Staatsoberhaupt repräsentiert den Staat und ist gleichzeitig Regierungschef
+- drei primäre Merkmale:
+  - Chef der Exekutive ist ein direkt oder quasi-direkt gewählter Präsident
+  - die Amtszeiten des Chefs der Exekutive und der legislativen Versammlung sind fixiert
+    - es gibt kein Vertrauensverhältnis zwischen Exekutive und Legislative
+  - Präsident stellt Kabinett zusammen & führt es, es besitzt ein Mindestmaß an verfassungsmäßig garantierten Befugnissen in der Gesetzgebung
+- Kombination dieser drei Kriterien führt zu zwei unabhängigen Agenten, die bei der Gesetzgebung miteinander verhandeln müssen (Gewaltenteilung, seperation of powers)
+![delepra](/img/delepra.png)
+- Präsident hat i.d.R. keine Antragsrechte im Parlament, weil Exekutive und Legislative getrennt sind
+  - ihm stehen jedoch Dekrete (haben Gesetzesrang, bedürfen jedoch Parlamentsgesetz als Ermächtigungsgrundlage), Dekretgesetze (gleicher Rang wie Parlamentsgesetze) und Vetorechte (vehindern Inkrafttreten von Gesetzesentwürfen)
+- Regierung besteht aus Staatsoberhaupt und seinem Kabinett
+- Regierungsbildung
+  - Kabinettskoalition (parteipol. Besetzung des Kabinetts) und Gesetzgebungskoalition (Mehrheit im Parlament) fallen im präs. System auseinander (im parl. System eine Einheit)
+  - es ist nicht funktionslogisch notwendig, dass der Präsident eine Mehrheit im Parlament hat
+    - trotzdem bestehen starke Anreize, eine halbwegs stabile Kabinettskoalition zu bilden
+      - insbesondere wenn Präsident nur geringe Dekret- und Vetorechte hat
+      - er braucht also eine implizite Parlamentsmehrheit
+    - Anreize sind jedoch weniger stark als in parlamentarischen Systemen (Minderheitsreg. im Präs. 46%, im Parl. 33%)
+  - Kabinette beinhalten einen deutlich höheren Anteil von Ministern, die keiner Partei angehören
+  - deutlich weniger proportionale Verteilung von Kabinettsposten 
+- Regierungsstabilität
+  - Amtszeit des Präsidenten ist in Verfassung fixiert
+
+### Semi-Präsidentialismus
+- Aufaben des Präsidenten im Parlamentarismus eher zeremoniell, aber es finden sich auch Länder, die ein direkt gewähltes Staatsoberhaupt haben, welcher auch über repräsentative Aufgaben hinaussgehende Funktionen hat
+- drei primäre Merkmale:
+  - es gibt einen Regierungschef und ein Kabinett, die von der Parlamentsmehrheit abhängig sind
+  - es gibt einen direkt gewählten Präsidenten
+  - der Präsident hat laut Verfassung "erhebliche" Kompetenzen
+    - kein klares Konzept über Operationalisierung "erheblicher" Kompetenzen
+    - einfachste und breiteste Definition von Semi-Präsidentialismus deshalb:
+      - direkt gewählter Präsident
+      - bei gleichzeitiger Abberufbarkeit der Regierung durch das Parlament
+- premier-präsidentielle Systeme =  Premier und sein Kabinett werden vom Präsidenten ernannt, können aber nur vom Parlament (Misstrauensvotum) gestürzt werden => ähneln eher parl. Systemen 
+- präsidentiell-parlamentarische Systeme = Premier und sein Kabinett werden vom Präsidenten ernannt und können vom Präsidenten, wie auch vom Parlament(Misstrauensvotum), entlassen werden => ähnlen eher präs. Systemen
+- Regierungsbildung
+  - abhängig vom Subtyp
+  - premier-präsidentielle Systeme funktionieren analog zu parlamentarischen Systemen
+  - über präsidentielle-parlamentarische Systeme ist nur wenig bekannt
+    - funktionieren weder vollständig wie parlamentarische, noch wie präsidentielle Systeme
+![delefra](/img/delefra.png)
