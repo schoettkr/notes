@@ -67,3 +67,50 @@
     - haben zwei (o. mehr) Fälle, in denen dasselbe Phänomen auftritt, nur eine einzige Bedingung gemeinsam (entscheidene Übereinstimmung), dann ist dies die notwendige Bedingung für das Auftreten des Phänomens (-> Vergleich sehr unterschiedlicher Fälle)
   - Method of Difference = Suche nach **entscheidenem Unterschied** zw. zwei sehr ähnlichen Fällen, die sich im zu erklärenden Phänomen unterscheiden
     - unterscheiden sich Fälle, in denen nicht dasselbe Phänomen auftritt, nur in einer einzigen Bedingung, dann ist das die hinreichende Bedingung für das Auftreten des Phänomens
+
+## Handlungstheorie als Verständnisgrundlage politischen Handelns
+### Wesentliche Ergebnisse
+- die drei Komponenten des Politikbegriffes sind Polity(pol. Institutionen), Politics(pol. Entscheidungsprozesse) und Policy(pol. Entscheidunsergebnisse)
+- neben Interessen, Institutionen, Interessen, Interaktionen und Individuen dienen (pol.) Ideen als Erklärungsansatz
+- bei einem *positivistischen* Wissenschaftsbild sind Fakten und Bewertungen strikt getrennt
+  - empirische Messung basiert auf Wahrscheinlichkeiten
+  - Fakten sind objektiv und messbar
+  - Messungen sind durch unterschiedliche Individuen wiederholbar
+  - Sozialwissenschaften können gleiches Wissenschaftsmodell benutzen wie Naturwissenschaften
+- bei einem *konstruktivistischen* Wissenschaftsbild sind Fakten und Bewertungen nicht unabhängig voneinander
+  - Forscher ist nicht unabhängig vom Forschungsobjekt und Fakten sind sozil eingebettet und konstruiert
+  - empirische Forschung ist stärker interpretativ
+- Akteure haben Präferenzen und setzen diese in einem institutionellen Umfeld um 
+- Nutzenfunktionen sind numerischer Ausdrücke von Präferenzordnungen von Akteuren und haben nur einen Peak  
+- bei einem Condorcet Paradox gibt es keine kollektive transitive Präferenzreihung 
+
+### Mögliche Klausurfragen
+1. Welche Gruppen an unabhängigen Variablen benutzen rational choice institutionalistische Ansätze? 
+2. Was sind die vier Kriterien einer fairen Entscheidung nach Arrows
+- Regel 1: Nondictatorship: Kein Individuum darf das Entscheidungsergebnis vollständig beeinflussen 
+- Regel 2: Universal Admissability: Jede rationale Präferenzreihung für Wähler ist zulässig 
+- Regel 3: Unanimity: Bei Einstimmigkeit müssen die individuelle Präferenzreihung mit der kollektiven übereinstimmen 
+- Regel 4: Independence of irrelevant alternatives: Das Gruppenergebnis sollte nicht durch die Bewertung externer Entscheidungsalternativen beeinflusst werden 
+- Arrow Theorem: Soll ein Entscheidungsprozess zu einem transitiven Ergebnis führen, muss mindestens eine der 4 Regeln gebrochen werden 
+
+3. Was sagt das Condorcet Paradox aus?
+- Paradox: bei bestimmten Präferenzordnungen gewinnt kein Kandidat, wenn es keine einschränkenden Regeln gäbe (kein Condorcet Gewinner) -> Entscheidungschaos
+- entsteht wenn individuelle transitive Präferenzen zu kollektiven *intransitiven* Präferenzen allokiert werden
+- die Wahrscheinlichkeit für ein Condorcet Paradox nimmt mit Zahl der Wähler und Alternativen zu
+  - das Limit ist in beiden Fällen (gegen Unendlich) = 1
+
+4. Was ist der Rational Choice Institutionalismus?
+- es gibt verschiedene Institutionenbegriffe:
+  - holistisches Verständnis: Institutionen als Organisation -> Soziologischer Institutionalismus
+  - minimalistisches Verständnis: Institutionen als Entscheidungsregel -> Rational Choice Institutionalismus
+- Akteure & Präferenzen
+  - Akteure können individuell und kollektiv sein und sie besitzen Präferenzen
+  - Arten von Präferenzen bei Politikern: Vote (Wahl), Office (Amt), Policy (Inhalte)
+    - es wird angenommen das Präferenzen vollständig und transitiv sind
+- Institutionen
+  - (in)formelle institutionelle Regeln
+  - beschränken den Handlungsspielraum von Akteuren
+- Akteure versuchen beim Handeln ihren Nutzen zu maximieren
+  - Handlungen können "sincere:" sein -> Wahl des Idealpunktes/der Erstpräferenz
+  - Handlungen können "strategisch" sein -> Wahl einer niedrigeren Alternative aus der Präferenzreihenfolge, die evtl. zu einem höheren Nutzen führt wegen Abstimmungsregeln (Ersstimme BTwahl CDU und Zweitstimme FDP, da Direktmandat FDP chancenlos)
+- *Präferenzen und Institutionen erklären das Handeln von Akteuren*
