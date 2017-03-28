@@ -114,3 +114,80 @@
   - Handlungen können "sincere:" sein -> Wahl des Idealpunktes/der Erstpräferenz
   - Handlungen können "strategisch" sein -> Wahl einer niedrigeren Alternative aus der Präferenzreihenfolge, die evtl. zu einem höheren Nutzen führt wegen Abstimmungsregeln (Ersstimme BTwahl CDU und Zweitstimme FDP, da Direktmandat FDP chancenlos)
 - *Präferenzen und Institutionen erklären das Handeln von Akteuren*
+
+# II. Die institutionelle Struktur demokratischer Regierungssysteme 
+## Demokratie als Grundlage politischer Systeme
+### Wesentliche Ergebnisse
+- es lassen sich unterschiedliche Konzeptionen von Demokratie identifizieren anhand der Dimensionen Input/Output und Minimal/Maximal 
+![Demokratietypen](/img/demokratie.png)
+- die drei wesentlichen Grundtypen nicht-demokratischer Systeme sind: Monarchie, Militärdiktatur, Zivile Diktatur
+- Demokratie und Autokratie lassen sich über unterschiedliche Skalen mit unterschiedlichen Messkonzepten erfassen
+  - (Z.B.  Vanhanen , PACL, Polity IV, Freedom House) 
+- Demokratisierung findet in Wellen statt: es kommt zu Ausbreitung und Rückzug
+  - 1. Welle 1828-1922 
+    -> Gegenwelle: 1922-1942 
+  - 2. Welle: 1943-1962 
+    -> Gegenwelle: 1962-1974 
+  - 3. Welle: 1974-heute 
+    -> Gegenwelle: 1995-heute 
+  - Phasen der Ausweitung des Wahlrechtes 
+    - von oben nach unten 
+    - von Männern zu Frauen 
+  - von Demokratien zu nicht-demokratischen Systemen 
+    - präsidentielle Systeme neigen stärker zum Wandel zu Autoritären Systemen als parlamentarische Systeme 
+  - von nicht-demokratischen Systemen zu Demokratien 
+    - autoritäre Systeme werden zu Präsidentialismus 
+- Transformationsprozesse können bottom-up und top-down verlaufen
+
+### Mögliche Klausurfragen
+1. Was sind die Grundtypen von nicht-demokratischen Systemen nach Cheibub et. al?
+- Monarchie
+  - Machtbasis: Familie/Stamm
+  - Nachfolge: Thronfolge durch Geburt als Familienmitglied
+- Militärdiktatur
+  - Machtbasis: Juntas (Gruppen von Offizieren)
+  - Nachfolge : Mitgliedschaft beim Militär
+- Zivile Diktatur
+  - Machtbasis: kann variieren, Partei oder Personenkult
+  - Nachfolge: nicht automatisch geregelt
+  - ist häufigste Form nicht-demokratischer Systeme (2008 51,4% von 74 Dikaturen zivil)
+
+2. Mit welchen Indizes kann Demokratie gemessen werden?
+- Vanhanen-Index
+  - Wettbewerb: C = 100 - Stimmenanteil stärkster Partei
+  - Partizipation: P = (Wählerzahl/Gesamtzahl Bevölkerung) * 100
+  - Index of Democratization: ID Gesamt =  (P/C) * 100
+  - Vorraussetzungen: gewählte Repräsentanten, freie faire und regelmäßige Wahlen, Meinungsfreiheit, Zugang zu alternativen Informationsquellen, Organisationsfreiheit, inklusive (Wahl-)Bürgerschaft
+- PACL
+  - dichotome Skala: 0 = Diktatur, 1 = Demokratie
+  - Positionierung innerhalb der beiden Typen und Inklusions-Dimension fehlen völlig
+  - Bedingungen für Operationalisierung: gewählter Regierungschef, gewähltes Parlament, mind. 2 Parteien treten zu Wahlen an, es hat mind. 1 Regierungswechsel unter identischem Wahlrecht stattgefunden
+- Polity IV
+  - kontinuierliche Messung (Land kann mehr oder weniger demokratisch sein)
+  - getrennte Messungen für Demokratie und Autokratie (Werte variieren jeweils von 0 bis 10)
+  - Polity-Wert = Demokratie-Wert minus Autokratie-Wert
+    - Werte variieren also zw. -10 und +10 (maximal demokratisch)
+    - -10 bis -6 = Autokratie, -5 bis 5 = gemischt, 6 bis 10 = Demokratie
+  - fünf Dimensionen für Operationalisierung
+    (1) Wie kompetitiv ist Wettbewerb um Regierungsmacht?
+    (2) Wie offen ist der Wettbewerb um Regierungsmacht?
+    (3) Inwieweit ist Macht der Regierung eingeschränkt?
+    (4) Wie ist die pol. Beteiligung reguliert (Inklusion)?
+    (5) Wie kompetitiv ist pol. Beteiligung?
+- Freedom House
+  - keine Demokratiemessung im engeren Sinne (wird aber von vielen Forschern so behandelt)
+  - zwei getrennte Dimensionen
+    - pol. Beteiligungsrechte 60 Punkte
+    - bürgerliche Freiheitsrechte 40 Punkte
+  - entland beider Dimensionen Werte von 1 bis 7
+    - Werte beruhen auf Fragen, zB ob es eine wettbewerbsfähige Opposition gibt (pol. Rechte) oder ob es eine unabhängige Gerichtsbarkeit oder Eigentumsrechte gibt (bürgerliche Freiheiten)
+  - Freedom-Wert ist das arithmetische Mittel
+    - zB.: civil rights = 5, political rights = 3 -> Freedom House = 4
+    - 1 bis 2.5 = frei, 2.6 bis 5.5 = teilweise frei, 5.6 bis 7 = unfrei
+
+3. Welchen Grad an Demokratie hat Land A im Vanhanen-Index bei einer Wahlbeteiligung von 50% und einem Stimmanteil der größten Partei von 50%?
+- Wettbewerb C = 100 - 50% = 50
+- Partizipation P = 50 * 100 = 5000 
+- ID = (5000/50) * 100 = 10.000
+
+4. Ist die Messung eines minimalistischen Demokratiekonzeptes mit Freedom House valide?
