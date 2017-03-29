@@ -435,3 +435,7 @@
 - oppositionelle Klagen: sincere oder strategic behavior
   - sincere behavior = es ist kostenfrei für die Opposition zu klagen und sie treibt dadurch die Justizialisierung der Politik voran 
   - strategic behavior = Klagen sind nicht kostenfrei, Opposition klagt daher eher, wenn sie sich einen Erfolg ausrechnet
+
+# III. Politische Akteure und deren Interessen
+## Wahlsysteme und Wahlverhalten
+### Wesentliche Ergebnisse
