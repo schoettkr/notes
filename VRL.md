@@ -372,3 +372,66 @@
   - Dezentralisierung beschreibt das "Recht zu Handeln" einer staatlichen Ebene, also Gesetze und Verordnungen zu implementieren
     - wird meist mittels empirischer Indikatoren erfasst
 
+## Verfassungsgerichte und Direkte Demokratie
+### Wesentliche Ergebnisse
+- direkte Demokratie
+  - meint direkte Beeinflussung von Sachfragen durch Bevölkerung
+    - in repräsentativer Demokratie werden Abgeordnete gewählt die im Auftrag der Wähler über Sachfragen entscheiden
+  - direktdemokratische Instrumente haben nicht nur Einfluss auf einzelne Sachfrage, sondern auch auf das Verhalten der Politiker im repräsentativen Teil des pol. Systems
+  - in meisten pol. System finden sich direktdemokratische Elemente, aber keines ist direktdemokratisch in Reinform
+  - Kontrollfunktion
+    - inhaltl. Entscheidungen der Repräsentanten sollen Willen der Bevölkerung entsprechen
+  - Legitimationsfunktion
+    - Erhöhung der gesell. Akzeptanz von pol. Entscheidungen durch Abgabe der Entscheidung bzw nachträgliche Legitimation
+
+> - Grundtypen direkter Demokratie und ihre Kriterien
+
+- Unterschiede zwischen Auslösungs-, Beteiligungs- und Zustimmungsquorum
+  - im Rahmen von Referenden sind oftmals Quoren zu erfüllen
+  - können absolut oder relativ sein
+    - im Falle des relativen Quorums ist darauf zu achten, ob die Bezugsbasis die Wahlberechtigten oder die tatsächlich Abstimmenden sind
+  - Auslösungsquorum
+    - Mindeststimmen zur Initiierung
+  - Beteiligungsquorum
+    - Mindestbeteiligung der Stimmberechtigen
+  - Zustimmungsquorum
+    - Anteil der dem Vorschlag zustimmenden Abstimmenden/Stimmberechtigen
+- Formen direkt-demokratischer Entscheidungen 
+  - gängigste Klassifikation stammt von Tsebelis/Hug
+  - vier Typen, klassifiziert nach -> Wer löst das Referendum aus? Wer stellt die Frage?
+    - Obligatorisches Referendum(required referendum)
+    - Regierungsreferendum (veto player referendum)
+    - Fakultatives Referendum (popular veto)
+    - Volksinitiative (popular initiative)
+- Grundtypen von Verfassung
+  - Typ 1: Absolutistische Verfassung
+    - Macht ist zentralisiert auf eine/wenige Personen/Parteien (autoritärer Typ)
+  - Typ 2: Parlamentsouveränität
+    - Verfassung etabliert die Institutionen und Wahlen legitimieren das Parlament (britischer Typ)
+  - Typ 3: Verfassungssouveränität
+    - Verfassung etabliert die Institutionen und Wahlen legitimeren das Parlament
+    - zusätzlich gibt es eine Reihe von expliziten Grundrechten (Abwehrrechten), die die Macht des Staates beschränken
+  - globaler Trend zu Typ 3 im "New Constitutionalism"
+- Elemente des neuen Konstitutionalismus
+  - staatl. Institutionen beziehen Legitimität und Macht aus Verfassung
+  - Souveränität wird explizit der Bevölkerung (durch Wahlen) in die Hände gelegt
+  - staatl. Handeln muss verfassungsgemäß sein
+  - Grundrechtskatalog in Verfassung
+    - übergeordnete Meta-Normen, die staatl. Handeln ggü Individuum beschränken
+  - in Verfassung werden Verfahren zur Verfassungsänderung festgelegt (Verfassungsrigidität)
+- funktionale Äquivalenz
+  - bei vergleichbarer Erfassung von Regeln ist es schwierig, ihre Gleichwertigkeit hinsichtlich ihrer Wirkung zu erfassen -> dieses Problem nennt man Äquivalenz
+  - inwiefern erzeugen unterschiedliche institutionelle Regeln die gleichen Wirkungen?
+    - zB Referendum vs zweite Kammer bei Erfassung von Verfassungsrigidität
+- Verfassungsgerichte als Organisation
+  - in föderalen Systemen eine funktionslogische Notwendigkeit zur Regulierung von Konflikten zw. Zentral- und Gliedstaat
+  - Normenkontrolle ist das Recht des Verfassungsgerichtes, Gesetze auf ihre Vereinbarkeit mit der  Verfassung zu überprüfen (siehe BRD)
+    - schränkt Spielraum von Regierung und Parlament, obwohl es nicht direkt legitimiert ist
+    - es lassen sich zwei Wahlverfahren unterscheiden
+      - sequentielle Modelle, in denen Vorschlagsrecht und Kandidatenwahl getrennt sind (zB US Senat)
+      - Proporzmodelle, in denen mehreren Institutionen ein Anteil an Richtern zugestanden wird
+- Merkmale der deutsch-österreichischen Verfassungsgerichtsbarkeit
+![Verfassungsgerichts Modelle](/img/verger.png)
+- oppositionelle Klagen: sincere oder strategic behavior
+  - sincere behavior = es ist kostenfrei für die Opposition zu klagen und sie treibt dadurch die Justizialisierung der Politik voran 
+  - strategic behavior = Klagen sind nicht kostenfrei, Opposition klagt daher eher, wenn sie sich einen Erfolg ausrechnet
