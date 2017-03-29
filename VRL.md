@@ -310,3 +310,65 @@
   - über präsidentielle-parlamentarische Systeme ist nur wenig bekannt
     - funktionieren weder vollständig wie parlamentarische, noch wie präsidentielle Systeme
 ![delefra](/img/delefra.png)
+
+## Föderalismus und Zweite Kammern
+### Wesentliche Ergebnisse
+- die 3 Grundaufgaben von Parlamenten sind Repräsentation, Kontrolle der Regierung und Gesetzgebung  (Achtung: die Aufgaben variien nach Grundtypus des Systems parl., präsid. semi-präsid.)
+  - **Repräsentation der Bürger**:
+    - Kommunikationsplattform zw. Bürger und Parlament (in parl. und semi-präsid. Systemen indirekt auch mit der Regierung)
+    - Repräsentation des Willens (Präferenzen) der Bürger (in präsid. Systemen gemeinsam mit dem Präsident)
+    - Schaffung von Legitimation durch regelmäßige und kompetitive Wahlen (in parl. und semi-präsid. Systemen indirekt auch Legitimation der Regierung)
+  - **Kontrolle der Regierung**:
+    - Entlassung der Regierung (nur in parl. und semi-präsid. Systemen)
+    - Kontrolle der Regierungspolitik (in präsid. Systemen nur partiell für exekutive Agenda)
+    - Überwachung der Regierung (in parl. und semi-präsid. Systemen im wesentlichen die Aufgabe der Opposition)
+      - Fragestunde im Parlament
+      - Interpellationen
+      - parl. Anfragen
+      - Ausschussstruktur (die die Ministerien spiegelt)
+      - verfassungsgerichtliche Klagen durch Gruppen von Abgeordneten
+    - Budgetkontrolle, als tradiertes Recht von Parlamenten in allen Systemen, als stärkster Hebel , da ohne Geld nur wenige Policies umgesetzt werden können
+  - **Mitwirkung bei Gesetzgebung**:
+    - Initiativrecht(bills) = das Recht, ein Gesetzentwurf zu initiieren
+    - Änderungsrecht (amendmends) = das Recht, einen Gesetzentwurf zu ändern oder zu ergänzen
+    - Konsultation = das Recht zur Anhörung im Gesetzgebungsprozess mit Überstimmungsmöglichkeiten
+    - Vetorechte = eine Blockademöglichkeit (bei ersten und insbes. zweiten Kammern)
+    - Agendakontrolle = Kontrolle der Tagesordnung, ist entscheidene Variable in der Machtverteilung zwischen Parlament(bzw. Opposition) und Regierung
+
+- es lassen sich Rede- und Arbeitsparlamente unterscheiden
+  - Ausschüsse untergliedern das Parlament in themenbezogene Untereinheiten (zb Außenpolitik, Finanzen, Innenpolitik)
+    - strukturieren Entscheidungsprozess des Plenums thematisch vor
+    - Aufgaben sind:
+      - effiziente Diskussion
+      - Informationen sammeln
+      - parteipol. Koordination
+    - ihre Aufgabenpalette kann evtl. Gesetzesinitiative, Gesetzesänderungen, Zeitplankontrolle, Anhörungsrecht und Dokumenteneinsichtsrecht umfassen
+![Rede- und Arbeitsparlamente](/img/rearb.png)
+- geschlossenes Abstimmungsverhalten von Fraktionen lässt sich mit Rice-Index messen
+  - siehe zugehörige VL im ersten Semester!
+- zweite Kammern lassen sich in Untertypen unterscheiden (kongruent, inkongruent, symmetrisch, asymmetrisch)
+  - siehe zugehörige VL im ersten Semester!
+- Konfliktlösungsmechanismen zw. erster und zweiter Kammer
+  - Vermittlungsausschüsse
+    - machen Vorschläge die von beiden Kammern angenommen werden müssen
+  - Navette
+    - Entwurf pendelt zw. Kammern hin und her und nähert sich so einem Kompromiss an
+    - dauerhaftes Pendeln, Abbruch durch Regierung, Ablehnung des Vorschlags nach bestimmter Pendelzahl
+  - gemeinsame Sitzung beider Parlamentskammern
+  - eine Kammer hat Letztentscheidungsrecht
+- Malapportionment beschreibt die Disproportionalität der Besetzung der zweiten Kammer
+  - auch bei direkter Wahl, kann es dazu kommen, dass Gruppen bzw. Regionen ungleich in der zweiten Kammer repräsentiert werden
+![Malapportionment](/img/mal.png)
+    - dadurch besitzt die Stimme von Bürgern ein unterschiedliches Gewicht
+- Föderalismus kann in Demokratien und nicht-Demokratien auftreten
+  - siehe zugehörige VL im ersten Semester!
+  - staatliche Macht (Souveränität) ist auf mind. 2 Ebenen verteilt und diese Machtverteilung ist in Verfassung festgehalten
+  - Coming together These und Holding together These
+- föderale Systeme lassen sich nach mehreren Grundtypen unterscheiden (kongruent, inkongruent, symmetrisch, asymmetrisch, Trenn- und Verbundföderalismus)
+![Untertypen](/img/untertypen.png)
+- Föderalismus/Unitarismus hebt auf Entscheidung über Gesetze ab, Dezentralisierung/Zentralisierung auf Implementation
+  - Föderalismus bezieht sich auf "Recht zu Entscheiden" einer staatlicher Ebene, also Gesetze und Verordnungen zu verabschieden
+    - wird meist institutionell gemessen
+  - Dezentralisierung beschreibt das "Recht zu Handeln" einer staatlichen Ebene, also Gesetze und Verordnungen zu implementieren
+    - wird meist mittels empirischer Indikatoren erfasst
+
