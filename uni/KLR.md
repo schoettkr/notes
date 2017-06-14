@@ -1,15 +1,24 @@
 # 1. Grundbegriffe der Kosten- und Erlösrechnung (Kapitel 2)
 ### Verständnisfragen
-1. Durch  welche  drei  Begriffselemente  sind  Kosten  definiert?  Welche  Rolle  spie len diese im Hinblick auf die inhaltliche und zeitliche Abgrenzung von Kosten?
-  - sachzielbezogen, periodenbezogen und nicht außerordentlich
-  - **Kosten** sind bewerteter, sachzielorientierter Güterverbrauch
-  - **Erlöse** sind bewertete, sachzielorientierte Güterentstehung
-    - Sachzielorientierung = bezogen auf den Betriebszweck (Orientierung am Sachziel des Unternehmens)
-    - Bewertung = keine Mengengrößen(zB verbrauchtes Material in Stück) sondern Wertgrößen (bewertet in Geldeinheiten)
+##### Durch  welche  drei  Begriffselemente  sind  Kosten  definiert?  Welche  Rolle  spie len diese im Hinblick auf die inhaltliche und zeitliche Abgrenzung von Kosten?
+- sachzielbezogen, periodenbezogen und nicht außerordentlich
+- **Kosten** sind bewerteter, sachzielorientierter Güterverbrauch
+- **Erlöse** sind bewertete, sachzielorientierte Güterentstehung
+  - Sachzielorientierung = bezogen auf den Betriebszweck (Orientierung am Sachziel des Unternehmens)
+  - Bewertung = keine Mengengrößen(zB verbrauchtes Material in Stück) sondern Wertgrößen (bewertet in Geldeinheiten)
 
-2. Welche  Kosten  sind  deckungsgleich  mit  entsprechenden  Aufwendungen,  welche Kosten unterscheiden sich der Höhe nach von den entsprechenden Aufwendungen und welchen Kosten stehen gar keine entsprechenden Aufwendungen gegenüber? Nennen Sie jeweils ein Beispiel. 
-  - Kosten die deckungsgleich mit Aufwendungen sind = **Zweckaufwand** (sachziel- und periodenbezogen, nicht außerordentlich)
-  - Kosten die sich der Höhe nach von Aufwendungen unterscheiden = sachzielfremder Aufwand (Miete für andere Räume, Spende), periodenfremder Aufwand (Abschreibung einer 3 Jahre alten Maschine unter Buchwert), außerordentlicher Aufwand (Kosten für Wasserschaden)
-  - Kosten ohne entsprechende Aufwendungen = **kalkulatorische Kosten** (Zusatz- und Anderskosten, wie zB kalk. Unternehmerlohn)
+##### Welche  Kosten  sind  deckungsgleich  mit  entsprechenden  Aufwendungen,  welche Kosten unterscheiden sich der Höhe nach von den entsprechenden Aufwendungen und welchen Kosten stehen gar keine entsprechenden Aufwendungen gegenüber? Nennen Sie jeweils ein Beispiel. 
+- Kosten die deckungsgleich mit Aufwendungen sind = **Zweckaufwand** (sachziel- und periodenbezogen, nicht außerordentlich)
+- Kosten die sich der Höhe nach von Aufwendungen unterscheiden = sachzielfremder Aufwand (Miete für andere Räume, Spende), periodenfremder Aufwand (Abschreibung einer 3 Jahre alten Maschine unter Buchwert), außerordentlicher Aufwand (Kosten für Wasserschaden)
+- Kosten ohne entsprechende Aufwendungen = **kalkulatorische Kosten** (Zusatz- und Anderskosten, wie zB kalk. Unternehmerlohn)
 
-3. Wie sind Gesamtkosten und Stückkosten definiert und welche Rolle spielen Kostenzuordnungsprobleme bei ihrer Ermittlung?
+##### Wie sind Gesamtkosten und Stückkosten definiert und welche Rolle spielen Kostenzuordnungsprobleme bei ihrer Ermittlung?
+- Gesamtkosten = Kosten für die Gesamtheit der innerhalb eines bestimmten Zeitraums hergestellten Güter
+  - Kostenpositionen von aufwandsgleichen Kosten können direkt aus Finanzbuchhaltung übernommen werden
+  - kalkulatorische Kostenpositionen (zB abweichende Abschreibungen) müssen gesondert ermittelt werden
+- Stückkosten = Kosten für eine einzelne Gütereinheit
+  - Probleme der Kostenzuordnung: ob und wie können Abschreibungen für Maschinen einem einzelnen Gut zugeordnet werden
+
+#### Wie werden Einzel- und Gemeinkosten unterschieden und welche Form der Kostenzuordnung ist bei ihnen jeweils möglich?
+- Einzelkosten = einem Kalkulationsobjekt direkt zurechenbar (allein von einem Kalkulationsobjekt verursacht)
+- Gemeinkosten = einem Kalkulationsobjekt nicht direkt zurechenbar (von mehreren Kalkulationsobjekten gemeinsam verursacht)
