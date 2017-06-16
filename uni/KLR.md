@@ -88,3 +88,27 @@ Opportunitätskosten
 ##### Wodurch unterscheidet sich die Zuordnung von Kosten in einer Teil- von derjenigen in einer Vollkostenrechnung?
 - Vollkostenrechnung = sämtliche Kosten werden bis auf die Kostenträgereinheit zugeordnet
 - Teilkostenrechnung = nur ein Teil der gesamten Kosten (die variablen oder die Einzelkosten) wird bis auf die Kostenträgereinheit verrechnet
+
+# 2. Kostenartenrechnung (Kapitel 5)
+### Verständnisfragen
+
+##### Nach welchen Kriterien lassen sich Kostenarten gliedern?
+- Art der Einsatzgüter (zB Personalkosten, Materialkosten)
+- Zurechenbarkeit der Kosten (Einzelkosten, Gemeinkosten)
+- Abhängigkeit von Beschäftigungsschwankungen (Einzelkosten, Gemeinkosten)
+- Zugehörigkeit zu einer Wertschöpfungsstufe (Forschungskosten, Entwicklungskosten, Fertigungskosten, Vertriebskosten etc.)
+- Herkunft der Einsatzgüter (primäre Kosten, sekundäre Kosten)
+
+##### Welche  Gemeinsamkeiten  und  Unterschiede  bestehen  zwischen  Kostenartenrechnung und Finanzbuchhaltung?
+- Kostenrechnung = liefert Informationen für Entscheidungen
+- Finanzbuchhaltung = dient v.a. der Ermittlung des Gewinns im Hinblick auf Ausschüttungen und Steuerbemessung
+In der Praxis finden wir häufig eine enge Verzahnung dieser beiden Systeme, da viele Daten der Finanzbuchhaltung auch in der Kostenrechnung verwendet werden können
+  - diese Verzahnung erfolgt über die Kostenartenrechnung
+
+##### Kennzeichnen Sie verschiedene Methoden zur Erfassung des Materialverbrauchs
+- **Inventurmethode** (indirekte Erfassung) = Messung der Materialmenge im Lager am Ende jeder Periode
+  - die Verbrauchsmenge ergibt sich über einen Vergleich der Bestände und Materialzugänge (Verbrauchsmenge = AB + Zugänge - Endbestand)
+- **Fortschreibungs- oder Skontrationsmethode** (direkte Erfassung) = Materialverbrauch wird direkt über Materialentnahmescheine ermittelt (AB + Zugänge - Abgänge (Verbrauch) = EB)
+- **Rückrechnungsmethode** = verzichtet auf genaue Erfassung, stattdessen wird Materialverbrauch berechnet, indem für jeden Erzeugnis auf die Stückliste zurückgegriffen wird
+
+##### Welche Auswirkungen haben die beiden Verfahren LIFO und FIFO bei der Materialbewertung im Fall steigender Preise auf den Periodenerfolg?
