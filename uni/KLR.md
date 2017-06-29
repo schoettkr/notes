@@ -237,21 +237,21 @@ Blockumlageverfahren:
 - **Bestandsbewertung** erfolgt über die kalkulierten Bestandswerte am Ende des Geschäftsjahres
 
 #### Nennen Sie jeweils zwei Kostenträger für die folgenden Unternehmen:
-- Universität Mannheim
-  -
-  -
-- Lufthansa AG
-  -
-  - 
-- Deutsche Bundeswehr
-  - 
-  -
-- Deutsche Bahn AG
-  -
-  -
-- Deutsche Telekom AG
-  -
-  -
+  - Universität Mannheim
+    -
+    -
+  - Lufthansa AG
+    -
+    - 
+  - Deutsche Bundeswehr
+    - 
+    -
+  - Deutsche Bahn AG
+    -
+    -
+  - Deutsche Telekom AG
+    -
+    -
 
 #### Grenzen Sie Massen-, Sorten-, Serien- und Einzelfertigung voneinander ab und nennen Sie je ein Beispiel. Welche Kalkulationsverfahren lassen sich jeweils einsetzen? Begründen Sie Ihre Aussage.
 Einzelfertigung
