@@ -1,11 +1,20 @@
-# 1. Sitzung: Hitlers Wähler
-## Originaltext (Jürgen Falter)
-- NSDAP bei Reichstagswahl 1928 nur 810.000(2.6%) der Stimmen
-  - 1930 schon ~6.5 Millionen(18.3%) Stimmen
-  - 1932 schon ~13.8 Millionen(37.4%) Stimmen
-  - 1933 unter nicht mehr ganz regulären Bedingungen über 17 Millionen Stimmen
-- ohne die kometenhaft verlaufende Wahlerfolge der NSDAP wäre Hitler wahrscheinlich nicht an die Macht gekommen
-  - paradoxerweise ermöglichte es außerdem das ureigenste Instrument der Demokratie, nämlich demokratische Abstimmungen, und vor allem das Scheitern der Weimarer Republik
-  - das Abstimmungsverhalten der deutschen Wähler spielte im Prozess des Untergangs der Weimarer Republik(Auflösungsdatum strittig) eine maßgebliche Rolle
-- mit keinem Wahlereignis hängen auf statistischer Ebene die Erfolge der Nationalsozialisten von 1932 & 1933 enger zusammen als mit der Hindenburg-Wahl von 1925
-- die zunehmende Parteienzersplitterung (besonders 1928) half der NSDAP vermutlich den Weg zum Wahlerfolg zu ebnen, weil diese Splitterparteien wahrscheinlich als "Zwischenwirte" auf dem Weg von bürgerlichen Wählern der liberalen und konservativen Parteien zum Nationalsozialismus fungierten
+# 1. Sitzung: Hitlers Wähler (Jürgen Falter)
+- „Ziel der ganzen Studie ist es, möglichst genau und umfassend die parteipolitische Herkunft, die soziale Basis und die wirtschaftliche Lage der NSDAP-Wähler zwischen 1924 und 1933 zu ermitteln, um auf diese Weise Material zur Einschätzung der (…) Erklärungsmodelle des nationalsozialistischen Wählerverhaltens zu erhalten“
+## Klausurfragen 
+#### Erläutern Sie bitte kurz die drei von Jürgen Falter in „Hitlers Wähler“ vorgestellten wissenschaftlichen Erklärungsversuche der Wahlerfolge der NSDAP.
+klassentheoretische Position (Seymour Martin Lipset):
+- jedes soziale Schicht hat eine demokratische und eine extremistische politische Ausdrucksform
+- die demokratische politische Ausdrucksform der bürgerlichen Mittelschicht ist der Liberalismus, die extreme Ausdruckform der Faschismus
+- es gibt also nicht nur Links- und Rechtsextremismus sondern auch einen Extremismus der Mitte
+- Liberalismus und Faschismus teilen die soziale Basis und Teile der Ideologie (Ablehnung von Großindustrie und Gewerkschaften; antireligiös, -sozialistisch, -traditionell)
+- Aufstieg der NSDAP erklärt sich demnach durch Zustrom von ehemaligen Wählern der (liberalen) Parteien der Mitte
+- der idealtypische NSDAP-Wähler von 1932 wird von Lipset als selbstständiger protestantischer Angehöriger des Mittelstandes, der entweder auf einem Bauernhof oder in einer kleinen Gemeinde lebte und früher für Parteien der Mitte oder regionale Gruppierungen gestimmt hatte die sich gegen die Macht der Großindustrie und gegen den Einfluss der Gewerkschaften zu Wehr setzte, skizziert
+  - dass es sich bei dem Großteil der überzeugten NSDAP Wähler um Personen mit Mittelklassehintergrund handelte, muss man immer berücksichtigen, um die Wahlerfolge des Nationalsozialismus verstehen zu können
+
+massentheoretische Position:
+
+Theorie des „politischen Konfessionalismus“:
+
+##### Mit welchen methodischen Problemen sah sich Jürgen Falter in seiner Studie „Hitlers Wähler“ bei der Analyse der Wahlerfolge der NSDAP konfrontiert?
+
+##### Zu welchem Befunden gelangte Jürgen Falter in „Hitlers Wähler“ in Bezug auf den Zusammenhang zwischen Arbeitslosigkeit und der Wahl der NSDAP?
