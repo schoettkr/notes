@@ -1,5 +1,11 @@
 # 1. Sitzung: Hitlers Wähler (Jürgen Falter)
 - „Ziel der ganzen Studie ist es, möglichst genau und umfassend die parteipolitische Herkunft, die soziale Basis und die wirtschaftliche Lage der NSDAP-Wähler zwischen 1924 und 1933 zu ermitteln, um auf diese Weise Material zur Einschätzung der (…) Erklärungsmodelle des nationalsozialistischen Wählerverhaltens zu erhalten“
+- keiner der drei Erklärungsansätze trifft völlig zu
+- die NSDAP profitierte 1930 von der gestiegenen Wahlbeteiligung sowie von den Verlusten der liberalen Mittelparteien und der DNVP
+  - 1933 kamen die meisten Neuwähler der NSDAP aus dem Nichtwählerlager
+- die „Lagertheorie“ Burnhams bestätigt sich weitgehend
+- alter Mittelstand hatte besondere Affinität zur NSDAP, aber 40% der Wähler waren Arbeiter
+- die NSDAP kann deshalb am ehesten beschrieben werden als „Volkspartei des Protests mit Mittelstandsbauch“
 ## Klausurfragen 
 #### Erläutern Sie bitte kurz die drei von Jürgen Falter in „Hitlers Wähler“ vorgestellten wissenschaftlichen Erklärungsversuche der Wahlerfolge der NSDAP.
 klassentheoretische Position (Seymour Martin Lipset):
@@ -41,5 +47,21 @@ Theorie des „politischen Konfessionalismus“ (Walter Dean Burnham):
 
 
 #### Mit welchen methodischen Problemen sah sich Jürgen Falter in seiner Studie „Hitlers Wähler“ bei der Analyse der Wahlerfolge der NSDAP konfrontiert?
+Hauptproblem: es stehen nur Aggregat- und keine Individualdaten zur Verfügung
+Folge: Aussage- und Analyseebene klaffen auseinander
+
+Typische Fehler wahlhistorischer Untersuchungen:
+- Fehler der naiven Disaggregation
+- Fehler der willkürlichen Selektion
+- Fehler der unvollständigen Modellspezifikation
+
+Methodische Anforderung an die historische Wahlforschung
+- Verwendung möglichst kleiner Gebietseinheiten
+- Berücksichtigung der unterschiedlichen Größen der Gebietseinheiten
+- Berücksichtigung von Gebietsreformen
+- Vergleichbarmachung der auf unterschiedlichen Gebietseinheiten bezogenen Statistiken
+- Prozentuierung möglichst auf die gleiche Basis (Wahlberechtigte)
+- Anwendung multivariater Analyseverfahren
+
 
 #### Zu welchem Befunden gelangte Jürgen Falter in „Hitlers Wähler“ in Bezug auf den Zusammenhang zwischen Arbeitslosigkeit und der Wahl der NSDAP?
