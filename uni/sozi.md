@@ -80,7 +80,7 @@ Die Studie führte als methodische Neuerung die Umfrageforschung mittels Panelbe
   - Erie County erleichterte durch seine Größe von 43.000 Einwohnern den Interviewereinsatz, außerdem findet sich eine Mischung aus städtischen & ländlichen Regionen und die Wahlergebnisse der letzten 40 Jahre entpsrachen dem nationalen Trend
 Vorteile der Neuerung:
 - Nachvollziehung der Willensbildung auf Ebene der Individuen über einen angemessenen Zeitraum hinweg mit Kontrollgruppe
-####Beschreiben Sie bitte die Konstruktion des in der Studie „The People‘s Choice“ verwendeten Index of Political Predisposition (IPP)
+#### Beschreiben Sie bitte die Konstruktion des in der Studie „The People‘s Choice“ verwendeten Index of Political Predisposition (IPP)
 Index of Political Predisposition (= Parteiidentifikation) wird sozialstrukturell abgeleitet = Soziale Prädisposition
 
 Die Interviewer bewerteten die Befragten in Bezug auf dessen sozio-ökonomischen Status (= SES)
@@ -99,7 +99,11 @@ Die Variablen des IPP sind Konfession(Protestantisch, Katholisch) und Wohngebiet
 | C-   |  3      |        4  |  |  5      |        6    |
 | D    |  4      |        5  |  |  6      |        7    |
 
-####Erläutern Sie bitte das in der Studie „The People‘s Choice“ entwickelte Konzept der „cross pressures“. Welche Wirkungen gehen von „cross pressures“ aus?
+1 = Strongly Rep, 2 = Moderately Rep, 3 = Slightly Rep } predominantly Republican Predispositions
+
+4 = Slightly Dem, 5 = Moderately Dem, 6,7 = Strongly Dem } predominantly Democratic Predispositions
+
+#### Erläutern Sie bitte das in der Studie „The People‘s Choice“ entwickelte Konzept der „cross pressures“. Welche Wirkungen gehen von „cross pressures“ aus?
 Es gibt einige Faktoren die republikanische und demokratische Wähler unterscheiden
   - jeder dieser Faktoren kann als "pressure" bezeichnet werden
 Wirkungen:
