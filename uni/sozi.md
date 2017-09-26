@@ -65,3 +65,47 @@ Methodische Anforderung an die historische Wahlforschung
 
 
 #### Zu welchem Befunden gelangte Jürgen Falter in „Hitlers Wähler“ in Bezug auf den Zusammenhang zwischen Arbeitslosigkeit und der Wahl der NSDAP?
+
+
+# 2. Sitzung: Hitlers Wähler (Jürgen Falter)
+- Enstehungskontext war die amerikanische Präsidentschaftswahl vom 05.November 1940
+- Erkenntnisinteresse ist wie und warum der Wähler zu seiner Entscheidung kommt
+- „a person thinks, politically, as he is, socially.  Social characteristics determine political preference“ 
+
+## Klausurfragen 
+#### Die Studie „The People‘s Choice“ markiert in methodischer Hinsicht einen wichtigen Fortschritt in der empirischen Wahl- bzw. Sozialforschung. Welche methodische Neuerung wurde eingeführt? Welche Vorteile hatte diese?
+Die Studie führte als methodische Neuerung die Umfrageforschung mittels Panelbefragungen ein
+- im Erie County, Ohio wurden 3000 Personen ausgewählt und aus diesen wurden vier Teilstichproben jeweils im Umfang von n=600 gezogen
+  - ein Panel bestehend aus 600 Personen wurde als Main Panel festgelegt, welches dann über einen Zeitraum von 6-7 Monaten befragt und mit den anderen Panels, welche als Kontrollgruppe dienten, abgeglichen 
+  - Erie County erleichterte durch seine Größe von 43.000 Einwohnern den Interviewereinsatz, außerdem findet sich eine Mischung aus städtischen & ländlichen Regionen und die Wahlergebnisse der letzten 40 Jahre entpsrachen dem nationalen Trend
+Vorteile der Neuerung:
+- Nachvollziehung der Willensbildung auf Ebene der Individuen über einen angemessenen Zeitraum hinweg mit Kontrollgruppe
+####Beschreiben Sie bitte die Konstruktion des in der Studie „The People‘s Choice“ verwendeten Index of Political Predisposition (IPP)
+Index of Political Predisposition (= Parteiidentifikation) wird sozialstrukturell abgeleitet = Soziale Prädisposition
+
+Die Interviewer bewerteten die Befragten in Bezug auf dessen sozio-ökonomischen Status (= SES)
+  - die Bewertung erfolgte auf Basis des Zustands der Häuser, Möbel, Klamotten etc.
+  - die wohlhabendsten Leute wurden als A's klassifiziert und die ärmsten als D's
+    - weil die Gruppe C am großten war, wurde sie in C+ und C- unterteilt
+  - der SES im Bezug auf die Wahlabsicht zeigte, dass Leute mit höherem sozioökonomischen Status eher Republikaner wählen und Leute mit niedriegem SES eher Demokraten
+
+Die Variablen des IPP sind Konfession(Protestantisch, Katholisch) und Wohngebiet(Ländlich, Städischt) und die verschiedenen sozioökonomischen Gruppen (A bis D)
+
+|      |   Protes|tanten     |  |    Katho|liken        |
+|------|---------|-----------|--|---------|-------------|
+|      | Land    |     Stadt |  | Land    |     Stadt   |
+| A, B |  1      |        2  |  |  3      |        4    |
+| C+   |  2      |        3  |  |  4      |        5    |
+| C-   |  3      |        4  |  |  5      |        6    |
+| D    |  4      |        5  |  |  6      |        7    |
+
+####Erläutern Sie bitte das in der Studie „The People‘s Choice“ entwickelte Konzept der „cross pressures“. Welche Wirkungen gehen von „cross pressures“ aus?
+Es gibt einige Faktoren die republikanische und demokratische Wähler unterscheiden
+  - jeder dieser Faktoren kann als "pressure" bezeichnet werden
+Wirkungen:
+  - Protestanten wählen er Republikaner und Katholiken wählen eher Demokraten
+  - Individuen mit hohem SES wählen eher Republikaner und ärmere wählen eher Demokraten
+
+Wenn ein Individuum gegensätzlich wirkende Faktoren (zB khatolisch & reich) auf sich vereint spricht man von sogenannten "cross pressures"
+
+Ein Wahlentscheidung kann im Endeffekt als das Ergebnis von mehreren pressures gesehen werden
