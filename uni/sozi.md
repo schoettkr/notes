@@ -113,3 +113,26 @@ Wirkungen:
 Wenn ein Individuum gegensätzlich wirkende Faktoren (zB khatolisch & reich) auf sich vereint spricht man von sogenannten "cross pressures"
 
 Ein Wahlentscheidung kann im Endeffekt als das Ergebnis von mehreren pressures gesehen werden
+
+# 3. Sitzung: The American Voter (Angus Campbell)
+Empirische Wahlforschung wurde lange Zeit durch "The Peoples Choice" dominiert
+- bei der Präsidentschaftswahl 1948 (Landos vs Roosevelt) kam es jedoch zu einer dramatischen Fehlprognose der Umfrageinstitute, die in der Endphase der Wahl auf Umfragen verzichteten, da Wahlkampf laut TPC keine Wirkung habe
+
+## Klausurfragen 
+#### Wodurch unterscheidet sich die Studie „The American Voter“in theoretischer und methodischer Hinsicht von der Studie „The People‘s Choice“?
+
+#### Erläutern Sie bitte das im „American Voter“ entwickelte sozialpsychologische Erklärungsmodell des Wählerverhaltens. Gehen Sie dabei auch auf den „funnel of causality“ ein.
+Das Wahlverhalten lässt sich laut dem sozialpsychologischen Erklärungsmodell in "The American Voter" durch das Zusammenwirken politisch-institutioneller, sozialökonomicher und psychischer Bedinungsfaktoren erklären
+
+Wähler stehen nicht bei jeder Wahl vor einer völlig neuen Entscheidung, sondern sie bringen längerfristige Vorlieben/Abneigungen ggü den Parteien mit
+- die Einstellungen der Wähler werden also in erster Linie mit psychischen und sozialen Faktoren verbunden (**Parteiidentifikation**)
+- diese "psychologische Mitgliedschaft" einer Partei steht dem Wähler bei jeder Entscheidung zur Verfügung und wird gewählt solange keine bedeutenden Faktoren dagegen sprichen
+- die Parteiidentifikation beeinflusst indirekt auch die Wahrnehmung & Verarbeitung politischer Informationen
+
+Der Entscheidungsprozess der Wähler lässt sich mit dem **Funnel of Causality**, einem Trichter, vergleichen an dessen Endpunkt die Wahlentscheidung steht
+  - die Parteibindung als langfristiger Faktor und Themen & Personen als kurzfristige Einflussfakotren sind diesem vorgelagert
+    - gruppenbezogene Einstellungen, Einstellungen zu den Parteien in Regierungsverantwortung, Kandidatenorientierung, Sachfragenorientierung (innen- und außenpolitisch)
+    - in "The Voter Decides": Issue-Orientierung, Kandidatenorientierung und Parteiidentifikation
+
+#### Dem im „American Voter“ entwickelten Erklärungsansatz wurde häufig „psychologischer Reduktionismus“ vorgeworfen. Erläutern Sie bitte warum.
+Es wird bemängelt das die Variablen durch die das Wahlverhalten bestimmt werden soll nicht analytisch tiefgehende Erklärungen bieten, da sie sich analytisch auf einer Ebene befinden
