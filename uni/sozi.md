@@ -163,6 +163,15 @@ Wähler:
 Entscheidungsproblem der Wähler:
 - das *erwartete* Parteiendifferential **B = E (U<sup>A</sup><sub>t+1</sub>) - E (U<sup>B</sup><sub>t+1</sub>)**
 - das *gegenwärtige* Parteiendifferential **B = (U<sup>A</sup><sub>t</sub>) - E (U<sup>B</sup><sub>t</sub>)**
-- das *Performance Rating*  = \frac{U<sup>i</sup><sub>t</sub>}{U<sup>A</sup><sub>t</sub>}
+- das *Performance Rating*  = U<sup>i</sup><sub>t</sub> : U<sup>A</sup><sub>t</sub>
 
 #### Erläutern Sie bitte das von der Ökonomischen Theorie der Demokratie diagnostizierte „Paradox des Wählens“.
+Optimierungskalkül der Wähler:
+- R = pB - C
+Paradox des Wählens:
+- R = pB - C < 0
+
+es gibt verschiende Lösungsversuche für das Paradox des Wählens:
+- Wählen gibt ein langfristigen Partizipationswert (Downs)
+- Wähler überschätzen ihre Einflusswahrscheinlichkeit (Riker/Ordeshook)
+- Civic-Duty: R = pB - C + D
