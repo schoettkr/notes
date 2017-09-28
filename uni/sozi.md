@@ -136,3 +136,31 @@ Der Entscheidungsprozess der Wähler lässt sich mit dem **Funnel of Causality**
 
 #### Dem im „American Voter“ entwickelten Erklärungsansatz wurde häufig „psychologischer Reduktionismus“ vorgeworfen. Erläutern Sie bitte warum.
 Es wird bemängelt das die Variablen durch die das Wahlverhalten bestimmt werden soll nicht analytisch tiefgehende Erklärungen bieten, da sie sich analytisch auf einer Ebene befinden
+
+# 4. Sitzung: An Economic Theory of Democracy (Anthony Downs)
+
+## Klausurfragen 
+#### Welche Ziele unterstellt Anthony Downs in „An Economic Theory of Democracy“den Parteien und welche Ziele unterstellt er den Wählern?
+Individuen:
+- rationales Verhalten zum Zwecke der Eigennutzmaximierung
+
+Parteien:
+- Übernahme der Regierung durch Wahl
+- Ziele ergeben sich aus den Zielen eines jeden Individuums(Eigennutzmaximierung)
+  - Einkommen, Prestige, Macht durch das Amt
+- Politiker wollen Ämter nicht bekleiden um Policies umzusetzen, sondern um das Ansehen welches mit dem Amt einhergeht zu ernten
+  - Politikinhalte/Policies als ein Mittel zum Zweck (Wahlsieg)
+- da die Ziele der Politiker ohne gewählt zuwerden unerreichbar sind, ist ihr primäres Ziel und somit das Ziel der Partei ein Wahlsieg (mehr Stimmen als alle anderen Parteien)
+- Eigennutzmaximierung => Stimmenmaximierung
+- Regierungspartei handelt so, dass sie ihrer Ansicht nach die Stimmen maximiert (innerhalb des konstitutionellen Rahmens)
+
+Wähler:
+- handelt rational im Bezug auf die Wahl, wenn er sein Handeln und seine Stimme so effizient wie für ihn möglich einsetzt
+- Wähler schätzt Nützlichkeit und Vorteile die eine Partei ihm bereitstellen kann, wenn sie die Wahl gewinnt, ab wenn er seine Entscheidung trifft
+  - demnach wählt er die Partei von der er denkt das sie ihm mehr Vorteile/Erträge beschaffen kann als jede andere Partei, wenn sie die Wahl gewinnt
+
+#### Was versteht Anthony Downs in „An Economic Theory of Democracy“unter dem „Parteiendifferential“? Welche Schwierigkeiten stellen sich dem einzelnen Wähler bei der Bestimmung des Parteiendifferentials?
+Entscheidungsproblem der Wähler:
+- das erwartete Parteiendifferential **B = E (U<sup>A</sup><sub>t+1</sub>) - E (U<sup>B</sup><sub>t+1</sub>)**
+
+#### Erläutern Sie bitte das von der Ökonomischen Theorie der Demokratie diagnostizierte „Paradox des Wählens“.
