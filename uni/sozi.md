@@ -160,6 +160,9 @@ Wähler:
   - demnach wählt er die Partei von der er denkt das sie ihm mehr Vorteile/Erträge beschaffen kann als jede andere Partei, wenn sie die Wahl gewinnt
 
 #### Was versteht Anthony Downs in „An Economic Theory of Democracy“unter dem „Parteiendifferential“? Welche Schwierigkeiten stellen sich dem einzelnen Wähler bei der Bestimmung des Parteiendifferentials?
+Ausgangspunkt ist außerdem ein Zwei-Parteien-System nach amerikanischem Vorbild mit regelmäßig stattfindenden Wahlen. Der Wähler trifft eine rationale Wahlentscheidung, das bedeutet er wählt diejenige Partei, die ihm den größten Nutzen verspricht. Um herauszufin­den welche der beiden Parteien seinen eigenen Nutzen maximiert, nimmt der Wähler das sogenannte Parteiendifferential zur Hilfe. Hierbei werden die Wahlversprechen der Regie- rungs- und der Oppositionspartei betrachtet undjeweils ein Erwartungswert für den daraus resultierenden persönlichen Nutzen gebildet. Die möglichen Ergebnisse dieser Analyse durch den Wähler beschreibt Downs wie folgt: „Die Differenz zwischen diesen beiden er­warteten Werten des Nutzeneinkommens ist das erwartete Parteiendifferential [Hervorhe­bung im Original] des Bürgers. Ist es positiv, dann stimmt er für die gegenwärtige Regie­rung; ist es negativ, dann stimmt er für die Opposition; ist es Null, dann enthält er sich der Stimme" (Downs, 1968, S. 38).
+
+
 Entscheidungsproblem der Wähler:
 - das *erwartete* Parteiendifferential **B = E (U<sup>A</sup><sub>t+1</sub>) - E (U<sup>B</sup><sub>t+1</sub>)**
 - das *gegenwärtige* Parteiendifferential **B = (U<sup>A</sup><sub>t</sub>) - E (U<sup>B</sup><sub>t</sub>)**
