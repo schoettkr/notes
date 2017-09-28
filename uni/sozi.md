@@ -161,6 +161,8 @@ Wähler:
 
 #### Was versteht Anthony Downs in „An Economic Theory of Democracy“unter dem „Parteiendifferential“? Welche Schwierigkeiten stellen sich dem einzelnen Wähler bei der Bestimmung des Parteiendifferentials?
 Entscheidungsproblem der Wähler:
-- das erwartete Parteiendifferential **B = E (U<sup>A</sup><sub>t+1</sub>) - E (U<sup>B</sup><sub>t+1</sub>)**
+- das *erwartete* Parteiendifferential **B = E (U<sup>A</sup><sub>t+1</sub>) - E (U<sup>B</sup><sub>t+1</sub>)**
+- das *gegenwärtige* Parteiendifferential **B = (U<sup>A</sup><sub>t</sub>) - E (U<sup>B</sup><sub>t</sub>)**
+- das *Performance Rating*  = \frac{U<sup>i</sup><sub>t</sub>}{U<sup>A</sup><sub>t</sub>}
 
 #### Erläutern Sie bitte das von der Ökonomischen Theorie der Demokratie diagnostizierte „Paradox des Wählens“.
