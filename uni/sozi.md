@@ -222,3 +222,18 @@ Die kollektive Abfrage dieser Orientierung samt statistischer Auswertung führte
 | parochiale Kultur        | -                             | -                  | -                   | -                 |
 | Untertanenkultur         | +                             | -                  | +                   | -                 |
 | partizipierende Kultur   | +                             | +                  | +                   | +                 |
+
+# 6. Sitzung: The Nature and Origins of Mass Opinion (Zaller)
+
+## Klausurfragen
+#### Beschreiben Sie bitte die drei Faktoren, die nach Zaller bei der Entstehung der Mass Opinion von Bedeutung sind.
+Die Öffentliche Meinung (im Sinne von Mass Opinion) bildet sich als Resultante dreier Einflussfaktoren:
+- die in Elitediskursen transportierten Informationen
+  - 
+- die Wahrnehmung dieser Informationen durch die Bürgerinnen und Bürger, sowie
+  -
+- die Werte und Prädispositionen der Bürgerinnen und Bürger, vor deren Hintergrund sie die Informationen bewerten
+
+#### Wie definiert Zaller das Konzept „political awareness“?  Welche Bedeutung schreibt Zaller ihm zu?  Wie misst er das Konzept?
+
+#### Beschreiben Sie bitte die vier Axiome des RAS-Modells von Zaller.
