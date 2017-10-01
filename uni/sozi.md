@@ -284,3 +284,15 @@ Accessibility Axiom
 
 Response Axiom
 - "Individuals answer survey questions by averaging across the considerations that are immediately salient or accessible to them"
+
+# 7. Sitzung: Political Action (Barnes, Kaase)
+Entstehungskontext
+- Wellen des Protest in fast allen entwickelten westlichen Demokratien in den 1960er und 70er Jahren
+  - diese Proteste vollzogen sich außerhalb der traditionellen Institutionen des pol. Systems
+
+## Klausurfragen
+#### Mit welchen besonderen methodischen Schwierigkeiten sahen sich die Forscher der „Political Action“-Studie bei der Messung des politischen Protestpotentials konfrontiert (insbesondere im Vergleich zur Messung konventioneller politischer Partizipation)?
+
+#### Erläutern Sie bitte, wie die Autoren der „Political Action“- Studie bei der Konstruktion der Guttmann-Skala „Politisches Protestpotential“ vorgegangen sind.
+
+#### Erläutern Sie bitte die im Rahmen der „Political Action“- Studie entwickelte Typologie politischer Aktionsstile.
