@@ -119,6 +119,224 @@ Rechtfertigunsvorbehalt für Eingriffe in individuelle Freiheit
 - Konsequenzen: immernoch Orientierung am individuellen Wohlergehen aber Paternalismus, Meritorik
 
 ### 1.2.3 Dogmenhistorischer Überblick
-1. Merkantilismus
-2. Physiokraten
+#### A. Merkantilismus (Absolutimsus 17.- 18.Jhd)
+zentrale Hypothese: Wohlstand einer Nation = Bestand an Gold und Silber
 
+Politikimplikationen:
+- Staat fördert Handel und produzierendes Gewerbe
+- Exportförderung
+- Importrestriktionen, Schutzzölle
+- Verkehrsinfrastruktur
+- Abschaffung der Zünfte
+- Niedriglohnpolitik
+- Kolonialismus
+- Verbrauchssteuern (Akzisen) & Zölle zur Staatsfinanzierung
+
+#### B. Physiokratie (Frankreich 18.Jhd)
+zentrale Hypothese: Wohlstand eines Volkes liegt in seinem Agraroutput; andere Sektoren sind steril 
+
+Politikimplikationen:
+- Förderung der Primärproduktion
+- keine Eingriffe in andere Sektoren -> *laissez-faire*
+- nur Bodensteuer (*impot unique*)
+
+#### C. Klassicher Liberalismus (England 18.Jhd)
+Wohlstand = aggregatiertes individuelles Wohlergehen
+
+Wohlstand entsteht durch Arbeitsteilung, Spezialisierung und Handel
+
+- Smith: "invisible hand"-Theorem
+  - „[every individual] intends only his own gain, and he is in this, as in many other cases, led by an invisible hand to promote an end which was no part of his intention 
+  - By pursuing his own interest he frequently promotes that of the society more effectually than when he really intends to promote it.”
+  - formal: (neo-)klassische Theorie
+
+- Ricardo: kommparativer Vorteil
+- Malthus: "ehernes Lohngesetz"
+
+Politikimplikationen:
+- Freihandel
+- kaum Platz für staatliche Eingriffe, da aus Effizienzgründen kein Grund/Anlass (laissez-faire)
+- Voraussetzungen für das Funktionieren von Märkten schaffen ("Ordnungspolitik")
+- Staatshandeln begrenzt auf Verteidigung, Rechtssystem, "public works"
+- keine Umverteilung bzw begrenzter Spielraum (2. Hauptsatz)
+- staatl. Eingriffe evtl. gerechtfertigt, wenn die Annahmen hinter den beiden Hauptsätzen verletzt sind
+
+Erster Hauptsatz der Wohlfahrtsökonomik:
+Wenn
+  - Präferenzen & Technologien bestimmte Eigenschaften erfüllen
+  - und alle Ressourcen in Privateigentum sind
+dann sind Wettbewerbsgleichgewichte Pareto-effizient (nutzenmaximierende Haushalte, gewinnmaximierende Firmen, preisnehmendes Verhalten, markträumende Preise)
+
+#### D. Marxmismus (& Sozialismus) (19.Jhd)
+Asymmetrien zw. Arbeitern und Kapitalisten
+
+Klassenantagonismen führen zwangsläufig zum Kollaps des Kapitalismus
+
+historisches Ziel: klassen- und staatslose Gesellschaft
+  - zwischenzeitlich auch Diktatur des Proletariats
+
+generell: Staat als Agent der Bourgeoisie/herrschenden Klasse; Staats "ideeller Gesamtkapitalist" [Engels]
+
+**Sozialismus**:
+- in Marxscher Diktion: Übergangsperiode zum Kommunismus (= klassenlose Gesellschaft)
+- ökonomische Struktur:
+  - Kollektiveigentum an Produktionsmitteln
+  - zentrale Planung von Konsum und Produktion
+- Mark als Allokationsinstrument wird abgelehnt
+
+**Hauptprobleme**:
+- Informationsproblem
+  - volkswirtschaftliche Planung zu informationsintensiv
+- Anreizproblem
+  - zielgenaue Lenkung nur möglich wenn Individuen spürbar residual an den Konsequenzen ihres Tuns beteiligt sind 
+- in alles bisherigen real-sozialistischen Experimenten: Versorgungsmängel
+
+#### E. Keynesianismus (20.Jhd)
+Kapitalismus kommt unweigerlich in Krisen
+
+Gleichgewicht bei Unterbeschäftigung (Nachfragelücke)
+
+Staat kann durch fiskalische & monetäre Impulse effektive Nachfrage stimulieren
+
+*deficit spending*, antizyklische Wirtschaftspolitik
+
+politisch stark en vouge in den 1970ern (und heute wieder)
+
+Grund für Ineffizienzen:
+- Divergenz zw. privatem und gesellschaftlichem Wert ökonomischer Aktivitäten (spillovers, Externalitäten)
+
+Politikimplikationen:
+- Regulierung von (Finanz-)Märkten
+- korrigierende Besteuerung/Subventionierung ("Pigou-Steuern", Arthur C. Pigou in Keynes' Schatten)
+
+**Hauptprobleme**:
+- "Diskretionärer Keynesianismus" hat nie richtig geklappt
+- Zusammenbruch makroökonomischer Regelmäßigkeiten
+- Lucas-Critique: Strukturparameter des Modells sind nicht unabhängig von Politikvariablen
+- Theorie rationaler Erwartungen
+- Abkehr vom Bild des wohlwollenden Sozialingenieurs (-> Public Choice)
+- Lösungsversuch: *New Keynesianism*
+
+#### F. Chicago School (20.Jhd: Hayek, Friedman, Coase, Lucas)
+"Neoliberalismus"
+
+harmonische spontante Ordnung, kann nicht künstlich gestaltet werden
+
+Wirtschaftspolitik = Anmaßung von Wissen
+
+"government intervention is always fraught with danger"
+
+Monetarismus: Neutralität der Geldpolitik
+
+#### G. Ordoliberalismus
+ordo = politisch gesetzter Rahmen
+
+Ziel: Dienlichkeit der Marktwirtschaft für "höhere", außerökonomische Zwecke
+
+in Deutschland = "soziale Marktwirtschaft" (-> Ludwig Erhard)
+
+funktionsfähiger Wettbewerb statt Polypol bzw. Marktmacht
+
+Fokus auf Geldwertstabilität (Eucken: "Primat der Geldpolitik")
+
+Konsens, "Maß und Mitte", soziale Teilhabe
+
+#### H. Public Choice (James Buchanan, Geoffrey Brennan)
+macht ernst mit der Annahme rationaler & egoistischer Individuen
+
+Akteure der Wirtschaftspolitik nicht an Gemeinwohl interessiert, sondern am eigenen Vorteil (politics without romance)
+
+opportunistische Politiker, Leviathan Bürokratien, korrumpierende Lobbygruppen, kurzsichtige Wähler
+
+Staats- statt Marktversagen
+
+#### I. Behavioural economics (Frank, Tversky, Thaler, Kahnemann)
+R. Thaler und C. Sunstein: *libertarian paternalism*
+
+R. Kahneman: kognitive biases, begrenzte Rationalität
+
+R. H. Frank: positionale Präferenzen
+
+P. Young: evolutorische Entwicklung von Verhaltensnormen
+
+#### Theorie der Wirtschaftspolitik "heute":
+Primär mikroökonomisch ausgerichtet
+
+Berücksichtigung der Ziele & Anreize aller Akteure
+
+Konsequente Modellorientierung; weniger Dogmatik
+
+Kenntnisse sowohl der Markt- als auch der Nicht-Marktprozesse ("political economy")
+
+Frage "Staat oder Markt" muss Unvollkommenheiten *beider* Organisationsformen berücksichtigen
+
+Zunehmend verhaltensorientiert
+
+### 1.3 Begründungsansätze für kollektive Entscheidungen
+#### 1.3.1 Minimialstaat
+Hobbesscher Startpunkt:
+- im Urzustand der Anarchie ist das Leben "solitary, poor, nasty, brutish and short"
+- Zusammenleben kann nicht ohne Regeln und deren Durchsetzung funktionieren
+- zB. ökonomische Transaktionen sind ohne Eigentumsrechte, Vertragsrechte etc. nicht durchführbar
+- erfordert: Rechtssystem, Polizei, Verteidigung - und die Mittel zu ihrer Finanzierung
+
+#### 1.3.2 Allokation: Beseitigung von Ineffizienzen
+| Spieler 1       Spieler 2 ->| Strategie C | Strategie D |
+|-----------------------------|-------------|-------------|
+| Strategie C                 | (a,a)       | (0,0)       |
+| Strategie D                 | (0,0)       | (b,b)       |
+
+bei a > b > 0 kann man erwarten dass (C,C) gewählt wird (focal point)
+
+falls a=b>0: um *entweder* (C,C) **oder** (D,D) zu erreichen, bedarf es einer "Konvention"
+
+Konvention *kann* durch den Staat installiert werden
+
+**Institutionenökonomik**
+
+Institution = System etablierter und herrschender sozialer Regeln, die soziale Interaktionen strukturieren (zB Sprachen, Geld, Normen, Organisationen)
+
+Institutionen erlegen Restriktionen auf (und eröffnen womöglich Vorteile)
+
+| Spieler 1       Spieler 2 ->| Strategie C | Strategie D |
+|-----------------------------|-------------|-------------|
+| Strategie C                 | (a,a)       | (c,d)       |
+| Strategie D                 | (d,c)       | (b,b)       |
+wobei d > a > b > c
+
+(D,D) ist das einzige Nash-Gleichgewicht des Spiels
+- dieses Nash-Gleichgewicht ist **nicht** (pareto-)effizient
+  - Nash-GG = Kombination von Strategien in nicht-kooperativen Spielen, wobei jeder Spieler genau eine Strategie wählt, von der aus es für keinen Spieler sinnvoll ist, von seiner gewählten Strategie abzuweichen
+  - pareto-effizient =  Zustand in dem es nicht möglich ist eine Eigenschaft zu verändern ohne zugleich eine andere zu verschlechtern
+
+ergo führt unkoordiniertes individuell rationales Verhalten nicht zu kollektiver Rationalität (C,C) in obigem Beispiel besser als (D,D)
+- Ursache: Divergenz zwischen privaten und kollektiven Nutzen (o. Kosten) einer Handlung
+
+evtl Lösung durch wirtschaftspolitische Intervention
+- verbindliche Absprachen
+- "sozial erwünschtes" Verhalten durchsetzen
+- öffentliche Güter bereitstellen, externe Effekte regulieren
+
+**allerdings 1. Hauptsatz der Wohlfahrtsökonomik**:
+- unter bestimmten Voraussetzungen sind Wettbewerbsgleichgewichte pareto-effizient
+  - unkoordiniertes individuell rationales Verhalten führt (anders als beim PD) zu kollektiver Rationalität
+- wann kommt es also zu Marktversagen und wann nicht?
+  - bei Marktversagen *könnten* staatliche Eingriffe Abhilfe verschaffen
+  - Staatseingriff *könnte* zu höherer Effizienz (-> höhere Wohlfahrt/GDP) führen
+
+#### 1.3.3 Distribution: Gleicheit und Umverteilung
+distributive Umverteilung -> "gesellschaftliche" Präferenz für Fairness & Gerechtigkeit
+
+allokative Umverteilung -> Effizienzgründe
+- Versicherung
+- Gleicheit als öffentliches Gut
+
+Polit-ökonomisch / Public Choice:
+- spezielle Interessengruppen, Überstimmen von Minderheiten in Demokratien, etc.
+
+#### 1.3.4 Stabilisierung
+makroökonomische Gleichgewichte können instabil sein und müssen nicht existieren
+
+Konsequenzen: Konjunkturzyklen, Krisen
+
+Staatsaufgabe: Glättung des Konjunkturzyklus (Keynesianismus) -> Makro-Kurs
