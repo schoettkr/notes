@@ -95,6 +95,30 @@ vornehmlich *indivualistischer* Ansatz:
 - Wirtschaftspolitik (wie alle anderen Phänomene auch) = Resultat individueller Entscheidungen
 
 ### 1.2.2 Homo oeconomicus
-### 1.2.3 Dogmenhistorischer Überblick
+Ziel individueller Entscheidungen ist die Nutzenmaximierung:
+- Individuen haben Präferenzen
+- Individuen wählen aus einer Menge von Optionen die meistpräferierte
 
+Individuelle Rationalität:
+- Individuen haben **konsistente & vollständige** Präferenzen
+- sie verwerten (unter Berücksichtigung von Kosten) alle relevanten Informationen
+- sie durchdenken die Konsequenzen ihres Handelns
+
+#### Implikationen für Theorie der Wirtschaftspolitik
+wirtschaftliches Handeln muss mit Annahme der individuellen Rationalität kompatibel sein
+
+Qualitätskriterium für die Wirtschaftspolitik ist das Wohlbefinden (=Nutzenniveau) der Individuen
+
+Indikatoren für gute Wirtschaftspolitik (= Ziele der Wirtschaftspolitik) müssen auf individuelle Nutzenbewertungen zurückführbar sein
+
+Rechtfertigunsvorbehalt für Eingriffe in individuelle Freiheit
+
+**Realistischere Alternative**: behavioural economics
+- Menschen nicht rational sondern systematisch
+- Entscheidungen werden oft "bereut" -> instabile, zeit-inkonsistente Präferenzen
+- Konsequenzen: immernoch Orientierung am individuellen Wohlergehen aber Paternalismus, Meritorik
+
+### 1.2.3 Dogmenhistorischer Überblick
+1. Merkantilismus
+2. Physiokraten
 
