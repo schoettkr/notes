@@ -101,4 +101,8 @@ h = 1, ..., H: Personen in der Gesellschaft
 Eine weitere Einheit des öffentlichen Gutes:
 - ... bringt Person h einen zusätzlichen Nutzen im Wert von **GZB<sub>h</sub>** 
 - ... bringt einen Gesamtnutzen von: ![Summe](./gzsbsum.png "Summe GZB")
+- ... verursacht zusätzliche Kosten in Höhe von **GK**
+
+Effizient erfordert sogenannte *Samuelson-Bedingung*:
+![Summe](./gzsbsum.png "Summe GZB") = **GK**
 
