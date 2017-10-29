@@ -85,3 +85,18 @@ rationale Individuen lassen mögliche Pareto-Verbesserungen nicht brachliegen
   - Transaktionskosten
 
 ## 2.3 Öffentliche Güter
+öffentliches Gut = gemeinsam konsumierbares Gut
+- Nutzung des Gutes durch einen weiteren Akteur beeinflusst nicht den (Konsum-)Nutzen anderer Akteure
+  - zB Infrastruktur, Vorlesung, Kino, Theater, Umweltgüter, TV-Programm
+- Achtung: öffentliches Gut heißt nicht direkt staatlich bereitgestelltes Gut
+- öffentliche Güter können *übernutzbar* sein
+
+Arten von Gütern
+![Arten von Gütern](./gueter.png "Arten von Gütern")
+
+### 2.3.1 Effiziente Bereitstellung (Nutzen-Kosten-Kalkül)
+h = 1, ..., H: Personen in der Gesellschaft
+
+Eine weitere Einheit des öffentlichen Gutes:
+- ... bringt Person h einen zusätzlichen Nutzen im Wert von **GZB<sub>h</sub>** 
+
