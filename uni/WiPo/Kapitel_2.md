@@ -92,7 +92,8 @@ rationale Individuen lassen mögliche Pareto-Verbesserungen nicht brachliegen
 - öffentliche Güter können *übernutzbar* sein
 
 Arten von Gütern
-[Arten von Gütern](./gueter.png "Arten von Gütern")
+
+![Arten von Gütern](./gueter.png "Arten von Gütern")
 
 ### 2.3.1 Effiziente Bereitstellung (Nutzen-Kosten-Kalkül)
 h = 1, ..., H: Personen in der Gesellschaft
