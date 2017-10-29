@@ -106,3 +106,105 @@ Eine weitere Einheit des öffentlichen Gutes:
 Effizient erfordert sogenannte *Samuelson-Bedingung*:
 ![Summe](./gzsbsum.png "Summe GZB") = **GK**
 
+### 2.3.2 Märkte und öffentliche Güter
+Märkte (und andere dezentrale Allokationsmechanismen) versagen meist bei der effizienten Bereitstellung öffentlicher Güter
+
+Unterschied zw. priv. & öff. Gut:
+- private Güter: individuelle verschiedene Mengen, aber einheitliche Bewertung (-> Preis)
+- öff. Güter: identische Menge, aber individuell unterschiedliche Bewertungen
+
+-> Märkte müssten bei öG personalisierte (Lindahl Preise) zulassen
+
+#### Private Bereitstellung von öG
+Quellen des Effizienzversagens:
+- Freifahrer-Verhalten
+  - jeder hat den Anreiz, andere das öG bereitstellen zu lassen
+- Positive Externalitäten:
+  - beim eigenen Beitrag wägt man individuelle Kosten & Nutzen ab, ignoriert aber den (meist positivien) Zusatznutzen für andere
+
+-> Nicht- oder Unterbereitstellung von öG
+
+#### Staatliche Bereitstellung
+angenommen sozialer Planer möchte Samuelson-Bedingung implementieren:
+- erforderliches Wissen:
+  - Grenznutzen sind private Informationen
+  - Individuen haben keinen Anreiz, ihre wahren Präferenzen zu offenbaren
+
+-> gravierende Informationsprobleme ("mechanism design")
+
+#### Finanzierung vn öG
+Samuelson-Bedingung unterstellt "kostenlose" Finanzierung des öG, aber:
+- Steuern wirken verzerrend
+- können ihrerseits auf die Bewertung des öG rückwirken
+
+Demokratie versagt bei der Bereitstellung von öG
+- Beispiel: ein öG kostet 15$, die Kosten werden gleichmäßig auf 3 Personen verteilt -> 5$ p.P
+  - ZB der Personen: 10$, 4$ und 3$
+  - aggregierte ZB = 17 > 15 -> Samuelson Bedingung: stelle das öG bereit
+  - aber Abstimmung 2 zu 1 gegen das öG (Nettovorteile sind 5, -1, -2)
+
+## 2.4 Asymmetrische Informationen
+Informationsunterschiede zw Marktteilnehmern können zu Marktversagen führen
+
+**Adverse Selection** (Negativauslese)
+- Informationsasymmetrie *vor* Vertragsabschluss
+- Lemons Problem (Gebrauchtwagenmarkt), Versicherungsmärkte, Kreditmärkte
+
+**Moral Hazard**
+- Informationsasymmetrie *nach* Vertragsabschluss
+- Arbeitsmarkt, Versicherungsmärkte, Kreditmärkte
+
+"private" Abhilfe:
+Garantien bei Lemons Problem, Selbstbehalte (Eigenbehalte etc)
+
+wirtschaftspolitische Maßnahmen:
+- bei adverser Selektion: Versicherungspflicht
+- bei moral hazard: kaum Chancen
+
+## 2.5 Marktmacht
+bei vollständiger Konkurrenz: jeder Marktteilnehmer ist "klein" (-> "Preisnehmer")
+
+bei Marktmacht (-> Preissetzungsspielraum von Anbeiter oder Nachfrager) kommt es zu Marktversagen
+- Wettbewerbspolitik muss verhindern, dass **dauerhafte Monopole** entstehen
+- aus Sichtweise der Chicago School:
+  - hohe Gewinne großer Unternehmen sind eher ein Zeichen von Effizienz also von übergroßer Marktmacht
+  - weitreichende Wettbewerbsfreiehit (ohne staatl. Eingriffe) begünstigt Innovationen
+    - staatl. Eingriffe behindern nötige Anpassungsprozesse an Märkten
+  - Märkte müssen dennoch **bestreitbar** bleiben
+
+Extremfälle:
+- Monopol (nur ein Anbieter)
+- Monopson (nur ein Nachfrager)
+
+Ursachen für Monopole:
+- gesetzlich: Patente, Lizenzen, Regulierungen
+- "natürlich": sinkende Durchschnitsskosten
+- selten: ressourcenbasiert, zB deBeers, Alcoa
+
+![Monopol](./monopol.png "Monopol")
+
+#### Oligopole 
+wenige Anbieter, jeder mit "etwas" Marktmacht
+
+mögliche Hauptstränge:
+- oligopolistische Firmen konkurrieren über den Preis (Bertrand-Wettbewerb)
+  - Preise und Mengen so wie auf dem Wettbewerbsmarkt
+- Oligopolisten konkurrieren über die Menge (Cournot-Wettbewerb)
+- Oligopolisten kooperieren (Kartell)
+
+## 2.6 Natürliche Monopole
+Unteilbarkeiten, zunehmende Skalenerträge
+- natürliches Monopol = sinkende Durchschnitsskosten der Produktion bei wachsender Angebotsmenge 
+  - beispielsweise verursacht durch extrem hohe Fixkosten, steigende Skalenerträge
+  - zB Netzindustrien (Bahn, Telekommnikation)
+
+Allokatives Problem
+- bei Produktionsprozessen mit hohen Fixkosten sinken i.d.R. die Durchschnitsskosten der Produktion bei wachsender Angebotsmenge
+- größere Anbieter können daher immer billiger anbieten als kleinere
+  - ein Monopol ist somit produktionstechnisch effizient
+  - aber: Monopole können Marktmacht ausnutzen
+- ideal wäre Preis = Grenzkosten
+  - jedoch liegen bei natürlichen Monopolen die Grenzkosten unter den Durchschnitsskosten -> Preisbildung führt zu Defiziten
+
+- unlösbares Dilemma: weder Monopol noch Wettbewerb sind "gut"
+
