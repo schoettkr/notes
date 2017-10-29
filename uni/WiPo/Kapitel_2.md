@@ -100,5 +100,5 @@ h = 1, ..., H: Personen in der Gesellschaft
 
 Eine weitere Einheit des öffentlichen Gutes:
 - ... bringt Person h einen zusätzlichen Nutzen im Wert von **GZB<sub>h</sub>** 
-- ... bringt einen Gesamtnutzen von:  \sum_{i=1}^{10} t_i
+- ... bringt einen Gesamtnutzen von: ka
 
