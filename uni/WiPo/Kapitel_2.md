@@ -91,7 +91,7 @@ rationale Individuen lassen mögliche Pareto-Verbesserungen nicht brachliegen
 - Achtung: öffentliches Gut heißt nicht direkt staatlich bereitgestelltes Gut
 - öffentliche Güter können *übernutzbar* sein
 
-Arten von Gütern
+Arten von Gütern:
 
 ![Arten von Gütern](./gueter.png "Arten von Gütern")
 
@@ -100,4 +100,5 @@ h = 1, ..., H: Personen in der Gesellschaft
 
 Eine weitere Einheit des öffentlichen Gutes:
 - ... bringt Person h einen zusätzlichen Nutzen im Wert von **GZB<sub>h</sub>** 
+- ... bringt einen Gesamtnutzen von:  \sum_{i=1}^{10} t_i
 
