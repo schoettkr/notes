@@ -9,7 +9,7 @@ dezentraler Allokationsmechanismus:
 => Wie kann etwas das so "unorganisiert" ist funktionieren und auch noch ein gutes Ergebnis hervorbringen?
 
 Marktgleichgewicht
-![Marktgg Diagramm](./marktgg.png "Marktgg Diagramm")
+![Marktgg Diagramm](./img/marktgg.png "Marktgg Diagramm")
 
 Eigenschaften des Marktgleichgewichts:
 - die einzige Konstellation, in der die Pläner aller Beteiligten miteinander kompatibel sind (Koordinationsfunktion von Preisen)
@@ -17,7 +17,7 @@ Eigenschaften des Marktgleichgewichts:
   - maximiert die Summe realisierbarer Tauschvorteile
 - Effizienz: im MarktGG ist die Summe aus Konsumentenrente und Produzentenrente maximal
   - bei jeder anderen Konstellation ist Summe aus KR und PR geringer
-![KR und PR](./krpr.png "KR und PR")
+![KR und PR](./img/krpr.png "KR und PR")
 Konsumentenrente = Zahlungsbereitschaft der Konsumenten (=Wert für die Nachfrager) - tatsächliche Zahlung
 
 Produzentenrente = tatsächliche Zahlung - Gesamtkosten des Angebots
@@ -32,7 +32,7 @@ Politikimplikation: wenn Märkte effizient sind, gibt es keinen allokativen Rech
 Externe Effekte = Tätigkeit eines Akteurs beeinflusst den Nutzen anderer Akteure vorteilhaft oder nachteilig, ohne dass hierfür Kompensatin erfolgt oder dass dies in Marktpreisen erfasst wird
   - allgemein: **private** Grenznutzen und/pder Grenzkosten stimmen nicht mit gesellschaftlichen (**sozialen**) Grenznutzen bzw Grenzkosten überein
 
-![negative Externalitäten](./negex.png "negative Externalitäten")
+![negative Externalitäten](./img/negex.png "negative Externalitäten")
 - bei neg. Externalitäten kommt es auf dem Markt zu einer Überversorgung
 - *Optimum* liegt dort wo zusätzlicher Nutzen einer weiteren Einheit den gesellschaftlichen Kosten ihrer Produktion entspricht
 - *Marktgleichgewicht* liegt dort wo zusätzlicher Nutzen einer weiteren Einheitden privaten Kosten ihrer Produktion entspricht
@@ -40,7 +40,7 @@ Externe Effekte = Tätigkeit eines Akteurs beeinflusst den Nutzen anderer Akteur
 - **Marktversagen** da MarktGG != Optimum (ineffizent)
 - Markt maximiert immernoch Summe aus KR und PR
 
-![positive Externalitäten](./posex.png "positive Externalitäten")
+![positive Externalitäten](./img/posex.png "positive Externalitäten")
 - bei pos. Externalitäten kommt es auf dem Markt zu einer Unterversorgung (relativ zum  Optimum)
 
 ### 2.2.1 Steuern oder Subventionen zur Korrektur von Marktversagen
@@ -48,7 +48,7 @@ Artur C. Pigou: private & soziale Grenznutzen bzw Grenzkosten können durch korr
 - Ansatzpunkte der *Pigou-Lösung* sind alle Determinanten von Angebot und Nachfrage (zB Öko-, Mineralöl-, Kfz-Steuer)
 
 zB korrigierende Steuer bei negativen Externalitäten:
-![pigou steuer](./negsteu.png "pigou steuer")
+![pigou steuer](./img/negsteu.png "pigou steuer")
 
 ### 2.2.2 Haftungsrecht
 Ansatz: umfassende & jederzeit durchsetzbare Haftungsregeln, die auf dem Verursacherprinzip aufbauen, würden die Externalitäten beseitigen
@@ -93,18 +93,18 @@ rationale Individuen lassen mögliche Pareto-Verbesserungen nicht brachliegen
 
 Arten von Gütern:
 
-![Arten von Gütern](./gueter.png "Arten von Gütern")
+![Arten von Gütern](./img/gueter.png "Arten von Gütern")
 
 ### 2.3.1 Effiziente Bereitstellung (Nutzen-Kosten-Kalkül)
 h = 1, ..., H: Personen in der Gesellschaft
 
 Eine weitere Einheit des öffentlichen Gutes:
 - ... bringt Person h einen zusätzlichen Nutzen im Wert von **GZB<sub>h</sub>** 
-- ... bringt einen Gesamtnutzen von: ![Summe](./gzsbsum.png "Summe GZB")
+- ... bringt einen Gesamtnutzen von: ![Summe](./img/gzsbsum.png "Summe GZB")
 - ... verursacht zusätzliche Kosten in Höhe von **GK**
 
 Effizient erfordert sogenannte *Samuelson-Bedingung*:
-![Summe](./gzsbsum.png "Summe GZB") = **GK**
+![Summe](./img/gzsbsum.png "Summe GZB") = **GK**
 
 ### 2.3.2 Märkte und öffentliche Güter
 Märkte (und andere dezentrale Allokationsmechanismen) versagen meist bei der effizienten Bereitstellung öffentlicher Güter
@@ -181,7 +181,7 @@ Ursachen für Monopole:
 - "natürlich": sinkende Durchschnitsskosten
 - selten: ressourcenbasiert, zB deBeers, Alcoa
 
-![Monopol](./monopol.png "Monopol")
+![Monopol](./img/monopol.png "Monopol")
 
 #### Oligopole 
 wenige Anbieter, jeder mit "etwas" Marktmacht
