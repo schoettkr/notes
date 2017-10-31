@@ -31,10 +31,10 @@ Vereinfachungs-Dilemma:
 ### 4.2.2 Effiziente Steuern
 Markt mit Produzentenbesteuerung
 
-![Markt mit Produzentenbesteuerung](/img/prosteu.png "Markt mit Produzentenbesteuerung")
+![Markt mit Produzentenbesteuerung](./img/prosteu.png "Markt mit Produzentenbesteuerung")
 
 Markt mit Konsumentenbesteuerung
-![Markt mit Konsumentenbesteuerung](/img/konsteu.png "Markt mit Konsumentenbesteuerung")
+![Markt mit Konsumentenbesteuerung](./img/konsteu.png "Markt mit Konsumentenbesteuerung")
 
 Excess Burden = Zusatzlast der Besteuerung; enstehende Nutzen- bzw. Wohlfahrtseinbußen  für ein Wirtschaftssubjekt bei Besteuerung
 - monetärer Wert des Nutzenverlustes, der durch die Substitution von besteuerten durch nicht-besteuerte Aktivitäten entsteht
