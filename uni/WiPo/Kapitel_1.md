@@ -10,12 +10,12 @@ Theorie der Wirtschaftspolitik:
 - positive und normative Analyse von kollektiven Entscheidungen, die das Ziel haben, Knappheitstatbestände zu regulieren
   - kollektive Entscheidungen mit Bindungswirkung für eine Gruppe, oft staatliche Entscheidungen
 
-####Praktische Wirtschaftspolitik:
+#### Praktische Wirtschaftspolitik:
 - zielgerichtetes Eingreifen in das Wirtschaftsgeschehen
 - Handeln besonders legitimierter Instanzen
 - Teilgebiet der allgemeinen staatlichen Politik
 
-####Theoretische Wirtschaftspolitik:
+#### Theoretische Wirtschaftspolitik:
 - Teilgebiet der Volkswirtschaftslehre
 - Anwendung der ökonomischen Theorie
 - wissenschaftliche Beratung der praktischen Wirtschaftspolitik
