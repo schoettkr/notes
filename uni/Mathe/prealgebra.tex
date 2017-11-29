@@ -2,6 +2,7 @@
 \usepackage{mathtools}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{wasysym}
+\usepackage{qtree}
 
 
 \begin{document}
@@ -44,9 +45,67 @@ A number is evenly divisible by 10 if it ends with 0.
 The multiples of a number are just the numbers that can be evenly divided by the number. To find for example the first 3 multiples of a number just multiply the number with 1, with 2, and with 3.
 
 \subsection{Prime and composite numbers}
+A prime number is a number that is evenly divisble by 1 and iteself only. Composite numbers are all other numbers so a number is either prime or composite.
+For example $1$ and $5$ both go into $5$ but not any other number between these two. And numbers higher than $5$ would return a decimal, therefore $5$ is a prime number.
+For 35 there are other factors then $1$ and the number itself ($35$), e.g. $5$ or $7$ so it is an composite number.
+
+\subsubsection{Prime Factorization}
+$a * b$ $a$ and $b$ are factors (a = Multiplikator, b = Multiplikand). Prime factorization is the representation of a number $n$ as a product of prime numbers. For example:
+$102 : 2 = 51$ Now 2 cant be factorized further but $51$ can be seperated into factors of $3$ and $17$. Now $3$ is (like $2$) a prime number and cant be factorized any furhter, the same goes for $17$. Now to find the product of primes you have to take all the primes and multiply them together: $2*3*17=102$.
+No matter what the number is, the steps are break down the number into irreduceable prime numbers:
+
+\Tree[.84 [.\textbf{2} ]
+[.42 [.\textbf{2} ] [.21 [.\textbf{3} ] [.\textbf{7} ]
+]]]
+
+And then multiply these prime numbers: $2*2*3*7 = 2^2*3*7 = 84$
+
+\subsection{Least common multiple}
+The least common multiple of two numbers is the smallest number that is a multiple of both: $10*3=30$ and $15*2=30 \rightarrow30$ would be the LCM for 10 and 15.
+To find the least common multiple of a set of numbers you have to factorize the numbers into their primes, find the highest of each factor and mulitplies these together:
+
+\Tree[.24 [.\textbf{2} ]
+[.12 [.\textbf{2} ] [.6 [.\textbf{2} ] [.\textbf{3} ]
+]]]
+\Tree[.10 [.\textbf{2} ] [.\textbf{5} ]]
+\Tree[.15 [.\textbf{3} ] [.\textbf{5} ]]
+
+$24=2*2*2*3=2^3*3\rightarrow 2^3$ is the largest of all factors of $2$
+
+$10=2*5$
+
+$15=3*5$
+
+The factors of $3$ and $5$ are all equal so I have to take one of each: $2^3*3*5=120\rightarrow$ is the least common multiple of 24, 10 and 15.
+
+\section{Decimals}
+\subsection{Place-value notation (Stellenwertsystem) and expanded notation}
+Describing a place value to the left of the decimal point, is talking about the 1s place, 10s place or the hundreds place and so on (Einerstelle, Zehnerstelle, etc). Talking about a number to the right of the decimal point is about the tenth place, the one hundredth place, the 1000th place and so on (Zehntel, Hundertstel, Tausendstel).
+
+To write a number in expanded notation you take each number and multiply it by its corresponding place value e.g: $500 = 5*100+0*10+0*1$ and $1281=1*1000+2*100+8*10+1*1$
+Of course the same thing is applicable to decimals (values to the right of the decimal point): $0.55 = 5*\frac{1}{10}+5*\frac{1}{100}=\frac{5}{10}+\frac{5}{100}$. In contrast to whole numbers where each number is multiplied by its place ($50=5*10$) with decimals you divide each number by its place ($0.5 = \frac{5}{10}$)
+
+\subsection{Decimal arithmetic}
+To add decimals together the decimals have to line up with each other:
+
+$4.5+3.34 = 
+\begin{array}[t]{r}
+    4.50 \\
++ \ 3.34 \\ \hline
+    7.84
+\end{array}$
+If the numbers do not align a $0$ can be added at the missing place behind the decimal point.
+
+The same thing goes for subtraction:
+
+$16.7-2.26=
+\begin{array}[t]{r}
+  16.70 \\
+- \ 2.26 \\ \hline
+  14.44
+\end{array}$
+
+\section{Fractions}
 
 
-
-
-  
 \end{document}
