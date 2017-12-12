@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1511702397 "/home/chinchi/Dev/notes/uni/Mathe/prealgebra.tex" "prealgebra.pdf" "prealgebra" 1511702398
-  "/home/chinchi/Dev/notes/uni/Mathe/prealgebra.tex" 1511702397 6725 e1c20aec808f82145f4ebb4e15a7cd65 ""
+["pdflatex"] 1511702397 "/home/chinchi/Dev/notes/uni/Mathe/prealgebra.tex" "prealgebra.pdf" "prealgebra" 1512676884
+  "/home/chinchi/Dev/notes/uni/Mathe/prealgebra.tex" 1512676884 6725 e1c20aec808f82145f4ebb4e15a7cd65 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1510784337 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1510784344 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1510784344 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -70,8 +70,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1511083336 2354178 d796f0af48448ed886bee26a94683716 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1511083327 7736839 ab0851da1797f949883141ec819348ac ""
   "prealgebra.aux" 1511702398 978 bab22b857aa87710db519114a893d1cc ""
-  "prealgebra.tex" 1511702397 6725 e1c20aec808f82145f4ebb4e15a7cd65 ""
+  "prealgebra.tex" 1512676884 6725 e1c20aec808f82145f4ebb4e15a7cd65 ""
   (generated)
+  "prealgebra.log"
   "prealgebra.pdf"
   "prealgebra.aux"
-  "prealgebra.log"
