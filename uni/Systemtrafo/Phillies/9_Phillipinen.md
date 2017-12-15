@@ -64,6 +64,9 @@ All: Hinsichtlich Stellung der Judikative im Verfassungsgefüge ist durchgängig
 
 All: Regierungssysteme erfüllen Grundvoraussetzung der *judical review* im demokr. Rechts- und Verfassungsstaat
 
+
+![insti](./instit.png "instit")
+
 ## 9.2 Konsolidierung
 Ende des autoritären Regimes & Institutionalisierung führte zu Neuordnung der pol. Organisation des Staates und seiner Beziehungen zur Gesellschaft
 - Regimewechsel führte allerdings nur sehr begrenzt zum Austausch der alten politischen Eliten
@@ -91,3 +94,51 @@ Gruppierungen konfrontieren die junge Demokratie mit ihrem konkurrierenden Gewal
 
 Militär hat sich somit zu einem der wichtigsten Akteure der philip. Politik entwickelt, der sich seine "Loyalität" mit pol Vorrechten vergüten lässt
 - nach einer scheinbaren Normalisierung der Lage (in Mitte-Ende der 90er), wurde dies während der Auseinandersetzung um die Amtsenthebung von Präsident Joseph Estrada im Januar 2001 wieder ersichtlich
+  - so wie im Februar 1986 gab das parteiische militärische Eingreifen den Ausschlag für die neue Präsidentin Gloria Macapagal Aroyo
+    - am 24.Februar 2006 verhängte die Präsidentin nach Hinweisen der Sicherheitskräfte (auf einen bevorstehenden Putschversuch einiger Spezialeinheiten der Streitkräfte)  den Ausnahmezustand
+
+mangelnde Durchsetzungsfähigkeit der gewählten Reigerung ist nicht das einzige Konsolidierungsdefizit der phillipinischen Demokratie, denn die seit 1987 regelmäßig stattfindenen allgemeine, freie **Wahlen sind defizitär**
+- pol Gewahlt bei Wahlen
+  - zwar Rückgang aufgrund organisatorischer Verbesserungen und Schwächung systemfeindlicher Gruppierungen, aber dennoch kommt es zu Einschüchterung von Wählern + Kandidaten, bis hin zum pol. Mord
+  - weit mehr als in anderen ost- und südostasiatischen Demokratien
+- Manipulation von Wählerregistern, Stimmzetteln und Stimmenauszählung
+  - Wahlbehörder trotz weitreichender Befugnisse bislang nicht gelungen ordnungsgemäße Durchführung zu garantieren
+- Stimmenkauf und Verstöße gegen Wahlgesetze
+- politische Rechte + Vertreter der wirtschaftl. dominierenden Oligarchie nutzen Wahlen & demokr Institutionen zur Sicherung ihrer eigenen *vested interests*(= Eigennutz, persönliches Interesse)
+- Wiederwahl von Präsidentin Gloria Macapagal Arroyo im Mai 2004 von massiven Vorwürfen des Wahlbetrugs begleitet
+
+## 9.2.1 Gewaltenkontrolle
+im Gegensatz zu diesen Konsolidierungsproblemen zeichneten sich die Philippinen bislang durch eine naehzu strikte Einhaltung der konstitutionell vorgegebenen Kompetenzabgrenzungen & Verfahrensregeln im Bereich der horizontalen Gewaltenkontrolle aus
+
+mit dem Senat hat sich ein kompetitiver Vetospieler herausgebildet, der eine hohe Blockadekapazität ggü Politikvorhaben der Exekutive besitzt
+- -> wiederholt wurden prominente Vorhaben der Regierung vom Kongress nicht behandelt oder bereits zuvor von Regierung fallengelassen da hohe Wahrsch. des Scheiterns
+- dieses parl. Gegenwicht hat aufgrund seiner Natur aber auch Kosten:
+  - langwierige Gesetzgebungsverfahren
+  - Blockaden und Verwässerungen reformerischer Projekte durch den Kongress im Bereich der Wirtschafts- und Sozialgesetzgebung
+
+Oberster Gerichtshof bildet einen wichtigen Stützpfeiler der "funktionierenden" Gewaltenkontrolle
+- bewahrte in den zwei Dekaden seit Demokratiesierung seine institutionelle Autonomie ggü Regierung und Kongress
+- knüpft an Tradition eines selbstbewussten Gerichts der vorautoritären Zeit an
+- hohes Maß an Zustimmung & institutionellem Vertrauen der Bürger
+  - u.a. weil Präsidentin Corazon Aquino bei Ernennung der Richter, auf breite Repräsentation unterschiedlicher gesellschaftl Gruppen & pol Interessen abzielte
+
+das am US-amerikanischen Präsidentialismus orientierte System von *checks and balances*  (zw Präsident, Kongress, Oberstem Gerichtshof) erwies sich bis Ende der 1990er als widerstandsfähig
+- jedoch häufige Blockade von notwendigen Reformen in Staat, Politik, Wirtschaft und Gesellschaft
+  - hinzu kommen Faktoren, wie das Wesen der philip. Wahlen, ein organisatorisch schwaches, fluides Parteiensystem + ein hohes Niveau pol Korruption
+
+Gravierendste Defekte der philip. Demokratie bestehen im Bereich der bürgerlichen Freiheitsrechte
+- Verfassung von 1987 garantiert zwar bürgerl. Freiheitsrechte, Prozessrechte des Einzelnen und besondere Rechte zum Schutz religiöser & ethnischer Minderheiten
+  - ihre Realisierung ist jedoch bestenfalls unvollständig
+- für weite Teile der Bevölkerung besteht eine *low intensity citizenship* oder gar eine *no intensity citizenship*
+- eine positive Tendenz ist, dass seit Ende der 1980er("harte" Phase der Guerillabekämpfung) die Anzahl von Menschenrechtsverletzungen züruckgeht
+- politisch motiviertes "Verschwinden" von Personen, Verhaftung aus pol Gründen oder willkürliche Erschießungen gehören jedoch noch immer zum Alltag der philippinischen Demokratie
+
+Ereignisse im Zusammenhang mit dem Regierungswechsel von Joseph Estrada zu Gloria Macapagal Arroyo (2001) haben Fragezeichen hinter den konstitutionellen Grundkonsens der philip. Demokratie gesetzt
+- Opposition kündigte im Januar 2001 den minimalen Verfahrenskonsens auf, der in vorherigen Monaten die pol Stabilität sicherte und verlagerte die pol Auseinandersetzung auf die Straße
+  - infolgedessen zwang die Opposition den Präsidenten zum Rücktritt
+  - an seine Stelle trat die zur Gallionsfigur (Aushängeschild) der Proteste aufgestiegene Vizepräsidentin Gloria Macapagal Arroyo
+    - die konstitutionell vorgeschriebene Nachfolgeregel wurde zwar eingehalten, der Rücktritt von Estrada allerdings mehr oder weniger erzwungen (an Verfassung vorbei)
+
+Random bilder 
+
+![okon](./ökon.png "ökon")
