@@ -12,11 +12,11 @@ Bereits nach einem Monat des Amtsanritts der provisorischen Regierung Erlass ein
 
 Einigung auf Kernpunkte der neuen Verfasssung innerhalb weniger Monate:
 - angelehnt an die erste philippinische Verfassung von 1935
-1. Stärkung des unter Marcos entmacheteten Obersten Gerichtshofs
+**1. Stärkung des unter Marcos entmacheteten Obersten Gerichtshofs**
 - Orientierung am US-amerikanischen Modell hinsichtlich der Kompetenzausstattung
 - Neuregelung des Verfahrens zur Besetzung der Richterposten stärkt pol. Unabhängigkeit erheblich (war unter Marcos aufgehoben)
   - zusammen mit Prinzip der Nichtabberufbarkeit der Obersten Richter, um einseitige Zusammensetzung des Gerichts durch Exekutive zu verhindern
-2. Wiederherstellung des präsidentiellen Regierungssystems (der ersten philip. Demokratie)
+**2. Wiederherstellung des präsidentiellen Regierungssystems (der ersten philip. Demokratie)**
 - anstelle des unter Marcos *formal* eingeführten, aber faktisch nie umgesetzten, Semipräsidentialismus
 - Einschränkung der von Marcos weitreichend gefassten präsidentiellen Notstands- und Verordnungsrechte
 - philip. Präsident besitzt die ausschließliche Zuständigkeit für Entwurf & Vorlage des Haushaltsgesetzes
@@ -24,7 +24,7 @@ Einigung auf Kernpunkte der neuen Verfasssung innerhalb weniger Monate:
 - Präsident kann bei Rebellion, Wirtschaftskrise, Katastrophen etc. den Notstand erklären
   - Proklamation(Ausrufung) bedarf jedoch Zustimmung des Kongresses mit qualifizierter Mehrheit in beiden Häusern
 - Beschränkung der Amtszeit des Präsidenten auf sechs Jahre ohne Möglichkeit zur Wiederwahl
-3. Wiederherstellung eines Zweikammersystems (bestehend aus Senat und Repräsentatenhaus)
+**3. Wiederherstellung eines Zweikammersystems (bestehend aus Senat und Repräsentatenhaus)**
 - nach US-amerikanischem Vorbild, wie es bereits 1946 etabliert wurde (Tabelle 34)
 - beide Kammern weitegehend gleichberechtigt am Gesetzgebungsverfahren beteiligt 
 - ähnlich wie bei Präsidentenamt Einführung von Amtszeitbeschränkungen für das Parlament
