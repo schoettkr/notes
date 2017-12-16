@@ -200,4 +200,34 @@ als korporative Akteure sind Gewerkschaften überwiegend schwach
       - starke Fragmentierung der Gewerkschaften
 
 ### 9.3.3 Ebene der Verhaltenskonsolidierung
-F37
+es gelang den autoritären Eliten sich auch unter demokr Systembedingungen dauerhaft in den pol Institutionen zu etablieren & erhebliche pol Machtressourcen an sich zu ziehen
+- somit kaum Anreize für die pol, wirtschaftl und militärischen Eliten ihre Machtressourcen gegen das demokr System zu mobilisieren
+  - Militär blieb allerdings ein potentieller Vetoakteur ggü Rechtsstaat & Demokratie
+    - Effektivität der zivilen Kontrolle über die Streitkräfte ist eingeschränkt
+
+man kann von einem relativ erfolgreichen *elite settlement* sprechen, aber es existieren zeitgleich Defizite hinsichtlich der Habitualisierung demokr Verhaltensweisen unter diesen Eliten
+- gewachsener Konkurrenzdruck (im Zuge der Liberalisierung/Demokratiesierung der "pol Märkte") innerhalb der pol Eliten, hat den Trend zu einer "Monetarisierung" der Politik, d.h politische Korruption gefördert
+- Politik & staatl. Verwaltung sind in erheblichem Umfang mit Problem der Korruption konfrontiert
+  - -> Klientelismus, endemische Korruption, mangelnde Rechtssicherheit
+
+machtpolitisch motivierter Umgang der Akteure mit Verfassungsregeln, sowie Versuche der Verfassungsmanipulation zeigen, dass sich unter den relevanten pol Eliten in diesen Ländern bislang keine überparteiliche, längerfristige Akzeptanz demokr Verfahren herausbilden konnte
+- Eliten orientieren sich bei Diskussionen um instit. Reformen nicht an Zielen wie Effizienz, Effektivität oder Inklusivität, sondern am eigenen pol Machtgewinn
+
+### 9.3.4 Ebene der Staatsbürgerkultur und Zivilgesellschaft
+Enthierarchisierung der Beziehungen zw Staat & Gesellschaft bedarf der Einübung neuer Formen gesellschaftl Steuerung
+- v.a. soziale Bewegungen & ihre Organisationen müssen etablierte Muster gesellschaftl Verhaltens & staatl Handelns überwinden & neue Techniken der Interessenartikulation erlernen
+
+während Bedeutung von Klassen & cleavage übergreifender Interessengruppen & burgerlicher Vereinigung wächst, hat Bedeutung traditioneller Formen radikaler zivilgesellschaftlicher Opposition (auf Phillies insbesondere linksradikale Organisationen) stetig abgenommen
+
+All: allgemeine Bekenntnis der Bürger zur Demokratie als Regimetyp ist relativ hoch
+- jedoch signifikant weniger Zustimmung zur Demokratie als Prozess (Output, Funktionieren etc)
+
+P: Demokratiezufriedenheit liegt unter dem Durchschnittsniveau der lateinam. & südeurop. Demokratien, was angesichts der geschilderten Probleme wenig überraschend ist
+
+![Zustimmung](./zustimmung.png "zustimmung")
+
+3 Länder/P: es kann derzeit nicht von Konsolidierung einer demokratieunterstützenden Zivilgesellschaft gesprochen werden
+- Defizite im Bereicht der Habitualisierung demokr Verhaltensweisen & Einstellungen unter zivilgesellschaftlichen Aktivisten, ein Mangel an demokr Streitkultur, sowie Logik von Nullsummen-Spielen prägen häufig die Konfliktaustragung & Interessenvermittlung zw Zivilgesellschaft & Staat
+- P: es lassen sich seit 1980ern Tendenzen zur Entradikalisierung der *civil society* verzeichen
+  - gleichzeitig profitiert Zivilgesellschaft vom Niedergang Kommunistischer Bewegungen in Südostasien, die von den Mittelschichten stets als Bedrohung wahrgenomen wurden und die Diffamierung zivilgesellschaftlicher Organisationen als "pro-kommunistisch" effektiv ermöglichten
+
