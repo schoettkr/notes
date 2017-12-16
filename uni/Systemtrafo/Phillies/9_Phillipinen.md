@@ -142,3 +142,49 @@ Ereignisse im Zusammenhang mit dem Regierungswechsel von Joseph Estrada zu Glori
 Random bilder 
 
 ![okon](./ökon.png "ökon")
+
+## 9.3 Fazit: Die Konsolidierung im Vergleich
+### 9.3.1 Institutionelle Konsolidierung
+Funktionsweisen & Konsolidierungschancen der demokr Institutionen werden ganz entscheidend von der Beschaffenheit intermediärer Organisationen mitbestimmt
+- dies gilt insbes. für Parteien & den Umgang der pol + gesellschaftl Eliten mit den neuen demokr Institutionen
+
+Orientiert man sich an den Indikatoren der "vertikalen" und "horizontalen Autonomie" der Institutionen des Regierungssystems, so kann für die Philippinen festgestellt werden, dass sie auf der vertikalen Ebene einen relativ hohen Konsolidierungsgrad erreicht haben
+- Verfassung hat sei dem Inkrafttreten keine Änderung erfahren
+- Lösung von Nachfolgeproblemen aufgrund des problematischen Wechsels von Estrada zu Arroyo nur eingeschränkt verfassungskonform
+- dreimal Ablösung der regierenden Parteien durch Opposition
+
+-> Positives Fazit über vertikale Autonomie relativiert sich wenn man die horizontale Ebene institutioneller Autonomie betrachtet
+
+![poly](./poly.png "poly")
+
+Einfluss der Institutionen des Regierungssystems muss auf die Konsolidierung der Demokratie insgesamt muss kritisch betrachtet werden
+- Effiziens- und Effektivitätsmängel die sich in anhaltenden institutionellen policy-Blockaden äußern
+
+niedrige Institutionalisierungsgrad der Parteien & geringe programmatische Differenzierung der Parteiensysteme (+ schwache Abwehrkräfte der Parteiorganisationen gg Abwerbungsversuche ihrer Parlamentarier durch die pol Konkurrenz) wirkt sich auf den Philippinen zunächst positiv auf die Funktionsfähigkeit des Regierungssystems aus
+- Unterinstitutionalisierung des Parteiensystems ermöglichte es der Regierung, unabhängig von Wahlergebnissen oder Parteizugehörigkeiten der Abgeordneten mehrheitsfähige Stimmblöcke im Repräsentatenhaus (bzw Nationalversammlung?) zu organisieren
+  - indem unabhängige oder oppositionelle Parlamentarier zum Übertritt in Regierungspartei(en) bewegt oder weitere Parteien durch Koalitionsabsprachen in das Regierungslager eingebunden werden konnten
+
+### 9.3.2 Repräsentationsebene
+stark personalisierte Ausrichtung der pol Auseinandersetzung & die hiervon auf die Parteien einwirkenden dysfunktionalen Anreize verhindern die Institutionalisierung funktionaler & stabiler Massenparteien auf den Philippinen
+
+niedriger Institutionalisierungsgrad schlägt sich in einer kurzen Lebensdauer von Parteiorganisationen, einem hohen Anteil unabhängiger Abgeordneter im Parlament sowie einer im regionalen und interregionalen Vergleich konkurrenzlos hohen Volatilitätsrate (Schwankungen, Wählerverschiebungen) des Parteiensystems nieder
+
+Parteiensystem ist durch häufige Abspaltungen, Fusionen und Neugründungen charakterisiert 
+
+Orientierung pol Loyalität primär an Personen, ausgesprochener Faktionalismus, sowie geringe Organisationstiefe der Parteien sind für den volatilen Charakter & die fluiden Strukturen philippinischer Parteien verantwortlich
+- Faktionen (nicht Fraktion) = Untergruppe einer Partei (oder einer pol tätigen Organisation), die sich oft durch formellere Organisationsstrukturen (als bspw Parteiflügel) auszeichen und sich stark nach einer Führungsfigur ausrichten
+  - ständige Konkurrenzkamp unter Faktionen wird einerseits als festigende Kraft für die Integrität der Parteien angesehen, andererseits wird ihnen auch eine destabilisierende Wirkung auf die Regierung zugesprochen
+
+Mehrzahl der das Parteienspektrum prägenden Organisationen entstand erst in den 1990er Jahren
+- dabei handelt es sich meist um stark personenzentrierte Wahlvereine mit kaum ausgebildeten formal bürokratisierten Strukturen
+- wie bereits vor 1972 sind diese Partein hauptsächlich lose Wahlkoalitionen pol Familien auf Provinz- und Regionalebene
+  - entsprechen in ihrem strukturellen Muster Netzwerken persönlicher Abhängigkeitsbeziehungen zwischen regionalen & lokalen Eliten (mit geograph. begrenzt Wählerhochburgen), die auf nationaler Ebene bei der Person des Parteiführers zusammenlaufen
+
+philippinische Parteien sind überwiegend "Wahlmaschinen" zur Besetzung von pol Ämtern
+- ideologische & programmatische Grundsätze sind nur rudimentär ausgeprägt
+- bilden keine pol Organisationseinheiten mit einheitlichen pol Präferenzen & Fähigkeit zu geschlossenem Auftreten in pol Verhandlungs- und Konfliktsituation
+
+bei den regierenden Parteien handelte es sich bislan durchweg um *patchwork coalitions*
+- bestehend aus mehreren pol Fraktionen & Gruppen, die Parteien(-koalitionen) nicht als Instrument zur pol Mehrheitsbildung ansahen, sondern zuallererst als Instrument, um im Verteilungskampf pol Eliten um staatl. Ressourcen erfolgreich bestehen zu können
+
+F35
