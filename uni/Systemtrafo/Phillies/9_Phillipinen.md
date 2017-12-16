@@ -167,7 +167,7 @@ niedrige Institutionalisierungsgrad der Parteien & geringe programmatische Diffe
 ### 9.3.2 Repräsentationsebene
 stark personalisierte Ausrichtung der pol Auseinandersetzung & die hiervon auf die Parteien einwirkenden dysfunktionalen Anreize verhindern die Institutionalisierung funktionaler & stabiler Massenparteien auf den Philippinen
 
-niedriger Institutionalisierungsgrad schlägt sich in einer kurzen Lebensdauer von Parteiorganisationen, einem hohen Anteil unabhängiger Abgeordneter im Parlament sowie einer im regionalen und interregionalen Vergleich konkurrenzlos hohen Volatilitätsrate (Schwankungen, Wählerverschiebungen) des Parteiensystems nieder
+niedriger Institutionalisierungsgrad schlägt sich in einer kurzen Lebensdauer von Parteiorganisationen, einem hohen Anteil unabhängiger Abgeordneter im Parlament sowie einer im regionalen und interregionalen Vergleich konkurrenzlos hohen Volatilitätsrate (Schwankungen, Wählerverschiebungen) von 42.15% des Parteiensystems nieder
 
 Parteiensystem ist durch häufige Abspaltungen, Fusionen und Neugründungen charakterisiert 
 
@@ -187,4 +187,17 @@ philippinische Parteien sind überwiegend "Wahlmaschinen" zur Besetzung von pol 
 bei den regierenden Parteien handelte es sich bislan durchweg um *patchwork coalitions*
 - bestehend aus mehreren pol Fraktionen & Gruppen, die Parteien(-koalitionen) nicht als Instrument zur pol Mehrheitsbildung ansahen, sondern zuallererst als Instrument, um im Verteilungskampf pol Eliten um staatl. Ressourcen erfolgreich bestehen zu können
 
-F35
+als korporative Akteure sind Gewerkschaften überwiegend schwach
+- dadurch Defizit formal organisierter Interessenvertretung im Bereich der Arbeiterinteressen
+  - aus steuerungstheoretischer Perspektive: teilweise durch funktional Äquivalente informelle Netzwerke kompensierbar
+  - aus demokratie- und konsolidierungstheoret. Sicht: informellen Formen der Interessenvertretung mangelt es sehr an demokr. Inklusivität, Repräsentativität und Transparenz
+  - als "Schulen" der Demokratie eignen sich solche klientelistischen Netzwerke nicht
+    - in Philippinen ist das personalistische & klientelistische Element in den Arbeiterbewegungen besonders ausgeprägt
+    - -> das dualistisch strukturierte Gemeinschaftswesen tendiert zu einem organisatorischen Pluralismus:
+      - große Zahl unabhängiger Betriebsgewerkschaften
+      - miteinander konkurrierende Dachtverbände
+      - geringer Zentralisierungsgrad
+      - starke Fragmentierung der Gewerkschaften
+
+### 9.3.3 Ebene der Verhaltenskonsolidierung
+F37
