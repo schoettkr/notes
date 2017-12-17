@@ -231,3 +231,33 @@ P: Demokratiezufriedenheit liegt unter dem Durchschnittsniveau der lateinam. & s
 - P: es lassen sich seit 1980ern Tendenzen zur Entradikalisierung der *civil society* verzeichen
   - gleichzeitig profitiert Zivilgesellschaft vom Niedergang Kommunistischer Bewegungen in Südostasien, die von den Mittelschichten stets als Bedrohung wahrgenomen wurden und die Diffamierung zivilgesellschaftlicher Organisationen als "pro-kommunistisch" effektiv ermöglichten
 
+## 9.4 Gibt es eine "asiatische Form" der Demokratie/ ahne was dneres (Rest ab S45)
+### 9.4.? Failed, Failing States und Fragile States
+P: Demokratie mit defektem Rechtsstaat (failing state?-> eher warning state Platz 54 Fragile State Index)
+http://www.academia.edu/1797909/The_Failed_States_Index_and_the_Philippines_A_Simple_Yardstick_for_Progress
+
+http://www.philstar.com/opinion/2014/03/07/1298078/phl-failing-state-12-signs-show-so
+
+https://joeam.com/2017/03/22/senator-angara-shows-why-the-philippines-is-a-failing-state/
+
+
+### 9.4.? Autoritäre Regime
+nothing
+
+### 9.4.? Verfassungsgebung
+sowohl amerikanische, wie auch kontinentaleuropäische Länder versuchen Einfluss auf die normative & institutionelle Innenausstattung der neuen Demokratien zu nehmen
+
+Institutionenimporte sind erkennbar: Elemente des US-Präsidentialismus auf den Philippinen
+
+dennoch wird Einflussnahme von externen Beratern (ausländische Demokratieberater) zumeist überschätzt, da letztlich alle Ratschläge durch den Filter einer intensiven Debatte der Binnenakteure laufen
+
+### 9.4.? Rechtstaat und Gerichtsbarkeit
+nothing
+
+## 9.5 Theoretische Paradigmen und empirische Artefakte
+### 9.5.1 Der handlungstheoretische Optimismus
+Larry Diamond zählte im Jahr 1995 117 von 191 Ländern zu "elektoralen Demokratien"
+- darunter das Crony-System auf den Philippinen
+  - Crony-System/Capitalism = Nepotismus = Vetternwirtschaft
+
+ansonsten nothing really useful
