@@ -26,7 +26,7 @@ kommen wir jetzt zum sultanistischen Marcos Regime:
 - **Proteste wurden gewaltsam niedergeschlagen, die Bewegung verflachte dadurch das viele Studenten inhaftiert waren, gefoltert wurden oder in den Protesten starben**
 
 **Ab 1971 tagte eine Versammlung um die amerikanisch-geprägte Verfassung von 1935 zu ersetzen**
-- man befürchtete, dass Marcos die bislang verankerte Limitierung** auf max. 2 Wahlperioden  **der Präsidentschaft abschaffen würde**
+- **man befürchtete, dass Marcos die bislang verankerte Limitierung** auf max. 2 Wahlperioden  **der Präsidentschaft abschaffen würde**
 
 
 **Marcos' schaffte dann die Demokratie durch seine Maßnahmen im Grunde genommen ab:
@@ -34,19 +34,19 @@ kommen wir jetzt zum sultanistischen Marcos Regime:
   - Im Jahr 1972 gab es eine Serie von Bombenanschlägen, von denen man heute vermutet, dass sie von Militärs durchgeführt wurden, um Marcos einen Vorwand für das Kriegsrecht zu liefern weitere Befugnisse als normalerweise, Marcos nutzte dies um Oppositionelle & Kritiker auszuschalten
   - als Reaktion auf einen Anschlag auf den damaligen Verteidigungsminister
     - gab später zu das dies einszeniert war
-- Infolgedessen:**
-  - Verfolgung von Oppositionellen**(bis zu 30.000)**
-  - Verbot politischer Parteien**
+- Infolgedessen:
+  - **Verfolgung von Oppositionellen**(bis zu 30.000)
+  - **Verbot politischer Parteien**
   - Schließung des Kongresses
   - Verbot oppositioneller Zeitungen & Sender
   - letztendlcih **Verabschiedung einer auf seine Person zugeschnittenen Verfassung (1973)**
 
-**Jedoch degenerierte das autoritäre 'Modernisierungsregime' immer stärker zu einem personalistischen & patrimonialistischen Führerregime mit stark "sultanistischen" (Weber) Zügen
-- Entmachtung der alten Eliten
-- letztendlich  kaum staatl. Institutionen, die nicht von Marcos, dessen Familie oder den cronies des Präsidenten kontrolliert waren**
+**Jedoch degenerierte das autoritäre 'Modernisierungsregime' immer stärker zu einem personalistischen & patrimonialistischen Führerregime mit stark "sultanistischen" (Weber) Zügen**
+- **Entmachtung der alten Eliten**
+- **letztendlich  kaum staatl. Institutionen, die nicht von Marcos, dessen Familie oder den cronies des Präsidenten kontrolliert waren**
   - zB die "Rolex 12" eine 12 köpfige Personengruppe, die angeblich zu Marcos' engsten Vertrauten gehörte, denen er jeweils eine Rolex überreicht haben sollte
-- Gunst/Loyalität des Militärs sicherte man sich durch Begünstigungen und gezielte Beförderungen**
-- Regime diente in erster Linie der Bereicherung von Marcos und seinem Kreis**
+- Gunst/Loyalität des Militärs sicherte man sich durch Begünstigungen und gezielte Beförderungen
+- **Regime diente in erster Linie der Bereicherung von Marcos und seinem Kreis**
 
 Warum sultanistisch?  
 In einem sultanistisch-autoritären Regime mischen sich ein extrem personalistischer und erratischer (unvorhersehbar) Herrschaftsstil, sowie Strukturen und Mechanismen einer Familien-Clanherrschaft mit autoritären oder totalitä ren Systemelementen
