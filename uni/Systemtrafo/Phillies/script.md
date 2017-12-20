@@ -113,5 +113,49 @@ anstelle des unter Marcos formal eingeführten, aber faktisch nie umgesetzten, S
 
 # 5. Erf: Konsolidierung Allgemein
 ## 5.1/2 Len: Gewaltenkontrolle (Never hahah) / Prefer 1 Ebeene
+## 5.2 Gewaltenkontrolle
+**Im Gegensatz zu diesen Konsolidierungsproblemen zeichneten sich die Philippinen bislang durch eine nahezu strikte Einhaltung der konstitutionell vorgegebenen Kompetenzabgrenzungen & Verfahrensregeln im Bereich der horizontalen Gewaltenkontrolle aus
+- mit dem Senat hat sich ein kompetitiver Vetospieler herausgebildet                                             
+  - dieses parlamentarische Gegenwicht hat aufgrund seiner Natur aber auch Kosten:
+    - langwierige Gesetzgebungsverfahren; Blockaden
+- Oberster Gerichtshof bildet einen wichtigen Stützpfeiler der "funktionierenden" Gewaltenkontrolle
+  - bewahrte in den zwei Dekaden seit der Demokratisierung seine institutionelle Autonomie gegenüber der Regierung und dem Kongress
+  - hohes Maß an Zustimmung & institutionellem Vertrauen der Bürger
+
+[FINDE MUSS AN ANDERE STELLE]
+Die gravierendste Defekte der philippinischen Demokratie bestehen im Bereich der bürgerlichen Freiheitsrechte
+- Verfassung von 1987 garantiert zwar bürgerliche Freiheitsrechte, Prozessrechte des Einzelnen und besondere Rechte zum Schutz religiöser & ethnischer Minderheiten ihre Umsetzung ist jedoch bestenfalls unvollständig
+- für weite Teile der Bevölkerung besteht eine low intensity citizenship oder gar eine no intensity citizenship**
+  - low intensity citizenship = von O'Donnell geprägter Begriff der meint, dass für bestimmte Bereiche/Gruppen einer Demokratie keine Grundrechte/Bürgerrechte
+     - Gerichtsbarkeiten & Institutionen bestehen formal ("auf Papier") aber sind praktisch nicht vorhanden
+**- politisch motiviertes "Verschwinden" von Personen, Verhaftungen aus politischen Gründen oder willkürliche Erschießungen gehören jedoch noch immer zum Alltag der philippinischen Demokratie**
+
+## 5.3 Institutionelle Konsolidierung
+**auf der vertikalen Ebene institutioneller Autonomie ein relativ hoher Konsolidierungsgrad
+- Indikator des chronologischen Alters: [jo kp whatever das stellst du vor hahahah]
+  - z.B. Verfassung hat sei dem Inkrafttreten keine Änderung erfahren
+  - dreimalige Ablösung der regierenden Parteien durch die Opposition**
+- vertikale Ebene = chronologische Alter einer Institution/ eines Musters -> Je länger Institution unverändert besteht, desto konsolidierter
+    - generationelle Alter einer Institution -> Je häufiger eine Institution, ihr Problem der Nachfolge friedlich und in Übereinstimmung mit den Regeln der Verfassung gelöst hat, desto konsolidierter ist die Institution
+  [dikka was sind das fuer pog 'Alter' checke ned muss du presanten ahah]
+
+**auf der horizontalen Ebene institutioneller Autonomie kritisch**
+- horizontale Ebene = wenn zwischen den unterschiedlichen Institutionen Grenzen existieren und diese verhindern, dass die je eigene Funktionslogik mit denen anderer Institutionen vermischt wird (Huntington)
+**- Effiziens- und Effektivitätsmängel die sich in anhaltenden institutionellen Policy-Blockaden äußern
+niedriger Institutionalisierungsgrad der Parteien & geringe programmatische Differenzierung des Parteiensystems
+- Unterinstitutionalisierung des Parteiensystems ermöglichte es der Regierung, unabhängig von Wahlergebnissen oder Parteizugehörigkeiten der Abgeordneten mehrheitsfähige Stimmblöcke im Repräsentatenhaus  zu organisieren**
+
+Abwesenheit von nationalisitisch populitischen Diskursen  (weiss nich genau wohin)
+
+## 5.4 Repräsentationsebene
+
+
+
+
+
+
+
+
+
 ## 5.3/4 Erf: Konsol restl. Ebene
 # 6. Len/Both: Phillies Heute
