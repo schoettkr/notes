@@ -29,8 +29,8 @@ kommen wir jetzt zum sultanistischen Marcos Regime:
 - **man befürchtete, dass Marcos die bislang verankerte Limitierung** auf max. 2 Wahlperioden  **der Präsidentschaft abschaffen würde**
 
 
-**Marcos' schaffte dann die Demokratie durch seine Maßnahmen im Grunde genommen ab:
-- Verkündung des Kriegsrechts (1972)**
+**Marcos' schaffte dann die Demokratie durch seine Maßnahmen im Grunde genommen ab:**
+- **Verkündung des Kriegsrechts (1972)**
   - Im Jahr 1972 gab es eine Serie von Bombenanschlägen, von denen man heute vermutet, dass sie von Militärs durchgeführt wurden, um Marcos einen Vorwand für das Kriegsrecht zu liefern weitere Befugnisse als normalerweise, Marcos nutzte dies um Oppositionelle & Kritiker auszuschalten
   - als Reaktion auf einen Anschlag auf den damaligen Verteidigungsminister
     - gab später zu das dies einszeniert war
