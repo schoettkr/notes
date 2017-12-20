@@ -22,7 +22,7 @@ kommen wir jetzt zum sultanistischen Marcos Regime:
 - wollten unabhängigen Staat für die Nation der Moro gründen
 
 **1970 entstand in Manila die Studentenbewegeung First Quarter Storm gegen das zunehmend korrupte Marcos-Regime, die von Januar bis März dauerten**
-**- Studenten wandten sich gegen  Amtsführung, die steigende Korruption der Regierung, die Armut der Bevölkerung und das Bündnis mit den USA während des Vietnamkriegs
+- **Studenten wandten sich gegen  Amtsführung, die steigende Korruption der Regierung, die Armut der Bevölkerung und das Bündnis mit den USA während des Vietnamkriegs
 - Proteste wurden gewaltsam niedergeschlagen, die Bewegung verflachte dadurch das viele Studenten inhaftiert waren, gefoltert wurden oder in den Protesten starben**
 
 **Ab 1971 tagte eine Versammlung um die amerikanisch-geprägte Verfassung von 1935 zu ersetzen
