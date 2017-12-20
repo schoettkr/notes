@@ -54,6 +54,7 @@ In einem sultanistisch-autoritären Regime mischen sich ein extrem personalistis
 
 
 #########################################
+
 #########################################
 
 
@@ -108,6 +109,7 @@ anstelle des unter Marcos formal eingeführten, aber faktisch nie umgesetzten, S
 
 
 #########################################
+
 #########################################
 
 
@@ -148,6 +150,22 @@ niedriger Institutionalisierungsgrad der Parteien & geringe programmatische Diff
 Abwesenheit von nationalisitisch populitischen Diskursen  (weiss nich genau wohin)
 
 ## 5.4 Repräsentationsebene
+**Philippinische Parteien sind ideologisch & programmatisch nur rudimentär ausgeprägt, sie bilden keine pol. Organisationseinheiten mit einheitlichen pol. Präferenzen & der Fähigkeit zu geschlossenem Auftreten in pol. Verhandlungs- und Konfliktsituation
+- bei den regierenden Parteien handelte es sich bislang durchweg um patchwork coalitions**
+
+**stark personalisierte Ausrichtung der pol Auseinandersetzung & die hiervon auf die Parteien einwirkenden dysfunktionalen Anreize verhindern die Institutionalisierung funktionaler & stabiler Massenparteien auf den Philippinen**
+- **sieht man auch an häufigen Parteiwechseln der Politiker und hohen Anteil unabhängier Abgeordneter im Parlament einer hohen Volatilitätsrate
+-  im regionalen und interregionalen Vergleich konkurrenzlos hohen Volatilitätsrate (Schwankungen, Wählerverschiebungen) von 42.15% des Parteiensystems**
+- Die philippinische Politik ist sehr personenbezogen, so dass Parteien keine so große Rolle spielen
+- Popularität und regionale Zugehörigkeitsgefühle zählen oft viel mehr als Sachthemen
+- In den letzten Jahren sind viele Schauspieler, ehemalige Basketballstars und ähnliche Medienpersönlichkeiten in die Politik gegangen
+- Orientierung pol Loyalität primär an Personen, ausgesprochener Faktionalismus, sowie geringe Organisationstiefe der Parteien sind für den volatilen Charakter & die fluiden Strukturen philippinischer Parteien verantwortlich
+
+**als korporative Akteure sind Gewerkschaften überwiegend schwach
+- dadurch Defizit formal organisierter Interessenvertretung im Bereich der Arbeiterinteressen
+- aus demokratie- und konsolidierungstheoret. Sicht: informellen Formen der Interessenvertretung mangelt es sehr an demokr. Inklusivität, Repräsentativität und Transparenz**
+
+
 
 
 
