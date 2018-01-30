@@ -32,4 +32,5 @@ Nichtministerielle Bundesverwaltungen:
 - Aufgaben u.a. Wettbewerbsrecht (Bundeskartellamt), Telekommunikation, Energiereguliertung (Bundesnetzagentur/ BMWi)
 
 ![Bundesverwaltungen]("./bundesverw.png" "Bundesverwaltung")
+
 (von links nach rechts abnehmend staatlich organisiert o staatsgeleitetes Handeln)
