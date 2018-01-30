@@ -30,5 +30,6 @@ Nichtministerielle Bundesverwaltungen:
 - werden ebenfall monokratisch geleitet (Präsident, Direktor)
 - Geschäftsordnung regelt Organisation (selten durch das Gesetz geregelt)
 - Aufgaben u.a. Wettbewerbsrecht (Bundeskartellamt), Telekommunikation, Energiereguliertung (Bundesnetzagentur/ BMWi)
-![Bundesverwaltungen]("./bundesverw.png", Bundesverwaltung)
+
+![Bundesverwaltungen]("./bundesverw.png", "Bundesverwaltung")
 
