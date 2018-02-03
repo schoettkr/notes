@@ -1,4 +1,4 @@
-# 2. Sitzung: Strukturen - Verwaltungsaufbau und Aufgabenverteilung im föderativen System
+# 3. Sitzung: Strukturen - Verwaltungsaufbau und Aufgabenverteilung im föderativen System
 ## Mögliche Klausurfragen
 ### Wie gestaltet sich die Aufgabenverteilung im Bundesstaat (Vergleich Bundes- und Länderebene)?
 Gesetzgebung
