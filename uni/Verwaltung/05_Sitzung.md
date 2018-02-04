@@ -97,3 +97,26 @@ Ablauforganisation: Probleme und Lösungswege
   - drohender Gerichtsklagen
   - demotivierender Kontrollen
   - interner Einflussverluste
+
+## Beschreiben Sie die Arbeitsweise von *Bundesministerien*
+Aufteilung: Abteilungen, Unterabteilungen, Referate
+
+Aktivierung durch top-down Anforderungen und bottom-up Initiativen ("unausgesprochener Dialog")
+
+hierarchische Steuerung findet eher punktuell statt
+- Tendenz zur Enthierarchisierung
+
+Koordination meist als negative Koordination
+- Informationsweitergabe so gering wie möglich halten
+
+Ressortzuschnitt erfolgt oft nach politischen, weniger nach fachlichen Kriterien
+
+hohes Maß an Arbeitsteilung & Spezialisierung
+- umfassende Vorhaben häufig in Projektgruppen
+- zu weitgehende Aufspaltung ist jedoch zu vermeiden
+
+Wachstum/Bedeutungszunahme von Leitungsstäben
+- tlw so groß wie ganze eigene Abteilung selbst
+
+deutliche Zunahme funktionaler Politisierung und des politischen Rollenverständnis
+
