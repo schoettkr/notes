@@ -1,5 +1,6 @@
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{istgame}
 
 * Spieltheorie 
 In der Spieltheorie gibt es im Unterschied zur Entscheidungstheorie eine *Bimatrix* statt der Auszahlungsmatrix. In dieser sind die Einträge bereits /Nutzengrößen/. Die Unsicherheit existiert nun nicht mehr im Hinblick auf Umweltzustände, sondern im Hinblick auf die Strategie eines weiteren Spielers. Da man nun die Auszahlungen für beide Spieler angeben muss, benötigt man zwei Matrizen /oder/ eine mit doppelten Einträgen, also eine "Bimatrix".
@@ -130,8 +131,171 @@ wenn $\sigma_2 > \frac{1}{2}$ ist, dann ist $f'_{sigma_1}>0$ \rightarrow beste A
 wenn $\sigma_2 < \frac{1}{2}$ ist, dann ist $f'_{sigma_1}<0$ \rightarrow beste Antwort is \sigma_1 = 0% also ist BA die Wahl von Strategie s^2_1\\
 \newpage
 Beste Antwort von Spieler 1 auf Spieler \sigma_1 in Abhängigkeit von \sigma_2 sieht wie folgt aus:
+#+CAPTION: Beste-Antworten beider Spieler 1
 #+attr_html: :width 100px
 #+attr_latex: :width 100px
 [[./Kop_Zahl_BA.png]]
+** Das Nash-Gleichgewicht
+*** NashGG in reinen Strategien
+Mit dem Nash-GG kann man die Menge der Antworten noch weiter einschränken als durch das Aussortieren dominierter Strategien (denn die Strategie eines Nash-GG) wird nie (strikt) dominiert.\\
+S ist ja die Menge der Strategiekombinationen, darin enthalten zB {Hase, Hase} oder {RS, SS}. Als $s^* = (s^*_1, s^*_2, s^*_3, s^*_4) \epsilon S$ wird dann ein Nash-GG(in reinen Strategien) gekennzeichnet, wenn für alle i \leq n gilt \\
+\begin{equation*}
+\begin{aligned}
+s^*_i \epsilon B_i(s^*_1)
+\end{aligned}
+\end{equation*}
+Diese Formel besagt das s^*_i, also die Strategie von Spieler i, in den optimalen Beste-Antworten auf alle Strategien der Gegenspieler also s^*_{-i} beinhaltet sein muss. Wenn dies für alle i also für alle Spieler der Fall ist, handelt es sich um ein NashGG. Zum Beispiel Nash-GG, in dem beide Jäger auf Hirsch gehen, denn:
 
-S.93/F84
+$B_{\textcolor{magenta}{1}}(\textcolor{blue}{Hirsch}) = \textcolor{magenta}{Hirsch}$
+und
+$B_{\textcolor{blue}{2}}(\textcolor{magenta}{Hirsch}) = \textcolor{blue}{Hirsch}$
+
+Wenn beide Jäger auf Hase gehen, ist das auch ein Nash-GG, denn:
+$B_{\textcolor{magenta}{1}}(\textcolor{blue}{Hase}) = \textcolor{magenta}{Hase}$
+und
+$B_{\textcolor{blue}{2}}(\textcolor{magenta}{Hase}) = \textcolor{blue}{Hase}$
+
+Die Strategiekombinationen (Hirsch,Hase) und (Hase, Hirsch) sind jedoch keine NashGGs.
+
+*** NashGG in gemischten Strategien
+Gibt es bei dem Spiel Kopf oder Zahl etwa kein Gleichgewicht?! Wie bereits gelernt können auch gemischte Strategien beste Antworten sein und werden somit auch als NashGG zugelassen.
+Siehte weiter oben:
+#+attr_latex: :align c|c|c
+| \textcolor{magenta}{Spieler 1}/\textcolor{blue}{Spieler 2} | \textcolor{blue}{Kopf}(\sigma_2)              | \textcolor{blue}{Zahl}(1-\sigma_2)            |
+|------------------------------------------------------------+-----------------------------------------------+-----------------------------------------------|
+| \textcolor{magenta}{Kopf}(\sigma_1)                        | (\textcolor{magenta}{1},\textcolor{blue}{-1}) | (\textcolor{magenta}{-1},\textcolor{blue}{1}) |
+| \textcolor{magenta}{Zahl}(1-\sigma_1)                      | (\textcolor{magenta}{-1},\textcolor{blue}{1}) | (\textcolor{magenta}{1},\textcolor{blue}{-1}) |
+
+\[ B_1(\sigma_2) =\begin{cases} 
+      0 & \sigma_2 < \frac{1}{2} \\
+      [0;1] & \sigma_2 = \frac{1}{2} \\
+      1 & \sigma_2 > \frac{1}{2} 
+   \end{cases}
+\]
+
+\[ B_2(\sigma_1) =\begin{cases} 
+      1 & \sigma_1 < \frac{1}{2} \\
+      [0;1] & \sigma_1 = \frac{1}{2} \\
+      0 & \sigma_1 > \frac{1}{2} 
+   \end{cases}
+\]
+Was bedeutet das obige? Die Spieler 1,..,i wählen ihre erste Strategie mit der Wahrscheinlichkeit \sigma_i und dementsprechend die zweite mit der Wahrscheinlichkeit $1 - \sigma_i$ . Da beide Spieler in Abhängigkeit von der Strategiewahl des jeweils anderen Spielers eine unterschiedlichen Nutzen erlangen, hängt ihre Beste-Antwort von der Wahrscheinlichkeit mit der der Gegenspieler seine Strategien wählt ab. Was bei B_i als erstes hinter der geschweiften Klammer steht ist also der optimale Wert für "Wahrscheinlichkeit" \sigma_i mit der man selber agieren sollte um den maximalen Nutzen zu erzielen. Das hängt vom jeweiligen Wert der Wahrscheinlichkeit des Gegenspielers ab.\\
+Im obigen Beispiel ist die beste Antwort des ersten Spielers $BA_1(\sigma_2)$ auf ein $\sigma_2 < \frac{1}{2}$ (Wahrscheinlichkeit das Spieler 2 Kopf spielt) der Wert \textcolor{magenta}{0} für $\textcolor{magenta}{\sigma_1}$, was wie man in der Tabelle sehen kann, bedeuten würde, dass er am besten Zahl spielt, denn $\textcolor{magenta}{Zahl(1-\sigma_1)}$, also $1-\textcolor{magenta}{0}$ = 100% Wahrscheinlichkeit.
+#+CAPTION: wechselseitig Beste-Antworten beider Spieler
+#+attr_html: :width 100px
+#+attr_latex: :width 100px
+[[./Kop_Zahl_BA2.png]]
+\newline
+NashGG's liegen dort, wo sich beide Funktionen schneiden in diesem Fall also bei $\sigma_1=50\%$ , $\sigma_2=50\%$ . Macht Sinn, denn bei anderer Wahrscheinlichkeit würde ein Spieler ja auch zu berechenbar werden. 
+
+\paragraph{Polizeispiel}
+#+attr_latex: :align c|c|c
+| \textcolor{magenta}{Behörde}/\textcolor{blue}{Straftäter} | \textcolor{blue}{Betrug}(\sigma_2)               | \textcolor{blue}{kein B.}(1-\sigma_2)          |
+|-----------------------------------------------------------+--------------------------------------------------+------------------------------------------------|
+| \textcolor{magenta}{Kontrolle}(\sigma_1)                  | (\textcolor{magenta}{4-C},\textcolor{blue}{1-F}) | (\textcolor{magenta}{4-C},\textcolor{blue}{0}) |
+| \textcolor{magenta}{keine K.}(1-\sigma_1)                 | (\textcolor{magenta}{0},\textcolor{blue}{1})     | (\textcolor{magenta}{4},\textcolor{blue}{0})   |
+In (Nash-)Gleichgewichten in gemischten Strategien sind alle Spieler indifferent zwischen den Handlungsalternativen.\\
+Nutzen der Behörde bei Kontrolle: $4-C$ \\ 
+Nutzen der Behörde ohne Kontrolle: $\sigma_2 * 0 + (1- \sigma_2)*4$ \\
+Behörde also indifferent, wenn der Nutzen beider Strategien gleich ist:\\
+$4-C=\sigma_2 * 0 + (1- \sigma_2)*4$ \rightarrow Indifferent bei $\sigma_2 = \frac{C}{4}$ .\\
+\newline
+Nutzen des Straftäters bei Betrug: $\sigma_1 * (1-F) + (1-\sigma_1) * 1$ \\
+Nutzen des Straftäters ohne Betrug: $0$ \\
+Straftäter also indifferent, wenn der Nutzen beider Strategien gleich ist:\\
+$\sigma_1 * (1-F) + (1-\sigma_1) * 1 = 0$ \rightarrow Indifferent bei $\sigma_1 = \frac{1}{4}$
+
+\paragraph{Polizeispiel}
+*Satz von Nash:* jedes endliche Spiel hat mind. ein GLeichgewicht, wenn man gemischte Strategien zulässt\\
+*Satz von Wilson:* fast alle endlichen Spiele haben eine endliche, ungerade Anzahl von Gleichgewichten.
+** Dynamische Spiele bei perfekter Information
+Annahme, dass perfekte Informationen (alle bisherigen Spielzüge bekannt) bekannt sind und keine Züge der Natur vorliegen (aber auch leicht erweiterbar auf Spiele mit Zügen der Natur)
+\paragraph{Ultimatum-Spiel:}
+- Aufteilung von drei Münzen zwischen zwei Spielern
+- Spieler 1 macht einen Vorschlag, Spieler 2 nimmt an oder lehnt ab
+- Bei Ablehnung bekommt keiner der Spieler etwas
+- Keine Nachverhandlungen
+#+attr_html: :width 100px
+#+attr_latex: :width 100px
+[[./urbaum.png]]
+
+# \begin{istgame}[scale=1.5,font=\footnotesize]
+# \xtdistance{10mm}{25mm}
+# \istroot(0){S1}
+#   \istb{0}[al]
+#   \istb{1}[al]
+#   \istb{2}[ar]
+#   \istb{3}[ar]
+#   \endist
+# \xtdistance{7mm}{10mm}
+# \istroot(1)(0-1)<180>{S2}
+#   \istb{an}[l]
+#   \istb{ab}[r]
+#   \endist
+# \istroot(2)(0-2)<0>{S2}
+#   \istb{an}[l]
+#   \istb{ab}[r]
+#   \endist
+# \istroot(3)(0-3)<0>{S2}
+#   \istb{an}[l]
+#   \istb{ab}[r]
+#   \endist
+# \istroot(4)(0-4)<0>{S2}
+#   \istb{an}[l]
+#   \istb{ab}[r]
+#   \endist
+# \xtdistance{15mm}{10mm}
+# \istroot(a)(1-1)<180>{(3,0)}
+#   \endist
+# \istroot(b)(1-2)<0>{(0,0)}
+#   \endist
+# \istroot(c)(2-1)<180>{(2,1)}
+#   \endist
+# \istroot(d)(2-2)<0>{(0,0)}
+# \endist
+# \istroot(d)(3-1)<0>{(1,2)}
+# \endist
+# \istroot(d)(3-2)<0>{(0,0)}
+# \endist
+# \istroot(d)(4-1)<0>{(0,3)}
+# \endist
+# \istroot(d)(4-2)<0>{(0,0)}
+# \endist
+# \end{istgame}
+
+*eine* Strategie = eine Vorschrift, die an *jedem Knoten* eine Entscheidung festlegt;*vollständiger* Plan eines Spielers, was zu tun ist\\
+Strategien Spieler 1: [0],[1],[2],[3]\\
+Strategien Spieler 2: alle Reaktionen auf alle möglichen Angebote, *eine* beispielhafte Strategie = [0] annehmen, [1] annehmen, [2] ablehnen, [3] ablehnen
+
+Menge der Strategien von S2 = 2^4 (=16) also die eigenen Reaktionsmöglichkeiten (annehmen, ablehnen) hoch die Strategienanzahl von Spieler 1 (4), zB:
+| (an, an, an, an) |
+| (an, an, an, ab) |
+| (an, an, ab, an) |
+| (an, ab, an, an) |
+| ...              |
+Die strategische Form bildet all diese Strategien mit ihren Auszahlungen in einer Matrix ab
+| S1 \ S2 | an,an,an,an | an,an,an,ab | an,an,ab,an | an,ab,an,an | ... | ab,ab,ab,ab |
+|---------+-------------+-------------+-------------+-------------+-----+-------------|
+|       0 | (3,0)       | (3,0)       | (3,0)       | (3,0)       | ... | (0,0)       |
+|       1 | (2,1)       | (2,1)       | (2,1)       | (2,0)       | ... | (0,0)       |
+|       2 | (1,2)       | (1,2)       | (1,0)       | (1,2)       | ... | (0,0)       |
+|       3 | (0,3)       | (0,0)       | (0,3)       | (0,3)       | ... | (0,0)       |
+Hier ist ebenfalls die Rückwärtsinduktion beim Baum hilfreich um das Spiel zu lösen. Wenn man alle letzten Teilbäume betrachtet fällt schonmal auf das [ab,ab,ab,ab] also "ab" auf jedes Angebot nicht optimal ist \rightarrow kann somit gestrichen werden. Wiederholt man diesen Prozess des Vergleichens in der oberen Tabelle, verbleiben letztendlich nur noch [an,an,an,an] und [ab,an,an,an] als gleichwertig optimale Strategien fuer Spieler 2.\\
+Spieler 1 braucht also nur noch diese beiden Strategien von Spieler 2 in Betracht ziehen und genau diese beiden Gleichgewichte sind auch teilspielperfekt. Ein teilspielperfektes Gleichgewicht ist ein NashGG das auch auf jedem Teilspiel ein NashGG ist.
+#+BEGIN_center
+#+ATTR_LaTeX: :height 0.4\textwidth :center
+[[./4an.png]]
+#+ATTR_LaTeX: :height 0.4\textwidth :center
+[[./3an.png]]
+#+END_center
+
+** Dynamische Spiele bei imperfekter Information
+Züge der Natur sind ein möglicher Grund für imperfekte Information(möglicherweise asymmetrisch verteilte Information)
+\rightarrow siehe F.120 / S.129
+\paragraph{Bayes'sches Gleichgewicht}
+Anfangs entsprechen die Informationsstände der Spieler den von der Natur vergegeben Wahrscheinlichkeiten.\\
+Beispiel: Die Wahrsch. eines 1-Euro-“Typen” ist 50%.
+Aber bei längeren/dynamischen Spielen können Spieler durch ihre Entscheidungen ihren Typen (teilweise) offenbaren (zB Bieter bei einer offenen Auktion der seine eigene Zahlungsbereitschaft=Typ über die Gebote hinweg tlw. offenbart).\\
+In einem *perfekten Bayes'schen Gleichgewicht*:
+1) sind die Strategien der Spieler jederzeit optimal, gegeben die aktuellen Informationsstände
+2) werden die Informationsstände jederzeit rational aktualisiert
