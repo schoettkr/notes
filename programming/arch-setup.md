@@ -67,11 +67,20 @@ git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
 makepkg -si
 cd ..`
+3. `sudo pacman -S xterm termite nvim`
 
 ## 10. DE and Login Manager [Depends on what you want]
 ### 10.1 Openbox
 1. `sudo pacman -S openbox` -> put `exec openbox-session` into .xinitrc
 2. `cp -R /etc/xdg/openbox ~/.config/openbox/`
+### 10.2 Herbstluftwm
+1. `sudo pacman -S herbstluftwm`
+2. `mkdir -p ~/.config/herbstluftwm` -> `cp /etc/xdg/herbstluftwm/autostart ~/.config/herbstluftwm/
+3. "exec herbstluftwm --locked" into .xinitrc
+4. `sudo pacman -S zsh` -> `chsh -s /bin/zsh` -> COMPLETELY logout and in!
+5. `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+6. TODO change to $HOME in .zshrc etc, vim setup, fonts, installations, thats it?
+
 
 LEAFPAD
 
