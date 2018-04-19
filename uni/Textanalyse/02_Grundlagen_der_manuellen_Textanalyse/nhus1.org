@@ -1,28 +1,211 @@
-* 1. Sitzung (Brosius et al)
+* 2. Sitzung - Grundlagen der manuellen Textanalyse
 :PROPERTIES:
 :NOTER_DOCUMENT: Brosius_et_al_2016_ch8_ch9.pdf
 :END:
-
-** Was ist Inhaltsanalyse
+# Lektüre
+** Ursprung und Verwendungsbereiche der Inhaltsanalyse
 :PROPERTIES:
 :NOTER_PAGE: 1
 :END:
-Inhalts analyse wird fuer dies und jenes verwendet
-
-** der gute ruckschlusss
+- 1. und 2. WK
+- hauptsächlich eingesetzt in der pol. Kommunikationsforschung (geprägt von Lasswell, Lazarsfeld, Berelson)
+  - wichtigstes Einsatzgebiet ist die Propagandaforschnung
+** Definitionen von Inhaltsanalyse
 :PROPERTIES:
-:NOTER_PAGE: (9 . 0.4690949227373068)
+:NOTER_PAGE: 2
 :END:
-ja er ist hier
+Untersuchungsgegenstand der Inhaltsanalyse sind i.d.R. nicht Personen, sondern Medienprodukte
 
-** Gewalt
-:PROPERTIES:
-:NOTER_PAGE: 12
-:END:
-Kultivierungshyo
+*Berelson:* /„Content analysis is a research technique for the objective, systematic, and quantitative description of the manifest content of communication.“/
+- Forderung nach einem "common meeting-ground" problematisch, da Textinhalte nur schwer danach zu unterteilen sind, welche Inhalte latent oder manifest sind
 
-** Faceism
+*Früh:* /„Die Inhaltsanalyse ist eine empirische Methode zur systematischen, intersubjektiv nachvollziehbaren Beschreibung inhaltlicher und formaler Merkmale von Mit teilungen, meist mit dem Ziel einer darauf gestützten interpretativen Inferenz auf mitteilungsexterne Sachverhalte.“/
+
+*Merten:* /„Die Inhaltsanalyse ist eine Methode zur Erhebung sozialer Wirklichkeit, bei der von Merkmalen eines manifesten Textes auf Merkmale eines nicht-manifesten Kontextes geschlossen wird.“/
+- nicht-manifester (somit latenter) Kontext = soziale Wirklichkeit
+- manifest = clear or obvious to the eye or mind / eindeutig als etwas Bestimmtes zu erkennen, offenkundig, sichtbar
+- sobald man über den analysierten Text hinaus geht, führen die dabei notwendigen Inferenzen (Schlussfolgerungen) zu einer Interpretation, die nicht-manifest(latent) ist, weil sie sich nicht mehr direkt aus dem Text erschließt
+  
+Alle drei Definitionen bestimmen Inhaltsanalyse als eine empirische Methode mit der sich etwas beschreiben lässt ("Inhalte von Texten", "Merkmale von Mitteilungen", "soziale Wirklickeit")
+*** Schneideweg der drei Definitionen
 :PROPERTIES:
-:NOTER_PAGE: (13 . 0.5253863134657837)
+:NOTER_PAGE: (3 . 0.33626373626373623)
 :END:
-warum facecism dies das ist mir unklar
+die drei Definitionen trennen sich bei der Verwendung des Begriffes (nicht-) /manifest/
+  - Früh lehnt Verwendung ab
+  - Mertens sagt, dass Inhaltsanalyse dazu dienen muss von manifesten Texten auf nicht-manifeste Kontexte zu schließen
+  - Berelson meint, dass nur die manifesten Inhalte von Texte in Kategorien messbar sind
+    - problematisch da Inhalte nur sehr schwer danach zu unterteilen sind, welche Inhalte latent oder manifest sind
+*** Quantitativ
+:PROPERTIES:
+:NOTER_PAGE: 5
+:END:
+Die quantitative Inhaltsanalyse versucht nicht einen singulären Text zu interpretieren, sondern große Textmengen, mit dem dem Anliegen formale & inhaltliche Merkmale zu erfassen
+  - dabei wird alles was sich zwischen den Zeilen abspielt außer Acht gelassen
+  - nicht die ganze Komplexität eines Textes/einer Person wird erfasst, sondern nur wenige ausgewählte Merkmale derselben werden reduktiv analysiert
+  - ein Zahlenwert wird erst interessant, sibald man einen Vergleichmaßstab hat
+*** Intersubjektivität
+:PROPERTIES:
+:NOTER_PAGE: 6
+:END:
+Ergebnisse müssen unabhängig vom jeweiligen Codierer nachvollziehbar sein (intersubjektive Nachvollziehbarkeit)
+
+Inhaltsanalysen sind erst dann wissenschaftl korrekt, wenn das Ergebnis unabhängig vom Forscher ist und jederzeit nachvollzogen werden kann (intersubjektiv & nachvollziehbar)
+- bswp müssen Codierer (Mitarbeiter) die die ausgewählten Texte lesen im Endeffekt zur selben Meinung gelangen und somit so gut wie austauschbar seien
+- dadurch erschließt sich die Bedeutung von "manifest" neu, da Begriffe erst durch die Bestimmung ihres Bedeutungskerns *manifest* gemacht werden (und nicht wie bei Berelson *a priori* einen manifesten oder latenten Charakter haben)
+** Inhaltsanalyse als Methode zur Erfassung sozialer Realität
+:PROPERTIES:
+:NOTER_PAGE: 7
+:END:
+Analyse von Botschafen kann verwendet werden, um auf den Kontext der Berichterstattung, die Motive und Einstellungen der Kommunikatoren oder auf die mögliche Wirkung bei Rezipienten der Botschafen zu schließen
+*** Rückschlüsse auf den Kontext
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.41658812441093307)
+:END:
+Befragungen befassen sich i.d.R mit Einstellungen o Meinungen von Personen (zB Zustimmung o Ablehnung der Atomenergie) und die Ergebnisse sollen im weitesten Sinn die Meinung o das Verhalten der Bürger widerspiegeln.
+
+Bei der Inhaltsanalyse erhälht man ähnliche Aussagen, man beschreibt zB die *Tendenz der Berichterstattung* hinsichtlich des Pro und Kontra geprägten Berichtens
+- dabei bleibt es meist nicht, da der Schluss auf den Kontext das eigentlich Spannende ist
+  - ohne einen gesellschaftspolitischen Bezug die gewonnen Daten unverständlich
+- historischer/aktueller Kontext
+- kultureller Kontext
+- sozioökonomischer Kontext
+
+Rezeption von Texten kann also nicht objektiv sein, sondern ist nur intersubjektiv, gebunden an einen bestimmten (raum-zeitlichen) Kontext
+- unter Rückbezug auf Mertens Definition: method. Instrumentarium der Inhaltsanalyse muss gewährleisten, dass [Messung auch kontext erfasst]
+*** Rückschlüsse auf den Kommunikator
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.769085768143261)
+:END:
+Rückschlüsse auf den Kommunikator wollen Aussagen über dessen Einstellungen und Motive machen
+- befassen sich aber auch mit dessen sozialer & künstlerischer Herkunft, seinem Stil oder der Verständlichkeit von Texten
+
+Insgesamt muss man aber festhalten, dass der Rückschluss auf den Kommunikator nicht allein auf Basis seiner Texte erfolgen kann, sondern nur mit weitergehenden Recherchen abgesichert ist
+- genau genommen bewegt man sich gerade bei Rückschlüssen auf Einstellungen und Motive von Kommunikatoren auf einem spekulativen Feld.
+*** Rückschlüsse auf den Rezipienten
+:PROPERTIES:
+:NOTER_PAGE: 10
+:END:
+Der Schluss von der Inhaltsanalyse auf die Wirkung beim Rezipienten, beruht auf einer Wirkungsvorstellung, wie dies das /Stimulus-Response-Modell/ vertritt
+- dies sagt aus, dass ein bestimmter Stimulus bei allen Menschen immer zur gleichen Reaktion führt
+  - nicht zutreffend, da viele Randbedingungen -> daher zusätzliche Meinungsbefragung, also Einsatz weiterer Methoden (ähnlich wie bei Kommunikator)
+** Anwendungsgebiete und typische Fragestellungen
+:PROPERTIES:
+:NOTER_PAGE: 11
+:END:
+Inhaltsanalysen werden u.a. eingesetzt im Feld der politischen Kommunikation, Gewaltforschung und in der Minderheitenforschung
+** Die Vorteile der Inhaltsanalyse ggü anderen Methoden
+:PROPERTIES:
+:NOTER_PAGE: 14
+:END:
+- Möglichkeit Aussagen über Medieninhalte & Kommunikationsprozesse der /Vergangenheit/ zu machen
+  - zu beachten, dass Medien von damals nicht zwangsläufig mit Mehrheitsmeinung innerhalb der Bevölkerung übereinstimmen muss
+- Forscher nicht auf Kooperation von Befragten/Versuchspersonen angewiesen
+  - außerdem zeitunabhängige Analyse
+  - Inhaltsanalysen sind ein /nicht-reaktives/ Verfahren
+  - beliebig reproduzierbar & modifizierbar, allerdings Grenzen in der Realibilität/Zuverlässigkeit des Messinstruments (Codebuch müsste vollständig reliabel sein)
+    - Codebuch misst nach 50 Jahren wohlmöglich nicht mehr dasselbe, weil sich Kontext in dem die Codierer leben verändert hat
+      - somit kann die Inhaltsanalyse ein reaktives Verfahren werden, weil die Codierer (und nicht der Untersuchungsgegenstand selbst) auf das Messinstrument reagieren
+** Kategorien als Erhebungsinstrument der Inhaltsanalyse 
+:PROPERTIES:
+:NOTER_PAGE: 17
+:END:
+Kategoriensystem (bzw Codebuch) ist essentiell für die Textanalyse
+*** Inhaltliche Kategorien
+:PROPERTIES:
+:NOTER_PAGE: (17 . 0.7064544650751547)
+:END:
+Kategorien sind zunächst exakte Definitionen dessen, was erhoben/gemessen werden soll
+- werden anhand von Indikatoren, mit denen man seine Fragestellung entfaltet hat, gebildet
+- werden je nach Differenziertheit in Unterkategorien aufgeteilt
+- mehr oder weniger mit Interpretationsleistung verbunden
+*** Formale Kategorien
+:PROPERTIES:
+:NOTER_PAGE: 19
+:END:
+Formale Kategorien beschreiben die formalen Merkmale der jeweiligen Untersuchungseinheit. Anhand dieser Kategorien sind alle Anzeigen eindeutig zu identifizieren und zu codieren.
+- stehen nicht im eigentlichen Zentrum der Unteruschung, liefern jedoch wichtige Zusatzinformationen
+** Codebogen
+:PROPERTIES:
+:NOTER_PAGE: (21 . 0.1954022988505747)
+:END:
+- im Codebogen werden /empirische Fakten in ein numerisches Relativ überführt/
+- dient als Protokoll der Messungsergebnisse
+- in Spalten enthalten die Plätze für Vergabe der entsprechenden Codes, sodass eine Reihe am Ende einem Fall entspricht
+** Codebuch
+:PROPERTIES:
+:NOTER_PAGE: (21 . 0.5561450044208665)
+:END:
+Das Codebuch enthält:
+- allgemeine Hinweise und Hintergrundinformationen
+- Haupt- und Unterkategorien
+- operationale Definitionen
+- Codieranweisungen 
+- Codebogen
+
+- liefert genaue Handlungsanleitung und Instruktionen für Codierer, wie mit den zu analysierenden Medieninhalten umzugehen ist
+- beschreibt jede Kategorie im Detail mit dem Ziel einer größtmöglichen Reliabilität & Validität der Kategorien
+- alle Codierer sollten im Idealfall mithilfe des Codebuchs einen Text gleich verstehen (also die selben Codierungen vornehmen)
+- Codieranweisungen können neben operationalen Definitionen auch allgemeine Hinweise enthalten
+** Formale Anforderungen an Kategorien
+*** Vollständigkeit von Kategorien
+:PROPERTIES:
+:NOTER_PAGE: 23
+:END:
+Vollständigkeit ist eine zentrale Forderung an ein Kategorienschema, denn nur unter dieser Voraussetzung kann die zentrale Forschungsfrage auch erschöpfend beantwortet werden
+- wenn bestimmte Aspekte nicht in Kategorien mit aufgenommen werden, ist eine Untersuchung unvollständig und im schlimmsten Fall sogar unbrauchbar
+*** Trennschärfe der Kategorien
+:PROPERTIES:
+:NOTER_PAGE: 24
+:END:
+Kategorien sind trennscharf, wenn sich die einzelnen Ausprägungen wechselseitig ausschließen (zB männlich/weiblich) und wenn alle Ausprägungen sich auf das gleiche Merkmal beziehen (zB Geschlecht)
+** Feststellung der Validität & Realibilität des Kategorienschemas
+:PROPERTIES:
+:NOTER_PAGE: 25
+:END:
+hohe Validität kann zu Lasten einer hohen Reliabilität gehen
+- je detaillierteer bspw die Verschlüsselung, desto größer ist die Fehlerquote bei der Codierung
+
+**wenn eine genaue, gleichbleibende und eindeutige Verschlüsselung über Codierer hinweg gewährleistet wird, gilt das Kategorienschema als reliabel**
+
+Ergebnisse ausgedrückt in Koeffizienten, geben Auskunft über Zuverlässigkeit des Messinstruments:
+- /Intracoderreliabilität/ = misst die Übereinstimmung der Codierung durch den selben Codierer
+- /Intercoderreliabilität/ = misst die Übereinstimmung der Codierung durch andere Codierer
+
+Einfachste Art der Messung durch Feststellung eines Quotienten: Anzahl der übereinstimmenden Codierungen von zwei Codieren geteilt durch Anzahl aller Codierungen
+- zB 50 Übereinstimmungen bei 100 Codierungen = 50:100 = 0.5 = 50% Reliabilitätskoeffizient (0 < RK < 1)
+- bei Interpretation des RK ist zu beachten um welche Kategorie es sich handelt (zB bei Datum ist RK=0.8 schlecht, bei inhaltlicher Kategorie wäre dies annehmbar)
+** Grundgesamtheit und Stichprobenziehung
+:PROPERTIES:
+:NOTER_PAGE: (26 . 0.6914235190097259)
+:END:
+Die /optimale Stichprobe/ richtet sich nach Forschungsvorhaben
+- Stichprobe soll ein verkleinertes Abbild der Grundgesamtheit sein
+
+Die /Grundgesamtheit/ einer Inhaltsanalyse bestimmt sich, aus der Forschungsfrage
+abgeleitet, nach zwei Kriterien: dem zu untersuchenden Zeitraum und dem zu un-
+tersuchenden Medium.
+- die Auswahl gilt es logisch & nachvollziehbar zu begründen
+** Analyseeinheiten
+:PROPERTIES:
+:NOTER_PAGE: (29 . 0.6162687886825817)
+:END:
+Die Merkmalsträger in der Inhaltsanalyse nennt man Analyeeinheiten (bei Printmedien zB der Artikel)
+** Ablauf einer Inhaltsanalyse
+:PROPERTIES:
+:NOTER_PAGE: (31 . 0.5711759504862953)
+:END:
+1. Phänomen aus Wirklichkeit in wissenschaftl. Fragestellung überführen (Entdeckungszusammenhang)
+2. Definition der Begriffe, Operationalisierung des theoret. Konstruktes, Konzeption des Codebuches, Codierung, Auswertung (Begründungszusammenhang) 
+3. Nutzung des praktischen & theoretischen Gehalts der Studie (Verwertungszusammenhang)
+
+Zentrale Aufgabenstellung bei der Inhaltsanalyse ist die theorie- und empiriegeleitete Kategoriebildung (also Entwicklung des Codebuchs).
+Der Prozess der Kategorienbildung läuft sowohl deduktiv (theoriegeleitet aus der Literatur) als auch induktiv (empiriegeleitet aus eigener Anschauung) ab. Nur dadurch ist gewährleistet, dass man einen Gegenstandsbereich vollständig erfassen kann.
+
+# Stunde
+- ideologische Orientierung von Zeitungen (Barbara Fetsch, Silke Adam)
+- 2-3 Studien nehmen und replizieren mit neuen Daten, anderen Zeitpunkten etc um theoretische Einbettung zu erleichtern
+- nichts was man ließt ist "objektive Meinung"
+- Brosious ist Kommunikationswissenschaftler
+- Residualkategorie greift nicht abgedeckte 
+- Referat Diktionaere (14 Juni)
