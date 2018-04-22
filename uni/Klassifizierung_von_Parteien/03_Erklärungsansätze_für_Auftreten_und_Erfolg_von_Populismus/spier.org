@@ -52,3 +52,73 @@ Einschränkung: Nicht immer folgt auf Modernisierungsprozesse ein Erfolg von Pop
 :NOTER_PAGE: 7
 :END:
 *** Populisten Bewegung in den USA
+:PROPERTIES:
+:NOTER_PAGE: 8
+:END:
+- durch Industrialisierung (Ende des 19.Jhd), die viele Monopole im Nordosten hervorbrachte, fühlten sich Farmer und Siedler des Mittleren Westens und Südens zunehmend abgehängt und gerieten in Abhängigkeiten verschiedenster Natur
+- diese beklemmende wirtschaftliche Situation der Farmer mündete in *organisierten Protest*
+- Granger-Bewegung (propagierte Selbsthilfemaßnahmen) -> Greenback-Party (Abschaffung des Goldstandards; erzielte einige Wahlerfolge) -> /Farmers' Alliance/ (zunächst Selbsthilfestrategie, dann *aktiver politischer Protest* zB gemeinschaftlicher Boykott von Monopolkonzernen)
+
+Demokraten & Republikaner beachteten die Forderungen der Farmers' Alliance nicht und so wurde die *People's Party* (später auch /Populist Party/ genannt) gegründet um selbst bei Wahlen anzutreten
+**** Forderungen und Erfolge der People's Party
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.1288782816229117)
+:END:
+Erfolge gingen nach der Jahrhundertwende zurück, weil Protestbereitschaft der Farmer während des Konjunkturaufschwungs sank und viele pol. Forderungen von den großen Parteien aufgegriffen worden waren
+
+**** Typische Merkmale
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.3866348448687351)
+:END:
+Farmers' Alliance und Peoples Party wiesen wesentliche Merkmale populistischer Bewegungen auf:
+- setzten Potential der durch Modernisierungsprozesse negativ betroffener Farmer um
+- typisch idealisiertes Volksverständnis; Beschwörung des "common man" & hart arbeitenden Farmers; I
+  - "einfache Leute" (Süden, Mittlerer Westen) vs wirtschaftl./pol. Eliten der Ostküste
+- mehrere Agitatoren die rhetorisch begabt und mit charismatischen Qualitäten ausgestattet waren (allerdings keine überragende Führerfigur)
+- charakteristische ressentimentgeladene Abgrenzung ggü versch. Bevölkerungsgruppen (Bänker, Finanziers, Juden, Schwarze)
+  - Mischung progressiver Forderungen mit autoritären Ideologieelementen
+*** Die Narodniki in Russland
+:PROPERTIES:
+:NOTER_PAGE: 10
+:END:
+Narodniki (zu deutsch Volkstümer/Volksfreunde) waren eine Gruppe radikaler Intellektueller, die Unterstützung im Volk suchten
+- eher ein Besipiel des Scheiterns einer populistischen Bewegung
+
+Situation in Russland:
+- ländliche Bevölkerung des 19.Jhd. in starker Abhängigkeit von Grundherren
+  - finanzielle abhängig und rechtlich benachteiligt
+- rasanter Anstieg der Bevölkerung ohne verbesserte landwirtschaftl. Erträge führte zu *Armut* und *verbitterter Stimmung*
+  
+Trotz dieses vermeindlich großen Potentials für Populismus durch Modernisierungsprozesse, blieb dieser zunächst aus. Es kam nicht zu größeren Unruhen und Organisationsversuche der Bauern waren im Wesentlichen nicht vorhanden.
+
+In den 1870ern zogen dann Tausende junger Studenten, welche sich als Vollstrecker romantisierender Leitgedanken (Zukunft Russlands liegt bei den Bauern) intellektueller Vordenker sahen, aufs Land. Sie versuchten die Bauern vergeblich für revolutionäre Aktivitäten zu gewinnen.
+- die städtischen Intellektuellen waren den Bauern fern/fremd
+- Sympathie für den Zaren war auf dem Land noch immer groß
+
+Ergo führe ein "populistischer Moment" nicht automatisch zum Erfolg einer populistischen Bewegung
+*** Populismus in der Weimarer Republik
+:PROPERTIES:
+:NOTER_PAGE: (11 . 0.6587112171837709)
+:END:
+1. Abhängung und soziale Isolierung des alten Mittelstandes
+2. Händler & Kleingewerbebetreibenden zunehmend enttäuscht von Politik und etablierten Parteien (sowie bürgerlichen Parteien)
+3. Proteste durch lokale und regionale Vereinigungen, sowie spontan einberufene Versammlungen
+4. Bildung von freien Fachverbänden, die nich an offizelle Dachverbände angeschlossen waren
+
+Bei Wahlen kam es dann vermehrt Achtungserfolgen von kleinen Splitterparteien, die sich in radikaler Weise dem Mittelstand verschrieben hatten. Anfang der 30er gelang es dann der NSDAP den alten Mittelstand zunehmend an sich zu binden.
+*** Typische Merkmale
+:PROPERTIES:
+:NOTER_PAGE: 14
+:END:
+- Beschwörung des kleinen Mannes und des gesunden Mittelstandes
+- Hochstilisierung des Mittelstandes zum ideellen Kern des Volkes
+- radikale Kritik der pol. Eliten
+- Abgrenzung ggü anderen Bevölkerungsgruppen (Unternehmer, Großkapital)
+  - Kampagnen gegen Warenhäuser und Konsumgemeinschaften, welche in Konkurrenz zu kleinen Händlern des Mittelstandes standen
+  - antisemitisch aufgeladene Kampagnen gegen jüdische Warenhäuser
+- vor Hitler allerdings keine charismatische Führerfigur
+** Rechtspopulismus als Schattenseite aktueller Modernisierungsprozesse
+:PROPERTIES:
+:NOTER_PAGE: 15
+:END:
+- seit Mitte der 1980er kann in vielen westlichen Industrienationen der Aufstieg "rechtspopulistischer Parteien" beobachtet werden
