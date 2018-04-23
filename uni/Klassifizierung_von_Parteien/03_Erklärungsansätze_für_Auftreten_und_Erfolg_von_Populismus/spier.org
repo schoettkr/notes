@@ -1,7 +1,12 @@
-* Tim Spier - Populismus und Modernisierung
+* Tim Spier - Populismus und Modernisierung (2006)
 :PROPERTIES:
 :NOTER_DOCUMENT: Spier_2006__Populismus_und_Modernisierung.pdf
 :END:
+** Begriffe
+Die politische Agitation (lat. agitare ‚aufregen‘, ‚aufwiegeln‘) steht für:
+
+(abwertend) die meist aggressive Beeinflussung anderer in politischer Hinsicht. Der Begriff wird in der Umgangssprache, aber auch in journalistischen Kommentaren bisweilen abwertend benutzt. Der Agitator wird oft gleichgesetzt mit einem Aufwiegler, Anstifter, Hetzer und Unruhestifter (siehe Demagoge);
+politische Aufklärungsarbeit oder Werbung für politische oder soziale Ziele.
 ** Einleitung
 :PROPERTIES:
 :NOTER_PAGE: (1 . 0.5927835051546392)
@@ -128,7 +133,10 @@ Bei Wahlen kam es dann vermehrt Achtungserfolgen von kleinen Splitterparteien, d
 Doch inwiefern ist die Globalisierung tatsächlich für das Erstarken dieser Parteienfamilie verantwortlich?
 - umstritten ob es "Globalisierung" überhaupt gibt
   - wenn ja, worin liegt das spezifisch Neue der heute ablaufenden Globalisierungsprozesse
-
+*** Ökonomische Dimension der Globalisierung
+:PROPERTIES:
+:NOTER_PAGE: 16
+:END:
 bedeutendste Dimension der Globalisierung ist die ökonomische
 - weltweite Ausdehnung wirtschaftl Aktivitäten
 - wachsende Intensität der Waren- und Kapitalströme
@@ -136,3 +144,49 @@ bedeutendste Dimension der Globalisierung ist die ökonomische
 
 -> ökon. Globalisierung schafft Verlierer in den Bereichen der Volkswirtschaft, die von der internationalen Konkurrenz am stärksten betroffen sind und daher Strukturanpassungen vornehmen müssen
 - Arbeitslosigkeit, Berufswechsel oder sinkende Reallöhne als mögliche Folge
+*** Kulturelle Dimension der Globalisierung
+:PROPERTIES:
+:NOTER_PAGE: (17 . 0.171021377672209)
+:END:
+- Zunahme der grenzüberschreitenden Kommunikation
+- Zunahme von Migration (aus Entwicklungsländern in westliche Industrieländer) und Binnenmigration
+  - Grenzen traditioneller Kulturen werden überwunden
+    - alternative Lebenstile statt konservativer, traditioneller
+
+Aufbrechen der kulturellen Traditionen ruft bei vielen Menschen Verunsicherung hervor, sie wollen/können diese Änderungen nicht hinnehmen (diese Gruppe könnte man als Verlierer der kulturellen Globalisierung auffassen)
+*** Politische Dimension der Globalisierung
+:PROPERTIES:
+:NOTER_PAGE: (17 . 0.5985748218527316)
+:END:
+- eng mit den anderen beiden Dimensionen verbunden
+- pol., ökon und ökolog Probleme lassen sich kaum noch innerhalb nationaler Politik angehen
+- Steuerungsfähigkeit des klassischen Nationalstaats nimmt tendenziell ab
+- Bürger verspüren Reduzierung demokratischer Kontroll- und Einflussmöglichkeiten
+*** Zusammenfassender Zusammenhang von Globalisierung & Populismus  
+:PROPERTIES:
+:NOTER_PAGE: 18
+:END:
+- *Personen die negativ von Folgen der ökon, kulturellen wie pol. Globalisierung betroffen sind bilden i.d.R den Großteil des Wählerreservoir für rechtspop. Parteien*
+  - bei diesen Personen sind häufig pol Unzufriedenheit, Statusängste, materielle Not sowie Orientierungs- und Identitätslosigkeit anzutreffen
+- Protestpotential muss dennoch effektiv angesprochen werden
+  - hierbei kommen erneut Merkmale populistischer Agitation ins Spiel:
+1. charismatische Führerfigur (zB Haider, Le Pen, Fortuyn, Bossi)
+2. Rekurs auf "das Volk"  und die "kleinen Leute"
+3, Abgrenzung ggü pol Establishment
+4. Abgrenzung ggü bestimmten Bevölkerungsgruppen; Appell an diesbezügliche Ressentiments (Abneigung/Voreingenommenheit)
+** Die Wähler rechtspopulistischer Parteien als Modernisierungsverlierer
+:PROPERTIES:
+:NOTER_PAGE: (19 . 0.7553444180522565)
+:END:
+- Versuch These der Modernisierungsverlierer an empirischen Umfragedaten nachzuweisen
+- da Modernisierungsverlierer-Eigenschaft einer Person nicht einfach abfragbar ist, werden mittels Indikatoren sozialstrukturelle Merkmale & Einstellungen betrachtet und im Lichte der Modernisierungsverlierer-These interpretiert:
+*** Indikatoren
+:PROPERTIES:
+:NOTER_PAGE: (20 . 0.6270783847980997)
+:END:
+1. Objektive Deprivation
+2. Subjektive Deprivation
+
+Im Falle objektiver Deprivation würde man erwarten, dass gerade jüngere männliche Industriearbeiter mit eher geringer Qualifikation betroffen, sowie Gruppe des traditionellen alten Mittelstandes aus kleinen Ladenbesitzern und Handwerken sind
+
+Bei Indikatoren subjektiver Deprivation ist davon auszugehen, dass Wähler rechtspopulistischer Parteien eine Verschlechterung der allgemeinen wirtschaftl. Situation & konkreten Finanzlage sehen + zusätzlich befürchten, dass sich ihre persönliche Situation weiter verschlechert
