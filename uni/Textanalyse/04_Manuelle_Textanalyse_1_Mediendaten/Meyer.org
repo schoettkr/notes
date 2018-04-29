@@ -1,0 +1,65 @@
+* Who Gets into the Papers? Party Campaign Messages and the Media
+:PROPERTIES:
+:NOTER_DOCUMENT: Meyer_et_al_2017.pdf
+:END:
+** Einleitung
+*** Anliegen des Papers
+:PROPERTIES:
+:NOTER_PAGE: 1
+:END:
+- Parteien und Politiker generieren "media coverage" und erreichen dadurch Wähler
+- Untersuchungsgegenstand des Textes: Inwiefern beeinflussen Attribute im Hinblick auf den Inhalt und Sender von Parteinachrichten die Wahrscheinlichkeit mediale Aufmerksamkeit zu generieren/erhalten
+- These: Parteimitteilungen landen mit erhöhter Wahrscheinlichkeit in den Nachrichten, wenn sie in Relation zu Belangen stehen, die bereits Signifikanz in den Medien oder für andere Parteien haben
+  - warum: kann evtl. kleineren/low-profile (Oppositions)Parteien helfen Medienaufmerksamkeit zu generien
+
+*** Medieninteresse und Agenda Setting
+:PROPERTIES:
+:NOTER_PAGE: (1 . 0.6004901960784315)
+:END:
+- pol. Akteure setzen in Wahlkampagnen die breitere Agenda und Medien antworten/reagieren darauf - nicht andersrum
+- die mediale Vermittlung bestimmter Nachrichten zu erzielen ist für die Parteien schwerer als das allgemeine Agenda Setting:
+  - mediale Aufmerksamkeit ist knappe/begrenzte Ressource um die Parteien ringen
+  - Vermittlung spezifischer Nachrichten hängt von Entscheidungen ab die Journalisten und Editoren treffen
+
+*** Vermittlung spezifischer Nachrichten durch Medien
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.30637254901960786)
+:END:
+- Nachrichteninhalt spielt entscheidene Rolle (für alle pol Akteure):
+  - pol. Akteure sollten in der Lage sein die Wahrscheinlichkeit von media coverage durch die Fokussierung auf Themen, die dem Wähler, anderen Parteien oder den Medien wichtig sind, zu erhöhen
+- mächtige Politiker können einfacher Medieninteresse erwecken
+
+=> pol Akteure können durch strategische Themenauswahl die Wahrscheinlich von Medienaufmerksamkeit erhöhen
+
+- es ist einfacher Nachrichten die im Kontext von bereits medial erfassten Themen zu verbreiten
+  - Macht der Medien vllt größer als man bislang vermutete?
+  - ergo ist es schwerer für weniger bekannte pol Akteure mediale Aufmerksamkeit im Hinblick auf innovative, systemdestabilisierende Nachrichten zu erzeugen
+*** Untersuchung österreichischer Berichterstattungen 
+:PROPERTIES:
+:NOTER_PAGE: 3
+:END:
+- 16% aller Parteipressemitteilungen erhalten mediale Aufmerksamkeit
+  - rel hoch wenn man bedenkt wieviele Pressemitteilungen herausgegeben wird und wie günstig dies ist
+
+** Existing Research on Media Attention to Party Communication
+:PROPERTIES:
+:NOTER_PAGE: 4
+:END:
+1. Agenda Setting Studien
+- bringt Aufschluss darüber, inwiefern die mediale Agenda mit der parteilichen Agenda übereinstimmt
+- Limitierungen:
+  - kein Aufschluss über *spezifische, individuelle* Kampagnennachrichten und die Wahrscheinlichkeit, dass sie medial aufgegriffen werden
+  - kein Aufschluss darüber, ob die medialen Themen explizit mit einer Partei und ihren Politikern in Verbindung gebracht werden können
+
+2. Media Research
+- untersucht inwiefern Medien pol Akteure (Parteien, Politiker) behandelt
+  - einige Studien untersuchen darüberhinaus die Rolle pol Akteure (aktiv, passiv)
+- pol. Führungspersonen in öffentlicher oder parteivertretender Rolle werden mit höherer Wahrscheinlichkeit in Medien erwähnt
+  - aber allein das Auftauchen in Medien ist nicht ausreichend, da es kein Aufschluss darüber gibt, ob/inwiefern pol. Akteure dieses Auftauchen zur Steigerung der Berichterstattung ihrer campaign message nutzen können
+
+** Press Releases as Medium for Campaing Messages
+:PROPERTIES:
+:NOTER_PAGE: 5
+:END:
+- Pressemitteilung sind ein Werkzeug pol Akteure um Medien zu erreichen
+  - können genutzt werden um zu analysieren, worüber Parteien wollen, dass es in den Medien berichtet wird
