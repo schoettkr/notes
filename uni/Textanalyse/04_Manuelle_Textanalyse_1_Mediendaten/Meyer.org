@@ -2,6 +2,9 @@
 :PROPERTIES:
 :NOTER_DOCUMENT: Meyer_et_al_2017.pdf
 :END:
+###
+Frage 1: Vernachlässigung (Erfolgsfaktoren) davon wie etwas hingelangt was bisher nicht in Medien präsent sind
+Frage 2: ist das kein widerspruch das neue themen erfolgreicher sind steht im konlfikt seite 7 über these 3
 ** Einleitung
 *** Anliegen des Papers
 :PROPERTIES:
@@ -63,3 +66,76 @@
 :END:
 - Pressemitteilung sind ein Werkzeug pol Akteure um Medien zu erreichen
   - können genutzt werden um zu analysieren, worüber Parteien wollen, dass es in den Medien berichtet wird
+  - nützlich für Politiker um Bürger zu erreichen, da evtl vertrauenserweckender als eigene Propaganda/Werbung
+- Pressemitteilungen gelten als erfolgreich wenn die Aussagen des Herausgebers/Autors/Partei/Politiker in wenigsten einem Medienbericht, wo der Autor eine aktive Rolle spielt, vorkommen:
+  - Erwähnung von Name des Autors oder der Partei als aktiver Sprecher
+  - selbe Thematik wie Pressemitteilung
+- unerwartete oder wichtige Mitteillungen erreichen, so wie Mitteillungen größerer Parteien, eine Wiedergabe in der Presse mit höherer Wahrscheinlichkeit
+
+** Warum sind Pressemitteilungen einiger Parteien erfolgreicher?
+:PROPERTIES:
+:NOTER_PAGE: 6
+:END:
+Erfolgsgründe von Mitteilungen:
+- vorherige Medienaufmerksamkeit
+- Themen mit high-impact
+- evtl Feedback Loop:
+  - Politiker äußert sich zu Themen die in den Medien präsent sind, weil sie wissen dass jene Aussagen mit höherer Wahrscheinlichkeit wiedergegeben werden
+- Addressierung von Themen die Wählern wichtig sind
+  - verläuft beidseitig, da Medien auch beeinflussen was den Wählern wichtig ist
+- Themen die neu oder unerwartet sind und bisher weniger diskutiert sind
+- Themen die auch für rivalisierende Parteien von Belangen sind
+- Themen die einer Partei wichtig sind, landen mit *geringerer* Wahrscheinlichkeit in den Medien
+
+** Data and Methods
+:PROPERTIES:
+:NOTER_PAGE: 8
+:END:
+- basierend auf Inhaltsanalysen von 1922 Pressemitteilungen und Zeitungsartikeln im Österreichischen Wahlkampf 2013
+
+*** Unabhängige Variablen
+:PROPERTIES:
+:NOTER_PAGE: (10 . 0.49167327517842985)
+:END:
+- Voter Issue Importance (anhand Wählerbefragung)
+- Party Issue Importance (anhand Parteienprogramm)
+- Party System Issue Importance = Anzahl rivalisierender Parteien die ein Thema addressieren
+
+*** Kontrollvariablen
+:PROPERTIES:
+:NOTER_PAGE: (11 . 0.4123711340206186)
+:END:
+- Platzhaltervariable um zwischen Pressemitteilungen von Regierungs- und Nichtregierungsparteien zu unterscheiden
+- Klassifizierung des Politikers (Regierungsmitglied, Parteivorsitzender, Ministerpräsident etc)
+  - wenn nicht kenntlich, dann Kategorisierung als "Parteiorganisation"
+- Variable zur Indikation des Veröffentlichungsdatums (Minuten seit Mitternacht)
+- Variable zur Spezifizierung ob eine Mitteilung auf einem externen Geschehen (zb EU Gipfel) basiert
+- Messung ob Pressemitteilung im Kontext einer Pressekonferenz steht
+
+*** Abhängige Variable
+:PROPERTIES:
+:NOTER_PAGE: (12 . 0.3806502775574941)
+:END:
+Die abhängige Variable gibt an, ob eine Pressemitteilung erfolgreich oder nicht erfolgreich ist
+
+** Ergebnisse
+:PROPERTIES:
+:NOTER_PAGE: (12 . 0.6344171292624902)
+:END:
+- 16% der Pressemitteillungen erhalten mediale Aufmerksamkeit
+- parties have higher chances of making the news when they address issues that are salient in the media issue agenda.
+- Erhöhung der party system issue attention erhöht die mediale Aufmerksamkeit
+- Party Issue Importance und Voter Issue Importance konnten keine Wirkung im Hinblick auf mediale Aufmerksamkeit nachgewiesen werden
+- nicht signifkant, aber feststellbar: Medien berichten eher weniger über Themen die Teil der hauptsächlichen Kampagne einer Partei sind
+- Regierungsmitglieder erhalten höchste Medienaufmerksamkeit, dicht gefolgt von Parteivorsitzenden
+- Unterschiede zw Regierungs- und Oppositionspartei ließen sich nicht feststellen
+- Externe Ereignisse erhöhen Wahrscheinlichkeit nicht
+- lange Pressemitteilungen haben höhere Wahrscheinlichkeit
+- nicht signifkant, aber feststellbar: Mitteillungen die früher am Tag veröffentlich werden haben bessere Chancen
+  
+*Taken together, these results suggest that political actors have higher chances of making the news with messages on issues that are important on the systemic (media or party) level*
+
+** Fazit
+:PROPERTIES:
+:NOTER_PAGE: 16
+:END:
