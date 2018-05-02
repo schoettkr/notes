@@ -1,0 +1,76 @@
+#+LATEX_HEADER: \renewcommand{\thesection}{\Roman{section}} 
+#+LATEX_HEADER: \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+#+LATEX_HEADER: \renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+#+LATEX_HEADER: \usepackage[parfill]{parskip}
+#+LATEX_HEADER: \usepackage{amsmath}
+
+\newpage
+* Einleitung
+** Aufgaben der Makroökonomie
+1. Beschreibung gesamtwirtschaftlicher Entwicklungen (*Empirie*)
+2. Erklärung gesamtwirtschaftlicher Beziehungen (*Theorie*)
+3. Vorschläge zur Problemlösung geben (*Politik*)
+
+*** Beschreibung gesamtwirtschaftlicher Entwicklungen (Empirie)
+
+Makroökonomen interessieren sich va. für 3 Größen, die alle ua. durch das *außenwirtschaftliche Gleichgewicht* beeinflusst werden:
+
+\paragraph{1. Produktion mit dem Ziel des Wirtschaftswachstums}\mbox{}
+
+Ein Maß um die gesamtwirtsch. Produktion zu messen ist das *Bruttoinlandsprodukt*.
+- *Bruttoinlandsprodukt* = alle für den Endverbrauch bestimmten Waren und Dienstleistungen, die in einem Land in einem bestimmten Zeitabschnitt hergestellt werden
+- *Nominales Bruttoinlandsprodukt* = BIP bewertet zu den jeweiligen Preisen (also die Summer aller Preise, die für alle verkauften Güter innerhalb eines Jahres bezahlt wurden)
+- *Reales Bruttoinlandsprodukt* = BIP bewertet zu konstanten Preisen eines Basisjahres
+
+Da das nominale BIP direkt von Preisen abhängt berechnet man das reale BIP, um verzerrende Wirkung durch Preisänderungen zu vernachlässigen:
+- angenommen Preise steigen von heute auf morgen um 10%, dann waere das nominale BIP ebenfalls um 10% höher, *die Produktion* ist jedoch die selbe
+
+Bei der Wirtschaftsanalyse ist es wichtig zwischen den Begriffen *Niveau* und *Wachstumsraten* zu unterscheiden. Das Niveau ist die Stufe in einer Skala, während die Wachstumsrate die prozentuale Veränderung von einem Niveau zum anderen beschreibt.
+
+Um beispielsweise die Wachstumsrate des BIP in einer Periode t zu berechnen, bildet man: $BIP_t = g_{y_t} = \frac{BIP_t - BIP_{t-1}}{BIP_{t-1}}$
+
+\paragraph{2. Beschäftigung mit dem Ziel eines hohen Beschäftigungsstandes}\mbox{}
+
+Ein Maß um den Beschäftigungsstand zu messen ist die *Arbeitslosenquote* 
+$u = \frac{U}{L}$ meist in %, wobei:
+
+U = Arbeitslose,
+L = Erwerbspersonen
+# N = Erwerbstätige (Beschäftigte)
+
+\paragraph{3. Preisentwicklung mit dem Ziel einer hohen Preisniveaustabilität}\mbox{}
+
+Ein Maß um die Preisniveauentwicklung zu messen ist die *Inflationsrate*, welche es jährliche Änderungsrate des Verbraucherpreisindex VPI ermittelt wird:
+
+$\text{VPI}_{0,t}=\frac{\text{Ausgaben für Warenkorb in aktueller Periode t}}{\text{Ausgaben für Warenkorb in Basisperiode t\textsubscript{0}}}*100$
+
+$\text{VPI}_{0,t}=\frac{\sum_{i}^{n}{p_{t}^{i} * q_{t}^{i}}}{\sum_{i}^{n}{p_{0}^{i}*q_{0}^{i}}}$
+
+Der Warenkorb besteht aus etwa 750 Gütergruppen des privaten Verbrauchs
+
+** Unterschiedliche Erklärungsansätze in der Makroökonomie
+*Keynesianischer Ansatz* geht davon aus, dass:
+- gesamtwirtsch Produktion durch aggregierte Nachfrage bestimmt wird
+- Löhne & Preise sich nur langsam anpassen und somit insbesondere der Arbeitsmarkt nicht immer geräumt ist
+- der Staat nachfragestabilisierend eingreifen muss/sollte
+
+*(Neo-)Klassischer Ansatz* geht davon aus, dass
+- gesamtwirtsch Produktion durch angebotsseitige Faktoren bestimmt wird
+- die unsichtbare Hand des Marktes zu optimalen Ergebnissen führt (perfekte Märkte, keine externen Effekte)
+- insbes. Löhne & Preise sich unendlich schnell anpassen und alle Märkte geräumt sind
+
+** Folgende Teile/Kapitel und Annahmen
+*Zentrale Fragestellung:* Wie entwickelt sich die gesamtwirtsch Produktion?
+
+Antworten auf diese Frage müssen im Kontext unterschiedlicher Zeithorizonte gegeben werden:
+1. Kurze Frist
+   - Preise & Löhne konstant (Keynesianischer Ansatz)
+   - bei gegebenem Güterangebot ist die Güternachfrage entscheidend (Keynesianischer Ansatz)
+2. Mittlere Frist
+   - Preise & Löhne passen sich situationsabhängig an (Keynesianischer Ansatz)
+   - Angebot & Nachfrage sind gleichermaßen entscheidend (Mix)
+3. Lange Frist
+   - von Schwankungen der Wirtschaftstätigkeit wird abgesehen
+   - Produktionsfaktoren sind entscheiden (neo-/klassischer Ansatz)
+
+* Kurze Frist
