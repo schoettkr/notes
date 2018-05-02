@@ -28,3 +28,80 @@
 :PROPERTIES:
 :NOTER_PAGE: 4
 :END:
+1. Wie hat sich die Berichterstattung bzgl deutscher Kanzlerkandidaten nach(?) dem Zeitraum 1949 - 1998 entwickelt?
+2. Hat die Einführung amerikanischer TV Debatten (2002) die Darstellung von Kanzlerkandidaten im Wahlkampf beeinflusst?
+
+Konkret:
+- amount of coverage
+- interpretive character
+- personalization
+- authenticity
+- negativism
+
+** Methodik
+:PROPERTIES:
+:NOTER_PAGE: 5
+:END:
+- Inhaltsanalyse vier nationaler Zeitungen
+- dabei Fokus auf die letzten vier Wochen des jeweiligen Wahlkampfes
+
+** Ergebnisse
+*** Amount of Coverage
+:PROPERTIES:
+:NOTER_PAGE: 6
+:END:
+- Indikator für die Wichtigkeit die Medien einer Wahl zuschreiben
+- signifikante Varianz seit 1949
+  - erhöhte Berichterstattung bis 1960, dann auf hohem Level bis Anfang der 80er, danach dramatischer Fall und niedriges Level bis 1998
+    - externe Faktoren als Ursache
+  - enormer Anstieg in 2002 und 2005
+    - aufgrund des Wahlkampfes selber (enges Rennen und hohe Intensität)
+- der Anstieg von evaluative statements im Jahr 2002 kann auf die neu eingeführten TV Debatten zurück geführt werden, der Anstieg der allgemeinen Berichterstattung nicht
+- erhöhte Visualisierung der Kandidaten als Folge strategischer Entscheidungen der Zeitungsherausgeber anstatt der Tv Debatten
+*** Interpretive Character
+:PROPERTIES:
+:NOTER_PAGE: 9
+:END:
+- seit 1950 Abnahme "objektiver" Nachrichten und Zunahme subjektiver, journalistischer Formate
+*** Personalization
+:PROPERTIES:
+:NOTER_PAGE: 10
+:END:
+- Personalisierung = Berichterstattung die sich mehr auf Kandidaten, ihre persönlichen und äußerlichen Charakteristika fokussiert (Kredibilität, Rhetorik etc) als politische Charakteristika (Kompetenz, Führungskraft, Qualitäten)
+- 1949 bis 1998: kein Anstieg der Personalisierung feststellbar
+- 2002 und 2005 Etablierung des zu dem Zeitpunkt relativ hohen Personalisierungslevels (ua durch Tv Debatten)
+- seit 1998 Abschwillen des "Kanzlerbonus" und gleichwertige bzw sogar leicht überwiegende Coverage des Herausforderers
+  - kann als Folge der TV Debatten gesehen werden, da in dem Format beide Akteure gleichermaßen agieren
+- vermehrte Bewertung des Äußerlichen und des Auftreten der Kanidaten (2002, 2005)
+*** Authenticity
+:PROPERTIES:
+:NOTER_PAGE: 13
+:END:
+- Beendigung des Trends weniger Zitate der Kandidaten zu berichten
+  - 2002: noch nie wurden soviele Zitate wiedergegeben
+    - allerdings kein Zusammenhang mit TV Debatten sondern allgemeiner Trend
+  - 2005: Trend sank wieder auf 23% (ca so wie 1998)
+- Trend zu kürzeren Zitaten
+*** Negativism
+:PROPERTIES:
+:NOTER_PAGE: 15
+:END:
+- seit 1980 eher negative Berichterstattung über Kanzlerkandidaten
+  - mit Ausnahme von 1990 (Helmut Kohl, Wiedervereinigungspolitik)
+- negative Berichterstattung 2002 und 2005 enorm
+  - Trend zu negativer Berichterstattung über den "Gegner" statt positiver Bestätigung des Kandidaten der einem pol nahe steht
+- in 2002 im Zusammenhang mit TV Debatte, weil danach Anstieg der neg. Berichterstattung bspw von der Welt
+** Zusammenfassung und Fazit
+:PROPERTIES:
+:NOTER_PAGE: 17
+:END:
+- 2002 & 2005 intensivere Berichterstattung
+- enormer Anstieg von "evaluative statements" in 2002 aufgrund der Tv Debatten
+  - in 2005 zwar auch starker Fokus auf die Kandidaten aber diesmal eher die Journalisten als Ursache statt der Tv Debatte
+- enormer Anstieg der Visualisierung in 2002 und 2005
+  - kann als weiterer Indikator fuer Anstieg der Personalisierung gesehen werden
+- absolute Anzahl der Artikel die persönliche Eigenschaften der Kandidaten ansprechen höher
+  - ebenfalls Indikator fuer zunehmende Personalisierung
+- Verschwinden des "Kanzlerbonus" (Amtsbonus, Heimspiel)
+- mehrere aber dafür kürzere Zitate
+- Weiterführung des Trends erhöhter Negativität seit 1980
