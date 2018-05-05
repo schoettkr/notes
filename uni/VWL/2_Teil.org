@@ -1,0 +1,112 @@
+#+LATEX_HEADER: \renewcommand{\thesection}{\Roman{section}} 
+#+LATEX_HEADER: \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+#+LATEX_HEADER: \renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
+#+LATEX_HEADER: \usepackage[parfill]{parskip}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{pgfplots}
+
+\newpage
+
+* Die kurze Frist
+- kombinierter Einsatz von Geld- und Fiskalpolitik\\
+
+Zentrale Frage: *Wie hoch ist die Güterproduktion?*\\
+-> Antworten aus der Keynesianischen Theorie:
+- die Güterproduktion (Angebot) wird allein durch die Nachfrage bestimmt
+- angebotsseitige Einflüsse wie bswp Technologie und Qualifikation der Arbeitskräfte können vernachlässigt werden, weil die Nachfrage das Angebot nicht ausschöpft
+- Annahme dass Güterpreise konstant sind
+
+Güternachfrage hängt von vielen Faktoren ab, u.a. vom *Gütermarkt* und dem Geschehen auf *Geld- und Finanzmärkten*. Im Folgenden daher Betrachtung von:
+1. Gütermarkt
+  - Untersuchung des Gleichgewichts auf dem Gütermarkt
+  - Beschreibung der *nachfrageseitigen* Bestimmung von Produktion und Einkommen
+  - Analyse des Einflusses der Fiskalpolitik
+
+2. Geld- und Finanzmärkte
+  - Untersuchung des Gleichgewichts auf den Geld- und Finanzmärkten
+  - Beschreibung der Bestimmung des Zinses
+  - Analyse des Einflusses der Geldpolitik
+  
+3. IS-LM-Modell
+  - Untersuchung des Zusammenwirkens von Güter-, Geld- und Finanzmärkten
+  - Beschreibung der simultanen Bestimmung von Produktion & Einkommen, sowie des Zinses
+    - dies bezeichnet man als IS-LM-Modell
+
+** Der Gütermarkt
+Markteilnehmer auf em Gütermarkt sind die volkswirtschaftl. Sektoren (Haushalte, Staat, Unternehmen)
+
+*Makroökonomischer Gütermarkt=* (gedachte) Zusammenfassung aller Güterkäufe und -verkäufe in einem Land innerhalb 1 Periode (\approx BIP)
+
+Angebot = inländische Produktion + Ausland(Import) = Y + IM
+
+Nachfrage = Haushalte + Unternehmen + Staat + Ausland(Export) = C + I + G + X
+
+Die Konsumausgaben (Nachfrage) der privaten Haushalte (C -> Consumers) entspricht allen Waren & Dienstleistungen, die von Verbrauchern gekauft werden
+
+Die Konsumausgaben (Nachfrage) des Staates (G -> Government) entspricht allen Waren & Dienstleistungen, die durch den staatlichen Sektor (Bund, Länder und Gemeinden) gekauft werden.
+
+Die Investitionen also die "Nachfrage" der Unternehmen (I) setzen sich zusammen aus Anlageinvestitionen (= gewerbliche Investitionen, Wohnungsbauinvestitionen) und Lagerinvestitionen (= Vorratsänderungen). Die Vorratsänderungen werden in unserem Modell zunächst vernachlässigt (Wert also gleich Null).
+Die Investitionen lassen sich "brutto" (einschließlich Abschreibungen) und "netto" (ohne Abschreibungen) erfassen. Ergo entsprechen Bruttoinvestitionen = Nettoinvestitionen plus Abschreibungen. Abschreibungen vernachlässigen wir in diesem Modell jedoch auch zunächst (Wert gleich Null).
+
+Die Exporte (X) entsprechen dem Kauf einheimischer Waren & Dienstleistungen durch Ausländer.
+Die Importe (IM) entsprechen dem Kauf ausländischer Waren & Dienstleistungen durch einheimische Konsumenten, Unternehmen und staatl. Institutionen. Der Außenbeitrag (X-IM) entspricht der Differenz zwischen Exporten und Importen (= Nettoexporte):
+- Exporte > Importe = positiver Außenbeitrag (Überschuss in Handels- und Dienstleistungsbilanz)
+- Exporte < Importe = negativer Außenbeitrag (Defizit in Handels- und Dienstleistungsbilanz)
+
+*** Die gesamtwirtschaftliche Güternachfrage 
+Ausgehend von der Zusammensetzung des Gütermarktes, also der Zusammenfassung aller Güterkäufe und -verkäufe, was wiederum etwa dem BIP entspricht, lässt sich die *Güternachfrage Z* wie folgt beschreiben: $Z \equiv C + I + G + (X - IM)$. Dies ist zentral, da wir in der kurzen Frist ja den Fokus auf die Nachfrage und ihren Einfluss legen.
+In einer geschlossenen Marktwirtschaft (keine Ex-/Importe) gilt dann: $Z \equiv C + I+ G$.
+
+\paragraph{Aufschlüsselung der Bestandteile von Güternachfrage Z}
+**** Privater Konsum (C)
+- Konsumentenverhalten wird durch *Konsumfunktion* C(Y_v) beschrieben
+- Konsum C steigt wenn verfügbares Einkommen Y_v zunimmt: $C = C(Y_v) \rightarrow \frac{\partial C}{\partial Y_v} > 0$
+- das verfügbare Einkommen Y_v entspricht dem Einkommen, was dem Verbraucher netto, d.h. /nach Abzug der Steuern/  zur Verfügung steht: $Y_v = Y - T$, wobei
+
+Y_v = /verfügbares/ Einkommen,
+Y = Einkommen,
+T = Nettosteuern 
+
+- es wird angenommen, dass diese Konsumfunktion C(Y_v) linear ist, also $C = c_0 + c_1 * Y_v$ (keynesianische Konsumfunktion). Die Funktion hat zwei Parameter:
+  - c_1 = *marginale Konsumneigung*, entspricht dem Effekt, den ein zusätzlicher Euro verfügbares Einkommen auf den Konsum hat (0 < c_1 < 1)
+  - c_0 = *autonomer Konsum*, entspricht dem *autonomen Konsum* (c_0 > 0), also wieviel konsumiert worden wäre selbst, wenn das Einkommen null wäre (Y-Achsenabschnitt)
+
+
+\begin{equation*}
+\begin{aligned}
+& C = C(Y_v) = c_0 + c_1 * Y_v\\
+& Y_v \equiv Y - T\\
+& \rightarrow C = c_0 + c_1 * (Y - T) = c_0 + c_1  Y - c_1 T
+\end{aligned}
+\end{equation*}
+
+Beispiel:
+
+T = 0, 
+c_0 = 100,
+c_1 = 0.5,
+T_1 = 0
+
+\rightarrow \textcolor{blue}{$C_1 = 100 + 0.5 * Y - 0.5 * 0$}
+
+dann Einführung einer Steuer T = 50:\\
+\rightarrow \textcolor{red}{$C_2 = 100 + 0.5 * Y - 0.5 * 50 = 75 + 0.5 * Y$}
+
+Der Konsum beim Einkommen von Null (autonomer Konsum) sinkt durch die Besteuerung von 100 auf 75, aber die Steigung der Konsumfunktion (c_1) bleibt gleich:
+
+\begin{tikzpicture}
+  \begin{axis}[ 
+    xmin=0,   xmax=50,
+    ymin=0,   ymax=150,
+    domain=0:50,
+    axis x line*=bottom,
+    axis y line*=left,
+    xlabel=$\text{Einkommen }Y$,
+    ylabel={$\text{Konsum }C$}
+  ] 
+    \addplot +[mark=none] {100 + 0.5 * x}node[above left,pos=0.7] {$C_1 = c_0 + c_1 Y - c_1 T_1$} node[below right, pos=0] {$c_0$}; 
+    \addplot +[mark=none] {75 + 0.5 * x}node[above left,pos=0.8] {$C_2 = c_0 + c_1 Y - c_1 T_2$} node[below right, pos=0] {$c_0$}; 
+  \end{axis}
+\end{tikzpicture}
+**** Investitionen (I)
