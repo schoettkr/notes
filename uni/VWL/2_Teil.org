@@ -110,3 +110,49 @@ Der Konsum beim Einkommen von Null (autonomer Konsum) sinkt durch die Besteuerun
   \end{axis}
 \end{tikzpicture}
 **** Investitionen (I)
+\newline
+Investitionen werden in diesem Modell als gegeben betrachtet, d.h als exogen angenommen. Gekennzeichnet wird dies durch einen Strich über der Variable: $I = \bar{I}$ .
+**** Staatsausgaben (G) und Steuern (T)
+\newline
+Basierend auf dem Regierungsprogramm ergibt sich ein bestimmtes Ausmaß an Staatsausgaben und Steuern, in diesem Sinn sind beide ebenfalls exogen: $G = \bar{G}$ und $T = \bar{T}$ (T sind Steuern minus Transfers).
+
+Laut Regierungsprogramm sind die Staatsausgaben durch Steuern finanziert, daher nehmen wir an, dass der Haushalt in der Ausgangssituation ausgeglichen ist: $G = T$ .
+Werden Staatsausgaben oder Steuern verändert, um die gesamtwirtschaftliche Nachfrage zu beeinflussen, spricht man von Fiskalpolitik
+*** Gleichgewicht auf dem Gütermarkt (Bestimmung der Produktion)
+Ein *Gleichgewicht auf dem Gütermarkt* stellt sich dann ein, wenn die *Güterproduktion Y* der *Güternachfrage Z* entspricht: $Y = Z$. Dies ist eine Gleichgewichtsbedingung. Somit gilt (für $X=IM=0$):
+\begin{equation*}
+\begin{aligned}
+Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}
+\end{aligned}
+\end{equation*}
+Im Gleichgewicht entspricht die Produktion Y (linke Seite) der Nachfrage (rechte Seite). Da Nachfrage < Produktionspotential, können die nachgefragten Güter auch produziert werden. Es gibt folgende Zusammenhänge:
+- die Nachfrage (ergo dann = die Produktion, da Nachfrage in diesem Modell entscheidend ist) hängt ihrerseits vom Einkommen Y ab
+- das Einkommen Y wiederum ist gleich der Produktion (bzw dem Produktionswert) Y (weil jeder durch Produktion eingenommene Euro, als Einkommen eingenommen wurde)
+- somit wird dasselbe Symbol Y sowohl für die Produktion als auch fuer das Einkommen verwendet
+
+Die Gleichgewichtsbedingung spiegelt die zentrale Modellannahme wieder, dass die Produktion nur durch die Nachfrage bestimmt wird (nachfrageseitiges Modell).
+
+*** Gleichungen des Gütermarktmodells
+Das Modell besteht aus folgenden Arten von Gleichungen:
+- Definitionsgleichungen, hier: $Z \equiv C + I + G$ und $Y_v \equiv Y - T$
+- Verhaltensgleichungen, hier: $C= c_0 + c_1*(Y-T)$
+- Gleichgewichtsbedingung, hier: $Y=Z$ (Produktion = Güternachfrage)
+
+Die Modellgleichungen enthalten:
+- endogene Variablen, hier: C, Y, Z
+- exogene Variablen, hier: \bar{I}, \bar{G}, \bar{T} 
+- Parameter, hier: c_0, c_1
+  
+In Modellen analysieren wir meist nur gleichgewichtige Situationen.
+
+Die Gleichgewichtsbedingung kann unter Einführung zwei neuer Begriffe wiefolgt umformuliert werden:
+
+\begin{equation*}
+\begin{aligned}
+Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}
+\end{aligned}
+\end{equation*}
+
+*** Graphische Analyse
+
+
