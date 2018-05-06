@@ -1,3 +1,4 @@
+#+SETUPFILE: ~/.emacs.d/org-html-themes/setup/theme-bigblow.setup
 * Populism and (liberal) democracy: a framework for analysis
 :PROPERTIES:
 :NOTER_DOCUMENT: MuddeRoviraKaltwasser 2012_ 1-26.pdf
@@ -108,7 +109,108 @@ diese Definition kommt nah an viele andere Populismusdefinitionen
 - keine allzustarke Fokussierung auf Populistenführer
   - da sonst zu starker Fokus auf "Populismusangebot" (durch Führer) und Vernachlässigung der evtl. "Populismusnachfrage" (durch Volk)
 
-** Defition von Demokratie
+** Definition von Demokratie
 :PROPERTIES:
 :NOTER_PAGE: 10
 :END:
+- Ziel ist nicht die Definiton eines neuen Demokratiekonzepts und ein Überblick über vorhandene Definitionen, sondern eine kurze Darstellung der 3 Kernelemente (im Kontext "Demokratie") populistischer Debatten:
+*** Demokratie
+- heutzutage oft synonym mit liberaler Demokratie verwendet anstatt als Demokratie per se
+- Demokratie (ohne Zusätze) sei die Kombination von Volkssouveränität und Mehrheitsentscheid
+  - nicht mehr und nicht weniger, kann also direkt, indirekt, liberal w/e sein
+- Demokratie ansich bezieht sich auf die Methode wie Herrschaftsträger in kompetitiven Wahlen bestimmt werden
+  - eine Auswahl durch die Mehrheit des Volkes ist im Kern die Definition von /repräsentativer/ Demokratie
+*** Liberale Demokratie
+:PROPERTIES:
+:NOTER_PAGE: (10 . 0.7510204081632653)
+:END:
+- da auch umstritten, Wahl der (minimalen) Definition von Dahl:
+  - allerdings idealistisch konzeptioniert und daher einige Unterschiede zu existierenden Demokratien
+  - um die Optimierung der Dimensionen "public contestation"(öffentliche Kritik) und "political participation"(pol Teilhabe) zu gewährleisten, benötige es laut Dahl einiger institutionellen Garantien:
+1. Versammlungs- und Organisationsfreiheit
+2. Meinungsfreiheit
+3. Wahlrecht
+4. Right of political leaders to compete for votes
+5. Amtsfähigkeit
+6. Alternative sources of information
+7. freie und gleiche Wahlen
+8. Institutions for making government policies dependent on votes and other expressions of preference
+*** Radikale Demokratie
+:PROPERTIES:
+:NOTER_PAGE: 12
+:END:
+- eher ideeller Typ als existierender Demokratietyp
+- Hauptautoren radikaler Demokratie geben keine klare Definiton
+- liberale Demokratie sei Konsens zu heilig und ignoriere, dass Demokratie bedeute für etwas und gegen jemanden zu kämpfen
+  - in diesem Sinne ist radikale Demokratie ähnlich der "demokratisierten Demokratie"
+** Populismus & Demokratie: Freund & Feind
+:PROPERTIES:
+:NOTER_PAGE: 13
+:END:
+- Populismus hat meist negative Konnotation; Demokratie positive
+  - das war nicht immer so/ist nicht überall so
+    - einige sind der Ansicht Populismus sei die reinste Form von Demokratie, oder dass Populismus die Voraussetzung für alles Politische sei
+- Populismus kann beides, eine Gefahr und eine Maßnahme zur Verbesserung, der Demokratie sein
+  - auf theoret. Ebene ist Populismus essentiell demokratisch, aber doppelseitig im Hinblick auf /liberale/ Demokratie
+- Populismus hat eine positive Beziehung zu /repräsentativer/ Demokratie
+  - Populisten fechten nicht die Repräsentation an, sondern die *falsche* Repräsentation
+- die Beziehung zwischen Populismus und /liberaler/ Demokratie ist komplizierter
+  - eine Ursache ist die interne Spannung innerhalb des Konzepts liberaler Demokratie und zwar zum einen Herrschaft der Mehrheit und zum anderen der konstitutionelle Schutz von Minderheiten
+    - Populismus ist dabei eher auf der Seite der Mehrheitsentscheide (und gegen den Schutz von Minderheitsrecheten)
+- evtl. ist Populismus ein Nebenprodukt von Demokratie und verfolgt sie wie ein Schatten
+** Einfluss von Populismus auf Demokratiequalität: Freund & Feind
+:PROPERTIES:
+:NOTER_PAGE: 14
+:END:
+#+CAPTION: Dimensionen von Demokratiequalität
+#+NAME:   fig:SED-HR4049
+[[./demo-qual.png]]
+- pos Effekt = wenn Pop die Qualität von Demokr erhöht
+- neg Effekt = wenn Pop die Qualität von Demokr senkt
+- Populismus kann alle Dimensionen positiv und negativ beeinflussen
+- Literatur führt viele Beispiele an wie Populismus positiv oder negativ beeinflussen kann
+  - diese sind allerdings oft irrelevant, weil sie im Zusammenhang mit der im Kontext stehenden Ideologie (zB Sozialismus, Nationalismus) stehen oder nicht Teil der hier verwendeten minimalen Pop. definiton sind (zB Art und Weise der Mobilisierung)
+*** Positive Effekte
+:PROPERTIES:
+:NOTER_PAGE: (15 . 0.12232415902140674)
+:END:
+1. Gibt Gruppen die sich nicht (gut) repräsentiert fühlen Sprachrohr (Einbezug marginalisierter Gruppen)
+2. Mobilisierung ausgegrenzter Gesellschaftsbereiche (zB Unterschicht), verbessert pol Integration
+3. Repräsentierung ausgeschlossener Gruppen durch Implementierung von gewünschten Policies
+4. Ideologische Brücke zur Schaffung von sozialen & pol Koaltionen, oft über Klassen hinweg
+5. Erhöhung demokratischer Accountability (Probleme werden Teil des pol Bereichs, statt bspw des ökonomischen)
+6. Revitalisierung von öffentlicher Meinung und sozialen Bewegungen, durch Rückkehr der Dimension pol. Konflikte
+*** Negative Effekte
+:PROPERTIES:
+:NOTER_PAGE: (15 . 0.6523955147808359)
+:END:
+1. Zuwiederhandeln im Bezug auf checks & balances und Gewaltenteilung durch Volkssouveränität
+2. Ignoranz von Minderheitsrechten durch Mehrheitsentscheid
+3. Etablierung eines politischen Cleavage (Populisten vs Nichtpopulisten)
+4. Moralisierung von Politik (Kompromisse & Konsens werden erschwert)
+5. Plesbizitäre Transformation von Politik (Untergrabung der Legitimät und Macht von pol Institutionen)
+6. Minimierung des Politischen und des demokr Raums durch anti-elitäres Agieren
+** Wann wirkt Populismus positiv?
+:PROPERTIES:
+:NOTER_PAGE: 16
+:END:
+ Unterteilung von Populismus und Demokratie in schwache & starke Gruppen:
+ - Populismus in der Regierung (stark)
+ - Populismus in der Opposition (schwach)
+ - konsolidierte Demokratien (stark)
+ - nicht-konsolidierte Demokratien (schwach)
+
+Annahmen:
+- Populisten sind effektiver in schwachen Demokratien
+  - bzw die Stärke der Demokratie beeinflusst die Stärke der Wirkung die Populismus auf jene haben kann
+- populists will prioritize negative effects in government and positie effects in opposition
+  - die Stärke des Populismus beeinflusst die Wirkung auf die Demokratie
+    
+Hypothesen:
+1. Populismus innerhalb der Regierung hat stärkeren Effekt auf die Demokratie als Populismus innerhalb der Opposition
+2. Populismus innerhalb der Regierung hat mehr negative Effekte auf die Demokratie als Populismus innerhalb der Opposition
+3. Populismus hat stärkere Effekte auf nicht-konsolidierte Demokratien als auf konsolidierte Demokratien
+4. Populismus innerhalb der Opposition in konsolidierten Demokratien hat moderate positive Effekte auf die Demokratiequalität
+5. Populismus innerhalb der Opposition in nicht-konsolidierten Demokratien hat moderate positive Effekte auf die Demokratiequalität
+5. Populismus innerhalb der Regierung in konsolidierten Demokratien hat moderate negative Effekte auf die Demokratiequalität
+7. Populismus innerhalb der Regierung in nicht-konsolidierten Demokratien hat signifikante negative Effekte auf die Demokratiequalität
