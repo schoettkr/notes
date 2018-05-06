@@ -1,0 +1,35 @@
+* Populism and (liberal) democracy: a framework for analysis
+:PROPERTIES:
+:NOTER_DOCUMENT: MuddeRoviraKaltwasser 2012_ 1-26.pdf
+:END:
+* Einleitung
+:PROPERTIES:
+:NOTER_PAGE: 5
+:END:
+- Versuch der Konstruktion eines Gedankengerüsts in dem der oft missbrauchte, nicht klare Begriff "Populismus" eine eindeutige Bedeutung hat und in dem die Beziehung zwischen Populismus und Demokratie /empirisch/ untersucht werden kann
+  - bisher haben die meisten Studien im Hinblick auf Populismus & Demokratie normativ oder theoretisch argumentiert ohne die Empirie mit einzubeziehen
+    - außerdem verschiedene, teils konträre Definitionen von Populismus und Demokratie
+- dehsalb in diesem Werk minimale Definitionen, inspiriert von Sartori, um breiten Geltungsbereich zu gewährleisten
+- es geht hauptsächlich und viel mehr um Populismus an sich, statt um damit verbundene Ideologien
+  - Abgrenzung von Merkmalen die oft gemeinsam mit Populismus auftreten wichtig
+- Populismus \neq Klientelismus
+* Definition von Populismus
+:PROPERTIES:
+:NOTER_PAGE: 6
+:END:
+** Geschichte des Begriffs "Populismus"
+:PROPERTIES:
+:NOTER_PAGE: (6 . 0.5656934306569343)
+:END:
+- Ursprünge im 19 Jahrhundert
+  - Populist Party in den USA
+  - Narodniki in Russland
+- zusätzlich kann man noch Bauernaufstände während der Zwischenkriegszeit im 20 Jahrhundert v.a. in Osteuropa nennen
+- im Zuge der Weltwirtschaftskrise 1930 trat Populismus auch vermehrt in Lateinamerika auf
+  - populistische Parteien waren in Lateinamerika eine große Herausforderung für die marxistisch geprägten Linken, da sie sich nicht durch strenge Ideologien abgrenzten und somit attraktiv für größere Wählerschaften waren
+- in Westeuropa ist Populismus eher seit Ende des 20 Jhd zu beobachten
+*** Untersuchung dreier Populismus Konzepte
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.16453382084095064)
+:END:
+**** Populismus als Form der pol Bewegung
