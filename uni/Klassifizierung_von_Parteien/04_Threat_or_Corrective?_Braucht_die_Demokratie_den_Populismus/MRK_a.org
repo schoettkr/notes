@@ -2,7 +2,7 @@
 :PROPERTIES:
 :NOTER_DOCUMENT: MuddeRoviraKaltwasser 2012_ 1-26.pdf
 :END:
-* Einleitung
+** Einleitung
 :PROPERTIES:
 :NOTER_PAGE: 5
 :END:
@@ -13,11 +13,11 @@
 - es geht hauptsächlich und viel mehr um Populismus an sich, statt um damit verbundene Ideologien
   - Abgrenzung von Merkmalen die oft gemeinsam mit Populismus auftreten wichtig
 - Populismus \neq Klientelismus
-* Definition von Populismus
+** Definition von Populismus
 :PROPERTIES:
 :NOTER_PAGE: 6
 :END:
-** Geschichte des Begriffs "Populismus"
+*** Geschichte des Begriffs "Populismus"
 :PROPERTIES:
 :NOTER_PAGE: (6 . 0.5656934306569343)
 :END:
@@ -33,3 +33,82 @@
 :NOTER_PAGE: (7 . 0.16453382084095064)
 :END:
 **** Populismus als Form der pol Bewegung
+- Fundament dieser Definition stammt von Lipset & Seymour
+- auf Lateinamerika fokussierte Definiton von Populismus
+  - vergleichbar mit europ. Faschismus, Pop. allerdings stärker abhängig von der Unterschicht, während Fasch. vom Mittelstand
+- Populismus als "multi-class" Bewegung um einen charismatischen Führer (Gino Germani)
+  - Populismus attraktiv für unterschiedliche, heterogene Gesselschaftsgruppen
+  - charism. Führer & pop Parteien addressieren häufig "das Volk" etc
+- "multi-class" Element allerdings ein zentraler Teil der Massenpolitik und nicht auf Populismus beschränkt (siehe catch-all/Volksparteien)
+
+**** Populismus als pol Stil
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.14271151885830785)
+:END:
+- Populismus als pol Stil der aus opportunistischen Gründen eine bestimmte "Verbindung" zwischen pol Führern und Wählerschaft propagiert, um hauptsächlich an pol. Macht zu gelangen
+  - demzufolge sei Populismus mit jeglichen Formen von Führern, Bewegungen und Parteien kompatibel
+- Problem dieses Ansatz sei die Verwechselungsgefahr mit Demagogie und Opportunismus
+  - zu breite Definiton von Populismus, die so gut wie jeden pol Akteur als Populisten labelen könnte
+**** Populismus als "political logic"
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.5912334352701325)
+:END:
+- Populismus als "political logic" und nicht als Resultat bestimmter Klassenzusammenschlüsse 
+  - Aufteilung in zwei soziale Lager: die Mächtigen vs das Volk
+
+Ergebnis eines dreiteiligen Prozesses:
+1. Verortung verschiedener Forderungen und Bedürfnisse
+2. Ausfindigmachung eines kollektiven Feindes und dadurch Schaffung einer kollektiven Identität
+3. gefühlsbedingte Hingabe/Investition in ein Element (zB Führer) der "das Volk" repräsentiert
+   
+Problem dieses Ansatzes ist, dass er einerseits zu abstrakt ist und andererseits so vage und ausschweifend ist, dass er für empirische Analysen kaum geeignet ist
+
+*** Minimale Definition von Populismus
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.40774719673802245)
+:END:
+- seit 1990 wichtige Entwicklungen in der Debatte rund um die Definition von Populismus
+  - aufgrund von vermehrten Forschungsbeiträgen die versuchen eine Definition von Populismus zu liefern, die Probleme, welche bei der Anwendung des Konzepts auf neue Fälle auftreten können (Überziehung des ursprunglichen Konzepts), zu vermeiden
+- *Sartorisches Intension-Extension Dilemma*: je mehr Eigenschaften einem Konzept zu Grunde gelegt werden, desto weniger Fälle deckt es ab
+ 
+***** Zwei unterschiedliche Arten von Kategorisierung
+- radiale Kategorisierung = ein Phänomen kann durch eine bestimmte Menge von Eigenschaften konzeptualisiert werden, die allerdings nicht in jedem Fall vorhanden sind (oder vorhanden sein müssen)
+  - nicht alle Fälle weisen also *genau* die selben Merkmale auf, sondern es gibt nur mehrere, bestimmte Überschneidungen von Merkmalen/Eigenschaften
+  - weit & umfassende Kategorisierung, dadurch evtl ungenau
+  - sei ungeeignet fuer die minimale Definition von Populismus
+    - "common ground" könnte aufgrund des weiten Konzepts nur vorgetäuscht werden, während Autoren an ihren eigenen Konzeptualisierungen festhalten
+- klassiche Kategorisierung = Eigenschaften eines Konzepts zur Erklärung eines Phänomens, müssen bei jedem Fall des Phänomens vorliegen
+  - alle Fälle müssen die selben, definierenden Eigenschaften aufweisen
+  - enger gefasst und auf den kleinsten gemeinsamen Nenner ausgerichtet
+***** Annäherung an eine minimale Definition
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.5708460754332314)
+:END:
+- implizite Gemeinsamkeit zw Populismuskonzepten, dass es eine Gegenüberstellung von "dem Volk" und "der Elite" gibt
+  - jede Manifestierung von Populismus kritsiere kleine Kreise machtvoller Leute, die den Willen des allgemeinen Volkes unterdrücken
+  - Populismus als Ideologie, die Gesellschaft in zwei antagonistische Gruppen unterteilt (das pure Volk und die korrupte Elite)
+
+\rightarrow Populismus sei im Grunde also allen vorran eine Form von /moralischer/ Politik (pur/rein vs korrupt) und nicht soziokulturell (Ethnie, Religion) oder sozioökonomisch (Klasse) geprägt
+
+*drei grundlegende Elemente/Konzepte*:
+- das Volk, die Eliten und der Allgemeinwille
+ 
+*zwei Gegensätze*:
+- Elitismus (Macht gebündelt auf Wenige) und Pluralismus (keine zentrale Bündelung der Macht sondern Verteilung auf verschiedene, unabhängige Gruppen)
+
+diese "dünne" Definition mit begrenztem Kern erlaubt, dass sie im Kontext anderer Konzepte und Ideologien verwendet werden kann (ideological flexibility)
+- dies ist was Paul Taggart meint wenn er von der "chameleonic nature of populism" spricht
+
+diese Definition kommt nah an viele andere Populismusdefinitionen
+- definiert Populismus nämlich auch als pol Stil oder Strategie
+- vernachlässigt jedoch mit Absicht die Frage nach der Intention der Populisten
+  - Ernsthaftigkeit oder lediglich als strategisches Mittel ist eher eine empirische Frage und daher ohnehin kaum zu beantworten
+- außerdem keine Aussage über die Art und Weise der Mobilisierung durch Populisten (in Definition fuer Lateinamerika häufig)
+  - da unklar ob wesentliche Element von Populismus an sich oder eine empirische Konsequenz
+- keine allzustarke Fokussierung auf Populistenführer
+  - da sonst zu starker Fokus auf "Populismusangebot" (durch Führer) und Vernachlässigung der evtl. "Populismusnachfrage" (durch Volk)
+
+** Defition von Demokratie
+:PROPERTIES:
+:NOTER_PAGE: 10
+:END:

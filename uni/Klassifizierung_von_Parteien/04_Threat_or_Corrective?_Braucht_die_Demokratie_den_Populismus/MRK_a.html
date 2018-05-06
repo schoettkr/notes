@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-05-06 Sun 14:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6d70012">1. Populism and (liberal) democracy: a framework for analysis</a>
+<ul>
+<li><a href="#orgd798784">1.1. Einleitung</a></li>
+<li><a href="#orgac1cb02">1.2. Definition von Populismus</a>
+<ul>
+<li><a href="#orgba59942">1.2.1. Geschichte des Begriffs "Populismus"</a></li>
+<li><a href="#org36fedd1">1.2.2. Untersuchung dreier Populismus Konzepte</a></li>
+<li><a href="#orgb04ce81">1.2.3. Minimale Definition von Populismus</a></li>
+</ul>
+</li>
+<li><a href="#orgbd76f08">1.3. Defition von Demokratie</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d70012" class="outline-2">
+<h2 id="org6d70012"><span class="section-number-2">1</span> Populism and (liberal) democracy: a framework for analysis</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd798784" class="outline-3">
+<h3 id="orgd798784"><span class="section-number-3">1.1</span> Einleitung</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Versuch der Konstruktion eines Gedankengerüsts in dem der oft missbrauchte, nicht klare Begriff "Populismus" eine eindeutige Bedeutung hat und in dem die Beziehung zwischen Populismus und Demokratie <i>empirisch</i> untersucht werden kann
+<ul class="org-ul">
+<li>bisher haben die meisten Studien im Hinblick auf Populismus &amp; Demokratie normativ oder theoretisch argumentiert ohne die Empirie mit einzubeziehen
+<ul class="org-ul">
+<li>außerdem verschiedene, teils konträre Definitionen von Populismus und Demokratie</li>
+</ul></li>
+</ul></li>
+<li>dehsalb in diesem Werk minimale Definitionen, inspiriert von Sartori, um breiten Geltungsbereich zu gewährleisten</li>
+<li>es geht hauptsächlich und viel mehr um Populismus an sich, statt um damit verbundene Ideologien
+<ul class="org-ul">
+<li>Abgrenzung von Merkmalen die oft gemeinsam mit Populismus auftreten wichtig</li>
+</ul></li>
+<li>Populismus &ne; Klientelismus</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgac1cb02" class="outline-3">
+<h3 id="orgac1cb02"><span class="section-number-3">1.2</span> Definition von Populismus</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgba59942" class="outline-4">
+<h4 id="orgba59942"><span class="section-number-4">1.2.1</span> Geschichte des Begriffs "Populismus"</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Ursprünge im 19 Jahrhundert
+<ul class="org-ul">
+<li>Populist Party in den USA</li>
+<li>Narodniki in Russland</li>
+</ul></li>
+<li>zusätzlich kann man noch Bauernaufstände während der Zwischenkriegszeit im 20 Jahrhundert v.a. in Osteuropa nennen</li>
+<li>im Zuge der Weltwirtschaftskrise 1930 trat Populismus auch vermehrt in Lateinamerika auf
+<ul class="org-ul">
+<li>populistische Parteien waren in Lateinamerika eine große Herausforderung für die marxistisch geprägten Linken, da sie sich nicht durch strenge Ideologien abgrenzten und somit attraktiv für größere Wählerschaften waren</li>
+</ul></li>
+<li>in Westeuropa ist Populismus eher seit Ende des 20 Jhd zu beobachten</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org36fedd1" class="outline-4">
+<h4 id="org36fedd1"><span class="section-number-4">1.2.2</span> Untersuchung dreier Populismus Konzepte</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc391e77"></a>Populismus als Form der pol Bewegung<br />
+<div class="outline-text-5" id="text-1-2-2-1">
+<ul class="org-ul">
+<li>Fundament dieser Definition stammt von Lipset &amp; Seymour</li>
+<li>auf Lateinamerika fokussierte Definiton von Populismus
+<ul class="org-ul">
+<li>vergleichbar mit europ. Faschismus, Pop. allerdings stärker abhängig von der Unterschicht, während Fasch. vom Mittelstand</li>
+</ul></li>
+<li>Populismus als "multi-class" Bewegung um einen charismatischen Führer (Gino Germani)
+<ul class="org-ul">
+<li>Populismus attraktiv für unterschiedliche, heterogene Gesselschaftsgruppen</li>
+<li>charism. Führer &amp; pop Parteien addressieren häufig "das Volk" etc</li>
+</ul></li>
+<li>"multi-class" Element allerdings ein zentraler Teil der Massenpolitik und nicht auf Populismus beschränkt (siehe catch-all/Volksparteien)</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgfd1ebdc"></a>Populismus als pol Stil<br />
+<div class="outline-text-5" id="text-1-2-2-2">
+<ul class="org-ul">
+<li>Populismus als pol Stil der aus opportunistischen Gründen eine bestimmte "Verbindung" zwischen pol Führern und Wählerschaft propagiert, um hauptsächlich an pol. Macht zu gelangen
+<ul class="org-ul">
+<li>demzufolge sei Populismus mit jeglichen Formen von Führern, Bewegungen und Parteien kompatibel</li>
+</ul></li>
+<li>Problem dieses Ansatz sei die Verwechselungsgefahr mit Demagogie und Opportunismus
+<ul class="org-ul">
+<li>zu breite Definiton von Populismus, die so gut wie jeden pol Akteur als Populisten labelen könnte</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org3e5f354"></a>Populismus als "political logic"<br />
+<div class="outline-text-5" id="text-1-2-2-3">
+<ul class="org-ul">
+<li>Populismus als "political logic" und nicht als Resultat bestimmter Klassenzusammenschlüsse 
+<ul class="org-ul">
+<li>Aufteilung in zwei soziale Lager: die Mächtigen vs das Volk</li>
+</ul></li>
+</ul>
+
+<p>
+Ergebnis eines dreiteiligen Prozesses:
+</p>
+<ol class="org-ol">
+<li>Verortung verschiedener Forderungen und Bedürfnisse</li>
+<li>Ausfindigmachung eines kollektiven Feindes und dadurch Schaffung einer kollektiven Identität</li>
+<li>gefühlsbedingte Hingabe/Investition in ein Element (zB Führer) der "das Volk" repräsentiert</li>
+</ol>
+
+<p>
+Problem dieses Ansatzes ist, dass er einerseits zu abstrakt ist und andererseits so vage und ausschweifend ist, dass er für empirische Analysen kaum geeignet ist
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgb04ce81" class="outline-4">
+<h4 id="orgb04ce81"><span class="section-number-4">1.2.3</span> Minimale Definition von Populismus</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>seit 1990 wichtige Entwicklungen in der Debatte rund um die Definition von Populismus
+<ul class="org-ul">
+<li>aufgrund von vermehrten Forschungsbeiträgen die versuchen eine Definition von Populismus zu liefern, die Probleme, welche bei der Anwendung des Konzepts auf neue Fälle auftreten können (Überziehung des ursprunglichen Konzepts), zu vermeiden</li>
+</ul></li>
+<li><b>Sartorisches Intension-Extension Dilemma</b>: je mehr Eigenschaften einem Konzept zu Grunde gelegt werden, desto weniger Fälle deckt es ab</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org79678ab"></a>Zwei unterschiedliche Arten von Kategorisierung<br />
+<div class="outline-text-6" id="text-1-2-3-0-1">
+<ul class="org-ul">
+<li>radiale Kategorisierung = ein Phänomen kann durch eine bestimmte Menge von Eigenschaften konzeptualisiert werden, die allerdings nicht in jedem Fall vorhanden sind (oder vorhanden sein müssen)
+<ul class="org-ul">
+<li>nicht alle Fälle weisen also <b>genau</b> die selben Merkmale auf, sondern es gibt nur mehrere, bestimmte Überschneidungen von Merkmalen/Eigenschaften</li>
+<li>weit &amp; umfassende Kategorisierung, dadurch evtl ungenau</li>
+<li>sei ungeeignet fuer die minimale Definition von Populismus
+<ul class="org-ul">
+<li>"common ground" könnte aufgrund des weiten Konzepts nur vorgetäuscht werden, während Autoren an ihren eigenen Konzeptualisierungen festhalten</li>
+</ul></li>
+</ul></li>
+<li>klassiche Kategorisierung = Eigenschaften eines Konzepts zur Erklärung eines Phänomens, müssen bei jedem Fall des Phänomens vorliegen
+<ul class="org-ul">
+<li>alle Fälle müssen die selben, definierenden Eigenschaften aufweisen</li>
+<li>enger gefasst und auf den kleinsten gemeinsamen Nenner ausgerichtet</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc43b56d"></a>Annäherung an eine minimale Definition<br />
+<div class="outline-text-6" id="text-1-2-3-0-2">
+<ul class="org-ul">
+<li>implizite Gemeinsamkeit zw Populismuskonzepten, dass es eine Gegenüberstellung von "dem Volk" und "der Elite" gibt
+<ul class="org-ul">
+<li>jede Manifestierung von Populismus kritsiere kleine Kreise machtvoller Leute, die den Willen des allgemeinen Volkes unterdrücken</li>
+<li>Populismus als Ideologie, die Gesellschaft in zwei antagonistische Gruppen unterteilt (das pure Volk und die korrupte Elite)</li>
+</ul></li>
+</ul>
+
+<p>
+&rarr; Populismus sei im Grunde also allen vorran eine Form von <i>moralischer</i> Politik (pur/rein vs korrupt) und nicht soziokulturell (Ethnie, Religion) oder sozioökonomisch (Klasse) geprägt
+</p>
+
+<p>
+<b>drei grundlegende Elemente/Konzepte</b>:
+</p>
+<ul class="org-ul">
+<li>das Volk, die Eliten und der Allgemeinwille</li>
+</ul>
+
+<p>
+<b>zwei Gegensätze</b>:
+</p>
+<ul class="org-ul">
+<li>Elitismus (Macht gebündelt auf Wenige) und Pluralismus (keine zentrale Bündelung der Macht sondern Verteilung auf verschiedene, unabhängige Gruppen)</li>
+</ul>
+
+<p>
+diese "dünne" Definition mit begrenztem Kern erlaubt, dass sie im Kontext anderer Konzepte und Ideologien verwendet werden kann (ideological flexibility)
+</p>
+<ul class="org-ul">
+<li>dies ist was Paul Taggart meint wenn er von der "chameleonic nature of populism" spricht</li>
+</ul>
+
+<p>
+diese Definition kommt nah an viele andere Populismusdefinitionen
+</p>
+<ul class="org-ul">
+<li>definiert Populismus nämlich auch als pol Stil oder Strategie</li>
+<li>vernachlässigt jedoch mit Absicht die Frage nach der Intention der Populisten
+<ul class="org-ul">
+<li>Ernsthaftigkeit oder lediglich als strategisches Mittel ist eher eine empirische Frage und daher ohnehin kaum zu beantworten</li>
+</ul></li>
+<li>außerdem keine Aussage über die Art und Weise der Mobilisierung durch Populisten (in Definition fuer Lateinamerika häufig)
+<ul class="org-ul">
+<li>da unklar ob wesentliche Element von Populismus an sich oder eine empirische Konsequenz</li>
+</ul></li>
+<li>keine allzustarke Fokussierung auf Populistenführer
+<ul class="org-ul">
+<li>da sonst zu starker Fokus auf "Populismusangebot" (durch Führer) und Vernachlässigung der evtl. "Populismusnachfrage" (durch Volk)</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbd76f08" class="outline-3">
+<h3 id="orgbd76f08"><span class="section-number-3">1.3</span> Defition von Demokratie</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-05-06 Sun 14:52</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
