@@ -1,0 +1,83 @@
+#+SETUPFILE: ~/.emacs.d/org-html-themes/setup/theme-readtheorg.setup
+* Harleb - Populismus als Totengräber oder mögliches Korrektiv der Demokratie?
+:PROPERTIES:
+:NOTER_DOCUMENT: Hartleb 2012_ Populismus und Demokratie.pdf
+:END:
+** Pejorative(abwertende) Verwendung
+:PROPERTIES:
+:NOTER_PAGE: 2
+:END:
+- durch Zuschreibung des Populismus, wird häufig Vorwurf einer nicht sachlich-seriösen Politik transportiert
+- in Lateinamerika wird Populismus durchaus positiv verbunden
+- in EU & USA eher diskreditierend
+** Europäischer Kontext
+:PROPERTIES:
+:NOTER_PAGE: 3
+:END:
+- vier konstitutive Dimensionen von Populismus\\
+1. Technische Dimension
+- Vereinfachung & Konstruierung eines direkten Gegensatzes zwischen homogenem "Volk" und "Establishment"
+
+2. Inhaltliche Dimension
+- "Anti-ismus", derzeit zB Antiislamismus
+  
+3. Personelle Dimension
+- eloquente, charismatische Personen
+ 
+4. Mediale Dimension
+- symbiotische Beziehung zu Massenmedien, mit dem Kalkül von Schlagzeilen
+
+Vertikale Dimension (Abgrenzung) als allgemines Merkmal von Populismus (wir gegen die da oben) und horizontale Dimension als spezifisch rechte Variante 
+** Steigbügelhalter des Extremismus?
+:PROPERTIES:
+:NOTER_PAGE: 3
+:END:
+** Zerstörer der europäischen Einigung?
+:PROPERTIES:
+:NOTER_PAGE: (4 . 0.2070063694267516)
+:END:
+- EU ohnehin nicht besonders beliebt + Krise der Eurozone, Euroskepsis
+- Rechtspopulisten lehnen generell EU nicht grundlegend ab (das Ob), sondern eher das Wie
+  - im Eigeninteresse ist eine Anpreisung der Festung Europa
+  - stoßen eher Optimisierungsprozesse an bzw forcieren diese
+- Rechtspopulisten sind i.d.R weiche Euroskeptiker (Rechtsextremismen harte)
+** Gefahr für die repräsentative Demokratie?
+:PROPERTIES:
+:NOTER_PAGE: (5 . 0.1910828025477707)
+:END:
+- Populisten fordern "Demokratisierung des politischen Systems"
+- Vorwürfe das Populismus Demokratie von innen aushöhle
+
+\rightarrow Befürchtungen bisher haltlos
+
+- von Populisten geforderte plebiszitäre Elemente sind Korrektiv
+** Gefahr für demokratischen Diskurs?
+:PROPERTIES:
+:NOTER_PAGE: (6 . 0.4299363057324841)
+:END:
+- Populisten wollen PC und kollektiven Konsens aufbrechen
+- kalkulierte Entgleisungen
+- Tabubrüche
+
+\rightarrow im diskursiven Bereich ist größte Gefahr des Populismus im Hinblick auf Minderheiten & Symbolpolitik (siehe zB Debatte um Burkaverbote)
+** Positivfunktionen
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.5414012738853503)
+:END:
+- Forcierung strengerer Integrationspolitik
+- Regierungsperformanz eher gering (keine Gefahr)
+- als Juniorparteien häufig zu moderatem Kurs gezwungen
+- mehr Macht in Opposition
+- demokratische Parteien kommen ohne Elektoratspopulismus nicht aus
+- gefährlich wird Populismus wenn er direkte Demokratie undifferenziert als Allheilmittel propagiert (Gefahr von Demagogie)
+
+** Bilanz
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.49363057324840764)
+:END:
+- Ende des politischen Gleichklangs der etablierten Parteien aufgrund von Populismus
+  - Populisten können über das Ziel hinausschießen, trotzdem mögliche kritische & aufklärende Funktion
+    - Zwang zur Selbstkorrektur
+- einige Stimmen sagen Populismus sei Gefährdung, andere sagen er balanciere zwischen Erneuerung und Gefährdung
+- vermehrter Einbezug in EU
+- die Debatte um den Rechtspopulismus nicht davon ablenken, sich mit der Zukunft der repräsentativen Demokratie, dem Verhältnis zu den Finanzmärkten so- wie neuen, für die junge Generation ansprechenden Partizipationsformen zu beschäftigen

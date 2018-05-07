@@ -2,7 +2,7 @@
 :PROPERTIES:
 :NOTER_DOCUMENT: MuddeRoviraKaltwasser 2012_ 205-222.pdf
 :END:
-** Introduction
+** Einleitung
 :PROPERTIES:
 :NOTER_PAGE: 5
 :END:
@@ -14,8 +14,68 @@ Analyse von 8 überregionalen Fallstudien
 # 1. Konzept und Theorien des theoret Frameworks und Validität
 # 2. Von der Empirie zur Theorie: Erkenntnisse der 8 Fallstudien
 # 3. Fazit und Anregungen für weitere Forschung
-** Konzept und Hypothesen
+** Rückgriff auf Konzept und Hypothesen und Rückschlüsse
 :PROPERTIES:
 :NOTER_PAGE: 6
 :END:
 - minimale Definitionen/Konzepte von Demokratie & Populismus, um konzeptuellen Geltungsbereich zu erweitern
+  - Nachteil, dass sie nicht genug Tiefe haben, um relevante Aspekte/Merkmale eines Phänomen zu unterscheiden
+- "das Volk" wird in wohlhabenden Gesellschaften eher ethnisch definiert und in ärmeren Gesellschaften eher sozio-ökonomisch
+- Populismus lässt wenig Raum für Pluralismus und öffentliche Kritik / pol Wettbewerb
+- Populisten beziehen sich häufig auf 2 Demokratiedimensionen:
+  - Kritik an schlechten *Ergebnissen* des Regimes
+  - Vorlagen für Änderungen an demokr *Verfahren* (Prozesse/Prozere/Abläufen)
+  - das erklärt warum sie in der Theorie Plesbizite und Formen direkter Demokr bevorzugen
+- Populismus ist nicht gegen repräsentative Demokratie, sondern appelliert für extreme Demokratie, indem sie allen ungewählten Körperschaften/Institutionen ggü enorm kritisch sind
+
+#+attr_latex: :align c|c|c
+| Demokratie \textbackslash{Populismus} | in Opposition                            | in Regierung                                            |
+|---------------------------------------+------------------------------------------+---------------------------------------------------------|
+| konsolidiert                          | kein großer Einfluss auf Demokr.qualität |                                                         |
+| nicht konsolidiert                    | kein großer Einfluss auf Demokr.qualität | gemischte Ergebnisse (demokr Breakdown und pos Effekte) |
+
+** Von der Empirie zur Theorie: Unerwartete Befunde
+:PROPERTIES:
+:NOTER_PAGE: 9
+:END:
+Einsichten in unerwartete Bereiche:
+*** Populismus auf subnationaler(lokaler) Ebene
+- in Mexiko hatte Populist Lopez Obrador auf lokaler Ebene (Mexiko City) positive Wirkung, negative dann während des Präsidentenwahlkampfes (Korruption, Blockaden)
+- Haiders negative Bestrebungen (Ausgrenzung von Sloveniern) auf lokaler Ebene in Carinthia wurden durch Verfassungsgericht begraben\\
+\rightarrow Populismus an der Macht auf lokaler Ebene wenig einflussreich auf Qualität der Demokratie (bzw weniger als auf nationaler Ebene)
+  - weil auf regionaler Ebene immernoch die nationale Ebene übergeordnet ist
+  - und weil die regionale Ebene noch von nationaler Ebene entfernt ist begrenzen sich die Populisten und halten sich zurück (um mehr Stimmen abzufangen)
+** Reaktionen auf Populismus
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.3673469387755102)
+:END:
+Herauskristillasierung von vier Strategien (treten in gemischter und nicht in Reinform auf)
+- Isolation
+  - Leugnung jeglicher Legitimät der populistschen Behauptungen
+  - Dämonisierung der Populisten
+- Konfrontation
+  - nicht nur Abstreiten der Behauptungen sondern auch Attackierung der Populisten
+- Adaption
+  - gewisse Legitimät der Forderungen der Populisten wird eingeräumt
+  - Populismus in gewisser Weise eher als Mittel zur Verbesserung
+  - Anregung evtl. Lernprozesse, durch die etablierte Parteien sich erneuern & anpassen
+- Sozialisierung
+  - komplementär zur Adaption
+  - kurz und langristige Maßnahmen zur Aufnahme von Populisten
+  - "Pazifismus durch Deradikalisierung"
+** "Populismus führe zu kompetetivem Autoritarismus" (Levitski-Loxton)
+:PROPERTIES:
+:NOTER_PAGE: (10 . 0.1836734693877551)
+:END:
+** Populismus und die internationale Ebene
+:PROPERTIES:
+:NOTER_PAGE: (11 . 0.5918367346938775)
+:END:
+- Verteidigung der Demokratie nicht einfach auf internationaler Ebene
+  - internationales Eingreifen kann kontraeffektiv sein (Anti-EU oder Americanismo)
+** Anregung für zukünftige Forschung
+:PROPERTIES:
+:NOTER_PAGE: 12
+:END:
+- Diffusion von Populismus (Ausbreitung von einer Gesellschaft auf andere)
+- (Partei-)Organisation von Populisten
