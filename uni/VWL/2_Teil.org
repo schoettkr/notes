@@ -140,7 +140,7 @@ Das Modell besteht aus folgenden Arten von Gleichungen:
 
 Die Modellgleichungen enthalten:
 - endogene Variablen, hier: C, Y, Z
-- exogene Variablen, hier: \bar{I}, \bar{G}, \bar{T} 
+- exogene Variablen, hier: $\bar{I}, \bar{G}, \bar{T}$
 - Parameter, hier: c_0, c_1
   
 In Modellen analysieren wir meist nur gleichgewichtige Situationen.
@@ -149,10 +149,38 @@ Die Gleichgewichtsbedingung kann unter Einführung zwei neuer Begriffe wiefolgt 
 
 \begin{equation*}
 \begin{aligned}
-Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}
+Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}\\
+Y = c_0 + c_1*Y - c_1 * \bar{T}+\bar{I}+\bar{G} & \qquad |-(c_1*Y) \nonumber\\
+Y - c_1 * Y = c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}\\
+(1 - c_1)* Y = c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}  & \qquad |:(1-c_1) \nonumber\\
+Y = \frac{c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}}{1-c_1} & \qquad | \text{aus Bruch vorziehen}\\
+Y = \frac{1}{1-c_1}*[c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}]
+\end{aligned}
+\end{equation*}
+- $\frac{1}{1-c_1}$ = Multiplikator
+- $[c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}]$ = autonome Ausgaben
+
+*** Graphische Analyse
+\rightarrow Siehe handschriftliches Blatt
+
+*** Der Multiplikatoreffekt
+Der Multiplikator ist die Summe sukzessiver Anstiege der Produktion, die aus einem Anstieg der Nachfrage resultieren
+
+Beispielsweise eine Erhöhung der autonomen Staatsausgaben: $\Delta Y_1 = \Delta \bar{G}$
+
+1. Folgerunde: Erhöhung des Konsums: $\Delta Y_2 = \Delta C_1 = c_1 * \Delta Y_1 = c_1*\Delta \bar{G}$
+
+2. Folgerunde: Erhöhung des Konsums: $\Delta Y_3 = \Delta C_2 = c_{1}^{2} * \Delta Y_2 = c_{1}^{2} *\Delta \bar{G}$
+
+..es folgen weitere Runden, insgesamt ergibt sich: Anstoß + induzierte Konsumnachfrage
+
+Steigt die autonome Nachfrage um 1 Mio., dann ergibt sich nach $n$ Runden eine Erhöhung der Produktion um 1 Mio. /multipliziert/ mit der folgenden Summe: $1+ c_1 + c_{1}^{2} + ... + c_{1}^{n}$. Das ist eine geometrische Reihe für die bei $c_1<1$ gilt:
+
+\begin{equation*}
+\begin{aligned}
+\lim\limits_{n \to \infty}1+ c_1 + c_{1}^{2} + c_{1}^{3} + ... + c_{1}^{n} = \frac{1}{1-c_1}\
 \end{aligned}
 \end{equation*}
 
-*** Graphische Analyse
-
-
+*** Die verbale Analyse
+F.58 (62)

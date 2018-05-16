@@ -1,4 +1,4 @@
-% Created 2018-05-05 Sat 21:01
+% Created 2018-05-16 Wed 10:36
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -28,7 +28,7 @@
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.0.91 (Org mode 9.1.6)}, 
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.9)}, 
  pdflang={English}}
 \begin{document}
 
@@ -37,7 +37,7 @@
 \newpage
 
 \section{Die kurze Frist}
-\label{sec:org9854bb2}
+\label{sec:org5c3644e}
 \begin{itemize}
 \item kombinierter Einsatz von Geld- und Fiskalpolitik\\
 \end{itemize}
@@ -77,7 +77,7 @@ Güternachfrage hängt von vielen Faktoren ab, u.a. vom \textbf{Gütermarkt} und
 \end{enumerate}
 
 \subsection{Der Gütermarkt}
-\label{sec:orgafef8c4}
+\label{sec:org35a8c39}
 Markteilnehmer auf em Gütermarkt sind die volkswirtschaftl. Sektoren (Haushalte, Staat, Unternehmen)
 
 \textbf{Makroökonomischer Gütermarkt=} (gedachte) Zusammenfassung aller Güterkäufe und -verkäufe in einem Land innerhalb 1 Periode (\(\approx\) BIP)
@@ -101,14 +101,14 @@ Die Importe (IM) entsprechen dem Kauf ausländischer Waren \& Dienstleistungen d
 \end{itemize}
 
 \subsubsection{Die gesamtwirtschaftliche Güternachfrage}
-\label{sec:org8cda68d}
+\label{sec:orgb483c0a}
 Ausgehend von der Zusammensetzung des Gütermarktes, also der Zusammenfassung aller Güterkäufe und -verkäufe, was wiederum etwa dem BIP entspricht, lässt sich die \textbf{Güternachfrage Z} wie folgt beschreiben: \(Z \equiv C + I + G + (X - IM)\). Dies ist zentral, da wir in der kurzen Frist ja den Fokus auf die Nachfrage und ihren Einfluss legen.
 In einer geschlossenen Marktwirtschaft (keine Ex-/Importe) gilt dann: \(Z \equiv C + I+ G\).
 
 \paragraph{Aufschlüsselung der Bestandteile von Güternachfrage Z}
 \begin{enumerate}
 \item Privater Konsum (C)
-\label{sec:org8ef503d}
+\label{sec:org925c7cb}
 \begin{itemize}
 \item Konsumentenverhalten wird durch \textbf{Konsumfunktion} C(Y\(_{\text{v}}\)) beschrieben
 \item Konsum C steigt wenn verfügbares Einkommen Y\(_{\text{v}}\) zunimmt: \(C = C(Y_v) \rightarrow \frac{\partial C}{\partial Y_v} > 0\)
@@ -165,11 +165,11 @@ Der Konsum beim Einkommen von Null (autonomer Konsum) sinkt durch die Besteuerun
   \end{axis}
 \end{tikzpicture}
 \item Investitionen (I)
-\label{sec:orgda9bc2b}
+\label{sec:org282826b}
 \newline
 Investitionen werden in diesem Modell als gegeben betrachtet, d.h als exogen angenommen. Gekennzeichnet wird dies durch einen Strich über der Variable: \(I = \bar{I}\) .
 \item Staatsausgaben (G) und Steuern (T)
-\label{sec:org60359de}
+\label{sec:orgf0c40b1}
 \newline
 Basierend auf dem Regierungsprogramm ergibt sich ein bestimmtes Ausmaß an Staatsausgaben und Steuern, in diesem Sinn sind beide ebenfalls exogen: \(G = \bar{G}\) und \(T = \bar{T}\) (T sind Steuern minus Transfers).
 
@@ -177,7 +177,7 @@ Laut Regierungsprogramm sind die Staatsausgaben durch Steuern finanziert, daher 
 Werden Staatsausgaben oder Steuern verändert, um die gesamtwirtschaftliche Nachfrage zu beeinflussen, spricht man von Fiskalpolitik
 \end{enumerate}
 \subsubsection{Gleichgewicht auf dem Gütermarkt (Bestimmung der Produktion)}
-\label{sec:org1be3fb2}
+\label{sec:org52f8b4c}
 Ein \textbf{Gleichgewicht auf dem Gütermarkt} stellt sich dann ein, wenn die \textbf{Güterproduktion Y} der \textbf{Güternachfrage Z} entspricht: \(Y = Z\). Dies ist eine Gleichgewichtsbedingung. Somit gilt (für \(X=IM=0\)):
 \begin{equation*}
 \begin{aligned}
@@ -194,7 +194,7 @@ Im Gleichgewicht entspricht die Produktion Y (linke Seite) der Nachfrage (rechte
 Die Gleichgewichtsbedingung spiegelt die zentrale Modellannahme wieder, dass die Produktion nur durch die Nachfrage bestimmt wird (nachfrageseitiges Modell).
 
 \subsubsection{Gleichungen des Gütermarktmodells}
-\label{sec:org19b099f}
+\label{sec:orgea6a90f}
 Das Modell besteht aus folgenden Arten von Gleichungen:
 \begin{itemize}
 \item Definitionsgleichungen, hier: \(Z \equiv C + I + G\) und \(Y_v \equiv Y - T\)
@@ -205,7 +205,7 @@ Das Modell besteht aus folgenden Arten von Gleichungen:
 Die Modellgleichungen enthalten:
 \begin{itemize}
 \item endogene Variablen, hier: C, Y, Z
-\item exogene Variablen, hier: \bar{I}, \bar{G}, \bar{T}
+\item exogene Variablen, hier: \(\bar{I}, \bar{G}, \bar{T}\)
 \item Parameter, hier: c\(_{\text{0}}\), c\(_{\text{1}}\)
 \end{itemize}
 
@@ -215,7 +215,42 @@ Die Gleichgewichtsbedingung kann unter Einführung zwei neuer Begriffe wiefolgt 
 
 \begin{equation*}
 \begin{aligned}
-Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}
+Y = c_0 + c_1*(Y-\bar{T})+\bar{I}+\bar{G}\\
+Y = c_0 + c_1*Y - c_1 * \bar{T}+\bar{I}+\bar{G} & \qquad |-(c_1*Y) \nonumber\\
+Y - c_1 * Y = c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}\\
+(1 - c_1)* Y = c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}  & \qquad |:(1-c_1) \nonumber\\
+Y = \frac{c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}}{1-c_1} & \qquad | \text{aus Bruch vorziehen}\\
+Y = \frac{1}{1-c_1}*[c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}]
+\end{aligned}
+\end{equation*}
+\begin{itemize}
+\item \(\frac{1}{1-c_1}\) = Multiplikator
+\item \([c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}]\) = autonome Ausgaben
+\end{itemize}
+
+\subsubsection{Graphische Analyse}
+\label{sec:org1c285a5}
+\(\rightarrow\) Siehe handschriftliches Blatt
+
+\subsubsection{Der Multiplikatoreffekt}
+\label{sec:orgcb6840a}
+Der Multiplikator ist die Summe sukzessiver Anstiege der Produktion, die aus einem Anstieg der Nachfrage resultieren
+
+Beispielsweise eine Erhöhung der autonomen Staatsausgaben: \(\Delta Y_1 = \Delta \bar{G}\)
+
+\begin{enumerate}
+\item Folgerunde: Erhöhung des Konsums: \(\Delta Y_2 = \Delta C_1 = c_1 * \Delta Y_1 = c_1*\Delta \bar{G}\)
+
+\item Folgerunde: Erhöhung des Konsums: \(\Delta Y_3 = \Delta C_2 = c_{1}^{2} * \Delta Y_2 = c_{1}^{2} *\Delta \bar{G}\)
+\end{enumerate}
+
+..es folgen weitere Runden, insgesamt ergibt sich: Anstoß + induzierte Konsumnachfrage
+
+Steigt die autonome Nachfrage um 1 Mio., dann ergibt sich nach \(n\) Runden eine Erhöhung der Produktion um 1 Mio. \emph{multipliziert} mit der folgenden Summe: \(1+ c_1 + c_{1}^{2} + ... + c_{1}^{n}\). Das ist eine geometrische Reihe für die bei \(c_1<1\) gilt:
+
+\begin{equation*}
+\begin{aligned}
+\lim\limits_{n \to \infty}1+ c_1 + c_{1}^{2} + c_{1}^{3} + ... + c_{1}^{n} = \frac{1}{1-c_1}\
 \end{aligned}
 \end{equation*}
 \end{document}
