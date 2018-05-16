@@ -183,4 +183,42 @@ Steigt die autonome Nachfrage um 1 Mio., dann ergibt sich nach $n$ Runden eine E
 \end{equation*}
 
 *** Die verbale Analyse
-F.58 (62)
+Kurzfristig (in der kurzen Frist) wird die Produktion von der Nachfrage bestimmt
+- die Nachfrage hängt ihrerseitz vom Einkommen ab Z(Y)
+
+Ein Anstieg der Nachfrage (zB Anstieg der Staatsausgaben) führt zu Anstieg der Produktion und zu einem entsprechenden Anstieg des Einkommens
+- diese Einkommenserhöhung induziert einen weiteren Anstieg der Nachfrage \rightarrow dies führt wiederum zu einer weiteren Produktionssteigerung usw.
+
+Im Endergebnis fällt der Anstieg weit größer aus als die ursprüngliche Verschiebung der Nachfrage und zwar genau um den Faktor, der dem Multiplikator entspricht
+
+Wie lange dauert es bis dieser Anpassungsprozess abgeschlossen ist?
+Nach einem Anstieg der Konsumausgaben wird nicht sofort das neue Gleichgewicht erreicht. Es findet vielmehr ein allmählicher Prozess der Anpassung statt.
+- Geschwindigkeit hängt davon ab wie schnell die Firmen auf die neue Situation mit Produktionsanpassungen reagieren
+  
+Die formale Beschreibung dieser Anpassung der Produktion über die Zeit wird als *Dynamik* der Anpassung bezeichnet.
+
+*** Investition gleich Ersparnis
+Rest des verfügbaren Einkommens, der nicht für Konsum ausgegeben wird, wird gespart:
+
+- Definitionsgleichung, hier: $S = Y_v - C$
+- Verhaltensgleichung (keynesianische Sparfunktion), hier:
+\begin{equation*}
+\begin{aligned}
+S = Y - T - c_0 - c_1(Y-T) \\
+= -c_0 + (1-c_1)*(Y-T)
+= -c_0 + (1-c_1) * Y_v
+\end{aligned}
+\end{equation*}
+- Gleichgewichtsbedingung, hier: 
+\begin{equation*}
+\begin{aligned}
+Y = C + I + G
+Y - T -C = I + G - T
+S = I + G - T
+I = S + (G-T)
+\end{aligned}
+\end{equation*}
+S = Ersparnis privater Haushalte, (T - G) = Ersparnis des Staates
+
+*** Ist die Regierung allmächtig?
+F. 51
