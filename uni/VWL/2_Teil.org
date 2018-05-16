@@ -2,6 +2,7 @@
 #+LATEX_HEADER: \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
 #+LATEX_HEADER: \renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
 #+LATEX_HEADER: \usepackage[parfill]{parskip}
+#+LATEX_HEADER: \usepackage{color}
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{pgfplots}
@@ -220,5 +221,26 @@ I = S + (G-T)
 \end{equation*}
 S = Ersparnis privater Haushalte, (T - G) = Ersparnis des Staates
 
-*** Ist die Regierung allmächtig?
-F. 51
+*** Ist die Regierung allmächtig? Eine Warnung
+**** Kann die Regierung Einfluss nehmen?
+
+Fiskalpolitik = Teil der Finanzpolitik, der dem Stabilisierungsziel gewidmet ist; die Variation von Staatsausgaben bzw -einnahmen zur Beeinflussung der aggregierten Güternachfrage
+[[./budgethaushalt.png]]
+
+$Y = \frac{1}{1-c_1}*[c_0-c_1\textcolor{magenta}{\bar{T}} + \bar{I} + \textcolor{magenta}{\bar{G}}]$
+
+direkte Maßnahmen:
+- Änderung der Staatsausgaben
+- Änderung der Steuern bzw der Transfers
+
+indirekte Maßnahmen:
+- Investitionszulagen
+- Abschreibungsvergünstigungen
+
+**** Wer ist für Fiskalpolitik verantwortlich?
+
+Staat = Institution mit hoheitlicher Gewalt, d.h. Staat ist legitimiert & fähig Zwangsmaßnahmen auszuüben
+
+Staatsquote = $\frac{\text{Ausgaben der öffentl. Haushalte}}{\text{Bruttoinlandsprodukt}}$ in Prozent
+
+F.54

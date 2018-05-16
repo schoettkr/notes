@@ -1,4 +1,4 @@
-% Created 2018-05-16 Wed 13:31
+% Created 2018-05-16 Wed 14:20
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -18,6 +18,7 @@
 \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\Roman{subsubsection}}
 \usepackage[parfill]{parskip}
+\usepackage{color}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{pgfplots}
@@ -37,7 +38,7 @@
 \newpage
 
 \section{Die kurze Frist}
-\label{sec:orgfdf70e0}
+\label{sec:org6995476}
 \begin{itemize}
 \item kombinierter Einsatz von Geld- und Fiskalpolitik\\
 \end{itemize}
@@ -77,7 +78,7 @@ Güternachfrage hängt von vielen Faktoren ab, u.a. vom \textbf{Gütermarkt} und
 \end{enumerate}
 
 \subsection{Der Gütermarkt}
-\label{sec:orga35a8ac}
+\label{sec:org0a96a97}
 Markteilnehmer auf em Gütermarkt sind die volkswirtschaftl. Sektoren (Haushalte, Staat, Unternehmen)
 
 \textbf{Makroökonomischer Gütermarkt=} (gedachte) Zusammenfassung aller Güterkäufe und -verkäufe in einem Land innerhalb 1 Periode (\(\approx\) BIP)
@@ -101,14 +102,14 @@ Die Importe (IM) entsprechen dem Kauf ausländischer Waren \& Dienstleistungen d
 \end{itemize}
 
 \subsubsection{Die gesamtwirtschaftliche Güternachfrage}
-\label{sec:orge18aa16}
+\label{sec:orgff4e65e}
 Ausgehend von der Zusammensetzung des Gütermarktes, also der Zusammenfassung aller Güterkäufe und -verkäufe, was wiederum etwa dem BIP entspricht, lässt sich die \textbf{Güternachfrage Z} wie folgt beschreiben: \(Z \equiv C + I + G + (X - IM)\). Dies ist zentral, da wir in der kurzen Frist ja den Fokus auf die Nachfrage und ihren Einfluss legen.
 In einer geschlossenen Marktwirtschaft (keine Ex-/Importe) gilt dann: \(Z \equiv C + I+ G\).
 
 \paragraph{Aufschlüsselung der Bestandteile von Güternachfrage Z}
 \begin{enumerate}
 \item Privater Konsum (C)
-\label{sec:org468efc9}
+\label{sec:orga7f1072}
 \begin{itemize}
 \item Konsumentenverhalten wird durch \textbf{Konsumfunktion} C(Y\(_{\text{v}}\)) beschrieben
 \item Konsum C steigt wenn verfügbares Einkommen Y\(_{\text{v}}\) zunimmt: \(C = C(Y_v) \rightarrow \frac{\partial C}{\partial Y_v} > 0\)
@@ -165,11 +166,11 @@ Der Konsum beim Einkommen von Null (autonomer Konsum) sinkt durch die Besteuerun
   \end{axis}
 \end{tikzpicture}
 \item Investitionen (I)
-\label{sec:orgb2556f7}
+\label{sec:org32d709f}
 \newline
 Investitionen werden in diesem Modell als gegeben betrachtet, d.h als exogen angenommen. Gekennzeichnet wird dies durch einen Strich über der Variable: \(I = \bar{I}\) .
 \item Staatsausgaben (G) und Steuern (T)
-\label{sec:org8f4c00e}
+\label{sec:orgb8188e7}
 \newline
 Basierend auf dem Regierungsprogramm ergibt sich ein bestimmtes Ausmaß an Staatsausgaben und Steuern, in diesem Sinn sind beide ebenfalls exogen: \(G = \bar{G}\) und \(T = \bar{T}\) (T sind Steuern minus Transfers).
 
@@ -177,7 +178,7 @@ Laut Regierungsprogramm sind die Staatsausgaben durch Steuern finanziert, daher 
 Werden Staatsausgaben oder Steuern verändert, um die gesamtwirtschaftliche Nachfrage zu beeinflussen, spricht man von Fiskalpolitik
 \end{enumerate}
 \subsubsection{Gleichgewicht auf dem Gütermarkt (Bestimmung der Produktion)}
-\label{sec:orgc04b6d5}
+\label{sec:org4053609}
 Ein \textbf{Gleichgewicht auf dem Gütermarkt} stellt sich dann ein, wenn die \textbf{Güterproduktion Y} der \textbf{Güternachfrage Z} entspricht: \(Y = Z\). Dies ist eine Gleichgewichtsbedingung. Somit gilt (für \(X=IM=0\)):
 \begin{equation*}
 \begin{aligned}
@@ -194,7 +195,7 @@ Im Gleichgewicht entspricht die Produktion Y (linke Seite) der Nachfrage (rechte
 Die Gleichgewichtsbedingung spiegelt die zentrale Modellannahme wieder, dass die Produktion nur durch die Nachfrage bestimmt wird (nachfrageseitiges Modell).
 
 \subsubsection{Gleichungen des Gütermarktmodells}
-\label{sec:org996f1c3}
+\label{sec:orgc81c952}
 Das Modell besteht aus folgenden Arten von Gleichungen:
 \begin{itemize}
 \item Definitionsgleichungen, hier: \(Z \equiv C + I + G\) und \(Y_v \equiv Y - T\)
@@ -229,11 +230,11 @@ Y = \frac{1}{1-c_1}*[c_0 - c_1 * \bar{T}+\bar{I}+\bar{G}]
 \end{itemize}
 
 \subsubsection{Graphische Analyse}
-\label{sec:orgb97c366}
+\label{sec:org5109911}
 \(\rightarrow\) Siehe handschriftliches Blatt
 
 \subsubsection{Der Multiplikatoreffekt}
-\label{sec:org98ab80d}
+\label{sec:org3618b99}
 Der Multiplikator ist die Summe sukzessiver Anstiege der Produktion, die aus einem Anstieg der Nachfrage resultieren
 
 Beispielsweise eine Erhöhung der autonomen Staatsausgaben: \(\Delta Y_1 = \Delta \bar{G}\)
@@ -255,7 +256,7 @@ Steigt die autonome Nachfrage um 1 Mio., dann ergibt sich nach \(n\) Runden eine
 \end{equation*}
 
 \subsubsection{Die verbale Analyse}
-\label{sec:org23f175c}
+\label{sec:org218c0f8}
 Kurzfristig (in der kurzen Frist) wird die Produktion von der Nachfrage bestimmt
 \begin{itemize}
 \item die Nachfrage hängt ihrerseitz vom Einkommen ab Z(Y)
@@ -277,15 +278,63 @@ Nach einem Anstieg der Konsumausgaben wird nicht sofort das neue Gleichgewicht e
 Die formale Beschreibung dieser Anpassung der Produktion über die Zeit wird als \textbf{Dynamik} der Anpassung bezeichnet.
 
 \subsubsection{Investition gleich Ersparnis}
-\label{sec:orgaa8b106}
+\label{sec:org4fb2a0a}
 Rest des verfügbaren Einkommens, der nicht für Konsum ausgegeben wird, wird gespart:
 
 \begin{itemize}
 \item Definitionsgleichung, hier: \(S = Y_v - C\)
-\item Verhaltensgleichung (keynesianische Sparfunktion), hier: \(S = Y - T - c_0 - c_1(Y-T)\) \\
+\item Verhaltensgleichung (keynesianische Sparfunktion), hier:
 \end{itemize}
-\(= -c_0 + (1-c_1)*(Y-T)\)
+\begin{equation*}
+\begin{aligned}
+S = Y - T - c_0 - c_1(Y-T) \\
+= -c_0 + (1-c_1)*(Y-T)
+= -c_0 + (1-c_1) * Y_v
+\end{aligned}
+\end{equation*}
 \begin{itemize}
-\item Gleichgewichtsbedingung, hier: \(Y=Z\) (Produktion = Güternachfrage)
+\item Gleichgewichtsbedingung, hier:
 \end{itemize}
+\begin{equation*}
+\begin{aligned}
+Y = C + I + G
+Y - T -C = I + G - T
+S = I + G - T
+I = S + (G-T)
+\end{aligned}
+\end{equation*}
+S = Ersparnis privater Haushalte, (T - G) = Ersparnis des Staates
+
+\subsubsection{Ist die Regierung allmächtig? Eine Warnung}
+\label{sec:org5a19051}
+\begin{enumerate}
+\item Kann die Regierung Einfluss nehmen?
+\label{sec:org08c7616}
+
+Fiskalpolitik = Teil der Finanzpolitik, der dem Stabilisierungsziel gewidmet ist; die Variation von Staatsausgaben bzw -einnahmen zur Beeinflussung der aggregierten Güternachfrage
+\begin{center}
+\includegraphics[width=.9\linewidth]{./budgethaushalt.png}
+\end{center}
+
+\(Y = \frac{1}{1-c_1}*[c_0-c_1\textcolor{magenta}{\bar{T}} + \bar{I} + \textcolor{magenta}{\bar{G}}]\)
+
+direkte Maßnahmen:
+\begin{itemize}
+\item Änderung der Staatsausgaben
+\item Änderung der Steuern bzw der Transfers
+\end{itemize}
+
+indirekte Maßnahmen:
+\begin{itemize}
+\item Investitionszulagen
+\item Abschreibungsvergünstigungen
+\end{itemize}
+
+\item Wer ist für Fiskalpolitik verantwortlich?
+\label{sec:org6d0ab41}
+
+Staat = Institution mit hoheitlicher Gewalt, d.h. Staat ist legitimiert \& fähig Zwangsmaßnahmen auszuüben
+
+Staatsquote = \(\frac{\text{Ausgaben der öffentl. Haushalte}}{\text{Bruttoinlandsprodukt}}\) in Prozent
+\end{enumerate}
 \end{document}
