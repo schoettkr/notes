@@ -6,6 +6,7 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{pgfplots}
+#+LATEX_HEADER: \usepackage{mathtools}
 
 \newpage
 
@@ -242,5 +243,57 @@ indirekte Maßnahmen:
 Staat = Institution mit hoheitlicher Gewalt, d.h. Staat ist legitimiert & fähig Zwangsmaßnahmen auszuüben
 
 Staatsquote = $\frac{\text{Ausgaben der öffentl. Haushalte}}{\text{Bruttoinlandsprodukt}}$ in Prozent
+**** Kreditfinanzierte Erhöhung der Staatsausgaben
 
-F.54
+Eine Erhöhung der Staatsausgaben G erhöht die Nachfrage (\rightarrow Z-Kurve verschiebt sich nach oben), sodass Einkommen steigt und zwar gemäß dem Multiplikator um $\frac{\delta Y}{\delta G} = \frac{1}{1-c_1}$.
+
+Da die zusätzlichen Ausgaben kreditfinanziert werden, wird die staatliche Ersparnis (T - G) kleiner. Dies wird aber durch die private Ersparnis S ausgeglichen, die mit dem Einkommen ansteigt.
+
+Da die erhöhten Staatsausgaben kreditfinanziert werden, vergrößert sich der Schuldenstand des Staates (nicht in unserem Modell enthalten!).
+**** Steuerfinanzierte Erhöhung der Staatsausgaben
+
+Eine Erhöhung der Staatsausgaben G wird durch eine gleichzeitige Erhöhung der Steuern T finanziert:
+\begin{equation*}
+\begin{aligned}
+Y = \frac{1}{1-c_1}*[c_0-c_1*\bar{T}+\bar{I}+\bar{G}]\\
+Y = \frac{1}{1-c_1}*[c_0+\bar{I}+(1 - c_1)*\bar{G}]
+\end{aligned}
+\end{equation*}
+Auch in der neuen Situation gilt G = T und damit bei steuerfinanzierten Änderungen von G: $\frac{\delta Y}{\delta G} = \frac{1-c_1}{1-c_1} = 1$.
+Der Multiplikator ist somit lediglich 1 und damit kleiner als bei kreditfinanzierten Staatsausgaben. Das ergibt sich auch bei separater Betrachtung der Multiplikatoren:
+\begin{equation*}
+\begin{aligned}
+{\underbrace{\textstyle \frac{1}{1-c_1}}_{\mathclap{\text{ Staatsausgabenmultiplikator }}}} 
++
+{\overbrace{\textstyle \frac{-c_1}{1-c_1}}^{\mathclap{\text{ Steuermultiplikator }}}}
+=
+1
+\end{aligned}
+\end{equation*}
+
+**** Automatische Stabilisatoren
+
+Idee: Konjunkturelle Schwankungen der Steuereinnahmen stabilisieren Nachfrage $Z = c_0 + c_1 *(Y-T)+\bar{I}+\bar{G}$. Steuern (und Transfers) hängen endogen vom Einkommen ab: $T= t*Y$, mit $t=\text{Steuersatz} < 1$
+# check if this is correct
+\begin{equation*}
+\begin{aligned}
+Y = Z = c_0 + c_1- c_1  t Y + \bar{I} + \bar{G} & \qquad |+(c_1*t*Y),|-c_1 \nonumber\\
+Y - c_1 + c_1*t*Y = c_0 + \bar{I} + \bar{G}\\
+Y (1-c_1+c_1t) = c_0 + \bar{O} + \bar{G}\\
+Y = \frac{1}{1-c_1+c_1t}*[c_0+\bar{I}+\bar{G}]
+\end{aligned}
+\end{equation*}
+
+Der Multiplikator wird kleiner. Bei exogenen Schocks in $\bar{I}$ oder c_o fallen Schwankungen geringer aus.
+
+**** Probleme bei Umsetzung direkter Nachfragesteuerung
+
+- Staatsausgaben oder Steuern rasch zu ändern ist nahezu unmöglich
+- aufgrund komplexer Prozesse sind Auswirkungen auf Konsum, Investitionen, Importe etc. nur mit großer Unsicherheit zu prognostizieren
+- Erwartungen spielen eine große Rolle
+- empirisch ermittelte Multiplikatoren sind viel kleiner als im Modell und teilweise sogar < 1
+- das Ziel eines bestimmten Produktionsniveaus kann unerwünschte Nebenwirkungen nach sich ziehen (zB Preissteigerungen)
+- ein hohes Budgetdefizit & hohe Staatsverschuldung kann langfristig schädliche Effekte auslösen
+
+** Geld- und Finanzmärkte
+F.62
