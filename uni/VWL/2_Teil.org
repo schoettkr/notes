@@ -296,4 +296,41 @@ Der Multiplikator wird kleiner. Bei exogenen Schocks in $\bar{I}$ oder c_o falle
 - ein hohes Budgetdefizit & hohe Staatsverschuldung kann langfristig schädliche Effekte auslösen
 
 ** Geld- und Finanzmärkte
-F.62
+In diesem Kapitel geht es um das *Gleichgewicht* auf *Geld-* und *Finanzmärkten* und die *Bestimmung des Zinssatzes*.
+
+*Geld* kann für Transaktionen (zB Kauf/Verkauf) verwendet werden. Es gibt zwei Arten von Geld:
+- Bargeld (Münzen und Banknoten)
+- Sichtguthaben (Girokonten)
+  
+Geld kann auch zur Wertaufbewahrung verwendet werden. Da es aber keine Zinsen bringt, werden meist andere Formen der Wertaufbewahrung vorgezogen.
+
+*Festverzinsliche Wertpapiere* (Bonds) bringen einen positiven Zinssatz i, können aber nicht für Transaktionen verwendet werden.
+
+*Semantische Fallen:* Geld, Einkommen und Vermögen
+- Einkommen besteht aus der Arbeitsvergütung & Kapitalerträgen in Form von Zinsen & Dividenden.
+  - wird in Einheiten pro Zeiteinheit ausgedrückt, es handelt sich also um eine Stromgröße
+- Ersparnis ist der Teil des Einkommens nach Abzug der Steuern, der nicht ausgegeben wird
+  - ebenfalls eine Stromgröße
+- Finanzvermögen (oder einfach Vermögen) ist Wert aller Finanzanlagen abzüglich aller Verbindlichkeiten
+  - Bestand an Vermögen zu einem gegebenen Zeitpunkt, also eine Bestandsgröße
+- Finanzanlagen, die man direkt zum Kauf von Gütern einsetzen kann, werden Geld genannt
+  - Geld beinhaltet Bargeld & Buchgeld (Sichteinlagen)
+  - ist auch eine Bestandsgröße
+- unter Investitionen verstehen Ökonomen den Kauf von neuen Anlagegütern (Maschinen, Fabriken, Bürogebäude), der Kauf von Aktien oder anderer Finanzanlagen wird dagegen als Finanzinvestition bezeichnet
+  
+Das Finanzvermögen W der Haushalte setzt sich zusammen aus Geldvermögen und Bonds. Geld wird i.d.R durch das Symbol M gekennzeichnet, Bonds(B) ist der Bestand an festverzinslichen Wertpapieren. Sie habenn den Preis p_B .
+\begin{equation*}
+\begin{aligned}
+W = M + p_B * B
+\end{aligned}
+\end{equation*}
+Haushalte haben darüber zu entscheiden, welchen Teil ihres Vermögens sie in Form von Geld und welchen in Form von Bonds halten. Geld hat den Vorteil der Liquidität, Bonds den eines Zinsertrages. Die Aufteilung ist abhängig von Transaktionsvolumen und -häufigkeit, sowie dem Zinssatz auf Wertpapiere
+*** Die Geldnachfrage
+Die Geldnachfrage M^d...
+- ...steigt proportional mit dem Nominaleinkommen ($PY$)
+- hängt negativ vom Zinssatz i ab (wobei L(i) eine Funktion des Zinssatzes ist)
+\begin{equation*}
+\begin{aligned}
+M^d = PY*L(i)
+\end{aligned}
+\end{equation*}
