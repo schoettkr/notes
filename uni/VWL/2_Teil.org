@@ -328,9 +328,54 @@ Haushalte haben darüber zu entscheiden, welchen Teil ihres Vermögens sie in Fo
 *** Die Geldnachfrage
 Die Geldnachfrage M^d...
 - ...steigt proportional mit dem Nominaleinkommen ($PY$)
-- hängt negativ vom Zinssatz i ab (wobei L(i) eine Funktion des Zinssatzes ist)
+- ...hängt negativ vom Zinssatz i ab (wobei L(i) eine Funktion des Zinssatzes ist)
 \begin{equation*}
 \begin{aligned}
 M^d = PY*L(i)
 \end{aligned}
 \end{equation*}
+
+*Die Ableitung der Geldnachfrage*\\
+Für ein gegebenenes Nominaleinkommen $P_1 Y_1$ erhöht ein niedriger Zinssatz die Geldnachfrage. 
+Mit steigendem Zinsatz geht die Liquiditätspräferenz (Präferes für "Flüssiges" also Geld) und damit auch die Geldnachfrage zurück. Screenshot 71
+
+Bei jedem gegebenen Zinssatz verschiebt sich eine Erhöhung des Nominaleinkommens die Geldnachfrage nach rechts: Screenshot 72
+
+*Geldnachfrage & Zinsen - Empirische Evidenz*\\
+Wie gut bildet die Geldnachfragegleichung die Realität ab?
+$M^d = PY * L(i)$ \rightarrow teile beide Seiten durch $PY$: $\frac{M^d}{PY}=L(i)$
+
+$L(i)$ = *Kassenhaltungskoeffizient* $\equiv \frac{\text{Geldhaltung}}{\text{Nominaleinkommen}}$
+- wenn der Zinssatz hoch ist, dann sollte $L(i)$ niedrig sein
+- wenn der Zinssatz niedrig ist, dann sollte $L(i)$ hoch sein
+  
+Kehrwert: $\frac{1}{L(i)}$ = *Umlaufgeschwindigkeit des Geldes*
+
+*** Gleichgewicht auf dem Geldmarkt
+Wir betrachten in diesem Modell zunächst eine Wirtschaft, in der es *keine Geschäftsbanken* gibt. Es gibt dhaer *kein Buchgeld*. Geld ist gleichbedeutend mit *Bargeld*. Angenommen die Zentralbank entscheidet sich, eine Geldmenge in Höhe von $\bar{M}$ zur Verfügung zu stellen, so dass das Geldangebot $M^s = \bar{M}$ ist.
+So stellt sich ein Gleichgewicht auf dem Geldmarkt dann ein, wenn das Geldangebot gleich der Geldnachfrage ist:
+\begin{equation*}
+\begin{aligned}
+M^s = \bar{M}
+\bar{M} = PY * L(i)
+\end{aligned}
+\end{equation*}
+
+**** Geldnachfrage, Geldangebot & Gleichgewichtszinssatz
+Die Bestimmung des Zinssatzes: Der Zinssatz pendelt sich im Gleichgewicht so ein, dass die (zinsabhängige) Geldnachfrage dem gegebenen Geldangebot entspricht. Screenshot 76
+
+Die Auswirkungen eines /höheren Nominaleinkommens/ auf den Gleichgewichtszins: Mit steigendem Nominaleinkommen verschiebt sich die Geldnachfragekurve nach rechts, der Gleichgewichtszins steigt. Screenshot 77
+
+Die Auswirkungen eines /höheren Geldangebots/ auf den Gleichgewichtszins: Eine Zunahme des Geldangebots verschiebt die Geldangebotskurve nach rechts, der Gleichgewichtszins sinkt: Screenshot 78
+
+*** Geldpolitik
+Wie kann die Zentralbank das Geldangebot verändern und was geschieht, wenn sie es verändert?
+- Geldmengenerhöhung = Zentralbank kauft Wertpapiere und bezahlt mit neu geschöpftem Geld
+- Geldmengenverringerung = Zentralbank verkauft Wertpapiere und entzieht dem Wirschaftskreislauf Geld
+  
+Derartige Operationen werden *Offernmarktgeschäfte* genannt, da sie am "offenen Markt" für Wertpapiere durchgeführt werden.
+In moderenen Volkswirtschaften steuern alle Zentralbanken die Geldmenge über solche Offenmarktgeschäfte.
+
+Die Bilanz der Zentralbank: Screenshot 80
+
+Die Aktiva der Zentralbank bestehen aus den Wertpapieren, die sie hält. Ihre Passiva entsprechen der Geldmenge.
