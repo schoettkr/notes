@@ -379,3 +379,471 @@ In moderenen Volkswirtschaften steuern alle Zentralbanken die Geldmenge über so
 Die Bilanz der Zentralbank: Screenshot 80
 
 Die Aktiva der Zentralbank bestehen aus den Wertpapieren, die sie hält. Ihre Passiva entsprechen der Geldmenge.
+
+In einer /expansiven Offenmarktoperation/ kauft die Zentralbank bspw Wertpapiere im Wert von 1 Mio.\euro und zahlt mit eigenem Bargeld. Sie erhöht so das Geldangebot um 1 Mio\euro:
+Screenshot 81
+
+\rightarrow Wirkung: Preis für Wertpapiere steigt, Zinssatz sinkt
+
+**** Beispiel zum Zusammenhang zwischen Zins und Wertpapierpreis
+
+- Wertpapier B mit Auszahlung(swert) von 100 Euro (=Nennwert) im nächsten Jahr
+- Laufzeit ein Jahr
+- i: Zinssatz für Laufzeit von einem Jahr
+
+Wie bestimmt sich der Preis $P_B $ des Wertpapiers heute?
+
+Für eine Anleihe mit einjähriger Laufzeit:
+
+\begin{equation*}
+\begin{aligned}
+P_B = \frac{100}{1+i} \rightarrow P_B*(1+i)=100
+\end{aligned}
+\end{equation*}
+
+- für $i=5.3\%$ gilt: $P_B = 95$
+- für $i=11.11\%$ gilt: $P_B = 90$
+ 
+Warum, was steckt dahinter?
+
+Dahinter steck folgendes Arbitragekalkül:
+- Eine Alternativanlage vom Betrag X Euro heute zum Zins i bringt mir im nächsten Jahr den Ertrag $X*(1+i)$ Euro
+- Will ich einen Ertrag von $X*(1+i)=100$, muss ich also heute anlegen: $X=\frac{100}{1+i}$
+- falls $P_B > X$ würde Niemand das Papier B kaufen (Preis wäre zu hoch, er müsste auf $P_B = X$ sinken)
+- falls $P_B < X$ würden alle das Papier B kaufen (dies treibt den Preis au $P_B = X$ hoch)
+
+Betrachtung eines /"alten"/ Wertpapiers, das im nächsten Jahr eine Gesamtauszahlung von 100 Euro verspricht. Wie hoch ist der Kurs des Papiers P_B heute?
+
+\rightarrow Vergleiche mit der Rendite von neuen, *einjährigen* Papieren
+
+Bsp: aktueller Zins für einjährige Papiere bei $i=25\%$.
+Wer in einem Jahr eine Auszahlung von 100 Euro erwünscht, muss heute $\frac{100\text{Euro}}{1.25}=80$ Euro anlegen.
+
+*Effektivrendite:* $i=0.25 \rightarrow 1 + i = 100$
+
+*Kurs:* $P_B = \frac{100}{1+i} = \frac{100}{1.25} = 80$
+
+- solange $(1+i)*P_B > 100$ kauft jeder lieber neue Papiere & es wäre besser, das "alte" Wertpapier zu verkaufen
+- falls $(1+i)*P_B < 100$ kauft jeder lieber das "alte" Wertpapier, schon für $P_B < 80$ bekäme man im nächsten Jahr 100 Euro
+  
+/Anderes Beispiel:/\\
+Gesamtauszahlung meines Papiers in einem Jahr: 100 Euro\\
+Angenommen der Zins steigt heute auf $i=50\%$, wie wirkt sich das auf den Kurs meines Papiers P_B aus?
+
+\rightarrow Der Kurs muss so stark fallen, dass die Effektivrendite auf 50% steigt! (umgekehrt würde der Kurs bei einer Zinssenkung steigen)
+
+Kurs bei $i=50\%$: $P_B=\frac{100}{1.5}$ $=66.\frac{1}{3}$
+Kurs bei $i=25\%$: $P_B=\frac{100}{1.25}$ $=80$
+Kurs bei $i=10\%$: $P_B=\frac{100}{1.10}$ $=90.91$
+Kurs bei $i=0\%$: $P_B=\frac{100}{1}$ $=100$
+
+*Fazit zum Zusammenhang zwischen Zins und Wertpapierpreis*
+- es besteht eine inverse Beziehung zwischen Wertpapierpreis & Zins \rightarrow wenn der Wertpapierpreis sinkt (steigt), steigt (sinkt) die Rendite
+- je länger die Laufzeit, desto stärker der Effekt auf die Kurse 
+- *Beachte:* allein schon Zinsänderungen, die nur erwartet (antizipiert) werden, wirken sich bereits unmittelbar heute auf die Kurse aus
+  
+*Wirkung von Offenmarktoperationen:*
+- expansive Offenmarktoperation: Erhöhung der Geldmenge, Zinssenkung
+  - \rightarrow Zentralbank kauft Wertpapiere und gibt dafür Geld raus
+  - Wirkung: Zinssatz sinkt, da *Nachfrage* nach Wertpapieren steigt (P_B\uparrow)
+- kontraktive Offenmarktoperation: Verringerung der Geldmenge, Zinserhöhung
+  - \rightarrow Zentralbank verkauft Wertpapiere & erhält dafür Geld
+  - Wirkung: Zinssatz steigt, da *Angebot* an Wertpapieren steigt (P_b \downarrow)
+
+*Zusammenfassung Geldpolitik und Offenmarktgeschäfte*
+- der Zinssatz wird durch Gleichheit von Geldnachfrage & Geldangebot bestimmt
+- die Zentralbank kann den Zinssatz beeinflussen, indem sie das Geldangebot verändert
+- die Zentralbank verändert das Geldangebot mittels Offenmarktgeschäften
+- der Ankauf von Wertpapieren erhöht das Geldangebot und reduziert den Zinssatz
+- der Verkauf von Wertpapieren senkt das Geldangebot und erhöht den Zinssatz
+*** Zweite Bestimmung des Gleichgewichts
+Wir heben jetzt die Beschränkung auf, dass es keine Geschäftsbanken gibt und das Geld nur aus Bargeld besteht. Durch die Existenz von Geschäftsbanken wird die Kontrolle der Geldmenge schwieriger, da Banken durch Kreditgewährung die Höhe des Buchgeldes beeinflussen.
+
+Es ist jetzt sinnvoll zu unterscheiden:
+- *Zentralbankgeld* H = Bargeld und Sichtguthaben bei der Zentralbank (H = high powered money)
+- Geld M: Bargeld und Sichtguthaben bei Geschäftsbanken, die von Nichtbanken (Haushälte, produzierende Unternehmen, Staat) gehalten werden (M = money)
+  
+*Was Banken machen*\\
+Banken erhalten Einlagen von Privatpersonen & Unternehmen und kaufen damit festverzinsliche Wertpapiere oder Aktien oder vergeben Kredite an andere Privatpersonen o Unternehmen. Einen Teil der eingezahlten Einlagen behalten die Geschäftsbanken als Reserve (zum Teil als Bargeld, zum Teil auf Konten, die die Geschäftsbanken bei der Zentralbank haben).
+
+Gründe: Einzahlungen und Auszahlungen der Anleger sind nicht gleich groß, die Geschäftsbank muss immer eine gewisse Menge an Bargeld bereithalten, ...
+- ... um Schulden ggü anderen Banken zu decken
+- ... um die gesetzlichen Mindestreserveverpflichtungen zu erfüllen
+  
+Kredite entsprechen ungefähr 70% des Vermögens von Geschäftsbanken nach Abzug der Reservepflicht. Die restlichen 30% entfallen auf Wertpapiere.
+Das Vermögen der Zentralbank besteht aus den von ihr gehaltenen Wertpapieren. Die Verbindlichkeiten der Zentralbank bestehen aus dem von ihr geschaffenen Geld (*Zentralbankgeld*). Neu ist, dass nicht das gesamte Zentralbankgeld in Form von Bargeld von Nicht-Banken gehalten wird. Ein Teil davon wird als Reserve von den Geschäftsbanken gehalten.
+
+Bilanz von Zentralbank und Geschäftsbanken:
+Screenshot 92
+
+Geldangebot = verfügbare Geldmenge = ${\overbrace{\textstyle \text{Münzen \& Noten}}^{\mathclap{\text{ Zentralbankgeld H }}}}$ $+ {\underbrace{\textstyle \text{Sichteinlagen}}_{\mathclap{\text{enstehen durch Einzahlung von Zentralbankgeld}}}}$
+
+*Buchgeldentstehung im System mit 100-%iger Reservehaltung*:\\
+Zentralbank kauft Wertpapier von Person A & zahlt mit Noten im Wert von 100 \rightarrow Geldmenge M = 100 (Noten) \rightarrow A zahlt Noten auf Girokonto ein, Bank hinterlegt sie bei der ZB als Reserve
+Screenshot 94
+Banken haben hier keinen Einfluss auf das Geldangebot
+
+*Buchgeldentstehung bei partieller Reservehaltung*:\\
+Sachverhalt wie vorher, aber Reservesatz $r=0.1$(10%)
+
+Screenshot 95 1
+
+Bank verwendet die Überschussreserve (Kasse) zur Kreditvergabe. Der Kreditnehmer B zahlt mit den erhaltenen
+Noten eine Rechnung von C , die dieser bei Bank 2 einzahlt. Bank 2 verwendet Überschussreserve ebenfalls zur
+Kreditvergabe, ...
+
+Screenshot 95 2
+
+Dieser Prozess kann sich fortsetzen = *Geldschöpfungsprozess*
+
+Ausgangspunkt: Zentralbank (Bargeld/Sichteinlage bei Zentralbank)
+Screenshot 96
+
+*Die Nachfrage nach Geld, Reserven und Zentralbankgeld*\\
+Nichtbanken fragen Geld nach: $M^d = PY * L(i)$
+
+Der Anteil c soll als Bargeld gehalten werden: $CU^d = cM^d$
+und (1-c) als Sichtguthaben: $D^d=(1-c)M^d$.
+
+Die Geschäftsbanken halten den Anteil \theta der Sicht-Guthaben als Reserve bei der Zentralbank: $R^d = \theta D= \theta (1-c)M^d$.
+
+Als Nachfrage nach Zentralbank ergibt sich:
+\begin{equation*}
+\begin{aligned}
+H^d = C U^d + R\\
+= c M^d + \theta(1-c)M^d\\
+= (c + \theta (1-c))*M^d\\
+= (c + \theta (1-c))*PY * L(i)
+\end{aligned}
+\end{equation*}
+
+*Angebot, Nachfrage und Zinsbestimmung*\\
+Die Zentralbank stellt ein Geldangebot in Höhe $\bar{H}$ bereit:
+\begin{equation*}
+\begin{aligned}
+H^s = \bar{H}
+\end{aligned}
+\end{equation*}
+Im Gleichgewicht: Angebot an Zentralbankgeld = Nachfrage nach Zentralbankgeld 
+\begin{equation*}
+\begin{aligned}
+H^s = H^d\\
+\bar{H} = (c+\theta (1-c))PY * L(i)
+\end{aligned}
+\end{equation*}
+Screenshot 99
+
+*** Alternativer Ansatz
+Statt Angebot und Nachfrage nach Zentralbankgeld zu analysieren, kann man alternativ Angebot & Nachfrage nach Reserven betrachten:
+\begin{equation*}
+\begin{aligned}
+{\underbrace{\textstyle \bar{H} - CU^d}_{\mathclap{\text{ Angebot an Reserven}}}} = {\overbrace{\textstyle R^d}^{\mathclap{\text{ Nachfrage nach Reserven}}}}
+\end{aligned}
+\end{equation*}
+
+Dies ist von Interesse, weil die Geschäftsbanken täglich auf einem Markt für Reserven - dem *Tagesgeldmarkt* - handeln.
+- Banken deren Reserven höher sind als geplant, bieten an
+- Banken deren Reserven niedriger sind als geplant, fragen nach
+  
+Gleichgewicht: $\bar{H} = (c + \theta(1-c)) PY * L(i)$
+
+Diese Gleichgewichtsbedingung kann umgestellt werden zu
+\begin{equation*}
+\begin{aligned}
+{\underbrace{\textstyle \frac{1}{c+\theta(1-c)} \bar{H}}_{\mathclap{\text{gesamtes Geldangebot}}}} = {\overbrace{\textstyle PY*L(i)}^{\mathclap{\text{ gesamte Geldnachfrage}}}}
+\end{aligned}
+\end{equation*}
+
+Der Term $\frac{1}{c+\theta(1-c)}$ heißt *Geldschöpfungsmultiplikator*
+- der Multiplikator ist größer als 1, denn $0<c$, $\theta<1$ \rightarrow der Mindestreservesatz \theta beträgt mindestens 1%.
+- Spezialfälle:
+  - c = 1: Nur Bargeldhaltung \rightarrow Multiplikator = 1, d.h die gesamte Geldmenge entspricht der Zentralbankgeldmenge
+  - c = 0: keine Bargeldhaltung \rightarrow Multiplikator = $\frac{1}{\theta}$ \rightarrow bei \theta = 0.01 wird die gesamte Geldmenge zum 100-fachen von $\bar{H}$
+
+**** Vergleich Zinsbestimmung I und II
+Zinsbestimmung I:
+- Gleichgewicht $\bar{M} = PY * L(i)$
+
+Zinsbestimmung II:
+- Gleichgewicht $\frac{1}{c+\theta (1-c)}\bar{H} = PY * L(i)$ ($\bar{H}$ wird auch Geldbasis genannt)
+
+Der Unterschied liegt auf der Angebotsseite:
+- Bestimmung II macht deutlich, dass die monetäre Steuerung über die Zentralbankgeldmenge erfolgt
+- Bestimmung II macht auch deutlich, dass die Zentralbank die Geldmenge nicht unabhängig festsetzen kann, da c von den Nichtbanken und \theta von den Geschäftsbanken bestimmt wird
+** Das IS-LM Modell
+In den vorhergehenden Kapiteln wurde der Gütermarkt und der Geld- und Finanzmarkt betrachtet. Es wurde isoliert die Höhe der Produktion und des Zinssatzes bestimmt.
+
+Jetzt soll das Zusammenspiel dieser Märkte untersucht werden. Zunächst werden alternative Gütermarktgleichgewichte (IS-Kurve) und danach alternative Geldmarktgleichgewichte (LM-Kurve) hergeleitet.
+
+Produktion und Zinssatz werden dann simultan bestimmt und es wird der Einfluss von Geld- und Fiskalpolitik untersucht.
+
+*** Gütermarkt und IS-Gleichung
+**** Investition, Absatz und Zinssatz 
+
+In diesem Kapitel betrachten wir 2 Faktoren, welche die Investitionen beeinflussen:
+- das Absatzniveau (+)
+- der Zinssatz (-)
+\rightarrow gemessen durch Y Kreditkostenelement, Alternativrendite und Wertpapierkauf
+
+Investition $I = I(Y,i)$
+- $\frac{\delta I}{\delta Y} > 0$
+- $\frac{\delta I}{\delta i} < 0$
+
+Hier wird unterstellt, dass Investitionen vom Nominalzinssatz abhängen und nicht vom Realzinssatz, welcher Preisniveauänderungen berücksichtigt. In der kurzen Frist ist dies plausibel, da das Preisniveau als konstant angenommen wird.
+
+**** Die Bestimmung des Produktionsniveaus
+
+\begin{equation*}
+\begin{aligned}
+I = I(Y,i)
+\end{aligned}
+\end{equation*}
+
+Unter Berücksichtigung der obigen Gleichung für die Investitionen erhalten wir als Gleichgewichtsbedingung:
+\begin{equation*}
+\begin{aligned}
+Y = Z \equiv C(Y-\bar{T})+I(Y,i)+\bar{G}
+\end{aligned}
+\end{equation*}
+\uparrow Einkommensänderungen haben einen positiven Zusammenhang auf/mit $C(Y-\bar{T})$ und $I(Y,i)$:
+- es wird unterstellt, dass eine Zunahme des Einkommens um 1\euro die Nachfrage(C,I) um weniger als 1\euro erhöht
+- die Produktion ist abhängig von der Nachfrage, die ihrerseits abhängig ist von der Produktion/dem Einkommen
+  
+Um die Z-Kurve graphish darstellen zu können, müssen wir von einem bestimmten Zinssatz i_1 ausgehen.
+
+Screenshot 112
+Die Güternachfrage nimmt mit steigendem Einkommen zu. Im Gleichgewicht muss die Nachfrage dem Einkommen entsprechen.
+- zu beachten: Wir nehmen an, dass die Z-Kurve flacher ist als die 45 Grad Linie
+  - Eine Zunahme des Einkommens lässt die Nachfrage nicht im Verhältnis 1:1, sondern weniger ansteigen
+
+**** Die IS-Kurve
+
+Wir haben jetzt die Produktion für den Fall bestimmt, dass der Zinssatz i_1 beträgt.
+
+Ändert sich der Zinssatz, dann ändern sich die Investitionen und damit die Nachfrage. Es ergibt sich ein neues Gleichgewicht.
+
+Leitet man für verschiedene Zinssätze i das resultierende gleichgewichtige Einkommen Y her und trägt diese (Y,i)-Kombinationen in ein Achsenkreuz ein, dann erhält man die IS-Kurve.
+
+*Ableitung der IS-Kurve* (=die Auswirkungen eines Zinsanstiegs auf das Einkommens)\\
+Screenshot 145
+- ein Anstieg des Zinssatzes lässt die Investitionen und damit das Einkommen zurückgehen
+- die Güternachfrage verschiebt sich nach unten
+- es ergibt sich ein neues Gleichgewicht beim niedrigeren Einkommen Y_2
+
+Die IS-Kurve beschreibt alternative Gleichgewichte des Gütermarktes. Mit sinkendem Zinssatz steigen die Investitionen an und damit steigt das Einkommen im Gütermarktgleichgewicht (die IS-Kurve hat deshalb einen fallenden Verlauf)
+Screenshot 115
+
+*Die Steigung der IS-Kurve*\\
+Screenshot 116
+
+Ausgangspunkt A: (Y_1, i_1) \rightarrow Zinsen sinken auf i_2 
+
+Argumentationskette:\\
+i\downarrow dann(Zinsreagibilität der Investitionen) I(i) \uparrow dann(Multiplikatorprozess) Y\uparrow
+
+
+Die IS-Kurve ist umso steiler
+- je weniger elastisch die Investitionen auf Zinsänderungen reagieren
+- je kleiner der Multiplikator ist
+- Extremfall wenn I unabhängig von i sind, dann ist IS-Kurve senkrecht
+
+*Verschiebung der IS-Kurve*\\
+1.) Wirkung eines Anstiegs der Staatsausgaben von $\bar{G_1}$ auf $\bar{G_2}$
+
+Screenshot 117
+
+Höhere Staatusausgaben G verschieben die IS-Kurve nach rechts. Bei exogen gegebenen Investitionen gemäß Kapitel 3:
+\begin{equation*}
+\begin{aligned}
+Y = \frac{1}{1-c_1}(c_0 + \bar{I} + \bar{G} - c_1 * \bar{T})\\
+\Delta Y = \frac{1}{1-c_1}*\Delta\bar{G}
+\end{aligned}
+\end{equation*}
+Der Multiplikatoreffekt ist hier noch größer, da auch die Investitionen mit Y ansteigen.
+
+2.) Wirkung einer Erhöhung der Steuer von $\bar{T_1}$ auf $\bar{T_2}$
+
+Screenshot 118
+
+Höhere Steuern T verschieben die IS-Kurve nach links. Bei exogen gegebenen Investitionen gemäß Kapitel 3:
+\begin{equation*}
+\begin{aligned}
+Y = \frac{1}{1-c_1}(c_0 + \bar{I} + \bar{G} - c_1 * \bar{T})\\
+\Delta Y = \frac{-c_1}{1-c_1}*\Delta\bar{T}
+\end{aligned}
+\end{equation*}
+Der Multiplikatoreffekt ist hier noch größer, da auch die Investitionen mit Y sinken.
+
+
+*** Geld- und Finanzmärkte und LM-Gleichung
+**** Die LM-Kurve
+
+Im Geldmarktgleichgewicht gilt:
+\begin{equation*}
+\begin{aligned}
+\frac{\bar{m}}{P} = Y * L(i)
+\end{aligned}
+\end{equation*}
+Wir stellen nun folgende Frage: Für welche Kombinationen aus Zins und Einkommen (Y, i) befindet sich der Geldmarkt im Gleichgewicht?
+
+Leitet man für verschiedene Einkommen Y den resultierenden gleichgewichtigen Zinssatz i her und trägt diese (Y,i)-Kombinationen in ein Achsenkreuz ein, so erhält man die LM-Kurve
+
+*Ableitung der LM-Kurve*\\
+Die Auswirkungen einer Erhöhung des Einkommens von Y_1 auf Y_2 auf den Zinssatz:
+
+Screenshot 121
+
+- mit steigendem Einkommen steigt bei gegebenem Zinssatz die Geldnachfrage
+- die Wirtschaftssubjekte versuchen, Wertpapiere zu verkaufen und das führt zum Sinken des Wertpapierpreises
+- daraufhin muss bei gegebenem Geldangebot im Gleichgewicht der Zinssatz steigen
+
+Die LM-Kurve beschreibt alternative Gleichgewichte auf Geld- und Finanzmärkten.
+
+Mit steigendem Einkommen muss der Zinssatz steigen, damit Gleichgewicht auf Geld- und Finanzmärkten herrscht:
+Screenshot 122
+
+Die LM-Kurve hat deshalb einen steigenden Verlauf
+
+*Die Steigung der LM-Kurve*\\
+Screenshot 123
+
+Ausgangspunkt A: (Y_1, i_1) \rightarrow Einkommen steigt auf Y_2 
+
+Argumentationskette:\\
+Y\uparrow dann(Zinsreagibilität der Geldnachfrage) M^d \uparrow dann i\uparrow
+
+Umschichtung der Geldnachfrage: Für vermehrte Transaktionen wird mehr Geld gebraucht, das durch Zinssteigerungen dem Spekulationsbereich, in dem Geld als Wertanlage gehalten wird, entzogen wird.
+
+Die LM-Kurve ist umso steiler
+- je kleiner die Geldnachfrage auf Zinsänderungen reagiert
+  
+*Anpassungsreaktion der LM-Kurve im Ungleichgewicht*\\
+Auf dem Geldmarkt erfolgt die Anpassung über den Zinssatz
+
+\textcolor{violet}{Punkt B}: $\frac{M}{P} > Y * L(i)$ also ein Überangebot an Geld \rightarrow Zinsen sinken
+
+\textcolor{magenta}{Punkt C}: $\frac{M}{P} < Y * L(i)$ also eine Übernachfrage nach Geld \rightarrow Zinsen steigen
+
+Screenshot 124
+
+*Verschiebung der LM-Kurve*\\
+Ein höheres Geldangebot verschiebt die LM-Kurve nach unten:
+
+Screenshot 125
+
+*** Das Zusammenspiel von IS und LM Gleichung
+**** Das IS-LM-Modell
+
+Die IS-Kurve hat einen fallenden Verlauf, die LM-Kurve einen steigenden. Nur im Punkt A, dem Schnittpunkt beider Kurven, herrscht simultanes Gleichgewicht auf Güter-, Geld- und Finanzmärkten.
+
+\textcolor{magenta}{IS-Kurve: $Y=C(Y-T)+I(Y,i)+G$}
+
+LM-Kurve: $\frac{M}{P} = Y * L(i)$
+
+Screenshot 126
+
+*Staatliche Einflussnahme*\\
+Will der Staat die Höhe des Gleichgewichtseinkommens beeinflussen, stehen ihm 2 Möglichkeiten offen:
+- Fiskalpolitik (Beeinflussung des Gütermarktes) \rightarrow Verschiebung der IS-Kurve
+- Geldpolitik (Beeinflussung des Geld- und Finanzmarktes) \rightarrow Verschiebung der LM-Kurve
+
+IS-Kurve: $Y=C(Y-\textcolor{violet}{T})+I(Y,i)+\textcolor{violet}{G}$
+
+LM-Kurve: $\frac{\textcolor{violet}{M}}{P} = Y * L(i)$
+
+*Fiskalpolitik, Einkommen und Zinssatz*\\
+Werden Staatsausgaben oder Steuern verändert, um die gesamtwirtschaftliche Nachfrage zu beeinflussen, spricht man von *Fiskalpolitik*
+- ein Abbau des Budgeddefizits (G-T) wird durch *kontraktive Fiskalpolitik* erreicht
+- eine Ausweitung des Budgetdefizits bezeichnet man als *expansive Fiskalpolitik* 
+
+Steuern und Staatsausgaben beeinflussen die IS-Kurve, jedoch *nicht* die LM-Kurve
+
+*Expansive Fiskalpolitik* (G\uparrow oder T\downarrow)\\
+- erhöht die Güternachfrage
+
+Screenshot 129
+
+Ausgangspunkt: Gleichgewicht A dann G\uparrow oder T\downarrow
+- bei geg. Zins wäre die Einkommenserhöhung deutlich größer als fiskalische Impuls (Y_1 \rightarrow Y_3) (Multiplikatorprozess) \rightarrow B
+- durch das höhere Einkommen steigt die Geldnachfrage M^d (Transaktionsmotiv), Zinsen steigen auf i_2, Investitionsnachfrage I(i) wird abgedämpft (crowding out effect)
+- Einkommen sinkt (Y_3 \rightarrow Y_2) \rightarrow C
+  
+*Abschwächung der expansiven Wirkung* \rightarrow Y, C *steigen eindeutig, \Delta / unklar*
+
+*Kontraktive Fiskalpolitik* (G\downarrow oder T\uparrow)\\
+- senkt die Güternachfrage
+
+Screenshot 130
+
+Ausgangspunkt: Gleichgewicht A dann G\downarrow oder T\uparrow
+- bei geg. Zins wäre die Einkommenssenkung deutlich größer als fiskalische Impuls (Y_1 \rightarrow Y_3) (Multiplikatorprozess) \rightarrow B
+- durch das geringere Einkommen sinkt die Geldnachfrage M^d (Transaktionsmotiv), Zinsen sinken auf i_2, Investitionsnachfrage I(i) wird gestärkt (crowding out effect)
+- Einkommen steigt (Y_3 \rightarrow Y_2) \rightarrow C
+  
+*Abschwächung der kontraktiven Wirkung* \rightarrow Y, C *sinken eindeutig, \Delta / unklar*
+
+*Geldpolitik, Einkommen und Zinssatz*\\
+Wird das Geldangebot verändert, um die gesamtwirtschaftliche Lage zu beeinflussen, spricht man von *Geldpolitik*
+- eine Verringerung des Geldangebots wird *kontraktive Geldpolitik* genannt
+- eine Erhöhung des Geldangebots bezeichnet man als *expansive Geldpolitik* 
+
+Geldpolitik hat *keinen* Effek auf die IS-Kurve, sie wirkt sich lediglich auf die LM-Kurve aus
+
+Beispiel: Durch eine Erhöhung des Geldangebots verschiebt sich die LM-Kurve nach unten
+
+*Expansive Geldpolitik* (M\uparrow)\\
+- erhöht das reale Geldangebot
+
+Screenshot 132
+
+Ausgangspunkt: Gleichgewicht A dann M\uparrow
+
+- bei geg. Einkommen wäre die Zinssenkung sehr groß (i_1 \rightarrow i_3) \rightarrow B
+- niedrige Zinsen stimulieren Investitionen (I(i)\uparrow), Einkommen steigt (Y_1 \rightarrow Y_3) \rightarrow C
+- Geldnachfrage M^d steigt an (Transaktionsmotiv), Zinssenkung wird auf i_2 abgeschwächt, Anstieg der Investitionen wird gedämpft, somit sinkt Y (Y_3 \rightarrow Y_2) \rightarrow D
+  
+*Abschwächung der expansiven Wirkung* \rightarrow Y, C, I *steigen eindeutig*
+
+*Kontraktive Geldpolitik* (M\downarrow)\\
+- senkt das reale Geldangebot
+
+Screenshot 133
+
+Ausgangspunkt: Gleichgewicht A dann M\downarrow
+
+- bei geg. Einkommen wäre die Zinserhöhung sehr groß (i_1 \rightarrow i_3) \rightarrow B
+- hohe Zinsen schwächen Investitionen (I(i)\downarrow), Einkommen sinkt (Y_1 \rightarrow Y_3) \rightarrow C
+- Geldnachfrage M^d sinkt (Transaktionsmotiv), Zinserhöhung wird auf i_2 abgeschwächt, Rückgang der Investitionen wird gedämpft, somit steigt Y (Y_3 \rightarrow Y_2) \rightarrow D
+  
+*Abschwächung der kontraktiven Wirkung* \rightarrow Y, C, I *sinken eindeutig*
+
+*Kombinierter Einsatz von Geld- und Fiskalpolitik*\\
+Die Kombination von geld- und fiskalpolitischen Maßnahmen wird *Politik-Mix* genannt.
+Screenshot 134
+
+/Der Politik-Mix unter Clinton und Greenspan (Defizitabbau & expansive Geldpolitik)/
+
+Screenshot 135
+
+Ausgangspunkt A: IS_1 und LM_1 (Gleichgewicht bei i_1 und Y_1)
+- IS_2: nach Abbau des Defizits
+- B: Gleichgewicht ohne Kompensation durch Geldpolitik
+- LM_2: Expansive Geldpolitik
+- C: Neues Gleichgewicht bei i_2 und Y_2 
+ 
+Eine geeignete Kombination kontraktiver Fiskalpolitik und expansiver Geldpolitik kann einen Defizitabbau ohne negative Effekte auf das Einkommen erreichen
+
+/Die deutsche Wiedervereinigung und das Tauziehen zwischen Geld- und Fiskalpolitik/\\
+
+Screenshot 136
+
+Expansive Fiskalpolitik verschiebt IS-Kurve nach rechts zu IS_2
+
+Restriktive Geldpolitik der Bundesbank zur Dämpfung der Expansion (wegen Inflationsangst) verschiebt LM-Kurve nach oben(links) zu LM_2
+
+*** Ist die Regierung allmächtig? Eine Warnung
+Die am Ende des 3. Kapitels geäußerten Warnungen gelten auch hier, da das Gütermarktmodell wesentliche Grundlage des IS-LM-Modells ist.
+
+Gibt es Buchgeld, kann die Zentralbank die Geldmenge nur begrenzt kontrollieren, so dass auch die geldpolitische Feinsteuerung nicht wie im Lehrbuch klappt.
+
+Praktische Erfahrungen mit stabilitätspolitischen Maßnahmen zeigen, dass es nur bei starken Abweichungen vom gesamtwirtschaftlichen Gleichgewicht (wie in der Krise 2008/2009) sinnvoll ist, die hier diskutierten nachfragesteuernden Maßnahmen einzusetzen.
