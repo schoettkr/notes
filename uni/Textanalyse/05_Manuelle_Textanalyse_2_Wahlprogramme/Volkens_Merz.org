@@ -1,0 +1,40 @@
+* Volkens, Merz - Die Qualität von Wahlprogrammen
+:PROPERTIES:
+:NOTER_DOCUMENT: Volkens_Merz_2015.pdf
+:END:
+** Einleitung
+:PROPERTIES:
+:NOTER_PAGE: 1
+:END:
+- Wahlprogramme besondere Bedeutung im Hinblick auf Wählerinteressen
+  - weit verbreitete Meinung, dass Parteien dem Anbieten klarer programmatischer Alternativen (zentrale Rolle im repräsentativen Prozess) nicht mehr nachkommen
+    - \rightarrow sinkende Zahlen von Parteimitgliedern, Kernwählern und sinkende Parteiidentifikation
+- Politikwissenschaft: Diagnose der Transformation zu catch-all Parteien (1960er) und Kartellparteien(1990er), so dass sich Wahlprogramme nicht mehr wirklich unterscheiden
+- Rational-Choice: Parteienpositionen nähern sich, wenn sie zwecks Stimmenmaximierung um Mehrheit der Wähler in der Mitte des pol Spektrums konkurrieren
+  
+\rightarrow *Sind die oben genannten Thesen empirisch haltbar?*
+
+*** Erkenntnisinteresse & Vorgehen
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.2222222222222222)
+:END:
+**** Fragestellung
+- inwieweit Parteien mit Wahlprogrammen antreten, die inhaltliche Prioritäten setzen und Alternativen bieten, die für den Bürger sichtbar und klar formuliert sind
+
+**** Vorgehen
+- Entwicklung eines mehrdimensionales Konzept der Qualität des programmatischen Angebots
+  - Unterscheidung in vier Qualitätsaspekten der Differenzierung von Positionen 
+  - Unterscheidung der Sichtbarkeit, Klarheit und Heterogenität von Prioritäten
+- quantitative Inhaltsanalyse der Wahlprogramme in Verbindung mit Wahlstatistiken
+  - Analyse der Entwicklungen der Qualität von 2103 Programmen von 279 versch. Parteien zu 371 Wahlen in 21 OECD-Ländern zwischen 1950 und 2011 im quantitativen Vergleich
+- aufgrund des langen Betrachtungszeitraums und damit einhergehenden Veränderungen des politisch-programmatischen & gesellschaftlichen Raums /keine/ Betrachung auf einer einzigen abstrakten Links-Rechts-Dimension, sondern Vergleich der 4 Qualitätsaspekte des programmatischen Angebots auf 3 konkreten Konfliktdimensionen:
+1. soziökonomische Dimension
+2. soziokulturelle Dimension
+3. Zentrum-Peripherie Dimension
+   
+- anschließend Analyse der Qualitätsunterschiede zw Demokratietypen
+
+** Demokratische Norm, Parteienwettbewerb und programmatische Angebote
+:PROPERTIES:
+:NOTER_PAGE: (3 . 0.42857142857142855)
+:END:
