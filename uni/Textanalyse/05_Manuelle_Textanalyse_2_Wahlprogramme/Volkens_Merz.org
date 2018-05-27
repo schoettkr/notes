@@ -61,7 +61,63 @@ Im MARPOR-Projekt wird jedes Wahlprogramm in sogenannte Quasi-Sätze (/statement
   - der Datensatz gibt Aufschluss darüber, wie häufig jedes dieser 56 Ziele in jedem der untersuchten Wahlprogramme vorkommt
     - er umfasst derzeit 3.679 Wahlprogramme von 923 Parteien mit mindestens einem Sitz in 55 Parlamenten seit 1945 bzw. dem Zeitpunkt, an dem erste demokratische Wahlen stattgefunden haben
 
-*** Operationlisierung von drei Konfliktdimensionen
+*** Operationalisierung von drei Konfliktdimensionen
 :PROPERTIES:
 :NOTER_PAGE: (9 . 0.6190476190476191)
+:END:
+- deduktive Herleitung von Konfliktdimensionen
+  - geht von einer begrenzten Zahl von 1 bis 3 Dimensionen des pol Wettbewerbs aus
+- Berücksichtigung der Mehrdimensionalität der meisten Parteiensysteme
+- drei Konfliktlinien werden in zahlreichen Studien immer wieder erwähnt:
+1. sozioökonomische Konfliktlinie:
+   - beschreibt traditionellen Konflikt zw Arbeit und Kapital
+     - Auseinandersetzungen zw Arbeitgebern & Gewerkschaften, Staat & Wirtschaft
+     - Haushaltspolitik & Wirtschaftswachstum
+2. soziokulturelle Konfliktlinie:
+   - Sachfragen bzgl dem gesellschaftlichen Zusammenleben
+   - progressiv-libertäre Politik vs konservativ-autoritäre Politik
+3. Zentrum-Peripherie Konfliktlinie:
+   - Rolle des Nationalstaates
+   - Abgabe von Souveränitätsrechten
+   - Europäisierung & Internationalisierung 
+
+\rightarrow Seite 11 Bild der Konfliktdimensionen und Codes
+
+Identifizierung von 5 Sachfragen auf jeder Konfliktdimension die sich mit dem MARPOR-Kategorienschema operationalisieren lassen
+- zu diesen Sachfragen berechnen die Autoren für jede Partei zu jeder Wahl eine Priorität und eine Position
+  - die Priorität wird über den Salienzwert gemessen, in dem die relativen Häufigkeiten der Kategorien zusammengezählt werden, die die Sachfrage betreffen
+  - die Position wird berechnet, indem die Prozentwerte in der jeweils rechten Spalte von denen in der linken Spalte voneinander abgezogen werden und durch die Summe der beiden relativen Häufigkeiten (Salienz) teilen
+
+*** Die Relevanz der drei Konfliktdimensionen
+:PROPERTIES:
+:NOTER_PAGE: (12 . 0.6743566992014197)
+:END:
+- um Relevanz von Konfliktlinien in der Programmatik der Parteien zu ermitteln, wird zunächst die Zahl der /statements/ betrachtet, die den Konfliktbereichen gewidmet sind
+- die Relevanz wird dann als Summe der rel Häufigkeiten aller Ziele einer Dimension in einem Programm (gewichtet nach Stärke der Parteien) im Durchschnitt aller relevanten Parteien in 21 Parlamenten zw 1950 und 2011 bestimmt
+  
+Ergebnisse
+- von den 3 Konfliktbereichen nehmen sozioökonomische Ziele mit durchschn 25% den größten Anteil am Gesamtumfang der Wahlprogramme ein
+  - werden dauerhaft berücksichtigt
+- soziokulturelle stehen mit 15% des durchschn Programmumfangs an zweiter Stelle
+  - werden zunehmend berücksichtigt
+- mit durchschn 10% des Umfangs werden Zentrum-Peripherie Konflikte thematisiert
+- nur schwache Korrelation der drei Dimensionen
+
+*** Veränderung der Lagerung im programmatischen Raum
+:PROPERTIES:
+:NOTER_PAGE: 15
+:END:
+Seite 15 \rightarrow nicht besonders relevant daher skip 
+
+- 
+
+** Qualitätsaspekte des parteiprogrammatischen Angebots
+:PROPERTIES:
+:NOTER_PAGE: (18 . 0.46140195208518187)
+:END:
+- Konzept der programmatischen Lagerung entscheidet sich maßgeblich vom Konzept der Qualität
+
+*** Die Operationalisierung von vier Qualitätsaspekten
+:PROPERTIES:
+:NOTER_PAGE: (18 . 0.6211180124223602)
 :END:
