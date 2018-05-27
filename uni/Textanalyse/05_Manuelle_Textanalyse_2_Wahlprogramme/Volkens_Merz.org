@@ -121,3 +121,55 @@ Seite 15 \rightarrow nicht besonders relevant daher skip
 :PROPERTIES:
 :NOTER_PAGE: (18 . 0.6211180124223602)
 :END:
+Vier Qualitätsaspekte von Parteiprogrammen:
+1. Differenzierbarkeit
+   - Distanz zw Positionen der am meisten rechts und am meisten links stehenden Partei
+2. Sichtbarkeit
+   - Distanz zwischen größter und zweitgrößter Partei
+3. Klarheit
+   - Berechnung von (In)konsistenz der Positionen
+4. Heterogenität
+   - durchschnittliche Varianz der Sachfragenprioritäten der Parteien bei einer Wahl auf einer Konfliktdimension geteilt durch quadrierte Anzahl der Parteien
+   
+Betrachtung dieser Aspekte für jeweils eine Wahl und getrennt für jede Konfliktdimension und dann Forschreibung dieses Wertes für die nächsten Jahre bis zur nächsten Wahl
+
+*** Veränderungen der Qualität des parteiprogrammatischen Angebots (1950-2011)
+:PROPERTIES:
+:NOTER_PAGE: (20 . 0.746031746031746)
+:END:
+- aufgrund vorhandener Krisenliteratur zu erwartende Auswirkungen werden von den 21 OECD Ländern nur eingeschränkt erfüllt (\rightarrow siehe Text Seite 22 und Graphen)
+
+** Qualitätsunterschiede zwischen Ländergruppen
+:PROPERTIES:
+:NOTER_PAGE: 24
+:END:
+Qualitätsaspekte nach Demokratietypen
+|                            | Differenzierung | Sichtbarkeit | Klarheit | Heterogenität |
+|----------------------------+-----------------+--------------+----------+---------------|
+| Majoritäre Demokratien     |            0.20 |         0.15 |     0.35 |          4.90 |
+| Konkordanzdemokratien      |            0.31 |         0.14 |     0.37 |          4.50 |
+| Defekte Demokratie(Türkei) |            0.16 |         0.10 |     0.25 |          4.49 |
+| Vergleichsgruppe           |            0.33 |         0.16 |     0.35 |          4.49 |
+
+** Zusammenfassung
+:PROPERTIES:
+:NOTER_PAGE: 26
+:END:
+- Ergebnisse liefern nur wenige Hinweise auf Verschlechterung der programmatischen Qualität
+- keine Anhaltspunkte für einen generellen Bedeutungsverlust
+- Relevanz soziokultureller Konflikte hat sogar zugenommen
+- Veränderung der Lagerung des Angebots
+- Verschlechterung der sozioökonomischen Heterogenität der Programme
+- Bürger können Wahlprogramme inziwschen kaum Prioritätensetzung mehr entnehmen
+  - im Gegenzug aber Verbesserung der Klarheit von Positionen
+  - \rightarrow Ausgleich der Verschlechterung eines Aspekts durch Verbesserung eines anderen Aspekts
+- auch keine Anhaltspunkte für generelle Krise der Angebotsseite demokr Wählens bezüglich unterschiedlicher Demokratietypen
+  - majoritäre Systeme bieten dem Bürger weniger Unterschiede in sozioökonomischen Positionen als proportionale Systeme
+  - Konsensdemokratien leigen auf vergleichbarem Qualitätsniveau wie Konkurrenzdemokratien
+  - nur in defekter Demokratie kumulieren sich erwartungsgemäß Qualitätsdefizite
+    
+Das überwiegend positive Bild trifft allerdings nur auf das elektorale Programmangebot zu. Die Sichtbarkeit der Programmalternativen der beiden großen Parteien im Parlament ist dauerhaft sehr gering ausgeprägt
+- die von vielen Bürgern geäußerte Kritik an Ununterscheidbarkeit der Programmangebote findet hier ihre Begründung und Berechtigung
+  - diese Kritik könnte zugenommen haben weil Klarheit des Angebots zugenommen hat
+    - denn mit zunehmender Klarheit der Positionen dürfte geringe Differenzierung zw großen Parteien für Wähler immer offensichtlicher geworden sein
+    - in diesem Fall hätte ironischerweise die objektive Verbesserung des Angebotsaspektes zu einer schlechteren subjektiven Beurteilung des gesamten Angebots geführt
