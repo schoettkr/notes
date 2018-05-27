@@ -38,3 +38,30 @@
 :PROPERTIES:
 :NOTER_PAGE: (3 . 0.42857142857142855)
 :END:
+Ausgangspunkt des /Responsible Party Models/ sind pol Parteien, die Wählern programmatische Alternativen bieten sollen (Funktionsbedingung parteipolitischer Repräsentation)
+- dem entgegen besagen Theorien des Parteienwettbewerb, dass Parteien Strategien verfolgen, die zur Angleichung ihrer Programme führen und sie Motive haben ihre Motive zu verschleiern
+- für die westeuropäischen Länder zeigt Franzmann, dass sich die Niveaus und auch die Verläufer programmatischer Differenzierungen hinsichtlich Positionen & Prioritäten voneinander unterscheiden
+  - der positionellen Wettbewerbstheorie zufolge erwarten die Autoren eine abnehmende Differenzierung von Positionen, wenn Parteien um den Wähler der pol Mitte kämpfen
+  - der Salienztheorie zufolge erwarten die Autoren eine aufgrund des Parteienwettbewerbs beschränkte Differenzierung der Prioritäten
+  - 
+
+** Veränderungen des programmatischen Angebots auf drei Konfliktdimensionen
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.5714285714285714)
+:END:
+- von allen methodischen Ansätzen zur Messung von Parteipositionen erbringt bislang nur die klassische quantitative Analyse von Wahlprogrammen (und der darauf beruhende Datensatz MARPOR-Projekts) die benötigten langen Zeitreihen (für Längsschnittdaten zur Programmatik der Parteien)
+
+*** Daten & Operationalisierung von Parteipositionen
+:PROPERTIES:
+:NOTER_PAGE: 8
+:END:
+Im MARPOR-Projekt wird jedes Wahlprogramm in sogenannte Quasi-Sätze (/statements/) unterteilt
+- jedes /statement/ wird dann von einem geschulten Coder einer von 56 Kategorien zugeordnet
+  - diese Kategorien umfassen unterschiedliche politische Ziele wie zum Beispiel den Ausbau des Wohlfahrtsstaates, die Verbesserung des Umweltschutzes oder mehr Markregulierung
+  - der Datensatz gibt Aufschluss darüber, wie häufig jedes dieser 56 Ziele in jedem der untersuchten Wahlprogramme vorkommt
+    - er umfasst derzeit 3.679 Wahlprogramme von 923 Parteien mit mindestens einem Sitz in 55 Parlamenten seit 1945 bzw. dem Zeitpunkt, an dem erste demokratische Wahlen stattgefunden haben
+
+*** Operationlisierung von drei Konfliktdimensionen
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.6190476190476191)
+:END:
