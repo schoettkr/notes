@@ -1,0 +1,124 @@
+* Computer-Assisted Text Analysis for Comparative Politics
+:PROPERTIES:
+:NOTER_DOCUMENT: Lucas_et_al_2015.pdf
+:END:
+* Introduction
+:PROPERTIES:
+:NOTER_PAGE: 2
+:END:
+- Fokus auf Tools für Komparatisten, um /textual/ data zu nutzen
+- Hervorhebung des /unsupervised topic modeling/
+- Verwendung des Structural Topic Model um das Potential von Topic Modeling für vergleichende Politik aufzuzeigen
+  - STM erlaubt Rückschlüsse auf Beziehung zw Metadaten und Textkorpus
+- wie unterscheidet sich Textanalyse und Text Processing in versch Sprachen
+  - R package `translateR`
+* Text and Language Basics
+:PROPERTIES:
+:NOTER_PAGE: (2)
+:END:
+** Research Questions and Data Analysis
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.762656147271532)
+:END:
+- automatische Inhaltsanalyse und vergleichende Politik sind eine gute Kombination
+- Länder produzieren Texte in noch nie dagewesenem Umfang
+- traditionelle Regierungsstatistiken sind häufig nicht vorhanden, unvollständig, manipuliert oder falsch gemessen 
+  - Regierungen produzieren allerdings große Mengen an Textdaten, welche für deskriptive und kausale Inferenzen genutzt werden können
+  - Anreiz für Gelehrte andere Formen von Data zu verwenden
+- Gelehrte der vergleichenden Regierungslehre/Politik verwenden bereits automatische Methoden für Textanalysen
+  - weitverbreiteste Form von Text zu Politiker sind wahrscheinlich Aufzeichnungen von Reden oder anderen Statements
+- Auflistung einiger interessanten Studien die automatische Textanalyse ultilisiert haben
+** Text Processing Basics: A Multilanguage View
+:PROPERTIES:
+:NOTER_PAGE: (3 . 0.8152531229454306)
+:END:
+- Analytiker muss zuerst sicherstellen das zu analysierender Text maschinell lesbar ist
+  - statistische Methoden der Textanalyse sind meist unabhängig von der Sprache
+    - aber Tools des Prepocessings /nicht/
+
+3 Herausforderungen bei der Arbeit mit verschiedenen Sprachen:
+1. Umgang mit Zeichenkodierung (dealing with encodings)
+2. Präprozessing zur Reduktion der Dimensionalität
+3. Umgang mit großen Korpora
+** Umgang mit Encodings
+:PROPERTIES:
+:NOTER_PAGE: 4
+:END:
+- Sprachen können unterschiedliche Zeichenkodierung haben und unterschiedliche Computer händeln dies auf underschiedliche Art & Weise
+  - unterschiedliche default encodings
+- wenn der Analyst Daten aus versch Quellen bezieht ist es von nöten, dass das Encoding angepasst wird, sodass es in allen Dokumenten gleich ist 
+  - anschließend muss sichergestellt werden, dass die Software die Zeichenkodierung korrekt liest
+
+** Prepocessing to extract the most information
+:PROPERTIES:
+:NOTER_PAGE: 4
+:END:
+*** Stopword removal
+- Entfernung von Worten die extrem häufig auftreten aber nicht relevant im Bezug auf das Erkenntnisinteresse sind (zb "and", "the", "und", "zum")
+  - viele Sprachen haben eine Liste üblicher stop words
+- eine Liste von stop words die entfernt werden, sollte sorgfältig gewählt werden, da unterschiedliche stop words zu unterschiedlichen Ergebnissen führen können und manchmal im Kontext entscheidend sein können
+*** Stemming & lemmatization
+Stemming:
+- Entfernung der Enden von konjugierten Verben oder Nomen in der Pluralform, so dass nur der "Stamm" überbleibt
+- nützlich in jeder Sprache in der das Ende von Worten geändert wird für eine Veränderung der Zeit oder Anzahl (Englisch, Spanisch, Französisch etc)
+- nicht in jeder Sprache nötig/nützlich
+  - chinesische Verben werden zB nicht konjugiert und Nomen in chinesisch werden nicht durch eine Endung pluralisiert
+- Nützlichkeit ist anwendungs- und sprachabhängig
+- Stemming ist ein Vefahren/Näherung an ein allgemeineres Ziel was als Lemmatization (Lemmatisierung) bezeichnet wird
+
+Lemmatization:
+- Identifikation der Grundform eines Wortes und Gruppierung dieser Worte
+- komplexer Algorithmus, der nicht einfach das Ende eines Wortes abschneidet, sondern die Herkunft des Wortes identifiziert und nur das Lemma (Grundform) des Wortes zurück gibt
+- kann außerdem Kontext schlussfolgern:
+  - zB "saw" als Nomen = "Säge" bleibt so, als Verb = "sah" wird zu \rightarrow "sehen/see"
+
+- für Englisch funktioniert Stemming fast so gut wie Lemmatization in anderen Sprachen wie zB Koreanisch oder Türkisch ist Lemmatization hilfreicher
+
+*** Compound words
+- einige (compound) Sprachen setzen oft Worte zusammen (compounding) um ein neues Wort zu bilden zB Kirche + Rat = Kirchenrat
+  - decompounding macht in diesem Fall keinen Sinn da die Worte zusammengehören
+- in decompoung Sprachen widerrum können /mehrere/ getrennte Worte zu /einem/ Konzept gehören:
+  - "social security" und "national security"
+    - beide enthalten "security" aber haben trotzdem unterschiedliche Bedeutung, daher möchte der Analyst die Worte evtl. compounden (zusammenführen), zu "nationalsecurity" und "socialsecurity", um die Bedeutung an /ein/ Wort zu koppeln
+
+*** Segmentation
+- einige Sprachen wie zB Chinesisch werden nicht durch Leerzeichen segmentiert und erfordern deshalb automatische Segmentierung bevor sie von einem Statistikprogramm weiterverarbeitet werden können
+
+** Building the document-term matrix
+:PROPERTIES:
+:NOTER_PAGE: (5 . 0.802103879026956)
+:END:
+- nach dem das Prepocessing abgeschlossen ist, werden die übrig gebliebenen Worte genutzt, um eine document-term matrix (DTM) zu konstruieren
+- in einer document-term matrix repräsentiert jede Reihe ein Dokument und jede Spalte ein ein einzigartiges Wort
+  - jede Zelle enthält die Anzahl des Auftreten des jeweiligen Wortes (Spalte) im jeweiligen Dokument (Reihe)
+    - üblicherweise enthalten viele Zellen eine 0 
+
+Beispiel:
+| Berlin | Brüssel | Merkel | Schulz |
+|      0 |       1 |      0 |      1 | 
+|      1 |       0 |      1 |      0 |
+
+- Reihenfolge der Worte beachtet die DTM nicht
+- da diese DTM schon bei Korpora moderater Größe sehr groß werden kann, ist es ratsam nur Einträge zu speichern die nicht 0 sind (sparse representation)
+- die DTM oder ihre sparse representation sind der primäre Input für automatische Textanalysemethoden
+** Multilanguage Preprocessing Tools
+:PROPERTIES:
+:NOTER_PAGE: 6
+:END:
+*** Language-specific processing
+- das R Package `tm` kann Stemming für 11 und stop words removal für 13 Sprachen durchführen
+- die Python basierde Applikaton `txtorg` unterstützt 32 Sprachen
+  - alle Sprachen durchlaufen Schritte des best-practice preprocessing
+    - geeignete Kombination von Stemming, Segmentation und stop-word Entfernung
+*** Translation
+:PROPERTIES:
+:NOTER_PAGE: (6 . 0.6574621959237344)
+:END:
+- Übersetzung der Dokumente in 1 Sprache kann sich als effizient und zugänglicher für den Nutzer erweisen
+- cross-lingual comparison wird so gut wie nirgends unterstützt
+- Empfehlung: R package `translateR` gibt Zugang zu sehr ausgereiften Übersetzungssystemen (jene die produziert sind von Google und Microsoft)
+
+* Computer-Assisted Text Analysis
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.7495069033530573)
+:END:

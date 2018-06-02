@@ -1,0 +1,190 @@
+% Created 2018-06-02 Sat 22:15
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.0.91 (Org mode 9.1.13)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Computer-Assisted Text Analysis for Comparative Politics}
+\label{sec:orgf5ab55a}
+\section{Introduction}
+\label{sec:orgd87ee6b}
+\begin{itemize}
+\item Fokus auf Tools für Komparatisten, um \emph{textual} data zu nutzen
+\item Hervorhebung des \emph{unsupervised topic modeling}
+\item Verwendung des Structural Topic Model um das Potential von Topic Modeling für vergleichende Politik aufzuzeigen
+\begin{itemize}
+\item STM erlaubt Rückschlüsse auf Beziehung zw Metadaten und Textkorpus
+\end{itemize}
+\item wie unterscheidet sich Textanalyse und Text Processing in versch Sprachen
+\begin{itemize}
+\item R package `translateR`
+\end{itemize}
+\end{itemize}
+\section{Text and Language Basics}
+\label{sec:orgb538259}
+\subsection{Research Questions and Data Analysis}
+\label{sec:org3aea392}
+\begin{itemize}
+\item automatische Inhaltsanalyse und vergleichende Politik sind eine gute Kombination
+\item Länder produzieren Texte in noch nie dagewesenem Umfang
+\item traditionelle Regierungsstatistiken sind häufig nicht vorhanden, unvollständig, manipuliert oder falsch gemessen 
+\begin{itemize}
+\item Regierungen produzieren allerdings große Mengen an Textdaten, welche für deskriptive und kausale Inferenzen genutzt werden können
+\item Anreiz für Gelehrte andere Formen von Data zu verwenden
+\end{itemize}
+\item Gelehrte der vergleichenden Regierungslehre/Politik verwenden bereits automatische Methoden für Textanalysen
+\begin{itemize}
+\item weitverbreiteste Form von Text zu Politiker sind wahrscheinlich Aufzeichnungen von Reden oder anderen Statements
+\end{itemize}
+\item Auflistung einiger interessanten Studien die automatische Textanalyse ultilisiert haben
+\end{itemize}
+\subsection{Text Processing Basics: A Multilanguage View}
+\label{sec:orga4b23a2}
+\begin{itemize}
+\item Analytiker muss zuerst sicherstellen das zu analysierender Text maschinell lesbar ist
+\begin{itemize}
+\item statistische Methoden der Textanalyse sind meist unabhängig von der Sprache
+\begin{itemize}
+\item aber Tools des Prepocessings \emph{nicht}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+3 Herausforderungen bei der Arbeit mit verschiedenen Sprachen:
+\begin{enumerate}
+\item Umgang mit Zeichenkodierung (dealing with encodings)
+\item Präprozessing zur Reduktion der Dimensionalität
+\item Umgang mit großen Korpora
+\end{enumerate}
+\subsection{Umgang mit Encodings}
+\label{sec:orgf59f1bd}
+\begin{itemize}
+\item Sprachen können unterschiedliche Zeichenkodierung haben und unterschiedliche Computer händeln dies auf underschiedliche Art \& Weise
+\begin{itemize}
+\item unterschiedliche default encodings
+\end{itemize}
+\item wenn der Analyst Daten aus versch Quellen bezieht ist es von nöten, dass das Encoding angepasst wird, sodass es in allen Dokumenten gleich ist 
+\begin{itemize}
+\item anschließend muss sichergestellt werden, dass die Software die Zeichenkodierung korrekt liest
+\end{itemize}
+\end{itemize}
+
+\subsection{Prepocessing to extract the most information}
+\label{sec:orgba79536}
+\subsubsection{Stopword removal}
+\label{sec:org89891dc}
+\begin{itemize}
+\item Entfernung von Worten die extrem häufig auftreten aber nicht relevant im Bezug auf das Erkenntnisinteresse sind (zb "and", "the", "und", "zum")
+\begin{itemize}
+\item viele Sprachen haben eine Liste üblicher stop words
+\end{itemize}
+\item eine Liste von stop words die entfernt werden, sollte sorgfältig gewählt werden, da unterschiedliche stop words zu unterschiedlichen Ergebnissen führen können und manchmal im Kontext entscheidend sein können
+\end{itemize}
+\subsubsection{Stemming \& lemmatization}
+\label{sec:orgf38a346}
+Stemming:
+\begin{itemize}
+\item Entfernung der Enden von konjugierten Verben oder Nomen in der Pluralform, so dass nur der "Stamm" überbleibt
+\item nützlich in jeder Sprache in der das Ende von Worten geändert wird für eine Veränderung der Zeit oder Anzahl (Englisch, Spanisch, Französisch etc)
+\item nicht in jeder Sprache nötig/nützlich
+\begin{itemize}
+\item chinesische Verben werden zB nicht konjugiert und Nomen in chinesisch werden nicht durch eine Endung pluralisiert
+\end{itemize}
+\item Nützlichkeit ist anwendungs- und sprachabhängig
+\item Stemming ist ein Vefahren/Näherung an ein allgemeineres Ziel was als Lemmatization (Lemmatisierung) bezeichnet wird
+\end{itemize}
+
+Lemmatization:
+\begin{itemize}
+\item Identifikation der Grundform eines Wortes und Gruppierung dieser Worte
+\item komplexer Algorithmus, der nicht einfach das Ende eines Wortes abschneidet, sondern die Herkunft des Wortes identifiziert und nur das Lemma (Grundform) des Wortes zurück gibt
+\item kann außerdem Kontext schlussfolgern:
+\begin{itemize}
+\item zB "saw" als Nomen = "Säge" bleibt so, als Verb = "sah" wird zu \(\rightarrow\) "sehen/see"
+\end{itemize}
+
+\item für Englisch funktioniert Stemming fast so gut wie Lemmatization in anderen Sprachen wie zB Koreanisch oder Türkisch ist Lemmatization hilfreicher
+\end{itemize}
+
+\subsubsection{Compound words}
+\label{sec:org7f664f1}
+\begin{itemize}
+\item einige (compound) Sprachen setzen oft Worte zusammen (compounding) um ein neues Wort zu bilden zB Kirche + Rat = Kirchenrat
+\begin{itemize}
+\item decompounding macht in diesem Fall keinen Sinn da die Worte zusammengehören
+\end{itemize}
+\item in decompoung Sprachen widerrum können \emph{mehrere} getrennte Worte zu \emph{einem} Konzept gehören:
+\begin{itemize}
+\item "social security" und "national security"
+\begin{itemize}
+\item beide enthalten "security" aber haben trotzdem unterschiedliche Bedeutung, daher möchte der Analyst die Worte evtl. compounden (zusammenführen), zu "nationalsecurity" und "socialsecurity", um die Bedeutung an \emph{ein} Wort zu koppeln
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Segmentation}
+\label{sec:org2c931d1}
+\begin{itemize}
+\item einige Sprachen wie zB Chinesisch werden nicht durch Leerzeichen segmentiert und erfordern deshalb automatische Segmentierung bevor sie von einem Statistikprogramm weiterverarbeitet werden können
+\end{itemize}
+
+\subsection{Building the document-term matrix}
+\label{sec:orgdb0fe54}
+\begin{itemize}
+\item nach dem das Prepocessing abgeschlossen ist, werden die übrig gebliebenen Worte genutzt, um eine document-term matrix (DTM) zu konstruieren
+\item in einer document-term matrix repräsentiert jede Reihe ein Dokument und jede Spalte ein ein einzigartiges Wort
+\begin{itemize}
+\item jede Zelle enthält die Anzahl des Auftreten des jeweiligen Wortes (Spalte) im jeweiligen Dokument (Reihe)
+\begin{itemize}
+\item üblicherweise enthalten viele Zellen eine 0
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+Beispiel:
+\begin{center}
+\begin{tabular}{rrrr}
+Berlin & Brüssel & Merkel & Schulz\\
+0 & 1 & 0 & 1\\
+1 & 0 & 1 & 0\\
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Reihenfolge der Worte beachtet die DTM nicht
+\item da diese DTM schon bei Korpora moderater Größe sehr groß werden kann, ist es ratsam nur Einträge zu speichern die nicht 0 sind (sparse representation)
+\item die DTM oder ihre sparse representation sind der primäre Input für automatische Textanalysemethoden
+\end{itemize}
+\subsection{Multilanguage Preprocessing Tools}
+\label{sec:orgd5b5e94}
+\paragraph{Language-specific processing}
+
+\begin{itemize}
+\item das R Package `tm` kann Stemming für 11 Sprachen betreiben
+\end{itemize}
+\section{Computer-Assisted Text Analysis}
+\label{sec:orgb301ae5}
+\end{document}
