@@ -1,0 +1,56 @@
+* Hungary - Home of Empty Populism
+by Peter Cisgo & Norbert Merkovity
+- Aufsatz in "Populist Political Communication in Europe" (2016)
+
+** Misc
+- [[%5B%5Bhttps://www.theguardian.com/commentisfree/2015/jul/30/viktor-orban-fidesz-hungary-prime-minister-europe-neo-nazi%5D%5D ][interessanter Mudde Artikel zu Fidesz]] 
+- [[https://www.zeit.de/politik/ausland/2018-04/viktor-orban-wahlsieg-fidesz-mehrheit-ungarn-europa][Zeit Artikel zur Wahl 2018]] 
+- Fidesz = "Fidesch"
+
+** Einleitung
+- in jüngsten Jahren erregte Ungarn Aufsehen durch einen Rückfall zu illiberaler(autoritär) Demokratie unter Ministerpräsident Orban
+- Viktor Orban ist der Parteivorsitzende der rechtspopulistischen & nationalkonservativen Partei Fidesz-Ungarischer Bürgerbund 
+  - diese gewann im Jahr 2010 die Parlamentswahlen mit 52% und erhielt aufgrund des Wahlsystems mehr als \frac{2}{3} der Parlamentssitze
+\rightarrow aufgrund dieser Mehrheit und Machtverhältnisse ist Fidesz in der Lage die Konstituion "im Namen des Volkes" zu modifizieren
+- Gefährdung der Demokratie/Demokratiequalität (Rule of Law, Menschenrechte, checks & balances etc) durch Fidesz
+  
+** Bestehende Forschung zum Populismus in Ungarn
+- in den 2000ern verwendeten Forscher Populismus als negatives Phänomen, um die Defizite der ungarischen Politik zu erklären
+  - aktuelle (post 2010) Literatur allerdings rar
+    - nur wenig empirische Studien (eher historisch o rein theoretisch)
+- die rechtsextreme Jobbik Partei (Opposition von Fidesz) wird in ungarischer Literatur nicht als populistisch oder populistischer als andere Parteien bezeichnet
+
+- da Erfahrungen bzgl des Populismus auf den 2000ern beruhen, basiert der folgende Überblick darauf:
+  - für die Ungarn ist die Dekade 2000-2010 eine gescheiterte
+    - Zeitraum wo Ungarn trotz Aufnahme in NATO und EU, den Pfad des Fortschritts in Richtung westlicher Demokratien verlassen hat
+  \rightarrow das erklärt warum Publikationen in diesem Zeitraum populistisches Verhalten kritisch beurteilt haben
+  - Gelehrte/Wissenschaftler sind auch nicht ganz frei von ihrer pol Meinung und haben den Populismus der etablierten Parteien kritisiert, wobei die Schuld allen Parteien zugeschoben wurde die seit 1998 das Land regiert haben:
+    - die sozialistische Partei MSZP & die liberale Partei SZDSZ (2002-2019)
+    - die rechte Partei Fidesz (1998-2002 + seit 2010)
+  - neue anti-establishment Parteien (Jobbik, LMP) werden seltener als populistisch bezeichnet
+  - die meisten mit Populismus in Verbindung zu bringenden Phänomene fallen in die Kategorie des "empty populism"
+    - ursprüngliche Definitione von "empty populism" neutral, ungarische Autoren konnotieren diesen eher negativ
+    - die meisten ungarischen Aufsätze dokumentieren die Art & Weise wie mainstream Parteien "empty populism" verwenden (Willen des Volkes, Opportunismus etc)
+  - einige Autoren bezeichnen Fidesz als eine Kombination der oben genannten grundlegenden Popuslismuseigenschaften in Kombination mit starker anti-elitärer Rhetorik
+    - tatsächlich attackiert Fidesz die post-kommunistischen Eliten, welche ihre politische Macht (Narrativ von Fidesz) nach dem Fall des Kommunismus in wirtschaftliche Macht umgewandelt hätten
+  \rightarrow somit könnte man Fidesz auch als anti-elitären populistischen Akteur (anti-elitist populist actor) ,nach Jagers & Walgrave, bezeichnen.
+  - in einigen Studein wird Fidesz für die nationalistische Mobilisierung gegen Nachbarländer und Europa, sowie anti-kommunistische Propagand, verantwortlich gemacht
+    - in diesem Fall würde der Populismus als /complete populism/ gelten (Kombination von Antielitarismus und Degradation ethnisher o nationaler out-groups)
+
+- da in der ungarischen Literatur Populismus hauptsächlich mit mainstream Parteien in Verbindung gebracht wird, gibt es keine Partei die man allgemein als "die populistische" Partei bezeichnen würde und die sich von konventionellen, nicht-populistischen Parteien deutlich unterscheidet
+  - Jobbik Partei wird nämlich als radikale oder rechtsextreme Partei charakterisiert
+\rightarrow weder passt ungarische Politik(Realität) & Literatur zu dem Verständnis von Populismus als etwas anderes als mainstream Politik, noch unterscheiden sie Populisten von Nichtpopulisten
+
+*** einflussreiche Politiker
+- die einflussreichsten Politiker der letzten 15 Jahre haben alle populistische Mobilisierungsstrategien gegen nationale Outgrups (zB Rumänen) verwendet
+1. Orban (Fidez)
+   - aktueller Ministerpräsident
+
+2. Gyurcsany (Sozialist)
+   - Ministerpräsident von 2004 bis 1009
+
+3. Vona (Jobbik)
+   - aktueller (bis 2018) Vorsitzender der Partei Jobbik 
+     
+\rightarrow in einem politischen Raum der mit so viel Populismus behaftet ist, haben Autoren es unterlassen zwischen Populismus und mainstream Normalität zu differenzieren
+** Populistische Akteure als Kommunikatoren
