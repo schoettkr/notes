@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-06-03 Sun 14:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org764bb26">1. Computer-Assisted Text Analysis for Comparative Politics</a></li>
+<li><a href="#org96d4f46">2. Introduction</a></li>
+<li><a href="#orgfced564">3. Text and Language Basics</a>
+<ul>
+<li><a href="#org49662f8">3.1. Research Questions and Data Analysis</a></li>
+<li><a href="#org454255c">3.2. Text Processing Basics: A Multilanguage View</a></li>
+<li><a href="#org8dd317b">3.3. Umgang mit Encodings</a></li>
+<li><a href="#orgeb0858c">3.4. Prepocessing to extract the most information</a>
+<ul>
+<li><a href="#orgb77e8f9">3.4.1. Stopword removal</a></li>
+<li><a href="#orgd2f4415">3.4.2. Stemming &amp; lemmatization</a></li>
+<li><a href="#org93a38d1">3.4.3. Compound words</a></li>
+<li><a href="#org0c65fea">3.4.4. Segmentation</a></li>
+</ul>
+</li>
+<li><a href="#orgb991b50">3.5. Building the document-term matrix</a></li>
+<li><a href="#orgc587181">3.6. Multilanguage Preprocessing Tools</a>
+<ul>
+<li><a href="#org2e2b3fe">3.6.1. Language-specific processing</a></li>
+<li><a href="#org1f41a92">3.6.2. Translation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6eb3569">4. Computer-Assisted Text Analysis</a>
+<ul>
+<li><a href="#org8e48205">4.1. A Brief Overview of Approaches</a></li>
+<li><a href="#org855d1f7">4.2. Multilangual Text Modeling</a></li>
+<li><a href="#org02fd6aa">4.3. The STM</a>
+<ul>
+<li><a href="#orgf9235de">4.3.1. Rolle von Covariates (unabhängigen Variablen)</a></li>
+<li><a href="#orgbe3ecb5">4.3.2. Topic correlations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1acc165">5. Applications</a>
+<ul>
+<li><a href="#org6ca470d">5.1. Jihadi Fatwas</a></li>
+<li><a href="#org4565e56">5.2. Reaktionen auf Snowden in China und in Nahost</a>
+<ul>
+<li><a href="#org7a66687">5.2.1. Two approaches to machine translation</a></li>
+<li><a href="#orgf4439f8">5.2.2. Correcting for systematic differences between languages</a></li>
+<li><a href="#orgc56dd7c">5.2.3. Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1bf4fd0">6. Conclusion</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org764bb26" class="outline-2">
+<h2 id="org764bb26"><span class="section-number-2">1</span> Computer-Assisted Text Analysis for Comparative Politics</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</div>
+<div id="outline-container-org96d4f46" class="outline-2">
+<h2 id="org96d4f46"><span class="section-number-2">2</span> Introduction</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Fokus auf Tools für Komparatisten, um <i>textual</i> data zu nutzen</li>
+<li>Hervorhebung des <i>unsupervised topic modeling</i></li>
+<li>Verwendung des Structural Topic Model um das Potential von Topic Modeling für vergleichende Politik aufzuzeigen
+<ul class="org-ul">
+<li>STM erlaubt Rückschlüsse auf Beziehung zw Metadaten und Textkorpus</li>
+</ul></li>
+<li>wie unterscheidet sich Textanalyse und Text Processing in versch Sprachen
+<ul class="org-ul">
+<li>R package `translateR`</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfced564" class="outline-2">
+<h2 id="orgfced564"><span class="section-number-2">3</span> Text and Language Basics</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org49662f8" class="outline-3">
+<h3 id="org49662f8"><span class="section-number-3">3.1</span> Research Questions and Data Analysis</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>automatische Inhaltsanalyse und vergleichende Politik sind eine gute Kombination</li>
+<li>Länder produzieren Texte in noch nie dagewesenem Umfang</li>
+<li>traditionelle Regierungsstatistiken sind häufig nicht vorhanden, unvollständig, manipuliert oder falsch gemessen 
+<ul class="org-ul">
+<li>Regierungen produzieren allerdings große Mengen an Textdaten, welche für deskriptive und kausale Inferenzen genutzt werden können</li>
+<li>Anreiz für Gelehrte andere Formen von Data zu verwenden</li>
+</ul></li>
+<li>Gelehrte der vergleichenden Regierungslehre/Politik verwenden bereits automatische Methoden für Textanalysen
+<ul class="org-ul">
+<li>weitverbreiteste Form von Text zu Politiker sind wahrscheinlich Aufzeichnungen von Reden oder anderen Statements</li>
+</ul></li>
+<li>Auflistung einiger interessanten Studien die automatische Textanalyse ultilisiert haben</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org454255c" class="outline-3">
+<h3 id="org454255c"><span class="section-number-3">3.2</span> Text Processing Basics: A Multilanguage View</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Analytiker muss zuerst sicherstellen das zu analysierender Text maschinell lesbar ist
+<ul class="org-ul">
+<li>statistische Methoden der Textanalyse sind meist unabhängig von der Sprache
+<ul class="org-ul">
+<li>aber Tools des Prepocessings <i>nicht</i></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+3 Herausforderungen bei der Arbeit mit verschiedenen Sprachen:
+</p>
+<ol class="org-ol">
+<li>Umgang mit Zeichenkodierung (dealing with encodings)</li>
+<li>Präprozessing zur Reduktion der Dimensionalität</li>
+<li>Umgang mit großen Korpora</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8dd317b" class="outline-3">
+<h3 id="org8dd317b"><span class="section-number-3">3.3</span> Umgang mit Encodings</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Sprachen können unterschiedliche Zeichenkodierung haben und unterschiedliche Computer händeln dies auf underschiedliche Art &amp; Weise
+<ul class="org-ul">
+<li>unterschiedliche default encodings</li>
+</ul></li>
+<li>wenn der Analyst Daten aus versch Quellen bezieht ist es von nöten, dass das Encoding angepasst wird, sodass es in allen Dokumenten gleich ist 
+<ul class="org-ul">
+<li>anschließend muss sichergestellt werden, dass die Software die Zeichenkodierung korrekt liest</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeb0858c" class="outline-3">
+<h3 id="orgeb0858c"><span class="section-number-3">3.4</span> Prepocessing to extract the most information</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgb77e8f9" class="outline-4">
+<h4 id="orgb77e8f9"><span class="section-number-4">3.4.1</span> Stopword removal</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>Entfernung von Worten die extrem häufig auftreten aber nicht relevant im Bezug auf das Erkenntnisinteresse sind (zb "and", "the", "und", "zum")
+<ul class="org-ul">
+<li>viele Sprachen haben eine Liste üblicher stop words</li>
+</ul></li>
+<li>eine Liste von stop words die entfernt werden, sollte sorgfältig gewählt werden, da unterschiedliche stop words zu unterschiedlichen Ergebnissen führen können und manchmal im Kontext entscheidend sein können</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2f4415" class="outline-4">
+<h4 id="orgd2f4415"><span class="section-number-4">3.4.2</span> Stemming &amp; lemmatization</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Stemming:
+</p>
+<ul class="org-ul">
+<li>Entfernung der Enden von konjugierten Verben oder Nomen in der Pluralform, so dass nur der "Stamm" überbleibt</li>
+<li>nützlich in jeder Sprache in der das Ende von Worten geändert wird für eine Veränderung der Zeit oder Anzahl (Englisch, Spanisch, Französisch etc)</li>
+<li>nicht in jeder Sprache nötig/nützlich
+<ul class="org-ul">
+<li>chinesische Verben werden zB nicht konjugiert und Nomen in chinesisch werden nicht durch eine Endung pluralisiert</li>
+</ul></li>
+<li>Nützlichkeit ist anwendungs- und sprachabhängig</li>
+<li>Stemming ist ein Vefahren/Näherung an ein allgemeineres Ziel was als Lemmatization (Lemmatisierung) bezeichnet wird</li>
+</ul>
+
+<p>
+Lemmatization:
+</p>
+<ul class="org-ul">
+<li>Identifikation der Grundform eines Wortes und Gruppierung dieser Worte</li>
+<li>komplexer Algorithmus, der nicht einfach das Ende eines Wortes abschneidet, sondern die Herkunft des Wortes identifiziert und nur das Lemma (Grundform) des Wortes zurück gibt</li>
+<li>kann außerdem Kontext schlussfolgern:
+<ul class="org-ul">
+<li>zB "saw" als Nomen = "Säge" bleibt so, als Verb = "sah" wird zu &rarr; "sehen/see"</li>
+</ul></li>
+
+<li>für Englisch funktioniert Stemming fast so gut wie Lemmatization in anderen Sprachen wie zB Koreanisch oder Türkisch ist Lemmatization hilfreicher</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org93a38d1" class="outline-4">
+<h4 id="org93a38d1"><span class="section-number-4">3.4.3</span> Compound words</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ul class="org-ul">
+<li>einige (compound) Sprachen setzen oft Worte zusammen (compounding) um ein neues Wort zu bilden zB Kirche + Rat = Kirchenrat
+<ul class="org-ul">
+<li>decompounding macht in diesem Fall keinen Sinn da die Worte zusammengehören</li>
+</ul></li>
+<li>in decompoung Sprachen widerrum können <i>mehrere</i> getrennte Worte zu <i>einem</i> Konzept gehören:
+<ul class="org-ul">
+<li>"social security" und "national security"
+<ul class="org-ul">
+<li>beide enthalten "security" aber haben trotzdem unterschiedliche Bedeutung, daher möchte der Analyst die Worte evtl. compounden (zusammenführen), zu "nationalsecurity" und "socialsecurity", um die Bedeutung an <i>ein</i> Wort zu koppeln</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0c65fea" class="outline-4">
+<h4 id="org0c65fea"><span class="section-number-4">3.4.4</span> Segmentation</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<ul class="org-ul">
+<li>einige Sprachen wie zB Chinesisch werden nicht durch Leerzeichen segmentiert und erfordern deshalb automatische Segmentierung bevor sie von einem Statistikprogramm weiterverarbeitet werden können</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb991b50" class="outline-3">
+<h3 id="orgb991b50"><span class="section-number-3">3.5</span> Building the document-term matrix</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>nach dem das Prepocessing abgeschlossen ist, werden die übrig gebliebenen Worte genutzt, um eine document-term matrix (DTM) zu konstruieren</li>
+<li>in einer document-term matrix repräsentiert jede Reihe ein Dokument und jede Spalte ein ein einzigartiges Wort
+<ul class="org-ul">
+<li>jede Zelle enthält die Anzahl des Auftreten des jeweiligen Wortes (Spalte) im jeweiligen Dokument (Reihe)
+<ul class="org-ul">
+<li>üblicherweise enthalten viele Zellen eine 0</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Beispiel:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">Berlin</td>
+<td class="org-right">Brüssel</td>
+<td class="org-right">Merkel</td>
+<td class="org-right">Schulz</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Reihenfolge der Worte beachtet die DTM nicht</li>
+<li>da diese DTM schon bei Korpora moderater Größe sehr groß werden kann, ist es ratsam nur Einträge zu speichern die nicht 0 sind (sparse representation)</li>
+<li>die DTM oder ihre sparse representation sind der primäre Input für automatische Textanalysemethoden</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc587181" class="outline-3">
+<h3 id="orgc587181"><span class="section-number-3">3.6</span> Multilanguage Preprocessing Tools</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org2e2b3fe" class="outline-4">
+<h4 id="org2e2b3fe"><span class="section-number-4">3.6.1</span> Language-specific processing</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li>das R Package `tm` kann Stemming für 11 und stop words removal für 13 Sprachen durchführen</li>
+<li>die Python basierde Applikaton `txtorg` unterstützt 32 Sprachen
+<ul class="org-ul">
+<li>alle Sprachen durchlaufen Schritte des best-practice preprocessing
+<ul class="org-ul">
+<li>geeignete Kombination von Stemming, Segmentation und stop-word Entfernung</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1f41a92" class="outline-4">
+<h4 id="org1f41a92"><span class="section-number-4">3.6.2</span> Translation</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<ul class="org-ul">
+<li>Übersetzung der Dokumente in 1 Sprache kann sich als effizient und zugänglicher für den Nutzer erweisen</li>
+<li>cross-lingual comparison wird so gut wie nirgends unterstützt</li>
+<li>Empfehlung: R package `translateR` gibt Zugang zu sehr ausgereiften Übersetzungssystemen (jene die produziert sind von Google und Microsoft)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6eb3569" class="outline-2">
+<h2 id="org6eb3569"><span class="section-number-2">4</span> Computer-Assisted Text Analysis</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8e48205" class="outline-3">
+<h3 id="org8e48205"><span class="section-number-3">4.1</span> A Brief Overview of Approaches</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+zwei Herangehensweisen im Hinblick auf automatische Textanalyse:
+</p>
+<ol class="org-ol">
+<li>supervised methods:
+<ul class="org-ul">
+<li>"specify what is conceptually interesting about documents in advance, and then the model seeks to extend our insights to a larger population of unseen documents"</li>
+<li>bspw. manuelle Unterteilung/Klassifizierung von 100 Dokumenten in 2 Kategorien &rarr; und dann automatische Klassifizierung der verbleibenden 9900</li>
+</ul></li>
+<li>unsupervised methods:
+<ul class="org-ul">
+<li>zB topic modeling</li>
+<li>keine manuelle Klassifizierung der Texte im Voraus</li>
+<li>das Modell wird benutzt um eine "low-dimensional summary" zu finden, welche die Dokumente am besten erklärt im Hinblick auf zuvor formulierte Annahmen</li>
+</ul></li>
+</ol>
+
+<p>
+bei supervised methods liegt der Großteil der von Hand zu verrichtenden Arbeit in der Konstruktion des training sets, bei unsupervised in der Interpretation der model results
+</p>
+
+<p>
+Autoren benutzen ein bestimmten Typ des unsupervised topic modeling, welches auf dem Latent Dirichlet Allocation (LDA) model basiert
+</p>
+<ul class="org-ul">
+<li>LDA = mixed-mempership model
+<ul class="org-ul">
+<li>d.h jedes Dokument wird repräsentiert als eine Kombination/Mischung aus einem Pool von Themen und jedem Wort, welchem ebenfalls ein bestimmtes Thema zugewiesen wird</li>
+</ul></li>
+<li>each topic is a distribution over the words in the vocabulary
+<ul class="org-ul">
+<li>dies wird gelernt und nicht vom model angenommen</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org855d1f7" class="outline-3">
+<h3 id="org855d1f7"><span class="section-number-3">4.2</span> Multilangual Text Modeling</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Herangehensweisen:
+</p>
+<ol class="org-ol">
+<li>Analyse in der nativen Sprache des Textes
+<ul class="org-ul">
+<li>machbar bei supervised Vorgehen (trotzdem aufwändig), aber keine klare Methodik für unsupervised Vorgehen</li>
+</ul></li>
+<li>Übersetzung der Texte in eine common Sprache
+<ul class="org-ul">
+<li>manuelle Übersetzung extrem teuer, daher maschinelle Übersetzung</li>
+</ul></li>
+<li>Explicit multilangual representation
+<ul class="org-ul">
+<li>develop a model which maintains an explicitly multilingual representation</li>
+<li>Vereinheitlichung der konzeptuellen Models über die versch Sprachen hinweg, sodass scaling und Themen (topics) in der einen Sprache vergleichbar mit den Repräsentationen der anderen Sprache sind</li>
+</ul></li>
+</ol>
+
+<p>
+Übereinstimmung(Korrespondenz) mehrsprachiger Topics hängt von <i>particular alignment informations</i> des Anwenders ab und muss (manuell) validiert werden
+</p>
+<ul class="org-ul">
+<li>für jedes Topic muss überprüft werden, dass topic word distributions über die Sprachen hinweg einheitlich sind</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org02fd6aa" class="outline-3">
+<h3 id="org02fd6aa"><span class="section-number-3">4.3</span> The STM</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>das STM Framework ist ein mixded-membership topic model (so wie LDA) mit dem Zusatz, dass es dokumentabhängige Metadaten berücksichtigen und mit einbeziehen kann
+<ul class="org-ul">
+<li>kann Qualität der erlernten Topics erhöhen und Hypothesentests erleichtern</li>
+<li>erhältlich über das R package `stm`</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgf9235de" class="outline-4">
+<h4 id="orgf9235de"><span class="section-number-4">4.3.1</span> Rolle von Covariates (unabhängigen Variablen)</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>STM kann im Gegensatz zu LDA "include document-level covariates in the model as a method for pooling information"</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe3ecb5" class="outline-4">
+<h4 id="orgbe3ecb5"><span class="section-number-4">4.3.2</span> Topic correlations</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>STM kann darüberhinaus die Korrelation von Themen explizit kalkulieren</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1acc165" class="outline-2">
+<h2 id="org1acc165"><span class="section-number-2">5</span> Applications</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Vorstellung von 2 Anwendungsbereichen des STM
+</p>
+<ol class="org-ol">
+<li>Analyse von islam. <i>fatwas</i> in nativer Sprache</li>
+<li>Analyse von Texten in 2 Sprachen (Arabisch &amp; Chinsesisch)</li>
+</ol>
+</div>
+<div id="outline-container-org6ca470d" class="outline-3">
+<h3 id="org6ca470d"><span class="section-number-3">5.1</span> Jihadi Fatwas</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Kombination von Daten über musl. Gelehrte und Kodierungen im Bezug darauf ob Gelehrte Jihadisten sind, um herauszufinden wie der Themensinhalt von Texten die von jihadist. Gelehrten sich von Nichtjihadisten unterscheiden:
+</p>
+<ol class="org-ol">
+<li>Data von Nielsen: Daten über das Leben und Schriften von 101 bekannten jihad. und nicht-jihad. musl. Gelehrten inklusive 27.248 Texte von diesen
+<ul class="org-ul">
+<li>Großteil dieser Texte sind fatwas</li>
+<li>aber auch Bücher, Artikel und Schriften</li>
+<li>diese Texte zeigen wie Gelehrte mit religiösen Konstitutionen(Wählerschichten?) interagieren</li>
+</ul></li>
+<li>Unabhängige Kodierungen ob diese Gelehrten Jihadistens sind</li>
+<li>2 Quellen:
+<ul class="org-ul">
+<li><i>Militant Ideology Atlas</i> = führt 56 Individuen an die regelmäßig/oft von Jihadisten zitiert werden</li>
+<li>Auflistung von bekannten Gelehrten in 8 ideologischen Kategorieren (Jarret Brachman):
+<ul class="org-ul">
+<li>Salafist, Madkhali Salafist, Albani Salafist, scientific Salafist, Salafist Ikhwan, Sururis, <b>Qutubis</b> und <b>Global Jidahist</b>
+<ul class="org-ul">
+<li>die letzten 2 Kategorien werden als Jihadisten eingeordnet, die anderen nicht</li>
+</ul></li>
+</ul></li>
+<li>zusammen ergeben diese beiden Quellen Assesments von 33 der Gelehrten (20 Jihadisten, 13 Nichtjihadisten) zu denen Nielsen 11.045 Texte gesammelt hat</li>
+</ul></li>
+</ol>
+
+<p>
+detailliertes Vorgehen und Ergebnisse auf Seite 11 - 15
+</p>
+</div>
+</div>
+<div id="outline-container-org4565e56" class="outline-3">
+<h3 id="org4565e56"><span class="section-number-3">5.2</span> Reaktionen auf Snowden in China und in Nahost</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>illustratives Beispiel das zeigt wie maschinelle Übersetzung genutzt zsm mit STM werden kann um Vergleiche über Länder und Sprachen hinweg anzustellen</li>
+<li>es sei wichtig zu verstehen wie andere Länder die USA finden/bewerten
+<ul class="org-ul">
+<li>eine Möglichkeit um dies rauszufinden ist mit Hilfe eines Vergleichs von Responses zu bestimmten Ereignissen</li>
+</ul></li>
+<li>Sammlung von tausenden Social Media Posts in Arabisch &amp; Chinesisch im Juni 2013, dem Monat als Edward Snowden die Whistle geblowt hat
+<ul class="org-ul">
+<li>Fokus auf Antworten aus China und Nahost (wichtige strateg. Regionen für die USA)</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org7a66687" class="outline-4">
+<h4 id="org7a66687"><span class="section-number-4">5.2.1</span> Two approaches to machine translation</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>idealerweise Analyse der beiden Datensätze im selben topic model
+<ul class="org-ul">
+<li>ohne zu übersetzen würde es allerdings keine (vokabularen) Überschneidungen geben
+<ul class="org-ul">
+<li>dann hätte jeder Korpus eigene indivuelle Topics weil "Snowden" auf Arabisch /neq "Snowden" auf Chinesisch (aber beide selbes Topic "Snowden") und Inhaltsvergleich der Themen somit nicht realisierbar</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+daher Übersetzung der gesamten Korpora, sowie Übersetzung von Begriffen der DTM mit Hilfe von Google Translate durch `translateR`
+</p>
+<ul class="org-ul">
+<li>ersteres weil beim gesamten Text der Kontext fuer die Übersetzung erhalten bleibt</li>
+<li>zweiteres weil es nur die minimal benötigten Worte (am meisten relevant) übersetzt
+<ul class="org-ul">
+<li>individuelle Erstellung der DTM für jede Sprache &rarr; Übersetzung der jeweiligen Terms &rarr; Merge der übersetzten DTM's</li>
+</ul></li>
+<li>Sicherstellen das kein Topic exklusiv im Kontext einer Sprache existiert</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4439f8" class="outline-4">
+<h4 id="orgf4439f8"><span class="section-number-4">5.2.2</span> Correcting for systematic differences between languages</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>words that mean the same thing in the Chinese and Arabic corpus could sometimes map onto different words in English that are synonyms of each other</li>
+</ul>
+
+<p>
+&rarr; "Within the STM, we can use a content covariate to capture variations in word use attributable to observed covariates. Here we include the document's original language as a content covariate in order to capture linguistic differences in describing a topic. This allows us to effectively marginalize over differences in word rate use that arise due to linguistic differences or errors in translation"
+</p>
+</div>
+</div>
+<div id="outline-container-orgc56dd7c" class="outline-4">
+<h4 id="orgc56dd7c"><span class="section-number-4">5.2.3</span> Results</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+detailliertes Vorgehen &amp; Ergebnisse auf Seite 17 - 21
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1bf4fd0" class="outline-2">
+<h2 id="org1bf4fd0"><span class="section-number-2">6</span> Conclusion</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Seite 21 - 22 nicht so relevant da nur eine Zusammenfassung des bereits aufgeführten Vorgehens
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-06-03 Sun 14:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

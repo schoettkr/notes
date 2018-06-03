@@ -1,4 +1,4 @@
-% Created 2018-06-02 Sat 22:15
+% Created 2018-06-03 Sun 14:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -28,9 +28,9 @@
 \tableofcontents
 
 \section{Computer-Assisted Text Analysis for Comparative Politics}
-\label{sec:orgf5ab55a}
+\label{sec:org0e95a2d}
 \section{Introduction}
-\label{sec:orgd87ee6b}
+\label{sec:org86c6b4e}
 \begin{itemize}
 \item Fokus auf Tools für Komparatisten, um \emph{textual} data zu nutzen
 \item Hervorhebung des \emph{unsupervised topic modeling}
@@ -44,9 +44,9 @@
 \end{itemize}
 \end{itemize}
 \section{Text and Language Basics}
-\label{sec:orgb538259}
+\label{sec:orgce02cc3}
 \subsection{Research Questions and Data Analysis}
-\label{sec:org3aea392}
+\label{sec:org6c3b24c}
 \begin{itemize}
 \item automatische Inhaltsanalyse und vergleichende Politik sind eine gute Kombination
 \item Länder produzieren Texte in noch nie dagewesenem Umfang
@@ -62,7 +62,7 @@
 \item Auflistung einiger interessanten Studien die automatische Textanalyse ultilisiert haben
 \end{itemize}
 \subsection{Text Processing Basics: A Multilanguage View}
-\label{sec:orga4b23a2}
+\label{sec:org99f934c}
 \begin{itemize}
 \item Analytiker muss zuerst sicherstellen das zu analysierender Text maschinell lesbar ist
 \begin{itemize}
@@ -80,7 +80,7 @@
 \item Umgang mit großen Korpora
 \end{enumerate}
 \subsection{Umgang mit Encodings}
-\label{sec:orgf59f1bd}
+\label{sec:org4c43669}
 \begin{itemize}
 \item Sprachen können unterschiedliche Zeichenkodierung haben und unterschiedliche Computer händeln dies auf underschiedliche Art \& Weise
 \begin{itemize}
@@ -93,9 +93,9 @@
 \end{itemize}
 
 \subsection{Prepocessing to extract the most information}
-\label{sec:orgba79536}
+\label{sec:org8a34929}
 \subsubsection{Stopword removal}
-\label{sec:org89891dc}
+\label{sec:orga6d8710}
 \begin{itemize}
 \item Entfernung von Worten die extrem häufig auftreten aber nicht relevant im Bezug auf das Erkenntnisinteresse sind (zb "and", "the", "und", "zum")
 \begin{itemize}
@@ -104,7 +104,7 @@
 \item eine Liste von stop words die entfernt werden, sollte sorgfältig gewählt werden, da unterschiedliche stop words zu unterschiedlichen Ergebnissen führen können und manchmal im Kontext entscheidend sein können
 \end{itemize}
 \subsubsection{Stemming \& lemmatization}
-\label{sec:orgf38a346}
+\label{sec:orgadbecc3}
 Stemming:
 \begin{itemize}
 \item Entfernung der Enden von konjugierten Verben oder Nomen in der Pluralform, so dass nur der "Stamm" überbleibt
@@ -130,7 +130,7 @@ Lemmatization:
 \end{itemize}
 
 \subsubsection{Compound words}
-\label{sec:org7f664f1}
+\label{sec:org30751ed}
 \begin{itemize}
 \item einige (compound) Sprachen setzen oft Worte zusammen (compounding) um ein neues Wort zu bilden zB Kirche + Rat = Kirchenrat
 \begin{itemize}
@@ -146,13 +146,13 @@ Lemmatization:
 \end{itemize}
 
 \subsubsection{Segmentation}
-\label{sec:org2c931d1}
+\label{sec:org331c971}
 \begin{itemize}
 \item einige Sprachen wie zB Chinesisch werden nicht durch Leerzeichen segmentiert und erfordern deshalb automatische Segmentierung bevor sie von einem Statistikprogramm weiterverarbeitet werden können
 \end{itemize}
 
 \subsection{Building the document-term matrix}
-\label{sec:orgdb0fe54}
+\label{sec:orgecdf53c}
 \begin{itemize}
 \item nach dem das Prepocessing abgeschlossen ist, werden die übrig gebliebenen Worte genutzt, um eine document-term matrix (DTM) zu konstruieren
 \item in einer document-term matrix repräsentiert jede Reihe ein Dokument und jede Spalte ein ein einzigartiges Wort
@@ -179,12 +179,181 @@ Berlin & Brüssel & Merkel & Schulz\\
 \item die DTM oder ihre sparse representation sind der primäre Input für automatische Textanalysemethoden
 \end{itemize}
 \subsection{Multilanguage Preprocessing Tools}
-\label{sec:orgd5b5e94}
-\paragraph{Language-specific processing}
-
+\label{sec:org35cf0ba}
+\subsubsection{Language-specific processing}
+\label{sec:orgae7009f}
 \begin{itemize}
-\item das R Package `tm` kann Stemming für 11 Sprachen betreiben
+\item das R Package `tm` kann Stemming für 11 und stop words removal für 13 Sprachen durchführen
+\item die Python basierde Applikaton `txtorg` unterstützt 32 Sprachen
+\begin{itemize}
+\item alle Sprachen durchlaufen Schritte des best-practice preprocessing
+\begin{itemize}
+\item geeignete Kombination von Stemming, Segmentation und stop-word Entfernung
 \end{itemize}
+\end{itemize}
+\end{itemize}
+\subsubsection{Translation}
+\label{sec:org9c402a9}
+\begin{itemize}
+\item Übersetzung der Dokumente in 1 Sprache kann sich als effizient und zugänglicher für den Nutzer erweisen
+\item cross-lingual comparison wird so gut wie nirgends unterstützt
+\item Empfehlung: R package `translateR` gibt Zugang zu sehr ausgereiften Übersetzungssystemen (jene die produziert sind von Google und Microsoft)
+\end{itemize}
+
 \section{Computer-Assisted Text Analysis}
-\label{sec:orgb301ae5}
+\label{sec:orgd9f30c1}
+\subsection{A Brief Overview of Approaches}
+\label{sec:org4e91c23}
+zwei Herangehensweisen im Hinblick auf automatische Textanalyse:
+\begin{enumerate}
+\item supervised methods:
+\begin{itemize}
+\item "specify what is conceptually interesting about documents in advance, and then the model seeks to extend our insights to a larger population of unseen documents"
+\item bspw. manuelle Unterteilung/Klassifizierung von 100 Dokumenten in 2 Kategorien \(\rightarrow\) und dann automatische Klassifizierung der verbleibenden 9900
+\end{itemize}
+\item unsupervised methods:
+\begin{itemize}
+\item zB topic modeling
+\item keine manuelle Klassifizierung der Texte im Voraus
+\item das Modell wird benutzt um eine "low-dimensional summary" zu finden, welche die Dokumente am besten erklärt im Hinblick auf zuvor formulierte Annahmen
+\end{itemize}
+\end{enumerate}
+
+bei supervised methods liegt der Großteil der von Hand zu verrichtenden Arbeit in der Konstruktion des training sets, bei unsupervised in der Interpretation der model results
+
+Autoren benutzen ein bestimmten Typ des unsupervised topic modeling, welches auf dem Latent Dirichlet Allocation (LDA) model basiert
+\begin{itemize}
+\item LDA = mixed-mempership model
+\begin{itemize}
+\item d.h jedes Dokument wird repräsentiert als eine Kombination/Mischung aus einem Pool von Themen und jedem Wort, welchem ebenfalls ein bestimmtes Thema zugewiesen wird
+\end{itemize}
+\item each topic is a distribution over the words in the vocabulary
+\begin{itemize}
+\item dies wird gelernt und nicht vom model angenommen
+\end{itemize}
+\end{itemize}
+
+\subsection{Multilangual Text Modeling}
+\label{sec:org0491978}
+Herangehensweisen:
+\begin{enumerate}
+\item Analyse in der nativen Sprache des Textes
+\begin{itemize}
+\item machbar bei supervised Vorgehen (trotzdem aufwändig), aber keine klare Methodik für unsupervised Vorgehen
+\end{itemize}
+\item Übersetzung der Texte in eine common Sprache
+\begin{itemize}
+\item manuelle Übersetzung extrem teuer, daher maschinelle Übersetzung
+\end{itemize}
+\item Explicit multilangual representation
+\begin{itemize}
+\item develop a model which maintains an explicitly multilingual representation
+\item Vereinheitlichung der konzeptuellen Models über die versch Sprachen hinweg, sodass scaling und Themen (topics) in der einen Sprache vergleichbar mit den Repräsentationen der anderen Sprache sind
+\end{itemize}
+\end{enumerate}
+
+Übereinstimmung(Korrespondenz) mehrsprachiger Topics hängt von \emph{particular alignment informations} des Anwenders ab und muss (manuell) validiert werden
+\begin{itemize}
+\item für jedes Topic muss überprüft werden, dass topic word distributions über die Sprachen hinweg einheitlich sind
+\end{itemize}
+\subsection{The STM}
+\label{sec:orgf72c7f9}
+\begin{itemize}
+\item das STM Framework ist ein mixded-membership topic model (so wie LDA) mit dem Zusatz, dass es dokumentabhängige Metadaten berücksichtigen und mit einbeziehen kann
+\begin{itemize}
+\item kann Qualität der erlernten Topics erhöhen und Hypothesentests erleichtern
+\item erhältlich über das R package `stm`
+\end{itemize}
+\end{itemize}
+\subsubsection{Rolle von Covariates (unabhängigen Variablen)}
+\label{sec:orgfd41c50}
+\begin{itemize}
+\item STM kann im Gegensatz zu LDA "include document-level covariates in the model as a method for pooling information"
+\end{itemize}
+\subsubsection{Topic correlations}
+\label{sec:orgf2a1232}
+\begin{itemize}
+\item STM kann darüberhinaus die Korrelation von Themen explizit kalkulieren
+\end{itemize}
+
+\section{Applications}
+\label{sec:org3e99371}
+Vorstellung von 2 Anwendungsbereichen des STM
+\begin{enumerate}
+\item Analyse von islam. \emph{fatwas} in nativer Sprache
+\item Analyse von Texten in 2 Sprachen (Arabisch \& Chinsesisch)
+\end{enumerate}
+\subsection{Jihadi Fatwas}
+\label{sec:org3fb0c25}
+Kombination von Daten über musl. Gelehrte und Kodierungen im Bezug darauf ob Gelehrte Jihadisten sind, um herauszufinden wie der Themensinhalt von Texten die von jihadist. Gelehrten sich von Nichtjihadisten unterscheiden:
+\begin{enumerate}
+\item Data von Nielsen: Daten über das Leben und Schriften von 101 bekannten jihad. und nicht-jihad. musl. Gelehrten inklusive 27.248 Texte von diesen
+\begin{itemize}
+\item Großteil dieser Texte sind fatwas
+\item aber auch Bücher, Artikel und Schriften
+\item diese Texte zeigen wie Gelehrte mit religiösen Konstitutionen(Wählerschichten?) interagieren
+\end{itemize}
+\item Unabhängige Kodierungen ob diese Gelehrten Jihadistens sind
+\item 2 Quellen:
+\begin{itemize}
+\item \emph{Militant Ideology Atlas} = führt 56 Individuen an die regelmäßig/oft von Jihadisten zitiert werden
+\item Auflistung von bekannten Gelehrten in 8 ideologischen Kategorieren (Jarret Brachman):
+\begin{itemize}
+\item Salafist, Madkhali Salafist, Albani Salafist, scientific Salafist, Salafist Ikhwan, Sururis, \textbf{Qutubis} und \textbf{Global Jidahist}
+\begin{itemize}
+\item die letzten 2 Kategorien werden als Jihadisten eingeordnet, die anderen nicht
+\end{itemize}
+\end{itemize}
+\item zusammen ergeben diese beiden Quellen Assesments von 33 der Gelehrten (20 Jihadisten, 13 Nichtjihadisten) zu denen Nielsen 11.045 Texte gesammelt hat
+\end{itemize}
+\end{enumerate}
+
+detailliertes Vorgehen und Ergebnisse auf Seite 11 - 15
+\subsection{Reaktionen auf Snowden in China und in Nahost}
+\label{sec:org1e5935b}
+\begin{itemize}
+\item illustratives Beispiel das zeigt wie maschinelle Übersetzung genutzt zsm mit STM werden kann um Vergleiche über Länder und Sprachen hinweg anzustellen
+\item es sei wichtig zu verstehen wie andere Länder die USA finden/bewerten
+\begin{itemize}
+\item eine Möglichkeit um dies rauszufinden ist mit Hilfe eines Vergleichs von Responses zu bestimmten Ereignissen
+\end{itemize}
+\item Sammlung von tausenden Social Media Posts in Arabisch \& Chinesisch im Juni 2013, dem Monat als Edward Snowden die Whistle geblowt hat
+\begin{itemize}
+\item Fokus auf Antworten aus China und Nahost (wichtige strateg. Regionen für die USA)
+\end{itemize}
+\end{itemize}
+\subsubsection{Two approaches to machine translation}
+\label{sec:org7b75182}
+\begin{itemize}
+\item idealerweise Analyse der beiden Datensätze im selben topic model
+\begin{itemize}
+\item ohne zu übersetzen würde es allerdings keine (vokabularen) Überschneidungen geben
+\begin{itemize}
+\item dann hätte jeder Korpus eigene indivuelle Topics weil "Snowden" auf Arabisch /neq "Snowden" auf Chinesisch (aber beide selbes Topic "Snowden") und Inhaltsvergleich der Themen somit nicht realisierbar
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+daher Übersetzung der gesamten Korpora, sowie Übersetzung von Begriffen der DTM mit Hilfe von Google Translate durch `translateR`
+\begin{itemize}
+\item ersteres weil beim gesamten Text der Kontext fuer die Übersetzung erhalten bleibt
+\item zweiteres weil es nur die minimal benötigten Worte (am meisten relevant) übersetzt
+\begin{itemize}
+\item individuelle Erstellung der DTM für jede Sprache \(\rightarrow\) Übersetzung der jeweiligen Terms \(\rightarrow\) Merge der übersetzten DTM's
+\end{itemize}
+\item Sicherstellen das kein Topic exklusiv im Kontext einer Sprache existiert
+\end{itemize}
+\subsubsection{Correcting for systematic differences between languages}
+\label{sec:org54d4b12}
+\begin{itemize}
+\item words that mean the same thing in the Chinese and Arabic corpus could sometimes map onto different words in English that are synonyms of each other
+\end{itemize}
+
+\(\rightarrow\) "Within the STM, we can use a content covariate to capture variations in word use attributable to observed covariates. Here we include the document's original language as a content covariate in order to capture linguistic differences in describing a topic. This allows us to effectively marginalize over differences in word rate use that arise due to linguistic differences or errors in translation"
+\subsubsection{Results}
+\label{sec:orgb1f3e15}
+detailliertes Vorgehen \& Ergebnisse auf Seite 17 - 21
+\section{Conclusion}
+\label{sec:org140f689}
+Seite 21 - 22 nicht so relevant da nur eine Zusammenfassung des bereits aufgeführten Vorgehens
 \end{document}

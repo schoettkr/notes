@@ -1,3 +1,4 @@
+#+SETUPFILE: ~/.emacs.d/org-html-themes/setup/theme-readtheorg.setup
 * Computer-Assisted Text Analysis for Comparative Politics
 :PROPERTIES:
 :NOTER_DOCUMENT: Lucas_et_al_2015.pdf
@@ -122,3 +123,115 @@ Beispiel:
 :PROPERTIES:
 :NOTER_PAGE: (7 . 0.7495069033530573)
 :END:
+** A Brief Overview of Approaches
+:PROPERTIES:
+:NOTER_PAGE: (7 . 0.8379120879120879)
+:END:
+zwei Herangehensweisen im Hinblick auf automatische Textanalyse:
+1. supervised methods:
+   - "specify what is conceptually interesting about documents in advance, and then the model seeks to extend our insights to a larger population of unseen documents"
+   - bspw. manuelle Unterteilung/Klassifizierung von 100 Dokumenten in 2 Kategorien \rightarrow und dann automatische Klassifizierung der verbleibenden 9900
+2. unsupervised methods:
+   - zB topic modeling
+   - keine manuelle Klassifizierung der Texte im Voraus
+   - das Modell wird benutzt um eine "low-dimensional summary" zu finden, welche die Dokumente am besten erklärt im Hinblick auf zuvor formulierte Annahmen
+
+bei supervised methods liegt der Großteil der von Hand zu verrichtenden Arbeit in der Konstruktion des training sets, bei unsupervised in der Interpretation der model results
+
+Autoren benutzen ein bestimmten Typ des unsupervised topic modeling, welches auf dem Latent Dirichlet Allocation (LDA) model basiert
+- LDA = mixed-mempership model
+  - d.h jedes Dokument wird repräsentiert als eine Kombination/Mischung aus einem Pool von Themen und jedem Wort, welchem ebenfalls ein bestimmtes Thema zugewiesen wird
+- each topic is a distribution over the words in the vocabulary
+  - dies wird gelernt und nicht vom model angenommen
+
+** Multilangual Text Modeling
+:PROPERTIES:
+:NOTER_PAGE: (8 . 0.5906593406593407)
+:END:
+Herangehensweisen:
+1. Analyse in der nativen Sprache des Textes
+   - machbar bei supervised Vorgehen (trotzdem aufwändig), aber keine klare Methodik für unsupervised Vorgehen
+2. Übersetzung der Texte in eine common Sprache
+   - manuelle Übersetzung extrem teuer, daher maschinelle Übersetzung
+3. Explicit multilangual representation
+   - develop a model which maintains an explicitly multilingual representation
+   - Vereinheitlichung der konzeptuellen Models über die versch Sprachen hinweg, sodass scaling und Themen (topics) in der einen Sprache vergleichbar mit den Repräsentationen der anderen Sprache sind
+
+Übereinstimmung(Korrespondenz) mehrsprachiger Topics hängt von /particular alignment informations/ des Anwenders ab und muss (manuell) validiert werden
+- für jedes Topic muss überprüft werden, dass topic word distributions über die Sprachen hinweg einheitlich sind
+** The STM
+:PROPERTIES:
+:NOTER_PAGE: (9 . 0.521978021978022)
+:END:
+- das STM Framework ist ein mixded-membership topic model (so wie LDA) mit dem Zusatz, dass es dokumentabhängige Metadaten berücksichtigen und mit einbeziehen kann
+  - kann Qualität der erlernten Topics erhöhen und Hypothesentests erleichtern
+  - erhältlich über das R package `stm`
+*** Rolle von Covariates (unabhängigen Variablen)
+- STM kann im Gegensatz zu LDA "include document-level covariates in the model as a method for pooling information"
+*** Topic correlations
+- STM kann darüberhinaus die Korrelation von Themen explizit kalkulieren
+
+* Applications 
+:PROPERTIES:
+:NOTER_PAGE: (10 . 0.7280219780219781)
+:END:
+Vorstellung von 2 Anwendungsbereichen des STM
+1. Analyse von islam. /fatwas/ in nativer Sprache
+2. Analyse von Texten in 2 Sprachen (Arabisch & Chinsesisch)
+** Jihadi Fatwas
+:PROPERTIES:
+:NOTER_PAGE: (11 . 0.23351648351648352)
+:END:
+ Kombination von Daten über musl. Gelehrte und Kodierungen im Bezug darauf ob Gelehrte Jihadisten sind, um herauszufinden wie der Themensinhalt von Texten die von jihadist. Gelehrten sich von Nichtjihadisten unterscheiden:
+1. Data von Nielsen: Daten über das Leben und Schriften von 101 bekannten jihad. und nicht-jihad. musl. Gelehrten inklusive 27.248 Texte von diesen
+  - Großteil dieser Texte sind fatwas
+  - aber auch Bücher, Artikel und Schriften
+  - diese Texte zeigen wie Gelehrte mit religiösen Konstitutionen(Wählerschichten?) interagieren
+2. Unabhängige Kodierungen ob diese Gelehrten Jihadistens sind
+- 2 Quellen:
+  - /Militant Ideology Atlas/ = führt 56 Individuen an die regelmäßig/oft von Jihadisten zitiert werden
+  - Auflistung von bekannten Gelehrten in 8 ideologischen Kategorieren (Jarret Brachman):
+    - Salafist, Madkhali Salafist, Albani Salafist, scientific Salafist, Salafist Ikhwan, Sururis, *Qutubis* und *Global Jidahist*
+      - die letzten 2 Kategorien werden als Jihadisten eingeordnet, die anderen nicht
+  - zusammen ergeben diese beiden Quellen Assesments von 33 der Gelehrten (20 Jihadisten, 13 Nichtjihadisten) zu denen Nielsen 11.045 Texte gesammelt hat
+ 
+detailliertes Vorgehen und Ergebnisse auf Seite 11 - 15
+** Reaktionen auf Snowden in China und in Nahost
+:PROPERTIES:
+:NOTER_PAGE: (15 . 0.46703296703296704)
+:END:
+- illustratives Beispiel das zeigt wie maschinelle Übersetzung genutzt zsm mit STM werden kann um Vergleiche über Länder und Sprachen hinweg anzustellen
+- es sei wichtig zu verstehen wie andere Länder die USA finden/bewerten
+  - eine Möglichkeit um dies rauszufinden ist mit Hilfe eines Vergleichs von Responses zu bestimmten Ereignissen
+- Sammlung von tausenden Social Media Posts in Arabisch & Chinesisch im Juni 2013, dem Monat als Edward Snowden die Whistle geblowt hat
+  - Fokus auf Antworten aus China und Nahost (wichtige strateg. Regionen für die USA)
+*** Two approaches to machine translation
+:PROPERTIES:
+:NOTER_PAGE: (15 . 0.7280219780219781)
+:END:
+- idealerweise Analyse der beiden Datensätze im selben topic model
+  - ohne zu übersetzen würde es allerdings keine (vokabularen) Überschneidungen geben
+    - dann hätte jeder Korpus eigene indivuelle Topics weil "Snowden" auf Arabisch /neq "Snowden" auf Chinesisch (aber beide selbes Topic "Snowden") und Inhaltsvergleich der Themen somit nicht realisierbar
+
+daher Übersetzung der gesamten Korpora, sowie Übersetzung von Begriffen der DTM mit Hilfe von Google Translate durch `translateR`
+- ersteres weil beim gesamten Text der Kontext fuer die Übersetzung erhalten bleibt
+- zweiteres weil es nur die minimal benötigten Worte (am meisten relevant) übersetzt
+  - individuelle Erstellung der DTM für jede Sprache \rightarrow Übersetzung der jeweiligen Terms \rightarrow Merge der übersetzten DTM's
+- Sicherstellen das kein Topic exklusiv im Kontext einer Sprache existiert
+*** Correcting for systematic differences between languages
+:PROPERTIES:
+:NOTER_PAGE: (17 . 0.42582417582417587)
+:END:
+- words that mean the same thing in the Chinese and Arabic corpus could sometimes map onto different words in English that are synonyms of each other
+
+\rightarrow "Within the STM, we can use a content covariate to capture variations in word use attributable to observed covariates. Here we include the document's original language as a content covariate in order to capture linguistic differences in describing a topic. This allows us to effectively marginalize over differences in word rate use that arise due to linguistic differences or errors in translation"
+*** Results
+:PROPERTIES:
+:NOTER_PAGE: 18
+:END:
+detailliertes Vorgehen & Ergebnisse auf Seite 17 - 21
+* Conclusion
+:PROPERTIES:
+:NOTER_PAGE: (21 . 0.8104395604395604)
+:END:
+Seite 21 - 22 nicht so relevant da nur eine Zusammenfassung des bereits aufgeführten Vorgehens
