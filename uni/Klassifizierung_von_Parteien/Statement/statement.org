@@ -1,0 +1,7 @@
+#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+*1. Welche bestehende Definition von Populismus passt zum Fallbeispiel Ungarn? Erfordern die besonderen Umstände vielleicht die Einführung eines maßgeschneiderten Begriffs?*
+- passt eine bestehende... oder erfordert..?
+
+*2. Ab wann könnte man davon sprechen, dass Populismus 
+Ist der Anstieg von 10% auf 21% wirklich so leicht damit zu erklären, dass es lediglich eine Ablehnung der Elite aufzeige? Macht man es sich damit nicht zu leicht , bzw ist das kein gerechtfertigter Grund wenn die Unzufiredenheit so gross ist das man extremistisch wählt selbst wenn man nicht extremistisch ist , risiko gefhar?
+- citizenz and pop unten
