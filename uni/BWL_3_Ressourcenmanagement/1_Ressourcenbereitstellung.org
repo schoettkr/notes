@@ -1,15 +1,49 @@
+#+LATEX_HEADER: \usepackage{placeins}
 #+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LATEX_HEADER: \usepackage[parfill]{parskip}
 * Ressourcen, Prozesse und Ziele betrieblicher Leistungserstellung
-** Grundbegriffe betrieblicher Leistungserstellung
+** Leistungsbereich(Produktion)
+#+attr_latex: :width 250px
+[[./pictures/leistungsbereich_prod.png]] 
+
+\FloatBarrier
+
 *** Produktion, Produktionsfaktoren, Produktionswirtschaft
 *Produktion* = der industrielle Abbau von Material, dessen Be- und Verarbeitung und die Ausführung von Dienstleistungen; ist die methodische Umwandlung von Produktionsfaktoren in Produkte im Rahmen von bestimmten Produktionsverfahren
 
 *Produktionsfaktoren* = sind die in der Produktion eingesetzen materiellen und immateriellen Güter, durch deren Gebrauch & Verbrauch neue Sachgüter & Dienstleistungen (Services) entsehen; Produktionsmittel nach Gutenberg = Betriebsmittel, Werkstoffe, (objektbezogene/dispositive) Arbeitsleistungen
 
 *Produktionswirtschaft* = Aufgabe der Produktionswirtschaft ist die Planung, Durchführung & Kontrolle der industriellen Leistungserstellung, um wirtschaftliche Produktionsstrukturen zu erreichen & zu sichern
-*** Zahlungsstrom, Kapitalveränderung, Finanzwirtschaft
+** Finanzierungsbereich
+
+#+attr_latex: :width 250px
+[[./pictures/finanzierungsbereich.png]] 
+
+Finanzierung ist sowas wie eine Beanspruchung unter Versprechen auf Erfüllung
+- betriebliche Finanzierung umfasst Beschaffung und Rückzahlung finanzieller Mittel und damit verbunden die Gestaltung der Beziehungen zw Unternehmen und Kapitalgebern
+- /Finanzierungsmaßnahmen/ beginnen mit Einzahlung an das Unternehmen, worauf Auszahlungen in späteren Perioden Folgen (Passivseite der Bilanz)
+- Gesamtheit aller Finanzmittel eines Unternehmens wird als Kapital bezeichnet
+  
+Investition ist sowas wie Verzicht in der Hoffnung auf Belohnung
+- zielgerichteter Einsatz von finanziellen Mitteln zur Erwirtschaftung von Erträgen
+- /Investitionsmaßnahmen/ beginnen mit Auszahlung an das Unternehmen, auf die Einzahlungen in späteren Perioden folgen (Aktivseite der Bilanz)
+
+*** Finanzwirtschaft & Zahlungsströme
+*Monetärer Kapitalbegriff* = im Unternehmen eingesetzte Zahlungsmittel
+
+*Finanzierung* ist die Kapitalbeschaffung für die jeweilige Unternehmung. Die *Finanzwirtschaft* umfasst diese Kapitalbeschaffung und -verwendung in der Unternehmung. Zu den finanzwirtschaftlichen Zielen gehört die Erreichung eines /finanzwirtschaftlichen Gleichgewichts/, das bedeutet die Sicherung der dispositiven Liquidität, sowie die Sicherung der strukturellen Liquidität.
+
+Die Funktion des *Finanzmanagements* ist die zielgerichtete Gestaltung der betrieblichen Finanzwirtschaft. Dazu zählt hauptsächlich die aktive Gestaltung der Kapitalzuführung & des Kapitalentzugs.
+
+\paragraph{Monetäre Zielgrößen}\\
+- Zahlungsmittelbestand = Kassenbestand, Guthaben bei Kreditinstituren; Einzahlung, Auszahlung
+- Geldvermögen = Zahlungsmittelbestand + Forderungen - Verbindlichkeiten; Einnahme, Ausgabe
+- Gesamtvermögen = Gewinn + Verlustrechnung; Ertrag, Aufwand
+- Betriebsnotwendiges Vermögen = Kosten- und Leistungsrechnung; Ertrag, Aufwand
+  
+* Ressourcenbereitstellung & Wettbewerbsfähigkeit
 ** Gegenstandbereich & Ziele betrieblicher Leistungserstellung
-*** Betriebliche Leistungserstellung als Kombinationsprozess (Gutenberg)
+*** Betriebliche Leistungserstellung als Kombinationsprozess
 "/Die Ergiebigkeit des Faktoreinsatzes in den  Betrieben ist einmal von der Beschaffenheit der Faktoren selbst und zum anderen von ihrer Kombination abhängig.
 Es gilt deshalb zu untersuchen, welche Umstände es sind, die den produktiven Beitrag bestimmen, den sie im Rahmen einer Faktorkombination zu leisten imstande sind./" (Gutenberg 1975)
 
@@ -26,4 +60,70 @@ Beim Input der betrieblichen Leistungserstellung unterscheidet man zwischen Pote
 | Teilbarkeit                  | i.d.R nicht beliebig teilbar                                                                                          |
 | Beispiele                    | materiell: maschinelle Anlagen, Gebäude; immateriell: Rechte (Patente, Lizenzen), technische Informationen (Software) |
 
+#+CAPTION: Produktion als Kombinationsprozess
+#+attr_latex: :width 250px
+[[./pictures/produktion_als_kombpr.png]] 
+
+\FloatBarrier
+
+\rightarrow Ziele in dem obgigen Kombinationsprozess:
+Beim Input ist die Verbesserung des Faktoreinsatzes, also eine Erhöhung der Produktivität das Ziel.
+In der Transformation bzw dem Throughput ist eine Steigerung der Ausbringungsmenge bzw eine maximale Kapazitätsauslastung, sowie eine Verkürzung der Durchlauf- oder Produktionszeiten und eine Minimierung der Produktionskosten das Ziel.
+Im Output wird die Steigerung des Qualitätsniveaus + der Zuverlässigkeit, sowie die Verbesserung der Arbeitsbedingungen oder des Umweltschutzes als Ziel anvisiert.
+
 *** Ziele & Zielkonflikte produktionswirtschaftlicher Betätigung
+\paragraph{Inhaltliche Ziele & Zielkonflikte}\\
+Man kann inhatlich zwischen dem Werziel Produktivität, dem Humanziel Flexibilität und dem Sachziel Qualität unterscheiden. Die Ziehlbeziehungen dieser Ziele sind indifferent, komplementär und/oder konkurrierend.
+
+#+CAPTION: Inhaltliche Zielbeziehungen
+#+attr_latex: :width 250px
+[[./pictures/inhaltziele.png]] 
+
+\FloatBarrier
+
+\paragraph{Unternehmensbeteiligte & Interessenkonflikte}\\
+Innerhalb des Unternehmens kann es zu diversen Konflikten & Spannung zwischen den verschiedenen Beteiligten kommen.
+
+Ziele/Interessen der jeweiligen Unternehmensbeteiligten:
+- Kapitalgeber: Rentabilität des eingesetzten Kapitals
+- Mitarbeiter: ihrem Leistungsbeitrag entsprechende Anreizstrukturen (Entlohnung)
+- Lieferanten/Kunden: Absatzsicherheit, Liefersicherheit, Qualität und Liquidität
+- Öffentlichkeit: Nachhaltigkeit, Transparenz
+  
+\paragraph{Sachliche Ziele produktionswirtschaftlicher Betätigung}\\
+
+**Produktionsziele**:
+Aus dem produktionswirtschaftlichen Sachziel der Herstellung von Gütern und/oder Dienstleistungen nach Mengen-, Zeit- und Qualitätskriterien leiten sich die
+produktionswirtschaftlichen Teilziele ab.
+- Bestimmung von Anspruchsniveaus
+- Abbildung von Wirkungszusammenhängen
+
+**Produktionsstrategien**:
+Das Produktionssystem wird durch strategische Maßnahmen in die Lage versetzt, seine Potenziale so aufzubauen, dass sie den zukünftig auftretenden Anforderungen gerecht werden (SWOT-Analyse).
+
+**Produktionspolitik**:
+Die auf die Produktionsebene "heruntergebrochenen" Ziele des Unternehmens finden in der Produktionspolitik ihre Gestaltungs- und Entscheidungsmodelle
+** Ressourcenbereitstellung als nachhaltiger Wettbewerbsvorteil
+*** Produktionssysteme(-verfahren)
+In einer gegebenen Situation wird aus allen möglichen Produkten & Dienstleistungen ein *Produktionsprogramm* zusammengesetzt (Zielfunktion). Bei der betriebswirtschaftlichen Analyse des Produktionsprozesses sind alle Situationen & Veränderungsmöglichkeiten zu betrachten, die auf die Zielfunktion und die Nebenbedingungen einwirken.
+
+Das *Produktionsverfahren* bezeichnet die organisatorische & technologische Art, in welcher ein Betrieb Produktionsfaktoren kombinieren und wie er diesen Prozess durchführt.
+
+*** Produktionsfunktion und Produktionsmodelle
+#+attr_latex: :width 250px
+[[./pictures/prodfunktion.png]] 
+
+\FloatBarrier
+
+Beispiel einer Produktionsfunktion: $x=f(r_1, r_2, r_3)$
+
+*Kombinationsprinzip*:\\
+Zur betrieblichen Leistungserstellung in einer Periode $x$ (= Ausbringungsmenge/Output) sind alle drei Einsatzfaktoren (resources) $r_1$ (= Verbrauch Werkstoff/Menge), $r_2$ (= Einsaz Arbeitsstunden), $r_3$ (= Einsatz Maschinenstunden) notwendig. Ist einer dieser Faktoren nicht vorhanden, kommt keine Leistungserstellung zustande.
+
+*Faktorproportionsprinzip*:\\
+Die Wahl der Faktorkombination $f$ bestimmt das Verhältnis, indem die drei Faktoren miteinander kombiniert werden.
+
+*Effizienzprinzip*:\\
+Die Menge der Produktionsfaktoren, die zur Herstellung von $x$ notwendig ist, wird bei gegebener Produktionsfunktion $f$ genau bestimmt. Mit einem geringeren Faktorverbrauch kann $x$ nicht hergestellt werden. Werden mehr Faktoren verbraucht liegt Verschwendung vor.
+
+*** Produktionskonzepte und - strategien
