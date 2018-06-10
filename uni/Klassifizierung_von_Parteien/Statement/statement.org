@@ -1,7 +1,10 @@
-#+LATEX_HEADER: \usepackage[margin=0.5in]{geometry}
-*1. Welche bestehende Definition von Populismus passt zum Fallbeispiel Ungarn? Erfordern die besonderen Umstände vielleicht die Einführung eines maßgeschneiderten Begriffs?*
-- passt eine bestehende... oder erfordert..?
+#+LATEX_HEADER: \usepackage[doublespacing]{setspace}
+#+LATEX_HEADER: \usepackage[margin=0.8in]{geometry}
+*1. Welche bestehende Definition von Populismus passt zum Fallbeispiel Ungarn? Erfordern die besonderen Umstände vielleicht die Einführung Kozeptualisierung eines maßgeschneiderten Begriffs?*
+In den letzten Jahren erregte Ungarn Aufsehen durch einen Rückfall zu /illiberaler Demokratie/ unter Viktor Orbán, welcher liberale Werte zwar nicht per se ablehnt, aber sie auch nicht für einen zentralen Bestandteil einer Demokratie hält. Orbán ist der Parteivorsitzender der rechtspopulistischen und nationalkonservativen Partei Fidesz – Magyar Polgári Szövetség (z. Dt. "Fidesz- Ungarischer Bürgerbund").
 
-*2. Ab wann könnte man davon sprechen, dass Populismus 
+Überraschenderweise existiert allerdings nur begrenzt Forschung zum Populismus in Ungarn. Der Großteil der Literatur bezieht sich nämlich lediglich auf den Zeitraum zwischen 2000 und 2010, welcher in Ungarn allgemein als gescheiterte Dekade gilt.
+
+*2. Ab wann könnte man davon sprechen, dass Populismus* 
 Ist der Anstieg von 10% auf 21% wirklich so leicht damit zu erklären, dass es lediglich eine Ablehnung der Elite aufzeige? Macht man es sich damit nicht zu leicht , bzw ist das kein gerechtfertigter Grund wenn die Unzufiredenheit so gross ist das man extremistisch wählt selbst wenn man nicht extremistisch ist , risiko gefhar?
 - citizenz and pop unten
