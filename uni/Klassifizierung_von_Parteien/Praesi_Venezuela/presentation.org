@@ -1,0 +1,48 @@
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+OPTIONS: reveal_title_slide:nil
+* Forschungsfrage & Relevanz 
+Verhältnisse in Venezuela haben sich in den letzten Dekaden so stark gewandelt wie in fast keinem anderen Land der Welt
+- 1970 reichstes Land in Lateinamerika & Top 20 weltweit
+- 2019: 82% aller Haushalte in Armut, höchste Inflationsrate weltweit
+  
+** Democracy Barometer
+Democracy Index (1 bis 10)
+- 2006: 5.42
+- 2017: 3.87 (niedrigster DI in Lateinamerika)
+  - schlechteste Kategorie: /Functioning of governmernt/
+
+Kombinierter Index der Demokratie (0 bis 10)
+- 1996 (bevor Populisten im Amt) = 3.82
+- 2016 (20 Jahre Populisten im Amt) = 0.98
+ 
+** Forschungsfrage
+"Populismus in der Regierung als entscheidender Erosionsfaktor der Demokratie Venezuelas?"
+
+
+* Theorie
+- Argumentation, dass Populismus "in office" sich negativ auf Demokratiequalität auswirke (Mudde)
+- Theorie das Populismus zu Autoritarismus führe(n kann) (Levitsky-Loxton Theorie/These)
+# Effekte und Folgen des Populismus in Venezuela deutlich in sowohl positiver, als auch negativer Form feststellbar
+# - 
+** Hypothesen
+Hypothese: Der Populismus hat maßgeblich zur Verringerung der Demokratieindizes, sowie zur Verschlechterung der wirtschaftlichen Lage Venezuelas beigetragen
+
+Nullhypothese: Der Populismus hat keine nennenswerte Rolle im Verfall der venezolanischen Demokratie gespielt 
+
+* Operationalisierung
+- Qualitative Forschung
+- Populismus als solches schwer messbar, daher Fokus auf Entscheidungen & Akten, die einer typisch populistischen (muss noch definiert werden) Agenda nahekommen 
+- Abgleich von Demokratieindizes und bemerkenswerten Akten über die Jahre hinweg
+  - Untersuchung ob und welche jener Akte populistische Züge haben
+    
+* Ergebnisse
+
+
+
+# * mrk a
+# - populismus in regierung negativ auf demokratie qualität
+#   - poplismus in nicht-konsolodiertet (war das der fall?) demokratie negativ auf demokratie qualität
+
+# * mrk b
+# - Levitsy Loxton These das Populismus zu Autorität(competitive?) fuhrt
+# -

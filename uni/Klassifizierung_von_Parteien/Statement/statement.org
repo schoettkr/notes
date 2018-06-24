@@ -1,23 +1,66 @@
 #+LaTeX_CLASS: report
 #+LATEX_HEADER: \usepackage[doublespacing]{setspace}
 #+LATEX_HEADER: \usepackage[margin=0.8in]{geometry}
-*1. Welche bestehende Definition von Populismus passt zum Fallbeispiel Ungarn? Erfordern die besonderen Umstände vielleicht die Einführung Kozeptualisierung eines maßgeschneiderten Begriffs?*
+#+OPTIONS: toc:nil
+Leibniz	Universität Hannover	
 
-In den letzten Jahren erregte Ungarn Aufsehen durch einen Rückfall zu /illiberaler Demokratie/ unter Viktor Orbán, welcher liberale Werte zwar nicht per se ablehnt, aber sie auch nicht für einen zentralen Bestandteil einer Demokratie hält. Orbán ist der Parteivorsitzender der rechtspopulistischen und nationalkonservativen Partei Fidesz – Magyar Polgári Szövetség (z. Dt. "Fidesz- Ungarischer Bürgerbund").
+Philosophische	Fakultät
 
-Überraschenderweise existiert allerdings nur begrenzt aktuelle Forschung zum Populismus in Ungarn. Der Großteil der Literatur bezieht sich nämlich lediglich auf den Zeitraum zwischen 2000 und 2010, welcher in Ungarn allgemein als gescheiterte Dekade gilt. Dieses vermeintliche Scheitern erklärt warum Publikationen in dieser Zeit populistisches Verhalten kritisch beurteilt haben. Die Schuld wurde in diesem Zuge jeder Partei zugeschoben die seit 1998 an der Regierung beteiligt war. Populistisches Verhalten wird also hauptsächlich den Mainstream-Parteien nachgesagt bzw. vorgeworfen, während neue anti-establishment Parteien, wie beispielsweise die rechtsextreme Jobbik Partei, seltener als populistisch bezeichnet werden. Dies ist unter Angesicht der Annahme, dass eine ablehnende Haltung gegenüber dem Establishment in der Regel ein häufig anzutreffendes Merkmal von Populisten ist, ungewöhnlich. Darüber hinaus werden die meisten mit Populismus in Verbindung zu bringenden Phänomene in der Literatur als /empty populism/ kategoriesiert. Ungarische Autoren, so Cisgo(!@@) und Merkovity, würden diesen Begriff eher negativ konnotieren, obwohl er eigentlich neutral sei.
+Institut	für Politische	Wissenschaft
 
-Meiner Meinung nach könnte an dieser Stelle bereits die Notwendigkeit für eine weitere, neue Konzeptualisierung von Populismus aufgezeigt werden, da der intendierte neutrale Gehalt von "leerem Populismus" in Ungarn scheinbar abhanden gekommen ist.
+Sommersemester	2018
 
-Die Fidesz Partei wird hingegen nationalistische Mobilisierung, sowie anti-kommunistische Propaganda nachgesagt. Damit qualifiziere sie sich für die Konzeptualisierung des /complete populism/ nach Jaegers und Walgrave, in Form der antielitären Haltung kombiniert mit Ausgrenzung bestimmter Gruppen.
+VM	3
+
+Seminar:	Klassifizierung	von	Parteien,	Verbände und	Bewegungen
+
+Dozent:	Philipp	Meyer
+
+Verfasser:	Lennart Schöttker\newline
+\\
+
+
+\Large *Welche bestehende Konzeption von Populismus passt zum Fallbeispiel Ungarn? Erfordern die besonderen Umstände vielleicht die Einführung eines maßgeschneiderten Begriffs?*
+\\
+\normalsize
+In den letzten Jahren erregte Ungarn Aufsehen durch einen Rückfall zu /illiberaler Demokratie/ unter Viktor Orbán, welcher liberale Werte zwar nicht per se ablehnt, aber sie auch nicht für einen zentralen Bestandteil einer Demokratie hält. Orbán ist der Parteivorsitzende der rechtspopulistischen und nationalkonservativen Partei Fidesz – Magyar Polgári Szövetség (z. Dt. "Fidesz- Ungarischer Bürgerbund").
+
+Überraschenderweise existiert allerdings nur begrenzt aktuelle Forschung zum Populismus in Ungarn. Der Großteil der Literatur bezieht sich nämlich lediglich auf den Zeitraum zwischen 2000 und 2010, welcher in Ungarn allgemein als gescheiterte Dekade gilt. Dieses vermeintliche Scheitern erklärt warum Publikationen in dieser Zeit populistisches Verhalten kritisch beurteilt haben. Die Schuld wurde in diesem Zuge jeder Partei zugeschoben die seit 1998 an der Regierung beteiligt war. Populistisches Verhalten wird also hauptsächlich den Mainstream-Parteien nachgesagt beziehungsweise vorgeworfen, während neue anti-establishment Parteien, wie beispielsweise die rechtsextreme Jobbik Partei, seltener als populistisch bezeichnet werden. Dies ist unter Angesicht der Annahme, dass eine ablehnende Haltung gegenüber dem Establishment in der Regel ein häufig anzutreffendes Merkmal von Populisten ist, ungewöhnlich. Darüber hinaus werden die meisten mit Populismus in Verbindung zu bringenden Phänomene in der Literatur als /empty populism/ kategoriesiert. Ungarische Autoren, so Csigó und Merkovity, würden diesen Begriff eher negativ konnotieren, obwohl er eigentlich neutral sei.
+
+Meiner Meinung nach könnte an dieser Stelle bereits die Notwendigkeit für eine weitere, neue Konzeptualisierung von Populismus aufgezeigt werden, da der intendierte neutrale Gehalt von "leerem Populismus" in Ungarn scheinbar abhanden gekommen ist. Es wäre dann natürlich zu klären, ob der leere Populismus in Ungarn wirklich negativ zu bewerten ist oder ob die Medien beziehungsweise die Literatur diese Konnotation fälschlicherweise anhängen.
+
+Der Fidesz Partei wird hingegen nationalistische Mobilisierung, sowie anti-kommunistische Propaganda nachgesagt. Damit qualifiziere sie sich für die Konzeptualisierung des /complete populism/ nach Jagers und Walgrave, in Form der antielitären Haltung kombiniert mit Ausgrenzung bestimmter Gruppen.
 
 Trotz des Vorwurfs des Populismus den ein Großteil der Gelehrten den Mainstream-Parteien mache, kristallisiere sich nicht "die eine populistische Partei" schlechthin heraus. Cisgo und Merkovity begründen dies damit, dass es einfach keine Partei gebe, die sich von konventionellen, nicht-populistischen Parteien deutlich unterscheiden würde.
 
-Somit passe die ungarische Politik und die Literatur zum Populismus weder zu Populismuskonzeptionen, die Populismus nicht gleich mit Mainstream-Politik setzen, noch unterscheide sie zwischen Populisten und Nichtpopulisten.
+Somit passe die ungarische Politik und die Literatur zum Populismus, weder zu Populismuskonzeptionen die Populismus nicht gleich mit Mainstream-Politik setzen, noch unterscheide sie zwischen Populisten und Nichtpopulisten.
 
-Hier deuten die Autoren bereits an, dass weitverbreitete Populismuskonzeptionen nicht auf die ungarische Realität angewandt werden. Ob die Ursache dafür in der Literatur, die nicht ausreichend differenziert, liegt oder in den Gegebenheiten des politischen Systems Ungarns bleibt zwar offen, aber dennoch drängt sich meiner Meinung nach die Frage nach einer weiteren Konzeptualisierung von Populismus auf.
+Hier deuten die Autoren bereits an, dass weitverbreitete Populismuskonzeptionen nicht auf die ungarische Realität angewandt werden. Ob die Ursache dafür in der Literatur, die nicht ausreichend differenziert, liegt oder in den Gegebenheiten des politischen Systems Ungarns bleibt zwar offen, aber dennoch drängt sich meiner Meinung nach erneut die Frage nach einer weiteren Konzeptualisierung von Populismus auf.
+
+Zunächst wäre dann wohl zu erforschen, wo die konkrete Problematik auftritt beziehungsweise wo diese ihren Ursprung hat. Ist es das ungarische System an sich, was eine Übertragung von Populismuskonzeptionen komplex gestaltet und keinen offensichtlich populistischen Akteur offenbart? Oder ist die ungarische Literatur geblendet von der populistischen Eintönigkeit der Politlandschaft Ungarn? Hier treffen eventuell mehrere Faktoren zusammen die den Rückschluss erschweren.
+
+Von den im Text vorgestellten Charakterisierungen des Populismus ist die von Szabó, meiner Meinung nach, die effektivste in Anbetracht der oben genannten Komplikationen. Ähnlich wie die anderen vorgestellten Ansätze entwickelt Szabó ausgehend von der Annahme, dass Populismus eng mit Kommunikation und Kommunikationsstrategien verwoben sei, eine Kategorisierung die meiner subjektiven Meinung nach sehr passend zur ungarischen Realität zu sein scheint. 
+
+Die antikommunististische und antielitäre Rhetorik mache die Fidesz Partei im Vergleich zu den rivalisierenden Pareien "populistischer". Bei seinen Untersuchungen hat Szabó fünf Elemente dieses rechten, antikommunististischen Populismus herausgearbeitet:
+1. ablehnende Haltung gegenüber der Elite, des Establishments und der Nomenklatura
+2. scheinbarer Verbündeter "des Volkes" gegen die Anderen
+3. Vorwurfshaltung gegenüber parlamentarischen Institutionen, da sie für die Verzerrrung und Verfälschung des Volkswillens verantwortlich seien
+4. Gründung sogenannter "Citizen Alliances" mit dem Volk, in denen nationale und religiöse Symbolik eine große Rolle spielen
+5. Hingabe zu Themen und dem Momentum, welche spontan durch die Bürgerinitiativen entstehen
+   
+Dieser Ansatz beschreibt meines Erachtens nach die populistischen Charakteristika der Fidesz Partei bereits gut und präzise. Übrig bleibt jedoch der Populismus der Mainstream Parteien.
+Eine Vorstellung der restlichen von Csigó und Merkovity präsentierten Theorien würde den Rahmen dieses Kurztextes sprengen. Sie sind für meine Begriffe, mit Ausnahme von dem Ansatz des leeren Populismus, nicht vollends adäquat für die Anwendung auf Ungarn und daher möchte ich mit der Frage ob der ungarische Fall einer weiteren Konzeptualisierung von Populismus bedarf zur Diskussion anregen.\newline
 
 
-*2. Ab wann könnte man davon sprechen, dass Populismus* 
-Ist der Anstieg von 10% auf 21% wirklich so leicht damit zu erklären, dass es lediglich eine Ablehnung der Elite aufzeige? Macht man es sich damit nicht zu leicht , bzw ist das kein gerechtfertigter Grund wenn die Unzufiredenheit so gross ist das man extremistisch wählt selbst wenn man nicht extremistisch ist , risiko gefhar?
-- citizenz and pop unten
+\Large *Ist der Anstieg des DEREX von 10% auf 21% wirklich so leicht durch eine ledigliche Zunahme der Ablehnung ggü. Eliten zu erklären?*
+\\
+\normalsize
+Csigó und Merkovity haben zum Verhältnis zwischen den Bürgern und dem Populismus ebenfalls wenig angemessene Studien gefunden. Existierende Studien zu den Einstellungen der Bürger würden sich, so Csigó und Merkovity, nur selten explizit auf den Populismus beziehen. Wenn Populismus allerdings mit einbezogen wird, so würde stets angenommen, dass die Nachfrage nach und das Angebot von Populismus eng zusammenhängen. Csigó und Merkovity erläutern, dass Gál, Bartha und Tóth populistische Gesinnungen des Volkes stets mit Etatismus und einem Misstrauen in den Markt assoziieren würden.
+
+In jenem Kontext präsentieren die Autoren eine Studie von Krekó, Juhász und Molnár, die basierend auf europäischen Umfragedaten einen Index für /demand for right-wing extremism/ (DEREX) entwickelt haben. Im Fall von Ungarn habe sich dieser Index zwischen 2002 und 2009 von 10% auf 21% mehr als verdoppelt.
+
+Csigó und Merkovity reduzieren anschließend die Aussagekraft jener genannten Studie beziehungsweise des in ihr entwickelten Index. Denn dieser beachtliche Anstieg sei größtenteils durch zunehmende Ressentiments gegenüber der politischen Elite zu erklären. Und diese Ressentiments widderum seien wohlkaum eine Form von extremistischer Denkweise, sondern könnten auch völlig gerechtfertigt, unter Angesicht der Leistungen der Elite im betrachteteten Zeitraum, sein.
+
+Diese Entschärfung der Studienergebnisse durch Csigó und Merkovity halte ich für zu leichtfertig. Deshalb ist meine Frage hierzu etwas kritischer und hinterfragt ob solch eine Entkräftigung gerechtfertigt ist. Zunächst einmal wird nicht klar ob die Aussage, dass dieser Anstieg hauptsächlich einer zunehmenden Ablehnung der Elite zugrunde liege, ihren Ursprung bereits in der Studie von Krekó, Juhász und Molnár hat oder ob dass nur die Bewertung des Studienergebnisses durch Csigó und Merkovity ist. Wenn letzteres der Fall ist, dann fehlen jegliche Belege und Daten für diese Aussage. Darüber hinaus drängt sich mir die Frage auf inwiefern zunehmende Ressentiments gegenüber Eliten, unabhängig von der Quelle, der wichtigste Erklärungsfaktor für dieses Phänomen sein können. Da, wie Csigó und Merkovity selbst anmerken, dass die Jobbik Partei nicht nur generell, sondern auch in Ungarn selbst als rechtsextremistisch angesehen wird, erscheinen mir Ressentiments nicht ausreichend als Erklärungsfaktor für einen solchen Anstieg. Inwiefern solle eine antielitäre Haltung allein zur Wahl einer solch extremen Partei bewegen? Zumal die Jobbik Partei nicht die einzige Option in der ungarischen Parteienlandschaft wäre, wenn wirklich nur eine Ablehnung der Eliten die Ursache wäre. Interessant wären hier Daten zur Volatilitär der Wähler anderer Parteien, die eine Elitenablehnung propagieren und nicht rechtsextremistisch sind.
+
+Meiner Meinung nach machen es sich die Autoren an dieser Stelle zu leicht, was natürlich einer detaillierteren Dikussion bedarf.
