@@ -1,4 +1,4 @@
-% Created 2018-06-19 Tue 19:57
+% Created 2018-06-26 Tue 00:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\usepackage{textcomp}
 \date{\today}
 \title{}
 \hypersetup{
@@ -21,16 +22,16 @@
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.0.50 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.0.91 (Org mode 9.1.13)}, 
  pdflang={English}}
 \begin{document}
 
 \tableofcontents
 
 \section{A scaling Model for Estimating Time-Series Party Positions from Texts}
-\label{sec:org22c046a}
+\label{sec:org509b83b}
 \subsection{Introduction}
-\label{sec:org810fd92}
+\label{sec:orgaeffe85}
 \begin{itemize}
 \item Textanalyse mittels \emph{Wordfish} zur Schätzung von deutschen Parteipositionen auf Rechts-Links Skala zw 1990 u 2005
 \begin{itemize}
@@ -45,7 +46,7 @@
 \end{itemize}
 \end{itemize}
 \subsection{Current Methods for Estimating Party Positions}
-\label{sec:org90f15cc}
+\label{sec:org3f5d15f}
 \begin{itemize}
 \item Parteipositionen sind nicht beobachtbar \(\rightarrow\) \emph{latente Variable}
 \begin{itemize}
@@ -54,14 +55,14 @@
 \item drei Parteiposition Analysemethoden
 \end{itemize}
 \subsubsection{Expert Surveys}
-\label{sec:orgaae4d90}
+\label{sec:org9d66161}
 \begin{itemize}
 \item in idealer Welt beste/genauste Methode
 \item Experten können große Mengen aus verschiedensten Quellen analysieren
 \item alllerdings teuer, aufwendig und eingeschränkte Vergleichbarkeit über Studien/Surveys hinweg
 \end{itemize}
 \subsubsection{Hand Coding: Comparative Manifestos Project}
-\label{sec:orgfedb6b1}
+\label{sec:org715072f}
 \begin{itemize}
 \item CMP Gruppe kodiert Parteiprogramme von Hand (umfangreiches Projekt)
 \item Score für die Parteien ist der jeweilige Prozentsatz von vorhandenen (Quasi-)Sätzen die in eine von 56 Issue Kategorien fallen
@@ -69,10 +70,10 @@
 \item the hand-coding approach provides the only cross- sectional time-series database on party positions to date
 \end{itemize}
 \subsubsection{Computer-Based Content Analysis}
-\label{sec:org35946a4}
+\label{sec:orgd0f0d1a}
 \begin{enumerate}
 \item Laver, Benoit \& Garry: Verwendung von Referenztexten statt selbstkodierter Diktionäre
-\label{sec:orgb07ec79}
+\label{sec:org6c35e06}
 \begin{itemize}
 \item zunächst Auswahl von Referenztexten die einem gewissen Extrem im pol Raum zugeordnet werden können (evtl auch für Mitte)
 \item begleitet Zuweisung von Referenzwerten an die Referenztexte (idealerweise im Kontext bereit schon existierender Expertsurveys)
@@ -100,7 +101,7 @@
 \end{itemize}
 \end{enumerate}
 \subsection{A Scaling Approach to Party Positions}
-\label{sec:org459ee79}
+\label{sec:org9640c68}
 \begin{itemize}
 \item Annahme dass Vokabular in Parteiprogrammen Informationen über Position(en) im politischen Raum enthält
 \item Vorteile:
@@ -146,7 +147,7 @@ Analyse von Worthäufigkeiten in Parteiprogrammen und Generierung der Häufigkei
 
 \begin{equation*}
 \begin{aligned}
-# y_{ijt} \tildelow Poisson (\lambda_{ijt})\\
+y_{ijt} \tildelow Poisson (\lambda_{ijt})\\
 \lambda_{ijt} = \text{exp}(\alpha_{it} + \Psi_{j} + \beta_{j} * \omega_{it})
 \end{aligned}
 \end{equation*}
