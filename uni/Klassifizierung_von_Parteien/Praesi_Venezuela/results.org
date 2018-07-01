@@ -1,0 +1,108 @@
+* Forschungsfrage & Relevanz 
+Verhältnisse in Venezuela haben sich in den letzten Dekaden so stark gewandelt wie in fast keinem anderen Land der Welt
+- 1970 reichstes Land in Lateinamerika & Top 20 weltweit
+- 2019: 82% aller Haushalte in Armut, höchste Inflationsrate weltweit
+  
+** Democracy Barometer
+Democracy Index (1 bis 10)
+- 2006: 5.42
+- 2017: 3.87 (niedrigster DI in Lateinamerika)
+  - schlechteste Kategorie: /Functioning of governmernt/
+
+Kombinierter Index der Demokratie (0 bis 10)
+- 1996 (bevor Populisten im Amt) = 3.82
+- 2016 (20 Jahre Populisten im Amt) = 0.98
+ 
+** Forschungsfrage
+"Populismus in der Regierung als entscheidender Erosionsfaktor der Demokratie Venezuelas?"
+
+* Theorie
+- Argumentation, dass Populismus "in office" sich negativ auf Demokratiequalität auswirke (Mudde)
+- Theorie das Populismus zu Autoritarismus führe(n kann) (Levitsky-Loxton Theorie/These)
+# Effekte und Folgen des Populismus in Venezuela deutlich in sowohl positiver, als auch negativer Form feststellbar
+# - 
+** Hypothesen
+Hypothese: Der Populismus hat maßgeblich zur Verringerung der Demokratieindizes, sowie zur Verschlechterung der wirtschaftlichen Lage Venezuelas beigetragen
+
+Nullhypothese: Der Populismus hat keine nennenswerte Rolle im Verfall der venezolanischen Demokratie gespielt 
+
+* Operationalisierung
+- Populismus als solches schwer messbar, daher Fokus auf Entscheidungen & Akten, die einer typisch populistischen (muss noch definiert werden) Agenda nahekommen 
+- Abgleich von Demokratieindizes und bemerkenswerten Akten über die Jahre hinweg
+  - Untersuchung ob und welche jener Akte populistische Züge haben
+    
+* Ergebnisse
+- Brasilien als beispielhaftes Vergleichsland zur Veranschaulichung des Effektes von Populismus
+  - Venezuela & Brasilien beides nicht-konsolidierte Demokratien
+    - wirtschaftliche Krisen in beiden Ländern
+    - aber in Venezuela Populist(en) an der Macht in Brasilien nicht
+** Warum hat der Populismus solch negative Folgen in Venezuela?
+- Chavez (& Maduro) sind totale Populisten
+- 
+
+
+
+# * mrk a
+# - populismus in regierung negativ auf demokratie qualität
+#   - poplismus in nicht-konsolodiertet (war das der fall?) demokratie negativ auf demokratie qualität
+
+# * mrk b
+# - Levitsy Loxton These das Populismus zu Autorität(competitive?) fuhrt
+# -
+* Different
+Wie dem Plot zu entnehmen ist, sinkt/sank die Demokratiequalität seit dem Amtsantritt der Populisten (Maduro, Chavez). Zum Vergleich, dass es kein allgemeines lateinamerikanisches Phänomen ist hier die Werte von Brasilien, welches ebenfalls wirtschaftliche Krisen etc hatte und dies somit nicht der entscheidene Faktor sein kann. Der größte Unterschied ist, dass in Venezuela seit 20 Jahren Populisten regieren. Populismus an der Macht muss zwar nicht negative Konsequenzen haben, aber der Fall Venezuela ist eine Paradebeispiel dafür, wie totaler Populismus eine der Hauptursachen für den Verfall einer Demokratie zum/in den Autoritarismus sein kann.
+Autoritäre Elemente sind in Venezuela zahlreich vorhanden und wurden unter den populistischen Machthabern implementiert. Der entscheidene Punkt ist dabei, dass Populismus per se nicht schlecht/schädlich ist und direkt zum Verfall geführt hat, sondern vielmehr die maßgebliche Rolle dabei gespielt hat, schädliche Entscheidungen zu treffen und zu vollziehen beziehungsweise diese zu ermöglichen.
+
+** Entscheidene Ereignisse
+- 1999: Chavez supporters win 122 of 128 seats in a constituent assembly, allowing the president to rewrite the constitution. He eliminates the senate, lengthens the presidential term from five to six years, and renames the country the "Bolivarian Republic of Venezuela" after his idol Simon Bolivar, the inspiration behind most of Latin America's independence from Spain
+  - die Euphorie und der große Rückhalt im Volk, den Chavez durch sein populisitisches Auftreten (und charismatisches! als Populismusmerkmal) ermöglichten dies
+- Fokus zunächst darauf mehr Macht für den Präsidenten zu sichern
+  - Wirtschaft blieb zunächst unangetastet (gleiche Minister etc)
+  - Chavez erweckte beim Volk den Eindruck, dass die Eliten etc. das Land und die Institutionen so ruiniert hätten, dass eine Umstrukturierung des pol. Systems notwendig sei
+    - diese wurde ihm gewährt (*1. Entscheidener Punkt in der Abwärtsspirale*)
+      - Einführung autokratischer Elemente, während Wahlen etc. noch bestehen
+- dieses erste Dekret(?!) setzte den Kurs weiter auf aggressiven Linkspopulismus 
+- *1. Wendepunkt*: Über Nacht Verabschiedung von 48 Gesetzen die niemand gelesen/kontrolliert hat -> daraufhin Proteste -> Verantwortlichmachung der Ölindustrie (pop.: In- und Outgroup) -> Wendepunkt überwunden
+  - Ölindustrie streikte und Chavez feuerte ~60% aller Mitarbeiter und übernahm die Kontrolle (*2. Entscheidener Punkt in der Abwärtsspirale*) -> dies machte ihn allerdings ziemlich unpopulär, sodass seine "wahre" populistische Policy erst 2003/2004 mit dem Anstieg des Ölpreises beginn
+- es folgten horrende Ausgaben für umfassende Sozialprogramme
+  - um Beliebheit bei hauptsächlich der armen Bevölkerung, die er im Laufe seiner politischen Karriere immer wieder gezielt anzuziehen versuchte, zu steigern/restaurieren
+- es stellte sich eine Erhaltungsstrategie, sowie ökonomischer Populismus ein (*3. Entscheidener Punkt in der Abwärtsspirale*)
+  - Erhaltung/Verbesserung des Lebensstandards der "common people"
+  - Pumpfinanzierung durch Ölgelder
+    - keine Sparmaßnahmen, da nur kurzfristig gedacht/angelegt (populistisch)
+  - Volk ist zufrieden und denkt es läuft gut, während sich das Land "behind the scenes" am wirtschaftl. Ruin befindet und die Demokratie sich immer weiter verschlechtern
+- bei der Verfolgung des ökonomischen Populismus kam es zu einem weiteren entscheidenen Fehler
+  - Verstaatlichung zahlreicher Unternehmen (da die Eliten dort korrupt etc seien)
+  - einzig und alleiniger Fokus auf Öl, alles andere Import -> enorme Importabhängigkeit (*4. Entscheidener Punkt in der Abwärtsspirale*)
+- ökonomischer Populismus ging solange gut wie Ölpreise es ermöglichten
+- kurz nach Chavez Tod im Jahr 2014 endete der Ölpreis Boom abrupt -> Devisen fehlten
+  - Maduro fürchtete um seine Beliebtheit (Pop.) und fixierte den Wechselkurs + führte Devisenkontrollen ein -> Kontrollen wirkten nicht und Produktion in Venezuela sank auf ein noch nie da gewesenes Minimum -> sinkender Ölpreis und schlechte Wirtschaft reduzierten das Staatsbudget, sodass mehr Geld gedruckt wurde um dem entgegenzuwirken -> Anstieg der Inflation
+  - ölabhängige Staaten bilden normalerweise Reserven um Risiken zu reduzieren, dass ist im Fall von Venezuela nicht geschehen
+    - Chavistas haben das Geld mit beiden Händen ausgeben um die arme Bevölkerung zufrieden zustellen
+      - außerdem Zerstörung der Privatwirtschaft und Verdrängung ausländischer Firmen(+ Eliten -> viele nach Kolumbien dort Boom, pop Akt weil verschworene Elite aber in Wirklichkeit Verdrängung von Know-How)
+        - Bevölkerung erlebte rise of living standards und ließ es deshalb zu
+- Verdrängung der Eliten hat überdimensionales Maß angenommen, "authentische Demokratie" durch Verstaatlichung
+- "Likewise, Venezuela’s authoritarian turn began in 1999, before the oil boom. Thus, although oil rents may have helped Cha´vez consolidate power, it was mass support, not oil revenue, that allowed him to dismantle representative democracy"
+- Chávez likes to insist that state intervention in “strategic” industries has been critical to the task of stabilizing prices, but most often his takeovers have been about politics: Nationalizations allow Chávez to court certain labor groups by promising jobs with relaxed productivity standards. This, too, conforms to traditional models of Latin American populism
+- keine Formung von einer starken Opposition
+- was wäre passiert wenn Chavez kein Populist gewesen wäre?
+
+# - um den Armen, die den Großteil seiner Wählerschaft stellen, 
+
+Im Zuge dieser Sozialpolitik
+werden für den Populismus typische punktuelle ad hoc-Maßnahmen bar einer konsistenten
+Strategie durchgeführt (BURCHARDT 2005a: 108, PEETZ 2001: 98), und gerade solche
+erscheinen wie die „Gaben eines Patrons“, welche vordergründig der kurzfristigen
+support-Generierung dienen. Ein paternalistisch-personalistischer Stil in der Beziehung
+zwischen Chávez und „seinem“ Volk ist also gegeben. 
+
+ Anti-Status-quo-Diskurs
+ 
+Mit der Abgrenzung zum vorherigen Regime geht eine aktive Deinstitutionalisierung
+eng einher, 
+
+Alo Presidente
+
+In mid August 1999, the Constitutional Assembly moved to restructure the nation's judiciary, claiming the power to fire judges, seeking to expedite the investigations of corruption outstanding against what the New York Times estimated were nearly half of the nation's 4700 judges, clerks, and bailiffs.[6] On 23 August, the Supreme Court voted 8–6 that the Assembly was not acting unconstitutionally in assuming those powers; however, the next day Cecilia Sosa Gomez resigned in protest. Over 190 judges were eventually suspended on charges of corruption.
+
+ohne populistische KOmmunikationsstrategien nicht möglich gewesen
