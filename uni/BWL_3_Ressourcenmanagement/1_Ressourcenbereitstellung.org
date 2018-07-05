@@ -6,8 +6,6 @@
 #+attr_latex: :width 250px
 [[./pictures/leistungsbereich_prod.png]] 
 
-\FloatBarrier
-
 *** Produktion, Produktionsfaktoren, Produktionswirtschaft
 *Produktion* = der industrielle Abbau von Material, dessen Be- und Verarbeitung und die Ausführung von Dienstleistungen; ist die methodische Umwandlung von Produktionsfaktoren in Produkte im Rahmen von bestimmten Produktionsverfahren
 
@@ -64,8 +62,6 @@ Beim Input der betrieblichen Leistungserstellung unterscheidet man zwischen Pote
 #+attr_latex: :width 250px
 [[./pictures/produktion_als_kombpr.png]] 
 
-\FloatBarrier
-
 \rightarrow Ziele in dem obgigen Kombinationsprozess:
 Beim Input ist die Verbesserung des Faktoreinsatzes, also eine Erhöhung der Produktivität das Ziel.
 In der Transformation bzw dem Throughput ist eine Steigerung der Ausbringungsmenge bzw eine maximale Kapazitätsauslastung, sowie eine Verkürzung der Durchlauf- oder Produktionszeiten und eine Minimierung der Produktionskosten das Ziel.
@@ -78,8 +74,6 @@ Man kann inhatlich zwischen dem Werziel Produktivität, dem Humanziel Flexibilit
 #+CAPTION: Inhaltliche Zielbeziehungen
 #+attr_latex: :width 250px
 [[./pictures/inhaltziele.png]] 
-
-\FloatBarrier
 
 \paragraph{Unternehmensbeteiligte & Interessenkonflikte}\\
 Innerhalb des Unternehmens kann es zu diversen Konflikten & Spannung zwischen den verschiedenen Beteiligten kommen.
@@ -113,8 +107,6 @@ Das *Produktionsverfahren* bezeichnet die organisatorische & technologische Art,
 #+attr_latex: :width 250px
 [[./pictures/prodfunktion.png]] 
 
-\FloatBarrier
-
 Beispiel einer Produktionsfunktion: $x=f(r_1, r_2, r_3)$
 
 *Kombinationsprinzip*:\\
@@ -126,4 +118,33 @@ Die Wahl der Faktorkombination $f$ bestimmt das Verhältnis, indem die drei Fakt
 *Effizienzprinzip*:\\
 Die Menge der Produktionsfaktoren, die zur Herstellung von $x$ notwendig ist, wird bei gegebener Produktionsfunktion $f$ genau bestimmt. Mit einem geringeren Faktorverbrauch kann $x$ nicht hergestellt werden. Werden mehr Faktoren verbraucht liegt Verschwendung vor.
 
+**** Produktionstheoretische Grundbegriffe
+- *Grenzrate der Faktorsubstitution* = Austauschrelation zwischen zwei Produktionsfaktoren $r_1$ und $r_2$ bei Konstanz der Ausbringungsmenge x
+- *Grenzproduktivität* = Veränderung der Ausbringungsmenge x in Abhängikeit von infinitisemal kleinen Änderungen der Faktoreinsatzmengen $r_1$ bzw $r_2$
+- *Durchschnittsertrag* = Durchschnittlicher Ertrag des Produktionsfaktors $r_1$ bzw $r_2$
+- *Produktionskoeffizient* = Anzahl der im Produktionsprozess durchschnittlich notwendigen Faktoreinsatzmengen $r_1$ bzw $r_2$ zur Produktion einer Einheit z
+  
+**** Kostenfunktion: Bewertung des Faktoreinsatzes
+$K = f(x)$\\
+- *Kosten/Gesamtkosten* = Die mit Preisen bewertete Faktoreinsatzmengen, die während einer Rechnungsperiode in Abhängikeit von dem Beschäftigungsgrad anfallen
+- *Kostenrate/Stückkosten* = Der Betrag der auf eine Leistungseinheit entfallenden Kosten (bei Angabe der Ausbringungsmenge in Stück)
+- *Grenzkosten* = Geben für jeden Beschäftigungsgrad x den Anstieg der Gesamtkostenkurve an
+- *Fixe Kosten* = Kosten der Betriebsbereitschaft, unabhängig von der tatsächlichen Leistung, zB Zinsen, Mieten, Abschreibungen
+  - Nutzkosten/Leerkosten = Abgrenzung der Kostenwirkungen der nicht beanspruchten Kapazitäten
+- *Variable Kosten* = Kosten in Abhängikeit von der tatsächlichen Leistung (proportionale, degressive, progressive Kostenverläufe)
+  
+**** Grundlegende Kritikpunkte
+- mangelnde Untersuchung der Dynamik & Unsicherheit des Produktionsgeschehens
+- ungenügende Einbeziehung der betrieblichen Organisationsstruktur
+- nicht ausreichende Berücksichtigung von Führungstätigkeiten
+- Beschränkung auf quantitative Größen
+- ungenügende Erfassung von Dienstleistungen
+- zu hohe Aggregation und zu geringe empirische Fundierung der verwendeten Größen
+
 *** Produktionskonzepte und - strategien
+- Qualitätsorientierung
+- Best-practive Orientierung
+- Lernende Organisation
+- Mitarbeiter-orientierte Prozesse
+- nicht imitierbare Ressourcen wie bswp Patente, besonders einzigartige Standpunkte oder Assets sind wertvollere Ressourcen als leicht imitierbare Ressourcen wie bspw Cash oder Rohstoffe \rightarrow Generierung nicht-imitierbarer Produktionsfähigkeiten
+- Identifikation oder Entwicklung geschützter Ressourcenpositionen

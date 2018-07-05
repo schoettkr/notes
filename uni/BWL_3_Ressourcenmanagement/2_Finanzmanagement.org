@@ -1,0 +1,31 @@
+* Finanzmanagement
+Funktion des Finanzmanagement ist die zielgerichtete Gestaltung der betrieblichen Finanzwirtschaft:
+- aktive Gestaltung der Kapitalzuführung und des Kapitalentzugs
+- eher passive Gestaltung der internen Finanzbewegungen
+- bezeichnet auch die mit den Managementaufgaben Finanzierung & Finanzwirtschaft verantwortlich betrauten Mitglieder einer Organisation
+** Finanzierung & Wettbewerbsfähigkeit
+Ziel der Finanzwirtschaft ist die Erreichung des finanzwirtschaftlichen Gleichgewichts
+*** Zahlungsstrom, Finanzierungsmaßnahme, Kapitalveränderung
+- *klassischer Kapitalbegriff* = Kapital ist die abstrakte Wertsumme der Bilanz; Kapital zeigt die Herkunft der Werte des Unternehmens an, unterteilt in Eigen- und Fremdkapital
+- *monetärer Kapitalbegriff* = Kapital sind im Unternehmen eingesetzte Geldmittel
+  
+Finanzwirtschaft umfasst die Kapitalbeschaffung und -verwendung der Unternehmung
+
+**** Kapitalströme
+#+CAPTION: Kapitalveränderung als Strömungsgröße
+#+attr_latex: :width 250px
+[[./pictures/kapitalstroeme.png]] 
+- Kapitalbindung (oder -verwendung)
+- Kapitalfreisetzung (oder -rückfluss)
+- Kapitalzuführung (oder -beschaffung)
+- Kapitalentzug (oder -abfluss)
+
+**** Finanzielles Gleichgewicht
+#+CAPTION: Komponenten des finanziellen Gleichgewichts
+#+attr_latex: :width 250px
+[[./pictures/finanzgg.png]] 
+*** Zahlungsbeziehungen, Finanzierungsform, Finanzierungsverträge
+F. 13 von II_Finanzmanagement_1.pdf
+
+** Bereitstellung finanzieller Ressourcen
+** Finanzierungsplanung
