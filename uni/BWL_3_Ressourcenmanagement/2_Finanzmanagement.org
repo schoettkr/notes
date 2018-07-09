@@ -25,7 +25,105 @@ Finanzwirtschaft umfasst die Kapitalbeschaffung und -verwendung der Unternehmung
 #+attr_latex: :width 250px
 [[./pictures/finanzgg.png]] 
 *** Zahlungsbeziehungen, Finanzierungsform, Finanzierungsverträge
-F. 13 von II_Finanzmanagement_1.pdf
+**** Zahlungsbeziehungen
+F.14 II_FInanzmnfgm_1.pdf
+**** Herkunft von Finanzmitteln
+*Außenfinanzierung* \rightarrow = *Kapitalzuführung*
+- finanzielle Mittel oder geldwertäquivalente Vermögensgegenstände werden dem Unternehmen /explizit/ von auf Finanzierungsmärkten (also /außerhalb/) operierenden Financiers zur Verfügung gestellt
+  - Geldmarkt: Finanzmittel mit kurzer Laufzeit (zB Bank-, Kunden-, Lieferantenkredite)
+  - Kapitalmarkt: Finanzmittel mit mittlerer & längerer Laufzeit (zB Darlehen, Hypotheken, Anleihungen, Beteiligungen)
+
+*Innenfinanzierung* \rightarrow = *Kapitalfreisetzung*
+- finanzielle Mittel die dem Unternehmen in Form eines (positiven) Saldos zwischen Einzahlungen aus Nicht-Finanzierungsmärkten & Auszahlungen an diese Märkte in einer Periode zugeflossen sind, werden am Verlassen des Unternehmens gehindert (/innerhalb/)
+  - der finanz. Überschuss wird als Cash-Flow bezeichnet und drückt die Innenfinanzierung eines Unternehmens aus
+**** Finanzierungsverträge
+Ein Finanzierungsvertrag hält die Bedingungen fest zu denen ein Unternehmen finanzielle Mittel beschafft:
+- Höhe & Zeitpunkt
+- Sicherheitsgrad der Zahlungen
+
+Es gibt 3 Formen von Finanzierungsverträgen:
+
+1. Unbedingter Finanzierungsvetrag
+   Das Unternehmen leistet bestimmte, vertragliche fixierte Zins- und Tilgungszahlungen immer & unter allen Umständen an den Geldgeber (zB standardisierter Kreditvertrag)
+
+2. Bedingter Finanzierungsvertrag
+   Das Unternehmen leistet präzisierte Zahlungen an den Geldgeber, wenn bestimmte Bedingungen erfüllt sind (zB positiver Jahresabschluss bei Gewinnobligationen, Genussscheinen, Stamm- oder Vorzugsaktion)
+
+3. Sicherungsvertrag
+   Das Unternehmen vereinbart Maßnahmen zur Besicherung der Finanzierungsmaßnahme sowie zu Informations- und Kontrollrechten des Geldgebers
+
+*** Optimale Finanzierung & Wettbewerbsfähigkeit
+Es gibt Probleme beim Erreichen des Ziels der optimalen Finanzierung. Die Konsequenzen von Investitionsprogrammen & Finanzierungsverträgen sind für Eigentümer & Gläubiger nicht vollständig bekannt, außerdem sind ihre Erwartungen unterschiedlich. Finanzierung kann außerdem Hinblick auf verschiedene andere Ziele/Faktoren betrachtet werden:
+
+1. Finanzierung & Liquidität
+   Sicherung der Zahlungsfähigkeit innerhalb eines gegebenen Planungszeitraums
+   
+2. Finanzierung & Rentabilität
+   Konsistente Aussagen zum erwarteten Erfolg investierter Mittel / im Vergleich von Planungszeitraum / ggü dem Kapitalmarkt
+
+3. Finanzierung & Risiko
+    Prognose des Eintritts des erwarteten Erfolgs investiertet Mittel (Eintrittswahrscheinlichkeit) / Finanzierungsverträge zur Risikoteilung bei Eigen- und Fremdfinanzierung
+    
+II_Finanzmanagement_2.pdf -> F.6 Zusammenfassung
 
 ** Bereitstellung finanzieller Ressourcen
+*** Formen der Finanzierung
+| Herkunft der Finanzmittel/Rechtsstellung des Kapitalgebers | Eigenfinanzierung (Eigentümer)           | Fremdfinanzierung (Gläubiger)    |
+|------------------------------------------------------------+------------------------------------------+----------------------------------|
+| Außenfinanzierung                                          | Beteiligungsfinanzierung                 | Kreditfinanzierung               |
+| Innenfinanzierung                                          | Selbstfinanzierung (insbs. aus Gewinnen) | Sonstige (insbs. Rückstellungen) |
+
+*Beteiligungsfinanzierung* = Finanzierung durch (bisherige oder neue) Eigentümer
+- Eigenkapital (von außen zugeführt oder entsprechende Sacheinlagen der Eigentümer)
+- Beteiligungskapital
+  - Beschaffung von Eigenkapital durch Aufnahme neuer Teilhaber (Gesellschafter) bei nicht emissionsfähigen Unternehmen
+  - Beschaffung von Eigenkapital bei emissionfähigen Unternehmen (Stammaktie/Vorzugsaktie/Genussschein)
+    
+*Kreditfinanzierung* = Finanzierung durch externe Kapitalgeber (Gläubiger)
+- Formen der langfristigen Kreditfinanzierung über den Kapitalmarkt
+  - Schuldverschreibung, Industrieanleihe
+  - Schuldscheindarlehen, Investitionsdarlehen
+- Formen der kurzfristigen Kreditfinanzierung über den Geldmarkt
+  - Bank-/Handels-/Lieferantenkredite
+- Sonderformen
+  - Factoring, Leasing
+    
+| Vergleichskriterium | Beteiligungsfinanzierung | Kreditfinanzierung                 |
+|---------------------+--------------------------+------------------------------------|
+| Anspruchsgrundlage  | Quotenanteil             | Nominalanspruch                    |
+| Erfolgsansrpuch     | erfolgsabhängig/variabel | erfolgsunabhängig/kontraktbestimmt |
+| Befristung          | Nein                     | Ja                                 |
+| Haftung             | Ja zumindest begrenzt    | Nein                               |
+| Leitung             | Ja zumindest begrenzt    | Nein                               |
+    
+**** Wahl der optimalen Finanzierung
+*Finanzierung & Risiko/Chance*
+- Financiers werden - unter sonst gleichen Bedingungen - eine Finanzierung umso besser einschätzen, je sicherer die in Aussicht gestellten Renditen sind
+  - Risiko/Chance kann gleichgesetzt werden mit der Möglichkeit des Eintreten eines ggü dem Erwartungswert nachteiligen/vorteilhaften finanz. Ereignisses/Ergebnisses
+  - Risiko/Chance liegt dann vor, wennn eine eingetretene Nettoeinzahlung (finanzielles Ergebnis) unterhalb/oberhalb des eingesetzten Kapitals liegt
+    
+*Liquidität (finanz. Gleichgewicht)*
+- ein Unternehmen ist liquide (zahlungsfähig), wenn es in der Lage ist, seinen Zahlungsverpflichtungen innerhalb eines gegebenen Planungszeitraums jederzeit vertragskonform nachzukommen
+  - Zahlungsfähigkeit = Zahlungsvermögen > Zahlungsverpflichtungen
+- /Risiko der Liquidität/: Aufrechterhaltung der Liquidität ist eine notwendige Voraussetzung für den Fortbestand eines Unternehmens. Aktuelle oder drohende Zahlungsunfähigkeit oder eine Überschuldung sind Gründe für eine Insolvenz
+  
+*Rentabilität*
+- Rentabilität spiegelt das Ergebnis unternehmerischer Tätigkeit wieder, in dem der finanzwirtsch. Erfolg in Relation zum eingesetzten Kapital gesetzt wird 
+  - Eigenkapital, Gesamtkapital, Umsatz
+- /Risiko der Rentabilität/: zur zukunftsgerichteten Begründung von Entscheidung ist mit Erwartungswerten zu rechnen, die an Bedeutung verlieren, je größer die Unsicherheit ist
+ 
 ** Finanzierungsplanung
+**** Begriff & Arten der Liquidität
+Ein Unternhemen ist /liquide/ (zahlungsfähig), wenn es in der Lage ist, seinen Zahlungsverpflichtungen innerhalbs eines gegebenen Planungszeitraums jederzeit vertragskonform nachzukommen. Die Aufrechterhaltung der Liquidität ist eine notwendikge Voraussetzung für den Fortbestand eines Unternehmens. Aktuelle oder drohende Zahlungsunfähigkeit oder eine Überschuldung sind Gründe für eine Insolvenz.
+
+Arten der Liquidität:
+- güterwirtschaftliche Liquidät
+- verliehende Liquidität
+- zukünftige Liquidität
+- antizipierte Liquidität
+
+Messung von Liquidität:
+- Beurteilung anhand der Liquiditätsgrade & der Struktur von Kapitalbindung und -bereitstellung (horizontale Kapitalstruktur = Vergleich von Vermögen und Kapitalstruktur), sowie anhand des Verschuldungsgrads (vertikale Kapitalstruktur = Vergleich von Eigen- und Fremdkapital)
+- Beurteilung auf der Basis von Finanzplänen
+  
+II_Finanzmanagement_2.pdf F.22 Zusammenfassung
