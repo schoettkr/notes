@@ -33,7 +33,7 @@ Investition ist sowas wie Verzicht in der Hoffnung auf Belohnung
 
 Die Funktion des *Finanzmanagements* ist die zielgerichtete Gestaltung der betrieblichen Finanzwirtschaft. Dazu zählt hauptsächlich die aktive Gestaltung der Kapitalzuführung & des Kapitalentzugs.
 
-\paragraph{Monetäre Zielgrößen}\\
+\paragraph{Monetäre Zielgrößen}
 - Zahlungsmittelbestand = Kassenbestand, Guthaben bei Kreditinstituren; Einzahlung, Auszahlung
 - Geldvermögen = Zahlungsmittelbestand + Forderungen - Verbindlichkeiten; Einnahme, Ausgabe
 - Gesamtvermögen = Gewinn + Verlustrechnung; Ertrag, Aufwand
@@ -68,14 +68,14 @@ In der Transformation bzw dem Throughput ist eine Steigerung der Ausbringungsmen
 Im Output wird die Steigerung des Qualitätsniveaus + der Zuverlässigkeit, sowie die Verbesserung der Arbeitsbedingungen oder des Umweltschutzes als Ziel anvisiert.
 
 *** Ziele & Zielkonflikte produktionswirtschaftlicher Betätigung
-\paragraph{Inhaltliche Ziele & Zielkonflikte}\\
+**** Inhaltliche Ziele & Zielkonflikte
 Man kann inhatlich zwischen dem Werziel Produktivität, dem Humanziel Flexibilität und dem Sachziel Qualität unterscheiden. Die Ziehlbeziehungen dieser Ziele sind indifferent, komplementär und/oder konkurrierend.
 
 #+CAPTION: Inhaltliche Zielbeziehungen
 #+attr_latex: :width 250px
 [[./pictures/inhaltziele.png]] 
 
-\paragraph{Unternehmensbeteiligte & Interessenkonflikte}\\
+**** Unternehmensbeteiligte & Interessenkonflikte
 Innerhalb des Unternehmens kann es zu diversen Konflikten & Spannung zwischen den verschiedenen Beteiligten kommen.
 
 Ziele/Interessen der jeweiligen Unternehmensbeteiligten:
@@ -84,7 +84,7 @@ Ziele/Interessen der jeweiligen Unternehmensbeteiligten:
 - Lieferanten/Kunden: Absatzsicherheit, Liefersicherheit, Qualität und Liquidität
 - Öffentlichkeit: Nachhaltigkeit, Transparenz
   
-\paragraph{Sachliche Ziele produktionswirtschaftlicher Betätigung}\\
+**** Sachliche Ziele produktionswirtschaftlicher Betätigung
 
 **Produktionsziele**:
 Aus dem produktionswirtschaftlichen Sachziel der Herstellung von Gütern und/oder Dienstleistungen nach Mengen-, Zeit- und Qualitätskriterien leiten sich die

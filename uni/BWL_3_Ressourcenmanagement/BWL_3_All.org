@@ -1,0 +1,4 @@
+#+INCLUDE: "./1_Ressourcenbereitstellung.org" :minlevel 1
+#+INCLUDE: "./2_Finanzmanagement.org" :minlevel 1
+#+INCLUDE: "./3_Personalmanagement.org" :minlevel 1
+#+INCLUDE: "./4_Innovationsmanagement.org" :minlevel 1
