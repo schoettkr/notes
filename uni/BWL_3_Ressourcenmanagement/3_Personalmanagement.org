@@ -7,7 +7,7 @@ Kategorien/Ebenen personalwirtschaftlichen Handelns:
 - Instrumentenebene = Selektion personalwirtschaftlicher Maßnahmen (Instrumente/Ergebnisse) und ihre Wirkungen (intendiert / nicht intendiert)
 - Erfolgsebene = Management der Humanressourcen und Unternehmenserfolg
   
-**** Personalwirtschaftliches Handeln
+*** Personalwirtschaftliches Handeln
 Geht man davon aus, dass ein bestimmter personalwirtschaftlicher Zweck prinzipiell durch verschiedene Handlungen erreicht werden kann, dass außerdem eine bestimmte Handlung prinzipiell verschiedenen personalwirtschaftlichen Zwecken dienen kann und dass schließlich Handlungen auch 'nicht-bezweckte'(nicht-intendierte) Wirkungen hervorrufen können, so werden /Wahlprobleme/ sichtbar, die sich mit Hilfe von elementaren /Kategorien/ charakterisieren lassen.
 
 Personalwirtschaftl. Probleme entstehen, wenn Unternehmer andere Personen zur Deckung des Arbeitskräftebedarfs in einer Weise in Dienst stellen dass diese bestimmte Dispositionsbefugnisse über ihre Arbeitskraft gegen eine festgelegte Vergütung direkt oder indirekt auf den Unternehmer übertragen.
@@ -24,12 +24,12 @@ Prolemkategorien:
   - die Annahme, das sich die Arbeitskräfte mit den Verhaltensansprüchen der Organisation identifizieren, trifft im Regelfall weder für die Verhaltensansprüche noch für alle Angehörigen eines Betriebens in gleicher Weise zu
   - die Erfüllung von Verhaltensansprüchen muss den Mitarbeitern möglich sein
     
-**** Instrumentenebende personalwirtschaftlichen Handelns
+*** Instrumentenebende personalwirtschaftlichen Handelns
 #+CAPTION: Instrumentenebene personalwirtschaftlichen Handelns
 #+attr_latex: :width 250px
 [[./pictures/persinstr.png]] 
 
-**** Zielebene personalwirtschaftlichen Handelns
+*** Zielebene personalwirtschaftlichen Handelns
 - Individuelle Schutzreche
   - Schutz des Arbeitsverhältnisses (zB Kündigungsschutz)
   - Schutz der Gesundheit (zB Emissionschutz, Arbeitsschutz)
@@ -41,17 +41,17 @@ Prolemkategorien:
 - Unternehmerische Mitbestimmung
   - Mitwirkungsrechte bei unternehmerischen Entscheidungen
 
-**** Erfolgsebene personalwirtschaftlichen Handelns
+*** Erfolgsebene personalwirtschaftlichen Handelns
 #+CAPTION: Management der Humanressourcen & Unternehmenserfolg
 #+attr_latex: :width 250px
 [[./pictures/perserfolg.png]] 
-**** Elementarkategorien personalwirtsch Handelns (Zusammenfassung)
+*** Elementarkategorien personalwirtsch Handelns (Zusammenfassung)
 #+CAPTION: Instrumentenebene personalwirtschaftlichen Handelns
 #+attr_latex: :width 250px
 [[./pictures/perskateg.png]] 
 
 ** Disposition des Personalpotentials
-**** Personalbedarf
+*** Personalbedarf
 Der /Personalbedarf/ einer Organisation umfasst - nach geforderten Qualifikationsstrukturen - gruppiert die Gesamtheit, die zur Wahrnehmung aller dispositiven & exekutiven Aufgaben in allen Bereichen und auf allen Ebenen einer Organisation benötigt werden.
 
 Primärdeterminanten:
@@ -64,7 +64,7 @@ Sekundärdeterminanten:
 - Anforderungsprofile/Stellenbeschreibungen
   
 Verfügbarkeit des Personals \rightarrow Dispositionsabhängigkeit der Bestimmung & Deckung des Personalbedarfs
-**** Personalrekrutierung und -auswahl
+*** Personalrekrutierung und -auswahl
 Anwerbung
 - Zweck = Herstellung von Kontakten zu potentiellen Bewerbern, Personalmarketing (Arbeitgeberimage)
 - Funktionen = Information, Motivation, Vorselektion
@@ -104,7 +104,7 @@ strukturiertes Interview:
 #+CAPTION: Multimodales Interview
 #+attr_latex: :width 250px
 [[./pictures/persint.png]] 
-**** Einsatz & Disposition des Personals
+*** Einsatz & Disposition des Personals
 Einsatz von Personal
 - Zweck =  Übertragung von Aufgaben oder Stellen an die vorhandenen/verfügbaren Arbeitskräfte
 - Methode = Zuordnung von Anforderungsprofilen und Fähigkeitsprofilen auf der Basis von Mindestwerten (Cut-Off Methode) oder (gewichteten) Ähnlichkeiten (Profilvergleichsmethode)
@@ -115,7 +115,7 @@ Segmentierung des Personals
 - Randbelegschaft = externes Arbeitsmarktsegment (Manövriermasse für quantitative Anpassungen des Personalbestands)
   
 Personalplanung als Disposition \rightarrow die Aufgabe der Personalplanung ist es, den Personalbedarf, den Personaleinsatz und die Personalaustattung - unter Beachtung der für den Personalsektor geltenden Restriktionen - optimal im Sinne der betrieblichen Ziele aufeinander abzustimmen
-**** Personalentwicklung
+*** Personalentwicklung
 #+CAPTION: Grundmodell der Personalentwicklung
 #+attr_latex: :width 250px
 [[./pictures/persgruent.png]] 

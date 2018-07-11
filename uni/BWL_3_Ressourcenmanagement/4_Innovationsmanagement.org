@@ -1,0 +1,198 @@
+* Innovationsmanagement
+** Technologischer Wandel & Wettbewerbsfähigkeit
+- Ausgangsproblem = Optimale Ergiebigkeit der Betriebsmittel
+- Technischer Fortschritt & Innovationsmanagement
+  - Grundkategorien: Forschung, Entwicklung, Innovationsmanagement
+  - Aufgaben der Forschung, Entwicklung & Konstruktion
+  - Aufgaben & Ziele des Innovationsmanagements
+- Innovation & Wettbewerbsfähigkeit
+  - Wettbewerb um F+E-Leistungen
+  - Erfolgsfaktoren von Innovationen
+
+*** Optimale Ergiebigkeit der Betriebsmittel
+Betriebsmittel sind die gesamte technische Apparatur, deren sich ein Unternehmen bedient, um Sachgüter herzustellen oder Dienstleistungen bereitzustellen. Hinsichtlich der /technischen Basis/ kann man das Leistungspotential der Betriebsmittel abhängig vom /Grad der Modernität/, /Grad der Abnutzung/ und dem /Zustand an Betriebsfähigkeit/ feststellen.
+
+Technische Eignung 
+- = das Verhältnis zwischen der vom Betriebsmittel verlangten & der mit ihm tatsächlich erzielbaren Leistung
+- /Wirkungsgrad/: Maximalkapazität, Minimalkapazität, Optimalkapazität, Kapazitätsreserven
+- /Auslastungsgrad/: Ausschöpfung des qualitativen Leistungspotentials
+- /Flexibilitätsgrad/: Universalmaschinen, Sondermaschinen, betriebstechnische Elastizität/Umstellungsaufwand
+  
+*** Forschung, Entwicklung und Innovation
+/Technischer Fortschritt/ bezeichnet die Veränderung und zugleich technische Verbesserung von Produktionsfaktoren, Produktionsprozessen und Produkten \rightarrow Aufrechterhaltung der technologischen Wettbewerbsfähigkeit.
+
+/Forschung/ und /Entwicklung/ beschreibt die systematische Gewinnung neuer wissenschaftlicher und technischer Erkenntnisse, mit deren Hilfe die unternehmerischen Ziele besser als bisher erreicht werden.
+- Grundlagenforschung, angewandte Forschung
+- Forschung, Entwicklung + Konstruktion
+
+Eine /Innovation/ bezeichnet eine technische Verbesserung von Produktionsfaktoren, Produktionsprozessen und Produkten, die einen Neuheitswert besitzt und für deren Angebot eine Nachfrage besteht.
+
+*** Aufgaben in der Forschung und Entwicklung
+#+CAPTION: Aufgabenfelder
+#+attr_latex: :width 250px
+[[./pictures/inaufg.png]] 
+
+*** Dimensionen der Innovation
+Wenn in der Betriebswirtschaftslehre von /Innovationen/ gesprochen wird, sind allgemein Veränderungen gemeint, die einen Neuheitswert (eine Neuartigkeit) besitzen. Mit Innovationen wird sowohl der Prozess als auch sein Ergebnis bezeichnet, wofür die Eigenschaft der Neuartigkeit zutrifft.
+- qualitativ neuartige Produkte oder Verfahren, die sich ggü einem Vergleichszustand "merklich" unterscheiden
+  - Produktinnovationen, Produktionsverfahreninnovationen, Anwendungsinnovationen
+  - Marktinnovationen (Erschließung neuer Märkte)
+  - sonstige Innovatioen (Qualitätsverbesserung, sowie schnellere Bearbeitung oä)
+
+Neuheitsgrad
+- Ausprägung der Neuheit zu einem bestimmten Zeitpunkt
+- Invention (Erfindung), Imitation, Variation/Modifikation
+
+Neuheitsumfang
+- subjektiv empfundener Verlust (Nutzenschwund) der Neuheit im Zeitverlauf
+- Veränderung mit dem Lebenszyklus einer Neuheit
+- Schwund, Alterung, Verfall
+  
+Neuheitswert
+- Messung der Vorteilhaftigkeit (Bewertung) von Innovationen im Wettbewerb
+  
+Dimensionen von Innovationen
+- Inhaltlich: Was ist neu?
+  - Produkt, Prozess, System
+  - Kontinuität, Diskontinuität
+- Intensität: Wie neu?
+  - Neu der Tatsache nach oder Neu dem Grade nach
+  - Typologie von Innovationen, Multi-Dimensionalität
+- Subjektivität: Neu für wen?
+- Prozessual: Wo beginn, wo endet die Neuerung?
+  - Invention, Innovation, Imitation, Variation, Routine
+  - Phasen zur Innovation
+- Normativ: Ist neu gleich erfolgreich?
+  
+*** Aufgaben & Ziele des Innovationsmanagements
+Merkmale von Innovationen
+- systematisierte Suchprozesse nach neuen Ideen
+- schwache Strukturiertheit der  Innovationsprozesse
+- "reifende Prozesse"
+- innerbetriebliche, zwischenbetriebliche, behördliche & protestbedingte Widerstände
+  
+Planungsaufgaben
+- Motivation zu Innovationen
+- Zielvorgaben für Innovationen
+- Definition des Innovationsproblems
+- Suche nach innovativen Alternativen
+- Bewertung & Auswahl der Innovationsprozesse (-projekte) und Formulierung eines Innovationsprogramms-/-budgets
+  
+Steuerungsaufaben
+- Durchsetzung der Innovationsprozesse/Überwindung von Widerständen
+- Kontrolle der Innovationsprozesse
+- Sicherung der Innovationsprozesse und -ergebnisse
+
+Weitere Aufgaben
+- organisatorische Gliederung des Innovationsbereichs
+- personalpol. Aufgaben der Innovationsprojekte
+- Flexibilität der Innovationsprozesse
+
+*** Innovation und Wettbewerbsfähigkeit
+#+CAPTION: S-Kurven Konzept zur Technologieentwicklung
+#+attr_latex: :width 250px
+[[./pictures/inskurv.png]] 
+
+#+CAPTION: A framework for defining innovation
+#+attr_latex: :width 250px
+[[./pictures/insfram.png]] 
+
+**** Aufgabenfelder strategischer F+E Planung
+Forschungs- und Entwicklungsprogramm
+- Schwerpunktsetzung durch Technologiestrategie
+  - Produkt- und Prozessforschung
+  - Technologien
+- Allokation des F+E-Aufwands
+  
+Eigen- oder Fremdforschung
+- Eigenforschung zur Sicherung von Wettbewerbsvorsprüngen
+- Fremdforschung als 
+  - Auftragsforschung
+  - Innovationskooperation
+  - Gemeinschaftsforschung
+- Übernahme externer F+E Erkenntnisse
+  - Kauf/Lizenznahme
+  - Kauf innovativer Unternehmen
+    
+**** Erfolgsfaktoren von Innovation
+#+CAPTION: Erfolgsfaktoren - Systematik & Zusammenwirken
+#+attr_latex: :width 250px
+[[./pictures/inerf.png]] 
+** Strategische Forschungs- und Entwicklungsplanung
+*** Phasenschema des Innovationsmanagements
+**** Planungsaufgaben der F+E
+Planungsaufgaben der Forschung & Entwicklung sind:
+- Zielbildung
+  - unter Zielbildung ist das Feststellen & Festlegen eines präzisen, strukturierten & realisierbaren Systems von Verhaltensnormen zu verstehen
+- Problemlücke
+  - als Problemlücke lässt sich die Abweichung der erwarteten Lage (Lageprognose) zum Soll-Zustand festlegen, die durch zielführende Maßnahmen der Entscheidungsträger geschlossen werden soll
+- Alternativensuche
+  - unter Alternativensuche ist das systematische Aufspüren, Formulieren und Analysieren von unabhängigen Vorgehensweisen zur Zielerreichung zu verstehen
+- Prognosen
+  - Prognosen sind Wahrscheinlichkeitsaussagen über das Auftreten von Ereignissen (Wirkungen, Daten) in der Zukunft, die auf Beobachtungen & theoret. Aussagen beruhen
+- Bewertung
+  - unter Bewertung ist die Zuordnung einer Zielwirkung zu einer Alternative zu verstehen
+      
+    
+Interdependenz von Zielbildungs- und Problemlösungsprozess
+- /Spezifität/: für Innovationen müssen spezifische Ziele formuliert werden, die Übernahme von Entscheidungen us anderen Zusammenhängen ist nicht möglich
+- /Prozess/: eine Zielbildung ist kein zeitlich abgeschlossener Normsetzungsakt, sondern ein zeitverbrauchender, kognitiver & konfliktregulierender Prozess (/Reifungsprozess/)
+- /Parallelität/: Zielbildungsprozess & Problemlösungsprozess verlaufen in unterschiedlichen Formen weitgehend parallel
+- /Interdependenz/: Zielbildungsprozess & Problemlösungsprozess sind wechselbezüglich verknüpft
+  
+#+CAPTION: Zielbildung im Innovationsprozess
+#+attr_latex: :width 250px
+[[./pictures/inziel.png]] 
+
+**** Bewertungsaufgaben der F+E
+Zielbildung
+- unter Zielbildung ist das Feststellen & Festlegen eines präzisen, strukturierten & realisierbaren Systems von Verhaltensnormen zu verstehen
+
+Bewertung
+- Aufgaben der Bewertung:
+  - Festlegung der Bewertungskriterien & der Kriteriengewichte
+  - Ermittlung der Kriterienwerte
+  - Ermittlung des Gesamtwertes der Alternative
+  - Wahl der Erfolg versprechenden Forschungs- und Entwicklungsalternative
+- Aufgabe der Kontrolle
+  - Ermittlung & Analyse von Abweichung zwischen Plangrößen (Prognose- und Vorgabegrößen) und Vergleichgrößen
+
+**** Steuerungsaufaben der F+E
+Steuerung
+- als Steuerung werdne geordnete informationsverarbeitende & zielführende Eingriffe (Anpassungsmaßnahmen) in den Realisationsprozess von Forschung & Entwicklung definiert
+  
+Kontrolle
+- Kontrolle ist ein geordneter, informationsverarbeitender Prozess zur Ermittlung & Analyse von Abweichungen zwischen Plangrößen (Prognose- und Vorgabegrößen) und Vergleichsgrößen
+  
+Sicherung
+- Sicherung umfasst alle Maßnahmen zur vorherigen Abwehr bzw. zur nachträglichen Beseitigung von Störungen bzw Fehlern im Prozess der Realisation von Forschung & Entwicklung
+*** Instrumente der strategischen F+E Planung
+- Strategiche Ebene: Technologie-Portfolio
+- Taktische Ebene: Bewertungsverfahren
+- Operative Ebene: Konstruktionsbegleitende Kosten- und Leistungsrechnung
+  
+#+CAPTION: Technologie-Portfolio
+#+attr_latex: :width 250px
+[[./pictures/intechpo.png]] 
+
+#+CAPTION: Ressourcenstärke & Technologie-Portfolio
+#+attr_latex: :width 250px
+[[./pictures/inrespo.png]] 
+
+**** Methoden technologischer Frühaufklärung
+#+CAPTION: Frühaufklärung & Vorhersage
+#+attr_latex: :width 250px
+[[./pictures/invor.png]] 
+
+*** Sicherung des Innovationswissens
+#+CAPTION: Auschließlichkeitsprinzip zur Planung der Sicherung des Innovationswissens
+#+attr_latex: :width 250px
+[[./pictures/inauss.png]] 
+
+#+CAPTION: Rechtlicher Missbrauchsschutz
+#+attr_latex: :width 250px
+[[./pictures/inmiss.png]] 
+
+IV_Innovationsmanagment_3.pdf F 17 Zsmfassung
+** Innovationsprozesse als Managementaufgabe
+- nicht klausurrelevant
