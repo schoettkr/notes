@@ -1,0 +1,157 @@
+* Personalmanagement
+** Personal & Wettbewerbsfähigkeit
+Das Ausgangsproblem dreht sich um die optimale Ergiebigkeit menschlicher Arbeitsleistung (Gutenberg).
+
+Kategorien/Ebenen personalwirtschaftlichen Handelns:
+- Zielebene = Verfügbarkeit & Wirksamkeit von Personal
+- Instrumentenebene = Selektion personalwirtschaftlicher Maßnahmen (Instrumente/Ergebnisse) und ihre Wirkungen (intendiert / nicht intendiert)
+- Erfolgsebene = Management der Humanressourcen und Unternehmenserfolg
+  
+**** Personalwirtschaftliches Handeln
+Geht man davon aus, dass ein bestimmter personalwirtschaftlicher Zweck prinzipiell durch verschiedene Handlungen erreicht werden kann, dass außerdem eine bestimmte Handlung prinzipiell verschiedenen personalwirtschaftlichen Zwecken dienen kann und dass schließlich Handlungen auch 'nicht-bezweckte'(nicht-intendierte) Wirkungen hervorrufen können, so werden /Wahlprobleme/ sichtbar, die sich mit Hilfe von elementaren /Kategorien/ charakterisieren lassen.
+
+Personalwirtschaftl. Probleme entstehen, wenn Unternehmer andere Personen zur Deckung des Arbeitskräftebedarfs in einer Weise in Dienst stellen dass diese bestimmte Dispositionsbefugnisse über ihre Arbeitskraft gegen eine festgelegte Vergütung direkt oder indirekt auf den Unternehmer übertragen.
+
+Prolemkategorien:
+- Herstellung & Sicherung der Verfügbarkeit /über/ Personal (*Disponibilität*)
+  - menschliche Arbeitskraft ist ein knappes "Gut"
+  - menschliche Arbeitskraft wird in versch Qualität nachgefragt & angeboten
+  - der Bedarf des Betriebes an Personal verändert sich quantitativ und/oder strukturell
+  - eine zu einem bestimmten Zeitpunkt gegebene Ausstattung eines Betriebes mit Personal unterliegt im Zeitablauf quantitativen und/oder strukturellen Veränderungen, die nicht durch betriebliche Dispositionen induziert werden
+- Herstellung & Sicherung der Verfügbarkeit /des/ Personal (*Funktionalität*)
+  - Ansprüche an das Verhalten des Personals sind je nach Situation bzgl ihres konkreten Inhalts und ihres relativen Gewichts unterschiedlich
+  - Personal wird idR aufgrund von Selbstdarstellung, Fremdeinschätzung & Verhaltensstichproben ausgewählt, deren Aussageberich beschränkt und deren Aussagekraft häufig gering sind
+  - die Annahme, das sich die Arbeitskräfte mit den Verhaltensansprüchen der Organisation identifizieren, trifft im Regelfall weder für die Verhaltensansprüche noch für alle Angehörigen eines Betriebens in gleicher Weise zu
+  - die Erfüllung von Verhaltensansprüchen muss den Mitarbeitern möglich sein
+    
+**** Instrumentenebende personalwirtschaftlichen Handelns
+#+CAPTION: Instrumentenebene personalwirtschaftlichen Handelns
+#+attr_latex: :width 250px
+[[./pictures/persinstr.png]] 
+
+**** Zielebene personalwirtschaftlichen Handelns
+- Individuelle Schutzreche
+  - Schutz des Arbeitsverhältnisses (zB Kündigungsschutz)
+  - Schutz der Gesundheit (zB Emissionschutz, Arbeitsschutz)
+  - besondere Schutzrechte (zB für gefährdete Mitarbeitergruppen)
+- Arbeitsrechtliche Mitbestimmung
+  - Beteiligung bei sozialen & personellen Entscheidungen
+  - Informations-, Beratungs-, Mitwirkungs- und Mitbestimmungsrechte
+  - Interessenvertretung durch Betriebsrat, Jugendvertretung, Wirtschaftsausschuss oä
+- Unternehmerische Mitbestimmung
+  - Mitwirkungsrechte bei unternehmerischen Entscheidungen
+
+**** Erfolgsebene personalwirtschaftlichen Handelns
+#+CAPTION: Management der Humanressourcen & Unternehmenserfolg
+#+attr_latex: :width 250px
+[[./pictures/perserfolg.png]] 
+**** Elementarkategorien personalwirtsch Handelns (Zusammenfassung)
+#+CAPTION: Instrumentenebene personalwirtschaftlichen Handelns
+#+attr_latex: :width 250px
+[[./pictures/perskateg.png]] 
+
+** Disposition des Personalpotentials
+**** Personalbedarf
+Der /Personalbedarf/ einer Organisation umfasst - nach geforderten Qualifikationsstrukturen - gruppiert die Gesamtheit, die zur Wahrnehmung aller dispositiven & exekutiven Aufgaben in allen Bereichen und auf allen Ebenen einer Organisation benötigt werden.
+
+Primärdeterminanten:
+- periodenbezogenes Leistungsprogramm eines Betriebes
+- Arbeitszeitbedarf pro Leistungseinheit (Arbeitskoeffizient) bzw pro zu bedienender Bestandseinheit (Besetzungskoeffizient)
+- verfügbare Arbeitszeit der Arbeitskraft pro Periode
+  
+Sekundärdeterminanten:
+- Angebots-/Nachfrageverhältnis, Technologie (zB Automatisierungsgrad), Grad der Arbeitsteilung
+- Anforderungsprofile/Stellenbeschreibungen
+  
+Verfügbarkeit des Personals \rightarrow Dispositionsabhängigkeit der Bestimmung & Deckung des Personalbedarfs
+**** Personalrekrutierung und -auswahl
+Anwerbung
+- Zweck = Herstellung von Kontakten zu potentiellen Bewerbern, Personalmarketing (Arbeitgeberimage)
+- Funktionen = Information, Motivation, Vorselektion
+- Methoden = passiv, aktiv (zB Stellenanzerigen, elektr. Jobbörsen)
+
+Auswahl
+- Zweck = Identifikation der Eignung von Bewerbern für eine zu besetzende Stelle/Position, Screening-Strategie
+- Phasen = Vorauswahl, Auswahl
+- Methoden = Eignungstest, Assessment Center, Auswahlgespräch
+
+Einstellung
+- Zweck = Vereinbarungen zum Arbeitsverhältnis und zur Arbeitsleistung
+- Inhalt = Kompetenzabgrenzung, Arbeitsbedingungen, berufliche Entwicklungsperspektiven
+- impliziter Vertrag =  Vereinbarung von Rechten & Pflichten auf der Basis stillschweigender Übereinkünfte
+
+Eingliederung
+- Zweck = Einführung des Mitarbeiters in das Arbeits-/Aufgabenfeld
+- Inhalt = bereichsübergreifende, fachliche, soziale Eingliederung
+  
+Berufsbozgenes Integritätsprofil als Profil/Einschätzung der Eignung. Baumquerschnittdiagramm mit verschiedenen Charaktereigenschaften wie Gelassenheit, Vertrauen, Zuverlässigkeit, Verzicht auf Rechtfertigung etc.
+
+*Einstellungsinterviews*\\
+unstrukturiertes Interview:
+- Annahmen über Menschenkenntnis
+- Unterstützung von Stereotypen
+- Annahmen über ideale Persönlichkeit
+- hohe Wirkung von non-verbalem Verhalten
+ 
+strukturiertes Interview:
+- anforderungsbezogene Gestaltung
+- Interviewverlauf und Fragenabfolge sind strukturiert
+- Verwendung validierter/bewährter Merkmale
+- Information & Entscheidung sind getrennt (Beratungszeit)
+- mehrere unabhängige & kompetente Beurteiler sind beteiligt
+  
+
+#+CAPTION: Multimodales Interview
+#+attr_latex: :width 250px
+[[./pictures/persint.png]] 
+**** Einsatz & Disposition des Personals
+Einsatz von Personal
+- Zweck =  Übertragung von Aufgaben oder Stellen an die vorhandenen/verfügbaren Arbeitskräfte
+- Methode = Zuordnung von Anforderungsprofilen und Fähigkeitsprofilen auf der Basis von Mindestwerten (Cut-Off Methode) oder (gewichteten) Ähnlichkeiten (Profilvergleichsmethode)
+
+Segmentierung des Personals
+- Differenzierung der Verfügbarkeit des Personals nach spezifischen Beschäftigungs-, Arbeits- und Entgeltbedingungen
+- Stammbelegschaft = internes Arbeitsmarktsegment
+- Randbelegschaft = externes Arbeitsmarktsegment (Manövriermasse für quantitative Anpassungen des Personalbestands)
+  
+Personalplanung als Disposition \rightarrow die Aufgabe der Personalplanung ist es, den Personalbedarf, den Personaleinsatz und die Personalaustattung - unter Beachtung der für den Personalsektor geltenden Restriktionen - optimal im Sinne der betrieblichen Ziele aufeinander abzustimmen
+**** Personalentwicklung
+#+CAPTION: Grundmodell der Personalentwicklung
+#+attr_latex: :width 250px
+[[./pictures/persgruent.png]] 
+
+Beeinflussung des Personalverhaltens nicht klausurrelevant!
+
+*Ansprüche als Kriterium der Verhaltensbeeinflussung*:
+
+Beeinflussung des Personalverhaltens
+- Zweck = Durchsetzung von Ansprüchen der Organisation an das Personalverhalten (Verhaltenserwartung)
+- Inhalt = Aufforderung, sich in einer bestimmten Art & Weise zu Verhalten (Anspruchskonformität des Verhaltens)
+  
+Inhaltsklassen organisationaler Ansprüche
+- Funktional = Verhaltenserwartungen, die sich auf die Arbeitsaufgaben und die Arbeitsergebniise beziehen (\rightarrow Qualitätsansprüche, Gestaltungsansprüche)
+- Extrafunktional = Verhaltenserwartungen, die sich insbes auf das Sozialverhalten beziehen (\rightarrow Höflichkeit, Ehrlichkeit, Pünktlichkeit)
+- Situationsabhängigkeit von Verhaltenserwartungen
+
+Maßnahmen zur Verhaltensbeeinflussung
+- Verhaltenslenkung
+- Verhaltensbeurteilung
+- Verhaltensabgeltung
+
+
+*Strukturelle Maßnahmen zur Beeinflussung des Personalverhaltens*
+- strukturelle Maßnahmen = Arbeitsstruktur, Beurteilung, Anreize
+- Entlohnung als Anreiz
+#+CAPTION: Bemessungsgrundlagen & Formen der Entlohnung
+#+attr_latex: :width 250px
+[[./pictures/persentl.png]] 
+
+
+
+*Dispositive Maßnahmen zur Beeinflussung des Personalverhaltens*
+- dispositive Maßnahmen = Beeinflussung durch situationsabhängies Führungsverhalten
+- Führungskonzept, Situation und Führungserfolg
+  - Kontingenzmodell der Führung nach Fiedler
+  - Situative Führungstheorie nach Hersey/Blanchard
+    
+III_Personalmanagement_3.pdf F.13 Zsmfassung
