@@ -1,0 +1,105 @@
+#+OPTIONS: toc:nil
+#+SETUPFILE: ~/.emacs.d/org-html-themes/setup/theme-bigblow.setup
+* Misc
+- [[https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2011/2011/18-2011/AB_182011_2.pdf][Prüfungsordnung]]
+- [[https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2011/2011/18-2011/AB_182011_1.pdf][Studienordnung]]
+- 120 ETCS insgesamt benötigt
+- "Ein Fernstudium ist nicht vorgesehen. Der Studiengang kann bei Berufstätigkeit oder besonderen familiären Verpflichtungen in Teilzeit studiert werden. Im Teilzeitstudium beträgt der durchschnittliche Arbeitsaufwand pro Semester 50 % des Vollzeitstudiums. Die Wochenarbeitszeit der Berufstätigkeit muss mindestens 18 Stunden betragen."
+* Pflichtmodule
+** Basismodule
+- 29 ETCS benötigt
+| Titel                         | Credits |
+|-------------------------------+---------|
+| Algorithmen & Datenstrukturen |      16 |
+| Proseminar Informatik         |       3 |
+| Grundlagen Informatik I       |       5 |
+| Grundlagen Informatik II      |       5 |
+** Andere
+- 50 ETCS benötigt
+| Titel                        | Credits |
+|------------------------------+---------|
+| Forschungsseminar Informatik |       5 |
+| Forschungspraktikum          |      15 |
+| Masterarbeit                 |      30 |
+
+* Wahlmodule
+- 41 ETCS benötigt
+
+| Titel                                      | Credits |
+|--------------------------------------------+---------|
+| Mathe I                                    |       9 |
+| Mathe II                                   |       9 |
+| Rechnerorganisation                        |       5 |
+| Entwurf verteilter Systeme                 |       5 |
+| Rechnernetze                               |       5 |
+| Sicherheit Verteilter Systeme              |       5 |
+| XML-Werkzeuge                              |       5 |
+| Grundlagen der Technischen Informatik      |       8 |
+| Techniken der IT-Sicherheit                |       5 |
+| Industrielle IT-Anwendungen der Informatik |       2 |
+| Datenbanken Grundlagen                     |       5 |
+| Datenbanken und Webtechniken               |       5 |
+| Datenbanken und Objektorientierung         |       5 |
+| Grundlagen der Anwedungsunterstützung      |       5 |
+| Betriebssysteme                            |       5 |
+| Computergraphik I                          |       5 |
+| Grundlagen der Computergeometrie           |       5 |
+| Einführung in praktische Computergraphik   |       5 |
+| Bilderverstehen                            |       5 |
+| Einführung in Künstliche Intelligenz       |       5 |
+| Maschinelles Lernen                        |       5 |
+| Neurokognition I                           |       5 |
+| Neurokognition II                          |       5 |
+| Sprachverstehen                            |       5 |
+| Medienapplikationen                        |       5 |
+| Mediencodierung                            |       5 |
+| Medienergonomie                            |       5 |
+| Mediengestaltung                           |       5 |
+| Medienmanagement                           |       5 |
+| Medienprogrammierung                       |       5 |
+| Medienretrieval                            |       5 |
+| Medientools                                |       3 |
+* Vorläufige Modulplanung
+** Angestrebte Wahlmodule
+| Titel                                | Voraussetzung               | Credits |
+|--------------------------------------+-----------------------------+---------|
+| Rechnernetze                         |                             |       5 |
+| Entwurf Verteilter Systeme           | Rechnernetze                |       5 |
+| Sicherheit Verteilter Systeme        | Rechnernetze                |       5 |
+| Betriebssysteme                      |                             |       5 |
+| Datenbanken Grundlagen               | DS & Algos; Betriebssysteme |       5 |
+| Datenbanken und Webtechniken         |                             |       5 |
+| Datenbanken und Objektorientierung   |                             |       5 |
+| Einführung in Künstliche Intelligenz | Mathematikkenntnisse        |       5 |
+| Maschinelles Lernen                  | Einführung in die KI        |       5 |
+|--------------------------------------+-----------------------------+---------|
+| Summe                                |                             |      45 |
+** Studienablaufplan
+*** Reeller Plan
+Reeler Plan:
+|    | WiSe 18      | SoSe 19                           | WiSe 19                       | SoSe 20 |
+|----+--------------+-----------------------------------+-------------------------------+---------|
+| BM | Algorithmen  | Datenstrukturen                   |                               |         |
+| BM | Informatik I | Informatik II                     |                               |         |
+| BM |              | Proseminar Informatik             |                               |         |
+|    |              |                                   |                               |         |
+| WM | Mathe I      | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
+| WM |              | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
+|    |              | Maschinelles Lernen               |                               |         |
+|    |              | Betriebssysteme                   |                               |         |
+|    |              | Datenbanken Grundlagen            |                               |         |
+|    |              | Datenbanken & Webtechniken        |                               |         |
+|    |              | Datenbanken & Objektorientierung  |                               |         |
+
+*** Optimaler Plan
+Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
+|    | WiSe 18                | SoSe 19                           | WiSe 19                       | SoSe 20 |
+|----+------------------------+-----------------------------------+-------------------------------+---------|
+| BM | Algorithmen            | Datenstrukturen                   |                               |         |
+| BM | Informatik I           | Informatik II                     |                               |         |
+| BM |                        | Proseminar Informatik             |                               |         |
+|    |                        |                                   |                               |         |
+| WM | Betriebssysteme        | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
+| WM | Datenbanken Grundlagen | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
+|    |                        | Datenbanken & Webtechniken        | Maschinelles Lernen           |         |
+|    |                        | Datenbanken & Objektorientierung  |                               |         |
