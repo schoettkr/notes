@@ -75,8 +75,20 @@
 |--------------------------------------+-----------------------------+---------|
 | Summe                                |                             |      45 |
 ** Studienablaufplan
+*** Optimaler Plan
+Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
+|    | WiSe 18                | SoSe 19                           | WiSe 19                       | SoSe 20 |
+|----+------------------------+-----------------------------------+-------------------------------+---------|
+| BM | Algorithmen            | Datenstrukturen                   |                               |         |
+| BM | Informatik I           | Informatik II                     |                               |         |
+| BM |                        | Proseminar Informatik             |                               |         |
+|    |                        |                                   |                               |         |
+| WM | Betriebssysteme        | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
+| WM | Datenbanken Grundlagen | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
+|    |                        | Datenbanken & Webtechniken        | Maschinelles Lernen           |         |
+|    |                        | Datenbanken & Objektorientierung  |                               |         |
 *** Reeller Plan
-Reeler Plan:
+Der Plan wenn man den optimalen Plan ohne Anpassungen umsetzen versuchen würde
 |    | WiSe 18      | SoSe 19                           | WiSe 19                       | SoSe 20 |
 |----+--------------+-----------------------------------+-------------------------------+---------|
 | BM | Algorithmen  | Datenstrukturen                   |                               |         |
@@ -91,27 +103,17 @@ Reeler Plan:
 |    |              | Datenbanken & Webtechniken        |                               |         |
 |    |              | Datenbanken & Objektorientierung  |                               |         |
 
-*** Optimaler Plan
-Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
-|    | WiSe 18                | SoSe 19                           | WiSe 19                       | SoSe 20 |
-|----+------------------------+-----------------------------------+-------------------------------+---------|
-| BM | Algorithmen            | Datenstrukturen                   |                               |         |
-| BM | Informatik I           | Informatik II                     |                               |         |
-| BM |                        | Proseminar Informatik             |                               |         |
-|    |                        |                                   |                               |         |
-| WM | Betriebssysteme        | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
-| WM | Datenbanken Grundlagen | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
-|    |                        | Datenbanken & Webtechniken        | Maschinelles Lernen           |         |
-|    |                        | Datenbanken & Objektorientierung  |                               |         |
 *** Solution Plan
-Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
-|    | WiSe 18                    | SoSe 19                           | WiSe 19                                | SoSe 20 |
-|----+----------------------------+-----------------------------------+----------------------------------------+---------|
-| BM | Algorithmen                | Datenstrukturen                   | Forschungsseminar                      |         |
-| BM | Informatik I               | Informatik II                     | Forschungspraktikum                    |         |
-| BM |                            | Proseminar Informatik             |                                        |         |
-|    |                            |                                   |                                        |         |
-| WM | Entwurf Verteilter Systeme | Rechnernetze                      |                                        |         |
-| WM |                            | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme[REPLACE] |         |
-| WM | Datenbanken Grundlagen     | Datenbanken & Webtechniken        | Datenbanken & Objektorientierung       |         |
-|    |                            | Betriebssysteme                   | Maschinelles Lernen[REPLACE]            |         |
+Der finale Plan der verfolgt wird
+|    | WiSe 18                    | SoSe 19                                  | WiSe 19                                | SoSe 20 |
+|----+----------------------------+------------------------------------------+----------------------------------------+---------|
+| BM | Algorithmen                | Datenstrukturen                          | Forschungsseminar                      |         |
+| BM | Informatik I               | Informatik II                            | Forschungspraktikum                    |         |
+| BM |                            | Proseminar Informatik                    |                                        |         |
+|    |                            |                                          |                                        |         |
+| WM | Entwurf Verteilter Systeme | Rechnernetze                             |                                        |         |
+| WM |                            | Einführung Künstliche Intelligenz [Opt1] | Sicherheit Verteilter Systeme[REPLACE] |         |
+| WM | Datenbanken Grundlagen     | Datenbanken & Webtechniken               | Datenbanken & Objektorientierung       |         |
+|    |                            | Betriebssysteme                          | Maschinelles Lernen[Opt1]              |         |
+|    | NeurokogI[Opt2]            | NeurokogII[Opt2]                         |                                        |         |
+* Stundenpläne
