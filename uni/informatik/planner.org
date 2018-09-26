@@ -103,3 +103,15 @@ Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
 | WM | Datenbanken Grundlagen | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
 |    |                        | Datenbanken & Webtechniken        | Maschinelles Lernen           |         |
 |    |                        | Datenbanken & Objektorientierung  |                               |         |
+*** Solution Plan
+Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
+|    | WiSe 18                    | SoSe 19                           | WiSe 19                                | SoSe 20 |
+|----+----------------------------+-----------------------------------+----------------------------------------+---------|
+| BM | Algorithmen                | Datenstrukturen                   | Forschungsseminar                      |         |
+| BM | Informatik I               | Informatik II                     | Forschungspraktikum                    |         |
+| BM |                            | Proseminar Informatik             |                                        |         |
+|    |                            |                                   |                                        |         |
+| WM | Entwurf Verteilter Systeme | Rechnernetze                      |                                        |         |
+| WM |                            | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme[REPLACE] |         |
+| WM | Datenbanken Grundlagen     | Datenbanken & Webtechniken        | Datenbanken & Objektorientierung       |         |
+|    |                            | Betriebssysteme                   | Maschinelles Lernen[REPLACE]            |         |
