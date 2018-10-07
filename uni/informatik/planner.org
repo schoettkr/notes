@@ -3,6 +3,7 @@
 * Misc
 - [[https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2011/2011/18-2011/AB_182011_2.pdf][Prüfungsordnung]]
 - [[https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2011/2011/18-2011/AB_182011_1.pdf][Studienordnung]]
+- [[https://www.tu-chemnitz.de/studentenservice/zsb/start/start2018.pdf][Infos fuer Studienanfänger]]
 - 120 ETCS insgesamt benötigt
 - "Ein Fernstudium ist nicht vorgesehen. Der Studiengang kann bei Berufstätigkeit oder besonderen familiären Verpflichtungen in Teilzeit studiert werden. Im Teilzeitstudium beträgt der durchschnittliche Arbeitsaufwand pro Semester 50 % des Vollzeitstudiums. Die Wochenarbeitszeit der Berufstätigkeit muss mindestens 18 Stunden betragen."
 * Pflichtmodule
@@ -59,61 +60,39 @@
 | Medienprogrammierung                       |       5 |
 | Medienretrieval                            |       5 |
 | Medientools                                |       3 |
-* Vorläufige Modulplanung
-** Angestrebte Wahlmodule
-| Titel                                | Voraussetzung               | Credits |
-|--------------------------------------+-----------------------------+---------|
-| Rechnernetze                         |                             |       5 |
-| Entwurf Verteilter Systeme           | Rechnernetze                |       5 |
-| Sicherheit Verteilter Systeme        | Rechnernetze                |       5 |
-| Betriebssysteme                      |                             |       5 |
-| Datenbanken Grundlagen               | DS & Algos; Betriebssysteme |       5 |
-| Datenbanken und Webtechniken         |                             |       5 |
-| Datenbanken und Objektorientierung   |                             |       5 |
-| Einführung in Künstliche Intelligenz | Mathematikkenntnisse        |       5 |
-| Maschinelles Lernen                  | Einführung in die KI        |       5 |
-|--------------------------------------+-----------------------------+---------|
-| Summe                                |                             |      45 |
+* Modulplanung
 ** Studienablaufplan
-*** Optimaler Plan
-Optimaler Plan (aufgrund von Dependencies und Angeboten nicht möglich):
-|    | WiSe 18                | SoSe 19                           | WiSe 19                       | SoSe 20 |
-|----+------------------------+-----------------------------------+-------------------------------+---------|
-| BM | Algorithmen            | Datenstrukturen                   |                               |         |
-| BM | Informatik I           | Informatik II                     |                               |         |
-| BM |                        | Proseminar Informatik             |                               |         |
-|    |                        |                                   |                               |         |
-| WM | Betriebssysteme        | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
-| WM | Datenbanken Grundlagen | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
-|    |                        | Datenbanken & Webtechniken        | Maschinelles Lernen           |         |
-|    |                        | Datenbanken & Objektorientierung  |                               |         |
-*** Reeller Plan
-Der Plan wenn man den optimalen Plan ohne Anpassungen umsetzen versuchen würde
-|    | WiSe 18      | SoSe 19                           | WiSe 19                       | SoSe 20 |
-|----+--------------+-----------------------------------+-------------------------------+---------|
-| BM | Algorithmen  | Datenstrukturen                   |                               |         |
-| BM | Informatik I | Informatik II                     |                               |         |
-| BM |              | Proseminar Informatik             |                               |         |
-|    |              |                                   |                               |         |
-| WM | Mathe I      | Rechnernetze                      | Entwurf Verteilter Systeme    |         |
-| WM |              | Einführung Künstliche Intelligenz | Sicherheit Verteilter Systeme |         |
-|    |              | Maschinelles Lernen               |                               |         |
-|    |              | Betriebssysteme                   |                               |         |
-|    |              | Datenbanken Grundlagen            |                               |         |
-|    |              | Datenbanken & Webtechniken        |                               |         |
-|    |              | Datenbanken & Objektorientierung  |                               |         |
-
 *** Solution Plan
 Der finale Plan der verfolgt wird
-|    | WiSe 18                    | SoSe 19                                  | WiSe 19                                | SoSe 20 |
-|----+----------------------------+------------------------------------------+----------------------------------------+---------|
-| BM | Algorithmen                | Datenstrukturen                          | Forschungsseminar                      |         |
-| BM | Informatik I               | Informatik II                            | Forschungspraktikum                    |         |
-| BM |                            | Proseminar Informatik                    |                                        |         |
-|    |                            |                                          |                                        |         |
-| WM | Entwurf Verteilter Systeme | Rechnernetze                             |                                        |         |
-| WM |                            | Einführung Künstliche Intelligenz [Opt1] | Sicherheit Verteilter Systeme[REPLACE] |         |
-| WM | Datenbanken Grundlagen     | Datenbanken & Webtechniken               | Datenbanken & Objektorientierung       |         |
-|    |                            | Betriebssysteme                          | Maschinelles Lernen[Opt1]              |         |
-|    | NeurokogI[Opt2]            | NeurokogII[Opt2]                         |                                        |         |
+|    | WiSe 18                                    | SoSe 19                                  | WiSe 19                          | SoSe 20      |
+|----+--------------------------------------------+------------------------------------------+----------------------------------+--------------|
+| BM | Algorithmen                                | Datenstrukturen                          | Forschungsseminar                | Masterarbeit |
+| BM | Informatik I                               | Informatik II                            | Forschungspraktikum              |              |
+| BM |                                            | Proseminar Informatik                    |                                  |              |
+|    |                                            |                                          |                                  |              |
+| WM | Entwurf Verteilter Systeme                 | Rechnernetze                             |                                  |              |
+| WM |                                            | Einführung Künstliche Intelligenz [Opt1] | Maschinelles Lernen[Opt1]        |              |
+| WM | Datenbanken Grundlagen                     | Datenbanken & Webtechniken               | Datenbanken & Objektorientierung |              |
+| WM | Industrielle IT-Anwendungen der Informatik | Betriebssysteme                          |                                  |              |
+
 * Stundenpläne
+** WiSe 18/19
+| Time          | Mo               | Di                             | Mi                        | Do                                    | Fr                  |
+|---------------+------------------+--------------------------------+---------------------------+---------------------------------------+---------------------|
+| 07:30 - 09:00 |                  |                                |                           | Informatik I [VL]                     |                     |
+| 09:15 - 10:45 |                  |                                |                           | Informatik I [Übung/Prakt] im Wechsel |                     |
+| 11:30 - 13:00 | Algo & Prog [VL] |                                | Datenbanken [VL]          |                                       | Algo & Prog [VL]    |
+| 13:45 - 15:15 |                  | Verteile Systeme [VL ab 13:30] | Datenbanken [Übung]       |                                       | Algo & Prog [Übung] |
+| 15:30 - 17:00 |                  |                                | Algo & Prog [Tut]         | IT-Anwendungen [VL]                   |                     |
+| 17:15 - 18:45 |                  | Algo & Prog [Tut]              | Verteilte Systeme [Übung] |                                       |                     |
+
+# | Veranstaltung | Zeitraum VL                                 | Zeitraum Übung                                 | Zeitraum Tut                                   | Zeitraum Andere                                |
+# |---------------+---------------------------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------|
+# | Algorithmen   | Montag[11:30-13:00] \\ Freitag[11:30-13:00] | Donnerstag[15:30-17:00]                        | Mittwoch[15:30-17:00] \\ Dienstag[17:15-18:45] |                                                |
+# | Informatik I  | Freitag[07:30-09:00]                        | Dienstag[13:45-15:15] \\ Mittwoch[11:30-13:00] |                                                | Dienstag[13:45-15:15] \\ Mittwoch[11:30-13:00] |
+# | Verteilte Sys | Dienstag[13:30-15:00]                       | Freitag[07:30-09:00] \\ Mittwoch[17:15-18:45]  |                                                |                                                |
+# | Datenbanken   | Mittwoch[11:30-13:00]                       | Mittwoch[13:45-15:15]                          |                                                |                                                |
+# | Industrielle  | Donnerstag[15:30-17:00]                     |                                                |                                                |                                                |
+
+
+# Info 1 Prakt Andere: 
