@@ -76,15 +76,25 @@ Der finale Plan der verfolgt wird
 | WM | Industrielle IT-Anwendungen der Informatik | Betriebssysteme                          |                                  |              |
 
 * Stundenpläne
-** WiSe 18/19
-| Time          | Mo               | Di                             | Mi                        | Do                                    | Fr                  |
-|---------------+------------------+--------------------------------+---------------------------+---------------------------------------+---------------------|
-| 07:30 - 09:00 |                  |                                |                           | Informatik I [VL]                     |                     |
-| 09:15 - 10:45 |                  |                                |                           | Informatik I [Übung/Prakt] im Wechsel |                     |
-| 11:30 - 13:00 | Algo & Prog [VL] |                                | Datenbanken [VL]          |                                       | Algo & Prog [VL]    |
-| 13:45 - 15:15 |                  | Verteile Systeme [VL ab 13:30] | Datenbanken [Übung]       |                                       | Algo & Prog [Übung] |
-| 15:30 - 17:00 |                  |                                | Algo & Prog [Tut]         | IT-Anwendungen [VL]                   |                     |
-| 17:15 - 18:45 |                  | Algo & Prog [Tut]              | Verteilte Systeme [Übung] |                                       |                     |
+** WiSe 18/19 (required)
+| Time          | Mo                  | Di                              | Mi                        | Do                  | Fr                |
+|---------------+---------------------+---------------------------------+---------------------------+---------------------+-------------------|
+| 07:30 - 09:00 |                     |                                 |                           |                     | Informatik I [VL] |
+| 09:15 - 10:45 | Datenbanken [Übung] |                                 |                           |                     |                   |
+| 11:30 - 13:00 | Algo & Prog [VL]    |                                 | Informatik I[Übung/Prakt] |                     | Algo & Prog [VL]  |
+| 13:45 - 15:15 |                     | Verteilte Systeme [VL ab 13:30] |                           |                     |                   |
+| 15:30 - 17:00 |                     |                                 |                           | Algo & Prog [Übung] |                   |
+| 17:15 - 18:45 |                     |                                 | Verteilte Systeme [Übung] |                     |                   |
+
+** WiSe 18/19 ("alle" Veranstaltungen)
+| Time          | Mo               | Di                               | Mi                                           | Do                                      | Fr                  |
+|---------------+------------------+----------------------------------+----------------------------------------------+-----------------------------------------+---------------------|
+| 07:30 - 09:00 |                  |                                  |                                              |                                         | Informatik I [VL]   |
+| 09:15 - 10:45 |                  |                                  |                                              |                                         |                     |
+| 11:30 - 13:00 | Algo & Prog [VL] |                                  | Informatik I[Übung/Prakt](+Datenbanken [VL]) |                                         | Algo & Prog [VL]    |
+| 13:45 - 15:15 |                  | Verteile Systeme [VL ab 13:30]   |                                              |                                         | Algo & Prog [Übung] |
+| 15:30 - 17:00 |                  |                                  | (Algo & Prog [Q&A])                          | Algo & Prog [Übung]/IT-Anwendungen [VL] |                     |
+| 17:15 - 18:45 |                  | (Algo & Prog [begleitetes Prog]) | Verteilte Systeme [Übung]                    |                                         |                     |
 
 # | Veranstaltung | Zeitraum VL                                 | Zeitraum Übung                                 | Zeitraum Tut                                   | Zeitraum Andere                                |
 # |---------------+---------------------------------------------+------------------------------------------------+------------------------------------------------+------------------------------------------------|
