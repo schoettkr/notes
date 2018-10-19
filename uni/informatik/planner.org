@@ -76,6 +76,20 @@ Der finale Plan der verfolgt wird
 | WM | Industrielle IT-Anwendungen der Informatik | Betriebssysteme                          |                                  |              |
 
 * Stundenpläne
+** The "holy" child aka le grande finalé
+| Time          | Mo                  | Di                             | Mi                        | Do | Fr                         |
+|---------------+---------------------+--------------------------------+---------------------------+----+----------------------------|
+| 07:30 - 09:00 |                     |                                |                           |    | Informatik I [VL]          |
+| 09:15 - 10:45 | Datenbanken [Übung] |                                |                           |    | Inf1[TUT] (ab 9:30 B BT)^2 |
+| 11:30 - 13:00 | Algo & Prog [VL]    | Algo & Prog [Übung]^1          | Datenbanken [VL]          |    | Algo & Prog [VL]           |
+| 13:45 - 15:15 |                     | Verteile Systeme [VL ab 13:30] |                           |    |                            |
+| 15:30 - 17:00 |                     |                                |                           |    |                            |
+| 17:15 - 18:45 |                     |                                | Verteilte Systeme [Übung] |    |                            |
+
+.^1 Bis dato liegt eine Eintragung in die hier vermerkte Übungsgruppe von seiten der Klienten per OPAL nicht vor, da stattdessen eine Eintragung in die Übungsgruppe am Freitag vorgenommen worden ist. Ein Wechsel per OPAL ist derzeit nicht möglich da die Kapazitäten beider Übungsgruppen ausgeschöpft zu sein scheint. Dennoch wird der Klient L.S am Dienstag die Übung aufsuchen und versuchen an ihr teilzunehmen.
+
+.^2 Hierbei handelt es sich um die Übung/Praktikum "Grundlagen der Informatik I" und nicht um "Informatik I" wie vorgesehen. Der Dozent beider VORLESUNGEN sagt dass es zum Ende des Semesters hin zu unterschieden in den jeweiligen Veranstaltungen kommt. Für M_IGS Studenten ist eigentlich "Informatik I" vorgesehen, da die Übungen dort jedoch zeitlich schlecht liegen wird das "Grundlagen der Informatik I" am Freitag besucht. Es gab Spekulationen, dass der Tutor am Freitag (Herr Kreutzer) möglicherweise inkompetent sei, sollte sich dies bestätigen findet Freitags die selbe Übung zur selben Zeit von Frau Jachmann statt und könnte als Alternative dienen. Darüber hinaus sollte herausgefunden werden wie sehr die Veranstaltungen "Informatik I" und "Grundlagen der Informatik I" differieren.
+
 ** WiSe 18/19 (required)
 | Time          | Mo                  | Di                              | Mi                        | Do                  | Fr                |
 |---------------+---------------------+---------------------------------+---------------------------+---------------------+-------------------|
