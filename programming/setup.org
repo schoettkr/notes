@@ -1,0 +1,126 @@
+* Setting up my machine
+1. Use something like anarchy linux (arch installer) to get up running quickly. The steps I've written down and that always worked as well as what is in the arch wiki didn't work the last time I tried on my laptop that's why I resorted to an installer. Usually I prefer to do everything myself but I didn't succeed and had no time left so I went with anarchy-linux as an installer, that is pretty vanilla anyway. They have different options, I went with the one for 'advanced users' which gave me the most customizability (basically everything I cared for anyway was configurable through this).
+
+** Internet connection
+It is important to have an working internet connection. This is easily achieved by opening an Wi-Fi hotspot from phone (Tethering) and connecting via =wpa_supplicant -B -i {interfaceName} -c <(wpa_passphrase '{SSID}' {passphrase})=. The interface can be recieved via =ifconfig= or =ip link=. Full example command: =wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase 'Y6 Max' a1b2d3)=. However using my phone's wifi hotspot was/is incredibly slow so that wasnt/isnt really practical. It is enough to use =curl= for a small file, as needed in the following section!
+*** Eduroam
+Because I don't have my own internet access and have to rely on the university's internet access via eduroam - things of course have to be more complicated. Quickest solution that I found was uploading an =.tar= archive that contains the targeted =wpa_supplicant.conf= (without the passphrase/identity ofc) and the required certificate (e.g =ca.pem=) to transfer.sh (awesome service!) from another, already setup machine.
+
+On the target device now boot the iso via usb and =curl -O https://transfer.sh/xyz/abc.tar=, extract the archive via =tar -xf abc.tar= and edit the =wpa_supplicant.conf= with e.g nano to include the passphrase/identity as well as the path to the certificate.
+
+Then run =wpa_supplicant -i {interfaceName} -c {path/to/wpa_supplicant.conf}=, in my case that was =wpa_supplicant -i wlp3s0 -c /root/eduroam-config/wpa_supplicant.conf=. If everything goes well the connection will now be established. In my case after =CTRL-EVENT-CONNECTED= showed up I knew it worked, however I didn't get back to the prompt and it stayed as is. I thought the best idea is to =ctrl-z=, but as it turns out that suspends the process and the connection will be gone. I thought that this puts the process in background :D. It would probably have been possible to detach from the process via =&= but I didnt test that because I ended up just running =wpa_supplicant= on the 1st virtual console and switching to another virtual console (tty2) via =Ctrl-Alt-F2=. Okay now we're set (=ping google.com= to verify)!
+
+Another problem that occured was fixed by searching for the pid of =wpa_supplicant= (was running from teathering with phone )with =top= and killing it before runnig wpa_supplicant withthe configuration file. If that doesnt help to kill a connection thats already in place, set the interface down and up with =ip link set wlp3s0 down=. If already on the installed system use =sudo=!
+
+Alternatively use =nmcli device wifi connect <SSID> password <passphrase>= (or =wifi-menu=) when the system is installed because Internet again is required to first obtain dotfiles and then packages.
+
+With =nm-applet= connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click =connect to hidden wifi= and enter the ssid as well the rest manually.
+
+
+** Window manager
+The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.
+
+
+
+** Dotfiles
+Now I'd need my dotfiles. But the most important thing first =sudo pacman -S git=. 
+#+BEGIN_SRC  bash
+git clone https://github.com/schoettkr/dotfiles.git ~/dotfiles # might want to checkout a specific branch!
+sudo pacman -S stow
+
+cd dotfiles # you need to be in the dotfiles directory
+
+
+stow -v -t ~/.config config # with '-t' the target dir can be set explicitly
+
+mkdir ~/.fonts
+stow -v -t ~/.fonts fonts
+
+stow -v git
+
+stow -v scripts
+
+stow -v X
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh # if not already installed
+stow -v zsh
+#+END_SRC
+
+
+** Package manager
+Setup home folder structure first or atleast have =~/arch/pkgs/= in place to then
+#+BEGIN_SRC bash
+# Also check sometimes that "yay" is still developed and the most common/best package manger :)
+git clone https://aur.archlinux.org/yay.git ~/arch/pkgs 
+cd arch/pkgs/yay
+makepkg -si
+#+END_SRC
+
+
+** Packages
+*** Essential packages
+#+BEGIN_SRC bash
+yay -S polybar termite feh google-chrome redshift zsh-autosuggestions neovim rofi
+#+END_SRC
+*** Setup (neo)vim
+However that should be done via current line in my config, but nevertheless:
+#+BEGIN_SRC bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#+END_SRC
+Then open nvim and run =:PlugInstall:=
+
+
+** Homefolder structure
+Create the following folder structure in the home directory:
+#+BEGIN_SRC 
+~/arch
+~/dls
+~/dev
+~/library
+
+~/library/books
+
+~/library/docs
+
+~/library/music
+
+~/library/images
+~/library/images/wallpaper
+~/library/images/personal
+
+~/library/videos
+~/library/videos/personal
+~/library/videos/courses
+
+~/misc
+
+~/temp
+;; ~/docs/coding
+;; ~/docs/life
+#+END_SRC
+
+To get rid of the folders that are create by default edit (or via dotfiles) =~/.config/user-dirs.dirs= to the wanted structure and then remove them.
+Then run =xdg-user-dirs-update=. (PS do not /remove/ =xdg_desktop_dir= <- read this on the internetz but check what really happens!).
+
+
+** Tips & Tricks
+*** Use more cores for compiling packages (mkkpkg)
+In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
+
+*** Sort/update pacman mirrors
+*** Maintenance
+*** Primer on zshell files
+Since =.zshenv= is always sourced, it often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration.
+
+=.zshrc= is for interactive shell configuration. You set options for the interactive shell there with the setopt and unsetopt commands. You can also load shell modules, set your history options, change your prompt, set up zle and completion, et cetera. You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS).
+
+=.zlogin= is sourced on the start of a login shell. This file is often used to start X using startx. Some systems start X on boot, so this file is not always very useful.
+
+=.zprofile= is basically the same as .zlogin except that it's sourced directly before .zshrc is sourced instead of directly after it. According to the zsh documentation, ".zprofile is meant as an alternative to `.zlogin' for ksh fans; the two are not intended to be used together, although this could certainly be done if desired."
+
+=.zlogout= is sometimes used to clear and reset the terminal.
+*** Ingoring aliases
+To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
+*** Updating and upgrading
+*** Configure touchpad
