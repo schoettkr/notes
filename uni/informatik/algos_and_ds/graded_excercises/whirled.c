@@ -20,23 +20,37 @@ int main(int argc, const char **argv) {
 }
 
 char shiftLetter(char);
-const char* iterateChars(const char*);
+const char* iterateChars(const char*, int direction, const char* originalStartP);
 
 const char *whirled(const char * const str)
 {
-  iterateChars(str);
+  iterateChars(str, 1, str);
 
   return str;
 }
 
-const char* iterateChars(const char* str) {
-  if (*str == 0) {
-    printf("\nEncountered delimiter\n");
+// direction = 1 forward
+// direction = -1 backward
+const char* iterateChars(const char* str, int direction, const char* originalStartP) {
+  if (direction == 1 && *str == 0) {
+    /* printf("\nEncountered delimiter\n"); */
+    // reached end of charr
+    return iterateChars(--str, -1, originalStartP);
+  } else if (direction == -1 && str == originalStartP) {
+    /* printf("\nReached start at %d\n", *originalStartP); */
+    printf("%c", shiftLetter(*str));
     return str;
   }
 
-  printf("%c", shiftLetter(*str));
-  return iterateChars(++str);
+  if (direction == 1) {
+    /* printf("%c", shiftLetter(*str)); */
+    return iterateChars(++str, 1, originalStartP);
+  } else if (direction == -1) {
+    printf("%c", shiftLetter(*str));
+    return iterateChars(--str, -1, originalStartP);
+  }
+
+  return str;
 }
 
 char shiftLetter(char letter) {
