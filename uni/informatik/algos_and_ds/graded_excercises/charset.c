@@ -84,35 +84,45 @@ char* charset_tos(const charset_t* s) {
   // Allocate size memory for string
   char* string = (char*) malloc(size);
 
-  // Todo bits in s to ascii codes 0 ->65 1->66 ..
-  /// 00001111
-  ///     dcba
-  /// step 1: vllt immer mit & 0001 dann 0010 etc verbinden und die char zahl + 65 resp 97
-  /// step 2: iwie checken ob der selbe buchstabe in gross/klein version
-  /* printf("%d\n", (*s).bits[0]); */
-
   // Works for uppercase letters
   for (int b = 0, j = 0; b < 4; ++b) {
     for (int i = 0, flag = 1; i < 8; flag <<= 1, ++i) {
       if (b == 3 && i == 2) break; // iterated through all possible uppercase letters
 
       char letter = (s->bits[b] & flag);
+      /* printf("letter %d\n", letter); */
       letter = letter ? i + 65 + b*8 : 0;
 
-      if (!letter) continue; // bit for letter not set
+      /* if (!letter) continue; // bit for letter not set */
 
-      string[j] = letter;
 
-      // check for lower case match and set
-      if (s->bits[b+3] & (flag<<2)) {
-        /* printf("%d\n", flag+3); */
-        /* printf("%d\n", s->bits[b+3]); */
-        printf("lowercase %c is also set\n", letter);
-        string[j+1] = letter + 32;
+      if (letter) { // set uppercase letter
+        string[j] = letter;
         j++;
       }
-      j++;
 
+      // works for 1st lower case bitarray
+      if (b == 0) {
+        char bit = s->bits[b+3] & (1 << (i+1));
+        if (bit) {
+          char pos = -1;
+          while (bit > 1 || bit < -1) {
+            bit /= 2;
+            pos++;
+          }
+          char ascii = pos+96;
+          /* printf("char: %c\n", ascii); */
+        }
+      } else {
+        // Todo handle the other lower case bit arrays
+        char bit = s->bits[b+3] & (1 << i);
+        /*   char rel = chl >> i; */
+        if (bit) {
+          // Todo
+          /* char ascii = bit + 97 + b * 5; */
+          /* printf("ascii: %d\n", ascii); */
+        }
+      }
     }
   }
   
@@ -126,7 +136,7 @@ int main() {
   /* charset_t* pama = charset_new("ABDIJAALMNOPQUXZ"); */
   /* charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz"); */
   /* charset_t* pama = charset_new("ACFFZxXYZZbcba"); */
-  charset_t* pama = charset_new("AaZz");
+  charset_t* pama = charset_new("ghx");
 
   char* st = charset_tos(pama);
   printf("%s\n", st);
