@@ -84,24 +84,19 @@ char* charset_tos(const charset_t* s) {
   // Allocate size memory for string
   char* string = (char*) malloc(size);
 
-  // Works for uppercase letters
   for (int b = 0, j = 0; b < 4; ++b) {
     for (int i = 0, flag = 1; i < 8; flag <<= 1, ++i) {
-      if (b == 3 && i == 2) break; // iterated through all possible uppercase letters
+      if (b == 3 && i > 3) break; // iterated through all possible uppercase letters
 
       char letter = (s->bits[b] & flag);
-      /* printf("letter %d\n", letter); */
       letter = letter ? i + 65 + b*8 : 0;
 
-      /* if (!letter) continue; // bit for letter not set */
-
-
-      if (letter) { // set uppercase letter
+      if (letter >= 65 && letter <= 90) { // set uppercase letter
+        printf("%c\n", letter);
         string[j] = letter;
         j++;
       }
 
-      // works for 1st lower case bitarray
       if (b == 0) {
         char bit = s->bits[b+3] & (1 << (i+1));
         if (bit) {
@@ -110,17 +105,20 @@ char* charset_tos(const charset_t* s) {
             bit /= 2;
             pos++;
           }
+          if (!pos) continue;
           char ascii = pos+96;
-          /* printf("char: %c\n", ascii); */
+          printf("%c\n", ascii);
         }
       } else {
-        // Todo handle the other lower case bit arrays
         char bit = s->bits[b+3] & (1 << i);
-        /*   char rel = chl >> i; */
         if (bit) {
-          // Todo
-          /* char ascii = bit + 97 + b * 5; */
-          /* printf("ascii: %d\n", ascii); */
+          char pos = 0;
+          while (bit > 1 || bit < -1) {
+            bit /= 2;
+            pos++;
+          }
+          char ascii = 98 + 5 + (b-1) * 8 + pos;
+          printf("%c\n", ascii);
         }
       }
     }
@@ -132,34 +130,13 @@ char* charset_tos(const charset_t* s) {
 }
 
 int main() {
-  // Test Aufgb 3
-  /* charset_t* pama = charset_new("ABDIJAALMNOPQUXZ"); */
-  /* charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz"); */
-  /* charset_t* pama = charset_new("ACFFZxXYZZbcba"); */
-  charset_t* pama = charset_new("ghx");
+  charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz");
 
   char* st = charset_tos(pama);
   printf("%s\n", st);
 
-
   free(pama);
   return 0;
-
-
-  // Test Aufg 1
-  /* charset_t* pama = charset_new("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); */
-  /* printf("%d\n", pama->bits[0]); */
-  /* printf("%d\n", pama->bits[1]); */
-  /* printf("%d\n", pama->bits[2]); */
-  /* printf("%d\n", pama->bits[5]); */
-
-  // Test Aufg 2
-  /* charset_t* pama = charset_new("ABCDE"); */
-  /* charset_t* mama = charset_new("ABCD"); */
-  /* printf("%d\n", pama->bits[0]); */
-  /* printf("%d\n", charset_op(pama, mama, CS_SYMDIFF)); */
-  /* printf("%d\n", pama->bits[0]); */
-
 }
 
 // Helper function to copy charset
