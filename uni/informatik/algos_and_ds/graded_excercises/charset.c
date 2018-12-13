@@ -31,8 +31,9 @@ charset_t* charset_new (const char* elements) {
       continue;
     }
 
-    int shift = ch <= 90 ? 65 : (97-26);
-    int bitPosition = ch - shift; // is the position in sequential memory layout
+    int shift = ch <= 90 ? 65 : 97;
+    int bitPosition = (ch - shift)*2; // is the position in sequential memory layout
+    if (shift == 97) ++bitPosition; // lowercase letters after uppercase
 
     unsigned char mask = 1 << (bitPosition % 8); // bit to set (mod by 8 -> individual char arrays)
     int byteIndex = bitPosition / 8;
@@ -84,58 +85,32 @@ char* charset_tos(const charset_t* s) {
   // Allocate size memory for string
   char* string = (char*) malloc(size);
 
-  for (int b = 0, j = 0; b < 4; ++b) {
-    for (int i = 0, flag = 1; i < 8; flag <<= 1, ++i) {
-      if (b == 3 && i > 3) break; // iterated through all possible uppercase letters
-
+  for (int b = 0, j = 0; b < 7; ++b) {
+    for (int i = 0, flag = 1; i < 8; ++i, flag <<= 1) {
       char letter = (s->bits[b] & flag);
-      letter = letter ? i + 65 + b*8 : 0;
-
-      if (letter >= 65 && letter <= 90) { // set uppercase letter
-        printf("%c\n", letter);
-        string[j] = letter;
-        j++;
-      }
-
-      if (b == 0) {
-        char bit = s->bits[b+3] & (1 << (i+1));
-        if (bit) {
-          char pos = -1;
-          while (bit > 1 || bit < -1) {
-            bit /= 2;
-            pos++;
-          }
-          if (!pos) continue;
-          char ascii = pos+96;
-          printf("%c\n", ascii);
-        }
-      } else {
-        char bit = s->bits[b+3] & (1 << i);
-        if (bit) {
-          char pos = 0;
-          while (bit > 1 || bit < -1) {
-            bit /= 2;
-            pos++;
-          }
-          char ascii = 98 + 5 + (b-1) * 8 + pos;
-          printf("%c\n", ascii);
-        }
+      if (letter) {
+        char shift = i % 2 ? 97 : 65;
+        char ascii = shift + b * 4 + i/2;
+        string[j++] = ascii;
       }
     }
   }
-  
-  printf("determined size: %d\n", size);
 
   return string;
 }
 
 int main() {
-  charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz");
+  /* charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz"); */
+  charset_t* pama = charset_new("ABCabZcHz");
+  /* charset_t* pama = charset_new("ABBBbba"); */
+  /* charset_t* pama = charset_new("ABCDEFGHIJKLMNOPQRSTUVWXYZ"); */
+  /* charset_t* pama = charset_new("abcdefghijklmnopqrstuvwxyz"); */
+  /* charset_t* pama = charset_new("ABC"); */
 
   char* st = charset_tos(pama);
   printf("%s\n", st);
 
-  free(pama);
+  /* free(pama); */
   return 0;
 }
 
