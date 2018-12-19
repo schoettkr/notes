@@ -1,0 +1,89 @@
+<h1>Guestbook</h1>
+<ul>
+</ul>
+<hr />
+<form action="https://vsr.informatik.tu-chemnitz.de/edu/2015/evs/exercises/jsajax/guestbook.php" onsubmit="event.preventDefault(); sendData();" method="POST">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" placeholder="Name" />
+  <br />
+  <label for="text">Text</label>
+  <input id="text" name="text" type="text" placeholder="Text" />
+  <br />
+  <button type="submit">Add entry</button>
+</form>
+
+<script>
+  const baseUrl = "https://vsr.informatik.tu-chemnitz.de/edu/2015/evs/exercises/jsajax/guestbook.php";
+
+  function loadData() {
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener("load", displayData);
+  xhr.open("GET", baseUrl);
+  xhr.send();
+  }
+
+  function displayData() {
+    res = JSON.parse(this.responseText);
+    const ul = document.getElementsByTagName("ul")[0];
+
+    res.forEach((entry) => {
+      addEntry(ul, entry);
+    });
+  }
+
+  function addEntry(ul, entry) {
+    let li = document.createElement("li");
+    li.id = entry.id;
+    li.innerHTML = `<strong>${entry.name}:</strong> ${entry.text} `;
+    let a = document.createElement("a");
+    a.setAttribute("href", entry.id);
+    a.textContent = "(X)";
+    li.appendChild(a);
+    ul.appendChild(li);
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      deleteEntry(this.getAttribute("href"));
+    });
+  }
+
+  function deleteEntry(id) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("DELETE", `${baseUrl}?id=${id}`);
+    xhr.send();
+    xhr.onreadystatechange = function (e) {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        res = JSON.parse(this.responseText);
+        if (res.message) {
+          li = document.getElementById(id);
+          li.parentNode.removeChild(li);
+        }
+      }
+    }
+  }
+
+  loadData();
+
+  function sendData() {
+    const xhr = new XMLHttpRequest();
+    const nameEl = document.getElementById("name");
+    const textEl = document.getElementById("text");
+    const name = nameEl.value;
+    const text = textEl.value;
+    const params = `name=${name}&text=${text}`;
+    nameEl.value = "";
+    textEl.value = "";
+    xhr.open("POST", baseUrl);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send(params);
+    xhr.onreadystatechange = function (e) {
+      if (this.readyState == 4 && this.status == 200) {
+        res = JSON.parse(this.responseText);
+        const ul = document.getElementsByTagName("ul")[0];
+        addEntry(ul, res.entry);
+      }
+    }
+  }
+
+
+</script>
