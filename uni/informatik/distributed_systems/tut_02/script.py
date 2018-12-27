@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Note: Ported the code to Python 3
+
 import sys, socket
 
 def create_error_page(conn, err_string):
@@ -29,21 +31,21 @@ def handleRequest(conn):
         key, value = line.split(b': ')
         header[key] = value
 
-    # //TODO: get cookie information
+    try:
+        cookies = header[b'Cookie'].decode("utf-8").split("; ")
+        for cookie in cookies:
+            C = cookie.split("=")
+            if C[0] == 'kontostand':
+                kontostand = float(C[1])
+    except:
+        kontostand = 999.00
+
 
     if body:
         pairs = body.split(b'&')
         for pair in pairs:
             key, value = pair.split(b'=')
             values[key] = value
-
-    try:
-        kf = open(KONTOSTANDFILE, "r")
-        kontostand = float(kf.read(1024))
-        kf.close()
-    except:
-        kontostand = 100
-
 
 
     if b'amount' in values:
@@ -55,16 +57,9 @@ def handleRequest(conn):
 
         kontostand -= amount
 
-        try:
-            kf = open(KONTOSTANDFILE, "w")
-            kf.write("%5.2f"%(kontostand))
-            kf.close()
-        except:
-            create_error_page(conn, "Probleme mit dem Kontostandsfile")
-            return
-
     conn.send(b'HTTP/1.1 200 OK\r\n')
     conn.send(b'Connection: close\r\n')
+    conn.send(b'Set-Cookie: kontostand=%5.2f\r\n;'%(kontostand))
     conn.send(b'Content-Type: text/html\r\n\r\n')
     conn.send(b'<html><head><title>Konto</title></head>\r\n')
     conn.send(b'<body><h1>Konto</h1><hr/>\r\n')
