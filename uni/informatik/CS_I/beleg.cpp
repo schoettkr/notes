@@ -11,7 +11,8 @@ struct fliese {
 void printMatrix(fliese* array, int i, int j) {
   for (int iIndex = 0; iIndex < i; iIndex++) {
     for (int jIndex = 0; jIndex < j; jIndex++) {
-      cout << '\t' << array[jIndex + iIndex*j].x << '\t' << array[jIndex + iIndex*j].y << '\t' << " |";
+      if (array[jIndex + iIndex*j].x) // only print existing slabs
+        cout << '\t' << array[jIndex + iIndex*j].x << '\t' << array[jIndex + iIndex*j].y << '\t' << " |";
     }
     cout << endl;
   }
@@ -107,6 +108,26 @@ int main() {
     }
     printMatrix(*room, slabsPerCol, slabsPerRow);
   }
+
+  int totalSlabsPerRow = int(float(roomWidth) / slabWidth + 0.9999); // ceil slabs per row
+  float totalCols = int(float(roomHeight) / slabHeight + 0.9999); // ceil cols
+  int totalSlabs = totalSlabsPerRow*totalCols;
+  cout << "\tInsgesamt werden " << totalSlabs << " Fliesen benötigt." << endl;
+
+  float slabPriceInCent = slabWidth * slabHeight;
+  float bundlePrice = slabPriceInCent * 10 * 0.75;
+  int wholeBundles = totalSlabs / 10;
+  int rest = totalSlabs % 10;
+  float totalPriceInCent = 0.0;
+  if (rest >= 8) { // more efficient to buy another bundle and don't use all slabs
+    totalPriceInCent = bundlePrice * (wholeBundles + 1);
+  } else {
+    totalPriceInCent = bundlePrice * wholeBundles + slabPriceInCent * rest;
+  }
+
+  float totalPriceInEur = totalPriceInCent / 100;
+
+  cout << "\tDer günstigste Gesamtpreis beträgt " << totalPriceInEur << "€." << endl;
 
   return 0;
 }
