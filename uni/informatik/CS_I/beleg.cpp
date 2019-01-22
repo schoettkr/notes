@@ -61,6 +61,10 @@ void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabW
     slabsPerCol = int(roomHeight / slabHeight + 0.9999); // required slabs in col (y axis; ceiled)
   }
 
+  const int spc = slabsPerCol;
+  const int spr = slabsPerRow;
+
+  fliese room[spc][spr];
 
   if (slabHeight == slabWidth) { // Fliesen sind quadratisch -> jede Reihe beginnt mit ganzer Fliese
     // fill room matriix
