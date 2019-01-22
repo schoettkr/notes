@@ -1,3 +1,10 @@
+/* 
+   Name: Schöttker
+   Vorname: Lennart
+   Matrikelnummer: 547105
+*/
+
+
 #include <iostream>
 
 using namespace std;
@@ -7,40 +14,55 @@ struct fliese {
   float y;
 };
 
-
-void printMatrix(fliese* array, int i, int j) {
-  for (int iIndex = 0; iIndex < i; iIndex++) {
-    for (int jIndex = 0; jIndex < j; jIndex++) {
-      if (array[jIndex + iIndex*j].x) // only print existing slabs
-        cout << '\t' << array[jIndex + iIndex*j].x << '\t' << array[jIndex + iIndex*j].y << '\t' << " |";
-    }
-    cout << endl;
-  }
-}
-
+void belegLogic(float, float, float, float);
+void printMatrix(fliese*, int , int);
 
 int main() {
   float roomHeight, roomWidth, slabHeight, slabWidth;
 
-  cout << "Bitte geben Sie die Raumbreite(X) in Zentimeter mit maximal 2 Dezimalstellen ein: ";
+  cout << "Bitte geben Sie die Raumbreite(X) in Zentimeter ein: ";
   cin >> roomWidth;
-  cout << "Bitte geben Sie die Raumlänge(Y) in Zentimeter mit maximal 2 Dezimalstellen ein: ";
+  cout << "Bitte geben Sie die Raumlänge(Y) in Zentimeter ein: ";
   cin >> roomHeight;
 
 
-  cout << "Bitte geben Sie die Fliesenbreite(X) in Zentimeter mit maximal 2 Dezimalstellen ein: ";
+  cout << "Bitte geben Sie die Fliesenbreite(X) in Zentimeter ein: ";
   cin >> slabWidth;
-  cout << "Bitte geben Sie die Fliesenlänge(Y) in Zentimeter mit maximal 2 Dezimalstellen ein: ";
+  cout << "Bitte geben Sie die Fliesenlänge(Y) in Zentimeter ein: ";
   cin >> slabHeight;
 
-  // #Todo: Null und Negative Werte abfangen evtl auch zu grosse/kleine Werte, sowie y > x
-  // #Todo: Align eg 0.01 in print
+  // Catch invalid values
+  if (roomHeight <= 0 || roomWidth <= 0 || slabHeight <= 0 || slabWidth <= 0 ||
+      roomHeight > 800 || roomWidth > 800 || slabWidth < 10 || slabHeight < 10 ||
+      roomHeight < slabHeight || roomWidth < slabWidth) {
+    cout << "Ungültige Werte." << endl;
+    return 0;
+  }
+
+  // Execute once in 'normal' way
+  belegLogic(roomHeight, roomWidth, slabHeight, slabWidth);
+
+  cout << "\n========== Fliesenbreite und Fliesenlänge nun vertauscht ==========\n";
+
+  // Execute with slab dimensions swapped
+  belegLogic(roomHeight, roomWidth, slabWidth, slabHeight);
+
+  return 0;
+}
+
+void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabWidth) {
+  int slabsPerRow, slabsPerCol;
+
+  if (slabHeight == slabWidth) {
+    slabsPerRow = 1 + int((roomWidth-slabWidth) / slabWidth + 0.9999); // required slabs per row (1 whole slab  + ceiled rest)
+    slabsPerCol = 1 + int((roomHeight-slabHeight) / slabHeight + 0.9999); // required slabs in col (y axis; 1 whole slab + ceiled rest)
+  } else {
+    slabsPerRow = 1 + int((roomWidth-0.5*slabWidth) / slabWidth + 0.9999); // max required slabs per row (1 whole slab  + ceiled rest)
+    slabsPerCol = int(roomHeight / slabHeight + 0.9999); // required slabs in col (y axis; ceiled)
+  }
 
 
   if (slabHeight == slabWidth) { // Fliesen sind quadratisch -> jede Reihe beginnt mit ganzer Fliese
-    int slabsPerRow = 1 + int((roomWidth-slabWidth) / slabWidth + 0.9999); // required slabs per row (1 whole slab  + ceiled rest)
-    int slabsPerCol = 1 + int((roomHeight-slabHeight) / slabHeight + 0.9999); // required slabs in col (y axis; 1 whole slab + ceiled rest)
-    fliese room[slabsPerCol][slabsPerRow];
     // fill room matriix
     int roomHeightCopy = roomHeight;
     for (int i = 0; i < slabsPerCol; i++) {
@@ -71,10 +93,6 @@ int main() {
     printMatrix(*room, slabsPerCol, slabsPerRow);
 
   } else { // Fliesen sind nicht quadratisch x ist ein vielfaches von y zB y*2 -> jede 2te Reihe beginnt mit einer halben Fliese
-    int slabsPerRow = 1 + int((roomWidth-0.5*slabWidth) / slabWidth + 0.9999); // max required slabs per row (1 whole slab  + ceiled rest)
-    int slabsPerCol = int(roomHeight / slabHeight + 0.9999); // required slabs in col (y axis; ceiled)
-
-    fliese room[slabsPerCol][slabsPerRow];
     int roomHeightCopy = roomHeight;
     for (int i = 0; i < slabsPerCol; i++) {
       float roomWidthCopy = (float (roomWidth)); // deal with same width on every row
@@ -109,10 +127,18 @@ int main() {
     printMatrix(*room, slabsPerCol, slabsPerRow);
   }
 
-  int totalSlabsPerRow = int(float(roomWidth) / slabWidth + 0.9999); // ceil slabs per row
-  float totalCols = int(float(roomHeight) / slabHeight + 0.9999); // ceil cols
-  int totalSlabs = totalSlabsPerRow*totalCols;
+  // int totalSlabsPerRow = int(float(roomWidth) / slabWidth + 0.9999); // ceil slabs per row
+  // float totalCols = int(float(roomHeight) / slabHeight + 0.9999); // ceil cols
+  float absoluteSlabs = 0;
+  for (int i = 0; i < slabsPerCol; i++) {
+    for (int j = 0; j < slabsPerRow; j++) {
+      absoluteSlabs += (room[i][j].x + room[i][j].y)/2;
+    }
+  }
+
+  int totalSlabs = int(absoluteSlabs + 0.9999); // ceil slabs because only whole slabs can be bought
   cout << "\tInsgesamt werden " << totalSlabs << " Fliesen benötigt." << endl;
+
 
   float slabPriceInCent = slabWidth * slabHeight;
   float bundlePrice = slabPriceInCent * 10 * 0.75;
@@ -128,6 +154,16 @@ int main() {
   float totalPriceInEur = totalPriceInCent / 100;
 
   cout << "\tDer günstigste Gesamtpreis beträgt " << totalPriceInEur << "€." << endl;
-
-  return 0;
 }
+
+void printMatrix(fliese* array, int i, int j) {
+  cout << "\n";
+  for (int iIndex = 0; iIndex < i; iIndex++) {
+    for (int jIndex = 0; jIndex < j; jIndex++) {
+      if (array[jIndex + iIndex*j].x) // only print existing slabs
+        cout << '\t' << array[jIndex + iIndex*j].x << '\t' << array[jIndex + iIndex*j].y << '\t' << " |";
+    }
+    cout << endl;
+  }
+}
+
