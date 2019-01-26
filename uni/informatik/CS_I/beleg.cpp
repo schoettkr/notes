@@ -59,6 +59,7 @@ void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabW
   } else {
     slabsPerRow = 1 + int((roomWidth-0.5*slabWidth) / slabWidth + 0.9999); // max required slabs per row (1 whole slab  + ceiled rest)
     slabsPerCol = int(roomHeight / slabHeight + 0.9999); // required slabs in col (y axis; ceiled)
+    cout << "slabs per col" << slabsPerCol << endl;
   }
 
   const int spc = slabsPerCol;
@@ -68,9 +69,9 @@ void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabW
 
   if (slabHeight == slabWidth) { // Fliesen sind quadratisch -> jede Reihe beginnt mit ganzer Fliese
     // fill room matriix
-    int roomHeightCopy = roomHeight;
+    float roomHeightCopy = roomHeight;
     for (int i = 0; i < slabsPerCol; i++) {
-      int roomWidthCopy = roomWidth; // deal with same width on every row
+      float roomWidthCopy = roomWidth; // deal with same width on every row
       for (int j = 0; j < slabsPerRow; j++) {
         if (j == 0 && i < slabsPerCol-1) { // all first slabs (per row) need to be whole
           room[i][j].x = 1;
@@ -97,7 +98,7 @@ void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabW
     printMatrix(*room, slabsPerCol, slabsPerRow);
 
   } else { // Fliesen sind nicht quadratisch x ist ein vielfaches von y zB y*2 -> jede 2te Reihe beginnt mit einer halben Fliese
-    int roomHeightCopy = roomHeight;
+    float roomHeightCopy = roomHeight;
     for (int i = 0; i < slabsPerCol; i++) {
       float roomWidthCopy = (float (roomWidth)); // deal with same width on every row
       for (int j = 0; j < slabsPerRow; j++) {
@@ -133,19 +134,21 @@ void belegLogic(float roomHeight, float roomWidth, float slabHeight, float slabW
 
   // int totalSlabsPerRow = int(float(roomWidth) / slabWidth + 0.9999); // ceil slabs per row
   // float totalCols = int(float(roomHeight) / slabHeight + 0.9999); // ceil cols
-  float absoluteSlabs = 0;
+  float total = 0;
   for (int i = 0; i < slabsPerCol; i++) {
     for (int j = 0; j < slabsPerRow; j++) {
-      absoluteSlabs += (room[i][j].x + room[i][j].y)/2;
+      if (room[i][j].x && room[i][j].y) {
+        total += (room[i][j].x + room[i][j].y);
+      }
     }
   }
 
-  int totalSlabs = int(absoluteSlabs + 0.9999); // ceil slabs because only whole slabs can be bought
+  total /= 2;
+  int totalSlabs = int(total); // ceil slabs because only whole slabs can be bought
   cout << "\tInsgesamt werden " << totalSlabs << " Fliesen benötigt." << endl;
 
-
-  float slabPriceInCent = slabWidth * slabHeight;
-  float bundlePrice = slabPriceInCent * 10 * 0.75;
+  float slabPriceInCent = (int(slabWidth * slabHeight));
+  float bundlePrice = (int(slabPriceInCent * 10 * 0.75));
   int wholeBundles = totalSlabs / 10;
   int rest = totalSlabs % 10;
   float totalPriceInCent = 0.0;
@@ -170,4 +173,3 @@ void printMatrix(fliese* array, int i, int j) {
     cout << endl;
   }
 }
-
