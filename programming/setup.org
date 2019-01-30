@@ -318,6 +318,22 @@ Restart the shell and start installing node versions via:
 nvm install 11 # current version at time of writing this!
 #+END_SRC
 
+*** Go
+Go projects will live in a specific folder (ususally =~/go=). I set this to =~/dev/go/= so make sure that folder exists (and verify that gopath is still set to that in =~/.zshrc=). Install:
+#+BEGIN_SRC sh
+yay go go-tools
+#+END_SRC
+Also "$GOPATH/bin" needs to be appended to the "$PATH" variable to be able to execute the Go binaries (eg godef). This should also be reflected in =~/.zshrc=.
+
+Then install the needed dev tools, currently:
+#+BEGIN_SRC sh
+go get -u github.com/rogpeppe/godef/...
+go get -u github.com/nsf/gocode
+go get -u golang.org/x/tools/cmd/goimports
+go get -u github.com/dougm/goflymake
+go get -u golang.org/x/tools/cmd/guru
+#+END_SRC
+
 ** Tips & Tricks
 *** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
