@@ -334,6 +334,21 @@ go get -u github.com/dougm/goflymake
 go get -u golang.org/x/tools/cmd/guru
 #+END_SRC
 
+*** C#
+Install the dotnet sdk either from the aur or via the official site. Preferably do it via the official site because last time I installed it from AUR there were problems when running C# debugger
+
+Link: https://www.microsoft.com/net/download or rather -> https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.403-linux-x64-binaries to install from source and not via some package managers
+#+BEGIN_SRC sh
+yay dotnet-sdk # from aur NOT recommended
+#+END_SRC
+And then comment in the relevant parts in .zshrc:
+#+BEGIN_SRC sh
+export DOTNET_ROOT=$HOME/arch/pkgs/dotnet 
+export PATH=$PATH:$HOME/arch/pkgs/dotnet
+#+END_SRC
+In emacs run =omnisharp-install-server=.
+
+
 ** Tips & Tricks
 *** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
