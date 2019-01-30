@@ -101,6 +101,11 @@ yay texlive-latexextra texlive-bibtexextra biber # for emacs org -> pdf export s
 Open zotero and go to =Edit -> Preferences -> Advanced -> Files and Folders= and change the data directory location to keep your home directory clean (change to eg =~/arch/pkgs=)
 Then install the =zotero-better-bibtex= addon. Instructions can be found here https://retorque.re/zotero-better-bibtex/installation/
 
+*** Window compositor
+#+BEGIN_SRC bash
+yay -S compton
+#+END_SRC
+
 
 
 ** Homefolder structure
