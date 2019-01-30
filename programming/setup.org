@@ -257,6 +257,7 @@ Create the following folder structure in the home directory:
 ~/library/books
 
 ~/library/docs
+;;~/library/docs/misc
 
 ~/library/music
 
