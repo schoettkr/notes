@@ -452,3 +452,36 @@ To disable an automatically started service:
 #+BEGIN_SRC bash
 sudo systemctl disable application.service
 #+END_SRC
+*** Formatting and mounting of external drives
+*** Changing "os name"
+Edit =/etc/os-release= to e.g:
+#+BEGIN_SRC 
+NAME="Arch Linux"
+ID=arch
+PRETTY_NAME="Arch Linux"
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+#+END_SRC
+*** Touchpad
+If installed remove synaptic because its development is discontinued. Use libinput instead. To find out which drivers are currently used enter =grep -e "Using input" .local/share/xorg/Xorg.0.log=
+#+BEGIN_SRC bash
+xinput list # to list devices, search for eg 'touchpad' in the output. the number is the id
+xinput list-props 11 # when 11 is the id
+#+END_SRC
+Put for example this in =/etc/X11/xorg.conf.d/30-touchpad.conf=:
+#+BEGIN_SRC 
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+	Option "Tapping" "on"
+	Option "AccelSpeed" "0.5"
+EndSection
+#+END_SRC
+*** Source of an alias
+To find out what a command is aliased to enter =type {command}=, e.g =type l=
+*** Change folder permission from root to user
+=sudo chown -R eoshiru FOLDERNAME=
