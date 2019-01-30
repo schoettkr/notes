@@ -239,6 +239,12 @@ Install =speedcrunch=
 *** IRC
 Maybe get into =weechat= sometime but for now =hexchat= seems to be the sanest/simplest client :)
 
+*** VPN (Uni etc)
+Install =openconnect= and connect for example like this:
+#+BEGIN_SRC sh
+sudo openconnect https://vpn-server.uni-hannover.de/
+#+END_SRC
+And then enter credentials when prompted.
 
 ** Homefolder structure
 Create the following folder structure in the home directory:
