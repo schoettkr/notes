@@ -45,6 +45,11 @@ stow -v X
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh # if not already installed
 stow -v zsh
 #+END_SRC
+You also want to setup github auth (to not be prompted by magit everytime for example). Do the following
+#+BEGIN_SRC sh
+git config --global --add github.user <user>
+git config --global --add github.oauth-token <token>
+#+END_SRC
 
 
 ** Package manager
