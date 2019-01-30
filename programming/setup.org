@@ -119,6 +119,9 @@ To take screenshots =scrot= is a nice minimal utility. Install it and use it as 
  - =-t= grabs a window and creates a thumbnail of it; This can be useful when you're posting screen captures online
  - =-c= creates a countdown in your terminal when you use the -d option
 
+*** IRC
+Maybe get into =weechat= sometime but for now =hexchat= seems to be the sanest/simplest client :)
+
 
 ** Homefolder structure
 Create the following folder structure in the home directory:
