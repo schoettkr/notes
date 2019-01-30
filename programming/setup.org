@@ -280,6 +280,14 @@ To get rid of the folders that are create by default edit (or via dotfiles) =~/.
 Then run =xdg-user-dirs-update=. (PS do not /remove/ =xdg_desktop_dir= <- read this on the internetz but check what really happens!).
 
 
+
+
+** Programming
+Stuff that is specific to programming / development
+*** General
+#+BEGIN_SRC bash
+yay the_silver_searcher # this is ag
+#+END_SRC
 ** Tips & Tricks
 *** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
