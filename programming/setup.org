@@ -302,6 +302,22 @@ Install gdb (GNU debugger that can be used for many languages_
 yay gdb
 #+END_SRC
 
+*** Javascript
+Install the node version manager to manage different nodejs versions:
+#+BEGIN_SRC bash
+yay -S nvm
+#+END_SRC
+Then run the following if it isn't already present in =.zshrc=
+#+BEGIN_SRC bash
+echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
+#+END_SRC
+Note: having the above command in =.zshrc= slows down the prompt when opening a terminal immensely. You might want to have this line commented out when not working with js/node :)
+If you want to execute node binaries also comment in the part where the node binaries are added to PATH.
+Restart the shell and start installing node versions via:
+#+BEGIN_SRC bash
+nvm install 11 # current version at time of writing this!
+#+END_SRC
+
 ** Tips & Tricks
 *** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
