@@ -14,7 +14,7 @@ Another problem that occured was fixed by searching for the pid of =wpa_supplica
 
 Alternatively use =nmcli device wifi connect <SSID> password <passphrase>= (or =wifi-menu=) when the system is installed because Internet again is required to first obtain dotfiles and then packages.
 
-With =nm-applet= connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click =connect to hidden wifi= and enter the ssid as well the rest manually.
+With =nm-applet= connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click =connect to hidden wifi= and enter the ssid as well the rest manually. Also make sure that if using =NetworkManager= that the =dhcpcd= service is not running / enabled on default (check the Services section in the Tips & Tricks part).
 
 
 ** Window manager
