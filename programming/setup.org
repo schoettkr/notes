@@ -288,6 +288,20 @@ Stuff that is specific to programming / development
 #+BEGIN_SRC bash
 yay the_silver_searcher # this is ag
 #+END_SRC
+*** C/C++
+Install the Clang compiler which is a compiler/frontend for C family languages based on LLVM:
+#+BEGIN_SRC bash
+yay -S clang
+#+END_SRC
+Install cquery which is needed for emacs-cquery and lsp mode
+#+BEGIN_SRC bash
+yay -S cquery
+#+END_SRC
+Install gdb (GNU debugger that can be used for many languages_
+#+BEGIN_SRC bash
+yay gdb
+#+END_SRC
+
 ** Tips & Tricks
 *** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
