@@ -106,6 +106,9 @@ Then install the =zotero-better-bibtex= addon. Instructions can be found here ht
 yay -S compton
 #+END_SRC
 
+*** Video Player
+Just install =mpv= no questions!!
+
 
 
 ** Homefolder structure
