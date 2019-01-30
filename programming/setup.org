@@ -92,6 +92,15 @@ Use keepassxc https://github.com/keepassxreboot/keepassxc
 yay -S keepassxc
 #+END_SRC
 
+*** Reference managment
+Use zotero (gtk2 application) because it has less dependencies than jabref and kbibtex
+#+BEGIN_SRC bash
+yay zotero
+yay texlive-latexextra texlive-bibtexextra biber # for emacs org -> pdf export support
+#+END_SRC
+Open zotero and go to =Edit -> Preferences -> Advanced -> Files and Folders= and change the data directory location to keep your home directory clean (change to eg =~/arch/pkgs=)
+Then install the =zotero-better-bibtex= addon. Instructions can be found here https://retorque.re/zotero-better-bibtex/installation/
+
 
 
 ** Homefolder structure
