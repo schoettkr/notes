@@ -109,6 +109,15 @@ yay -S compton
 *** Video Player
 Just install =mpv= no questions!!
 
+*** Screenshots
+To take screenshots =scrot= is a nice minimal utility. Install it and use it as follows:
+- =scrot -u [filename]= to take screenshot of currently focused window
+  - =scrot -u -d [num] [filename]= waits =num= seconds before taking the picture (defer)
+- =scrot -s [filename]= and click or draw a rectangle to capture the selection
+- other options:
+ - =-b= also grabs the window's border
+ - =-t= grabs a window and creates a thumbnail of it; This can be useful when you're posting screen captures online
+ - =-c= creates a countdown in your terminal when you use the -d option
 
 
 ** Homefolder structure
