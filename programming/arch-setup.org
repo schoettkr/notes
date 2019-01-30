@@ -15,6 +15,8 @@ Alternatively use =nmcli device wifi connect <SSID> password <passphrase>= (or =
 
 With =nm-applet= connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click =connect to hidden wifi= and enter the ssid as well the rest manually. Also make sure that if using =NetworkManager= that the =dhcpcd= service is not running / enabled on default (check the Services section in the Tips & Tricks part).
 
+The connection config files are usually in =/etc/NetworkManager/system-connections= (may need to =su= first).
+
 
 * Window manager
 The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.
