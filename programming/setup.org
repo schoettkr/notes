@@ -377,3 +377,20 @@ Since =.zshenv= is always sourced, it often contains exported variables that sho
 To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
 *** Updating and upgrading
 *** Configure touchpad
+*** SSH
+Check for existing ssh keys:
+#+BEGIN_SRC bash
+ls -al ~/.ssh
+#+END_SRC
+Generate new ssh key:
+#+BEGIN_SRC bash
+# make sure that openssh is installed
+yay -S openssh
+
+ssh-keygen -t rsa -b 4096 -C "email@example.com"
+#+END_SRC
+Adding the ssh key to the ssh-agent:
+#+BEGIN_SRC bash
+eval "$(ssh-agent -s)" # start ssh-agent in background
+ssh-add ~/.ssh/id_rsa # this needs to be the private not the public key file
+#+END_SRC
