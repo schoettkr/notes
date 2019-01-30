@@ -81,6 +81,11 @@ git clone https://github.com/schoettkr/Terra.git .emacs.d
 yay -S emacs
 #+END_SRC
 
+*** Blogging
+#+BEGIN_SRC bash
+yay -S nikola texlive-core pygmentize
+#+END_SRC
+
 
 
 ** Homefolder structure
