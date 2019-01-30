@@ -118,6 +118,10 @@ To take screenshots =scrot= is a nice minimal utility. Install it and use it as 
  - =-b= also grabs the window's border
  - =-t= grabs a window and creates a thumbnail of it; This can be useful when you're posting screen captures online
  - =-c= creates a countdown in your terminal when you use the -d option
+*** Document Viewer
+#+BEGIN_SRC 
+yay evince-light
+#+END_SRC
 *** Calculator
 Install =speedcrunch=
 
