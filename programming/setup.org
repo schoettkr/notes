@@ -394,3 +394,31 @@ Adding the ssh key to the ssh-agent:
 eval "$(ssh-agent -s)" # start ssh-agent in background
 ssh-add ~/.ssh/id_rsa # this needs to be the private not the public key file
 #+END_SRC
+*** GPG
+List keys:
+#+BEGIN_SRC bash
+gpg --list-keys
+gpg --list-secret-keys
+#+END_SRC
+Export the private and public key:
+#+BEGIN_SRC bash
+gpg --export ${ID} > public.key
+gpg --export-secret-keys ${ID} > private.key
+#+END_SRC
+
+To import the keys on for example another machine:
+#+BEGIN_SRC bash
+gpg --import public.key
+gpg --import private.key
+#+END_SRC
+
+And trust the key(s) via:
+#+BEGIN_SRC bash
+gpg --edit-key ${ID}
+trust
+#+END_SRC
+
+Then decrypt the files from the command line:
+#+BEGIN_SRC bash
+gpg -d file.gpg
+#+END_SRC
