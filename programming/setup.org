@@ -86,6 +86,12 @@ yay -S emacs
 yay -S nikola texlive-core pygmentize
 #+END_SRC
 
+*** Password management
+Use keepassxc https://github.com/keepassxreboot/keepassxc
+#+BEGIN_SRC 
+yay -S keepassxc
+#+END_SRC
+
 
 
 ** Homefolder structure
