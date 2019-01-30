@@ -422,3 +422,33 @@ Then decrypt the files from the command line:
 #+BEGIN_SRC bash
 gpg -d file.gpg
 #+END_SRC
+*** Services
+List automatically started services:
+#+BEGIN_SRC bash
+systemctl list-unit-files --state=enabled
+#+END_SRC
+
+Check the status of an service:
+#+BEGIN_SRC bash
+systemctl status application.service
+#+END_SRC
+
+Start service in/for current session:
+#+BEGIN_SRC bash
+sudo systemctl start application.service
+#+END_SRC
+
+Stop service in/for current session:
+#+BEGIN_SRC bash
+sudo systemctl stop application.service
+#+END_SRC
+
+To enable an service to be started automatically on boot:
+#+BEGIN_SRC bash
+sudo systemctl enable application.service
+#+END_SRC
+
+To disable an automatically started service:
+#+BEGIN_SRC bash
+sudo systemctl disable application.service
+#+END_SRC
