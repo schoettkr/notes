@@ -1,9 +1,8 @@
-* Setting up my machine
 1. Use something like anarchy linux (arch installer) to get up running quickly. The steps I've written down and that always worked as well as what is in the arch wiki didn't work the last time I tried on my laptop that's why I resorted to an installer. Usually I prefer to do everything myself but I didn't succeed and had no time left so I went with anarchy-linux as an installer, that is pretty vanilla anyway. They have different options, I went with the one for 'advanced users' which gave me the most customizability (basically everything I cared for anyway was configurable through this).
 
-** Internet connection
+* Internet connection
 It is important to have an working internet connection. This is easily achieved by opening an Wi-Fi hotspot from phone (Tethering) and connecting via =wpa_supplicant -B -i {interfaceName} -c <(wpa_passphrase '{SSID}' {passphrase})=. The interface can be recieved via =ifconfig= or =ip link=. Full example command: =wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase 'Y6 Max' a1b2d3)=. However using my phone's wifi hotspot was/is incredibly slow so that wasnt/isnt really practical. It is enough to use =curl= for a small file, as needed in the following section!
-*** Eduroam
+** Eduroam
 Because I don't have my own internet access and have to rely on the university's internet access via eduroam - things of course have to be more complicated. Quickest solution that I found was uploading an =.tar= archive that contains the targeted =wpa_supplicant.conf= (without the passphrase/identity ofc) and the required certificate (e.g =ca.pem=) to transfer.sh (awesome service!) from another, already setup machine.
 
 On the target device now boot the iso via usb and =curl -O https://transfer.sh/xyz/abc.tar=, extract the archive via =tar -xf abc.tar= and edit the =wpa_supplicant.conf= with e.g nano to include the passphrase/identity as well as the path to the certificate.
@@ -17,12 +16,12 @@ Alternatively use =nmcli device wifi connect <SSID> password <passphrase>= (or =
 With =nm-applet= connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click =connect to hidden wifi= and enter the ssid as well the rest manually. Also make sure that if using =NetworkManager= that the =dhcpcd= service is not running / enabled on default (check the Services section in the Tips & Tricks part).
 
 
-** Window manager
+* Window manager
 The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.
 
 
 
-** Dotfiles
+* Dotfiles
 Now I'd need my dotfiles. But the most important thing first =sudo pacman -S git=. 
 #+BEGIN_SRC  bash
 git clone https://github.com/schoettkr/dotfiles.git ~/dotfiles # might want to checkout a specific branch!
@@ -52,7 +51,7 @@ git config --global --add github.oauth-token <token>
 #+END_SRC
 
 
-** Package manager
+* Package manager
 Setup home folder structure first or atleast have =~/arch/pkgs/= in place to then
 #+BEGIN_SRC bash
 # Also check sometimes that "yay" is still developed and the most common/best package manger :)
@@ -62,37 +61,37 @@ makepkg -si
 #+END_SRC
 
 
-** Packages
-*** Essential packages
+* Packages
+** Essential packages
 #+BEGIN_SRC bash
 yay -S polybar termite feh google-chrome redshift zsh-autosuggestions neovim rofi
 #+END_SRC
-*** Setup (neo)vim
+** Setup (neo)vim
 However that should be done via current line in my config, but nevertheless:
 #+BEGIN_SRC bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #+END_SRC
 Then open nvim and run =:PlugInstall:=
-*** Emacs
+** Emacs
 #+BEGIN_SRC bash
 cd ~
 git clone https://github.com/schoettkr/Terra.git .emacs.d
 yay -S emacs
 #+END_SRC
 
-*** Blogging
+** Blogging
 #+BEGIN_SRC bash
 yay -S nikola texlive-core pygmentize
 #+END_SRC
 
-*** Password management
+** Password management
 Use keepassxc https://github.com/keepassxreboot/keepassxc
 #+BEGIN_SRC 
 yay -S keepassxc
 #+END_SRC
 
-*** Reference managment
+** Reference managment
 Use zotero (gtk2 application) because it has less dependencies than jabref and kbibtex
 #+BEGIN_SRC bash
 yay zotero
@@ -101,15 +100,15 @@ yay texlive-latexextra texlive-bibtexextra biber # for emacs org -> pdf export s
 Open zotero and go to =Edit -> Preferences -> Advanced -> Files and Folders= and change the data directory location to keep your home directory clean (change to eg =~/arch/pkgs=)
 Then install the =zotero-better-bibtex= addon. Instructions can be found here https://retorque.re/zotero-better-bibtex/installation/
 
-*** Window compositor
+** Window compositor
 #+BEGIN_SRC bash
 yay -S compton
 #+END_SRC
 
-*** Video Player
+** Video Player
 Just install =mpv= no questions!!
 
-*** Screenshots
+** Screenshots
 To take screenshots =scrot= is a nice minimal utility. Install it and use it as follows:
 - =scrot -u [filename]= to take screenshot of currently focused window
   - =scrot -u -d [num] [filename]= waits =num= seconds before taking the picture (defer)
@@ -118,11 +117,11 @@ To take screenshots =scrot= is a nice minimal utility. Install it and use it as 
  - =-b= also grabs the window's border
  - =-t= grabs a window and creates a thumbnail of it; This can be useful when you're posting screen captures online
  - =-c= creates a countdown in your terminal when you use the -d option
-*** Document Viewer
+** Document Viewer
 #+BEGIN_SRC 
 yay evince-light
 #+END_SRC
-*** Ebook Management
+** Ebook Management
 Update: Actually I don't like calibre and it does not seem to be worth it for me. Just put your pdfs/mobis/azws in library/books. Convert pdf documents with =k2pdfopt= and html files with https://ebook.online-convert.com/convert-to-mobi. That's it not much hassle. To put files onto your ebook reader just mount it and cp as you'd do for any other device - this is the method of least hassle.
 
 Make sure to have the homefolder structure in place. Books are supposed to go into =~/library/books/Calibre=. Install =calibre= and set it up in accordance to this guide https://www.reddit.com/r/kindle/comments/3b7dzl/tutorial_how_to_use_calibre_to_manage_book/
@@ -233,20 +232,21 @@ Convert books: When sending to Kindle, Calibre'll automatically convert your boo
 If you connect Kindle to Calibre, Calibre will automatically find books on your Kindle. To send books to your Kindle, press Send to device.
 
 Fetch news: You can choose your favorite news source from the menu, Press Schedule for download, choose days to download, and Save. Calibre will automatically download News IF IT IS RUNNING and send to your Kindle if you already set up Send-to-Kindle account.
-*** Calculator
+** Calculator
 Install =speedcrunch=
 
-*** IRC
+** IRC
 Maybe get into =weechat= sometime but for now =hexchat= seems to be the sanest/simplest client :)
 
-*** VPN (Uni etc)
+** VPN (Uni etc)
 Install =openconnect= and connect for example like this:
 #+BEGIN_SRC sh
 sudo openconnect https://vpn-server.uni-hannover.de/
 #+END_SRC
 And then enter credentials when prompted.
 
-** Homefolder structure
+
+* Homefolder structure
 Create the following folder structure in the home directory:
 #+BEGIN_SRC 
 ~/arch
@@ -282,13 +282,13 @@ Then run =xdg-user-dirs-update=. (PS do not /remove/ =xdg_desktop_dir= <- read t
 
 
 
-** Programming
+* Programming
 Stuff that is specific to programming / development
-*** General
+** General
 #+BEGIN_SRC bash
 yay the_silver_searcher # this is ag
 #+END_SRC
-*** C/C++
+** C/C++
 Install the Clang compiler which is a compiler/frontend for C family languages based on LLVM:
 #+BEGIN_SRC bash
 yay -S clang
@@ -302,7 +302,7 @@ Install gdb (GNU debugger that can be used for many languages_
 yay gdb
 #+END_SRC
 
-*** Javascript
+** Javascript
 Install the node version manager to manage different nodejs versions:
 #+BEGIN_SRC bash
 yay -S nvm
@@ -318,7 +318,7 @@ Restart the shell and start installing node versions via:
 nvm install 11 # current version at time of writing this!
 #+END_SRC
 
-*** Go
+** Go
 Go projects will live in a specific folder (ususally =~/go=). I set this to =~/dev/go/= so make sure that folder exists (and verify that gopath is still set to that in =~/.zshrc=). Install:
 #+BEGIN_SRC sh
 yay go go-tools
@@ -334,7 +334,7 @@ go get -u github.com/dougm/goflymake
 go get -u golang.org/x/tools/cmd/guru
 #+END_SRC
 
-*** C#
+** C#
 Install the dotnet sdk either from the aur or via the official site. Preferably do it via the official site because last time I installed it from AUR there were problems when running C# debugger
 
 Link: https://www.microsoft.com/net/download or rather -> https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.403-linux-x64-binaries to install from source and not via some package managers
@@ -349,12 +349,12 @@ export PATH=$PATH:$HOME/arch/pkgs/dotnet
 In emacs run =omnisharp-install-server=.
 
 
-** Tips & Tricks
-*** Use more cores for compiling packages (mkkpkg)
+* Tips & Tricks
+** Use more cores for compiling packages (mkkpkg)
 In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores e.g =2=.
 
-*** Sort/update pacman mirrors
-*** Maintenance
+** Sort/update pacman mirrors
+** Maintenance
 #+BEGIN_SRC sh
 sudo rm -rf /var/cache/pacman/pkg/*
 sudo rm -rf var/cache/man/*
@@ -363,7 +363,7 @@ pacman -Qdt # to see orphan packages
 systemctl --failed # check for failed systemd services
 #+END_SRC
 To monitor processes, cpu, memory etc install =glances=.
-*** Primer on zshell files
+** Primer on zshell files
 Since =.zshenv= is always sourced, it often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration.
 
 =.zshrc= is for interactive shell configuration. You set options for the interactive shell there with the setopt and unsetopt commands. You can also load shell modules, set your history options, change your prompt, set up zle and completion, et cetera. You also set any variables that are only used in the interactive shell (e.g. $LS_COLORS).
@@ -373,11 +373,11 @@ Since =.zshenv= is always sourced, it often contains exported variables that sho
 =.zprofile= is basically the same as .zlogin except that it's sourced directly before .zshrc is sourced instead of directly after it. According to the zsh documentation, ".zprofile is meant as an alternative to `.zlogin' for ksh fans; the two are not intended to be used together, although this could certainly be done if desired."
 
 =.zlogout= is sometimes used to clear and reset the terminal.
-*** Ingoring aliases
+** Ingoring aliases
 To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
-*** Updating and upgrading
-*** Configure touchpad
-*** SSH
+** Updating and upgrading
+** Configure touchpad
+** SSH
 Check for existing ssh keys:
 #+BEGIN_SRC bash
 ls -al ~/.ssh
@@ -394,7 +394,7 @@ Adding the ssh key to the ssh-agent:
 eval "$(ssh-agent -s)" # start ssh-agent in background
 ssh-add ~/.ssh/id_rsa # this needs to be the private not the public key file
 #+END_SRC
-*** GPG
+** GPG
 List keys:
 #+BEGIN_SRC bash
 gpg --list-keys
@@ -422,7 +422,7 @@ Then decrypt the files from the command line:
 #+BEGIN_SRC bash
 gpg -d file.gpg
 #+END_SRC
-*** Services
+** Services
 List automatically started services:
 #+BEGIN_SRC bash
 systemctl list-unit-files --state=enabled
@@ -452,8 +452,8 @@ To disable an automatically started service:
 #+BEGIN_SRC bash
 sudo systemctl disable application.service
 #+END_SRC
-*** Formatting and mounting of external drives
-*** Changing "os name"
+** Formatting and mounting of external drives
+** Changing "os name"
 Edit =/etc/os-release= to e.g:
 #+BEGIN_SRC 
 NAME="Arch Linux"
@@ -464,7 +464,7 @@ HOME_URL="https://www.archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"
 BUG_REPORT_URL="https://bugs.archlinux.org/"
 #+END_SRC
-*** Touchpad
+** Touchpad
 If installed remove synaptic because its development is discontinued. Use libinput instead. To find out which drivers are currently used enter =grep -e "Using input" .local/share/xorg/Xorg.0.log=
 #+BEGIN_SRC bash
 xinput list # to list devices, search for eg 'touchpad' in the output. the number is the id
@@ -481,7 +481,7 @@ Section "InputClass"
 	Option "AccelSpeed" "0.5"
 EndSection
 #+END_SRC
-*** Source of an alias
+** Source of an alias
 To find out what a command is aliased to enter =type {command}=, e.g =type l=
-*** Change folder permission from root to user
+** Change folder permission from root to user
 =sudo chown -R eoshiru FOLDERNAME=
