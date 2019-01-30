@@ -4,53 +4,32 @@ void *malloc(unsigned long);
 
 const char *whirled(const char * const str); // Deklaration der Aufgabenfunktion
 
-/* int main(int carg, const char **varg){ */
-/*   if (carg != 2) return -1; // ein Parameter uebergeben? */
-/*   printf("Die verwürfelte Version von \"%s\" ist \"%s\".\n", // gibt Ergebnis aus */
-/*          varg[1],whirled(varg[1])); */
-/*   return 0; // 0 bedeutet alles okay */
-/* } */
+int main(int carg, const char **varg){
+  if (carg != 2) return -1; // ein Parameter uebergeben?
+  printf("Die verwürfelte Version von \"%s\" ist \"%s\".\n", // gibt Ergebnis aus
+         varg[1],whirled(varg[1]));
+  return 0; // 0 bedeutet alles okay
+}
 // Ihr Code ab hier
 
-int main(int argc, const char **argv) {
-  if (argc != 2) return -1;
-  whirled(argv[1]);
-
-  return 0;
-}
-
 char shiftLetter(char);
-const char* iterateChars(const char*, int direction, const char* originalStartP);
 
-const char *whirled(const char * const str)
-{
-  iterateChars(str, 1, str);
+int charrLength(const char* str, int length) {
+  if (*str == 0) {
+    return ++length; // add one for delimiting 0
+  }
 
-  return str;
+  return charrLength(++str, ++length);
 }
 
-// direction = 1 forward
-// direction = -1 backward
-const char* iterateChars(const char* str, int direction, const char* originalStartP) {
-  if (direction == 1 && *str == 0) {
-    /* printf("\nEncountered delimiter\n"); */
-    // reached end of charr
-    return iterateChars(--str, -1, originalStartP);
-  } else if (direction == -1 && str == originalStartP) {
-    /* printf("\nReached start at %d\n", *originalStartP); */
-    printf("%c", shiftLetter(*str));
-    return str;
+void shiftCharr(char * currentCharP, const char * endOfCharr, const  char* originalCharP) {
+  if (*originalCharP == 0) {
+    return;
   }
 
-  if (direction == 1) {
-    /* printf("%c", shiftLetter(*str)); */
-    return iterateChars(++str, 1, originalStartP);
-  } else if (direction == -1) {
-    printf("%c", shiftLetter(*str));
-    return iterateChars(--str, -1, originalStartP);
-  }
+  *currentCharP = shiftLetter(*endOfCharr);
 
-  return str;
+  shiftCharr(++currentCharP, --endOfCharr, ++originalCharP);
 }
 
 char shiftLetter(char letter) {
@@ -63,4 +42,18 @@ char shiftLetter(char letter) {
   char shiftedLetter = letter + 25 - 2*(letter - lowBound);
 
   return shiftedLetter;
+}
+
+const char* whirled(const char * const str)
+{
+  int size = charrLength(str, 0);
+  char * whirledCharr = (char*)malloc(size);
+
+  /* eg str =0x10 -> a; 0x11 -> b; 0x12 -> c; 0x13 -> \0 
+   size = 4 but last usable char is at str + size - 2 */
+  const char * endOfCharr = str+size-2; 
+
+  shiftCharr(whirledCharr, endOfCharr, str);
+
+  return whirledCharr;
 }

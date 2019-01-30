@@ -1,10 +1,7 @@
 typedef unsigned long size_t;
 #define NULL 0L
 
-extern int printf(const char *restrict __format, ...);
 extern void *malloc(size_t);
-extern void *calloc(size_t, size_t);
-extern void *realloc (void *, size_t);
 extern void free (void *);
 
 typedef struct charset {
@@ -85,6 +82,7 @@ char* charset_tos(const charset_t* s) {
   // Allocate size memory for string
   char* string = (char*) malloc(size);
 
+  // Set characters
   for (int b = 0, j = 0; b < 7; ++b) {
     for (int i = 0, flag = 1; i < 8; ++i, flag <<= 1) {
       char letter = (s->bits[b] & flag);
@@ -97,21 +95,6 @@ char* charset_tos(const charset_t* s) {
   }
 
   return string;
-}
-
-int main() {
-  /* charset_t* pama = charset_new("AaBbCcZzLlMmWwXxYyZz"); */
-  charset_t* pama = charset_new("ABCabZcHz");
-  /* charset_t* pama = charset_new("ABBBbba"); */
-  /* charset_t* pama = charset_new("ABCDEFGHIJKLMNOPQRSTUVWXYZ"); */
-  /* charset_t* pama = charset_new("abcdefghijklmnopqrstuvwxyz"); */
-  /* charset_t* pama = charset_new("ABC"); */
-
-  char* st = charset_tos(pama);
-  printf("%s\n", st);
-
-  /* free(pama); */
-  return 0;
 }
 
 // Helper function to copy charset

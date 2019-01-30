@@ -1,0 +1,17 @@
+* Themen
+** Typen, Komplexe Typen, Speicher
+** Iterationen
+** Syntax
+** Logik und Automaten
+** Entwurf und Korrektheit von Algorithmen (Pseudocode)
+Eigenschaften von Algorithmen:
+- Finitheit
+- Wohl Definiertheit
+- Effektivität/Ausführbarkeit
+- Determiniertheit
+- Determinismus
+- Termininierung
+** Komplexität
+** Rekursion und Backtracking
+** Textsuche
+** Linker und Bibliotheken
