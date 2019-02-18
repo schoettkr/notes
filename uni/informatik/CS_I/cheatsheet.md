@@ -1,5 +1,4 @@
-### 1. Algorithms
-#### 1.1. Generic
+### 1. Generic
 #### Convert to binary
 ```c++
 int main() {
@@ -129,7 +128,7 @@ bool contains(string haystack, string needle){
 }
 ```
 
-#### 1.2. Arrays
+### 2. Arrays
 #### Dynamically allocate
 ```c++
 int* array = new int[sizeof(int)];
@@ -164,7 +163,7 @@ void shuffleArray(int* array, int size) {
 }
 ```
 
-#### 1.3. Matrices
+### 3. Matrices
 #### Dynamically allocate
 ```c++
 int** array = new int*[SIZE];
@@ -291,7 +290,7 @@ int ost(int matrix[N][N]) {
 }
 ```
 
-#### 1.4. Sorting
+### 4. Sorting
 #### Bubble sort
 ```c++
 void bubble_sort(int *arr, int size) {
@@ -345,7 +344,7 @@ int* sortArray(int* array, int size) {
 }
 ```
 
-#### 1.5. Recursion
+### 5. Recursion
 #### Faculty
 ```c++
 int fak(int x) {
@@ -396,7 +395,7 @@ unsigned int binom(unsigned int n,unsigned int k) {
 }
 ```
 
-### 2. Numbers
+### 6. Numbers
 #### Bitwise Operations
 ```c++
 cout << "\na AND b = " << (a & b) << endl;
@@ -458,7 +457,7 @@ int komplett(int zahl) {
 }
 ```
 
-### 3. Strings
+### 7. Strings
 #### Initialisation
 ```
 char test[6] = "Hallo";
@@ -474,162 +473,8 @@ Compare | `int strcmp( char* s1, char *s2)` | Returns:  < 0 (s1 < s2), > 0 (s1 >
 Copy | `char *strcpy(char *dest, char *src)` | Copies `src` into `dest` including `'\0'`
 Append | `char *strcat(char *dest, char *src)` | Appends `dest` to `src`, adds `'\0'`
 
-### 4. I/O
+### 8. I/O
 #### 4.1. Overview
-#### Basics
-__Streams are logic constructs which produce or use information__.
-
-Stream | Explanation | Default device
---- | --- | ---
-`cin` | Standard input | Keyboard
-`cout` | Standard output | Screen / terminal
-`cerr` | Standard error | Screen / terminal
-`clog` | Puffered version of `cerr` | Screen / terminal
-
-#### Error handling
-Code | Explanation
---- | ---
-`cin.clear()` | Clears error flag from `cin`
-`cin.ignore(1000, '\n')` | Skipping to next line (ignores anything up to 1000 chars)
-
-#### 4.2. Input
-#### Lazy input
-Code | Explanation
---- | ---
-`cin >> a` | Reads from input stream. __Does not type check or remove__ `'\n'`!
-
-#### Typesafe inputs
-##### Integers
-```c++
-// This gets a single integer
-int myNumber = 0;
-
-while (true) {
- cout << "Please enter a valid number: ";
- getline(cin, input);
-
- // This code converts from string to number safely.
- stringstream myStream(input);
- if (myStream >> myNumber)
-   break;
- cout << "Invalid number, please try again" << endl;
-}
-```
-##### Chars
-```c++
-char myChar  = {0};
-
-while (true) {
- cout << "Please enter 1 char: ";
- getline(cin, input);
-
- if (input.length() == 1) {
-   myChar = input[0];
-   break;
- }
- cout << "Invalid character, please try again" << endl;
-}
-```
-##### Strings
-```c++
- string input = "";
-
- // How to get a string/sentence with spaces:
- getline(cin, input);
- 
- // Or enter string until `length` is reached or enter pressed.
-cin.getline(str, length, '\n')
-```
-
-#### 4.3. Output
-#### ios-Flags
-Name | Explanation
---- | ---
-skipws | Enables/disables whitespace skipping (default: on)
-left | Left-centered output
-right | Right-centered output
-internal | output is padded to the field width by inserting fill characters at a specified internal point.
-dec | Display integer in decimal
-oct | Display integer in octal
-hex | Display integere in hexadecimal
-showbase | Displays base of integer
-showpoint | Displays `.` for floating point values
-uppercase | Uppercase chars when displaying certain values (`0X4D, 23E10...`)
-showpos | Displays `+`-sign for positive values
-scientific | `3.1416 -> 3.14159e+000`
-fixed | `2006 -> 2006.00000`
-All flags can be used with `.setf / .unsetf` methods:
-```c++
-// Standardwerte
-cout << 123.23 << " hello " << 100 << '\n'; cout << 10 << ' ' << -10 << '\n';
-cout << 100.0 << "\n\n";
-cout.unsetf (ios::dec);
-// Die Flags dec, oct und hex schliessen sich nicht
-// Deswegen ist auch wenn das Flag hex gesetzt wird, ohne die Anweisung // cout.unsetf (ios::dec);
-// das dec-Flag noch gesetzt. Das dec-Flag ist dabei priorisiert.
-cout.setf (ios::hex | ios::scientific);
-cout << 123.23 << " hello " << 100 << '\n'; cout.setf (ios::showpos);
-cout.setf (ios::dec);
-// siehe oben
-cout << 10 << ' ' << -10 << '\n';
-cout.setf (ios::showpoint | ios::fixed);
-cout << 100.00 << '\n';
-```
-Output:
-```
-123.23 hello 100 
-10 -10
-100
-
-1.232300e+02 hello 64 
-+10 -10
-+100.000
-```
-
-#### ios-Methods
-Method | Code | Explanation
---- | --- | ---
-width() | `cout.width(int)` | Sets minimum number of chars written to specific output
-fill() | `cout.fill(char)` | Fils spaces up to field width
-precision() | `cout.precision(int)` | Sets floating point precision
-
-#### Manipulators
-`#include <iomanip>` __!__
-
-Manipulator | Explanation | I/O
---- | --- | ---
-dec | Decimal output | O
-endl | End of line + clear stream buffer | O
-ends | End of string | O
-flush | Clear stream buffer | O
-hex | Hex output | O
-oct | Oxt output | O
-setiosflags (long f) | Set flag `f` | I/O
-resetiosflags (long f) | Reset flag `f` | I/O
-setbase (int base) | Set base of int to `base` | O
-setfill (int ch) | Set fill char `ch` | O
-setprecision (int p) | Set output precision of `p` for floats | O
-setw(int w) | Set field width to `w` | O
-ws | Skip white spaces | I
-
-Example: 
-```c++
-#include <iomanip>
-cout << setfill('#');
-cout << setiosflags(ios::left) << setw (10) << i; cout << setfill ('?');
-cout << resetiosflags (ios::left) << setw (11) << i; cout << hex << i <<setw (13) << setfill ('*') << i; cout << "\n";
-cout << setfill (' ');
-cout << dec;
-```
-
-#### 4.4. File I/O
-#### Console
-Code | Explanation
---- | ---
-`./test < file1 > file2` | Take data from `file1` as input for `test` and write to `file2` (overwrites file if necessary)
-`./test < file1 >> file2` | Take data from `file1` as input for `test` and append to `file2`
-
-#### Examples
 ##### Create file and write to it
 ```c++
 #include <iostream> 
@@ -694,3 +539,9 @@ main() {
     return(0);
 }
 ```
+# Todo
+- file io
+- klausur uebeungsaufgbaen stuff
+- common gotchas 
+- nuetzliche methoden
+- aus klausuren most common tasks raussuchen
