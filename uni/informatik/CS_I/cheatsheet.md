@@ -4,7 +4,8 @@
 #include <cstring>
 string a = "hallo";
 string b = "hallo";
-a == b // -> true bzw != 0, funktioniert mit literals, aber nicht geeignet um char arr[20] = "test" mit char arr2[8] = "test" zu vergleichen
+a == b // -> true bzw != 0, funktioniert mit literals, aber nicht geeignet
+       // um char arr[20] = "test" mit char arr2[8] = "test" zu vergleichen
 
 a.compare(b) // -> 0, bedeutet equal, b darf literal sein
 
@@ -284,16 +285,7 @@ int komplett(int zahl) {
    return sum == temp ? 1 : 0;
 }
 ```
-
-### 7. Strings
-#### Initialisation
-```
-char test[6] = "Hallo";
-```
-```
-char test[] = "Hallo";
-```
-### 8. I/O
+### 9. I/O
 ##### Create file and write to it
 ```c++
 #include <iostream>
