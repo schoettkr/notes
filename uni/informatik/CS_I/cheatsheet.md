@@ -28,6 +28,11 @@ ceil(n) // aufrunden
 floor(n) // abrunden
 pow(n, exp) // potenziert pow(2, 3) -> 8
 sqrt(n) // wurzel
+#include <cstdlib>
+v1 = rand() % 100;         // v1 in the range 0 to 99
+v2 = rand() % 100 + 1;     // v2 in the range 1 to 100
+v3 = rand() % 30 + 1985;   // v3 in the range 1985-2014
+v4 = rand() % 10 + 1       // v4 in the range 1 to 10
 ```
 Int ranges from 2,147,483,648 to 2,147,483,647 (on 4 bytes)
 `int res[5] = {0}` initialisert alles mit 0
@@ -304,7 +309,7 @@ int main () {
 }
 ```
 #### Read file
-1.  Read integers from a file and print their sum
+#####  Read integers from a file and print their sum
 ```c++
 #include <iostream>
 #include <iomanip>
@@ -331,7 +336,7 @@ int main() {
     return 0;
 }
 ```
-2. Read file into matrix by chars
+##### Read file into matrix by chars
 ```c++
 int main() {
   ifstream file("wort.txt");
