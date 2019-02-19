@@ -1,4 +1,37 @@
 ### 1. Generic
+#### String Stuff
+```c++
+#include <cstring>
+string a = "hallo";
+string b = "hallo";
+a == b // -> true bzw != 0, funktioniert mit literals, aber nicht geeignet um char arr[20] = "test" mit char arr2[8] = "test" zu vergleichen
+
+a.compare(b) // -> 0, bedeutet equal, b darf literal sein
+
+strcmp(a, b) // -> 0, bedeutet equal, funktioniert mit Literals
+
+a.length() // -> 5, keine literals
+strlen("hallo") // -> 5, funktioniert mit literals
+
+// + und = fuer cat/copy, alternativ:
+char *strcat(char *dest, char *src) // appends `dest` to `src`, adds `'\0'`
+char *strcpy(char *dest, char *src) // copies `src` into `dest` including `'\0'`
+
+#include <iomanip>
+cout << setfill('0') << setw(5) << 25; // -> 00025
+```
+#### Math Stuff
+```c++
+#include <cmath>
+abs(n) // ist overloaded und returned absolute value
+ceil(n) // aufrunden
+floor(n) // abrunden
+pow(n, exp) // potenziert pow(2, 3) -> 8
+sqrt(n) // wurzel
+```
+Int ranges from 2,147,483,648 to 2,147,483,647 (on 4 bytes)
+`int res[5] = {0}` initialisert alles mit 0
+
 #### Convert to binary
 ```c++
 int main() {
@@ -255,81 +288,96 @@ char test[6] = "Hallo";
 ```
 char test[] = "Hallo";
 ```
-#### Manipulation
-Purpose | Code | Remarks
---- | --- | ---
-Length | `int strlen(char *s)` | Returns length w/out `'\0'`
-Compare | `int strcmp( char* s1, char *s2)` | Returns:  < 0 (s1 < s2), > 0 (s1 > s2), = 0 (s1 == s2)
-Copy | `char *strcpy(char *dest, char *src)` | Copies `src` into `dest` including `'\0'`
-Append | `char *strcat(char *dest, char *src)` | Appends `dest` to `src`, adds `'\0'`
-
-
-benoetigt <cstring>
-
-
 ### 8. I/O
-#### 4.1. Overview
 ##### Create file and write to it
 ```c++
-#include <iostream> 
-#include <fstream> 
-using namespace std; 
+#include <iostream>
+#include <fstream>
+using namespace std;
 
-main() {
-   // Open output file
-   ofstream fout ("test");
-   if(!fout) {
-      cout << "Outputfile nicht zu oeffnen \n";
-      return 1; 
-    }
-    // Write to file
-   fout << "Hello\n";
-    fout << 100 << ' ' << hex << 100 << endl;
-    fout.close();
-    
-    // Open input file
-    ifstream fin("test");
-   if(!fin) {
-      cout << "Inputfile nicht zu oeffnen\n"; return 1;
-   }
-   char str[80];
-   int i,j;
-    // Save previously created string/hex numbers in variables
-   fin >> str >> i >> j;
-   cout << str << ' ' << i << ' ' << j << endl; 
-    fin.close();
-   return 0;
+int main () {
+  ofstream myfile;
+  myfile.open ("example.txt");
+  myfile << "Writing this to a file.\n";
+  myfile.close();
+  return 0;
 }
 ```
-# Todo
-- file io
-- klausur uebeungsaufgbaen stuff
-- common gotchas 
-- nuetzliche methoden (string comparisons zb)
-- aus klausuren most common tasks raussuchen 
-- wertebereiche von integern
--
+#### Read file
+1.  Read integers from a file and print their sum
+```c++
+#include <iostream>
 #include <iomanip>
-cout << setfill('0') << setw(5) << 25;
+#include <fstream>
+using namespace std;
 
-output:
-00025
+int main() {
+    int sum = 0;
+    int x;
+    ifstream inFile;
+    
+    inFile.open("test.txt");
+    if (!inFile) {
+        cout << "Unable to open file";
+        exit(1); // terminate with error
+    }
+    
+    while (inFile >> x) {
+        sum = sum + x;
+    }
+    
+    inFile.close();
+    cout << "Sum = " << sum << endl; 
+    return 0;
+}
+```
+2. Read file into matrix by chars
+```c++
+int main() {
+  ifstream file("wort.txt");
+  if (!file) {
+    cout << "Couldnt open file";
+    return -1;
+  }
+  char rm [12][12];
+  for (int row = 0; row < 12; row++) {
+    for (int col = 0; col < 12; col++) {
+      file >> rm[row][col];
+    }
+  }
+  return 0;
+}
 
+```
+#### Teilfolgen
+```c++
+int arrSize = 10;
+int arr[arrSize] = {1,2,3,4,3,2,5,6,2,1};
+int teilfolgen = 0;
 
--
-.compare() returns an integer, which is a measure of the difference between the two strings.
-
-A return value of 0 indicates that the two strings compare as equal.
-
-- ceil und low etc, paar mathe fkt
-
-- int value ranges
-
-- teilfolgen ding
-
-- default values fuer (int) arrays -> alles 0 mit int res[10] = {0};
-
-- nassi-shneider diagramm
-https://sgaul.de/wp-content/uploads/2013/02/Nassi-Shneiderman-Diagramm.jpg
-
-- probeklausur (+game of life)
+for (int col = 0; col < arrSize-1; col++) {
+  int seqLength = 0;
+  int i = 0;
+  while (arr[col+i] < arr[col+i+1]) {
+    seqLength++;
+    i++;
+  }
+  if (seqLength != 0) {
+    teilfolgen++;
+    col += seqLength;
+  }
+}
+for (int col = 0; col < arrSize-1; col++) {
+  int seqLength = 0;
+  int i = 0;
+  while (arr[col+i] > arr[col+i+1]) {
+    seqLength++;
+    i++;
+  }
+  if (seqLength != 0) {
+    teilfolgen++;
+    col += seqLength;
+  }
+}
+cout << "Anzahl Teilfolgen = " << teilfolgen << endl;
+```
