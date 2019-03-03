@@ -1,0 +1,22 @@
+1) Binärer Suchbaum
+Aufgabe nicht digial lösbar siehe Mitschrift o. Foto
+Ressourcen: 
+- https://de.wikipedia.org/wiki/Bin%C3%A4rer_Suchbaum#L%C3%B6schen
+- http://u-helmich.de/inf/BlueJ/kurs121/folge17/folge17-8.html
+
+2)  B Baum einfügen
+Aufgabe nicht digial lösbar siehe Mitschrift o. Foto
+Ressourcen: 
+- https://www.geeksforgeeks.org/b-tree-set-1-introduction-2/
+- https://www.geeksforgeeks.org/b-tree-set-1-insert-2/
+
+3) B Baum löschen durch kopieren
+Aufgabe nicht digial lösbar siehe Mitschrift o. Foto
+Ressourcen: 
+- https://de.wikipedia.org/wiki/B-Baum#L%C3%B6schen
+- https://www.informatik.fb2.frankfurt-university.de/~aberndt/algorithmen/Vorlesung/6Datenstrukturen5Algo1.pdf
+  
+Generell: https://www.tu-chemnitz.de/informatik/DVS/lehre/DS/
+
+
+loeschen durch kopieren/verschieben ist dasselbe der kontrast ist loeschen durch verschmelzen

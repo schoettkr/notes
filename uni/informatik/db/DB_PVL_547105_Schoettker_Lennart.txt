@@ -1,0 +1,108 @@
+
+Datenbanken Grundlagen - PVL
+
+Name: Lennart Schöttker
+Matrikelnummer: 547105
+
+3.
+#+BEGIN_SRC sql
+  insert into Gesell values ('EASYJET', 'UK', 'Luton');
+
+  -- Adapt Bestand
+  update Bestand set gesell_bez = 'EASYJET' where gesell_bez = 'AIRBERLIN';
+
+  -- Adapt Angestellt
+  update Angestellt set gesell_bez = 'EASYJET' where gesell_bez = 'AIR BERLIN';
+
+  -- Remove Air Berlin
+  delete from Gesell where gesell_bez = 'AIR BERLIN';
+
+
+  -- Easy Jet Flugzeugflotte
+  select * from Bestand  natural join Maschine where gesell_bez = 'EASYJET';
+
+  -- Easy Jet Piloten und die Anzahl ihrer Fluege seit 01.01.2000
+select name, pinr, count(*) as flugAnzahl from pilot natural join Angestellt natural join Flug where gesell_bez = 'EASYJET' and datum > '01.01.2000' group by (pinr, name);
+#+END_SRC
+
+
+4.
+a) Wie viel verdienen die einzelnen Mitarbeiter? Die Ergebnisliste ist nach dem Gehalt aufsteigend zu sortieren.
+#+BEGIN_SRC sql
+select PNr, Name, Vorname, Gehalt from Personal order by Gehalt asc;
+#+END_SRC
+
+b) An welchen Orten arbeiten welche Mitarbeiter?
+#+BEGIN_SRC sql
+select PNr, Name, Vorname, Ort from Personal natural join Abteilung;
+#+END_SRC
+
+c) Wie heißen die Projektleiter und die von ihnen geleiteten Projekte?
+#+BEGIN_SRC sql
+select Personal.Name, Vorname, Projekt.Name from Personal join Projekt on Personal.PNr = Projekt.Leiter;
+#+END_SRC
+
+d) Wie viel verdienen die Mitarbeiter des Projektes, das vom Mitarbeiter mit der Personalnummer 50 geleitet wird, insgesamt?
+#+BEGIN_SRC sql
+select sum(gehalt) as Gesamtgehalt from Personal where PNr = (select PrNr from Zuordnung where PeNr = 50);
+#+END_SRC
+
+e) Wie hoch sind die Durchschnittsgehälter der beteiligten Mitarbeiter je Projekt?
+#+BEGIN_SRC sql
+select avg(gehalt) as Durchschnittsgehalt from Personal join Zuordnung on PeNr = PNr group by PrNr;
+#+END_SRC
+
+f) Benenne nur die Projekte, bei denen für alle Mitarbeiter gilt, dass sie mindestens 1000 EUR verdienen.
+#+BEGIN_SRC sql
+select Projekt.Name from Projekt join Zuordnung on PrNr = PNr join Personal on PNr = PeNr group by PrNr having min(gehalt > 1000);
+#+END_SRC
+
+g) Liste die Namen aller Projekte und aller Mitarbeiter auf, die an den Projekten arbeiten. Dabei sollen zuerst die Projekte mit dem höchsten Budget aufgelistet werden. Falls mehrere Mitarbeiter an einem Projekt arbeiten, sind diese alphabetisch nach ihrem Namen und Vornamen auszugeben.
+#+BEGIN_SRC sql
+select Projekt.Name, Personal.Name, Vorname from Projekt join Zuordnung on PrNr = PNr join Personal on Personal.PNr = PeNr order by budget desc, Personal.Name asc, Vorname asc;
+#+END_SRC
+
+5.
+a)
+Funktionale Abhängigkeiten:
+FlugNr+Flugabschnittnr -> Startflughafen_ID
+FlugNr+Flugabschnittnr -> Landeflughafen_ID
+FlugNr+Flugabschnittnr -> Startort
+FlugNr+Flugabschnittnr -> Landeort
+FlugNr+Flugabschnittnr -> Entfernung
+FlugNr+Flugabschnittnr -> Startzeit
+FlugNr+Flugabschnittnr -> Landezeit
+Startflughafen_ID -> Startort
+Startort -> Startflughafen_ID
+Landeflughafen_ID -> Landeort
+Landeort -> Landeflughafen_ID
+Startflughafen_ID+Landeflughafen_ID -> Entfernung
+Startort+Landeort -> Entfernung
+und triviale FD
+
+Kandidatenschlüssel:
+- FlugNr+Flugabschnittnr
+  
+b)
+Die Relation befindet sich in der 2.NF
+
+c)
+Es kann zu Einfügeanomalien kommen, wie bspw.:
+- es soll eine neue Strecke zwischen zwei Flughaefen gespeichert werden, aber ohne Start- und Landezeit (Nullwerte)
+- es soll ein weiterer Flug den Abschnitt zwischen Dresden und Frankfurt durchfliegen, die Daten betreffend Start- und Landeort sowie Entfernung werden erneut gespeichert (Rendundanz)
+
+Es kann zu Updateanomalien kommen, wie bspw.:
+- im ungewöhnlichen Fall, dass sich die Entfernung zwischen zwei Flughäfen verändert, müsste diese Änderung in mehreren Tupeln stattfinden (mögliche Ursache ein Flughafen wechselt den Standort innerhalb einer Stadt oder expandiert)
+- der Ort Frankfurt soll genauer spezifiziert werden als "Frankfurt (Oder)" / "Frankfurt am Main", da der gesamte Name des Ortes, ebenfalls in der Flugabschnitt Relation gespeichert wird, handelt es sich hier um eine Updateanomalie
+  
+Es kann zu Löschanomalien kommen, wie bspw.:
+- Ein Flug wird gecancelt und die zugehörigen Flugabschnitte sollen gelöscht werden; gleichzeitig gehen Informationen über die Entfernung zwischen Flughäfen verloren
+
+d)
+Flugabschnitt(Flugnr, FlugAbschnittnr, Startflughafen_ID, Landeflughafen_ID)
+
+Flughafen(ID, Ort)
+
+Fluginfo(Flugnr, Flugabschnittnr, Startzeit, Landezeit) [dies könnte man vllt auch weglassen und die Attribute in Flugabschnitt belassen, aber ich finde es so besser:D]
+
+Distanzen(Flughafen1ID, Flughafen2ID, Entfernung)

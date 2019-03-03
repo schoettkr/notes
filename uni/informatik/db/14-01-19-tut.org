@@ -1,0 +1,147 @@
+1a) Funktionale Abhaengigkeiten
+- Saal -> Anzahl 
+- Dozent -> Veranstaltung
+- Musterloesung:
+  - Veranstaltung -> Anzahl + Dozent
+  - Veranstaltung + Termin -> Saal
+  - Saal + Termin -> Veranstaltung
+  - Dozent + Termin -> Veranstaltung
+
+1b) Schlüsselkandidaten
+- Musterloesung:
+  - Veranstaltung + Termin + Hilfsmittel
+  - Saal + Termin + Hilfsmittel
+  - Termin + Dozent + Hilfsmittel
+    
+2a) Funktionale Abhaengigkeiten in Mengen
+- https://de.wikipedia.org/wiki/Funktionale_Abh%C3%A4ngigkeit
+- Musterloesung:
+  - wann ist F = G ? wenn F \subseteq G \vee G \subseteq F
+  - G \subseteq F wenn \forall x \in G: x \in F
+  - A+ = {A, C, D} \rightarrow A \rightarrow CD \in F
+  - E+ = {E,A,D,H,C} \rightarrow E \rightarrow AH \in F
+  - F \subseteq G wenn \forall x \in F: x \in G
+  - A+ = {A, C, D} AC \rightarrow C \in G
+  - AC+ = {A, C, D} \rightarrow AC \rightarrow D \in G
+  - E+ = {E, A, H, C, D} \rightarrow E \rightarrow AD \in G \vee E \rightarrow H \in G
+    
+\vee = und /\
+
+3a) 
+- nein weil E nicht bedingt wird
+- Musterloesung:
+  - AB+ = {A,B,C}
+  - nein da nicht alle Attribute davon abhaengen
+
+3b)
+- ja
+- ABD+ = {A,B,C,D,E} ist Superschluessel und kann Kandidatenschluessel sien, falls dieser minimal ist, d.h. {A,B,D} muss R voll funktional determinieren:
+- AB+ = {A,B,C}, AD+ = {A,D}, BD+ = {B,D}
+  
+
+4a) Schlüssel
+- (Gast_ID, Tag) 
+
+4b) mögliche Anomalien
+- Update-Anomalie: Name o. Vorname wird an einer Stelle geändert aber es gibt mehrere Tupel zu dieser Person (Redundant), Namensaenderung kann zu widerspruechlichen Daten fuehren
+- Einfuege-Anomalie: Ist ein Gast haeufiger zu Besuch werden Name u Vorname öfters erfasst was ein erholter Arbeitsaufwand und potentielle Fehlerquelle ist, dh. Einfuegen neuer Gaeste ist nur in Verbindung mit einer Zimmerbelegung moeglich
+- Loesch-Anomalie: mit dem Entfernen alter Belegungen werden gleichzeitig Informationen über Gaeste eliminiert
+
+4c) Zweite Normalform
+- neue Relation Gast(Gast_ID, Name, Vorname) und Beleg(Gast_ID, Zimmer_NR, Tag) identifizerbar über Gast_ID
+  
+5a)
+- Erste Normalform (jede Information bekommt eigene Spalte bzw ist atomar):
+  - R(PNr, Name, ANr, Bez, PrNr, PrName)
+- Zweite Normalform (volle funktionale Abhaengigkeit der Attribute von allen Schluesselattr):
+  - R(PNr, PrNr, ANr, Name)
+  - Projekt(PrNr, PrName)
+  - Abteilung(ANr, Bez)
+  - Musterloesung:
+    - Aufteilung von R wegen PNr->Name, PrNr-> PrName, PNr->ANr
+    - R1(PNr, PrNr)
+    - R2(PrNr, PrName)
+    - R3(PNr, Name, ANr, Bez)
+- Dritte Normalform (Aufloesung transitiver Abhaengigkeiten):
+  - Musterloesung:
+  - Aufteilung von R3 wegen PNr -> ANr -> Bez
+  - R31(Pnr, Name, ANr) 
+  - R32(ANr, Bez) 
+
+6a) Zweite Normalform?
+- Ja 2te Normalform weil Schluessel bestehen aus nur ein Attribut und somit alle anderen voll funktional abhängig davon
+  
+6b) Anomalien
+- Einfuege-Anomalie: Redundanz bei Postleitzahl -> Ort, Gast_ID -> Name
+  - Musterloesung: Informationen über einen neuen Gast darf erst nach Ausstellung der Rechnung aufgenommen werden
+- Update-Anomalie: Redundanz und Namensaenderung, Addressänderung kann zu inkonsistenten Daten führen
+- Loesch-Anomalie: Durch das Loeschen von Rechnungen gehen Daten über Gaeste verloren
+  
+6c) Dritte Normalform
+- Gast(Gast_ID, Name, PLZ, Ort, Straße)
+- Rechnung(RNr, Gast_ID, Betrag)
+- Musterloesung: Aufteilung von R wegen RNr -> Gast_ID -> (Name, PLZ, Ort, Strasse)
+  
+7a) 2NF
+PK = (Veranstaltung, Saal, Termin)
+- nicht in 2NF weil Doz_Id und Doz_Name nicht voll funktional abhaengig von PK 
+- R(Veranstaltung, Saal, Termin, Anzahl, Hilfsmittel, Doz_Id)
+- Dozent(Id, Name)
+
+
+7b) 3NF
+- siehe Schema 7a 
+  
+7c) BCNF (Boye Codd Normalform)
+
+Aufg 7  Musterloesung:
+- 1 NF: atomare Attr sind gegeben
+- 2 NF: Aufteilung von R wegen Veranstaltung -> Anzahl und Doz_ID -> Doz_Name
+  - R1(Veranstaltung, Saal, Termin, Doz_ID, Hilfsmittel)
+  - R2(Veranstaltung, Anzahl)
+  - R3(Doz_ID, Doz_name)
+- 3 NF: keine transitiven Abhaengigkeiten bei R1, R2, R3
+- BCNF: jede Determinante einer funktionalen Abhaengikeit ist Kandidatenschluessel der Relation \rightarrow Aufteilung von R1, wegen Veranstaltung -> Doz_ID und (Veranstaltung, Termin) -> Termin
+  - R11(Veranstaltung, Termin, Hilfsmittel)
+  - R12(Veranstaltung, Doz_ID)
+  - R13(Veranstaltung, Saal, Termin)
+    
+8a) 
+- nicht in der 3NF, da nichtmal in der 2NF
+- Projekt(ProjektNr, ProjektName)
+- Mitarbeiter(MitarbeiterNr, MitarbeiterName, Stunden)
+
+Musterloesung Aufg 8:
+- Schluessel(ProjektNr, MitarbeiterNr)
+- Relation ist nicht in 3NF, da sie nicht in 2NF ist, da funktionale Abhgk. ProjektNr -> ProjektName und MitarbeiterNr -> MitarbeiterName nicht voll vom Schluessel abhaengen
+- Überführung in 2NF durch Aufsplittung in 3 Relationen:
+- Projekt(Projektnr, Projektname)
+- Mitarbeiter(MitarbeiterNr, MitarbeiterName)
+- Mitarbeiter_Projekt(ProjektNr, MitarbeiterNr, Stunden)
+-> nun keine trans. Abhg mehr :)
+  
+
+9a)
+- R1(S1, S2, A1)
+  R2(S2, A3)
+  R3(A1, A2)
+- Musterloesung:
+  - 2NF: volle fkt Abhaengigkeit von allen *Schluesselattr*
+    - Aufteilen von R da S2 -> A3
+    - R1(S1, S2, A1, A2)
+    - R2(S2, A3)
+  - 3NF: keine *transitiven* Abhaengigkeiten
+    - Aufteilen von R1, da transitive Abhaengigkeit (S1, S2) -> A1 -> A2
+    - R11(S1, S2, A1)
+    - R12(A1, A2)
+
+
+Thema nächste Woche: Bäume
+
+
+    
+
+
+Gute Ressource: http://www.datenbanken-verstehen.de/
+
+  

@@ -1,0 +1,36 @@
+Aufgabe 1
+
+a)
+cartesian: Kunde x Auftrag = 10.000 * 100 -> (1000000/5*10)=20.000 Lesen und (1000000/3)=333.334 Schreiben
+
+selection: Name=KName ^ Ware = 'Kaffe'  -> Seiten die gelesen werden müssen 333.334; Schreiben: 50 / 3 = 17 
+
+projection: wir haben 50 tupel , von der projektion passen 50 auf eine seite: schreiben = 50/50 = 1 Seite
+
+Insgesamt: 353.351 (Lesen) + 333.352 (Schreiben) = 686.703 (Gesamt) Seitenzugriffe
+Zeit: 353.351 * 1ms + 333.352*2ms = 1020055 ms (17 min)
+
+b) Optimierung
+1.selection von ware = kaffe vor cartesian product ddurchfuerhen
+2. equijoin(KN=N) statt cartesian product
+   
+c) Faktor
+1. selection von ware = 10.000/10 = 1000 Lesen und 50 Tupel lesen = 5 Seiten schreiben
+2. equijoin: 5 auftrag * 20 kunden seiten = 100 seiten lesen (50/10*100/5) und 50/3 = 17 Seiten schreiben 
+3. projektion: wieder eine seite schrieben 50/50 = 1
+   
+Insgesamt: 1.117 (Lesen ) + 23 (Schreiben) = 1.140 (Gesamt) Seitenzugriffe
+1117 + 23* 2 = 1163ms (~1.2 sek)
+
+Optimierungsfaktor
+1020055ms/1163ms = 877
+
+Was koennte dran kommen?
+- Text gegeben UML erstellen (konzeptuelles Design) , Raute fuer tertiäre Beziehungen wiederholen, rekursive Beziehungen [Modellierung rekursiv wurde betont das es dran kommt wie im UML -> Relational Schmeas]
+- UML gegeben in konkretes Datenmodell also relatoinales Schema überfuehren ( Design)
+- Real Algebra: Anzahl/Wieviele berechenen wird wahrsch nich drankommen
+- Rel Algebra Umformulierung von Ausdruecken
+- Grad und Kardinalität
+- SQL
+- Normalisierung [wurde betont], funktionale Abhaengigkeit, minimale Schluessel, Superschluessel, wissenfragen ala unterschied kandidatenschluessel superschluessel, abhaengikeiten, anomalien, bedingungen der normalformen + boydd scott oder wie der mofo heist, es wird meist geswitched entweder 3 NF oder boy scott wird abgefragt (üben mit zb der einen Aufgabe 8) 
+- Baeume [wurde in der vorletzten uebung betont dass dran kommt]
