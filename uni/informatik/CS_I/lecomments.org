@@ -1,0 +1,15 @@
+
+        /* Note: Es ist eigentlich ein Widerspruch in der Spezifikation der Aufgabenstellung,
+                 dass bei quadratischer Fliesengröße, die erste Fliese immer eine "ganze" Fliese sein muss. 
+                 Dadurch wird nämlich implizit die Länge(Y) für die ganze Reihe festgelegt. Wenn die Raumlänge(Y) nun bspw. 50cm beträgt
+                 und die Fliesenlänge 15cm, dann ist 50/15 = 3.333 ja in der letzten Reihe nicht durch eine "ganze" Fliese  zu realisieren.
+                 Hier wäre eine Fliese von 1/3y = 5 nötig.
+                 Ich implementiere es so, dass die Länge auch bei quadr. Fliese in der letzten Reihe nur so lang ist wie nötig und nicht
+                 immer Y=1 sein muss, anders wäre der "Fliesenrechner" auch nicht zu viel zu gebrauchen
+        */
+
+            /* Note: Auch hier finde ich die Spezifikation leider wieder ziemlich vage. "Halbe" Fliese.
+             Eine Fliese lässt sich sowohl in X Richtung als auch in Y Richtung halbieren (weitere Kombination möglich), der einzige Clue wie
+             diese "Bedingung" zu interpretieren ist, kann/muss man dem Bild entnehmen. Eine klare, eindeutige Wortwahl wäre meiner Meinung nach
+             angebrachter gewesen -> Frustrierend!
+    */
