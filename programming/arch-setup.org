@@ -66,7 +66,7 @@ makepkg -si
 * Packages
 ** Essential packages
 #+BEGIN_SRC bash
-yay -S polybar termite feh google-chrome redshift zsh-autosuggestions neovim rofi
+yay -S polybar termite feh google-chrome chromium redshift zsh-autosuggestions neovim rofi
 #+END_SRC
 ** Setup (neo)vim
 However that should be done via current line in my config, but nevertheless:
@@ -350,6 +350,35 @@ export DOTNET_ROOT=$HOME/arch/pkgs/dotnet
 export PATH=$PATH:$HOME/arch/pkgs/dotnet
 #+END_SRC
 In emacs run =omnisharp-install-server=.
+
+** Ruby
+Install =rbenv= to manage ruby versions.
+#+BEGIN_SRC sh
+yay rbenv
+yay ruby-build # needed to install & compile ruby versions
+#+END_SRC
+Install a ruby version e.g version =2.6.1= (check which is the most current version beforehand)
+#+BEGIN_SRC sh
+rbenv install 2.6.1
+#+END_SRC
+Set the installed version to be the global default
+#+BEGIN_SRC sh
+rbenv global 2.6.1
+#+END_SRC
+Update the environment in accordance to the config
+#+BEGIN_SRC sh
+rbenv rehash
+#+END_SRC
+Verify the ruby version and also make sure that =eval "$(rbenv init -)"= is present in =.zshrc= for this to work:
+#+BEGIN_SRC sh
+ruby -v # => 2.6.1
+which ruby
+#+END_SRC
+*** Ruby Gems
+Some useful ruby gems to install globally:
+#+BEGIN_SRC sh
+gem install bundler pry byebug
+#+END_SRC
 
 
 * Tips & Tricks
