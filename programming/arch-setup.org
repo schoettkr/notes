@@ -384,6 +384,11 @@ Some useful ruby gems to install globally:
 #+BEGIN_SRC sh
 gem install bundler pry pry-doc byebug
 #+END_SRC
+*** Rails
+#+BEGIN_SRC sh
+gem install rails
+which rails
+#+END_SRC
 
 ** Postgres
 #+BEGIN_SRC sh
