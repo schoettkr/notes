@@ -377,7 +377,7 @@ which ruby
 *** Ruby Gems
 Some useful ruby gems to install globally:
 #+BEGIN_SRC sh
-gem install bundler pry byebug
+gem install bundler pry pry-doc byebug
 #+END_SRC
 
 
