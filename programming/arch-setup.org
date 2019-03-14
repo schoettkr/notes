@@ -385,6 +385,34 @@ Some useful ruby gems to install globally:
 gem install bundler pry pry-doc byebug
 #+END_SRC
 
+** Postgres
+#+BEGIN_SRC sh
+yay postgresql
+sudo -u postgres -i initdb --locale $LANG -E UTF8 -D /var/lib/postgres/data
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+sudo -u postgres -i
+psql # might not work yet
+#+END_SRC
+When in postgres shell you can:
+#+BEGIN_SRC sh
+createuser --interactive -P
+#+END_SRC
+And/or create database
+#+BEGIN_SRC sh
+createdb -O octoprint octoprint_filamentmanager
+#+END_SRC
+Running =psql= works in psql-shell (after =sudo -u postgres -i=):
+#+BEGIN_SRC sh
+psql
+\conninfo # for connection information
+#+END_SRC
+See these links when encountering problems:
+- https://github.com/malnvenshorn/OctoPrint-FilamentManager/wiki/Setup-PostgreSQL-on-Arch-Linux
+- https://help.ubuntu.com/community/PostgreSQL
+  
+Then may want to install =sqlite= (or =postico= on mac)
+
 
 * Tips & Tricks
 ** Use more cores for compiling packages (mkkpkg)
