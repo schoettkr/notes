@@ -75,6 +75,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #+END_SRC
 Then open nvim and run =:PlugInstall:=
+** File Manager
+I survive without a file manager but sometimes it's just nice to have one and manage some files via mouse. For this purpouse install
+#+BEGIN_SRC sh
+yay spacefm
+#+END_SRC
 ** Emacs
 #+BEGIN_SRC bash
 cd ~
