@@ -555,3 +555,5 @@ EndSection
 To find out what a command is aliased to enter =type {command}=, e.g =type l=
 ** Change folder permission from root to user
 =sudo chown -R eoshiru FOLDERNAME=
+** Writing .iso to usb
+Make sure the device/usb stick you want to write to is unmounted (=sudo umount /dev/sdb=) and then execute ~sudo dd if=file.iso of=/dev/sdb~.
