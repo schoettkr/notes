@@ -117,6 +117,7 @@ yay -S compton
 
 ** Video Player
 Just install =mpv= no questions!!
+To resume video playback run =echo "save-position-on-quit" >> ~/.config/mpv/mpv.conf=
 
 ** Screenshots
 To take screenshots =scrot= is a nice minimal utility. Install it and use it as follows:
