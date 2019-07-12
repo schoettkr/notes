@@ -1,0 +1,12 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdftex 2019.4.29)  11 MAY 2019 22:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode\input aufgabe_d.texjk
+
+! Emergency stop.
+<*> \nonstopmode\input aufgabe_d.texjk
+                                      
+*** (job aborted, file error in nonstop mode)
+
+!  ==> Fatal error occurred, no output PDF file produced!
