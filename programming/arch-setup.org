@@ -596,3 +596,10 @@ Run bluetoothctl (be sure to have systemctl status bluetooth running or start it
 - =power on=
 - =scan= 
 - =connect= 1F:11
+** Synchronizing Files/Folders
+Install =rsync=. To synchronize a folder =src= to =dest= run:
+#+BEGIN_SRC  bash
+rsync -a {srcPath}/ {destPath}/
+#+END_SRC
+Dont forget the trailing slashes, else the first folder would be copied into the second!
+If deletions should be synced as well specify =d= flag as well.
