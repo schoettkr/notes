@@ -322,6 +322,16 @@ Install gdb (GNU debugger that can be used for many languages_
 #+BEGIN_SRC bash
 yay gdb
 #+END_SRC
+In Emacs gdb debug mode use:
+- =break LL= to set breakpoint
+- =delete XY= to delete breakpoint
+- =run= to start the program
+- =print XY= to print once
+- =display XY= to print repeatedly automatic
+- =print *(Student *)0x55555556b6b0= eg to print value at memory address 0x55555556b6b0 as a Student
+- =x/12xb m->data= eg to examine memory of int array data and show the first 3 ints stored there / 12 bytes (3 integers a 4 bytes = 12)
+
+See here for more on gdb http://kirste.userpage.fu-berlin.de/chemnet/use/info/gdb/gdb_9.html
 
 ** Javascript
 Install the node version manager to manage different nodejs versions:
