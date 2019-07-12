@@ -61,6 +61,14 @@ class DynamicArray
   end
 
   def unshift(val)
+    resize! if count + 1  == capacity
+    offset = 0
+    @count.times do
+      self[@count - offset] = self[@count - offset - 1]
+      offset +=  1
+    end
+    self[0] = val
+    @count += 1
   end
 
   def pop
@@ -73,9 +81,14 @@ class DynamicArray
 
   def shift
     return nil if @count == 0
-    first_val = @store[0]
-    @count -= 1
+    first_val = self.first
+    offset = 0
+    @count.times do
+      self[offset] = self[offset + 1]
+      offset +=  1
+    end
     
+    @count -= 1
     return first_val
   end
 
