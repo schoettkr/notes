@@ -88,6 +88,8 @@ git clone https://github.com/schoettkr/Terra.git .emacs.d
 yay -S emacs
 #+END_SRC
 
+** VS Code
+Install =yay -S code= and the extension "Settings Sync". Regenerate the github token and then copy the settings gist id so that the settings download.
 ** Blogging
 #+BEGIN_SRC bash
 yay -S nikola texlive-core pygmentize
