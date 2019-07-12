@@ -429,6 +429,11 @@ createuser --interactive -P
 And/or create database
 #+BEGIN_SRC sh
 createdb -O octoprint octoprint_filamentmanager
+# or
+createdb bank 
+# in the shell to create a db with the name "bank"
+# you can then connect to the db via 
+psql -U postgres bank # "postgres" is username you coulve used "eoshiru" or left it off altogether
 #+END_SRC
 Running =psql= works in psql-shell (after =sudo -u postgres -i=):
 #+BEGIN_SRC sh
