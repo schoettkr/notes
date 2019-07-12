@@ -551,6 +551,7 @@ To disable an automatically started service:
 sudo systemctl disable application.service
 #+END_SRC
 ** Formatting and mounting of external drives
+First install =ntfs-3g= because by default only reading not writing is supported for ntfs partition.
 ** Changing "os name"
 Edit =/etc/os-release= to e.g:
 #+BEGIN_SRC 
