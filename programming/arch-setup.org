@@ -19,7 +19,8 @@ The connection config files are usually in =/etc/NetworkManager/system-connectio
 
 
 * Window manager
-The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.
+Update: Now using =awesome=. Install =awesome-freedesktop= and =lain= as well (additionally roboto font too).
++The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.+
 
 
 
