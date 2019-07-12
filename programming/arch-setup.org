@@ -259,6 +259,9 @@ And then enter credentials when prompted.
 ** Heroku
 Install the =heroku-cli=. Use =heroku git:remote -a REMOTE-REPO-NAME= to add heroku remote to an existing project.
 
+** Torrent
+Use the =transmission-gui=
+
 
 * Homefolder structure
 Create the following folder structure in the home directory:
