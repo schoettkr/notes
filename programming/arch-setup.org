@@ -262,6 +262,9 @@ Install the =heroku-cli=. Use =heroku git:remote -a REMOTE-REPO-NAME= to add her
 ** Torrent
 Use the =transmission-gui=
 
+** Database GUI
+- SQL: Dbeaver
+
 
 * Homefolder structure
 Create the following folder structure in the home directory:
