@@ -552,6 +552,8 @@ sudo systemctl disable application.service
 #+END_SRC
 ** Formatting and mounting of external drives
 First install =ntfs-3g= because by default only reading not writing is supported for ntfs partition.
+** Mount Android device
+Install =simple-mtpfs= and run =simple-mtpfs --device 1 ~/mnt= (maybe after restart). Then in file manager (eg =spacefm=) navigate to =mtp://=.
 ** Changing "os name"
 Edit =/etc/os-release= to e.g:
 #+BEGIN_SRC 
