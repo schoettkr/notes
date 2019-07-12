@@ -588,3 +588,11 @@ To find out what a command is aliased to enter =type {command}=, e.g =type l=
 =sudo chown -R eoshiru FOLDERNAME=
 ** Writing .iso to usb
 Make sure the device/usb stick you want to write to is unmounted (=sudo umount /dev/sdb=) and then execute ~sudo dd if=file.iso of=/dev/sdb~.
+** Bluetooth
+Run bluetoothctl (be sure to have systemctl status bluetooth running or start it otherwise) 
+- =show= lists devices
+- =select= select bluetooth on machine via MAC (C0:18 )
+- =agent on=
+- =power on=
+- =scan= 
+- =connect= 1F:11
