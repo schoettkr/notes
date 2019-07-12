@@ -1,0 +1,49 @@
+Module:
+- Datenstrukturen
+- Informatik II
+- Proseminar Informatik (?)
+- Rechnernete
+- Einfuehrung Kuenstliche Intelligenz (?)
+- Datenbanken & Webtechniken
+- Datenbanken & Objektorientierung (?)
+- Betriebssysteme
+- Sicherheit Verteilter Systeme (?)
+- Mediencodierung (?)
+
+    
+Datenstrukturen
+- Vorlesungen: Donnerstag & Freitag 11:30 bis 13:00
+- Uebungen: divers an Montags und Donnerstags
+  
+Info II
+- Vorlesung: Donnerstag 07:30 - 09:00
+- Uebungen: divers an Montag Mittwoch Donnerstag Freitag
+  
+Rechnernetze
+- Vorlesung: Dienstag 11:30-13:00
+- Uebung: Termine 2x Donnerstags, 1 x Mittwochs
+  
+Sicherheit Verteilter Systeme
+- Vorlesung: Dienstag 13:30-15:00
+- Uebung: Mittwoch 13:30 - 15:00
+  
+500110 Proseminar Informatik (255030-D110) -> keine Angaben
+- Ergaenzung es gibt diverse Proseminare dies sollte wohl bedacht sein
+- es scheint als waere es keine schlechte Idee dieses Sem Proseminar zu machen
+
+Datenbaken & Webtechniken 
+Vorlesung: Mittwoch 09:15 - 10:45
+Uebung: Termine Dienstag 07:30-09:00 oder Donnerstag 09:15-10:45
+
+Betriebssysteme
+- Vorlesung: Donnerstag 11:30-13:00 -> Kollaps with Datenstrukturen -.-
+- Uebungen: Freitag 09:30-11:00 o Montag 13:45-15:15
+  
+Einfuehrung KI
+- Vorlesung: Montag 11:30-13:00
+- Uebung: Mittwoch o Donnerstag o Freitag
+  
+Mediencodierung
+- klingt eig ganz gut
+- Vorlesung: Donnerstag 13:45-15:15
+- Uebungen: sehr divers
