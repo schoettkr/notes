@@ -21,6 +21,7 @@ The connection config files are usually in =/etc/NetworkManager/system-connectio
 * Window manager
 Update: Now using =awesome=. Install =awesome-freedesktop= and =lain= as well (additionally roboto font too).
 +The anarchy installer allowed me to install my window manager of choice - =bswpm= - already. It also installed =sxhkd= which is used as a hotkey daemon to setup keyboard shortcuts.+
++Also install awesome-revelation-git which is awesome (lel) for switching between clients.+ (\rightarrow not as useful as I thought)
 
 
 
@@ -446,6 +447,10 @@ See these links when encountering problems:
   
 Then may want to install =sqlite= (or =postico= on mac)
 
+** Other
+*** HTTP Rest Client
+Use insomnia which can be installed through snap.
+
 
 * Tips & Tricks
 ** Use more cores for compiling packages (mkkpkg)
@@ -603,3 +608,15 @@ rsync -a {srcPath}/ {destPath}/
 #+END_SRC
 Dont forget the trailing slashes, else the first folder would be copied into the second!
 If deletions should be synced as well specify =d= flag as well.
+** Youtube-DL
+1. Check the formats
+=youtube-dl -F "https://www.youtube.com/watch?v=9cnI05qQpdo"=
+
+2. Get the timestamp from where the download should begin
+- For example via "Copy video Video URL at current time" in YT
+
+
+3. Execute
+- =ffmpeg $(youtube-dl -g -f 22 'https://www.youtube.com/watch?v=kn_eCjXhWdo' | sed "s/.*/-ss 197 -i &/") -t 4 -c copy monte.mp4=
+- where =22= is the format you want, =197= is the start second and =4= is the duration in second from the starting point onwards
+
