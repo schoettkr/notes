@@ -97,6 +97,7 @@ yay -S nikola texlive-core pygmentize
 #+END_SRC
 
 ** Password management
+Import the password file (library -> docs -> passwords.kdbx)
 Use keepassxc https://github.com/keepassxreboot/keepassxc
 #+BEGIN_SRC 
 yay -S keepassxc
