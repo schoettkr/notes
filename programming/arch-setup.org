@@ -461,7 +461,7 @@ In =/etc/makepkg.conf= change ~MAKEFLAGS="-jX"~ where =X= is the number of cores
 ** Maintenance
 #+BEGIN_SRC sh
 sudo rm -rf /var/cache/pacman/pkg/*
-sudo rm -rf var/cache/man/*
+sudo rm -rf /var/cache/man/*
 ncdu -x / # Use as root to see where space is taken.
 pacman -Qdt # to see orphan packages
 systemctl --failed # check for failed systemd services
@@ -609,6 +609,13 @@ rsync -a {srcPath}/ {destPath}/
 #+END_SRC
 Dont forget the trailing slashes, else the first folder would be copied into the second!
 If deletions should be synced as well specify =d= flag as well.
+*** Sync/Backup Commands
+#+BEGIN_SRC sh
+# Copy banking documents
+rsync -a /home/eoshiru/library/docs/banking/ /run/media/eoshiru/Elements/library/docs/banking/
+
+#+END_SRC
+
 ** Youtube-DL
 1. Check the formats
 =youtube-dl -F "https://www.youtube.com/watch?v=9cnI05qQpdo"=
@@ -620,8 +627,61 @@ If deletions should be synced as well specify =d= flag as well.
 3. Execute
 - =ffmpeg $(youtube-dl -g -f 22 'https://www.youtube.com/watch?v=kn_eCjXhWdo' | sed "s/.*/-ss 197 -i &/") -t 4 -c copy monte.mp4=
 - where =22= is the format you want, =197= is the start second and =4= is the duration in second from the starting point onwards
+  
+To download the audio mp3 only run:
+=youtube-dl --extract-audio --audio-format mp3 LINK=
 
+** System Time
+The correct way to do this would be by enabling ntpd.service via systemd.
 
+# pacman -Syu ntp Installed the required package
+
+# systemctl enable ntpd.service Enable it at boot so every time you boot the system the clock will be synchronized
+
+# systemctl start ntpd.service Start it immediately
+
+One could also run ntpd -qg as root.
+
+** Screenlock
+Install xtrlock
+
+** List files and copy
+To list files by modified date and copy them somewhere run:
+#+BEGIN_SRC sh
+cp -- `ls -tr --quoting-style={escape,shell,c}` DESTINATION_PATH
+#+END_SRC
+- =--= to =cp= signals that there are no more flags coming (from dashes in filename for example)
+- =-tr= sorts by time and reverses
+- =quoting-style= applies double quotes instead of single quoutes (required by cp command)
+
+Edit: theoretically the above should work but it doesn't, this is what get's the job done:
+#+BEGIN_SRC sh
+ls --quoting-style={escape,shell,c} -tr . | xargs -I{} cp "{}" DESTINATION_PATH
+#+END_SRC
+(This is what I exactly ran from the folder with all the files I wanted:
+#+BEGIN_SRC sh
+ls --quoting-style={escape,shell,c} -tr | xargs -I{} cp "{}"/mnt/SandiskSD/music/
+#+END_SRC
+)
+** Find and delete duplicates
+To find duplicates
+#+BEGIN_SRC 
+fdupes .  
+#+END_SRC
+To delete duplicates
+#+BEGIN_SRC sh
+fdupes -d
+#+END_SRC
+To skip prompt add =-N= (dont do that)
+
+** Recursively search & replace in Emacs
+1. M-x find-name-dired: you will be prompted for a root directory and a filename pattern.
+2. Press t to "toggle mark" for all files found.
+3. Press Q for "Query-Replace in Files...": you will be prompted for query/substitution regexps.
+4. Proceed as with query-replace-regexp: SPACE to replace and move to next match, n to skip a match, etc.
+5. Press C-x s to save buffers. (You can then press y, n or ! to save all at once)
+
+   
 * Current List of Installed Packages
 alsa-utils
 android-tools
