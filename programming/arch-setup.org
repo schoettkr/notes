@@ -1,4 +1,4 @@
-1. Use something like anarchy linux (arch installer) to get up running quickly. The steps I've written down and that always worked as well as what is in the arch wiki didn't work the last time I tried on my laptop that's why I resorted to an installer. Usually I prefer to do everything myself but I didn't succeed and had no time left so I went with anarchy-linux as an installer, that is pretty vanilla anyway. They have different options, I went with the one for 'advanced users' which gave me the most customizability (basically everything I cared for anyway was configurable through this).
+1. Use something like archifi, architect or anarchy linux (arch installer) to get up running quickly. The steps I've written down and that always worked as well as what is in the arch wiki didn't work the last time I tried on my laptop that's why I resorted to an installer. Usually I prefer to do everything myself but I didn't succeed and had no time left so I went with anarchy-linux as an installer, that is pretty vanilla anyway. They have different options, I went with the one for 'advanced users' which gave me the most customizability (basically everything I cared for anyway was configurable through this).
 
 * Internet connection
 It is important to have an working internet connection. This is easily achieved by opening an Wi-Fi hotspot from phone (Tethering) and connecting via =wpa_supplicant -B -i {interfaceName} -c <(wpa_passphrase '{SSID}' {passphrase})=. The interface can be recieved via =ifconfig= or =ip link=. Full example command: =wpa_supplicant -B -i wlp3s0 -c <(wpa_passphrase 'Y6 Max' a1b2d3)=. However using my phone's wifi hotspot was/is incredibly slow so that wasnt/isnt really practical. It is enough to use =curl= for a small file, as needed in the following section!
@@ -70,6 +70,7 @@ makepkg -si
 #+BEGIN_SRC bash
 yay -S polybar termite feh google-chrome chromium redshift zsh-autosuggestions neovim rofi
 #+END_SRC
+Tip: Use DuckDuckGoog as chrome search engine
 ** Setup (neo)vim
 However that should be done via current line in my config, but nevertheless:
 #+BEGIN_SRC bash
@@ -316,15 +317,18 @@ Install the Clang compiler which is a compiler/frontend for C family languages b
 #+BEGIN_SRC bash
 yay -S clang
 #+END_SRC
-Install cquery which is needed for emacs-cquery and lsp mode
+
+Update: Install =ccls= instead!
++Install cquery which is needed for emacs-cquery and lsp mode+
 #+BEGIN_SRC bash
 yay -S cquery
 #+END_SRC
+
 Install gdb (GNU debugger that can be used for many languages_
 #+BEGIN_SRC bash
 yay gdb
 #+END_SRC
-In Emacs gdb debug mode use:
+In Emacs gdb debug mode use OR use =nemiver= or =ddd= or someother graphical debugger:
 - =break LL= to set breakpoint
 - =delete XY= to delete breakpoint
 - =run= to start the program
@@ -334,6 +338,27 @@ In Emacs gdb debug mode use:
 - =x/12xb m->data= eg to examine memory of int array data and show the first 3 ints stored there / 12 bytes (3 integers a 4 bytes = 12)
 
 See here for more on gdb http://kirste.userpage.fu-berlin.de/chemnet/use/info/gdb/gdb_9.html
+
+*** Compilations
+Assembly file:
+#+BEGIN_SRC sh
+g++ -S Math.cpp
+#+END_SRC
+
+Preprocessed file without linking:
+#+BEGIN_SRC sh
+g++ Math.cpp -c -E -P -o Math.cc
+#+END_SRC
+
+Compile without linking:
+#+BEGIN_SRC sh
+g++ -g Math.cpp -o Math -c
+#+END_SRC
+
+Compile and link:
+#+BEGIN_SRC sh
+g++ -g Math.cpp -o Math
+#+END_SRC
 
 ** Javascript
 Install the node version manager to manage different nodejs versions:
@@ -479,8 +504,6 @@ Since =.zshenv= is always sourced, it often contains exported variables that sho
 =.zlogout= is sometimes used to clear and reset the terminal.
 ** Ingoring aliases
 To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
-** Updating and upgrading
-** Configure touchpad
 ** SSH
 Check for existing ssh keys:
 #+BEGIN_SRC bash
@@ -560,6 +583,8 @@ sudo systemctl disable application.service
 First install =ntfs-3g= because by default only reading not writing is supported for ntfs partition.
 ** Mount Android device
 Install =simple-mtpfs= and run =simple-mtpfs --device 1 ~/mnt= (maybe after restart). Then in file manager (eg =spacefm=) navigate to =mtp://=.
+- Note: the folder =~/mnt= needs to exist before!
+- to unmount run =fusermount -u ~/mnt=
 ** Changing "os name"
 Edit =/etc/os-release= to e.g:
 #+BEGIN_SRC 
@@ -609,6 +634,31 @@ rsync -a {srcPath}/ {destPath}/
 #+END_SRC
 Dont forget the trailing slashes, else the first folder would be copied into the second!
 If deletions should be synced as well specify =d= flag as well.
+Usually the -t flag which is included in the -a flag syncs modification time as well, but in case it did not work try the following:
+#+BEGIN_SRC bash
+touch -m -r source/path/file dest/path/file
+#+END_SRC
+that reads the timestamp from /one file/ into another /file/. Look on google for automating this if needed or use a python script like
+#+BEGIN_SRC python
+#!/usr/bin/python
+
+import os
+import sys
+
+for directory,subdirs,files in os.walk('.'):
+    pathes=subdirs+files
+    for path in pathes:
+        fullpath=os.path.join(directory,path)
+        target_path=os.path.join(sys.argv[1],fullpath)
+        mtime=os.lstat(fullpath).st_mtime
+        print('touching',target_path,':',)
+        try:
+            os.utime(target_path,(mtime,mtime))
+            print('OK')
+        except:
+            print('FAILED')
+#+END_SRC
+which has to be run from the source folder and the destinaiton is the first argument like: =cd source; python ~/timescript.py dest/folder/=
 *** Sync/Backup Commands
 #+BEGIN_SRC sh
 # Copy banking documents
@@ -633,18 +683,20 @@ To download the audio mp3 only run:
 
 ** System Time
 The correct way to do this would be by enabling ntpd.service via systemd.
-
-# pacman -Syu ntp Installed the required package
-
-# systemctl enable ntpd.service Enable it at boot so every time you boot the system the clock will be synchronized
-
-# systemctl start ntpd.service Start it immediately
-
+pacman -Syu ntp Installed the required package
+systemctl enable ntpd.service Enable it at boot so every time you boot the system the clock will be synchronized
+systemctl start ntpd.service Start it immediately
 One could also run ntpd -qg as root.
-
+#+BEGIN_SRC sh
+systemctl start ntpd.service
+ntpd -qg
+#+END_SRC
+   
 ** Screenlock
 Install xtrlock
 
+** HTML to PDF
+Use =wkhtmltopdf HTMLFILENAME PDFOUTPUTFILENAME= or use the browser's print feature
 ** List files and copy
 To list files by modified date and copy them somewhere run:
 #+BEGIN_SRC sh
@@ -681,7 +733,7 @@ To skip prompt add =-N= (dont do that)
 4. Proceed as with query-replace-regexp: SPACE to replace and move to next match, n to skip a match, etc.
 5. Press C-x s to save buffers. (You can then press y, n or ! to save all at once)
 
-   
+
 * Current List of Installed Packages
 alsa-utils
 android-tools
