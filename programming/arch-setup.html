@@ -1,0 +1,2188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-02-01 Sat 11:15 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="eo shiru" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type='text/css'>
+html {
+  font-size: 62.5%;
+  font-family: serif; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem; } }
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
+hr {
+  border-color: #2c8898; }
+
+a {
+  text-decoration: none;
+  color: #2c8898; }
+  a:hover {
+    color: #982c61;
+    border-bottom: 2px solid #4a4a4a; }
+
+ul {
+  padding-left: 1.4em; }
+
+li {
+  margin-bottom: 0.4em; }
+
+blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2c8898; }
+
+img {
+  max-width: 100%; }
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a; }
+  input:focus, textarea:focus {
+    border: 1px solid #2c8898; }
+
+textarea {
+  width: 100%; }
+
+.button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #2c8898;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #2c8898;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
+    cursor: default;
+    opacity: .5; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
+    background-color: #982c61;
+    border-color: #982c61;
+    color: #f9f9f9;
+    outline: 0; }
+
+textarea, select, input[type] {
+  color: #4a4a4a;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #2c8898;
+    outline: 0; }
+
+input[type='checkbox']:focus {
+  outline: 1px dotted #2c8898; }
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+   </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7cf425f">1. Internet connection</a>
+<ul>
+<li><a href="#orgd08dfd4">1.1. Eduroam</a></li>
+</ul>
+</li>
+<li><a href="#org986736a">2. Window manager</a></li>
+<li><a href="#org3dada23">3. Dotfiles</a></li>
+<li><a href="#org89c7fea">4. Package manager</a></li>
+<li><a href="#orgeb4f749">5. Packages</a>
+<ul>
+<li><a href="#org76efb30">5.1. Essential packages</a></li>
+<li><a href="#org3640dc0">5.2. Setup (neo)vim</a></li>
+<li><a href="#org407e94f">5.3. File Manager</a></li>
+<li><a href="#org82de67d">5.4. Emacs</a></li>
+<li><a href="#orga6cb8f7">5.5. VS Code</a></li>
+<li><a href="#org99906a1">5.6. Blogging</a></li>
+<li><a href="#org85e16bf">5.7. Password management</a></li>
+<li><a href="#orgb4725a8">5.8. Reference managment</a></li>
+<li><a href="#orgaecedb6">5.9. Window compositor</a></li>
+<li><a href="#org3fd94cb">5.10. Video Player</a></li>
+<li><a href="#orga9dcdcd">5.11. Screenshots</a></li>
+<li><a href="#orge50fbad">5.12. Document Viewer</a></li>
+<li><a href="#org9d3f760">5.13. Ebook Management</a></li>
+<li><a href="#org621a374">5.14. Calculator</a></li>
+<li><a href="#orgbcde969">5.15. IRC</a></li>
+<li><a href="#org6ad700e">5.16. VPN (Uni etc)</a></li>
+<li><a href="#org8115b94">5.17. Heroku</a></li>
+<li><a href="#orgd7b9d69">5.18. Torrent</a></li>
+<li><a href="#org6739dfb">5.19. Database GUI</a></li>
+</ul>
+</li>
+<li><a href="#org3a0d636">6. Homefolder structure</a></li>
+<li><a href="#org19d2fc8">7. Programming</a>
+<ul>
+<li><a href="#orgff22b26">7.1. General</a></li>
+<li><a href="#org72dc0a6">7.2. C/C++</a>
+<ul>
+<li><a href="#orgd593498">7.2.1. Compilations</a></li>
+</ul>
+</li>
+<li><a href="#org706effe">7.3. Javascript</a></li>
+<li><a href="#org18eb993">7.4. Go</a></li>
+<li><a href="#orga3abb4b">7.5. C#</a></li>
+<li><a href="#org7790237">7.6. Ruby</a>
+<ul>
+<li><a href="#orga651ce6">7.6.1. Ruby Gems</a></li>
+<li><a href="#org0303525">7.6.2. Rails</a></li>
+</ul>
+</li>
+<li><a href="#orgb49ee36">7.7. Postgres</a></li>
+<li><a href="#orge314b64">7.8. Other</a>
+<ul>
+<li><a href="#orgc65b92f">7.8.1. HTTP Rest Client</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org29bdb22">8. Tips &amp; Tricks</a>
+<ul>
+<li><a href="#org3fe3bf9">8.1. Use more cores for compiling packages (mkkpkg)</a></li>
+<li><a href="#org1b1b6fd">8.2. Sort/update pacman mirrors</a></li>
+<li><a href="#orgdad5505">8.3. Maintenance</a></li>
+<li><a href="#org148b0b4">8.4. Primer on zshell files</a></li>
+<li><a href="#org2bacc47">8.5. Ingoring aliases</a></li>
+<li><a href="#org389a9bd">8.6. Updating and upgrading</a></li>
+<li><a href="#orgef8ecd5">8.7. Configure touchpad</a></li>
+<li><a href="#orgacdc9f6">8.8. SSH</a></li>
+<li><a href="#org1fd5b63">8.9. GPG</a></li>
+<li><a href="#org84880cf">8.10. Services</a></li>
+<li><a href="#org4f4d34b">8.11. Formatting and mounting of external drives</a></li>
+<li><a href="#org943ee42">8.12. Mount Android device</a></li>
+<li><a href="#org5f1530f">8.13. Changing "os name"</a></li>
+<li><a href="#orgb35c417">8.14. Touchpad</a></li>
+<li><a href="#org543797a">8.15. Source of an alias</a></li>
+<li><a href="#org0e56f3a">8.16. Change folder permission from root to user</a></li>
+<li><a href="#org0ad4b7e">8.17. Writing .iso to usb</a></li>
+<li><a href="#org106d5be">8.18. Bluetooth</a></li>
+<li><a href="#org686bc8b">8.19. Synchronizing Files/Folders</a>
+<ul>
+<li><a href="#orga97b566">8.19.1. Sync/Backup Commands</a></li>
+</ul>
+</li>
+<li><a href="#orgcb8b558">8.20. Youtube-DL</a></li>
+<li><a href="#org69676e7">8.21. System Time</a></li>
+<li><a href="#org3271ced">8.22. Screenlock</a></li>
+<li><a href="#org0f1597a">8.23. List files and copy</a></li>
+<li><a href="#orgc3a79fb">8.24. Find and delete duplicates</a></li>
+<li><a href="#orgf8bccc2">8.25. Recursively search &amp; replace in Emacs</a></li>
+<li><a href="#org79748d2">8.26. Sync system clock time and date</a></li>
+</ul>
+</li>
+<li><a href="#org6ae2969">9. Current List of Installed Packages</a></li>
+</ul>
+</div>
+</div>
+<ol class="org-ol">
+<li>Use something like archifi, architect or anarchy linux (arch installer) to get up running quickly. The steps I've written down and that always worked as well as what is in the arch wiki didn't work the last time I tried on my laptop that's why I resorted to an installer. Usually I prefer to do everything myself but I didn't succeed and had no time left so I went with anarchy-linux as an installer, that is pretty vanilla anyway. They have different options, I went with the one for 'advanced users' which gave me the most customizability (basically everything I cared for anyway was configurable through this).</li>
+</ol>
+
+<div id="outline-container-org7cf425f" class="outline-2">
+<h2 id="org7cf425f"><span class="section-number-2">1</span> Internet connection</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+It is important to have an working internet connection. This is easily achieved by opening an Wi-Fi hotspot from phone (Tethering) and connecting via <code>wpa_supplicant -B -i {interfaceName} -c &lt;(wpa_passphrase '{SSID}' {passphrase})</code>. The interface can be recieved via <code>ifconfig</code> or <code>ip link</code>. Full example command: <code>wpa_supplicant -B -i wlp3s0 -c &lt;(wpa_passphrase 'Y6 Max' a1b2d3)</code>. However using my phone's wifi hotspot was/is incredibly slow so that wasnt/isnt really practical. It is enough to use <code>curl</code> for a small file, as needed in the following section!
+</p>
+</div>
+<div id="outline-container-orgd08dfd4" class="outline-3">
+<h3 id="orgd08dfd4"><span class="section-number-3">1.1</span> Eduroam</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Because I don't have my own internet access and have to rely on the university's internet access via eduroam - things of course have to be more complicated. Quickest solution that I found was uploading an <code>.tar</code> archive that contains the targeted <code>wpa_supplicant.conf</code> (without the passphrase/identity ofc) and the required certificate (e.g <code>ca.pem</code>) to transfer.sh (awesome service!) from another, already setup machine.
+</p>
+
+<p>
+On the target device now boot the iso via usb and <code>curl -O https://transfer.sh/xyz/abc.tar</code>, extract the archive via <code>tar -xf abc.tar</code> and edit the <code>wpa_supplicant.conf</code> with e.g nano to include the passphrase/identity as well as the path to the certificate.
+</p>
+
+<p>
+Then run <code>wpa_supplicant -i {interfaceName} -c {path/to/wpa_supplicant.conf}</code>, in my case that was <code>wpa_supplicant -i wlp3s0 -c /root/eduroam-config/wpa_supplicant.conf</code>. If everything goes well the connection will now be established. In my case after <code>CTRL-EVENT-CONNECTED</code> showed up I knew it worked, however I didn't get back to the prompt and it stayed as is. I thought the best idea is to <code>ctrl-z</code>, but as it turns out that suspends the process and the connection will be gone. I thought that this puts the process in background :D. It would probably have been possible to detach from the process via <code>&amp;</code> but I didnt test that because I ended up just running <code>wpa_supplicant</code> on the 1st virtual console and switching to another virtual console (tty2) via <code>Ctrl-Alt-F2</code>. Okay now we're set (<code>ping google.com</code> to verify)!
+</p>
+
+<p>
+Another problem that occured was fixed by searching for the pid of <code>wpa_supplicant</code> (was running from teathering with phone )with <code>top</code> and killing it before runnig wpa<sub>supplicant</sub> withthe configuration file. If that doesnt help to kill a connection thats already in place, set the interface down and up with <code>ip link set wlp3s0 down</code>. If already on the installed system use <code>sudo</code>!
+</p>
+
+<p>
+Alternatively use <code>nmcli device wifi connect &lt;SSID&gt; password &lt;passphrase&gt;</code> (or <code>wifi-menu</code>) when the system is installed because Internet again is required to first obtain dotfiles and then packages.
+</p>
+
+<p>
+With <code>nm-applet</code> connecting to wifis is relatively easy, however it is buggy with for example eduroam. A workaround is to click <code>connect to hidden wifi</code> and enter the ssid as well the rest manually. Also make sure that if using <code>NetworkManager</code> that the <code>dhcpcd</code> service is not running / enabled on default (check the Services section in the Tips &amp; Tricks part).
+</p>
+
+<p>
+The connection config files are usually in <code>/etc/NetworkManager/system-connections</code> (may need to <code>su</code> first).
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org986736a" class="outline-2">
+<h2 id="org986736a"><span class="section-number-2">2</span> Window manager</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Update: Now using <code>awesome</code>. Install <code>awesome-freedesktop</code> and <code>lain</code> as well (additionally roboto font too).
+<del>The anarchy installer allowed me to install my window manager of choice - <code>bswpm</code> - already. It also installed <code>sxhkd</code> which is used as a hotkey daemon to setup keyboard shortcuts.</del>
+<del>Also install awesome-revelation-git which is awesome (lel) for switching between clients.</del> (&rarr; not as useful as I thought)
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org3dada23" class="outline-2">
+<h2 id="org3dada23"><span class="section-number-2">3</span> Dotfiles</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Now I'd need my dotfiles. But the most important thing first <code>sudo pacman -S git</code>. 
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">git clone https://github.com/schoettkr/dotfiles.git ~/dotfiles <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">might want to checkout a specific branch!</span>
+sudo pacman -S stow
+
+<span style="color: #d33682; font-style: italic;">cd</span> dotfiles <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">you need to be in the dotfiles directory</span>
+
+
+stow -v -t ~/.config config <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">with '-t' the target dir can be set explicitly</span>
+
+mkdir ~/.fonts
+stow -v -t ~/.fonts fonts
+
+stow -v git
+
+stow -v scripts
+
+stow -v X
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">if not already installed</span>
+stow -v zsh
+</pre>
+</div>
+<p>
+You also want to setup github auth (to not be prompted by magit everytime for example). Do the following
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">git config --global --add github.user &lt;user&gt;
+git config --global --add github.oauth-token &lt;token&gt;
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org89c7fea" class="outline-2">
+<h2 id="org89c7fea"><span class="section-number-2">4</span> Package manager</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Setup home folder structure first or atleast have <code>~/arch/pkgs/</code> in place to then
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">Also check sometimes that "yay" is still developed and the most common/best package manger :)</span>
+git clone https://aur.archlinux.org/yay.git ~/arch/pkgs 
+<span style="color: #d33682; font-style: italic;">cd</span> arch/pkgs/yay
+makepkg -si
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgeb4f749" class="outline-2">
+<h2 id="orgeb4f749"><span class="section-number-2">5</span> Packages</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org76efb30" class="outline-3">
+<h3 id="org76efb30"><span class="section-number-3">5.1</span> Essential packages</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-src-container">
+<pre class="src src-bash">yay -S polybar termite feh google-chrome chromium redshift zsh-autosuggestions neovim rofi
+</pre>
+</div>
+<p>
+Tip: Use DuckDuckGoog as chrome search engine
+</p>
+</div>
+</div>
+<div id="outline-container-org3640dc0" class="outline-3">
+<h3 id="org3640dc0"><span class="section-number-3">5.2</span> Setup (neo)vim</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+However that should be done via current line in my config, but nevertheless:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span style="color: #2aa198;">\</span>
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</pre>
+</div>
+<p>
+Then open nvim and run <code>:PlugInstall:</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org407e94f" class="outline-3">
+<h3 id="org407e94f"><span class="section-number-3">5.3</span> File Manager</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+I survive without a file manager but sometimes it's just nice to have one and manage some files via mouse. For this purpouse install
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">yay spacefm
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org82de67d" class="outline-3">
+<h3 id="org82de67d"><span class="section-number-3">5.4</span> Emacs</h3>
+<div class="outline-text-3" id="text-5-4">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #d33682; font-style: italic;">cd</span> ~
+git clone https://github.com/schoettkr/Terra.git .emacs.d
+yay -S emacs
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6cb8f7" class="outline-3">
+<h3 id="orga6cb8f7"><span class="section-number-3">5.5</span> VS Code</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Install <code>yay -S code</code> and the extension "Settings Sync". Regenerate the github token and then copy the settings gist id so that the settings download.
+</p>
+</div>
+</div>
+<div id="outline-container-org99906a1" class="outline-3">
+<h3 id="org99906a1"><span class="section-number-3">5.6</span> Blogging</h3>
+<div class="outline-text-3" id="text-5-6">
+<div class="org-src-container">
+<pre class="src src-bash">yay -S nikola texlive-core pygmentize
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org85e16bf" class="outline-3">
+<h3 id="org85e16bf"><span class="section-number-3">5.7</span> Password management</h3>
+<div class="outline-text-3" id="text-5-7">
+<p>
+Import the password file (library -&gt; docs -&gt; passwords.kdbx)
+Use keepassxc <a href="https://github.com/keepassxreboot/keepassxc">https://github.com/keepassxreboot/keepassxc</a>
+</p>
+<pre class="example">
+yay -S keepassxc
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgb4725a8" class="outline-3">
+<h3 id="orgb4725a8"><span class="section-number-3">5.8</span> Reference managment</h3>
+<div class="outline-text-3" id="text-5-8">
+<p>
+Use zotero (gtk2 application) because it has less dependencies than jabref and kbibtex
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay zotero
+yay texlive-latexextra texlive-bibtexextra biber <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">for emacs org -&gt; pdf export support</span>
+</pre>
+</div>
+<p>
+Open zotero and go to <code>Edit -&gt; Preferences -&gt; Advanced -&gt; Files and Folders</code> and change the data directory location to keep your home directory clean (change to eg <code>~/arch/pkgs</code>)
+Then install the <code>zotero-better-bibtex</code> addon. Instructions can be found here <a href="https://retorque.re/zotero-better-bibtex/installation/">https://retorque.re/zotero-better-bibtex/installation/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaecedb6" class="outline-3">
+<h3 id="orgaecedb6"><span class="section-number-3">5.9</span> Window compositor</h3>
+<div class="outline-text-3" id="text-5-9">
+<div class="org-src-container">
+<pre class="src src-bash">yay -S compton
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3fd94cb" class="outline-3">
+<h3 id="org3fd94cb"><span class="section-number-3">5.10</span> Video Player</h3>
+<div class="outline-text-3" id="text-5-10">
+<p>
+Just install <code>mpv</code> no questions!!
+To resume video playback run <code>echo "save-position-on-quit" &gt;&gt; ~/.config/mpv/mpv.conf</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9dcdcd" class="outline-3">
+<h3 id="orga9dcdcd"><span class="section-number-3">5.11</span> Screenshots</h3>
+<div class="outline-text-3" id="text-5-11">
+<p>
+To take screenshots <code>scrot</code> is a nice minimal utility. Install it and use it as follows:
+</p>
+<ul class="org-ul">
+<li><code>scrot -u [filename]</code> to take screenshot of currently focused window
+<ul class="org-ul">
+<li><code>scrot -u -d [num] [filename]</code> waits <code>num</code> seconds before taking the picture (defer)</li>
+</ul></li>
+<li><code>scrot -s [filename]</code> and click or draw a rectangle to capture the selection</li>
+<li>other options:
+<ul class="org-ul">
+<li><code>-b</code> also grabs the window's border</li>
+<li><code>-t</code> grabs a window and creates a thumbnail of it; This can be useful when you're posting screen captures online</li>
+<li><code>-c</code> creates a countdown in your terminal when you use the -d option</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge50fbad" class="outline-3">
+<h3 id="orge50fbad"><span class="section-number-3">5.12</span> Document Viewer</h3>
+<div class="outline-text-3" id="text-5-12">
+<pre class="example">
+yay evince-light
+</pre>
+</div>
+</div>
+<div id="outline-container-org9d3f760" class="outline-3">
+<h3 id="org9d3f760"><span class="section-number-3">5.13</span> Ebook Management</h3>
+<div class="outline-text-3" id="text-5-13">
+<p>
+Update: Actually I don't like calibre and it does not seem to be worth it for me. Just put your pdfs/mobis/azws in library/books. Convert pdf documents with <code>k2pdfopt</code> and html files with <a href="https://ebook.online-convert.com/convert-to-mobi">https://ebook.online-convert.com/convert-to-mobi</a>. That's it not much hassle. To put files onto your ebook reader just mount it and cp as you'd do for any other device - this is the method of least hassle.
+</p>
+
+<p>
+Make sure to have the homefolder structure in place. Books are supposed to go into <code>~/library/books/Calibre</code>. Install <code>calibre</code> and set it up in accordance to this guide <a href="https://www.reddit.com/r/kindle/comments/3b7dzl/tutorial_how_to_use_calibre_to_manage_book/">https://www.reddit.com/r/kindle/comments/3b7dzl/tutorial_how_to_use_calibre_to_manage_book/</a>
+Copy of the guide (as of 20.11.2018):
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org20e2e78"></a>Le Guide<br />
+<div class="outline-text-5" id="text-5-13-0-1">
+<p>
+Setting up Calibre using Welcome Wizard:
+</p>
+
+<p>
+Create a new empty folder using your library's desired name
+</p>
+
+<p>
+Launch Calibre and choose that folder.
+</p>
+
+<p>
+Next, Choose your device. If you choose Kindle, go to step 4. If you choose other e-readers, go to step 6. If you don't want to set up Send-to-Kindle, go to step 6.
+</p>
+
+<p>
+Go to Amazon's Manage Your Content and Devices, choose Settings, find Personal Document Settings. Take note of the Send-to-Kindle E-Mail (ending with @Kindle,com). Find Add a new approved e-mail address and type in your GMX email.
+</p>
+
+<p>
+In the Next dialog on Calibre welcome wizard, type in your Kindle email. Press Use GMX and type in your GMX credentials.
+</p>
+
+<p>
+Next, and you are done.
+</p>
+
+<p>
+.
+</p>
+
+<p>
+Setting up your Calibre:
+</p>
+
+<p>
+Select Preferences
+</p>
+
+<p>
+Choose Behavior, set Preferred output format to AZW3 (if you're using Kindle) or EPUB (if you're using other devices). The reason is that AZW3 and EPUB can make use of Calibre's Edit Book function. Apply.
+</p>
+
+<p>
+Choose Add your own columns, press the "+" button. Setup the following:
+</p>
+
+<p>
+Pages (For Count Pages plugin, to get page number on your books):
+</p>
+
+<p>
+Lookup name: pages
+</p>
+
+<p>
+Column heading: Pages
+</p>
+
+<p>
+Column type: Integers.
+</p>
+
+<p>
+Format for numbers: {0,}
+</p>
+
+<p>
+Shelf (To manage your reading progress):
+</p>
+
+<p>
+Lookup name: shelf
+</p>
+
+<p>
+Column heading: Shelf
+</p>
+
+<p>
+Column type: Text, column shown in the tag browser.
+</p>
+
+<p>
+Choose Common Options, Look &amp; Feel, set Embed font famlly to your preferred font. I choose Bookerly here. Note: I have no problem using Bookerly on the Kindle 7th Gen, but for the older generations, there might be some issues. The font will be in the Publisher's Font option on the Kindle.
+</p>
+
+<p>
+Choose Saving books to disk, Copy and paste the following to the Save template: 1. Books/{author<sub>sort</sub>}/{title}/{title} - {authors}
+</p>
+
+<p>
+Choose Sending books to devices, Copy and paste the following to the Save template: 1. Books/{author<sub>sort</sub>}/{title}/{title} - {authors}
+</p>
+
+<p>
+Choose Metadata plugboards, Add new plugboard
+</p>
+
+<p>
+Format: any format
+</p>
+
+<p>
+Device: any device
+</p>
+
+<p>
+Source template: {series:|| - }{series<sub>index</sub>:0&gt;5.2f|[|] - }{title}
+</p>
+
+<p>
+This will save your books like this: Harry Potter - [01.00] - Harry Potter and the Sorcerer's Stone if your book is in a series, or Oliver Twist if your book isn't.
+</p>
+
+<p>
+You can look here for more options
+</p>
+
+<p>
+Destination field: title
+</p>
+
+<p>
+Choose Plugins, find Kindle 2/3/4/Touch/PaperWhite/Voyage Device Interface, set:
+</p>
+
+<p>
+Save templates: 1. Books/{author<sub>sort</sub>}/{title}/{title} - {authors}
+</p>
+
+<p>
+Custom column name to retrieve page counts from: #pages
+</p>
+
+<p>
+Disable Overwrite existing apnx on device
+</p>
+
+<p>
+Close, and restart Calibre
+</p>
+
+<p>
+.
+</p>
+
+<p>
+Adding plug-ins to power-up your Calibre:
+</p>
+
+<p>
+Select Preferences, choose Plugins
+</p>
+
+<p>
+Choose Get new plugins
+</p>
+
+<p>
+Find and install Goodreads and Count Pages
+</p>
+
+<p>
+Find Count Pages plugin, double click, under Page count options, choose Custom column: #pages. Leave the others blank.
+</p>
+
+<p>
+Notes: This only gives you a rough estimation of the books. If you want a more accurate version, use Amazon books, or use the built-in Download page counts from Goodreads
+</p>
+
+<p>
+Apply.
+</p>
+
+<p>
+Go to Metadata download, and choose Goodreads
+</p>
+
+<p>
+Apply, and Restart Calibre.
+</p>
+
+<p>
+.
+</p>
+
+<p>
+Using Calibre to manage books:
+</p>
+
+<p>
+Add books: You can Drag-and-drop the ebook files to Calibre, or use the Add books function.
+</p>
+
+<p>
+Edit metadata: You can type in your books' metadata manually, or download the data using Download metadata buttons. Calibre will automatically search book's data and you can choose the matching title.
+</p>
+
+<p>
+Convert books: When sending to Kindle, Calibre'll automatically convert your books to Kindle readable formats, but it won't store the file locally. You can convert individually, or bulk convert to save the metadata directly to your books
+</p>
+
+<p>
+If you connect Kindle to Calibre, Calibre will automatically find books on your Kindle. To send books to your Kindle, press Send to device.
+</p>
+
+<p>
+Fetch news: You can choose your favorite news source from the menu, Press Schedule for download, choose days to download, and Save. Calibre will automatically download News IF IT IS RUNNING and send to your Kindle if you already set up Send-to-Kindle account.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org621a374" class="outline-3">
+<h3 id="org621a374"><span class="section-number-3">5.14</span> Calculator</h3>
+<div class="outline-text-3" id="text-5-14">
+<p>
+Install <code>speedcrunch</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcde969" class="outline-3">
+<h3 id="orgbcde969"><span class="section-number-3">5.15</span> IRC</h3>
+<div class="outline-text-3" id="text-5-15">
+<p>
+Maybe get into <code>weechat</code> sometime but for now <code>hexchat</code> seems to be the sanest/simplest client :)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6ad700e" class="outline-3">
+<h3 id="org6ad700e"><span class="section-number-3">5.16</span> VPN (Uni etc)</h3>
+<div class="outline-text-3" id="text-5-16">
+<p>
+Install <code>openconnect</code> and connect for example like this:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">sudo openconnect https://vpn-server.uni-hannover.de/
+</pre>
+</div>
+<p>
+And then enter credentials when prompted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8115b94" class="outline-3">
+<h3 id="org8115b94"><span class="section-number-3">5.17</span> Heroku</h3>
+<div class="outline-text-3" id="text-5-17">
+<p>
+Install the <code>heroku-cli</code>. Use <code>heroku git:remote -a REMOTE-REPO-NAME</code> to add heroku remote to an existing project.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7b9d69" class="outline-3">
+<h3 id="orgd7b9d69"><span class="section-number-3">5.18</span> Torrent</h3>
+<div class="outline-text-3" id="text-5-18">
+<p>
+Use the <code>transmission-gui</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6739dfb" class="outline-3">
+<h3 id="org6739dfb"><span class="section-number-3">5.19</span> Database GUI</h3>
+<div class="outline-text-3" id="text-5-19">
+<ul class="org-ul">
+<li>SQL: Dbeaver</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3a0d636" class="outline-2">
+<h2 id="org3a0d636"><span class="section-number-2">6</span> Homefolder structure</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Create the following folder structure in the home directory:
+</p>
+<pre class="example">
+~/arch
+~/dls
+~/dev
+~/library
+
+~/library/books
+
+~/library/docs
+;;~/library/docs/misc
+
+~/library/music
+
+~/library/images
+~/library/images/wallpaper
+~/library/images/personal
+
+~/library/videos
+~/library/videos/personal
+~/library/videos/courses
+
+~/misc
+
+~/temp
+;; ~/docs/coding
+;; ~/docs/life
+</pre>
+
+<p>
+To get rid of the folders that are create by default edit (or via dotfiles) <code>~/.config/user-dirs.dirs</code> to the wanted structure and then remove them.
+Then run <code>xdg-user-dirs-update</code>. (PS do not <i>remove</i> <code>xdg_desktop_dir</code> &lt;- read this on the internetz but check what really happens!).
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org19d2fc8" class="outline-2">
+<h2 id="org19d2fc8"><span class="section-number-2">7</span> Programming</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Stuff that is specific to programming / development
+</p>
+</div>
+<div id="outline-container-orgff22b26" class="outline-3">
+<h3 id="orgff22b26"><span class="section-number-3">7.1</span> General</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Might consider ripgrep tho
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay the_silver_searcher <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">this is ag</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org72dc0a6" class="outline-3">
+<h3 id="org72dc0a6"><span class="section-number-3">7.2</span> C/C++</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Install the Clang compiler which is a compiler/frontend for C family languages based on LLVM:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay -S clang
+</pre>
+</div>
+
+<p>
+Update: Install <code>ccls</code> instead!
+<del>Install cquery which is needed for emacs-cquery and lsp mode</del>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay -S cquery
+</pre>
+</div>
+
+<p>
+Install gdb (GNU debugger that can be used for many languages_
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay gdb
+</pre>
+</div>
+<p>
+In Emacs gdb debug mode use OR use <code>nemiver</code> or <code>ddd</code> or someother graphical debugger:
+</p>
+<ul class="org-ul">
+<li><code>break LL</code> to set breakpoint</li>
+<li><code>delete XY</code> to delete breakpoint</li>
+<li><code>run</code> to start the program</li>
+<li><code>print XY</code> to print once</li>
+<li><code>display XY</code> to print repeatedly automatic</li>
+<li><code>print *(Student *)0x55555556b6b0</code> eg to print value at memory address 0x55555556b6b0 as a Student</li>
+<li><code>x/12xb m-&gt;data</code> eg to examine memory of int array data and show the first 3 ints stored there / 12 bytes (3 integers a 4 bytes = 12)</li>
+</ul>
+
+<p>
+See here for more on gdb <a href="http://kirste.userpage.fu-berlin.de/chemnet/use/info/gdb/gdb_9.html">http://kirste.userpage.fu-berlin.de/chemnet/use/info/gdb/gdb_9.html</a>
+</p>
+</div>
+
+<div id="outline-container-orgd593498" class="outline-4">
+<h4 id="orgd593498"><span class="section-number-4">7.2.1</span> Compilations</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Assembly file:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">g++ -S Math.cpp
+</pre>
+</div>
+
+<p>
+Preprocessed file without linking:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">g++ Math.cpp -c -E -P -o Math.cc
+</pre>
+</div>
+
+<p>
+Compile without linking:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">g++ -g Math.cpp -o Math -c
+</pre>
+</div>
+
+<p>
+Compile and link:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">g++ -g Math.cpp -o Math
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org706effe" class="outline-3">
+<h3 id="org706effe"><span class="section-number-3">7.3</span> Javascript</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Install the node version manager to manage different nodejs versions:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">yay -S nvm
+</pre>
+</div>
+<p>
+Then run the following if it isn't already present in <code>.zshrc</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #d33682; font-style: italic;">echo</span> <span style="color: #2aa198;">'source /usr/share/nvm/init-nvm.sh'</span> &gt;&gt; ~/.zshrc
+</pre>
+</div>
+<p>
+Note: having the above command in <code>.zshrc</code> slows down the prompt when opening a terminal immensely. You might want to have this line commented out when not working with js/node :)
+If you want to execute node binaries also comment in the part where the node binaries are added to PATH.
+Restart the shell and start installing node versions via:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">nvm install 11 <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">current version at time of writing this!</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org18eb993" class="outline-3">
+<h3 id="org18eb993"><span class="section-number-3">7.4</span> Go</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+Go projects will live in a specific folder (ususally <code>~/go</code>). I set this to <code>~/dev/go/</code> so make sure that folder exists (and verify that gopath is still set to that in <code>~/.zshrc</code>). Install:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">yay go go-tools
+</pre>
+</div>
+<p>
+Also "$GOPATH/bin" needs to be appended to the "$PATH" variable to be able to execute the Go binaries (eg godef). This should also be reflected in <code>~/.zshrc</code>.
+</p>
+
+<p>
+Then install the needed dev tools, currently:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">go get -u github.com/rogpeppe/godef/...
+go get -u github.com/nsf/gocode
+go get -u golang.org/x/tools/cmd/goimports
+go get -u github.com/dougm/goflymake
+go get -u golang.org/x/tools/cmd/guru
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga3abb4b" class="outline-3">
+<h3 id="orga3abb4b"><span class="section-number-3">7.5</span> C#</h3>
+<div class="outline-text-3" id="text-7-5">
+<p>
+Install the dotnet sdk either from the aur or via the official site. Preferably do it via the official site because last time I installed it from AUR there were problems when running C# debugger
+</p>
+
+<p>
+Link: <a href="https://www.microsoft.com/net/download">https://www.microsoft.com/net/download</a> or rather -&gt; <a href="https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.403-linux-x64-binaries">https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.403-linux-x64-binaries</a> to install from source and not via some package managers
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">yay dotnet-sdk <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">from aur NOT recommended</span>
+</pre>
+</div>
+<p>
+And then comment in the relevant parts in .zshrc:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #d33682; font-style: italic;">export</span> <span style="color: #268bd2;">DOTNET_ROOT</span>=$<span style="color: #268bd2;">HOME</span>/arch/pkgs/dotnet 
+<span style="color: #d33682; font-style: italic;">export</span> <span style="color: #268bd2;">PATH</span>=$<span style="color: #268bd2;">PATH</span>:$<span style="color: #268bd2;">HOME</span>/arch/pkgs/dotnet
+</pre>
+</div>
+<p>
+In emacs run <code>omnisharp-install-server</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7790237" class="outline-3">
+<h3 id="org7790237"><span class="section-number-3">7.6</span> Ruby</h3>
+<div class="outline-text-3" id="text-7-6">
+<p>
+Install <code>rbenv</code> to manage ruby versions.
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">yay rbenv
+yay ruby-build <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">needed to install &amp; compile ruby versions</span>
+</pre>
+</div>
+<p>
+Install a ruby version e.g version <code>2.6.1</code> (check which is the most current version beforehand)
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rbenv install 2.6.1
+</pre>
+</div>
+<p>
+Set the installed version to be the global default
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rbenv global 2.6.1
+</pre>
+</div>
+<p>
+Update the environment in accordance to the config
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">rbenv rehash
+</pre>
+</div>
+<p>
+Verify the ruby version and also make sure that <code>eval "$(rbenv init -)"</code> is present in <code>.zshrc</code> for this to work:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">ruby -v <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">=&gt; 2.6.1</span>
+<span style="color: #d33682; font-style: italic;">which</span> ruby
+</pre>
+</div>
+</div>
+<div id="outline-container-orga651ce6" class="outline-4">
+<h4 id="orga651ce6"><span class="section-number-4">7.6.1</span> Ruby Gems</h4>
+<div class="outline-text-4" id="text-7-6-1">
+<p>
+Some useful ruby gems to install globally:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">gem install bundler pry pry-doc byebug
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0303525" class="outline-4">
+<h4 id="org0303525"><span class="section-number-4">7.6.2</span> Rails</h4>
+<div class="outline-text-4" id="text-7-6-2">
+<div class="org-src-container">
+<pre class="src src-sh">gem install rails
+<span style="color: #d33682; font-style: italic;">which</span> rails
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb49ee36" class="outline-3">
+<h3 id="orgb49ee36"><span class="section-number-3">7.7</span> Postgres</h3>
+<div class="outline-text-3" id="text-7-7">
+<div class="org-src-container">
+<pre class="src src-sh">yay postgresql
+sudo -u postgres -i initdb --locale $<span style="color: #268bd2;">LANG</span> -E UTF8 -D /var/lib/postgres/data
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+sudo -u postgres -i
+psql <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">might not work yet</span>
+</pre>
+</div>
+<p>
+When in postgres shell you can:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">createuser --interactive -P
+</pre>
+</div>
+<p>
+And/or create database
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">createdb -O octoprint octoprint_filamentmanager
+<span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">or</span>
+createdb bank 
+<span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">in the shell to create a db with the name "bank"</span>
+<span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">you can then connect to the db via </span>
+psql -U postgres bank <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">"postgres" is username you coulve used "eoshiru" or left it off altogether</span>
+</pre>
+</div>
+<p>
+Running <code>psql</code> works in psql-shell (after <code>sudo -u postgres -i</code>):
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">psql
+\conninfo <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">for connection information</span>
+</pre>
+</div>
+<p>
+See these links when encountering problems:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/malnvenshorn/OctoPrint-FilamentManager/wiki/Setup-PostgreSQL-on-Arch-Linux">https://github.com/malnvenshorn/OctoPrint-FilamentManager/wiki/Setup-PostgreSQL-on-Arch-Linux</a></li>
+<li><a href="https://help.ubuntu.com/community/PostgreSQL">https://help.ubuntu.com/community/PostgreSQL</a></li>
+</ul>
+
+<p>
+Then may want to install <code>sqlite</code> (or <code>postico</code> on mac)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge314b64" class="outline-3">
+<h3 id="orge314b64"><span class="section-number-3">7.8</span> Other</h3>
+<div class="outline-text-3" id="text-7-8">
+</div>
+<div id="outline-container-orgc65b92f" class="outline-4">
+<h4 id="orgc65b92f"><span class="section-number-4">7.8.1</span> HTTP Rest Client</h4>
+<div class="outline-text-4" id="text-7-8-1">
+<p>
+Use insomnia which can be installed through snap.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org29bdb22" class="outline-2">
+<h2 id="org29bdb22"><span class="section-number-2">8</span> Tips &amp; Tricks</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org3fe3bf9" class="outline-3">
+<h3 id="org3fe3bf9"><span class="section-number-3">8.1</span> Use more cores for compiling packages (mkkpkg)</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+In <code>/etc/makepkg.conf</code> change <code>MAKEFLAGS="-jX"</code> where <code>X</code> is the number of cores e.g <code>2</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b1b6fd" class="outline-3">
+<h3 id="org1b1b6fd"><span class="section-number-3">8.2</span> Sort/update pacman mirrors</h3>
+</div>
+<div id="outline-container-orgdad5505" class="outline-3">
+<h3 id="orgdad5505"><span class="section-number-3">8.3</span> Maintenance</h3>
+<div class="outline-text-3" id="text-8-3">
+<div class="org-src-container">
+<pre class="src src-sh">sudo rm -rf /var/cache/pacman/pkg/*
+sudo rm -rf /var/cache/man/*
+ncdu -x / <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">Use as root to see where space is taken.</span>
+pacman -Qdt <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">to see orphan packages</span>
+systemctl --failed <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">check for failed systemd services</span>
+</pre>
+</div>
+<p>
+To monitor processes, cpu, memory etc install <code>glances</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org148b0b4" class="outline-3">
+<h3 id="org148b0b4"><span class="section-number-3">8.4</span> Primer on zshell files</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+Since <code>.zshenv</code> is always sourced, it often contains exported variables that should be available to other programs. For example, $PATH, $EDITOR, and $PAGER are often set in .zshenv. Also, you can set $ZDOTDIR in .zshenv to specify an alternative location for the rest of your zsh configuration.
+</p>
+
+<p>
+<code>.zshrc</code> is for interactive shell configuration. You set options for the interactive shell there with the setopt and unsetopt commands. You can also load shell modules, set your history options, change your prompt, set up zle and completion, et cetera. You also set any variables that are only used in the interactive shell (e.g. $LS<sub>COLORS</sub>).
+</p>
+
+<p>
+<code>.zlogin</code> is sourced on the start of a login shell. This file is often used to start X using startx. Some systems start X on boot, so this file is not always very useful.
+</p>
+
+<p>
+<code>.zprofile</code> is basically the same as .zlogin except that it's sourced directly before .zshrc is sourced instead of directly after it. According to the zsh documentation, ".zprofile is meant as an alternative to `.zlogin' for ksh fans; the two are not intended to be used together, although this could certainly be done if desired."
+</p>
+
+<p>
+<code>.zlogout</code> is sometimes used to clear and reset the terminal.
+</p>
+</div>
+</div>
+<div id="outline-container-org2bacc47" class="outline-3">
+<h3 id="org2bacc47"><span class="section-number-3">8.5</span> Ingoring aliases</h3>
+<div class="outline-text-3" id="text-8-5">
+<p>
+To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
+</p>
+</div>
+</div>
+<div id="outline-container-org389a9bd" class="outline-3">
+<h3 id="org389a9bd"><span class="section-number-3">8.6</span> Updating and upgrading</h3>
+</div>
+<div id="outline-container-orgef8ecd5" class="outline-3">
+<h3 id="orgef8ecd5"><span class="section-number-3">8.7</span> Configure touchpad</h3>
+</div>
+<div id="outline-container-orgacdc9f6" class="outline-3">
+<h3 id="orgacdc9f6"><span class="section-number-3">8.8</span> SSH</h3>
+<div class="outline-text-3" id="text-8-8">
+<p>
+Check for existing ssh keys:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">ls -al ~/.ssh
+</pre>
+</div>
+<p>
+Generate new ssh key:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">make sure that openssh is installed</span>
+yay -S openssh
+
+ssh-keygen -t rsa -b 4096 -C <span style="color: #2aa198;">"email@example.com"</span>
+</pre>
+</div>
+<p>
+Adding the ssh key to the ssh-agent:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #d33682; font-style: italic;">eval</span> <span style="color: #2aa198;">"$(ssh-agent -s)"</span> <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">start ssh-agent in background</span>
+ssh-add ~/.ssh/id_rsa <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">this needs to be the private not the public key file</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1fd5b63" class="outline-3">
+<h3 id="org1fd5b63"><span class="section-number-3">8.9</span> GPG</h3>
+<div class="outline-text-3" id="text-8-9">
+<p>
+List keys:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --list-keys
+gpg --list-secret-keys
+</pre>
+</div>
+<p>
+Export the private and public key:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --export $<span style="color: #268bd2;">{</span><span style="color: #268bd2;">ID</span><span style="color: #268bd2;">}</span> &gt; public.key
+gpg --export-secret-keys $<span style="color: #268bd2;">{</span><span style="color: #268bd2;">ID</span><span style="color: #268bd2;">}</span> &gt; private.key
+</pre>
+</div>
+
+<p>
+To import the keys on for example another machine:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --import public.key
+gpg --import private.key
+</pre>
+</div>
+
+<p>
+And trust the key(s) via:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg --edit-key $<span style="color: #268bd2;">{</span><span style="color: #268bd2;">ID</span><span style="color: #268bd2;">}</span>
+trust
+</pre>
+</div>
+
+<p>
+Then decrypt the files from the command line:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">gpg -d file.gpg
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org84880cf" class="outline-3">
+<h3 id="org84880cf"><span class="section-number-3">8.10</span> Services</h3>
+<div class="outline-text-3" id="text-8-10">
+<p>
+List automatically started services:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">systemctl list-unit-files --state=enabled
+</pre>
+</div>
+
+<p>
+Check the status of an service:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">systemctl status application.service
+</pre>
+</div>
+
+<p>
+Start service in/for current session:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl start application.service
+</pre>
+</div>
+
+<p>
+Stop service in/for current session:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl stop application.service
+</pre>
+</div>
+
+<p>
+To enable an service to be started automatically on boot:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl enable application.service
+</pre>
+</div>
+
+<p>
+To disable an automatically started service:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl disable application.service
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f4d34b" class="outline-3">
+<h3 id="org4f4d34b"><span class="section-number-3">8.11</span> Formatting and mounting of external drives</h3>
+<div class="outline-text-3" id="text-8-11">
+<p>
+First install <code>ntfs-3g</code> because by default only reading not writing is supported for ntfs partition.
+</p>
+</div>
+</div>
+<div id="outline-container-org943ee42" class="outline-3">
+<h3 id="org943ee42"><span class="section-number-3">8.12</span> Mount Android device</h3>
+<div class="outline-text-3" id="text-8-12">
+<p>
+Install <code>simple-mtpfs</code> and run <code>simple-mtpfs --device 1 ~/mnt</code> (maybe after restart). Then in file manager (eg <code>spacefm</code>) navigate to <code>mtp://</code>.
+</p>
+<ul class="org-ul">
+<li>Note: the folder <code>~/mnt</code> needs to exist before!</li>
+<li>to unmount run <code>fusermount -u ~/mnt</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f1530f" class="outline-3">
+<h3 id="org5f1530f"><span class="section-number-3">8.13</span> Changing "os name"</h3>
+<div class="outline-text-3" id="text-8-13">
+<p>
+Edit <code>/etc/os-release</code> to e.g:
+</p>
+<pre class="example">
+NAME="Arch Linux"
+ID=arch
+PRETTY_NAME="Arch Linux"
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+</pre>
+</div>
+</div>
+<div id="outline-container-orgb35c417" class="outline-3">
+<h3 id="orgb35c417"><span class="section-number-3">8.14</span> Touchpad</h3>
+<div class="outline-text-3" id="text-8-14">
+<p>
+If installed remove synaptic because its development is discontinued. Use libinput instead. To find out which drivers are currently used enter <code>grep -e "Using input" .local/share/xorg/Xorg.0.log</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">xinput list <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">to list devices, search for eg 'touchpad' in the output. the number is the id</span>
+xinput list-props 11 <span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">when 11 is the id</span>
+</pre>
+</div>
+<p>
+Put for example this in <code>/etc/X11/xorg.conf.d/30-touchpad.conf</code>:
+</p>
+<pre class="example">
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+  Option "Tapping" "on"
+  Option "AccelSpeed" "0.5"
+EndSection
+</pre>
+</div>
+</div>
+<div id="outline-container-org543797a" class="outline-3">
+<h3 id="org543797a"><span class="section-number-3">8.15</span> Source of an alias</h3>
+<div class="outline-text-3" id="text-8-15">
+<p>
+To find out what a command is aliased to enter <code>type {command}</code>, e.g <code>type l</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org0e56f3a" class="outline-3">
+<h3 id="org0e56f3a"><span class="section-number-3">8.16</span> Change folder permission from root to user</h3>
+<div class="outline-text-3" id="text-8-16">
+<p>
+<code>sudo chown -R eoshiru FOLDERNAME</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org0ad4b7e" class="outline-3">
+<h3 id="org0ad4b7e"><span class="section-number-3">8.17</span> Writing .iso to usb</h3>
+<div class="outline-text-3" id="text-8-17">
+<p>
+Make sure the device/usb stick you want to write to is unmounted (<code>sudo umount /dev/sdb</code>) and then execute <code>sudo dd if=file.iso of=/dev/sdb</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org106d5be" class="outline-3">
+<h3 id="org106d5be"><span class="section-number-3">8.18</span> Bluetooth</h3>
+<div class="outline-text-3" id="text-8-18">
+<p>
+Run bluetoothctl (be sure to have systemctl status bluetooth running or start it otherwise) 
+</p>
+<ul class="org-ul">
+<li><code>show</code> lists devices</li>
+<li><code>select</code> select bluetooth on machine via MAC (C0:18 )</li>
+<li><code>agent on</code></li>
+<li><code>power on</code></li>
+<li><code>scan</code></li>
+<li><code>connect</code> 1F:11</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org686bc8b" class="outline-3">
+<h3 id="org686bc8b"><span class="section-number-3">8.19</span> Synchronizing Files/Folders</h3>
+<div class="outline-text-3" id="text-8-19">
+<p>
+Install <code>rsync</code>. To synchronize a folder <code>src</code> to <code>dest</code> run:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">rsync -a <span style="color: #268bd2;">{</span>srcPath<span style="color: #268bd2;">}</span>/ <span style="color: #268bd2;">{</span>destPath<span style="color: #268bd2;">}</span>/
+</pre>
+</div>
+<p>
+Dont forget the trailing slashes, else the first folder would be copied into the second!
+If deletions should be synced as well specify <code>d</code> flag as well.
+Usually the -t flag which is included in the -a flag syncs modification time as well, but in case it did not work try the following:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">touch -m -r source/path/file dest/path/file
+</pre>
+</div>
+<p>
+that reads the timestamp from <i>one file</i> into another <i>file</i>. Look on google for automating this if needed or use a python script like
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #96A7A9; font-style: italic;">#</span><span style="color: #96A7A9; font-style: italic;">!/usr/bin/python</span>
+
+<span style="color: #859900;">import</span> os
+<span style="color: #859900;">import</span> sys
+
+<span style="color: #859900;">for</span> directory,subdirs,files <span style="color: #859900;">in</span> os.walk<span style="color: #268bd2;">(</span><span style="color: #2aa198;">'.'</span><span style="color: #268bd2;">)</span>:
+    <span style="color: #268bd2;">pathes</span>=subdirs+files
+    <span style="color: #859900;">for</span> path <span style="color: #859900;">in</span> pathes:
+        <span style="color: #268bd2;">fullpath</span>=os.path.join<span style="color: #268bd2;">(</span>directory,path<span style="color: #268bd2;">)</span>
+        <span style="color: #268bd2;">target_path</span>=os.path.join<span style="color: #268bd2;">(</span>sys.argv<span style="color: #d33682;">[</span>1<span style="color: #d33682;">]</span>,fullpath<span style="color: #268bd2;">)</span>
+        <span style="color: #268bd2;">mtime</span>=os.lstat<span style="color: #268bd2;">(</span>fullpath<span style="color: #268bd2;">)</span>.st_mtime
+        <span style="color: #859900;">print</span><span style="color: #268bd2;">(</span><span style="color: #2aa198;">'touching'</span>,target_path,<span style="color: #2aa198;">':'</span>,<span style="color: #268bd2;">)</span>
+        <span style="color: #859900;">try</span>:
+            os.utime<span style="color: #268bd2;">(</span>target_path,<span style="color: #d33682;">(</span>mtime,mtime<span style="color: #d33682;">)</span><span style="color: #268bd2;">)</span>
+            <span style="color: #859900;">print</span><span style="color: #268bd2;">(</span><span style="color: #2aa198;">'OK'</span><span style="color: #268bd2;">)</span>
+        <span style="color: #859900;">except</span>:
+            <span style="color: #859900;">print</span><span style="color: #268bd2;">(</span><span style="color: #2aa198;">'FAILED'</span><span style="color: #268bd2;">)</span>
+</pre>
+</div>
+<p>
+which has to be run from the source folder and the destinaiton is the first argument like: <code>cd source; python ~/timescript.py dest/folder/</code>
+</p>
+</div>
+<div id="outline-container-orga97b566" class="outline-4">
+<h4 id="orga97b566"><span class="section-number-4">8.19.1</span> Sync/Backup Commands</h4>
+<div class="outline-text-4" id="text-8-19-1">
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #96A7A9; font-style: italic;"># </span><span style="color: #96A7A9; font-style: italic;">Copy banking documents</span>
+rsync -a /home/eoshiru/library/docs/banking/ /run/media/eoshiru/Elements/library/docs/banking/
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb8b558" class="outline-3">
+<h3 id="orgcb8b558"><span class="section-number-3">8.20</span> Youtube-DL</h3>
+<div class="outline-text-3" id="text-8-20">
+<ol class="org-ol">
+<li>Check the formats</li>
+</ol>
+<p>
+<code>youtube-dl -F "https://www.youtube.com/watch?v=9cnI05qQpdo"</code>
+</p>
+
+<ol class="org-ol">
+<li>Get the timestamp from where the download should begin</li>
+<li>For example via "Copy video Video URL at current time" in YT</li>
+</ol>
+
+
+<ol class="org-ol">
+<li>Execute</li>
+<li><code>ffmpeg $(youtube-dl -g -f 22 'https://www.youtube.com/watch?v=kn_eCjXhWdo' | sed "s/.*/-ss 197 -i &amp;/") -t 4 -c copy monte.mp4</code></li>
+<li>where <code>22</code> is the format you want, <code>197</code> is the start second and <code>4</code> is the duration in second from the starting point onwards</li>
+</ol>
+
+<p>
+To download the audio mp3 only run:
+<code>youtube-dl --extract-audio --audio-format mp3 LINK</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69676e7" class="outline-3">
+<h3 id="org69676e7"><span class="section-number-3">8.21</span> System Time</h3>
+<div class="outline-text-3" id="text-8-21">
+<p>
+The correct way to do this would be by enabling ntpd.service via systemd.
+</p>
+
+<p>
+One could also run ntpd -qg as root.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3271ced" class="outline-3">
+<h3 id="org3271ced"><span class="section-number-3">8.22</span> Screenlock</h3>
+<div class="outline-text-3" id="text-8-22">
+<p>
+Install xtrlock
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f1597a" class="outline-3">
+<h3 id="org0f1597a"><span class="section-number-3">8.23</span> List files and copy</h3>
+<div class="outline-text-3" id="text-8-23">
+<p>
+To list files by modified date and copy them somewhere run:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">cp -- <span style="color: #268bd2;">`ls -tr --quoting-style={escape,shell,c}`</span> DESTINATION_PATH
+</pre>
+</div>
+<ul class="org-ul">
+<li><code>--</code> to <code>cp</code> signals that there are no more flags coming (from dashes in filename for example)</li>
+<li><code>-tr</code> sorts by time and reverses</li>
+<li><code>quoting-style</code> applies double quotes instead of single quoutes (required by cp command)</li>
+</ul>
+
+<p>
+Edit: theoretically the above should work but it doesn't, this is what get's the job done:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">ls --quoting-style=<span style="color: #268bd2;">{</span>escape,shell,c<span style="color: #268bd2;">}</span> -tr . | xargs -I<span style="color: #268bd2;">{}</span> cp <span style="color: #2aa198;">"{}"</span> DESTINATION_PATH
+</pre>
+</div>
+<p>
+(This is what I exactly ran from the folder with all the files I wanted:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">ls --quoting-style=<span style="color: #268bd2;">{</span>escape,shell,c<span style="color: #268bd2;">}</span> -tr | xargs -I<span style="color: #268bd2;">{}</span> cp <span style="color: #2aa198;">"{}"</span>/mnt/SandiskSD/music/
+</pre>
+</div>
+<p>
+)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc3a79fb" class="outline-3">
+<h3 id="orgc3a79fb"><span class="section-number-3">8.24</span> Find and delete duplicates</h3>
+<div class="outline-text-3" id="text-8-24">
+<p>
+To find duplicates
+</p>
+<pre class="example">
+fdupes .  
+</pre>
+<p>
+To delete duplicates
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">fdupes -d
+</pre>
+</div>
+<p>
+To skip prompt add <code>-N</code> (dont do that)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8bccc2" class="outline-3">
+<h3 id="orgf8bccc2"><span class="section-number-3">8.25</span> Recursively search &amp; replace in Emacs</h3>
+<div class="outline-text-3" id="text-8-25">
+<ol class="org-ol">
+<li>M-x find-name-dired: you will be prompted for a root directory and a filename pattern.</li>
+<li>Press t to "toggle mark" for all files found.</li>
+<li>Press Q for "Query-Replace in Files&#x2026;": you will be prompted for query/substitution regexps.</li>
+<li>Proceed as with query-replace-regexp: SPACE to replace and move to next match, n to skip a match, etc.</li>
+<li>Press C-x s to save buffers. (You can then press y, n or ! to save all at once)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org79748d2" class="outline-3">
+<h3 id="org79748d2"><span class="section-number-3">8.26</span> Sync system clock time and date</h3>
+<div class="outline-text-3" id="text-8-26">
+<div class="org-src-container">
+<pre class="src src-sh">systemctl start ntpd.service
+ntpd -qg
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6ae2969" class="outline-2">
+<h2 id="org6ae2969"><span class="section-number-2">9</span> Current List of Installed Packages</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+alsa-utils
+android-tools
+audacity
+autoconf
+automake
+awesome
+awesome-freedesktop-git
+awesome-revelation-git
+bash
+biber
+binutils
+bison
+blockify
+blueman
+bluez
+bluez-utils
+brave-bin
+bspwm
+bzip2
+chromium
+clang
+code
+compton-tryone-git
+coreutils
+cpupower
+cquery
+cryptsetup
+dbeaver
+ddrescue
+device-mapper
+dhcpcd
+dialog
+diffutils
+e2fsprogs
+emacs-git
+exfat-utils
+fakeroot
+fd
+feh
+file
+filesystem
+findutils
+flatpak
+flex
+fontawesome.sty
+fzf
+gawk
+gcc
+gcc-libs
+gdb
+gettext
+git
+glances
+glibc
+gnuplot
+go-tools
+google-chrome
+grep
+groff
+grub
+gvfs
+gvfs-mtp
+gvfs-smb
+gzip
+heroku-cli
+hexchat
+hugo
+hunspell
+hunspell-en<sub>US</sub>
+inetutils
+iproute2
+iputils
+jfsutils
+k2pdfopt
+keepassxc
+lain-git
+less
+libtool
+licenses
+linux
+linux-headers
+logrotate
+lvm2
+m4
+make
+man-db
+man-pages
+mariadb
+mdadm
+mesa
+mpv
+nano
+ncdu
+neovim
+netctl
+network-manager-applet
+networkmanager
+nikola
+noto-fonts
+ntfs-3g
+nvm
+oh-my-zsh-git
+openconnect
+openssh
+opera
+pacman
+patch
+pavucontrol
+pciutils
+perl
+pkgconf
+poppler-glib
+postgresql
+postgresql-docs
+postgresql-libs
+procps-ng
+psmisc
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pygmentize
+python-pip
+python2-attrs
+r
+rbenv
+redshift
+reiserfsprogs
+rofi
+rsync
+ruby-build
+s-nail
+screenfetch
+scrot
+sed
+shadow
+simple-mtpfs
+skypeforlinux-stable-bin
+snapd
+spacefm
+speedcrunch
+spotify
+stow
+sudo
+sxhkd
+sysfsutils
+systemd
+systemd-sysvcompat
+tar
+termite
+testdisk
+texinfo
+texlive-bibtexextra
+texlive-core
+texlive-latexextra
+the<sub>silver</sub><sub>searcher</sub>
+tk
+tor-browser
+transmission-gtk
+ttf-bookerly
+ttf-dejavu
+ttf-fira-sans
+ttf-roboto
+ttf-unifont
+unzip
+usbutils
+util-linux
+valgrind
+vi
+weechat
+wget
+which
+wireless<sub>tools</sub>
+wpa<sub>actiond</sub>
+wpa<sub>supplicant</sub>
+xdg-user-dirs
+xf86-video-intel
+xfsprogs
+xorg-bdftopcf
+xorg-iceauth
+xorg-luit
+xorg-mkfontscale
+xorg-server
+xorg-sessreg
+xorg-setxkbmap
+xorg-smproxy
+xorg-x11perf
+xorg-xauth
+xorg-xbacklight
+xorg-xcmsdb
+xorg-xcursorgen
+xorg-xdpyinfo
+xorg-xdriinfo
+xorg-xev
+xorg-xgamma
+xorg-xhost
+xorg-xinit
+xorg-xinput
+xorg-xkbcomp
+xorg-xkbevd
+xorg-xkbutils
+xorg-xkill
+xorg-xlsatoms
+xorg-xlsclients
+xorg-xmodmap
+xorg-xpr
+xorg-xprop
+xorg-xrandr
+xorg-xrdb
+xorg-xrefresh
+xorg-xset
+xorg-xsetroot
+xorg-xvinfo
+xorg-xwd
+xorg-xwininfo
+xorg-xwud
+xournalpp
+xterm
+yay
+youtube-dl-gui-git
+zeal
+zotero
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: eo shiru</p>
+<p class="date">Created: 2020-02-01 Sat 11:15</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
