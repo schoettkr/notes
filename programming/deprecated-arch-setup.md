@@ -1,5 +1,6 @@
 # Arch Setup
 Helpful guidance as always in the arch wiki and unicks.eu on youtube + wikiarch.de Anleitung für Einsteiger
+(https://itsfoss.com/install-arch-linux/)
 
 If anything goes wrong after installation, boot live installer from usb, mount /dev/sda, change root and do what needs to be done
 
@@ -15,6 +16,8 @@ If anything goes wrong after installation, boot live installer from usb, mount /
 2. Decide where to install (eg sda) and run `fdisk /dev/sda` -> `n` for new partition -> `p` for primary -> `1` ->  when using ssd start first sector at 4096 (experimental) instead of 2048 -> `+xyG` size in gigabyte until last sector, keep about 6G for the swap partition (find out with lsblk how much gb, all gb minus 6gb would amount to)
 3. Add swap partition: `n` -> `p` -> `2` -> Enter + Enter to use the remaining sectors as swap -> `t` change type of partition `2` -> `82` swap code
 4. `p` to print incoming changes and `w` to write
+
+Update: if you want a separate boot partiotion do `n` -> `p` -> Enter -> `+512M` first and change partition type via `t` -> `1` to -> `ef` EFI System (https://rtfm.co.ua/en/arch-linux-installing-with-efi-and-windows-dual-boot/#fdisk)
 
 ## 3. Filesystem
 1. `mkfs.ext4 -L {label} /dev/sda1` eg ROOT or ARCH
