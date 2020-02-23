@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-02-10 Mon 11:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="eo shiru" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type='text/css'>
+html {
+  font-size: 62.5%;
+  font-family: serif; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 90%;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem; } }
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
+hr {
+  border-color: #2c8898; }
+
+a {
+  text-decoration: none;
+  color: #2c8898; }
+  a:hover {
+    color: #982c61;
+    border-bottom: 2px solid #4a4a4a; }
+
+ul {
+  padding-left: 1.4em; }
+
+li {
+  margin-bottom: 0.4em; }
+
+blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2c8898; }
+
+img {
+  max-width: 100%; }
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a; }
+  input:focus, textarea:focus {
+    border: 1px solid #2c8898; }
+
+textarea {
+  width: 100%; }
+
+.button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #2c8898;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #2c8898;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
+    cursor: default;
+    opacity: .5; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
+    background-color: #982c61;
+    border-color: #982c61;
+    color: #f9f9f9;
+    outline: 0; }
+
+textarea, select, input[type] {
+  color: #4a4a4a;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #2c8898;
+    outline: 0; }
+
+input[type='checkbox']:focus {
+  outline: 1px dotted #2c8898; }
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+   </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4b165c9">1. DTD S.1</a>
+<ul>
+<li><a href="#org785706f">1.1. Elements S.2</a></li>
+<li><a href="#org5fff2b9">1.2. Attributes S.2</a></li>
+<li><a href="#org3317575">1.3. Entities S.4</a></li>
+</ul>
+</li>
+<li><a href="#orgeb0137f">2. XML Schema S.4</a>
+<ul>
+<li><a href="#org3b3d6df">2.1. Simple Elements S.5</a></li>
+<li><a href="#org20d3984">2.2. Attributes S.5</a></li>
+<li><a href="#org1202faf">2.3. Restrictions S.6</a></li>
+<li><a href="#orgf047422">2.4. Complex Elements S.7</a>
+<ul>
+<li><a href="#orgc00a5d9">2.4.1. Indicators S.8</a></li>
+<li><a href="#org283f54b">2.4.2. Misc S.10</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8867976">3. XSLT S.10</a>
+<ul>
+<li><a href="#org7fc0dfa">3.1. Basics S.10</a></li>
+<li><a href="#orgcb24844">3.2. Template Example S.11</a></li>
+</ul>
+</li>
+<li><a href="#orgd1325c5">4. XPath Reference S.12</a>
+<ul>
+<li><a href="#org6690cdb">4.1. Selecting nodes S.12</a></li>
+<li><a href="#org388a052">4.2. Predicates S.13</a></li>
+<li><a href="#org970483f">4.3. Selecting unknown nodes S.13</a></li>
+</ul>
+</li>
+<li><a href="#org75d74e3">5. RDF S.13</a>
+<ul>
+<li><a href="#orgcbb7e13">5.1. RDF/XML S.14</a></li>
+<li><a href="#org80fd54b">5.2. RDF Schema S.14</a></li>
+</ul>
+</li>
+<li><a href="#org17f3157">6. SPARQL S.15</a>
+<ul>
+<li><a href="#orgc29a895">6.1. SPARQL Examples S.15</a></li>
+</ul>
+</li>
+<li><a href="#org1db16c5">7. OWL by Erfan S.16</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b165c9" class="outline-2">
+<h2 id="org4b165c9"><span class="section-number-2">1</span> DTD</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+A DTD is a Document Type Definition and defines the structure &amp; the legal elements &amp; attributes of an XML document. By using a DTD independent groups of people can agree on a standard DTD for interchanging data. An application can use a DTD to verify that XML data is valid.<br />
+A DTD can be declared inside an XML file or in an external file.
+Internal:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+&lt;!DOCTYPE note [
+&lt;!ELEMENT note (to,from,heading,body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT heading (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;
+]&gt;
+&lt;<span style="color: #b58900;">note</span>&gt;
+  &lt;<span style="color: #b58900;">to</span>&gt;Tove&lt;/<span style="color: #b58900;">to</span>&gt;
+  &lt;<span style="color: #b58900;">from</span>&gt;Jani&lt;/<span style="color: #b58900;">from</span>&gt;
+  &lt;<span style="color: #b58900;">heading</span>&gt;Reminder&lt;/<span style="color: #b58900;">heading</span>&gt;
+  &lt;<span style="color: #b58900;">body</span>&gt;Don't forget me this weekend&lt;/<span style="color: #b58900;">body</span>&gt;
+&lt;/<span style="color: #b58900;">note</span>&gt;
+</pre>
+</div>
+<p>
+External:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+&lt;!DOCTYPE note SYSTEM "note.dtd"&gt;
+&lt;<span style="color: #b58900;">note</span>&gt;
+  &lt;<span style="color: #b58900;">to</span>&gt;Tove&lt;/<span style="color: #b58900;">to</span>&gt;
+  &lt;<span style="color: #b58900;">from</span>&gt;Jani&lt;/<span style="color: #b58900;">from</span>&gt;
+  &lt;<span style="color: #b58900;">heading</span>&gt;Reminder&lt;/<span style="color: #b58900;">heading</span>&gt;
+  &lt;<span style="color: #b58900;">body</span>&gt;Don't forget me this weekend!&lt;/<span style="color: #b58900;">body</span>&gt;
+&lt;/<span style="color: #b58900;">note</span>&gt;
+</pre>
+</div>
+<p>
+note.dtd:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;!ELEMENT note (to,from,heading,body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT heading (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;
+</pre>
+</div>
+<p>
+Seen from a DTD point of view, all XML documents are made up by the following building blocks:
+</p>
+<ul class="org-ul">
+<li>Elements =  main building blocks</li>
+<li>Attributes = provide extra information about elements</li>
+<li>Entities = some characters in XML have a special meaning, entities are expanded when a document is parsed by an XML parser</li>
+<li>PCDATA = parsed character data (text that will be examined by the parser for entities &amp; markup)</li>
+<li>CDATA = character data that will not be parsed and expanded by a parser</li>
+</ul>
+</div>
+
+<div id="outline-container-org785706f" class="outline-3">
+<h3 id="org785706f"><span class="section-number-3">1.1</span> Elements</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>declared via <code>&lt;!ELEMENT element-name category&gt;</code> or <code>&lt;!ELEMENT element-name (element-content)&gt;</code></li>
+<li>empty elements are declared with the category keyword EMPTY, eg: <code>&lt;!ELEMENT br EMPTY&gt;</code> &rarr; <code>&lt;br /&gt;</code></li>
+<li>elements with only parsed character data are declared with #PCDATA inside parantheses, eg: <code>&lt;!ELEMENT recipient (#PCDATA)&gt;</code></li>
+<li>elements declared with the category keyword ANY, can contain any combination of parsable data, eg: <code>&lt;!ELEMENT note ANY&gt;</code></li>
+<li><p>
+elements with one more children are declared with the name of the children elements inside parantheses, eg: <code>&lt;!ELEMENT elem-name (child1, child2,...)</code>
+</p>
+<ul class="org-ul">
+<li>when children are declared in such a sequence separated by commas, the children <i>must appear in the same sequence (order)</i> in the document</li>
+<li>in a full declaration the children must also be declared, and the children can also have children, eg:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;!ELEMENT note (to,from,heading,body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT heading (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;
+</pre>
+</div></li>
+<li>declaring only one exact occurence of an elment: <code>&lt;!ELEMENT note (message)&gt;</code></li>
+<li>declaring minimum one (or more) occurence of an element: <code>&lt;!ELEMENT note (message+)</code></li>
+<li>declaring zero or more occurences of an element: <code>&lt;!ELEMENT note (message*)&gt;</code></li>
+<li>declaring zero or one occurence of an element: <code>&lt;!ELEMENT note (message?)&gt;</code></li>
+<li>declaring either/or content: <code>&lt;!ELEMENT note (to,from,header,(message|body))&gt;</code> declares that the "note" element must contain a 'to', 'from', 'header' element and either a 'message' or a 'body' element</li>
+<li>declaring mixed content: <code>&lt;!ELEMENT note (#PCDATA|to|from|header|message)*&gt;</code> declares that the "note" element can contain zero or more occurrences of parsed character data, "to", "from", "header", or "message" elements</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5fff2b9" class="outline-3">
+<h3 id="org5fff2b9"><span class="section-number-3">1.2</span> Attributes</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+In a DTD, attributes declared with an ATTLIST declaration, which has the following syntax: <code>&lt;!ATTLIST element-name attribute-name attribute-type attribute-value&gt;</code> for example <code>&lt;!ATTLIST payment type CDATA "check"&gt;</code> &rarr; <code>&lt;payment type</code>"check"&gt;=<br />
+The <b>attribute type</b> can be one of the following:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">CDATA</td>
+<td class="org-left">value is character data</td>
+</tr>
+
+<tr>
+<td class="org-left">(en1&vert;en2&vert;..)</td>
+<td class="org-left">value must be one from enumerated list</td>
+</tr>
+
+<tr>
+<td class="org-left">ID</td>
+<td class="org-left">value is a unique id</td>
+</tr>
+
+<tr>
+<td class="org-left">IDREF</td>
+<td class="org-left">value is id of another element</td>
+</tr>
+
+<tr>
+<td class="org-left">IDREFS</td>
+<td class="org-left">value is a list other ids</td>
+</tr>
+
+<tr>
+<td class="org-left">NMTOKEN</td>
+<td class="org-left">value is a valid XML name</td>
+</tr>
+
+<tr>
+<td class="org-left">NMTOKENS</td>
+<td class="org-left">value is a list of valid XML names</td>
+</tr>
+
+<tr>
+<td class="org-left">ENTITY</td>
+<td class="org-left">value is an entity</td>
+</tr>
+
+<tr>
+<td class="org-left">ENTITIES</td>
+<td class="org-left">value is a list of entities</td>
+</tr>
+
+<tr>
+<td class="org-left">NOTATION</td>
+<td class="org-left">value is a name of a notation</td>
+</tr>
+
+<tr>
+<td class="org-left">xml:</td>
+<td class="org-left">value is a predefined xml value</td>
+</tr>
+</tbody>
+</table>
+<p>
+The <b>attribute value</b> can be one of the following:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Value</th>
+<th scope="col" class="org-left">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><i>value</i></td>
+<td class="org-left">default value of the attribute</td>
+</tr>
+
+<tr>
+<td class="org-left">#REQUIRED</td>
+<td class="org-left">attribute is required</td>
+</tr>
+
+<tr>
+<td class="org-left">#IMPLIED</td>
+<td class="org-left">attribute is optional</td>
+</tr>
+
+<tr>
+<td class="org-left">#FIXED <i>value</i></td>
+<td class="org-left">attribute value is fixed</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Examples:
+</p>
+
+<p>
+A default attribute value
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD:
+&lt;!ELEMENT square EMPTY&gt;
+&lt;!ATTLIST square width CDATA "0"&gt;
+Valid XML:
+&lt;<span style="color: #b58900;">square</span> <span style="color: #268bd2;">width</span>=<span style="color: #2aa198;">"100"</span>/&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>in the above example, "square" is defined to be an empty element with a 'width' attribute of type CDATA and a default value of 0 if no width is specified</li>
+</ul>
+
+<p>
+A required attribute value
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD:
+&lt;!ATTLIST person number CDATA #REQUIRED&gt;
+Valid XML:
+&lt;<span style="color: #b58900;">person</span> <span style="color: #268bd2;">number</span>=<span style="color: #2aa198;">"5677"</span> /&gt;
+Invalid XML:
+&lt;<span style="color: #b58900;">person</span> /&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>use the #REQUIRED keyword if you don't have an option for a default value, but still want to force the attribute to be present.</li>
+</ul>
+
+<p>
+An implied attribute value
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD:
+&lt;!ATTLIST contact fax CDATA #IMPLIED&gt;
+Valid XML:
+&lt;<span style="color: #b58900;">contact</span> <span style="color: #268bd2;">fax</span>=<span style="color: #2aa198;">"555-667788"</span> /&gt;
+Valid XML:
+&lt;<span style="color: #b58900;">contact</span> /&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>use the #IMPLIED keyword if you don't want to force the author to include an attribute, and you don't have an option for a default value</li>
+</ul>
+
+<p>
+A fixed attribute value
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD:
+&lt;!ATTLIST sender company CDATA #FIXED "Microsoft"&gt;
+Valid XML:
+&lt;<span style="color: #b58900;">sender</span> <span style="color: #268bd2;">company</span>=<span style="color: #2aa198;">"Microsoft"</span> /&gt;
+Invalid XML:
+&lt;<span style="color: #b58900;">sender</span> <span style="color: #268bd2;">company</span>=<span style="color: #2aa198;">"W3Schools"</span> /&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>use the #FIXED keyword when you want an attribute to have a fixed value without allowing the author to change it. If an author includes another value, the XML parser will return an error</li>
+</ul>
+
+<p>
+Enumerated attribute values
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD:
+&lt;!ATTLIST payment type (check|cash) "cash"&gt;
+XML example:
+&lt;<span style="color: #b58900;">payment</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"check"</span> /&gt;
+or
+&lt;<span style="color: #b58900;">payment</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"cash"</span> /&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>use enumerated attribute values when you want the attribute value to be one of a fixed set of legal values</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3317575" class="outline-3">
+<h3 id="org3317575"><span class="section-number-3">1.3</span> Entities</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Entities are used to define shortcuts to special characters and can be declared internally via <code>&lt;!ENTITY entity-name "entity-value"&gt;</code> or externally via <code>&lt;!ENTITY entity-name SYSTEM "URI/URL"&gt;</code><br />
+Example (internal):
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD Example:
+&lt;!ENTITY writer "Donald Duck."&gt;
+&lt;!ENTITY copyright "Copyright W3Schools."&gt;
+XML example:
+&lt;<span style="color: #b58900;">author</span>&gt;<span style="color: #6c71c4;">&amp;</span><span style="color: #6c71c4;">writer</span><span style="color: #6c71c4;">;&amp;</span><span style="color: #6c71c4;">copyright</span><span style="color: #6c71c4;">;</span>&lt;/<span style="color: #b58900;">author</span>&gt;
+</pre>
+</div>
+<p>
+Note: An entity has three parts: an ampersand (&amp;), an entity name, and a semicolon (;)
+</p>
+
+<p>
+Example (external):
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DTD Example:
+&lt;!ENTITY writer SYSTEM "https://www.w3schools.com/entities.dtd"&gt;
+&lt;!ENTITY copyright SYSTEM "https://www.w3schools.com/entities.dtd"&gt;
+XML example:
+&lt;<span style="color: #b58900;">author</span>&gt;<span style="color: #6c71c4;">&amp;</span><span style="color: #6c71c4;">writer</span><span style="color: #6c71c4;">;&amp;</span><span style="color: #6c71c4;">copyright</span><span style="color: #6c71c4;">;</span>&lt;/<span style="color: #b58900;">author</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb0137f" class="outline-2">
+<h2 id="orgeb0137f"><span class="section-number-2">2</span> XML Schema</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+An XML Schema describes the structure of an XML document. The XML Schema language is also referred to as XML Schema Definition (XSD).<br />
+The purpose of an XML Schema is to define the legal building blocks of an XML document:
+</p>
+<ul class="org-ul">
+<li>the elements and attributes that can appear in a document</li>
+<li>the number of (and order of) child elements</li>
+<li>data types for elements and attributes</li>
+<li>default and fixed values for elements and attributes</li>
+</ul>
+<p>
+One of the greatest strength of XML Schemas is the support for data types.
+</p>
+<ul class="org-ul">
+<li>It is easier to describe allowable document content</li>
+<li>It is easier to validate the correctness of data</li>
+<li>It is easier to define data facets (restrictions on data)</li>
+<li>It is easier to define data patterns (data formats)</li>
+<li>It is easier to convert data between different data types</li>
+</ul>
+<p>
+For example look at this simple XML doc called "note.xml":
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+&lt;<span style="color: #b58900;">note</span>
+    <span style="color: #d33682; font-style: italic;">xmlns</span>=<span style="color: #2aa198;">"https://www.w3schools.com"</span>
+    <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xsi</span>=<span style="color: #2aa198;">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span style="color: #d33682; font-style: italic;">xsi</span>:<span style="color: #268bd2;">schemaLocation</span>=<span style="color: #2aa198;">"https://www.w3schools.com/xml note.xsd"</span>&gt;
+  &lt;<span style="color: #b58900;">to</span>&gt;Tove&lt;/<span style="color: #b58900;">to</span>&gt;
+  &lt;<span style="color: #b58900;">from</span>&gt;Jani&lt;/<span style="color: #b58900;">from</span>&gt;
+  &lt;<span style="color: #b58900;">heading</span>&gt;Reminder&lt;/<span style="color: #b58900;">heading</span>&gt;
+  &lt;<span style="color: #b58900;">body</span>&gt;Don't forget me this weekend!&lt;/<span style="color: #b58900;">body</span>&gt;
+&lt;/<span style="color: #b58900;">note</span>&gt;
+</pre>
+</div>
+<p>
+And the corresponding "note.xsd":
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">schema</span> <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xs</span>=<span style="color: #2aa198;">"http://www.w3.org/2001/XMLSchema"</span>
+           <span style="color: #268bd2;">targetNamespace</span>=<span style="color: #2aa198;">"https://www.w3schools.com"</span>
+           <span style="color: #d33682; font-style: italic;">xmlns</span>=<span style="color: #2aa198;">"https://www.w3schools.com"</span>
+           <span style="color: #268bd2;">elementFormDefault</span>=<span style="color: #2aa198;">"qualified"</span>&gt;
+
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"note"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"to"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"from"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"heading"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"body"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">schema</span>&gt;
+</pre>
+</div>
+<p>
+The note element is a <b>complex type</b> because it contains other elements. The other elements (to, from, heading, body) are <b>simple types</b> because they do not contain other elements.<br />
+The &lt;schema&gt; element is the root of every XML schema and often looks similar to the example above. The fragment <code>xmlns:xs="http://"xmlns:xs="http://www.w3.org/2001/XMLSchema"</code> indicates that the elements and datatypes used in the schema come from the "<a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>" namespace. It also specifies that the elements and data types that come from the "<a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>" namespace should be prefixed with <b>xs:</b><br />
+The fragment <code>targetNamespace="https://www.w3schools.com"</code> indicates that the elements defined by this schema (note, to, from, heading, body) come from the "<a href="https://www.w3schools.com">https://www.w3schools.com</a>" namespace. This fragment <code>xmlns="https://www.w3schools.com"</code> indicates that the default namespace is "<a href="https://www.w3schools.com">https://www.w3schools.com</a>". Last but not least the fragment <code>elementFormDefault="qualified"</code> indicates that any elements used by the XML instance document which were declared in this schema must be namespace qualified.<br />
+In the XML document the reference to the XML schema has the following fragment <code>xmlns="https://www.w3schools.com"</code> which specifies the default namespace declaration which tells the schema-validator that all the elements used in this XML document are declared in the "<a href="https://www.w3schools.com">https://www.w3schools.com</a>" namespace. Once you have the XML Schema Instance available via <code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</code> the <code>schemaLocation</code> attribute can be used which has two space-separated values which indicate the namespace to use and the location of the XML schema to use for that namespace: <code>xsi:schemaLocation="https://www.w3schools.com note.xsd"</code>
+</p>
+</div>
+<div id="outline-container-org3b3d6df" class="outline-3">
+<h3 id="org3b3d6df"><span class="section-number-3">2.1</span> Simple Elements</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+A simple element is an XML element that contains only text. It cannot contain any other elements or attributes. However, the "only text" restriction is quite misleading. The text can be of many different types. It can be one of the types included in the XML Schema definition (boolean, string, date, etc.), or it can be a custom type that you can define yourself.
+You can also add restrictions (facets) to a data type in order to limit its content, or you can require the data to match a specific pattern.<br />
+This is the syntax <code>&lt;xs:element name="xxx" type="yyy"/&gt;</code> and the most common types are:
+</p>
+<ul class="org-ul">
+<li>xs:string</li>
+<li>xs:decimal</li>
+<li>xs:integer</li>
+<li>xs:boolean</li>
+<li>xs:date</li>
+<li>xs:time</li>
+</ul>
+<p>
+Here are some examples:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"age"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:integer"</span>/&gt;
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"dateborn"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:date"</span>/&gt;
+and the corresponding XML elements
+&lt;<span style="color: #b58900;">lastname</span>&gt;Refsnes&lt;/<span style="color: #b58900;">lastname</span>&gt;
+&lt;<span style="color: #b58900;">age</span>&gt;36&lt;/<span style="color: #b58900;">age</span>&gt;
+&lt;<span style="color: #b58900;">dateborn</span>&gt;1970-03-27&lt;/<span style="color: #b58900;">dateborn</span>&gt;
+</pre>
+</div>
+<p>
+Simple elements may have a default value OR a fixed value specified.
+A default value is automatically assigned to the element when no other value is specified <code>&lt;xs:element name="color" type="xs:string" default="red"/&gt;</code>. A fixed value is also automatically assigned to the element, and you cannot specify another value <code>&lt;xs:element name="color" type="xs:string" fixed="red"/&gt;</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20d3984" class="outline-3">
+<h3 id="org20d3984"><span class="section-number-3">2.2</span> Attributes</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Simple elements cannot have attributes. If an element has attributes, it is considered to be of a complex type. But the attribute itself is always declared as a simple type. <code>&lt;xs:attribute name="xxx" type="yyy"/&gt;</code> for example:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">attribute</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lang"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+<span style="color: #96A7A9; font-style: italic;">&lt;!-- </span><span style="color: #96A7A9; font-style: italic;">and the corresponding xml </span><span style="color: #96A7A9; font-style: italic;">--&gt;</span>
+&lt;<span style="color: #b58900;">lastname</span> <span style="color: #268bd2;">lang</span>=<span style="color: #2aa198;">"EN"</span>&gt;Smith&lt;/<span style="color: #b58900;">lastname</span>&gt;
+</pre>
+</div>
+<p>
+Similar to "Simple Elements" default and fixed values are possible. However attributes are optional by default, to specify that an attribute is required use the "use" attribute: <code>&lt;xs:attribute name="lang" type="xs:string" use="required"/&gt;</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1202faf" class="outline-3">
+<h3 id="org1202faf"><span class="section-number-3">2.3</span> Restrictions</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Restrictions are used to define acceptable values for XML elements or attributes. Restrictions on XML elements are called facets.<br />
+The following example defines an element called "age" with a restriction. The value of age cannot be lower than 0 or greater than 120:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"age"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:integer"</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">minInclusive</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"0"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">maxInclusive</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"120"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+<p>
+To limit the content of an XML element to a set of acceptable values, we would use the enumeration constraint.
+The example below defines an element called "car" with a restriction. The only acceptable values are: Audi, Golf, BMW:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"car"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:string"</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"Audi"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"Golf"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"BMW"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+<p>
+The example above could also have been written like this:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"car"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"carType"</span>/&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"carType"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:string"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"Audi"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"Golf"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">enumeration</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"BMW"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+</pre>
+</div>
+<p>
+Note: In this case the type "carType" can be used by other elements because it is not a part of the "car" element.
+</p>
+
+<p>
+To limit the content of an XML element to define a series of numbers or letters that can be used, we would use the pattern constraint.
+The example below defines an element called "letter" with a restriction. The only acceptable value is ONE of the LOWERCASE letters from a to z:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"letter"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:string"</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">pattern</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"[a-z]"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+<p>
+Other examples:
+</p>
+<ul class="org-ul">
+<li>three uppercase A-Z letters: <code>&lt;xs:pattern value="[A-Z][A-Z][A-Z]"/&gt;</code></li>
+<li>three upper/lowercase letter: <code>&lt;xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/&gt;</code></li>
+<li>one of x,y or z: <code>&lt;xs:pattern value="[xyz]"/&gt;</code></li>
+<li>five digits: <code>&lt;xs:pattern value="[0-9][0-9][0-9][0-9][0-9]"/&gt;</code></li>
+<li>zero or more occurences of lowercase letters: <code>&lt;xs:pattern value="([a-z])*"/&gt;</code></li>
+<li>one or more pairs of lowercase followed by uppercase letters eg sToP: <code>&lt;xs:pattern value="([a-z][A-Z])+"/&gt;</code></li>
+<li>only male or female: <code>&lt;xs:pattern value="male|female"/&gt;</code></li>
+<li>exactly eight characters in a row and those characters must be lowercase or uppercase letters from a to z, or a number from 0 to 9: <code>&lt;xs:pattern value="[a-zA-Z0-9]{8}"/&gt;</code></li>
+</ul>
+<p>
+To specify how whitespace characters should be handled, we would use the whiteSpace constraint.
+This example defines an element called "address" with a restriction. The whiteSpace constraint is set to "preserve", which means that the XML processor WILL NOT remove any white space characters:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"address"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:string"</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">whiteSpace</span> <span style="color: #268bd2;">value</span>=<span style="color: #2aa198;">"preserve"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">restriction</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>other options would be <code>replace</code> (replaces all whitespace with space) and <code>collapse</code> (collapse to single space)</li>
+</ul>
+
+<p>
+To limit the length of a value in an element, we would use the length (<code>&lt;xs:length value="8"/&gt;</code>), maxLength(<code>&lt;xs:maxLength value="8"/&gt;</code>), and minLength(<code>&lt;xs:minLength value="5"/&gt;</code>) constraints.
+</p>
+
+<p>
+Additional restrictions are <code>fractionDigits</code>, <code>minExclusive</code>, <code>maxExclusive</code>, <code>totalDigits</code>.
+Unique id Attribute:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"root"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"myList"</span>&gt;
+   &lt;<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">unique</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"myId"</span>&gt;
+     &lt;<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">selector</span> <span style="color: #268bd2;">xpath</span>=<span style="color: #2aa198;">"./person"</span>/&gt;
+     &lt;<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">field</span> <span style="color: #268bd2;">xpath</span>=<span style="color: #2aa198;">"@id"</span>/&gt;
+   &lt;/<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">unique</span>&gt;
+ &lt;/<span style="color: #d33682; font-style: italic;">xsd</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf047422" class="outline-3">
+<h3 id="orgf047422"><span class="section-number-3">2.4</span> Complex Elements</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+A complex element is an XML element that contains other elements and/or attributes.
+There are four kinds of complex elements:
+</p>
+<ul class="org-ul">
+<li>empty elements</li>
+<li>elements that contain only other elements</li>
+<li>elements that contain only text</li>
+<li>elements that contain both other elements and text</li>
+</ul>
+<p>
+Note: Each of these elements may contain attributes as well!<br />
+Example:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"employee"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"firstname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>
+
+&lt;<span style="color: #b58900;">employee</span>&gt;
+  &lt;<span style="color: #b58900;">firstname</span>&gt;John&lt;/<span style="color: #b58900;">firstname</span>&gt;
+  &lt;<span style="color: #b58900;">lastname</span>&gt;Smith&lt;/<span style="color: #b58900;">lastname</span>&gt;
+&lt;/<span style="color: #b58900;">employee</span>&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li><code>sequence</code> means that the elements must appear in that order inside employee</li>
+</ul>
+
+<p>
+It is also possible to base a complex element on an existing complex element and add some elements:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"employee"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"fullpersoninfo"</span>/&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"personinfo"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"firstname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"fullpersoninfo"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexContent</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">extension</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"personinfo"</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"address"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"city"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"country"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">extension</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexContent</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+</pre>
+</div>
+
+<p>
+To define an empty type, define a type without declaring any elements inside it:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"prodtype"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">attribute</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"prodid"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:positiveInteger"</span>/&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+</pre>
+</div>
+
+<p>
+A <b>complex text-only element</b> can contain text and attributes. This type contains only simple content (text and attributes), therefore we add a simpleContent element around the content. When using simple content, you must define an extension OR a restriction within the simpleContent element, like this:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"shoesize"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleContent</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">extension</span> <span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"xs:integer"</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">attribute</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"country"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span> /&gt;
+      &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">extension</span>&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">simpleContent</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+
+&lt;<span style="color: #b58900;">shoesize</span> <span style="color: #268bd2;">country</span>=<span style="color: #2aa198;">"france"</span>&gt;35&lt;/<span style="color: #b58900;">shoesize</span>&gt;
+</pre>
+</div>
+
+<p>
+A mixed complex type element can contain attributes, elements, and text. To enable character data to appear between the child-elements of "letter", the mixed attribute must be set to "true". The &lt;xs:sequence&gt; tag means that the elements defined (name, orderid and shipdate) must appear in that order inside a "letter" element:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"letter"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span> <span style="color: #268bd2;">mixed</span>=<span style="color: #2aa198;">"true"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"name"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"orderid"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:positiveInteger"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"shipdate"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:date"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+
+&lt;<span style="color: #b58900;">letter</span>&gt;
+  Dear Mr. &lt;<span style="color: #b58900;">name</span>&gt;John Smith&lt;/<span style="color: #b58900;">name</span>&gt;.
+  Your order &lt;<span style="color: #b58900;">orderid</span>&gt;1032&lt;/<span style="color: #b58900;">orderid</span>&gt;
+  will be shipped on &lt;<span style="color: #b58900;">shipdate</span>&gt;2001-07-13&lt;/<span style="color: #b58900;">shipdate</span>&gt;.
+&lt;/<span style="color: #b58900;">letter</span>&gt;
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgc00a5d9" class="outline-4">
+<h4 id="orgc00a5d9"><span class="section-number-4">2.4.1</span> Indicators</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgeabd060"></a>Order Indicators<br />
+<div class="outline-text-5" id="text-2-4-1-1">
+<p>
+Order indicators are used to define the order of the elements.
+The <code>&lt;all&gt;</code> indicator specifies that the child elements can appear in any order, and that each child element must occur only once (When using the &lt;all&gt; indicator you can set the &lt;minOccurs&gt; indicator to 0 or 1 and the &lt;maxOccurs&gt; indicator can only be set to 1).<br />
+The <code>&lt;choice&gt;</code> indicator specifies that either one child element or another can occur. The <code>&lt;sequence&gt;</code> indicator specifies that the child elements must appear in a specific order:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"person"</span>&gt;
+   &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+   &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">all</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"firstname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">all</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">choice</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"employee"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"employee"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"member"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"member"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">choice</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"firstname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orgb64410a"></a>Occurence Indicators<br />
+<div class="outline-text-5" id="text-2-4-1-2">
+<p>
+Occurrence indicators are used to define how often an element can occur (Note: For all "Order" and "Group" indicators (any, all, choice, sequence, group name, and group reference) the default value for maxOccurs and minOccurs is 1). The <code>&lt;maxOccurs&gt;</code> indicator specifies the maximum number of times an element can occur. The <code>&lt;minOccurs&gt;</code> indicator specifies the minimum number of times an element can occur (by default is 1).<br />
+Example:<br />
+family.xsd
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="UTF-8"</span>?&gt;
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">schema</span> <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xs</span>=<span style="color: #2aa198;">"http://www.w3.org/2001/XMLSchema"</span>
+<span style="color: #268bd2;">elementFormDefault</span>=<span style="color: #2aa198;">"qualified"</span>&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"persons"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"person"</span> <span style="color: #268bd2;">maxOccurs</span>=<span style="color: #2aa198;">"unbounded"</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+          &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+            &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"full_name"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+            &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"child_name"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>
+            <span style="color: #268bd2;">minOccurs</span>=<span style="color: #2aa198;">"0"</span> <span style="color: #268bd2;">maxOccurs</span>=<span style="color: #2aa198;">"5"</span>/&gt;
+          &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+        &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+      &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+    &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span>&gt;
+
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">schema</span>&gt;
+</pre>
+</div>
+<p>
+and family.xml
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="UTF-8"</span>?&gt;
+
+&lt;<span style="color: #b58900;">persons</span> <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xsi</span>=<span style="color: #2aa198;">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span style="color: #d33682; font-style: italic;">xsi</span>:<span style="color: #268bd2;">noNamespaceSchemaLocation</span>=<span style="color: #2aa198;">"family.xsd"</span>&gt;
+
+&lt;<span style="color: #b58900;">person</span>&gt;
+  &lt;<span style="color: #b58900;">full_name</span>&gt;Hege Refsnes&lt;/<span style="color: #b58900;">full_name</span>&gt;
+  &lt;<span style="color: #b58900;">child_name</span>&gt;Cecilie&lt;/<span style="color: #b58900;">child_name</span>&gt;
+&lt;/<span style="color: #b58900;">person</span>&gt;
+
+&lt;<span style="color: #b58900;">person</span>&gt;
+  &lt;<span style="color: #b58900;">full_name</span>&gt;Tove Refsnes&lt;/<span style="color: #b58900;">full_name</span>&gt;
+  &lt;<span style="color: #b58900;">child_name</span>&gt;Hege&lt;/<span style="color: #b58900;">child_name</span>&gt;
+  &lt;<span style="color: #b58900;">child_name</span>&gt;Stale&lt;/<span style="color: #b58900;">child_name</span>&gt;
+  &lt;<span style="color: #b58900;">child_name</span>&gt;Jim&lt;/<span style="color: #b58900;">child_name</span>&gt;
+  &lt;<span style="color: #b58900;">child_name</span>&gt;Borge&lt;/<span style="color: #b58900;">child_name</span>&gt;
+&lt;/<span style="color: #b58900;">person</span>&gt;
+
+&lt;<span style="color: #b58900;">person</span>&gt;
+  &lt;<span style="color: #b58900;">full_name</span>&gt;Stale Refsnes&lt;/<span style="color: #b58900;">full_name</span>&gt;
+&lt;/<span style="color: #b58900;">person</span>&gt;
+
+&lt;/<span style="color: #b58900;">persons</span>&gt;
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org07f44d5"></a>Group Indicators<br />
+<div class="outline-text-5" id="text-2-4-1-3">
+<p>
+Group indicators are used to define related sets of elements which must be all, choice or sequence elements, eg:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">group</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"persongroup"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"firstname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"lastname"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"birthday"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:date"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">group</span>&gt;
+</pre>
+</div>
+<p>
+can then be referenced in another definiton like this:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"person"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"personinfo"</span>/&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"personinfo"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">group</span> <span style="color: #268bd2;">ref</span>=<span style="color: #2aa198;">"persongroup"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">element</span> <span style="color: #268bd2;">name</span>=<span style="color: #2aa198;">"country"</span> <span style="color: #268bd2;">type</span>=<span style="color: #2aa198;">"xs:string"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">sequence</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xs</span>:<span style="color: #b58900;">complexType</span>&gt;
+</pre>
+</div>
+<p>
+This is also possible for attribute groups, just replace <code>xs:group</code> with <code>xs:attributeGroup</code> and <code>xs:element</code> with <code>xs:attribute</code>.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org283f54b" class="outline-4">
+<h4 id="org283f54b"><span class="section-number-4">2.4.2</span> Misc</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+The &lt;any&gt; element enables us to extend the XML document with elements not specified by the schema (eg <code>xs:any minOccurs="0"/&gt;</code>).<br />
+The &lt;anyAttribute&gt; element enables us to extend the XML document with attributes not specified by the schema (eg <code>&lt;xs:anyAttribute/&gt;</code>).<br />
+Common data types:
+</p>
+<ul class="org-ul">
+<li>String: <code>string</code>, <code>ID</code>, <code>IDREF</code>, <code>language</code></li>
+<li>Date: <code>date</code>, <code>dateTime</code>, <code>time</code></li>
+<li>Numeric: <code>decimal</code>, <code>integer</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8867976" class="outline-2">
+<h2 id="org8867976"><span class="section-number-2">3</span> XSLT</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+XSL (eXtensible Stylesheet Language) is a styling language for XML. XSLT stands for XSL Transformations. XSLT can be used to transform XML documents into other formats like for example HTML. XSLT 2.0, XPath 2.0, and XQuery 1.0, share the same functions library. There are over 100 built-in functions. There are functions for string values, numeric values, date and time comparison, node and QName manipulation, sequence manipulation, and more.
+</p>
+<ul class="org-ul">
+<li><b>XSLT</b> is a language for transforming XML documents using XPath</li>
+<li><b>XPath</b> is a language for navigating in XML documents</li>
+<li><b>XQuery</b> is a language for querying XML documents</li>
+</ul>
+</div>
+<div id="outline-container-org7fc0dfa" class="outline-3">
+<h3 id="org7fc0dfa"><span class="section-number-3">3.1</span> Basics</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+An XSL style sheet consists of one or more set of rules that are called templates. A template contains rules to apply when a specified node is matched.<br />
+The <code>&lt;xsl:template&gt;</code> element is used to build templates.
+The match attribute is used to associate a template with an XML element. The match attribute can also be used to define a template for the entire XML document. The value of the match attribute is an XPath expression (i.e. <code>match="/"</code> defines the whole document). Look at the previous example in the "Basics" section to see this in action.<br />
+The <code>xsl:value-of&gt;</code> is used to extract the value of an XML element and add it to the output stream of the transformation. It is used in conjuction with an <code>select=XPATH</code>.<br />
+The <code>&lt;xslLfor-each&gt;</code> element can be used to select every XML element of a specified node-set via <code>select=XPATH</code>. The output can also be filtered, eg <code>&lt;xsl:for-each select="catalog/cd[artist='Bob Dylan']"&gt;</code>, legal filter operators are <code>, !</code>, &amp;lt;, &amp;gt; <br />
+The <code>&lt;xsl:sort</code> element is used to sort the output - the <b>select</b> attribbute indicates which XML element to sort on.<br />
+To add a conditional test, add the <code>&lt;xsl:if&gt;</code> element with a <code>test="expression"</code> . The <code>&lt;xsl:choose&gt;</code> element is used in conjunction with <code>&lt;xsl:when test="expression"&gt;</code> and <code>xsl:otherwise&gt;</code> to express multiple conditional tests:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">choose</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">when</span> <span style="color: #268bd2;">test</span>=<span style="color: #2aa198;">"expression"</span>&gt;
+    ... some output ...
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">when</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">otherwise</span>&gt;
+    ... some output ....
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">otherwise</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">choose</span>&gt;
+</pre>
+</div>
+
+<hr />
+<p>
+<b>Example showcasing the above basics:</b><br />
+The root element that declares the document to be an XSL style sheet is &lt;xsl:stylesheet&gt; or &lt;xsl:transform&gt;. We want to transform the following XML document "cdcatalog.xml" into XHTML:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="UTF-8"</span>?&gt;
+&lt;<span style="color: #b58900;">catalog</span>&gt;
+  &lt;<span style="color: #b58900;">cd</span>&gt;
+    &lt;<span style="color: #b58900;">title</span>&gt;Empire Burlesque&lt;/<span style="color: #b58900;">title</span>&gt;
+    &lt;<span style="color: #b58900;">artist</span>&gt;Bob Dylan&lt;/<span style="color: #b58900;">artist</span>&gt;
+    &lt;<span style="color: #b58900;">country</span>&gt;USA&lt;/<span style="color: #b58900;">country</span>&gt;
+    &lt;<span style="color: #b58900;">company</span>&gt;Columbia&lt;/<span style="color: #b58900;">company</span>&gt;
+    &lt;<span style="color: #b58900;">price</span>&gt;10.90&lt;/<span style="color: #b58900;">price</span>&gt;
+    &lt;<span style="color: #b58900;">year</span>&gt;1985&lt;/<span style="color: #b58900;">year</span>&gt;
+  &lt;/<span style="color: #b58900;">cd</span>&gt;
+...
+...
+&lt;/<span style="color: #b58900;">catalog</span>&gt;
+</pre>
+</div>
+<p>
+First create an XSL stylesheet "cdcatalog.xsl" with a transformation table:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="UTF-8"</span>?&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">stylesheet</span> <span style="color: #268bd2;">version</span>=<span style="color: #2aa198;">"1.0"</span>
+                <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xsl</span>=<span style="color: #2aa198;">"http://www.w3.org/1999/XSL/Transform"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span> <span style="color: #268bd2;">match</span>=<span style="color: #2aa198;">"/"</span>&gt;
+    &lt;<span style="color: #b58900;">html</span>&gt;
+      &lt;<span style="color: #b58900;">body</span>&gt;
+        &lt;<span style="color: #b58900;">h2</span>&gt;My CD Collection&lt;/<span style="color: #b58900;">h2</span>&gt;
+        &lt;<span style="color: #b58900;">table</span> <span style="color: #268bd2;">border</span>=<span style="color: #2aa198;">"1"</span>&gt;
+          &lt;<span style="color: #b58900;">tr</span> <span style="color: #268bd2;">bgcolor</span>=<span style="color: #2aa198;">"#9acd32"</span>&gt;
+            &lt;<span style="color: #b58900;">th</span>&gt;Title&lt;/<span style="color: #b58900;">th</span>&gt;
+            &lt;<span style="color: #b58900;">th</span>&gt;Artist&lt;/<span style="color: #b58900;">th</span>&gt;
+          &lt;/<span style="color: #b58900;">tr</span>&gt;
+          &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"catalog/cd"</span>&gt;
+            &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">sort</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"artist"</span>/&gt;
+            &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">if</span> <span style="color: #268bd2;">test</span>=<span style="color: #2aa198;">"price </span><span style="color: #6c71c4;">&amp;</span><span style="color: #6c71c4;">gt</span><span style="color: #6c71c4;">;</span><span style="color: #2aa198;"> 10"</span>&gt;
+              &lt;<span style="color: #b58900;">tr</span>&gt;
+                &lt;<span style="color: #b58900;">td</span>&gt;&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">value-of</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"title"</span>/&gt;&lt;/<span style="color: #b58900;">td</span>&gt;
+                &lt;<span style="color: #b58900;">td</span>&gt;&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">value-of</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"artist"</span>/&gt;&lt;/<span style="color: #b58900;">td</span>&gt;
+              &lt;/<span style="color: #b58900;">tr</span>&gt;
+            &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">if</span>&gt;
+          &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span>&gt;
+        &lt;/<span style="color: #b58900;">table</span>&gt;
+      &lt;/<span style="color: #b58900;">body</span>&gt;
+    &lt;/<span style="color: #b58900;">html</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">stylesheet</span>&gt;
+</pre>
+</div>
+<p>
+And then link the XSL stylesheet into the XML document from before by putting <code>&lt;?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?&gt;</code> before the root element.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcb24844" class="outline-3">
+<h3 id="orgcb24844"><span class="section-number-3">3.2</span> Template Example</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+XML:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;!xml version="1.0"?&gt;
+&lt;<span style="color: #b58900;">deliveries</span>&gt;
+  &lt;<span style="color: #b58900;">article</span> <span style="color: #268bd2;">id</span>=<span style="color: #2aa198;">"3526"</span>&gt;
+    &lt;<span style="color: #b58900;">name</span>&gt;apple&lt;/<span style="color: #b58900;">name</span>&gt;
+    &lt;<span style="color: #b58900;">price</span> <span style="color: #268bd2;">unitprice</span>=<span style="color: #2aa198;">"true"</span>&gt;8.97&lt;/<span style="color: #b58900;">price</span>&gt;
+    &lt;<span style="color: #b58900;">suppler</span>&gt;Fa. Krause&lt;/<span style="color: #b58900;">supplier</span>&gt;
+  &lt;/<span style="color: #b58900;">article</span>&gt;
+  &lt;<span style="color: #b58900;">article</span> <span style="color: #268bd2;">id</span>=<span style="color: #2aa198;">"7866"</span>&gt;
+    &lt;<span style="color: #b58900;">name</span>&gt;cherries&lt;/<span style="color: #b58900;">name</span>&gt;
+    &lt;<span style="color: #b58900;">price</span> <span style="color: #268bd2;">unitprice</span>=<span style="color: #2aa198;">"true"</span>&gt;10.45&lt;/<span style="color: #b58900;">price</span>&gt;
+    &lt;<span style="color: #b58900;">suppler</span>&gt;Fa. Helbig&lt;/<span style="color: #b58900;">supplier</span>&gt;
+  &lt;/<span style="color: #b58900;">article</span>&gt;
+  &lt;<span style="color: #b58900;">article</span> <span style="color: #268bd2;">id</span>=<span style="color: #2aa198;">"3526"</span>&gt;
+    &lt;<span style="color: #b58900;">name</span>&gt;apple&lt;/<span style="color: #b58900;">name</span>&gt;
+    &lt;<span style="color: #b58900;">price</span> <span style="color: #268bd2;">unitprice</span>=<span style="color: #2aa198;">"true"</span>&gt;12.67&lt;/<span style="color: #b58900;">price</span>&gt;
+    &lt;<span style="color: #b58900;">suppler</span>&gt;Fa. Liebig&lt;/<span style="color: #b58900;">supplier</span>&gt;
+  &lt;/<span style="color: #b58900;">article</span>&gt;
+  (...)
+  &lt;<span style="color: #b58900;">article</span> <span style="color: #268bd2;">id</span>=<span style="color: #2aa198;">"7789"</span>&gt;
+    &lt;<span style="color: #b58900;">name</span>&gt;pineapple&lt;/<span style="color: #b58900;">name</span>&gt;
+    &lt;<span style="color: #b58900;">price</span> <span style="color: #268bd2;">unitprice</span>=<span style="color: #2aa198;">"true"</span>&gt;8.60&lt;/<span style="color: #b58900;">price</span>&gt;
+    &lt;<span style="color: #b58900;">suppler</span>&gt;Fa. Richard&lt;/<span style="color: #b58900;">supplier</span>&gt;
+  &lt;/<span style="color: #b58900;">article</span>&gt;
+&lt;/<span style="color: #b58900;">deliveries</span>&gt;
+</pre>
+</div>
+<p>
+Write an XSL transformation which produces the following result:
+</p>
+<ul class="org-ul">
+<li>Fa. Helbig supplies: cherries</li>
+<li>Fa. Liebig supplies: apple</li>
+<li>Fa. Krause supplies: apple cherries</li>
+<li>Fa. Hoeller supplies: cherries cabbage banana</li>
+<li>Fa. Reinhardt supplies: cabbage</li>
+<li>Fa. Richard supplies: cherries pineapple</li>
+</ul>
+
+<p>
+Solution:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="utf-8"</span>?&gt;
+&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">stylesheet</span> <span style="color: #268bd2;">version</span>=<span style="color: #2aa198;">"1.0"</span> <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">xsl</span>=<span style="color: #2aa198;">"http://www.w3.org/1999/XSL/Transform"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">output</span> <span style="color: #268bd2;">method</span>=<span style="color: #2aa198;">"html"</span> <span style="color: #268bd2;">encoding</span>=<span style="color: #2aa198;">"utf-8"</span>/&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span> <span style="color: #268bd2;">match</span>=<span style="color: #2aa198;">"seite"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">apply-templates</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"document('deliveries.xml')"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span>&gt;
+
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span> <span style="color: #268bd2;">match</span>=<span style="color: #2aa198;">"deliveries"</span>&gt;
+    &lt;<span style="color: #b58900;">html</span>&gt;
+      &lt;<span style="color: #b58900;">head</span>&gt;&lt;<span style="color: #b58900;">title</span>&gt;&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt;suppliers&lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt;&lt;/<span style="color: #b58900;">title</span>&gt;&lt;/<span style="color: #b58900;">head</span>&gt;
+      &lt;<span style="color: #b58900;">body</span> <span style="color: #268bd2;">bgcolor</span>=<span style="color: #2aa198;">"#ffffff"</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"//supplier[not(preceding::supplier/. = .)]"</span>&gt;
+          &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">apply-templates</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"."</span>&gt;
+          &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">apply-templates</span>&gt;
+        &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span>&gt;
+      &lt;/<span style="color: #b58900;">body</span>&gt;
+    &lt;/<span style="color: #b58900;">html</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span>&gt;
+
+  &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span> <span style="color: #268bd2;">match</span>=<span style="color: #2aa198;">"supplier"</span>&gt;
+    &lt;<span style="color: #b58900;">p</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">value-of</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"text()"</span>/&gt;&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt; supplies &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt;
+      &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"//article[supplier/text() = current()/text()]"</span>&gt;
+        &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">value-of</span> <span style="color: #268bd2;">select</span>=<span style="color: #2aa198;">"name/text()"</span>/&gt;&lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt; &lt;<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">text</span>&gt;
+      &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">for-each</span>&gt;
+    &lt;/<span style="color: #b58900;">p</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">template</span>&gt;
+
+&lt;/<span style="color: #d33682; font-style: italic;">xsl</span>:<span style="color: #b58900;">stylesheet</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd1325c5" class="outline-2">
+<h2 id="orgd1325c5"><span class="section-number-2">4</span> XPath Reference</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6690cdb" class="outline-3">
+<h3 id="org6690cdb"><span class="section-number-3">4.1</span> Selecting nodes</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+In XPath, there are seven kinds of nodes: element, attribute, text, namespace, processing-instruction, comment, and document nodes.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> </caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Expression</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">nodename</td>
+<td class="org-left">selects all nodes with the name "nodename"</td>
+</tr>
+
+<tr>
+<td class="org-left">/</td>
+<td class="org-left">selects from the root node</td>
+</tr>
+
+<tr>
+<td class="org-left">//</td>
+<td class="org-left">selects nodes in the document from the current node that match the selection no matter where they are</td>
+</tr>
+
+<tr>
+<td class="org-left">.</td>
+<td class="org-left">selects the current node</td>
+</tr>
+
+<tr>
+<td class="org-left">..</td>
+<td class="org-left">selects the parent of the current node</td>
+</tr>
+
+<tr>
+<td class="org-left">@</td>
+<td class="org-left">selects attributes</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Examples:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Path Expression</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">bookstore</td>
+<td class="org-left">selects all nodes with the name "bookstore"</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore</td>
+<td class="org-left">selects the root element bookstore (absolute path)</td>
+</tr>
+
+<tr>
+<td class="org-left">bookstore/book</td>
+<td class="org-left">selects all book elements that are children of bookstore</td>
+</tr>
+
+<tr>
+<td class="org-left">//book</td>
+<td class="org-left">selects all book elements no matter where they are in the document</td>
+</tr>
+
+<tr>
+<td class="org-left">bookstore/book</td>
+<td class="org-left">selects all book elements that are descendant of the bookstore element, no matter where they are under the bookstore element</td>
+</tr>
+
+<tr>
+<td class="org-left">//@lang</td>
+<td class="org-left">selects all attributes that are named lang</td>
+</tr>
+
+<tr>
+<td class="org-left">//Sales.Customer[starts-with(Name, 'Jans')]</td>
+<td class="org-left">all customers from which the name starts with 'Jans'</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org388a052" class="outline-3">
+<h3 id="org388a052"><span class="section-number-3">4.2</span> Predicates</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Predicates are used to find a specific node or a node that contains a specific value.
+Predicates are always embedded in square brackets.
+In the table beloware some path expressions with predicates and the result of the expressions:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Path Expression</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">/bookstore/book[1]</td>
+<td class="org-left">selects the first book element that is the child of the bookstore element</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore/book[last()]</td>
+<td class="org-left">selects the last book element that is the child of the bookstore element</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore/book[last()-1]</td>
+<td class="org-left">selects the second to last book element that is the child of the bookstore element</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore/book[position()&lt;3]</td>
+<td class="org-left">selects the first two book elements that are child of bookstore</td>
+</tr>
+
+<tr>
+<td class="org-left">/title[@lang='en']</td>
+<td class="org-left">selects all title elements that have a "lang" attr with val "en"</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore/book[price&gt;35.00]</td>
+<td class="org-left">selects all the book elements of the bookstore that have a price val higher than 35.00</td>
+</tr>
+
+<tr>
+<td class="org-left">/bookstore/book[price&gt;35.00]/title</td>
+<td class="org-left">selects all the title elements of book elements of the bookstore that have a price val higher than 35.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org970483f" class="outline-3">
+<h3 id="org970483f"><span class="section-number-3">4.3</span> Selecting unknown nodes</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+XPath wildcards can be used to select unknown XML nodes:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Wildcard</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">*</td>
+<td class="org-left">matches any element node</td>
+</tr>
+
+<tr>
+<td class="org-left">@*</td>
+<td class="org-left">matches any attribute node</td>
+</tr>
+
+<tr>
+<td class="org-left">node()</td>
+<td class="org-left">matches any node of any kind</td>
+</tr>
+</tbody>
+</table>
+<p>
+Examples:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Path Expression</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">/bookstore/*</td>
+<td class="org-left">selects all the child element nodes of the bookstore element</td>
+</tr>
+
+<tr>
+<td class="org-left">//*</td>
+<td class="org-left">selects all elements in the document</td>
+</tr>
+
+<tr>
+<td class="org-left">//title[@*]</td>
+<td class="org-left">selects all title elements which have at least one attribute of any kind</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+By using the "|" operator to separate XPath expressions multiple paths can be selected eg <code>//book/title | //book/price</code> selects all the title AND price elements of all book elements
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org75d74e3" class="outline-2">
+<h2 id="org75d74e3"><span class="section-number-2">5</span> RDF</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+RDF triple: Describes a statement in form of a relationship (P) between a subject (S) and an object (O).
+</p>
+<ul class="org-ul">
+<li>Statement describes a thing S, where a property P is provided with a value of O</li>
+<li>RDF triple (S,P,O)
+<ul class="org-ul">
+<li>Subject - Predicate - Object, or technically Subject - Property - Object</li>
+</ul></li>
+<li>P connects S and O</li>
+<li>S and P are URIs, O is a URI or a literal</li>
+<li>conceptually P connects S and O</li>
+</ul>
+
+<p>
+First example statement: "Gaedke is gay"
+</p>
+<ul class="org-ul">
+<li>S = <a href="http://gaedke.com/">http://gaedke.com/</a>, P = <a href="http://.../is">http://.../is</a>, O = <a href="http://.../gay">http://.../gay</a></li>
+<li>statements as an RDF triple: <a href="http://gaedke.com/">http://gaedke.com/</a>,<a href="http://.../is">http://.../is</a>,<a href="http://.../gay">http://.../gay</a></li>
+</ul>
+
+<p>
+RDF is a data model&#x2026;machine-readable implementations include RDF/XML, Notation 3 (N3), Turtle, etc.
+</p>
+</div>
+<div id="outline-container-orgcbb7e13" class="outline-3">
+<h3 id="orgcbb7e13"><span class="section-number-3">5.1</span> RDF/XML</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li><code>rdf:Description</code> elements describe resources (<b>Subjects</b>)</li>
+<li>nested elements are properties/predicates (<b>P</b>)</li>
+<li>attributes <i>or</i> contents of a property element describe <b>Objects</b> (O)</li>
+</ul>
+<p>
+For example:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0" encoding="utf-8"</span>?&gt;
+&lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span> <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">rdf</span>=<span style="color: #2aa198;">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+         <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">zt</span>=<span style="color: #2aa198;">"http://example.org/evkonzept#"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span> <span style="color: #268bd2;">about</span>=<span style="color: #2aa198;">"http://zoo.../tiere#t12"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">zt</span>:<span style="color: #b58900;">Vatervon</span> <span style="color: #268bd2;">resource</span>=<span style="color: #2aa198;">"http://zoo.../tiere#t34"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">zt</span>:<span style="color: #b58900;">Name</span>&gt;Teddy&lt;/<span style="color: #d33682; font-style: italic;">zt</span>:<span style="color: #b58900;">Name</span>&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span>&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span>&gt;
+</pre>
+</div>
+<ul class="org-ul">
+<li>Tier 12 (<code>t12</code>) is the subject, <code>zt:Vatervon</code> is the property and Tier 34 (<code>t34</code>) is the object (URI)</li>
+<li>Tier 12 (<code>t12</code>) is the subject, <code>zt:Name</code> is the property and "Teddy" is the object (literal)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org80fd54b" class="outline-3">
+<h3 id="org80fd54b"><span class="section-number-3">5.2</span> RDF Schema</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+RDF Vocabulary Description Language to defined the vocabulary similar to XML Schema is defined via <code>xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"</code>. RDF Schema does not provide actual application-specific classes and properties. Instead RDF Schema provides the framework to describe application-specific classes and properties.
+Classes in RDF Schema are much like classes in object oriented programming languages. This allows resources to be defined as instances of classes, and subclasses of classes.<br />
+Example 1:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+&lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span>
+    <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">rdf</span>=<span style="color: #2aa198;">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+    <span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">rdfs</span>=<span style="color: #2aa198;">"http://www.w3.org/2000/01/rdf-schema#"</span>
+    <span style="color: #d33682; font-style: italic;">xml</span>:<span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"http://www.animals.fake/animals#"</span>&gt;
+
+  &lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">ID</span>=<span style="color: #2aa198;">"animal"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">type</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">resource</span>=<span style="color: #2aa198;">"http://www.w3.org/2000/01/rdf-schema#Class"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span>&gt;
+
+  &lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">ID</span>=<span style="color: #2aa198;">"horse"</span>&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">type</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">resource</span>=<span style="color: #2aa198;">"http://www.w3.org/2000/01/rdf-schema#Class"</span>/&gt;
+    &lt;<span style="color: #d33682; font-style: italic;">rdfs</span>:<span style="color: #b58900;">subClassOf</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">resource</span>=<span style="color: #2aa198;">"#animal"</span>/&gt;
+  &lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">Description</span>&gt;
+
+&lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span>&gt;
+</pre>
+</div>
+<p>
+In the example above, the resource "horse" is a subclass of the class "animal". Since an RDFS class is an RDF resource we can abbreviate the example above by using rdfs:Class instead of rdf:Description, and drop the rdf:type information:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">&lt;?<span style="color: #859900;">xml</span> <span style="color: #35a69c; font-style: italic;">version="1.0"</span>?&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span>
+<span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">rdf</span>=<span style="color: #2aa198;">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+<span style="color: #d33682; font-style: italic;">xmlns</span>:<span style="color: #268bd2;">rdfs</span>=<span style="color: #2aa198;">"http://www.w3.org/2000/01/rdf-schema#"</span>
+<span style="color: #d33682; font-style: italic;">xml</span>:<span style="color: #268bd2;">base</span>=<span style="color: #2aa198;">"http://www.animals.fake/animals#"</span>&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">rdfs</span>:<span style="color: #b58900;">Class</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">ID</span>=<span style="color: #2aa198;">"animal"</span> /&gt;
+
+&lt;<span style="color: #d33682; font-style: italic;">rdfs</span>:<span style="color: #b58900;">Class</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">ID</span>=<span style="color: #2aa198;">"horse"</span>&gt;
+  &lt;<span style="color: #d33682; font-style: italic;">rdfs</span>:<span style="color: #b58900;">subClassOf</span> <span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #268bd2;">resource</span>=<span style="color: #2aa198;">"#animal"</span>/&gt;
+&lt;/<span style="color: #d33682; font-style: italic;">rdfs</span>:<span style="color: #b58900;">Class</span>&gt;
+
+&lt;/<span style="color: #d33682; font-style: italic;">rdf</span>:<span style="color: #b58900;">RDF</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org17f3157" class="outline-2">
+<h2 id="org17f3157"><span class="section-number-2">6</span> SPARQL</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+SPARQL is a query language and a protocol for accessing RDF designed by the W3C RDF Data Access Working Group. 
+As a query language, SPARQL is "data-oriented" in that it only queries the information held in the models; there is no inference in the query language itself.  Of course, the Jena model may be 'smart' in that it provides the impression that certain triples exist by creating them on-demand, including OWL reasoning.  SPARQL does not do anything other than take the description of what the application wants, in the form of a query, and returns that information, in the form of a set of bindings or an RDF graph.
+</p>
+</div>
+<div id="outline-container-orgc29a895" class="outline-3">
+<h3 id="orgc29a895"><span class="section-number-3">6.1</span> SPARQL Examples</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+List all persons whose last name is "Smith"
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #859900;">PREFIX</span> vcard: <a href="http://www.w3.org/2006/vcard/ns#">&lt;http://www.w3.org/2006/vcard/ns#&gt;</a>
+
+<span style="color: #859900;">SELECT</span> ?person
+<span style="color: #859900;">WHERE</span>
+<span style="color: #268bd2;">{</span>
+  ?person vcard:family-<span style="color: #859900;">name</span> "Smith".
+<span style="color: #268bd2;">}</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>in this query the triple pattern will match against triples whose predicate is the <code>family-name</code> property from the <code>vcard</code> vocabulary whose object is the string <code>"Smith"</code> and whose subject is anything (because <code>?person</code> is just a variable/wildcard)</li>
+<li><code>SELECT</code> indicates which values should be listed after the query executes</li>
+</ul>
+
+<p>
+The result of such query would be for example <code>emp1, emp2</code>. Because this does not tell much, let's extend the query. Let's add a second triple pattern that matches on the <code>?givenName</code> (just a wildcard) for everything that matched in the previous query (first line in <code>WHERE</code> statement) and whose predicate is a <code>given-name</code> property from the vcard vocab:
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #859900;">PREFIX</span> vcard: <a href="http://www.w3.org/2006/vcard/ns#">&lt;http://www.w3.org/2006/vcard/ns#&gt;</a>
+
+<span style="color: #859900;">SELECT</span> ?person ?givenName
+<span style="color: #859900;">WHERE</span>
+<span style="color: #268bd2;">{</span>
+  ?person vcard:family-<span style="color: #859900;">name</span> "Smith".
+  ?person vcard:given-<span style="color: #859900;">name</span> ?givenName.
+<span style="color: #268bd2;">}</span>
+</pre>
+</div>
+<p>
+Now the result could look like:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">?person</th>
+<th scope="col" class="org-left">?givenName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">emp1</td>
+<td class="org-left">Heidi</td>
+</tr>
+
+<tr>
+<td class="org-left">emp2</td>
+<td class="org-left">John</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Let's retrieve the given name, family name and hire date of <i>all</i> employees:
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #859900;">PREFIX</span> vcard: <a href="http://www.w3.org/2006/vcard/ns#">&lt;http://www.w3.org/2006/vcard/ns#&gt;</a>
+
+<span style="color: #859900;">SELECT</span> ?givenName ?familyName ?hd
+<span style="color: #859900;">WHERE</span>
+<span style="color: #268bd2;">{</span>
+  ?person vcard:given-<span style="color: #859900;">name</span> ?givenName.
+  ?person vcard:family-<span style="color: #859900;">name</span> ?familyName.
+  ?person vcard:hireDate ?hd.
+<span style="color: #268bd2;">}</span>
+</pre>
+</div>
+<p>
+Result:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">?givenName</th>
+<th scope="col" class="org-left">?familyName</th>
+<th scope="col" class="org-right">?hd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Jane</td>
+<td class="org-left">Berger</td>
+<td class="org-right">2019-03-10</td>
+</tr>
+
+<tr>
+<td class="org-left">Francis</td>
+<td class="org-left">Jones</td>
+<td class="org-right">2019-02-13</td>
+</tr>
+
+<tr>
+<td class="org-left">John</td>
+<td class="org-left">Smith</td>
+<td class="org-right">2019-01-28</td>
+</tr>
+
+<tr>
+<td class="org-left">Heidi</td>
+<td class="org-left">Smith</td>
+<td class="org-right">2019-01-13</td>
+</tr>
+</tbody>
+</table>
+<p>
+To narrow down the above results via some condition we could use filter:
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #859900;">PREFIX</span> vcard: <a href="http://www.w3.org/2006/vcard/ns#">&lt;http://www.w3.org/2006/vcard/ns#&gt;</a>
+
+<span style="color: #859900;">SELECT</span> ?givenName ?familyName ?hd
+<span style="color: #859900;">WHERE</span>
+<span style="color: #268bd2;">{</span>
+  ?person vcard:given-<span style="color: #859900;">name</span> ?givenName.
+  ?person vcard:family-<span style="color: #859900;">name</span> ?familyName.
+  ?person vcard:hireDate ?hd.
+  FILTER<span style="color: #d33682;">(</span>?hd &lt; "2019-03-01"<span style="color: #d33682;">)</span>
+<span style="color: #268bd2;">}</span>
+</pre>
+</div>
+<p>
+Result:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">?givenName</th>
+<th scope="col" class="org-left">?familyName</th>
+<th scope="col" class="org-right">?hd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Francis</td>
+<td class="org-left">Jones</td>
+<td class="org-right">2019-02-13</td>
+</tr>
+
+<tr>
+<td class="org-left">John</td>
+<td class="org-left">Smith</td>
+<td class="org-right">2019-01-28</td>
+</tr>
+
+<tr>
+<td class="org-left">Heidi</td>
+<td class="org-left">Smith</td>
+<td class="org-right">2019-01-13</td>
+</tr>
+</tbody>
+</table>
+<p>
+Let's say we add another triple pattern <code>?person vcard:completedOrientation ?oDate.</code>. Now only employees who have an <code>vcard:completedOrientation</code> predicate association would be listed. But we still want to show all employees, so in this case the triple pattern should be made optional <code>OPTIONAL {?person vcard:completedOrientation ?oDate.}</code>.<br />
+On the other hand if you want to list every person who has not completed the orientation yet, you would use <code>NOT EXISTS {?person vcard:completedOrientation ?oDate.}</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1db16c5" class="outline-2">
+<h2 id="org1db16c5"><span class="section-number-2">7</span> OWL by Erfan</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+OWL (Web Ontology Language)
+</p>
+<ul class="org-ul">
+  <li>Enables (by means of additional vocabulary bound to formal semantics) stronger interpretation possibilities of Web contents such as XML, RDF and RDFS</li>
+</ul>
+
+<p>
+  OWL consists of three sub-languages with increasing expressive power: OWL Lite, OWL DL , OWL Full
+  OWL Lite • Easy to implement and made for simple taxonomies • equivalence, i.e. owl:sameAs • Property characteristics, i.e. owl:InverseOf • Many further aspects: property restrictions, cardinality, intersections
+  OWL DL • Allows a decidable set of first-order logic OWL Full • Same constructs as in OWL DL, but without restrictions; not decidable statements can also be described. Ontology is undecidable, but it, thus, enables higher order predicate logic
+</p>
+
+<p>
+  a XML document is:
+  – well-formed if it compiles with all the XML rules
+  ∗ all elements are closed eg <tag>Data</tag>
+  ∗ empty elements are closed with "/" eg <code><emptyElemt /></code>
+  ∗ attribute values in quotes <code><element attribute="123"></element></code>
+  – valid if
+  ∗ it is well formed and
+  ∗ document rules adhere to Document Type Definition or a Schema
+  A "well formed" XML document is not the same as a "valid" XML document. A "valid" XML document must
+  be well formed. In addition, it must conform to a document type definition. An XML document validated
+  against a DTD or Schema is both "Well Formed" and "Valid".
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: eo shiru</p>
+<p class="date">Created: 2020-02-10 Mon 11:42</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
