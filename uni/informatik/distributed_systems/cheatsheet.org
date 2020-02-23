@@ -51,6 +51,22 @@
 - Descriptive Markup = Markup that describes the structure and other attributes of a document in a non-system-specific way, independently of any processing that may be performed on it 
 - Processing Instruction = Markup consisting of system-specific data that controls how a document is to be processed
 - *Design Pattern* = "describes a particular recurring design problem that arises in specific design contexts, and presents a wellproven generic scheme for its solution."
+- *Web Engineering* = – is the application of systematic, disciplined, and quantifiable approaches to the design, production, deployment, operation, maintenance and evolution of Web-based software products.
+- *Web Application* = a distributed application that accomplishes a certain business need based on technologies of the World Wide Web and that consists of a set of Web-specific resources
+- *Asynchronous Javascript + XML* (AJAX) while not a technology itself is a term coined in 2005 by Jesse James Garret that describes a "new" approach to using a number of existing technologies together, including HTML or XHTML, CSS, JS, the DOM, XML, XLST and most importantly the XMLHttpRequest object
+  - when these technologies are combined in the AJAX model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page; this makes the application faster and more responsive to user actions
+  - although the 'X' in 'AJAX' stands for XML, JSON is now used more than XML nowadays because of its many advantages such as being lighter and a part of JS
+    - both (JS and XML) are used for packaging information in the AJAX model
+- *Web-Architektur* = konzeptioneller Aufbau des World Wide Web
+  - das WWW oder Internet ist ein sich stetig veränderndes Medium, das einerseits die Kommunikation zwischen unterschiedlichen Nutzern und andererseits das technische Zusammenwirken (Interoperabilität) zwischen verschiedenen Systemen und Subsystemen ermöglicht. Grundlage hierfür sind unterschiedliche Komponenten und Datenformate, die meist in sogenannten Schichten (engl.: tier) angeordnet sind und aufeinander aufbauen. Im Gesamten bilden sie die Infrastruktur des Internets, die durch die drei Kernbestandteile Datenübertragungsprotokolle (TCP/IP, HTTP), Repräsentationsformate (HTML, CSS, XML) und Adressierungsstandards (URI, URL) ermöglicht wird
+- Arten von Web-Architekturen:
+  - Client-Server Modell = Anfangs war das Web durch das Zwei-Schichten-Modell (engl.: two tier architecture) charakterisiert: Clients und Server teilen sich die Aufgaben und Dienstleistungen, die das System erledigen soll. Der Client kann zum Beispiel einen Dienst vom Server anfordern; der Server beantwortet die Anfrage, indem er den Dienst bereitstellt. Das Abrufen einer Website per URL-Adresse, die auf einen Server verweist, und das Laden der Website im Browser des Clients ist ein Beispiel für das Zwei-Schichten-Modell, das auch als Client-Server-Modell bezeichnet wird.
+  - Drei-Schichten-Modell = Drei-Schichten-Modelle sind dadurch gekennzeichnet, dass zwischen Client und Server eine Anwendungslogik tritt, die die Datenverarbeitung übernimmt und ein gewisses Maß an Interaktion ermöglicht. So kann ein Anwendungsserver Daten verarbeiten, während ein Datenbankserver sich ausschließlich der Datenspeicherung widmet. Auf diese Weise können Inhalte dynamisch geladen und gespeichert werden. Die Skriptsprache JavaScript ist häufig für das Verhalten des Clients verantwortlich.
+  - Serviceorientierte Architekturen (SOA) = Heute wird das Web für die Vernetzung von global verteilten IT-Strukturen genutzt. Dabei kann jedes IT-System wiederum aus Teilbereichen bestehen, deren einzelne Komponenten über eine feste Struktur bzw. Architektur miteinander verknüpft sind. Man denke an Intranet und interne Unternehmenssoftware. Moderne IT- und Webanwendungen sind wesentlich komplexer als das Client-Server-Modell. Verteilte Webdienste, die als serviceorientierte Architekturen (SOA) aufgesetzt sind, bieten vielerlei Funktionen und modulare Funktionseinheiten, die ergänzt werden können. Mit SOAs lassen sich Geschäftsprozesse automatisieren, indem die beteiligten System - teils ohne menschliche Eingriffe - miteinander kommunizieren und bestimmte Aufgaben erledigen. Beispiele hierfür sind Online-Banking, E-Commerce, E-Learning, Online-Marktplätze oder Business Intelligence Anwendungen. Diese Architekturen sind nicht nur weitaus komplexer, sondern mitunter auch modular erweiterbar. Sie werden als N-tier-Architekturen bezeichnet und kommen bisher vor allem in der Industrie zum Einsatz.
+    - zwei Ansätze: WSDL & SOAP vs REST
+- *SOAP* = SOAP is a messaging protocol that allows programs that run on disparate operating systems (such as Windows and Linux) to communicate using Hypertext Transfer Protocol (HTTP) and its Extensible Markup Language (XML)
+  - since web protocols are installed & available for use by all major operating systems, HTTP & XML provide an at hand solution that allows programs running under different OS's in a network to communicatte with each other. SOAP specifies exactly how to encode an HTTP header and an XML file so that a program in one computer can cann a program in another computer and pass along information. SOAP also specifies how the called program cann return a response. Despite its frequent pairing with HTTP, SOAP supports other transport protocols as well
+- *REST* = Representational State Transfer (REST) is a software architecture style consisting of guidelines and best practices for creating scalable web services. REST is a coordinated set of constraints applied to the design of components in a distributed hypermedia system that can lead to a more maintainable architecture. REST efficiently uses HTTP verbs
 *** URI
 - idea/goal: it must be possible to identify any resources on the internet
 - URI is generic term for all textual names/addresses
@@ -69,6 +85,15 @@
   - A URC provides Meta Information
 - reserved characters in URIs: "%" = escape character, "/" = delimiting substrings whose relationship is hierarchical, "#" = hash fragment identifies a fragment in a resource, "?" = query delimiter to delimit the boundary between the URI of a queryable object
 - URI Syntax: <URI> ::= <scheme>":"<scheme-specific-part>
+- Comparison URN vs URL
+
+|                 | URN                 | URL                                 |
+|-----------------+---------------------+-------------------------------------|
+| Scope           | global              | global (abs. URL), local (rel. URL) |
+| Globally Unique | yes                 | yes (abs. URL), no (rel. URL)       |
+| Scalable        | yes                 | yes                                 |
+| Legacy Support  | yes                 | limited                             |
+| Resolution      | not yet  determined | partly using DNS                    |
   
 *** HTTP
 Hypertext Transfer Protocol (HTTP) is used to exchange resources (such as websites, pictures, JavaScript, other MIMEtypes resources) between a user agent and a server following the Request/Response model.
@@ -93,6 +118,7 @@ Header ::= field-name":"[field-value]CRLF
 - field-name = token
 - field-value = *(field-content|LWS)
 - LWS = Linear White Space
+- cookies are also set in the response header: Set-Cookie <cookie-name> = <cookie-value>; Expires = <date>
 Message-Body
 - must be encoded if exists
 - presence signaled by header field with field-name "Content-Length" or "Transfer-Encoding"
@@ -243,9 +269,20 @@ Client Side:\\
 - handle protocol eg HTTP 302 Object moved, cookies
 *4. Process/Render Data of Resource*
 - for example process header, check content-type, process resource data depending on MIME-type eg render text/html, text/text, image/gif
+- or for example store data in the read-only localStorage property which allows to acces a storage object for the Documents origin where the stored data is saved across browser sessions
+  - localStorage is similar to sessionStorage, except that while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when a page session ends - that is when the page is closed
+#+BEGIN_SRC javascript
+var myStorage = window.localStorage;
+localStorage.setItem('myCat', 'Tom');
+var myCat = localStorage.getItem('myCat');
+#+END_SRC
 
 *** WebSockets
 How can the server send (push) messages to the client if HTTP requires a prior Client request? The solution are WebSockets which is leaving an open TCP connection between Client and Server. WebSockets provide a persistent connection between a client and server that both parties can use to start sending data at any time.
+
+Websocket Principle:\\
+ [[./ws-principle.png]]
+
 
 The client establishes a WebSocket connection through a process known as the WebSocket handshake. This process starts with the client sending a regular HTTP request to the server. An Upgrade header is included in this request that informs the server that the client wishes to establish a WebSocket connection.
 

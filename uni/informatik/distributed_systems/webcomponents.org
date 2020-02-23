@@ -1,0 +1,169 @@
+#+Latex_Header: \linespread{1.0}
+#+Latex_Header: \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+# Paragraph indentation
+#+Latex_Header: \setlength{\parindent}{0in}
+# Paragraph spacing
+#+Latex_Header: \setlength{\parskip}{0.15cm}
+
+* Web Components
+- main features: HTML imports, HTML template, custom elements, shadow DOM
+* Elements
+** Defining a new element
+The =customElements global is used for defining a custom element and teaching the browser about a new tag. Call =customElements.define()= with the tag name you want to create and a JavaScript =class= that extends the base =HTMLElement=.
+- example: defining a mobile drawer panel, =<app-drawer>=
+  #+BEGIN_SRC js
+  class AppDrawer extends HTMLElement {
+    constructor() { // constructor arguments can also be defined
+      super(); // always call super() first
+      // click listener on <app-drawer> elemnt itself
+      this.addEventListener('click', e => {
+        if (this.disabled) {
+          return;
+        }
+        this.toggleDrawer();
+      });
+    }
+  
+    // A getter/setter for on 'open' property
+    get open() {
+      return this.hasAttribute('open');
+    }
+    set open(val) {
+      if (val) {
+        this.setAttribute('open', ''); // refelect prop as an HTML attr
+      } else {
+        this.removeAttribute('open');
+      }
+    }
+    get disabled() {
+      return this.hasAttribute('disabled');
+    }
+    set disabled(val) {
+      if (val) {
+        this.setAttribute('disabled', ''); // refelect prop as an HTML attr
+      } else {
+        this.removeAttribute('disabled');
+      }
+    }
+
+    toggleDrawer() {
+      ... 
+    }
+  }
+
+  window.customElements.define('app-drawer', AppDrawer);
+  #+END_SRC
+- the custom element created above can now be used just like native HTML elements i.e. =<app-drawer></app-drawer>=
+  - instances of it can be declared on the page, created dynamically via JS, event listeners can be attached an so on
+- =this= inside a class definition refers to the DOM itself
+  - the entire DOM API is available inside the element code for example =this.children= to inspect its direct children or =this.querySelectorAll('.items')= to query nested nodes
+*** Naming rules
+- names of custom elements must contain a dash "-"
+- the same name can only be registered once
+- custom elements cannot be self-closing
+** Custom element reactions
+A custom element can define special lifecycle hooks for running code during interesting times of its existence, these are called custom element reactions
+#+ATTR_LATEX: :align p{6cm}p{10cm}
+| Name                                               | Called when                                                                                                                                                                                                                               |
+|----------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| constructor                                        | instance of the element is created or upgraded; useful for initializing state, setting up event listeners or creating a shadow dom                                                                                                        |
+| connectedCallback                                  | called everytime the element is inserted into the DOM; useful for running setup code, such as fetching resources or rendering                                                                                                             |
+| disconnectedCallback                               | called everytime the element is removed from the DOM                                                                                                                                                                                      |
+| attributeChangedCallback(attrName, oldVal, newVal) | called when an observed attribute has been added, removed, updated or replaced; also called for initial values when an element is created/upgraded; only attributes listed in the observerdAttributes property will receive this callback |
+| adoptedCallback                                    | the custom element has been moved into a new document                                                                                                                                                                                     |
+- to the above example =static get observedAttributes() { return ['disabled', 'open']}= needs to be added to the class to have =attributeChangedCallback= called for changes in those attributes
+** Creating an element that uses Shadow DOM
+The Shadow DOM provides a way for an element to own, render and style a chunk of DOM that's separate from the rest of the page. You could for example hide away an entire within a single tag:
+#+BEGIN_SRC js
+// chat app's implementation details are hidden away in Shadow DOM
+<chat-app></chat-app>
+#+END_SRC
+To use Shadow DOM in a custom element, call =this.attachShadow= inside the constructor:
+#+BEGIN_SRC js
+// Create template in js
+let tmpl = document.createElement('template'); 
+tmpl.innerHTML = `
+  <style>:host { ... }</style> <!-- look ma, scoped styles -->
+  <b>I'm in shadow dom!</b>
+  <slot></slot>
+`;
+// or via HTML template tag
+// <template id="shopping-template">
+//   <b>I'm in shadow dom</b>
+//   <slot></slot>
+// </template>
+
+customElements.define('x-foo-shadowdom', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the constructor.
+
+    // Attach a shadow root to the element.
+    let shadowRoot = this.attachShadow({mode: 'open'});
+    shadowRoot.appendChild(tmpl.content.cloneNode(true));
+  }
+  ...
+});
+#+END_SRC
+Example usage:
+#+BEGIN_SRC js
+<x-foo-shadowdom>
+  <p><b>User's</b> custom text</p>
+</x-foo-shadowdom>
+
+<!-- renders as -->
+<x-foo-shadowdom>
+  #shadow-root
+    <b>I'm in shadow dom!</b>
+    <slot></slot> <!-- slotted content appears here -->
+</x-foo-shadowdom>
+#+END_SRC
+Demo:
+#+BEGIN_SRC html
+<b>I'm in shadow dom!</b>
+<p><b>User's</b> custom text</p>
+#+END_SRC
+
+Example from tutorial slides:
+- have HTML template tag defined =<template id="shopping-template"></template>
+- instantiate Shadow DOM
+  - in constructor, select the template
+  - create a shadow DOM
+  - copy the template notes to the shadow root
+#+BEGIN_SRC js
+let tmpl = document.querySelector('#shopping-template');
+let shadowRoot = this.attachShadow({mode: 'open'});
+shadowRoot.appendChild(tmpl.content.cloneNode(true));
+#+END_SRC
+- use =this.shadowRoot.getElementById()= and so on to access Shadow DOM nodes
+* Shadow DOM
+Shadow DOM is just normal DOM with two differences: 1) how it's created/used and 2) how it behaves in relation to the rest of the page. Normally, you create DOM nodes and append them as children of another element. With shadow DOM, you create a scoped DOM tree that's attached to the element, but separate from its actual children. This scoped subtree is called a shadow tree. The element it's attached to is its shadow host. Anything you add in the shadows becomes local to the hosting element, including <style>. This is how shadow DOM achieves CSS style scoping.
+** Creating shadow DOM
+A *shadow root* is a document fragment that gets attached to a “host” element. The act of attaching a shadow root is how the element gains its shadow DOM. To create shadow DOM for an element, call =element.attachShadow()=:
+#+BEGIN_SRC js
+const header = document.createElement('header');
+const shadowRoot = header.attachShadow({mode: 'open'});
+shadowRoot.innerHTML = '<h1>Hello Shadow DOM</h1>'; // Could also use appendChild().
+// header.shadowRoot === shadowRoot
+// shadowRoot.host === header
+#+END_SRC
+
+Shadow DOM is particularly useful when creating *custom elements*. Use shadow DOM to compartmentalize an element's HTML, CSS, and JS, thus producing a "web component".
+
+Example - a custom element attaches shadow DOM to itself, encapsulating its DOM/CSS:
+#+BEGIN_SRC js
+customElements.define('fancy-tabs', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the constructor.
+
+    // Attach a shadow root to <fancy-tabs>.
+    const shadowRoot = this.attachShadow({mode: 'open'});
+    shadowRoot.innerHTML = `
+      <style>#tabs { ... }</style> <!-- styles are scoped to fancy-tabs! -->
+      <div id="tabs">...</div>
+      <div id="panels">...</div>
+    `;
+  }
+  ...
+});
+#+END_SRC
+There are a couple of interesting things going on here. The first is that the custom element creates its own shadow DOM when an instance of =<fancy-tabs>= is created. That's done in the constructor(). Secondly, because we're creating a shadow root, the CSS rules inside the <style> will be scoped to <fancy-tabs>.

@@ -1,4 +1,4 @@
-% Created 2019-02-24 Sun 22:54
+% Created 2020-02-03 Mon 13:33
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\usepackage{listings}
 \linespread{1.0}
 \usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
 \setlength{\parindent}{0in}
@@ -26,7 +27,7 @@
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.1 (Org mode 9.1.14)}, 
+ pdfcreator={Emacs 28.0.50 (Org mode 9.3)}, 
  pdflang={English}}
 \begin{document}
 
@@ -34,7 +35,7 @@
 
 
 \section{Definitionen \& Fakten}
-\label{sec:org2121cbb}
+\label{sec:orgd4c699c}
 \begin{itemize}
 \item „A \textbf{distributed system} is a collection of independent computers that appears to its users as a single coherent system.“
 \item „Ein \textbf{Verteiltes System} setzt sich aus mehreren Einzelkomponenten auf unterschiedlichen Rechnern zusammen, die in der Regel nicht über gemeinsamen Speicher verfügen und somit mittels Nachrichtenaustausch kommunizieren, um in Kooperation eine gemeinsame Zielsetzung – etwa die Realisierung einesGeschäftsablaufs – zu erreichen.“
@@ -109,9 +110,37 @@
 \item Descriptive Markup = Markup that describes the structure and other attributes of a document in a non-system-specific way, independently of any processing that may be performed on it
 \item Processing Instruction = Markup consisting of system-specific data that controls how a document is to be processed
 \item \textbf{Design Pattern} = "describes a particular recurring design problem that arises in specific design contexts, and presents a wellproven generic scheme for its solution."
+\item \textbf{Web Engineering} = – is the application of systematic, disciplined, and quantifiable approaches to the design, production, deployment, operation, maintenance and evolution of Web-based software products.
+\item \textbf{Web Application} = a distributed application that accomplishes a certain business need based on technologies of the World Wide Web and that consists of a set of Web-specific resources
+\item \textbf{Asynchronous Javascript + XML} (AJAX) while not a technology itself is a term coined in 2005 by Jesse James Garret that describes a "new" approach to using a number of existing technologies together, including HTML or XHTML, CSS, JS, the DOM, XML, XLST and most importantly the XMLHttpRequest object
+\begin{itemize}
+\item when these technologies are combined in the AJAX model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page; this makes the application faster and more responsive to user actions
+\item although the 'X' in 'AJAX' stands for XML, JSON is now used more than XML nowadays because of its many advantages such as being lighter and a part of JS
+\begin{itemize}
+\item both (JS and XML) are used for packaging information in the AJAX model
+\end{itemize}
+\end{itemize}
+\item \textbf{Web-Architektur} = konzeptioneller Aufbau des World Wide Web
+\begin{itemize}
+\item das WWW oder Internet ist ein sich stetig veränderndes Medium, das einerseits die Kommunikation zwischen unterschiedlichen Nutzern und andererseits das technische Zusammenwirken (Interoperabilität) zwischen verschiedenen Systemen und Subsystemen ermöglicht. Grundlage hierfür sind unterschiedliche Komponenten und Datenformate, die meist in sogenannten Schichten (engl.: tier) angeordnet sind und aufeinander aufbauen. Im Gesamten bilden sie die Infrastruktur des Internets, die durch die drei Kernbestandteile Datenübertragungsprotokolle (TCP/IP, HTTP), Repräsentationsformate (HTML, CSS, XML) und Adressierungsstandards (URI, URL) ermöglicht wird
+\end{itemize}
+\item Arten von Web-Architekturen:
+\begin{itemize}
+\item Client-Server Modell = Anfangs war das Web durch das Zwei-Schichten-Modell (engl.: two tier architecture) charakterisiert: Clients und Server teilen sich die Aufgaben und Dienstleistungen, die das System erledigen soll. Der Client kann zum Beispiel einen Dienst vom Server anfordern; der Server beantwortet die Anfrage, indem er den Dienst bereitstellt. Das Abrufen einer Website per URL-Adresse, die auf einen Server verweist, und das Laden der Website im Browser des Clients ist ein Beispiel für das Zwei-Schichten-Modell, das auch als Client-Server-Modell bezeichnet wird.
+\item Drei-Schichten-Modell = Drei-Schichten-Modelle sind dadurch gekennzeichnet, dass zwischen Client und Server eine Anwendungslogik tritt, die die Datenverarbeitung übernimmt und ein gewisses Maß an Interaktion ermöglicht. So kann ein Anwendungsserver Daten verarbeiten, während ein Datenbankserver sich ausschließlich der Datenspeicherung widmet. Auf diese Weise können Inhalte dynamisch geladen und gespeichert werden. Die Skriptsprache JavaScript ist häufig für das Verhalten des Clients verantwortlich.
+\item Serviceorientierte Architekturen (SOA) = Heute wird das Web für die Vernetzung von global verteilten IT-Strukturen genutzt. Dabei kann jedes IT-System wiederum aus Teilbereichen bestehen, deren einzelne Komponenten über eine feste Struktur bzw. Architektur miteinander verknüpft sind. Man denke an Intranet und interne Unternehmenssoftware. Moderne IT- und Webanwendungen sind wesentlich komplexer als das Client-Server-Modell. Verteilte Webdienste, die als serviceorientierte Architekturen (SOA) aufgesetzt sind, bieten vielerlei Funktionen und modulare Funktionseinheiten, die ergänzt werden können. Mit SOAs lassen sich Geschäftsprozesse automatisieren, indem die beteiligten System - teils ohne menschliche Eingriffe - miteinander kommunizieren und bestimmte Aufgaben erledigen. Beispiele hierfür sind Online-Banking, E-Commerce, E-Learning, Online-Marktplätze oder Business Intelligence Anwendungen. Diese Architekturen sind nicht nur weitaus komplexer, sondern mitunter auch modular erweiterbar. Sie werden als N-tier-Architekturen bezeichnet und kommen bisher vor allem in der Industrie zum Einsatz.
+\begin{itemize}
+\item zwei Ansätze: WSDL \& SOAP vs REST
+\end{itemize}
+\end{itemize}
+\item \textbf{SOAP} = SOAP is a messaging protocol that allows programs that run on disparate operating systems (such as Windows and Linux) to communicate using Hypertext Transfer Protocol (HTTP) and its Extensible Markup Language (XML)
+\begin{itemize}
+\item since web protocols are installed \& available for use by all major operating systems, HTTP \& XML provide an at hand solution that allows programs running under different OS's in a network to communicatte with each other. SOAP specifies exactly how to encode an HTTP header and an XML file so that a program in one computer can cann a program in another computer and pass along information. SOAP also specifies how the called program cann return a response. Despite its frequent pairing with HTTP, SOAP supports other transport protocols as well
+\end{itemize}
+\item \textbf{REST} = Representational State Transfer (REST) is a software architecture style consisting of guidelines and best practices for creating scalable web services. REST is a coordinated set of constraints applied to the design of components in a distributed hypermedia system that can lead to a more maintainable architecture. REST efficiently uses HTTP verbs
 \end{itemize}
 \section{URI}
-\label{sec:org4a22e22}
+\label{sec:orga38d6a7}
 \begin{itemize}
 \item idea/goal: it must be possible to identify any resources on the internet
 \item URI is generic term for all textual names/addresses
@@ -123,7 +152,7 @@
 \end{itemize}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./uri-example.png}
-\label{org94a6712}
+\label{org8c76218}
 \end{center}
 \item Uniform Resource Locator (URL)
 \begin{itemize}
@@ -140,10 +169,23 @@
 \end{itemize}
 \item reserved characters in URIs: "\%" = escape character, "/" = delimiting substrings whose relationship is hierarchical, "\#" = hash fragment identifies a fragment in a resource, "?" = query delimiter to delimit the boundary between the URI of a queryable object
 \item URI Syntax: <URI> ::= <scheme>":"<scheme-specific-part>
+\item Comparison URN vs URL
 \end{itemize}
 
+\begin{center}
+\begin{tabular}{lll}
+ & URN & URL\\
+\hline
+Scope & global & global (abs. URL), local (rel. URL)\\
+Globally Unique & yes & yes (abs. URL), no (rel. URL)\\
+Scalable & yes & yes\\
+Legacy Support & yes & limited\\
+Resolution & not yet  determined & partly using DNS\\
+\end{tabular}
+\end{center}
+
 \section{HTTP}
-\label{sec:org0a05f8a}
+\label{sec:org08ad9e6}
 Hypertext Transfer Protocol (HTTP) is used to exchange resources (such as websites, pictures, JavaScript, other MIMEtypes resources) between a user agent and a server following the Request/Response model.
 \begin{itemize}
 \item developed by W3C
@@ -159,18 +201,20 @@ Hypertext Transfer Protocol (HTTP) is used to exchange resources (such as websit
 \end{itemize}
 
 Generic Structure:
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 Start Line
 *Header
 CRLF
 [Message-Body]
-\end{verbatim}
+\end{lstlisting}
 Startline ::= Request-Line | Response-Line\\
 Header ::= field-name":"[field-value]CRLF
 \begin{itemize}
 \item field-name = token
 \item field-value = *(field-content|LWS)
 \item LWS = Linear White Space
+\item cookies are also set in the response header: Set-Cookie <cookie-name> = <cookie-value>; Expires = <date>
 \end{itemize}
 Message-Body
 \begin{itemize}
@@ -179,19 +223,21 @@ Message-Body
 \end{itemize}
 
 HTTP-Request Message:
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 <Method> <URI> <Protocol>
 <Headers>
 CRLF
 [<Data>]
-\end{verbatim}
+\end{lstlisting}
 Method ::= GET|POST|HEAD|\ldots{}\\
 Protocol ::= HTTP/1.0 | HTTP1.1 |\ldots{}\\
 Headers ::= <hName>:<hValue>\\
 Data ::= <TEXT>
 
 Example(GET):
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 GET /hello.html?parameter=value HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
 Host: www.wikipedia.com
@@ -199,26 +245,28 @@ Accept-Language: en-us
 Accept-Encoding: gzip, deflate
 Connection: Keep-Alive
 
-\end{verbatim}
+\end{lstlisting}
 Example(POST):
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 POST /guestbook.php HTTP/1.1
 From: frog@jmarshall.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 32
 
 parameter=value&parameter2=value2
-\end{verbatim}
+\end{lstlisting}
 
 
 
 HTTP-Response Message:
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 <Protocol> <Status Code> <Reason-Phrase>
 <Headers>
 CRLF
 [<Data>]
-\end{verbatim}
+\end{lstlisting}
 Protocol ::= HTTP/1.0 | HTTP1.1 |\ldots{}\\
 Status-Code ::= DIGIT+\\
 Reason-Phrase ::= <TEXT>\\
@@ -226,7 +274,8 @@ Headers ::= <hName>:<hValue>\\
 Data ::= <TEXT>
 
 Example:
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 HTTP/1.1 200 OK
 Date: Sun, 21 Apr 1996 02:20:42 GMT
 Server: Microsoft-Internet-Information-Server/5.0
@@ -236,10 +285,10 @@ Last-Modified: Thu, 18 Apr 1996 17:39:05 GMT
 Content-Length: 2543
 
 <HTML> Some data... More and more data</HTML>
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Typical HTTP Methods}
-\label{sec:orgc0f51b4}
+\label{sec:org814a01f}
 \begin{itemize}
 \item GET = deliver the resource addressed by the URI
 \item POST = request to the server with respect to processing of encoded message body data (processing wrt the URI provided in POST)
@@ -251,7 +300,7 @@ Content-Length: 2543
 \end{itemize}
 
 \subsection{Typical HTTP HEADERS}
-\label{sec:org410e5a4}
+\label{sec:org9dcb18f}
 \begin{itemize}
 \item Content-Type = media type used
 \item Expires = date/time from which the response is considers invalid, important for caching
@@ -265,10 +314,10 @@ Content-Length: 2543
 Numerous further attributes exist for use for different tasks
 
 \subsection{HTTP Status Codes}
-\label{sec:org2c8dd30}
+\label{sec:org2895285}
 1XX = Information as intermediate response, 2XX = Successfull operations, 200 = OK, 201 = Created, 3XX = Redirects, 301 = Moved Permanently, 302 = Moved Temporarily, 4XX = Client Error, 400 = Bad Request, 401 = Unauthorized, 403 = Forbidden, 404 = Not Found, 5XX = Server Error
 \section{MIME}
-\label{sec:org5605ec8}
+\label{sec:org8116549}
 Multipurpose Internet Mail Extension
 \begin{itemize}
 \item Concept
@@ -286,7 +335,8 @@ Multipurpose Internet Mail Extension
 \end{itemize}
 \item Example
 \end{itemize}
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 Content-Type: multipart/mixed; boundary="===-1203946231==_============"
 
 ===-1203946231==_============
@@ -298,9 +348,9 @@ Content-Type: application/vnd.ms-excel; name="WWW2002-Review-Paper-Assign.xls"
 ; x-mac-creator="5843454C"
 Content-Disposition: attachment; filename="WWW2002-Review-Paper-Assign.xls"
 Content-Transfer-Encoding: base64
-\end{verbatim}
+\end{lstlisting}
 \section{Retrieving Information}
-\label{sec:org34f9dae}
+\label{sec:org139f00b}
 Client Side:\\
 \textbf{1. Prepare Request}
 \begin{itemize}
@@ -368,31 +418,49 @@ Client Side:\\
 \textbf{4. Process/Render Data of Resource}
 \begin{itemize}
 \item for example process header, check content-type, process resource data depending on MIME-type eg render text/html, text/text, image/gif
+\item or for example store data in the read-only localStorage property which allows to acces a storage object for the Documents origin where the stored data is saved across browser sessions
+\begin{itemize}
+\item localStorage is similar to sessionStorage, except that while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when a page session ends - that is when the page is closed
 \end{itemize}
+\end{itemize}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
+var myStorage = window.localStorage;
+localStorage.setItem('myCat', 'Tom');
+var myCat = localStorage.getItem('myCat');
+\end{lstlisting}
 
 \section{WebSockets}
-\label{sec:orgf5c4e53}
+\label{sec:org4e8bf1b}
 How can the server send (push) messages to the client if HTTP requires a prior Client request? The solution are WebSockets which is leaving an open TCP connection between Client and Server. WebSockets provide a persistent connection between a client and server that both parties can use to start sending data at any time.
+
+Websocket Principle:\\
+ \begin{center}
+\includegraphics[width=.9\linewidth]{./ws-principle.png}
+\end{center}
+
 
 The client establishes a WebSocket connection through a process known as the WebSocket handshake. This process starts with the client sending a regular HTTP request to the server. An Upgrade header is included in this request that informs the server that the client wishes to establish a WebSocket connection.
 
 Here is a simplified example of the initial request headers.
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 GET ws://websocket.example.com/ HTTP/1.1
 Origin: http://example.com
 Connection: Upgrade
 Host: websocket.example.com
 Upgrade: websocket
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ== # randomly generated key, processed by server
-\end{verbatim}
+\end{lstlisting}
 If the server supports the WebSocket protocol, it agrees to the upgrade and communicates this through an Upgrade header in the response.
-\begin{verbatim}
+\lstset{breaklines=true,language=sh,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 HTTP/1.1 101 WebSocket Protocol Handshake
 Date: Wed, 16 Oct 2013 10:07:34 GMT
 Connection: Upgrade
 Upgrade: WebSocket
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo= # processed key recieved from Client
-\end{verbatim}
+\end{lstlisting}
 Now that the handshake is complete the initial HTTP connection is replaced by a WebSocket connection that uses the same underlying TCP/IP connection. At this point either party can starting sending data.
 
 With WebSockets you can transfer as much data as you like without incurring the overhead associated with traditional HTTP requests. Data is transferred through a WebSocket as messages, each of which consists of one or more frames containing the data you are sending (the payload). In order to ensure the message can be properly reconstructed when it reaches the client each frame is prefixed with 4-12 bytes of data about the payload. Using this frame-based messaging system helps to reduce the amount of non-payload data that is transferred, leading to significant reductions in latency.
@@ -404,7 +472,7 @@ Advantages:
 \item No delay due to polling
 \end{itemize}
 \section{CSS Selectors}
-\label{sec:orgf26c57e}
+\label{sec:org849f2cc}
 \begin{center}
 \begin{tabular}{ll}
 Selector & Selects\\
@@ -432,9 +500,10 @@ And some common pseudo-classes: \texttt{:hover}, \texttt{:focus}, \texttt{:activ
 
 There are more CSS selectors but these are the most common ones.
 \section{HTML Forms}
-\label{sec:orge97d25b}
+\label{sec:orgb8d60d7}
 General:
-\begin{verbatim}
+\lstset{breaklines=true,language=HTML,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 <form
   method=“GET|POST”
   action=“URI” (E.g.:mailto:..., http:…)
@@ -443,9 +512,10 @@ General:
   target=“name of frame – If used”>
 Form Controls and HTML
 </form>
-\end{verbatim}
+\end{lstlisting}
 Example:
-\begin{verbatim}
+\lstset{breaklines=true,language=HTML,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 <p>Name and Age Form:</p>
 <form method="POST" action= "mailto:gaedke@example.com">
   <p>Name: <input type="text" name="T1" size="20"></p>
@@ -457,11 +527,12 @@ Example:
   </p>
   <input type="submit" value="Submit" name="B1">
 </form>
-\end{verbatim}
+\end{lstlisting}
 \section{JS Reference}
-\label{sec:org383d796}
+\label{sec:org11f8d6d}
 Accessing DOM Elements
-\begin{verbatim}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 // Returns a reference to the element by its ID.
 document.getElementById('someid');
 // Returns an array-like object of all child elements which have all of the given class names.
@@ -478,9 +549,10 @@ var stored = document.getElementById('someid');
 var children = stored.childNodes;
 // Get parent node
 var parental = children.parentNode;
-\end{verbatim}
+\end{lstlisting}
 Creating \& Adding elements to the DOM
-\begin{verbatim}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 // create new elments
 var newHeading = document.createElement('h1');
 var newParagraph = document.createElement('p');
@@ -501,9 +573,10 @@ firstHeading.appendChild(newParagraph);
 var parent = firstHeading.parentNode;
 // insert newHeading before FirstHeading
 parent.insertBefore(newHeading, firstHeading);
-\end{verbatim}
+\end{lstlisting}
 Modify classes
-\begin{verbatim}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 firstHeading.classList.remove('foo');
 firstHeading.classList.add('anotherclass');
 firstHeading.classList.add('foo', 'bar');
@@ -512,9 +585,10 @@ firstHeading.classList.remove('foo', 'bar');
 firstHeading.classList.toggle('visible');
 // will return true if it has class of 'foo' or false if it does not
 firstHeading.classList.contains('foo');
-\end{verbatim}
+\end{lstlisting}
 Events
-\begin{verbatim}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 var newElement = document.getElementsByTagName('h1');
 newElement.onclick = function() {
   console.log('clicked');
@@ -527,16 +601,18 @@ newElement.removeEventListener('focus', logEventType, false);
 window.onload = function() {
   console.log('Im loaded');
 };
-\end{verbatim}
+\end{lstlisting}
 Modify styles/CSS
-\begin{verbatim}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 myElement.style.backgroundColor = "#D93600";
 // or
 myElement.style.["background-color"] = "#D93600";
-\end{verbatim}
+\end{lstlisting}
 \subsection{JS + Python Socket Example}
-\label{sec:org671e19c}
-\begin{verbatim}
+\label{sec:orgb106af4}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 // Client 1
 const socket =  new WebSocket("ws://localhost:8765");
 const changeSpeed = function (newspeed) {
@@ -571,10 +647,11 @@ window.onbeforeunload = function () {
 changeSpeed = function (newspeed) {
   speed = newspeed * SPEED_FAC;
 }
-\end{verbatim}
+\end{lstlisting}
 \subsection{JS XHR Example}
-\label{sec:org9615dad}
-\begin{verbatim}
+\label{sec:orgc71ec6b}
+\lstset{breaklines=true,language=javascript,label= ,caption= ,captionpos=b,numbers=none}
+\begin{lstlisting}
 const baseUrl = "https://vsr.informatik.tu-chemnitz.de/edu/2015/evs/exercises/jsajax/guestbook.php";
 function loadData() {
 const xhr = new XMLHttpRequest();
@@ -638,5 +715,5 @@ function sendData() {
     }
   }
 }
-\end{verbatim}
+\end{lstlisting}
 \end{document}
