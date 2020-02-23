@@ -29,4 +29,4 @@ yay -S autojump --noconfirm
 # Install dependencies for awesome
 yay -S awesome-freedesktop lain --noconfirm
 # Install some other stuff
-yay -S redshift neofetch --noconfirm
+yay -S redshift neofetch google-chrome rofi --noconfirm
