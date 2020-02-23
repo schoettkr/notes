@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www-user.tu-chemnitz.de/~kefie/ds19/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Datenstrukturen SS19</title>
+  <link rel="stylesheet" type="text/css" href="./Datenstrukturen SS19_files/main.css">
+  <link href="./Datenstrukturen SS19_files/css" rel="stylesheet" type="text/css">
+  <link href="./Datenstrukturen SS19_files/css(1)" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <header>
+        <h2>Modul: Algorithmen und Programmierung</h2>
+		<h1>Zusammenfassung Datenstrukturen SS19</h1>
+		<h2 class="author">Bastian Rose</h2>
+        <h2 class="author">Kevin Fiedler</h2>
+		<h3 class="affiliation">
+			Technische Universität Chemnitz<br>
+		</h3>
+    </header>
+	
+    <section>
+    	<h2>1. Felder(1)</h2>
+			
+			<h4>Aufgabe 1</h4>
+			<p> 
+				Wie kann man ein (statisches) Feld verwalten, in das einzelne Datenelemente eingefügt bzw. entfernt werden müssen? <br>
+				<br>Schreiben Sie in Anlehnung an den in der Vorlesung vorgestellten Lösungsvorschlag je eine Funktion zum <i>Einfügen</i> und zum <i>Löschen</i> eines Datenelementes an Position <b>pos</b> im Feld! <br>
+				<br>Ihre Funktionen sollen nach einer erfolgreichen Operation den booleschen Wert <i>true</i> zurückliefern, sonst <i>false</i>.
+			</p>
+			
+			<figure>
+        <pre>bool <b>insert</b> ( int a[], int n, int pos, int elem, int&amp; anz ) {
+  if (anz == n) return false; // Feld schon voll?
+  if (pos &gt; anz) return false; // keine korrekte Einfügeposition?
+  for (int k = anz; k &gt; pos; k--)// Feld ab Position pos verschieben
+	a[k] = a[k-1];
+  a[pos] = elem; // Objekt an Position pos einfügen
+  anz++;
+  return true;
+}
+        </pre>
+        <figcaption>
+            <b>a[]</b> - Feld, &nbsp; <b>n</b> - Anzahl Elemente (tatsächliche Feldgröße), &nbsp; <b>pos</b> - Einfüge-/Löschposition, &nbsp; <b>elem</b> - einzufügendes Element, &nbsp; <b>anz</b> - Referenzparameter virtuelle Feldgröße
+        
+        </figcaption>
+        </figure>
+		
+			<figure>
+        <pre>bool <b>remove</b> ( int a[], int n, int pos, int&amp; anz ) {
+  if (anz == 0) return false; // Feld leer?
+  if (pos &gt;= anz) return false; // keine korrekte Position
+  for (int k = pos; k &lt; (anz-1); k++) // Objekt an Position pos durch
+    a[k] = a[k+1]; // Verschieben nachfolgender Objekte löschen
+  anz--;
+  return true;
+}
+        </pre>
+        <figcaption>
+            <b>a[]</b> - Feld, &nbsp; <b>n</b> - Anzahl Elemente (tatsächliche Feldgröße), &nbsp; <b>pos</b> - Einfüge-/Löschposition, &nbsp; <b>elem</b> - einzufügendes Element, &nbsp; <b>anz</b> - Referenzparameter virtuelle Feldgröße
+        
+        </figcaption>
+        </figure>
+		
+			<h4>Aufgabe 2</h4>
+			<p> 
+				Gegeben sei folgende Funktionsdeklaration zur Berechnung des arithmetischen Mittelwerts einer Menge von Integer-Zahlen:
+				</p><pre>float <b>avg</b> ( int value[], int N );
+</pre>
+				(Parameter value spezifiziert ein Feld mit N Integer-Zahlen)<br>
+				Implementieren Sie die Funktion avg! <br>
+				Realisieren Sie dabei den Feldzugriff ausschließlich mit Hilfe des Zeigerkonzepts!			
+			<p></p>
+			
+			<pre>float <b>avg</b> ( int value[], int N ) {
+  int sum = 0;
+  for (int i=0; i &lt; N; i++)
+  sum += *(value + i);
+  return (float)sum / N;
+}
+</pre>
+			<p> Alternative Lösung:</p>
+			<pre>float <b>avg</b> ( int value[], int N ) {
+  int sum = 0;
+  int* pv = value;
+  for (int i=0; i &lt; N; i++)
+  sum += *pv++;
+  return (float)sum / N;
+}
+</pre>
+
+			<h4>Aufgabe 3</h4>
+			<p> 
+				Gegeben sei ein aufsteigend sortiertes Feld A mit N paarweise verschiedenen Integer-Werten.<br>
+				Implementieren Sie die Binäre Suche nach einem Wert search auf dem Feld A. Verwenden Sie dabei folgende Funktionsschnittstelle:<br>
+				</p><pre>int* <b>binSearch</b>(int search, int* left, int* right);
+</pre>
+				Parameter:<br>
+				<table>
+				<tbody><tr><td> &nbsp; <i>search</i> &nbsp; &nbsp; </td> <td>zu suchende Integer-Zahl</td></tr>
+				<tr><td> &nbsp; <i>left</i></td> <td> Zeiger auf erstes Element des Feldes</td></tr>
+				<tr><td> &nbsp; <i>right</i></td> <td> Zeiger auf letztes Element des Feldes</td></tr>
+				</tbody></table>
+				Rückgabeparameter ist ein Zeiger auf die gefundene Integer-Zahl. Falls <i>search</i> nicht im Feld vorhanden ist, 
+				geben Sie den Nullzeiger (0 bzw. NULL) zurück. 
+			<p></p>
+			<pre>int* <b>binSearch</b> ( int i, int* left, int* right ) {
+  if (left &gt; right)
+    return 0;
+  int* middle = left + ((right - left) / 2);
+    if (i == *middle)
+  return middle;
+  if (i &lt; *middle)
+    return binSuche(i, left, middle-1);
+  else
+    return binSuche(i, middle+1, right);
+}
+</pre>
+			
+			<h4>Aufgabe 4</h4>
+			<p>In einem zweidimensionalen Feld a sei eine M × N - Matrix gespeichert. Die Elemente der Matrix sind jeweils 
+			spaltenweise und zeilenweise aufsteigend sortiert, d.h. <br>
+			</p><pre>ai,j ≤ ai, j+1 ∀i=1,...,N ∀j=1,...,M−1 ai,j ≤ ai+1,j ∀i=1,...,N−1 ∀j=1,...,M
+</pre>
+			&nbsp; a) Schreiben Sie eine Funktion zur Bestimmung der Position eines gesuchten Elements x.<br>
+			&nbsp; b) Geben Sie für Ihren Algorithmus an, wie viele Vergleiche im worst case notwendig sind.<br>
+			&nbsp; &nbsp; &nbsp; &nbsp; Wo steht dann das gesuchte Element?
+			<pre>Lösungsidee (ungeprüft):
+- für jede beliebige Teilmatrix gilt dass der linke obere Wert das Minimum und der
+  rechte untere Wert das Maximum der Matrix darstellt
+- Wir Zerlegen die Matrix in vier Teilmatrizen (vier Quadranten) und überprüfen ob der
+  gesuchte Wert in den einzelnen Quadranten liegen könnte: Wenn er innerhalb des
+  [Minimum, Maximum] Intervalls liegt, wiederholen wir den Algorithmus rekursiv für
+  den aktuellen Quadranten
+- Abbruch wenn Wert gefunden, also wenn aktuelles Minimum oder Maximum dem
+  gesuchten Wert entspricht:
+
+- 2. Variante: Sei M die kleinere der beiden Dimensionen. Wir führen maximal M mal
+  die binäre Suche über jeweils N Elementen der größeren Dimension durch 
+  ➔ M*log(N) im worst case
+</pre>
+			
+	</section>
+	
+    <section>
+        <h2> 2. Felder(2)</h2>
+
+			<h4>Aufgabe 1</h4>
+			<p>
+				Schreiben Sie eine Funktion, der Sie ein nullterminiertes Feld von ganzen Zahlen (ungleich 0) übergeben.<br>
+				Generieren Sie innerhalb Ihrer Funktion aus diesem Feld ein weiteres Feld, das die negativen Zahlen nicht mehr enthält, 
+				aber jede positive Zahl in das neue Feld kopiert und zusätzlich noch deren doppelten Zahlenwert einfügt.<br>
+				Geben Sie das neue Feld an den aufrufenden Programmteil zurück.<br>
+				Das Ergebnisfeld darf nur so viel Speicherplatz belegen wie unbedingt nötig ist.
+			</p>
+			<pre>int* <b>changeArray</b> ( int a[] ) {
+  int length = 0;
+  while (a[length]) length++; // Bestimmen der Feldlänge (ohne 0)
+  int newLength = 0; // Bestimmen der neuen Feldlänge (ohne 0)
+  for (int i=0; i &lt; length; i++) {
+    if (a[i] &gt; 0)
+    newLength += 2;
+  }
+  int* newArray = new int[newLength+1]; // +1 wegen Terminierungs-0
+  int pos = 0;
+  for (int i=0; i<length; i++)="" {="" Übertragen="" der="" feldwerte="" if="" (a[i]=""> 0) {
+      newArray[pos++] = a[i];
+      newArray[pos++] = a[i] * 2;
+    }
+  }
+  newArray[pos] = 0; // Nullterminierung des neuen Feldes
+  return newArray;
+}	
+</length;></pre>
+			<b>Beispiel</b>
+			<table>
+				<tbody><tr><td>&nbsp; Eingabe(feld) &nbsp; </td> <td>-1</td> <td>4</td> <td>-2</td> <td>&nbsp;6</td> <td>8</td> <td>40</td> <td>-9</td> <td>&nbsp;2</td> <td>(0)</td> <td>&nbsp;</td> <td>&nbsp;</td></tr>
+				<tr><td>&nbsp; Ausgabe(feld) &nbsp; </td> <td>&nbsp;4</td> <td>8</td> <td>&nbsp;6</td> <td>12</td> <td>8</td> <td>16</td> <td>40</td> <td>80</td> <td>&nbsp;&nbsp;2</td> <td>4</td> <td>(0)</td> </tr>
+				<tr><td>
+			</td></tr></tbody></table>
+			<pre><b>Verwendung</b>
+   int a[] = {-1,4,-2,6,8,40,-9,2,0};
+   int* newArray = changeArray(a);
+</pre>
+		
+			<h4>Aufgabe 2</h4>
+			<p>
+				Lesen Sie mit Hilfe der Bibliotheksfunktion getchar() solange Zeichen von der Tastatur ein, 
+				bis das gelesene Zeichen der Return-Taste ’\n’ entspricht.<br>
+				Legen Sie das jeweils gelesene Zeichen in einer Zeichenkette ab, die alle bereits gelesenen Zeichen enthält.<br>
+				Geben Sie nach Beendigung der Eingabe die komplette Zeichenkette auf dem Bildschirm aus!
+			</p>
+			<p>
+				<b>Achtung:</b><br>
+				Die Zeichenkette darf nach jedem gelesenen Zeichen nur soviel Platz beanspruchen, 
+				wie für die Speicherung aller bisher gelesenen Zeichen tatsächlich notwendig ist.
+			</p>
+<pre>void <b>readString</b> () {
+  char c; // das einzulesende Zeichen
+  int count = 0; // Anzahl der bisher gelesenen Zeichen
+  char* string_old = 0, *string_new = 0; // Puffer für Zeichenketten
+  do {
+    c = getchar();
+    string_new = new char[count+1];
+    for (int i=0; i &lt; count; i++) { // Übertragen des alten Puffers
+      string_new[i] = string_old[i];
+    }
+    string_new[count] = c; // neues Zeichen in neuen Puffer
+    count++;
+    delete[] string_old; // Löschen des alten Puffers
+    string_old = string_new;
+  }
+  while (c != '\n');
+  string_new[count-1] = 0; // Nullterminierung der neuen Zeichenkette vornehmen
+  printf("%s\n", string_new);
+}
+</pre>
+
+			<h4>Aufgabe 3</h4>
+			<p>
+				Wie kann man dynamisch ein mehrdimensionales Feld definieren?<br><br>
+				Schreiben Sie eine Funktion generateMatrix(int N, int M), die 
+				basierend auf den Funktionsparametern N und M dynamisch eine aus double-Elementen bestehende NxM-Matrix generiert 
+				und als Funktionswert zurückliefert.<br><br>
+				Schreiben Sie eine Funktion transpose(), der Sie eine derartige Matrix (sowie N und M) übergeben 
+				und die die transponierte (Zeilen und Spalten sind vertauscht) MxN-Matrix zurückliefert.<br>
+				<br>Schreiben Sie ein Programm, in dem Sie:
+				</p><table>
+					<tbody><tr><td>•</td> <td>mittels generateMatrix() eine beliebige NxM-Matrix generieren</td></tr>
+					<tr><td>•</td> <td>die Elemente der Matrix mit beliebigen Werten belegen</td></tr>
+					<tr><td>•</td> <td>Ihre Matrix mittels transpose() transponieren</td></tr>
+					<tr><td>•</td> <td>beide Matrizen auf dem Bildschirm ausgeben</td></tr>
+					<tr><td>•</td> <td>den Speicher für beide Matrizen wieder freigeben!</td></tr>
+				</tbody></table>
+			<p></p>
+			<pre>double** <b>generateMatrix</b> ( int N, int M ) {
+  double** matrix = new double*[N];
+  for (int i=0; i &lt; N; i++) matrix[i] = new double[M];
+    return matrix;
+}
+
+double** <b>transpose</b> ( double** matrix, int N, int M ) {
+  double** transponierte_matrix = generateMatrix ( M, N );
+  for (int i=0; i &lt; N; i++) {
+    for (int j=0; j &lt; M; j++)
+      transponierte_matrix[j][i] = matrix[i][j];
+  return transponierte_matrix;
+}
+
+void <b>printMatrix</b> ( double** matrix, int N, int M ) {
+  for (int i=0; i &lt; N; i++) {
+    for (int j = 0; j &lt; M; j++)
+      printf("%4.1f ", matrix[i][j]);
+    printf("\n");
+  }
+}
+
+int <b>main</b> () {
+  int N=3, M = 4;
+  double** matrix = <b>generateMatrix</b> ( N, M );
+  for (int i=0; i &lt; N; i++)
+    for (int j = 0; j &lt; M; j++)
+      matrix[i][j] = i*M + j;
+  double** transponierte_matrix = <b>transpose</b> ( matrix, N, M );
+  <b>printMatrix</b> ( matrix, N, M );
+  <b>printMatrix</b> ( transponierte_matrix, M, N );
+  for (int i=0; i &lt; N; i++) delete[] matrix[i];
+  delete[] matrix;
+  for (int i=0; i &lt; M; i++) delete[] transponierte_matrix[i];
+  delete[] transponierte_matrix;
+}
+</pre>
+
+	</section>
+	
+	<section>
+
+    	<h2> 3. Listen(1) </h2>
+		
+			<p>
+				Implementieren Sie die im Folgenden beschriebenen Funktionen ausschließlich 
+				auf Basis einer durch einen Zeiger auf den Listenkopf gegebenen einfach verketteten Liste
+				vom Typ node! <br>
+				Überlegen Sie sich die weiteren benötigten Parameter. <br>
+				Die Verwendung globaler Variablen und von Klassen ist untersagt!
+			</p>
+			<pre>struct <b>node</b> {
+  int data;
+  node* next;
+};
+</pre>
+			<p>
+				</p><table>
+					<tbody><tr><td></td><td></td></tr>
+					<tr><td>writeList()</td><td> gibt alle Listenelemente sequentiell aus</td></tr>
+					<tr><td>insertAtHead()&nbsp;&nbsp;&nbsp;</td><td> fügt eine neue int-Zahl am Listenkopf ein</td></tr>
+					<tr><td>insertAtTail()</td><td> fügt eine int-Zahl am Listenende ein</td></tr>
+					<tr><td>search()</td><td> durchsucht die Liste nach dem Vorhandensein einer int-Zahl und
+											  liefert einen Zeiger auf das gesuchte Element oder den Nullzeiger
+											  Implementieren Sie eine iterative und eine rekursive Variante!
+											  <br>Hinweis: Alle Listenelemente sind paarweise verschieden!</td></tr>
+					<tr><td>insertSorted()</td><td> fügt eine int-Zahl geordnet (in eine geordnete Liste) ein
+													Implementieren Sie eine iterative und eine rekursive Variante!</td></tr>
+				</tbody></table>
+			<p></p>
+			
+			<pre>void <b>writeList</b> ( node* head ) {
+  while (head) {
+    printf("%d \n", head-&gt;info);
+    head = head-&gt;next;
+  }
+}
+</pre>
+
+<pre>void <b>insertAtHead</b> ( node*&amp; head, int value ) {
+  node* temp = new node;
+  temp-&gt;info = value; 	<i>// oder: (*temp).info = value;</i>
+  temp-&gt;next = head;
+  head = temp;
+}
+</pre>
+
+<pre>void <b>insertAtTail</b> ( node*&amp; head, int value ) {
+  node* temp = new node;
+  temp-&gt;info = value;
+  temp-&gt;next = 0;
+  if (head){
+    node* pos = head;
+    while(pos-&gt;next)
+      pos = pos-&gt;next;
+    pos-&gt;next = temp;
+  }
+  else
+    head = temp;
+}
+</pre>		
+
+<pre>node* <b>search</b> ( node* head, int value ) {
+  node* temp = head;
+  while (temp)
+    if (temp-&gt;info == value)
+      return temp;
+    else
+      temp = temp-&gt;next;
+  return 0;
+}
+</pre>
+
+<pre>node* <b>searchRec</b> ( node* head, int value ) {
+  if (!head)
+    return 0;
+  if (head-&gt;info == value)
+    return head;
+  return <b>searchRec</b> ( head-&gt;next, value );
+}
+</pre>
+
+<pre>void <b>insertSorted</b> ( node*&amp; head, int value ) {
+  node* pos = head;
+  node* pred = 0;
+  node* temp = new node;
+  temp-&gt;info = value;
+  while (pos &amp;&amp; pos-&gt;info &lt;= value) {
+    pred = pos;
+    pos = pos-&gt;next;
+  }
+  <i>// Resultat: Neues Element zwischen „pred“ und „pos“ einfügen</i>
+  if (!pred) { 	<i>// Einfügen vor erstem Listenelement</i>
+    temp-&gt;next = head;
+    head = temp;
+  }
+  else {
+    pred-&gt;next = temp;
+    temp-&gt;next = pos;
+  }
+}
+</pre>
+
+<pre>node* <b>insertSortedRec</b> ( node* head, int value ) {
+  if (!head || head-&gt;info &gt; value) {
+    <i>// entweder Einfügen am Listenende oder vor head</i>
+    node* temp = new node;
+    temp-&gt;info = value;
+    temp-&gt;next = head;
+    return temp;
+  }
+  else {
+    head-&gt;next = <b>insertSortedRec</b> ( head-&gt;next, value );
+    return head;
+  }
+}
+</pre>
+
+    </section>
+    
+    <section>
+	
+        <h2>4. Listen(2) </h2>
+			<p>
+				Implementieren Sie die im Folgenden beschriebenen Funktionen ausschließlich 
+				auf Basis einer durch einen Zeiger auf den Listenkopf gegebenen einfach verketteten Liste
+				vom Typ node! <br>
+				Überlegen Sie sich die weiteren benötigten Parameter. <br>
+				Die Verwendung globaler Variablen und von Klassen ist untersagt!
+			</p>
+			<pre>struct <b>node</b> {
+  int data;
+  node* next;
+};
+</pre>
+			<p>
+				</p><table>
+					<tbody><tr><td></td><td></td></tr>
+					<tr><td>removeFirst()&nbsp;&nbsp;&nbsp;</td><td> löscht das erste Listenelement</td></tr>
+					<tr><td>remove()</td><td> löscht das erste Listenelement mit einem vorgegebenen int-Wert<br>
+																Implementieren Sie eine iterative und eine rekursive Variante!</td></tr>
+					<tr><td>mirror()</td><td> spiegelt die übergebene Liste (z.B. 1 2 3 4 ➔ 4 3 2 1)</td></tr>
+					<tr><td>getMin()</td><td> liefert den minimalen Elementwert der Liste. Überlegen Sie sich, 
+											  wie man den Fall der leeren Liste abfangen könnte</td></tr>											  
+					<tr><td>sortList()</td><td> gibt eine aufsteigend sortierte Liste zurück</td></tr>
+				</tbody></table>
+			<p></p>
+			
+<pre>void <b>removeFirst</b> ( node*&amp; head ) {
+  if (head) {
+    node* temp = head;
+    head = head-&gt;next;
+    delete temp;
+  }
+}
+</pre>
+
+<pre>void <b>remove</b> ( node*&amp; head, int value ) {
+  node* pos = head;
+  node* pred = 0;
+  while (pos &amp;&amp; pos-&gt;info != value) {
+    pred = pos;
+    pos = pos-&gt;next;
+  }
+  if (pos-&gt;info == value) { <i>// zu löschendes Element gefunden</i>
+    if (!pred)
+      head = head-&gt;next;
+    else
+      pred-&gt;next = pos-&gt;next;
+    delete pos;
+  }
+}
+</pre>
+
+<pre>node* <b>removeRec</b> ( node* head, int value ) {
+  if (head)
+    if (head-&gt;info == value) {
+      node* temp = head;
+      head = head-&gt;next;
+      delete temp;
+    }
+    else
+      head-&gt;next = <b>removeRec</b> ( head-&gt;next, value );
+  return head;
+}
+</pre>
+
+<pre>node* <b>mirror</b> ( node* root ) {
+  node* res = 0;
+  while (root != 0) {
+    node* n = root;      <i>// Kopf alte Liste sichern</i>
+    root = root-&gt;next;   <i>// aushängen aus alter Liste</i>
+    n-&gt;next = res;       <i>// Vor neue Liste hängen</i>
+    res = n;             <i>// Kopf der neuen Liste</i>
+  }
+  return res;
+}
+</pre>
+
+<pre>bool <b>getMin</b> ( node* head, int&amp; min ) {
+  if (!head)
+    return false;
+  min = head-&gt;info;
+  node* pos = head-&gt;next;
+  while (pos) {
+    if (pos-&gt;info &lt; min)
+      min = pos-&gt;info;
+    pos = pos-&gt;next;
+  }
+  return true;
+}
+</pre>
+
+<pre>node* <b>sortList</b> ( node* source ) {
+  int min;
+  node* destination = 0;
+  while (getMin(source, min)) {
+    <b>insertAtTail</b> ( destination, min );
+    <b>remove</b> ( source, min );
+  }
+  return destination;
+}
+</pre>
+        
+			
+
+	</section>
+	
+    <section>
+        
+        <h2>5. Abstrakter Datentyp</h2>
+		
+		<h4>Aufgabe 1</h4>
+			<p>
+				Kapseln Sie eine Liste beliebiger Integerzahlen in einem ADT Liste, 
+				der ausschließlich folgende Schnittstelle zur Verfügung stellen soll:
+				</p><table>
+					<tbody><tr><td>void print()</td> <td>Ausgabe aller Listenelemente auf dem Bildschirm</td></tr>
+					<tr><td>void insert(int z)</td> <td>Ausgabe aller Listenelemente auf dem Bildschirm</td></tr>
+					<tr><td>void remove(int z)</td> <td>Alle Vorkommen von z werden aus der Liste entfernt</td></tr>
+					<tr><td>bool exists(int z)</td> <td>Testet, ob sich die Zahl z in der Liste befindet</td></tr>
+					<tr><td>int count()</td> <td>Gibt die Elementanzahl der Liste zurück.</td></tr>
+				</tbody></table><br>
+				Verwenden Sie für die interne Darstellung der Liste eine <b>doppelt verkettete</b> Datenstruktur!<br><br>
+				Implementieren Sie auch einen sinnvollen <b>Konstruktor</b> und <b>Destruktor</b>! 
+				Begründen Sie die Notwendigkeit des Destruktors! <br><br>
+				Erzeugen Sie eine Instanz Ihrer Liste und testen Sie die Funktionalität des ADTs!
+			<p></p>
+			
+<pre><b>Schnittstelle:</b>
+
+class <b>List</b> {
+private:
+  struct <b>node</b> {
+    int value;
+    node * pred;
+    node * next;
+  };
+  node * head;
+  node * tail;
+  
+public:
+  List();
+  ~List();
+  
+  void <b>insert(int)</b>;
+  void <b>remove(int)</b>;
+  bool <b>exists(int)</b>;
+  int <b>count()</b>;
+  void <b>print()</b>;
+};
+</pre>
+
+<pre><b>Konstruktor</b>
+List::List() {
+  head = 0;
+  tail = 0;
+}
+</pre>
+
+<pre><b>Destruktor</b>
+List::~List() {
+  node * temp = head;
+  while(temp) {
+    temp = temp-&gt;next;
+    delete head;
+    head = temp;
+  }
+}
+</pre>
+
+<pre><b>Einfügen</b>
+void List::insert(int v) {
+  node* temp = new node;
+  temp-&gt;value = v;
+  temp-&gt;pred = tail;
+  temp-&gt;next = 0;
+  <i>// an Listenende anfügen</i>
+  if (tail) {
+    tail-&gt;next = temp;
+  }
+  <i>// existiert kein Kopf, dann neuen setzen </i>
+  if (!head) {
+    head = temp;
+  }
+  tail = temp;
+}
+</pre>
+
+<pre><b>Löschen</b>
+void List::remove(int v) {
+  node* temp = head;
+  while (temp) {
+    node* next = temp-&gt;next;
+    if (temp-&gt;value == v) {
+      if (temp == head &amp;&amp; temp == tail) { head = 0; tail = 0; }
+      <i>// Liste besteht aus mind. 2 Elementen</i>
+      else {     <i>// Sonderfall Listenkopf</i>
+        if (temp == head) { 
+		  temp-&gt;next-&gt;pred = 0; 
+		  head = temp-&gt;next; 
+		}
+        else {
+		  temp-&gt;pred-&gt;next = temp-&gt;next;
+		  if (temp == tail)     <i>// Sonderfall Listenende</i>
+		    tail = temp-&gt;pred;
+		  else
+		    temp-&gt;next-&gt;pred = temp-&gt;pred;
+		}
+	  }
+      delete temp;
+	}
+  temp = next;
+  }
+}
+</pre>
+
+<pre><b>Enthalten?</b>
+bool List::exists(int v) {
+  node* temp = head;
+  while (temp &amp;&amp; (temp-&gt;value != v)) temp = temp-&gt;next;
+  return temp;
+}
+</pre>
+
+<pre><b>Elemente zählen</b>
+int List::count() {
+  int count = 0;
+  node* temp = head;
+  while (temp) { count++; temp = temp-&gt;next; }
+  return count;
+}
+</pre>
+
+<pre><b>Ausgeben</b>
+void List::print() {
+  node* temp = head;
+  while (temp) { printf(“%d “, temp-&gt;value); temp = temp-&gt;next; }
+  printf(“\n“);
+}
+</pre>
+
+
+		<h4>Aufgabe 2</h4>
+			<p>
+				Entwerfen Sie einen ADT für rationale Zahlen. Implementieren Sie neben sinnvollen Konstruktor- 
+				auch Setter- und Getter-Methoden sowie folgende Operationen:
+				</p><table>
+					<tbody><tr><td>•</td> <td>Rückgabe des Dezimalwerts einer rationalen Zahl</td></tr>
+					<tr><td>•</td> <td>weitestgehendes Kürzen der rationalen Zahl</td></tr>
+					<tr><td>•</td> <td>Implementieren der vier Grundrechenarten mittels Methoden add, sub, mul, div</td></tr>
+				</tbody></table><br>
+				Geben Sie die Schnittstelle des ADTs an und implementieren Sie ihn!<br><br>
+				Erzeugen Sie einige Instanzen Ihres ADTs und demonstrieren Sie die bereitgestellte Funktionalität!<br><br>
+				<b>Hinweis</b><br>
+				Alle Operationen sollen direkt auf einer Instanz des ADTs ablaufen, d.h. 
+				dass z.B. die Grundrechenarten den Wert der eigenen Instanz des ADTs 
+				um den Wert einer als Argument übergebenen weiteren Instanz des ADTs ändern.
+			<p></p>
+			
+<pre><b>Schnittstelle</b>
+class Rational {
+  int n; <i>// numerator</i>
+  int d; <i>// denominator</i>
+  int ggT ( int, int ); <i>// Hilfsfunktion für Kürzen</i>
+
+public:
+  Rational();
+  Rational(int, int);
+  ~Rational();
+
+  int getN();
+  int getD();
+  void setN(int);
+  bool setD(int);
+  
+  float getDecimal();
+  
+  void add(Rational);
+  void sub(Rational);
+  void mul(Rational);
+  void div(Rational);
+  void reduce();
+};
+</pre>
+
+<pre><b>Konstruktoren</b>
+Rational::Rational() {
+  this-&gt;n = 0;
+  this-&gt;d = 1;
+};
+
+Rational::Rational(int n, int d) {
+  this-&gt;n = n;
+  this-&gt;d = d;
+  if (d == 0) { <i>// oder Fehlermeldung alternativ</i>
+    this-&gt;n = 0;
+    this-&gt;d = 1;
+  }
+};
+</pre>
+
+<pre><b>Getter &amp; Setter</b>
+int Rational::getN() {
+  return n;
+};
+
+int Rational::getD() {
+  return d;
+};
+
+void Rational::setN(int n) {
+  this-&gt;n = n;
+};
+
+bool Rational::setD(int d) {
+  if (d == 0)
+    return false;
+  this-&gt;d = d;
+    return true;
+};
+
+float Rational::getDecimal() {
+  return (float)n / d;
+};
+</pre>
+
+<pre><b>Grundrechenarten</b>
+void Rational::add(Rational r) {
+  n = n * r.d + r.n * d;
+  d = d * r.d;
+};
+
+void Rational::sub(Rational r) {
+  n = n * r.d - r.n * d;
+  d = d * r.d;
+};
+
+void Rational::mul(Rational r) {
+  n = n * r.n;
+  d = d * r.d;
+};
+
+void Rational::div(Rational r) {
+  n = n * r.d;
+  d = d * r.n;
+};
+</pre>
+
+<pre><b>Kürzen</b>
+int Rational::ggT(int a, int b) { <i>// Euklid</i>
+  if (a == 0)
+    return b;
+  else {
+    while (b != 0) {
+      if (a &gt; b)
+        a = a - b;
+      else
+        b = b - a;
+    }
+  }
+  return a;
+};
+
+void Rational::reduce() {
+  int c = ggT(n, d);
+  n = n / c;
+  d = d / c;
+};
+</pre>
+
+	</section>
+	
+	<section>
+	
+		<h2>6. Bäume</h2>
+		
+		<h4>Aufgabe 1</h4>
+			<p>
+				Schreiben Sie je eine Funktion / Methode, die:
+				</p><table>
+					<tbody><tr><td>&nbsp;a)&nbsp;</td> <td>die Anzahl der Blätter</td></tr>
+					<tr><td>&nbsp;b)</td> <td>die Anzahl linker Söhne</td></tr>
+					<tr><td>&nbsp;c)</td> <td>die Höhe</td></tr>
+				</tbody></table>
+				eines beliebigen Baumes bestimmt.
+			<p></p>
+			
+<pre>int <b>countLeaves</b> ( node* root ) {
+  if ( root == 0 ) return 0;
+  else if ( !root-&gt;left &amp;&amp; !root-&gt;right ) return 1; // Blatt
+  else return countLeaves(root-&gt;left) + countLeaves(root-&gt;right);
+}
+</pre>
+
+<pre>int <b>countLeftNodes</b> ( node* root ) {
+  if ( root == 0 ) return 0;
+  else if (root-&gt;left)
+    return countLeftNodes(root-&gt;left) + countLeftNodes(root-&gt;right) + 1;
+  else
+    return countLeftNodes(root-&gt;right);
+}
+</pre>
+
+<pre>int <b>height</b> ( node* root ) {
+  if (root == 0) return 0;
+  else {
+    int left = height( root-&gt;left );
+    int right = height( root-&gt;right );
+    if (left &lt;= right)
+      return 1 + right; 
+    else 
+      return 1 + left;
+  }
+}
+</pre>
+	
+		<h4>Aufgabe 2</h4>
+			<p>
+				Gegeben sei ein beliebiger binärer Baum. Jeder Knoten beinhalte einen Integer-Wert.<br><br>
+				Schreiben Sie eine Funktion / Methode, die testet, ob sich ein Knoten 
+				mit einem bestimmten Integer-Wert im Baum befindet!
+			</p>
+			
+<pre>bool <b>exists</b> ( node* root, int value ) {
+  if ( !root )
+    return false;
+  if ( root-&gt;info == value )
+    return true;
+  return <b>exists</b> ( root-&gt;left, value) || <b>exists</b> ( root-&gt;right, value);
+}
+</pre>
+
+		<h4>Aufgabe 3</h4>
+			<p>
+				Schreiben Sie eine Funktion, die einen gegebenen Binärbaum spiegelt
+			</p>
+			
+<pre>void <b>mirror</b> ( node* root ) {
+  if (root) {
+    node* temp = root-&gt;right;
+    root-&gt;right = root-&gt;left;
+    root-&gt;left = temp;
+    <b>mirror</b> ( root-&gt;left );
+    <b>mirror</b> ( root-&gt;right );
+  }
+}
+</pre>
+
+		<h4>Aufgabe 4</h4>
+			<p>
+				Schreiben Sie eine Funktion / Methode, die testet, ob ein gegebener Binärbaum ein Suchbaum ist.
+			</p>
+			
+<pre>bool <b>isSearchTree</b> ( node* root, int* l, int* r ) {
+  <i>/* Aufruf: isSearchTree ( root, 0, 0 );
+     l und r begrenzen die möglichen Werte im binären Baum
+     falls keine linke bzw. rechte Begrenzung existiert,
+     sind l und r NULL-Zeiger */</i>
+  if ( !root )
+    return true;
+  if ( l )
+    if ( *l &gt;= root-&gt;info ) return false;
+  if ( r )
+    if ( *r &lt;= root-&gt;info ) return false;
+  return <b>isSearchTree</b> ( root-&gt;left, l, &amp;(root-&gt;info) ) <b>&amp;&amp;</b> 
+         <b>isSearchTree</b> ( root-&gt;right, &amp;(root-&gt;info), r );
+  }
+}
+</pre>
+
+		<h4>Aufgabe 5</h4>
+			<p>
+				Entwickeln Sie einen Algorithmus, der ein (aufsteigend) sortiertes Feld
+				von N Elementen derart in einen binären Suchbaum einfügt, dass der
+				Baum nach dem Einfügen aller Elemente <b>perfekt balanciert</b> ist.
+			</p>
+			
+<pre>node* <b>generate</b> ( int feld[], int left, int right ) {
+  if (left &lt;= right) {
+    int middle = (right + left) / 2;
+    node *temp = new node;
+    temp-&gt;key = feld[middle];
+    temp-&gt;left = <b>generate</b> ( feld, left, middle-1 );
+    temp-&gt;right = <b>generate</b> ( feld, middle+1, right );
+    return temp;
+  }
+  return 0;
+}
+
+node* <b>insert</b> ( int feld[], int N ) {
+  return <b>generate</b> ( feld, 0, N-1 );
+}
+</pre>
+		
+		
+		<h4>Aufgabe 6</h4>
+			<p>
+				Die Knoten eines binären Suchbaums wurden zusätzlich mit einer Balanceinformation versehen.<br><br>
+				Die Balance eines Knotens entspricht der Differenz <br>
+				(Höhe des rechten Teilbaums) – (Höhe des linken Teilbaums).<br><br>
+				Modifizieren Sie die Einfügefunktion für binäre Suchbäume derart, 
+				so dass nach dem Einfügen alle Balanceinformationen wieder korrekt sind.<br><br>
+				<b>Hinweis:</b><br>
+				Vor dem Einfügen sind alle Balanceinformationen korrekt. 
+				Aktualisieren Sie deshalb nur die Knoten, deren Balance sich tatsächlich geändert hat.
+			</p>
+			
+<pre>struct <b>node</b> {
+  int info;
+  int balance;
+  node* left;
+  node* right;
+};
+</pre>
+
+<pre>node* <b>Insert</b> ( node* wurzel, int value ) {
+  bool bal;
+  return Insert_plusBalance(wurzel, bal, value);
+}
+
+node* <b>Insert_plusBalance</b> ( node* wurzel, bool&amp; balancieren, int value ) {
+  if (wurzel) {
+    if (wurzel-&gt;info &lt; value) {
+      wurzel-&gt;right = <b>Insert_plusBalance</b> ( wurzel-&gt;right, balancieren, value );
+      if (balancieren) {
+        wurzel-&gt;balance++; if (wurzel-&gt;balance &gt;= 1) return wurzel;
+      }
+    }
+    else if (wurzel-&gt;info &gt; value) {
+      wurzel-&gt;left = <b>Insert_plusBalance</b> ( wurzel-&gt;left, balancieren, value );
+      if (balancieren) {
+        wurzel-&gt;balance--; if (wurzel-&gt;balance &lt;= -1) return wurzel;
+      }
+    }
+    balancieren = false;
+    return wurzel;
+  }
+  wurzel = new node;
+  wurzel-&gt;info = value;
+  wurzel-&gt;left = 0;
+  wurzel-&gt;right = 0;
+  wurzel-&gt;balance = 0;
+  balancieren = true;
+  return wurzel;
+}
+</pre>
+			
+			
+			
+			
+	</section>
+
+	
+
+
+</body><auto-scroll></auto-scroll></html>
