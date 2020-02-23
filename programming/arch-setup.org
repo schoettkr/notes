@@ -277,24 +277,28 @@ Create the following folder structure in the home directory:
 ~/dev
 ~/library
 
-~/library/books
-
-~/library/docs
 ;;~/library/docs/misc
 
 ~/library/music
 
-~/library/images
-~/library/images/wallpaper
-~/library/images/personal
+mkdir ~/library/books
+mkdir ~/library/docs
 
-~/library/videos
-~/library/videos/personal
-~/library/videos/courses
+mkdir ~/library/images
+mkdir ~/library/images/misc
+mkdir ~/library/images/wallpaper
+mkdir ~/library/images/personal
 
-~/misc
+mkdir ~/library/videos
+mkdir ~/library/videos/misc
+mkdir ~/library/videos/personal
+mkdir ~/library/videos/courses
 
-~/temp
+mkdir -p ~/library/audio/misc
+
+mkdir ~/temp
+
+;;mkdir ~/misc
 ;; ~/docs/coding
 ;; ~/docs/life
 #+END_SRC
