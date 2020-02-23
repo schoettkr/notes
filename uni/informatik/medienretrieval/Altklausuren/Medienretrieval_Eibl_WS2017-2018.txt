@@ -1,0 +1,18 @@
+Modul:		Medienretrieval
+Dozent:		Eibl
+Semester:	WS2017-2018
+Prüfungsart:	schriftlich
+
+Prüfungsbericht:
+
+Die Fragen entsprechen genau denen in der Klausur. Leider habe ich vergessen mir die Punktezahlen zu notieren. 
+
+1. Diskutieren Sie den Einsatz von TF und IDF.
+
+2. Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern. 
+
+3. Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR. (4 Punkte)
+
+4. Erklären Sie die Maße Recall und Precision.
+
+5. Sie haben ein Retrieval System und möchten die Qualität des Systems für eine Sammlung annotierter Insektenbilder evaluieren. Wie gehen sie vor? (Bedenken Sie auch grundsätzliche Probleme, die auftreten können.) (7 Punkte)

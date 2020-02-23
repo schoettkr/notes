@@ -1,0 +1,39 @@
+Modul:		Medienretrieval
+Dozent:		Prof_Maximilian_Eibl
+Semester:	WS2016-2017
+Prüfungsart:	schriftlich
+
+Prüfungsbericht:
+
+Der Prüfungsbericht:
+Modul:		Medienretrieval
+Dozent:		Prof. Maximilian Eibl
+Semester:	WS2016-2017
+Prüfungsart:	schriftlich
+
+(Hinweis: Ja, es kam --exakt-- das dran wie in der Klausur im WS2015-2016 (punktverteilung genau auch gleich))
+
+Prüfungsbericht:
+
+1. Beschreiben Sie die IDF (3Punkte)
+
+2. Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR (4 Punkte)
+
+3. Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens (5 Punkte)
+
+4. Welche Hauptmethoden der Stammformreduktion gibt es (3 Punte)
+
+5. Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise (7 Punkte)
+
+------
+
+Lösungshinweise: zu 1. : IDF ist die "inverse document frequency" (in unseren vorlesungsfolien stand nix zu idf,
+es wurde aber in der Vorlesung genannt und erklärt (ich war nicht bei der Vorlesung, habe aber vor der Prüfung noch einen Komilitonen gefragt, der bei der Vorlesung war))
+
+-> "https://en.wikipedia.org/wiki/Tf%E2%80%93idf"
+-> "https://de.wikipedia.org/wiki/Tf-idf-Ma%C3%9F"
+
+
+auch zu 3. gab es in den Vorlesungsvolien recht wenig infos: -> "http://www.dca.fee.unicamp.br/cursos/IA875/1s1997/Notes/mcl-tr11/TR-11-01-95node5.html" : Abschnitt "Twin-Comparison"
+
+zu 5. : -> "http://nlp.stanford.edu/IR-book/pdf/08eval.pdf" (da steht ausformuliert, was bei uns in kurzform auf den vorlesungsfolien stand)

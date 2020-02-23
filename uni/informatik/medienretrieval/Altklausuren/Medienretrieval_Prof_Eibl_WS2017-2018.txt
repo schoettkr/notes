@@ -1,0 +1,12 @@
+Modul:		Medienretrieval
+Dozent:		Prof_Eibl
+Semester:	WS2017-2018
+Prüfungsart:	schriftlich
+
+Prüfungsbericht:
+
+1. Discuss the use of TF and IDF. (4P)
+2. Discuss the difference between n-gram and affix stemmer. (4P)
+3. Describe the general models of CBIR. (4P)
+4. Explain measures Recall & Precision. (2P)
+5. Image you have an IR-System and want to evaluate its performance regarding an annotated collection of insect images. How would you proceed? What are general challenges? (6P)

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-02-23 Sun 18:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="John Doe" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type='text/css'>
+html {
+  font-size: 62.5%;
+  font-family: serif; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 60%;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
+
+@media (max-width: 684px) {
+  body {
+    max-width: 98%;
+    font-size: 1.53rem; } }
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
+hr {
+  border-color: #2c8898; }
+
+a {
+  text-decoration: none;
+  color: #2c8898; }
+  a:hover {
+    color: #982c61;
+    border-bottom: 2px solid #4a4a4a; }
+
+ul {
+  padding-left: 1.4em; }
+
+li {
+  margin-bottom: 0.4em; }
+
+blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2c8898; }
+
+img {
+  max-width: 100%; }
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a; }
+  input:focus, textarea:focus {
+    border: 1px solid #2c8898; }
+
+textarea {
+  width: 100%; }
+
+.button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #2c8898;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #2c8898;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
+    cursor: default;
+    opacity: .5; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
+    background-color: #982c61;
+    border-color: #982c61;
+    color: #f9f9f9;
+    outline: 0; }
+
+textarea, select, input[type] {
+  color: #4a4a4a;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #2c8898;
+    outline: 0; }
+
+input[type='checkbox']:focus {
+  outline: 1px dotted #2c8898; }
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+   </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org668cf00">1. Beschreiben Sie IDF und TF</a></li>
+<li><a href="#org1e34b53">2. Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</a></li>
+<li><a href="#org327a81d">3. Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</a></li>
+<li><a href="#org7fafb35">4. Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</a></li>
+<li><a href="#org521a74d">5. Welche Hauptmethoden der Stammformreduktion gibt es?</a></li>
+<li><a href="#orgad5425b">6. Erklären Sie die Maße Recall und Precision.</a></li>
+<li><a href="#org286f30c">7. Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</a></li>
+<li><a href="#org427fc5b">8. Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org668cf00" class="outline-2">
+<h2 id="org668cf00"><span class="section-number-2">1</span> Beschreiben Sie IDF und TF</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Side note: In <b>jeder</b> Altklausur besteht die erste Aufgabe aus der Beschreibung von IDF. In einigen Klausuren wird zusätzlich noch die Beschreibung von TF verlangt</li>
+</ul>
+
+<p>
+<b>Wikipedia Engl Summary</b><br />
+In information retrieval, <b>tf–idf</b> or <b>TFIDF</b>, short for <b>term frequency–inverse document frequency</b>, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modeling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general. tf–idf is one of the most popular term-weighting schemes today; 83% of text-based recommender systems in digital libraries use tf–idf.
+</p>
+
+<p>
+Variations of the tf–idf weighting scheme are often used by search engines as a central tool in scoring and ranking a document&rsquo;s relevance given a user query. tf–idf can be successfully used for stop-words filtering in various subject fields, including text summarization and classification.
+</p>
+
+<p>
+One of the simplest ranking functions is computed by summing the tf–idf for each query term; many more sophisticated ranking functions are variants of this simple model.
+</p>
+
+<p>
+<b>TF (Term Frequency)</b>: Suppose we have a set of English text documents and wish to rank which document is most relevant to the query, &ldquo;the brown cow&rdquo;. A simple way to start out is by eliminating documents that do not contain all three words &ldquo;the&rdquo;, &ldquo;brown&rdquo;, and &ldquo;cow&rdquo;, but this still leaves many documents. To further distinguish them, we might count the number of times each term occurs in each document; the number of times a term occurs in a document is called its term frequency. However, in the case where the length of documents varies greatly, adjustments are often made (see definition below). The first form of term weighting is due to Hans Peter Luhn (1957) which may be summarized as: <i>The weight of a term that occurs in a document is simply proportional to the term frequency.</i>
+</p>
+
+<p>
+<b>IDF (Inverse Document Frequency)</b>: Because the term &ldquo;the&rdquo; is so common, term frequency will tend to incorrectly emphasize documents which happen to use the word &ldquo;the&rdquo; more frequently, without giving enough weight to the more meaningful terms &ldquo;brown&rdquo; and &ldquo;cow&rdquo;. The term &ldquo;the&rdquo; is not a good keyword to distinguish relevant and non-relevant documents and terms, unlike the less-common words &ldquo;brown&rdquo; and &ldquo;cow&rdquo;. Hence an inverse document frequency factor is incorporated which diminishes the weight of terms that occur very frequently in the document set and increases the weight of terms that occur rarely.
+</p>
+
+<p>
+Karen Spärck Jones (1972) conceived a statistical interpretation of term specificity called Inverse Document Frequency (idf), which became a cornerstone of term weighting: <i>The specificity of a term can be quantified as an inverse function of the number of documents in which it occurs.</i>
+</p>
+
+<hr />
+
+<p>
+<b>Wikipedia Ger Summary</b><br />
+Das Tf-idf-Maß (von englisch term frequency ‚Vorkommenshäufigkeit‘ und inverse document frequency ‚inverse Dokumenthäufigkeit‘) wird im Information Retrieval zur Beurteilung der Relevanz von Termen in Dokumenten einer Dokumentenkollektion eingesetzt.
+</p>
+
+<p>
+Mit der so errechneten Gewichtung eines Wortes bezüglich des Dokuments, in welchem es enthalten ist, können Dokumente als Suchtreffer einer wortbasierten Suche besser in der Trefferliste angeordnet werden, als es beispielsweise über die Termfrequenz allein möglich wäre.
+</p>
+
+<p>
+<b>IDF:</b> Die Inverse Dokumenthäufigkeit (englisch Inverse Document Frequency (IDF)) dient beim Information Retrieval zur Bestimmung der Trennfähigkeit eines Wortes bzw. Termes für die Indexierung von Dokumenten. Ein Wort, das nur in wenigen Dokumenten oft vorkommt, ist geeigneter als eines, das in fast jedem Dokument oder nur sehr gering auftritt. Zusammen mit der Termfrequenz (siehe Tf-idf-Maß) wird sie zur Gewichtung von Wörtern bei der Automatischen Indexierung eingesetzt.<br />
+Die Inverse Dokumenthäufigkeit lässt sich berechnen als \[IDF_t = \log(\frac{N_D}{f_t})\]
+wobei N<sub>D</sub> die Anzahl der Dokumente bezeichnet und f<sub>t</sub> die Anzahl der Dokumente, die den Term t enthalten. Wenn die Dokumentenhäufigkeit wächst, wird der Bruch kleiner.<br />
+</p>
+
+<p>
+Die inverse Dokumenthäufigkeit misst die Spezifität eines Terms für die Gesamtmenge der betrachteten Dokumente. Ein übereinstimmendes Vorkommen von seltenen Begriffen ist für die Relevanz aussagekräftiger als eine Übereinstimmung bei sehr häufigen Worten (z. B. &ldquo;und&rdquo; oder &ldquo;ein&rdquo;).
+Die inverse Dokumentfrequenz <code>idf(t)</code>  eines Terms <code>t</code> hängt nicht vom einzelnen Dokument, sondern vom Dokumentkorpus (der Gesamtmenge aller Dokumente im Retrievalszenario) ab.
+</p>
+
+<p>
+<b>TF:</b> Die Vorkommenshäufigkeit (auch Suchwortdichte genannt) <code>#(t,D)</code> gibt an, wie häufig der Term <code>t</code> im Dokument <code>D</code> vorkommt. Ist beispielsweise das Dokument <code>D_{i}</code> der Satz
+&ldquo;<i>Das rote Auto hält an der roten Ampel.</i>&rsquo;&rdquo; dann ist  <code>#(rot, D_i)=2</code>. Um eine Verzerrung des Ergebnisses in langen Dokumenten zu verhindern, ist es möglich, die absolute Vorkommenshäufigkeit <code>#(t,D)</code>  zu normalisieren. Dazu wird die Anzahl der Vorkommen von Term <code>t</code> in Dokument <code>D</code> durch die maximale Häufigkeit eines Terms in <code>D</code> geteilt und man erhält die relative Vorkommenshäufigkeit <code>tf(t,D)</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org1e34b53" class="outline-2">
+<h2 id="org1e34b53"><span class="section-number-2">2</span> Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist nur in 2 Altklausren.</li>
+</ul>
+
+<p>
+<b>Zipfsch&rsquo;sches Gesetz</b>:
+</p>
+<ul class="org-ul">
+<li>Zipf&rsquo;s law is an empirical law formulated using mathematical statistics that refers to the fact that many types of data studied in the physical and social sciences can be approximated with a Zipfian distribution, one of a family of related discrete power law probability distributions. Zipf distribution is related to the zeta distribution, but is not identical.</li>
+<li>Zipf&rsquo;s law was originally formulated in terms of quantitative linguistics, stating that given some corpus of natural language utterances, the frequency of any word is inversely proportional to its rank in the frequency table. Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation. For example, in the Brown Corpus of American English text, the word the is the most frequently occurring word, and by itself accounts for nearly 7% of all word occurrences (69,971 out of slightly over 1 million). True to Zipf&rsquo;s Law, the second-place word of accounts for slightly over 3.5% of words (36,411 occurrences), followed by and (28,852). Only 135 vocabulary items are needed to account for half the Brown Corpus.</li>
+<li>Die vereinfachte Aussage des Zipfschen Gesetzes lautet: Wenn die Elemente einer Menge – beispielsweise die Wörter eines Textes – nach ihrer Häufigkeit geordnet werden, ist die Wahrscheinlichkeit p ihres Auftretens umgekehrt proportional zur Position n innerhalb der Rangfolge: \(p(n) \sim \frac{1}{n}.\)</li>
+</ul>
+
+<p>
+<b>Luhn&rsquo;sche Termgewichtung</b>:
+</p>
+<ul class="org-ul">
+<li>Token (Einzelne Wörter) werden statistisch nach Häufigkeit untersucht. Hochfrequenz Wörter bspw. the, of, to dabei abgeschnitten. Auf der anderen Seite kann man auch Wörter mit einer niedrigeren Frequenz abschneiden, aber dadurch besteht die Gefahr insbesondere sehr spezielle Terme zu vernachlässigen. Wird daher nicht of gemacht.
+<ul class="org-ul">
+<li><a href="https://books.google.de/books?id=PT5rAQAAQBAJ&amp;pg=PA9&amp;lpg=PA9&amp;dq=termgewichtung+luhn&amp;source=bl&amp;ots=eXuDDWufK_&amp;sig=ACfU3U2EqvtACC_XzgiFpbRcn7nGedV1Ug&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjIqqCIiOjnAhVS2qQKHf_lC14Q6AEwBHoECAwQAQ#v=onepage&amp;q=termgewichtung%20luhn&amp;f=false">https://books.google.de/books?id=PT5rAQAAQBAJ&amp;pg=PA9&amp;lpg=PA9&amp;dq=termgewichtung+luhn&amp;source=bl&amp;ots=eXuDDWufK_&amp;sig=ACfU3U2EqvtACC_XzgiFpbRcn7nGedV1Ug&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjIqqCIiOjnAhVS2qQKHf_lC14Q6AEwBHoECAwQAQ#v=onepage&amp;q=termgewichtung%20luhn&amp;f=false</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org327a81d" class="outline-2">
+<h2 id="org327a81d"><span class="section-number-2">3</span> Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 3 Altklausren.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fafb35" class="outline-2">
+<h2 id="org7fafb35"><span class="section-number-2">4</span> Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 3 Altklausren und zwar immer dann, wenn die Frage nach Hauptmethoden der Stammformreduktion nicht auftritt (selbes Thema).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org521a74d" class="outline-2">
+<h2 id="org521a74d"><span class="section-number-2">5</span> Welche Hauptmethoden der Stammformreduktion gibt es?</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 4 Altklausren und zwar immer dann, wenn die Frage nach N-Gram-Stemmern und Affix-Stemmern nicht auftritt (selbes Thema).</li>
+<li>Alternativ: Nennen Sie 3 Arten von Stemmern.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad5425b" class="outline-2">
+<h2 id="orgad5425b"><span class="section-number-2">6</span> Erklären Sie die Maße Recall und Precision.</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist nur in 2 Altklausren.</li>
+</ul>
+<p>
+<a href="https://de.qwe.wiki/wiki/Precision_and_recall#Recall">https://de.qwe.wiki/wiki/Precision_and_recall#Recall</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org286f30c" class="outline-2">
+<h2 id="org286f30c"><span class="section-number-2">7</span> Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 3 Altklausren.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org427fc5b" class="outline-2">
+<h2 id="org427fc5b"><span class="section-number-2">8</span> Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in <b>jeder</b> Altklausur und sie bringt immer die meisten Punkte</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2020-02-23 Sun 18:07</p>
+</div>
+</body>
+</html>

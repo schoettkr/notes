@@ -1,0 +1,27 @@
+1. Wofür steht IDF? Wofür wird sie genutzt? 3P
+
+2. Erläutern sie das Zipf`sches Gesetz und die Luhn`sche Termgewichtung. 3P
+
+3. Nennen sie 3 Arten von Stemmern. 3P
+
+4. Es existiert ein Retrivalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben sie ihre Vorgehensweise. 7P
+
+----------------------------------------------
+
+1. Aufgabe (3 Pkt.)
+Beschreiben Sie die IDF.
+
+2. Aufgabe (3 Pkt.)
+ErlÃ¤utern Sie Zipf'sches Gesetz und Luhn'sche Termgewichtung und ihre praktische Bedeutung.
+
+3. Aufgabe (3 Pkt.)
+Welche Methoden der Stammformreduktion gibt es?
+
+4. Aufgabe (7 Pkt.)
+Sie mÃ¶chten die QualitÃ¤t eines Retrievalsystems für eine Sammlung von Insektenbildern erfassen.
+
+Wie gehen Sie dabei vor?
+
+Die Aufgaben sind mit Punktzahlen wortwörtlich mitgeschrieben. Die PrÃ¼fung war total scheiÃŸe und ich spekuliere auf die Gausskurve ;)
+
+----------------------------------------------

@@ -1,0 +1,18 @@
+Der Prüfungsbericht:
+Modul:		Medienretrieval
+Dozent:		Eibl
+Semester:	WS2015-2016
+Prüfungsart:	schriftlich
+
+Prüfungsbericht:
+
+1. Beschreiben Sie die IDF (3Punkte)
+
+2. Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR (4 Punkte)
+
+3. Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens (5 Punkte)
+
+4. Welche Hauptmethoden der Stammformreduktion gibt es (3 Punte)
+
+5. Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise (7 Punkte)
+
