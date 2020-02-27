@@ -667,7 +667,14 @@ which has to be run from the source folder and the destinaiton is the first argu
 #+BEGIN_SRC sh
 # Copy banking documents
 rsync -a /home/eoshiru/library/docs/banking/ /run/media/eoshiru/Elements/library/docs/banking/
-
+# Copy (misc) images
+rsync -a /home/eoshiru/library/images/misc/ /run/media/eoshiru/Elements/library/images/misc/
+# Copy (misc) videos
+rsync -a /home/eoshiru/library/videos/misc/ /run/media/eoshiru/Elements/library/videos/misc/
+# Copy (misc) audio
+rsync -a /home/eoshiru/library/audio/misc/ /run/media/eoshiru/Elements/library/audio/misc/
+# Copy not yet synced mp3's
+rsync -a /home/eoshiru/Deezloader\ Music/mp3s/ /run/media/eoshiru/Elements/library/music/
 #+END_SRC
 
 ** Youtube-DL
