@@ -42,16 +42,98 @@ Die inverse Dokumentfrequenz =idf(t)=  eines Terms =t= hängt nicht vom einzelne
 - Token (Einzelne Wörter) werden statistisch nach Häufigkeit untersucht. Hochfrequenz Wörter bspw. the, of, to dabei abgeschnitten. Auf der anderen Seite kann man auch Wörter mit einer niedrigeren Frequenz abschneiden, aber dadurch besteht die Gefahr insbesondere sehr spezielle Terme zu vernachlässigen. Wird daher nicht of gemacht.
 - Terme in einem Dokument haben einen unterschiedlichen Stellenwert, für die meisten IR-Modelle gilt es daher einen quantitativen Ausdruck für die Wichtigkeit eines Term im Kontext eines Dokuments zu finden (=Termgewichtung).
 - Laut Luhn (1957) ist die Häufigkeit eines Terms in einem Text ein Maß für seine Relevanz. Jedoch besagt die These von Luhn /nicht/, dass Termhäufigkeit und Relevanz positiv miteinander korrelieren. Der Ansatz von einfacher Termhäufigkeit weist das Defizit auf, dass er alle Terme als gleichwichtig bei der Relevanzbetrachtung einordnet. Vielmehr wird ein Term, der in allen Dokumenten vorkommt als ein allgemeiner Term angesehen, weil er nicht zur Unterscheidung der Dokumente genutzt werden kann. Daher ist es nötig das Gewicht eines Term der in vielen Dokumenten vorkommt zu reduzieren, hierfür kann die TF-IDF genutzt werden (siehe oben)
-* TODO Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR
+* DONE Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR
 - Side note: Diese Aufgabe ist in 3 Altklausren.
-* TODO Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.
-- Side note: Diese Aufgabe ist in 3 Altklausren und zwar immer dann, wenn die Frage nach Hauptmethoden der Stammformreduktion nicht auftritt (selbes Thema).
-* TODO Welche Hauptmethoden der Stammformreduktion gibt es?
+
+Unter Content Based Image Retrieval (CBIR) versteht man eine inhaltsbasierte Bildersuche. Dabei handelt es sich um ein Spezialgebiet der Bildverarbeitung und des Wiederauffindens von Information (Information Retrieval) in großen Datenbeständen. „Inhaltsbasiert“ (content based) bedeutet dabei eine Analyse des aktuellen Inhaltes eines Bildes, also der Farben, Umrisse, Oberflächen (Texturen) oder anderer Informationen (sogenannte Merkmalsvektoren), die über eine automatische Bildverarbeitung ermittelt werden können. Die Aufgabe der Bildersuche ist es, eine Liste vorhandener Bilder so zu sortieren, dass die gesuchten Bilder (etwa anhand eines Referenzbildes) möglichst weit vorne stehen. Bilder werden anhand ihrer Ähnlichkeit zum Referenzbild sortiert, die sich durch eine Distanzfunktion und die Merkmalsvektoren der Bilder bestimmt. Ein Qualitätsmaß beurteilt die Sortierung, die maßgeblich von der Wahl der Merkmalsvektoren und des Ähnlichkeitsmaßes abhängt. Die inhaltsbasierte Bildersuche wird angewandt für Bilderdatenbanken, im Bereich der medizinischen Bildverarbeitung und bei der Suche nach Plagiaten (Near Duplicate Detection).
+Im Bereich der Websuchmaschine, wird je nach Anbieter auch von "reverser Bildersuche" (reverse image search) oder einer "visuellen Suchmaschine" (visual search engine) gesprochen.
+
+Type of Queries in Image Retrieval:
+- (query by text) \rightarrow **not content based* (CBIR)
+- Query by example
+- Query by sketch
+- Query by color
+- Query by texture
+
+*Query By Example* is a query technique that involves providing the CBIR system with an example image that it will then base its search upon. The underlying search algorithms may vary depending on the application, but result images should all share common elements with the provided example. Options for providing example images to the system include:
+- A preexisting image may be supplied by the user or chosen from a random set.
+- The user draws a rough approximation of the image they are looking for, for example with blobs of color or general shapes.
+This query technique removes the difficulties that can arise when trying to describe images with words.\\
+
+*Semantic retrieval* starts with a user making a request like "find pictures of Abraham Lincoln". This type of open-ended task is very difficult for computers to perform - Lincoln may not always be facing the camera or in the same pose. Many CBIR systems therefore generally make use of lower-level features like texture, color, and shape. These features are either used in combination with interfaces that allow easier input of the criteria or with databases that have already been trained to match features (such as faces, fingerprints, or shape matching). However, in general, image retrieval requires human feedback in order to identify higher-level concepts.
+
+Other query methods include browsing for example images, navigating customized/hierarchical categories, querying by image region (rather than the entire image), querying by multiple example images, querying by visual sketch, querying by direct specification of image features, and multimodal queries (e.g. combining touch, voice, etc.).
+
+The most common method for comparing two images in content-based image retrieval (typically an example image and an image from the database) is using an image distance measure. An image distance measure compares the similarity of two images in various dimensions such as color, texture, shape, and others. For example, a distance of 0 signifies an exact match with the query, with respect to the dimensions that were considered. As one may intuitively gather, a value greater than 0 indicates various degrees of similarities between the images. Search results then can be sorted based on their distance to the queried image. Many measures of image distance (Similarity Models) have been developed. Most commonly distance computing measures are based on *color*, *texture* or *shape*.
+
+*Color*\\
+Computing distance measures based on color similarity is achieved by computing a color histogram for each image that identifies the proportion of pixels within an image holding specific values. Examining images based on the colors they contain is one of the most widely used techniques because it can be completed without regard to image size or orientation. However, research has also attempted to segment color proportion by region and by spatial relationship among several color regions.
+
+*Texture*\\
+Texture measures look for visual patterns in images and how they are spatially defined. Textures are represented by texels which are then placed into a number of sets, depending on how many textures are detected in the image. These sets not only define the texture, but also where in the image the texture is located.\\
+Texture is a difficult concept to represent. The identification of specific textures in an image is achieved primarily by modeling texture as a two-dimensional gray level variation. The relative brightness of pairs of pixels is computed such that degree of contrast, regularity, coarseness and directionality may be estimated. The problem is in identifying patterns of co-pixel variation and associating them with particular classes of textures such as silky, or rough.\\
+Other methods of classifying textures include:
+- Co-occurrence matrix, Laws texture energy, Wavelet transform, Orthogonal transforms (Discrete Tchebichef moments)
+
+*Shape*\\
+Shape does not refer to the shape of an image but to the shape of a particular region that is being sought out. Shapes will often be determined first applying segmentation or edge detection to an image. Other methods use shape filters to identify given shapes of an image. Shape descriptors may also need to be invariant to translation, rotation, and scale. Some shape descriptors include:
+- Fourier transform
+- Moment invariant
+
+
+Measures of image retrieval can be defined in terms of precision and recall. However, there are other methods being considered.\\
+An image is retrieved in CBIR system by adopting several techniques simultaneously such as Integrating Pixel Cluster Indexing, histogram intersection and discrete wavelet transform methods.\\
+Machine learning and application of iterative techniques are becoming more common in CBIR.
+
+* DONE Welche Hauptmethoden der Stammformreduktion gibt es?
 - Side note: Diese Aufgabe ist in 4 Altklausuren und zwar immer dann, wenn die Frage nach N-Gram-Stemmern und Affix-Stemmern nicht auftritt (selbes Thema).
 - Alternativ: Nennen Sie 3 Arten von Stemmern.
-* TODO Erklären Sie die Maße Recall und Precision.
+
+Es gibt prinzipiell 3 Arten von Stemmern (Stammformreduktion):
+- dictionary-based stemmers
+- n-gram stemmers
+- affix stemmers
+N-Gram-Stemmer und Affix-Stemmer zählen zur Kategorie der algorithmischen Stemmer.\\
+Affix Stemmer beziehen sich wie der Name schon sagt grundsätzlich auf sogenannte Affixe. Zu Affixen zählen Prefixe (/un/happy), Infixe (ein/ge/schoben) und Suffixe (fit/ted/).
+Klassische Affix-Stemmer sind zB der Porter Stemmer, der Snowball Stemmer und Krovetz (Kstem). Der Porter Stemmer arbeitet beispielsweise mit Vokal-Konsonant-Folgen um Suffixe zu entfernen.\\
+Ein dictionary-based stemmer (zB Hunspell) definiert einen sogennanten dictionary mit dessen Hilfe sich Wortvariationen auf die jeweiligen Stämme reduzieren lassen. Dafür legt er mehrere "Regeln" fest.\\
+Ein N-Gramm ist das Ergebnis einer Wortzerlegung in einzelne, jeweils zu N-aufeinanderfolgende Fragmente zusammengefasst. Ein 2-gram stemmer bezieht sich auf sogenannte Bigramme also Fragmente die aus zwei Zeichen bestehen, ein 3-gram stemmer hingegen auf Trigramme undsoweiter. Um somit die Ähnlichkeit von bestimmten Termen zu bestimmen werden die Worte beispielsweise in ihre Trigramme zerlegt und anschließend wird die Distanz zwischen den Worten über ihre Fragemente berechnet.\\
+* DONE Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.
+- Side note: Diese Aufgabe ist in 3 Altklausren und zwar immer dann, wenn die Frage nach Hauptmethoden der Stammformreduktion nicht auftritt (selbes Thema).
+Zur Beantwortung dieser Frage, siehe vorherige Frage.
+* DONE Erklären Sie die Maße Recall und Precision.
 - Side note: Diese Aufgabe ist nur in 2 Altklausuren.
-https://de.qwe.wiki/wiki/Precision_and_recall#Recall
+ 
+Recall (Trefferquote) und Precision (Genauigkeit, Präzision) sind Maße zur Evaluierung Information Retrieval Systemen. Es geht hier primär darum die Relevanz von gefundenen Informationen/Dokumenten zu beurteilen. Die Trefferquote gibt den Anteil der bei einer Suche gefundenen relevanten Dokumente und damit die Vollständigkeit eines Suchergebnisses an. Die Genauigkeit beschreibt mit dem Anteil relevanter Dokumente an der Ergebnismenge die Genauigkeit eines Suchergebnisses. Der (weniger gebräuchliche) Ausfall bezeichnet den Anteil gefundener irrelevanter Dokumente an der Gesamtmenge aller irrelevanten Dokumente, er gibt also in negativer Weise an, wie gut irrelevante Dokumente im Suchergebnis vermieden werden.\\
+Statt als Maß können Recall und Precision und Fallout auch als Wahrscheinlichkeit interpretiert werden:
+- Recall/Trefferquote ist die Wahrscheinlichkeit, mit der ein relevantes Dokument gefunden wird (Sensitivität)
+- Precision/Genauigkeit ist die Wahrscheinlichkeit, mit der ein gefundenes Dokument relevant ist (Positiver Vorhersagewert)
+- Ausfall ist die Wahrscheinlichkeit, mit der ein irrelevantes Dokument gefunden wird (Falsch-positiv-Rate).
+Eine gute Recherche sollte möglichst alle relevanten Dokumente finden (richtig positiv) und die nicht relevanten Dokumente nicht finden (richtig negativ). Wie oben beschrieben, hängen die verschiedenen Maße jedoch voneinander ab. Im Allgemeinen sinkt mit steigender Trefferrate die Genauigkeit (mehr irrelevante Ergebnisse). Umgekehrt sinkt mit steigender Genauigkeit (weniger irrelevante Ergebnisse) die Trefferrate (mehr relevante Dokumente, die nicht gefunden werden). Je nach Anwendungsfall sind die unterschiedlichen Maße zur Beurteilung mehr oder weniger relevant.
+
+*Beispiel*\\
+In einer Datenbank mit 36 Dokumenten sind zu einer Suchanfrage 20 Dokumente relevant und 16 nicht relevant. Eine Suche liefert 12 Dokumente, von denen tatsächlich 8 relevant sind.
+|                | Relevant                                             | Nicht-relevant                                    |
+|----------------+------------------------------------------------------+---------------------------------------------------|
+| Gefunden       | @@html:<span style='background-color:lightgreen'>@@8 | @@html:<span style='background-color:tomato'>@@4  |
+| Nicht gefunden | 12                                                   | @@html:<span style='background-color:gold'>@@8    |
+
+Recall und Precision für die konkrete Suche ergeben sich aus den Werten der Konfusionsmatrix:
+- Recall(Trefferquote) = \(\frac{8}{8+12} =  \frac{8}{20} = \frac{2}{5} = 0.4\)
+- Precision(Genauigkeit) = \(\frac{8}{8+4} =  \frac{8}{12} = \frac{2}{3} = 0.67\)
+- Fallout (Abfallquote) = \(\frac{4}{4+12} =  \frac{4}{16} = \frac{1}{4} = 0.25\)
+ 
+Ein Problem bei der Berechnung der Trefferquote ist die Tatsache, dass man nur selten weiß, wie viele relevante Dokumente insgesamt existieren und nicht gefunden wurden (Problem der unvollständigen Wahrheitsmatrix). Bei größeren Datenbanken, bei denen die Berechnung der absoluten Trefferquote besonders schwierig ist, wird deswegen mit der relativen Trefferquote gearbeitet. Dabei wird die gleiche Suche mit mehreren Suchmaschinen durchgeführt, und die jeweils neuen relevanten Treffer werden zu den nicht gefundenen relevanten Dokumenten addiert. Mit der Rückfangmethode kann abgeschätzt werden, wie viele relevante Dokumente insgesamt existieren.
+
+Problematisch ist auch, dass zur Bestimmung von Trefferquote und Genauigkeit die Relevanz eines Dokumentes als Wahrheitswert (ja/nein) bekannt sein muss. In der Praxis ist jedoch oft die Subjektive Relevanz von Bedeutung. Auch für in einer Rangordnung angeordnete Treffermengen ist die Angabe von Trefferquote und Genauigkeit oft nicht ausreichend, da es nicht nur darauf ankommt, ob ein relevantes Dokument gefunden wird, sondern auch, ob es im Vergleich zu nicht relevanten Dokumenten genügend hoch in der Rangfolge eingeordnet wird. Bei sehr unterschiedlich großen Treffermengen kann die Angabe durchschnittlicher Werte für Trefferquote und Genauigkeit irreführend sein.
+
+- do not work independantly
+  - recall increases with amout of retrieved documents
+  - increasing recall -> decreasing precision
+- importance depends on context
+  - expert systems, file search: Recall optimized
+  - web: precision-optimized
+
 * DONE Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.
 - Side note: Diese Aufgabe ist in 3 Altklausuren.
 - The twin-comparison algorithm uses the difference between consecutive frames to detect a cut, and the accumulated difference over a sequence of frames to detect gradual transitions
@@ -67,3 +149,13 @@ Fortlaufende Übergänge können auf ähnliche Weise bestimmt werden. Aufgrund d
 Diese Methode zur Detektion von Shot-Grenzen wird aufgrund der beiden eingesetzten Schwellwerte als Twin Comparison bezeichnet und ist in der Lage sowohl Schnitte als auch spezielle Übergangseffekte zu detektieren (Einblendung, Ausblendung, Abrupter Schnitt, Dissolve, Wipe, Fade)
 * TODO Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.
 - Side note: Diese Aufgabe ist in *jeder* Altklausur und sie bringt immer die meisten Punkte
+- https://nlp.stanford.edu/IR-book/pdf/08eval.pdf
+
+Zunächst einmal gilt es herauszufinden in welchem Kontext das Retrievalsystem benutzt wird bzw. was das konkrete Einsatzgebiet ist. Grundsätzlich lässt sich ein Retrievalsystem mit Hilfe von den Maßen Recall und Precicision evaluieren. Doch da diese Maße prinzipiell gegeneinander verlaufen, ist es wichtig zu definieren wie sich die Relevanz für das spezifische Einsatzgebiet ergibt und welcher Informationsbedarf besteht. Ohne das der konkrete Informationsbedarf festgelegt ist ließe sich das Insekten-IRS kaum evaluieren. Aus dem Informationsbedarf lässt sich die Relevanz der Ergebnisse die das IRS erzielt, ableiten.
+
+    ImageCLEF - a continuing track of the Cross Language Evaluation Forum that evaluates systems using both textual and pure-image retrieval methods.
+    Content-based Access of Image and Video Libraries - a series of IEEE workshops from 1998 to 2001.
+
+ - http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.211.7111&rep=rep1&type=pdf
+ - https://link.springer.com/content/pdf/10.1007%2F3-540-48762-X_65.pdf
+ - https://pdfs.semanticscholar.org/0754/3d661cc0abef2e5ffa9ad2031c6131c5a740.pdf

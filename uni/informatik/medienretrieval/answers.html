@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-02-23 Sun 18:07 -->
+<!-- 2020-02-26 Wed 16:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -204,8 +204,8 @@ body {
   line-height: 1.618;
   max-width: 60%;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
+  color: #c9c9c9;
+  background-color: #222222;
   padding: 13px; }
 
 @media (max-width: 684px) {
@@ -252,14 +252,14 @@ small, sub, sup {
   font-size: 75%; }
 
 hr {
-  border-color: #2c8898; }
+  border-color: #ffffff; }
 
 a {
   text-decoration: none;
-  color: #2c8898; }
+  color: #ffffff; }
   a:hover {
-    color: #982c61;
-    border-bottom: 2px solid #4a4a4a; }
+    color: #c9c9c9;
+    border-bottom: 2px solid #c9c9c9; }
 
 ul {
   padding-left: 1.4em; }
@@ -271,14 +271,14 @@ blockquote {
   font-style: italic;
   margin-left: 1.5em;
   padding-left: 1em;
-  border-left: 3px solid #2c8898; }
+  border-left: 3px solid #ffffff; }
 
 img {
   max-width: 100%; }
 
 /* Pre and Code */
 pre {
-  background-color: #f1f1f1;
+  background-color: #4a4a4a;
   display: block;
   padding: 1em;
   overflow-x: auto; }
@@ -286,7 +286,7 @@ pre {
 code {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
+  background-color: #4a4a4a;
   white-space: pre-wrap; }
 
 pre > code {
@@ -302,13 +302,13 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1; }
+  border-bottom: 1px solid #4a4a4a; }
 
 /* Buttons, forms and input */
 input, textarea {
-  border: 1px solid #4a4a4a; }
+  border: 1px solid #c9c9c9; }
   input:focus, textarea:focus {
-    border: 1px solid #2c8898; }
+    border: 1px solid #ffffff; }
 
 textarea {
   width: 100%; }
@@ -319,43 +319,43 @@ textarea {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #2c8898;
-  color: #f9f9f9;
+  background-color: #ffffff;
+  color: #222222;
   border-radius: 1px;
-  border: 1px solid #2c8898;
+  border: 1px solid #ffffff;
   cursor: pointer;
   box-sizing: border-box; }
   .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
     cursor: default;
     opacity: .5; }
   .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
-    background-color: #982c61;
-    border-color: #982c61;
-    color: #f9f9f9;
+    background-color: #c9c9c9;
+    border-color: #c9c9c9;
+    color: #222222;
     outline: 0; }
 
 textarea, select, input[type] {
-  color: #4a4a4a;
+  color: #c9c9c9;
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  background-color: #4a4a4a;
+  border: 1px solid #4a4a4a;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
   textarea:focus, select:focus, input[type]:focus {
-    border: 1px solid #2c8898;
+    border: 1px solid #ffffff;
     outline: 0; }
 
 input[type='checkbox']:focus {
-  outline: 1px dotted #2c8898; }
+  outline: 1px dotted #ffffff; }
 
 label, legend, fieldset {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }
-   </style>
+</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -431,19 +431,19 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org668cf00">1. Beschreiben Sie IDF und TF</a></li>
-<li><a href="#org1e34b53">2. Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</a></li>
-<li><a href="#org327a81d">3. Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</a></li>
-<li><a href="#org7fafb35">4. Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</a></li>
-<li><a href="#org521a74d">5. Welche Hauptmethoden der Stammformreduktion gibt es?</a></li>
-<li><a href="#orgad5425b">6. Erklären Sie die Maße Recall und Precision.</a></li>
-<li><a href="#org286f30c">7. Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</a></li>
-<li><a href="#org427fc5b">8. Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</a></li>
+<li><a href="#orgdd264e2">1. <span class="done DONE">DONE</span> Beschreiben Sie IDF und TF</a></li>
+<li><a href="#org65c1999">2. <span class="done DONE">DONE</span> Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</a></li>
+<li><a href="#org2b4dca8">3. <span class="done DONE">DONE</span> Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</a></li>
+<li><a href="#org63770ae">4. <span class="done DONE">DONE</span> Welche Hauptmethoden der Stammformreduktion gibt es?</a></li>
+<li><a href="#org58638cc">5. <span class="done DONE">DONE</span> Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</a></li>
+<li><a href="#org0ede74b">6. <span class="done DONE">DONE</span> Erklären Sie die Maße Recall und Precision.</a></li>
+<li><a href="#org4da17f7">7. <span class="done DONE">DONE</span> Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</a></li>
+<li><a href="#org1cfd691">8. <span class="todo TODO">TODO</span> Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org668cf00" class="outline-2">
-<h2 id="org668cf00"><span class="section-number-2">1</span> Beschreiben Sie IDF und TF</h2>
+<div id="outline-container-orgdd264e2" class="outline-2">
+<h2 id="orgdd264e2"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> Beschreiben Sie IDF und TF</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Side note: In <b>jeder</b> Altklausur besteht die erste Aufgabe aus der Beschreibung von IDF. In einigen Klausuren wird zusätzlich noch die Beschreibung von TF verlangt</li>
@@ -502,8 +502,8 @@ Die inverse Dokumentfrequenz <code>idf(t)</code>  eines Terms <code>t</code> hä
 </p>
 </div>
 </div>
-<div id="outline-container-org1e34b53" class="outline-2">
-<h2 id="org1e34b53"><span class="section-number-2">2</span> Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</h2>
+<div id="outline-container-org65c1999" class="outline-2">
+<h2 id="org65c1999"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> Erläutern Sie das Zipf&rsquo;sche Gesetz, die Luhn&rsquo;sche Termgewichtung und ihre praktische Bedeutung</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Side note: Diese Aufgabe ist nur in 2 Altklausren.</li>
@@ -522,69 +522,264 @@ Die inverse Dokumentfrequenz <code>idf(t)</code>  eines Terms <code>t</code> hä
 <b>Luhn&rsquo;sche Termgewichtung</b>:
 </p>
 <ul class="org-ul">
-<li>Token (Einzelne Wörter) werden statistisch nach Häufigkeit untersucht. Hochfrequenz Wörter bspw. the, of, to dabei abgeschnitten. Auf der anderen Seite kann man auch Wörter mit einer niedrigeren Frequenz abschneiden, aber dadurch besteht die Gefahr insbesondere sehr spezielle Terme zu vernachlässigen. Wird daher nicht of gemacht.
-<ul class="org-ul">
-<li><a href="https://books.google.de/books?id=PT5rAQAAQBAJ&amp;pg=PA9&amp;lpg=PA9&amp;dq=termgewichtung+luhn&amp;source=bl&amp;ots=eXuDDWufK_&amp;sig=ACfU3U2EqvtACC_XzgiFpbRcn7nGedV1Ug&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjIqqCIiOjnAhVS2qQKHf_lC14Q6AEwBHoECAwQAQ#v=onepage&amp;q=termgewichtung%20luhn&amp;f=false">https://books.google.de/books?id=PT5rAQAAQBAJ&amp;pg=PA9&amp;lpg=PA9&amp;dq=termgewichtung+luhn&amp;source=bl&amp;ots=eXuDDWufK_&amp;sig=ACfU3U2EqvtACC_XzgiFpbRcn7nGedV1Ug&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjIqqCIiOjnAhVS2qQKHf_lC14Q6AEwBHoECAwQAQ#v=onepage&amp;q=termgewichtung%20luhn&amp;f=false</a></li>
-</ul></li>
+<li>Token (Einzelne Wörter) werden statistisch nach Häufigkeit untersucht. Hochfrequenz Wörter bspw. the, of, to dabei abgeschnitten. Auf der anderen Seite kann man auch Wörter mit einer niedrigeren Frequenz abschneiden, aber dadurch besteht die Gefahr insbesondere sehr spezielle Terme zu vernachlässigen. Wird daher nicht of gemacht.</li>
+<li>Terme in einem Dokument haben einen unterschiedlichen Stellenwert, für die meisten IR-Modelle gilt es daher einen quantitativen Ausdruck für die Wichtigkeit eines Term im Kontext eines Dokuments zu finden (=Termgewichtung).</li>
+<li>Laut Luhn (1957) ist die Häufigkeit eines Terms in einem Text ein Maß für seine Relevanz. Jedoch besagt die These von Luhn <i>nicht</i>, dass Termhäufigkeit und Relevanz positiv miteinander korrelieren. Der Ansatz von einfacher Termhäufigkeit weist das Defizit auf, dass er alle Terme als gleichwichtig bei der Relevanzbetrachtung einordnet. Vielmehr wird ein Term, der in allen Dokumenten vorkommt als ein allgemeiner Term angesehen, weil er nicht zur Unterscheidung der Dokumente genutzt werden kann. Daher ist es nötig das Gewicht eines Term der in vielen Dokumenten vorkommt zu reduzieren, hierfür kann die TF-IDF genutzt werden (siehe oben)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org327a81d" class="outline-2">
-<h2 id="org327a81d"><span class="section-number-2">3</span> Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</h2>
+<div id="outline-container-org2b4dca8" class="outline-2">
+<h2 id="org2b4dca8"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> Beschreiben Sie die prinzipiellen Möglichkeiten des CBIR</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Side note: Diese Aufgabe ist in 3 Altklausren.</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org7fafb35" class="outline-2">
-<h2 id="org7fafb35"><span class="section-number-2">4</span> Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</h2>
-<div class="outline-text-2" id="text-4">
+
+<p>
+Unter Content Based Image Retrieval (CBIR) versteht man eine inhaltsbasierte Bildersuche. Dabei handelt es sich um ein Spezialgebiet der Bildverarbeitung und des Wiederauffindens von Information (Information Retrieval) in großen Datenbeständen. „Inhaltsbasiert“ (content based) bedeutet dabei eine Analyse des aktuellen Inhaltes eines Bildes, also der Farben, Umrisse, Oberflächen (Texturen) oder anderer Informationen (sogenannte Merkmalsvektoren), die über eine automatische Bildverarbeitung ermittelt werden können. Die Aufgabe der Bildersuche ist es, eine Liste vorhandener Bilder so zu sortieren, dass die gesuchten Bilder (etwa anhand eines Referenzbildes) möglichst weit vorne stehen. Bilder werden anhand ihrer Ähnlichkeit zum Referenzbild sortiert, die sich durch eine Distanzfunktion und die Merkmalsvektoren der Bilder bestimmt. Ein Qualitätsmaß beurteilt die Sortierung, die maßgeblich von der Wahl der Merkmalsvektoren und des Ähnlichkeitsmaßes abhängt. Die inhaltsbasierte Bildersuche wird angewandt für Bilderdatenbanken, im Bereich der medizinischen Bildverarbeitung und bei der Suche nach Plagiaten (Near Duplicate Detection).
+Im Bereich der Websuchmaschine, wird je nach Anbieter auch von &ldquo;reverser Bildersuche&rdquo; (reverse image search) oder einer &ldquo;visuellen Suchmaschine&rdquo; (visual search engine) gesprochen.
+</p>
+
+<p>
+Type of Queries in Image Retrieval:
+</p>
 <ul class="org-ul">
-<li>Side note: Diese Aufgabe ist in 3 Altklausren und zwar immer dann, wenn die Frage nach Hauptmethoden der Stammformreduktion nicht auftritt (selbes Thema).</li>
+<li>(query by text) &rarr; <b>*not content based</b> (CBIR)</li>
+<li>Query by example</li>
+<li>Query by sketch</li>
+<li>Query by color</li>
+<li>Query by texture</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org521a74d" class="outline-2">
-<h2 id="org521a74d"><span class="section-number-2">5</span> Welche Hauptmethoden der Stammformreduktion gibt es?</h2>
-<div class="outline-text-2" id="text-5">
+
+<p>
+<b>Query By Example</b> is a query technique that involves providing the CBIR system with an example image that it will then base its search upon. The underlying search algorithms may vary depending on the application, but result images should all share common elements with the provided example. Options for providing example images to the system include:
+</p>
 <ul class="org-ul">
-<li>Side note: Diese Aufgabe ist in 4 Altklausren und zwar immer dann, wenn die Frage nach N-Gram-Stemmern und Affix-Stemmern nicht auftritt (selbes Thema).</li>
-<li>Alternativ: Nennen Sie 3 Arten von Stemmern.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgad5425b" class="outline-2">
-<h2 id="orgad5425b"><span class="section-number-2">6</span> Erklären Sie die Maße Recall und Precision.</h2>
-<div class="outline-text-2" id="text-6">
-<ul class="org-ul">
-<li>Side note: Diese Aufgabe ist nur in 2 Altklausren.</li>
+<li>A preexisting image may be supplied by the user or chosen from a random set.</li>
+<li>The user draws a rough approximation of the image they are looking for, for example with blobs of color or general shapes.</li>
 </ul>
 <p>
-<a href="https://de.qwe.wiki/wiki/Precision_and_recall#Recall">https://de.qwe.wiki/wiki/Precision_and_recall#Recall</a>
+This query technique removes the difficulties that can arise when trying to describe images with words.<br />
+</p>
+
+<p>
+<b>Semantic retrieval</b> starts with a user making a request like &ldquo;find pictures of Abraham Lincoln&rdquo;. This type of open-ended task is very difficult for computers to perform - Lincoln may not always be facing the camera or in the same pose. Many CBIR systems therefore generally make use of lower-level features like texture, color, and shape. These features are either used in combination with interfaces that allow easier input of the criteria or with databases that have already been trained to match features (such as faces, fingerprints, or shape matching). However, in general, image retrieval requires human feedback in order to identify higher-level concepts.
+</p>
+
+<p>
+Other query methods include browsing for example images, navigating customized/hierarchical categories, querying by image region (rather than the entire image), querying by multiple example images, querying by visual sketch, querying by direct specification of image features, and multimodal queries (e.g. combining touch, voice, etc.).
+</p>
+
+<p>
+The most common method for comparing two images in content-based image retrieval (typically an example image and an image from the database) is using an image distance measure. An image distance measure compares the similarity of two images in various dimensions such as color, texture, shape, and others. For example, a distance of 0 signifies an exact match with the query, with respect to the dimensions that were considered. As one may intuitively gather, a value greater than 0 indicates various degrees of similarities between the images. Search results then can be sorted based on their distance to the queried image. Many measures of image distance (Similarity Models) have been developed. Most commonly distance computing measures are based on <b>color</b>, <b>texture</b> or <b>shape</b>.
+</p>
+
+<p>
+<b>Color</b><br />
+Computing distance measures based on color similarity is achieved by computing a color histogram for each image that identifies the proportion of pixels within an image holding specific values. Examining images based on the colors they contain is one of the most widely used techniques because it can be completed without regard to image size or orientation. However, research has also attempted to segment color proportion by region and by spatial relationship among several color regions.
+</p>
+
+<p>
+<b>Texture</b><br />
+Texture measures look for visual patterns in images and how they are spatially defined. Textures are represented by texels which are then placed into a number of sets, depending on how many textures are detected in the image. These sets not only define the texture, but also where in the image the texture is located.<br />
+Texture is a difficult concept to represent. The identification of specific textures in an image is achieved primarily by modeling texture as a two-dimensional gray level variation. The relative brightness of pairs of pixels is computed such that degree of contrast, regularity, coarseness and directionality may be estimated. The problem is in identifying patterns of co-pixel variation and associating them with particular classes of textures such as silky, or rough.<br />
+Other methods of classifying textures include:
+</p>
+<ul class="org-ul">
+<li>Co-occurrence matrix, Laws texture energy, Wavelet transform, Orthogonal transforms (Discrete Tchebichef moments)</li>
+</ul>
+
+<p>
+<b>Shape</b><br />
+Shape does not refer to the shape of an image but to the shape of a particular region that is being sought out. Shapes will often be determined first applying segmentation or edge detection to an image. Other methods use shape filters to identify given shapes of an image. Shape descriptors may also need to be invariant to translation, rotation, and scale. Some shape descriptors include:
+</p>
+<ul class="org-ul">
+<li>Fourier transform</li>
+<li>Moment invariant</li>
+</ul>
+
+
+<p>
+Measures of image retrieval can be defined in terms of precision and recall. However, there are other methods being considered.<br />
+An image is retrieved in CBIR system by adopting several techniques simultaneously such as Integrating Pixel Cluster Indexing, histogram intersection and discrete wavelet transform methods.<br />
+Machine learning and application of iterative techniques are becoming more common in CBIR.
 </p>
 </div>
 </div>
-<div id="outline-container-org286f30c" class="outline-2">
-<h2 id="org286f30c"><span class="section-number-2">7</span> Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</h2>
-<div class="outline-text-2" id="text-7">
+
+<div id="outline-container-org63770ae" class="outline-2">
+<h2 id="org63770ae"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> Welche Hauptmethoden der Stammformreduktion gibt es?</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
-<li>Side note: Diese Aufgabe ist in 3 Altklausren.</li>
+<li>Side note: Diese Aufgabe ist in 4 Altklausuren und zwar immer dann, wenn die Frage nach N-Gram-Stemmern und Affix-Stemmern nicht auftritt (selbes Thema).</li>
+<li>Alternativ: Nennen Sie 3 Arten von Stemmern.</li>
+</ul>
+
+<p>
+Es gibt prinzipiell 3 Arten von Stemmern (Stammformreduktion):
+</p>
+<ul class="org-ul">
+<li>dictionary-based stemmers</li>
+<li>n-gram stemmers</li>
+<li>affix stemmers</li>
+</ul>
+<p>
+N-Gram-Stemmer und Affix-Stemmer zählen zur Kategorie der algorithmischen Stemmer.<br />
+Affix Stemmer beziehen sich wie der Name schon sagt grundsätzlich auf sogenannte Affixe. Zu Affixen zählen Prefixe (<i>un/happy), Infixe (ein/ge/schoben) und Suffixe (fit/ted</i>).
+Klassische Affix-Stemmer sind zB der Porter Stemmer, der Snowball Stemmer und Krovetz (Kstem). Der Porter Stemmer arbeitet beispielsweise mit Vokal-Konsonant-Folgen um Suffixe zu entfernen.<br />
+Ein dictionary-based stemmer (zB Hunspell) definiert einen sogennanten dictionary mit dessen Hilfe sich Wortvariationen auf die jeweiligen Stämme reduzieren lassen. Dafür legt er mehrere &ldquo;Regeln&rdquo; fest.<br />
+Ein N-Gramm ist das Ergebnis einer Wortzerlegung in einzelne, jeweils zu N-aufeinanderfolgende Fragmente zusammengefasst. Ein 2-gram stemmer bezieht sich auf sogenannte Bigramme also Fragmente die aus zwei Zeichen bestehen, ein 3-gram stemmer hingegen auf Trigramme undsoweiter. Um somit die Ähnlichkeit von bestimmten Termen zu bestimmen werden die Worte beispielsweise in ihre Trigramme zerlegt und anschließend wird die Distanz zwischen den Worten über ihre Fragemente berechnet.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org58638cc" class="outline-2">
+<h2 id="org58638cc"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> Erläutern Sie den Unterschied zwischen N-Gram-Stemmern und Affix-Stemmern.</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 3 Altklausren und zwar immer dann, wenn die Frage nach Hauptmethoden der Stammformreduktion nicht auftritt (selbes Thema).</li>
+</ul>
+<p>
+Zur Beantwortung dieser Frage, siehe vorherige Frage.
+</p>
+</div>
+</div>
+<div id="outline-container-org0ede74b" class="outline-2">
+<h2 id="org0ede74b"><span class="section-number-2">6</span> <span class="done DONE">DONE</span> Erklären Sie die Maße Recall und Precision.</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist nur in 2 Altklausuren.</li>
+</ul>
+
+<p>
+Recall (Trefferquote) und Precision (Genauigkeit, Präzision) sind Maße zur Evaluierung Information Retrieval Systemen. Es geht hier primär darum die Relevanz von gefundenen Informationen/Dokumenten zu beurteilen. Die Trefferquote gibt den Anteil der bei einer Suche gefundenen relevanten Dokumente und damit die Vollständigkeit eines Suchergebnisses an. Die Genauigkeit beschreibt mit dem Anteil relevanter Dokumente an der Ergebnismenge die Genauigkeit eines Suchergebnisses. Der (weniger gebräuchliche) Ausfall bezeichnet den Anteil gefundener irrelevanter Dokumente an der Gesamtmenge aller irrelevanten Dokumente, er gibt also in negativer Weise an, wie gut irrelevante Dokumente im Suchergebnis vermieden werden.<br />
+Statt als Maß können Recall und Precision und Fallout auch als Wahrscheinlichkeit interpretiert werden:
+</p>
+<ul class="org-ul">
+<li>Recall/Trefferquote ist die Wahrscheinlichkeit, mit der ein relevantes Dokument gefunden wird (Sensitivität)</li>
+<li>Precision/Genauigkeit ist die Wahrscheinlichkeit, mit der ein gefundenes Dokument relevant ist (Positiver Vorhersagewert)</li>
+<li>Ausfall ist die Wahrscheinlichkeit, mit der ein irrelevantes Dokument gefunden wird (Falsch-positiv-Rate).</li>
+</ul>
+<p>
+Eine gute Recherche sollte möglichst alle relevanten Dokumente finden (richtig positiv) und die nicht relevanten Dokumente nicht finden (richtig negativ). Wie oben beschrieben, hängen die verschiedenen Maße jedoch voneinander ab. Im Allgemeinen sinkt mit steigender Trefferrate die Genauigkeit (mehr irrelevante Ergebnisse). Umgekehrt sinkt mit steigender Genauigkeit (weniger irrelevante Ergebnisse) die Trefferrate (mehr relevante Dokumente, die nicht gefunden werden). Je nach Anwendungsfall sind die unterschiedlichen Maße zur Beurteilung mehr oder weniger relevant.
+</p>
+
+<p>
+<b>Beispiel</b><br />
+In einer Datenbank mit 36 Dokumenten sind zu einer Suchanfrage 20 Dokumente relevant und 16 nicht relevant. Eine Suche liefert 12 Dokumente, von denen tatsächlich 8 relevant sind.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Relevant</th>
+<th scope="col" class="org-left">Nicht-relevant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Gefunden</td>
+<td class="org-left"><span style='background-color:lightgreen'>8</td>
+<td class="org-left"><span style='background-color:tomato'>4</td>
+</tr>
+
+<tr>
+<td class="org-left">Nicht gefunden</td>
+<td class="org-left">12</td>
+<td class="org-left"><span style='background-color:gold'>8</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Recall und Precision für die konkrete Suche ergeben sich aus den Werten der Konfusionsmatrix:
+</p>
+<ul class="org-ul">
+<li>Recall(Trefferquote) = \(\frac{8}{8+12} =  \frac{8}{20} = \frac{2}{5} = 0.4\)</li>
+<li>Precision(Genauigkeit) = \(\frac{8}{8+4} =  \frac{8}{12} = \frac{2}{3} = 0.67\)</li>
+<li>Fallout (Abfallquote) = \(\frac{4}{4+12} =  \frac{4}{16} = \frac{1}{4} = 0.25\)</li>
+</ul>
+
+<p>
+Ein Problem bei der Berechnung der Trefferquote ist die Tatsache, dass man nur selten weiß, wie viele relevante Dokumente insgesamt existieren und nicht gefunden wurden (Problem der unvollständigen Wahrheitsmatrix). Bei größeren Datenbanken, bei denen die Berechnung der absoluten Trefferquote besonders schwierig ist, wird deswegen mit der relativen Trefferquote gearbeitet. Dabei wird die gleiche Suche mit mehreren Suchmaschinen durchgeführt, und die jeweils neuen relevanten Treffer werden zu den nicht gefundenen relevanten Dokumenten addiert. Mit der Rückfangmethode kann abgeschätzt werden, wie viele relevante Dokumente insgesamt existieren.
+</p>
+
+<p>
+Problematisch ist auch, dass zur Bestimmung von Trefferquote und Genauigkeit die Relevanz eines Dokumentes als Wahrheitswert (ja/nein) bekannt sein muss. In der Praxis ist jedoch oft die Subjektive Relevanz von Bedeutung. Auch für in einer Rangordnung angeordnete Treffermengen ist die Angabe von Trefferquote und Genauigkeit oft nicht ausreichend, da es nicht nur darauf ankommt, ob ein relevantes Dokument gefunden wird, sondern auch, ob es im Vergleich zu nicht relevanten Dokumenten genügend hoch in der Rangfolge eingeordnet wird. Bei sehr unterschiedlich großen Treffermengen kann die Angabe durchschnittlicher Werte für Trefferquote und Genauigkeit irreführend sein.
+</p>
+
+<ul class="org-ul">
+<li>do not work independantly
+<ul class="org-ul">
+<li>recall increases with amout of retrieved documents</li>
+<li>increasing recall -&gt; decreasing precision</li>
+</ul></li>
+<li>importance depends on context
+<ul class="org-ul">
+<li>expert systems, file search: Recall optimized</li>
+<li>web: precision-optimized</li>
+</ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org427fc5b" class="outline-2">
-<h2 id="org427fc5b"><span class="section-number-2">8</span> Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</h2>
+
+<div id="outline-container-org4da17f7" class="outline-2">
+<h2 id="org4da17f7"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> Beschreiben Sie Vorteile und Funktionsweise des twin-comparison-Verfahrens.</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Side note: Diese Aufgabe ist in 3 Altklausuren.</li>
+<li>The twin-comparison algorithm uses the difference between consecutive frames to detect a cut, and the accumulated difference over a sequence of frames to detect gradual transitions</li>
+<li><a href="http://www.cad.zju.edu.cn/home/zhx/DAM/2013/lib/exe/fetch.php?media=pdf:dam2013-15.pdf">http://www.cad.zju.edu.cn/home/zhx/DAM/2013/lib/exe/fetch.php?media=pdf:dam2013-15.pdf</a></li>
+<li><a href="http://www.cse.unsw.edu.au/~cs9519/lecture_notes_08/L11_COMP9519.pdf">http://www.cse.unsw.edu.au/~cs9519/lecture_notes_08/L11_COMP9519.pdf</a></li>
+</ul>
+
+<p>
+Bei der Videoklassifikation ist das Ziel einzelne Szenen aufgrund ihrer Inhalte in bestimmte Kategorien zu unterteilen. Zusammenfassend setzt sich die Videoklassifikation aus mehreren Schritten zusammen. Ausgehend von einem Video wird zunächst eine zeitliche Segmentierung vorgenommen, um anschließend aus einzelnen Sequenzen audiovisuelle Merkmale zu extrahieren. Anhand dieser Informationen und geeigneter Klassifikationsmodelle erfolgt eine Klassifikation von Shots, die abschließend zu Szenen gruppiert werden. Bei der zeitlichen Segmentierung wird ein Video wird in mehrere Shots unterteilt, wobei eine solche Sequenz aus mehrere aufeinander folgende Frames aus einer Kameraperspektive besteht. Es wird angenommen, dass innerhalb dieser Shots wenige inhaltliche Veränderungen
+auftreten, wodurch die Beschreibung erleichtert wird. Abhängig von der semantischen Bedeutung bilden mehrere <i>benachbarte Shots</i> eine Szene. Um die benötigten Shots zu bestimmen, gilt es die Grenzen zwischen den einzelnen Sequenzen zu detektieren, wobei verschiedene Arten von Übergängen auftreten können. Basierend auf den Eigenschaften der einzelnen Übergangseffekte existiert bereits eine Vielzahl
+an Algorithmen zur Detektion von Shots, wobei entweder pixel-, regionen- oder bewegungsbasierte Informationen herangezogen werden. Ein weit verbreiteter Ansatz zur <b>zeitlichen Segmentierung</b> ist <i>Twin Comparison</i>.<br />
+Im Allgemeinen wird bei der Twin-Comparison-Methode zwischen der Detektion von abrupten Schnitten und fortlaufenden Übergängen (Ein-, Aus- und Überblendung) unterschieden. Während Schnitte aufgrund bedeutender inhaltlicher Veränderungen zwischen zwei Frames einfach zu detektieren sind, treten bei fortlaufenden Übergängen über mehrere Frames nur geringe Änderungen auf, wodurch eine Detektion erschwert wird. Die Detektion der verschiedenen Übergänge erfolgt durch die Analyse von benachbarten Frames und deren Differenzen. Für diese Auswertung können sowohl einzelne Pixel, beschränkte Regionen oder globale Histogramme herangezogen werden, wobei histogrammbasierte Methoden aufgrund des guten Kompromisses zwischen Berechnungsaufwand und Genauigkeit am häufigsten verwendet werden.<br />
+Ausgehend von einzelnen Frames wird zunächst für jedes Bild ein Histogramm gebildet, indem die Intensitätswerte der Farbkanäle einer Quantisierung unterzogen werden. Anschließend gilt es, die Differenz von benachbarten Frames zu berechnen. Je größer die Histogramm-Differenz von benachbarten Frames ausfällt, desto größer ist die inhaltliche Veränderung. Basierend auf den Eigenschaften von <b>abrupten Schnitten</b> und der Annahme, dass zwei verschiedene Shots unterschiedlichen Inhalt aufweisen, wird ein Schnitt detektiert, sobald die Differenz einen Schwellwert \(T_h\) übersteigt.<br />
+Fortlaufende Übergänge können auf ähnliche Weise bestimmt werden. Aufgrund der Überlagerung von zwei benachbarten Shots fällt der inhaltliche Unterschied während des Überganges geringer aus als im Falle eines direkten Schnitts. Jedoch ist die Histogramm-Differenz von Framepaaren innerhalb eines Shots am geringsten. Deshalb wird ein zweiter Schwellwert \(T_l\) eingeführt, mit dessen Hilfe Fades, Dissolves und Wipes detektiert werden können. Übersteigt die Differenz von benachbarten Frames den Schwellwert \(T_l\) , so handelt es sich dabei um den möglichen Beginn eines fortlaufenden Überganges. Anschließend werden die Differenzen von nachfolgenden Framepaaren betrachtet, bis \(T_l\) unterschritten wird und das Ende des Übergangseffekts eintritt. Die einzelnen Differenzwerte innerhalb dieses Bereichs werden aufsummiert. Überschreitet die Summe den Schwellwert zur Schnitterkennung \(T_h\), so wird angenommen, dass es sich dabei tatsächlich um einen fortlaufenden Übergang handelt.<br />
+Diese Methode zur Detektion von Shot-Grenzen wird aufgrund der beiden eingesetzten Schwellwerte als Twin Comparison bezeichnet und ist in der Lage sowohl Schnitte als auch spezielle Übergangseffekte zu detektieren (Einblendung, Ausblendung, Abrupter Schnitt, Dissolve, Wipe, Fade)
+</p>
+</div>
+</div>
+<div id="outline-container-org1cfd691" class="outline-2">
+<h2 id="org1cfd691"><span class="section-number-2">8</span> <span class="todo TODO">TODO</span> Es existiert ein Retrievalsystem für Insektenbilder. Sie sollen eine Evaluation durchführen. Beschreiben Sie ihre Vorgehensweise.</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>Side note: Diese Aufgabe ist in <b>jeder</b> Altklausur und sie bringt immer die meisten Punkte</li>
+<li><a href="https://nlp.stanford.edu/IR-book/pdf/08eval.pdf">https://nlp.stanford.edu/IR-book/pdf/08eval.pdf</a></li>
+</ul>
+
+<p>
+Zunächst einmal gilt es herauszufinden in welchem Kontext das Retrievalsystem benutzt wird bzw. was das konkrete Einsatzgebiet ist. Grundsätzlich lässt sich ein Retrievalsystem mit Hilfe von den Maßen Recall und Precicision evaluieren. Doch da diese Maße prinzipiell gegeneinander verlaufen, ist es wichtig zu definieren wie sich die Relevanz für das spezifische Einsatzgebiet ergibt und welcher Informationsbedarf besteht. Ohne das der konkrete Informationsbedarf festgelegt ist ließe sich das Insekten-IRS kaum evaluieren. Aus dem Informationsbedarf lässt sich die Relevanz der Ergebnisse die das IRS erzielt, ableiten.
+</p>
+
+<p>
+ImageCLEF - a continuing track of the Cross Language Evaluation Forum that evaluates systems using both textual and pure-image retrieval methods.
+Content-based Access of Image and Video Libraries - a series of IEEE workshops from 1998 to 2001.
+</p>
+
+<ul class="org-ul">
+<li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.211.7111&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.211.7111&amp;rep=rep1&amp;type=pdf</a></li>
+<li><a href="https://link.springer.com/content/pdf/10.1007%2F3-540-48762-X_65.pdf">https://link.springer.com/content/pdf/10.1007%2F3-540-48762-X_65.pdf</a></li>
+<li><a href="https://pdfs.semanticscholar.org/0754/3d661cc0abef2e5ffa9ad2031c6131c5a740.pdf">https://pdfs.semanticscholar.org/0754/3d661cc0abef2e5ffa9ad2031c6131c5a740.pdf</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: John Doe</p>
-<p class="date">Created: 2020-02-23 Sun 18:07</p>
+<p class="date">Created: 2020-02-26 Wed 16:53</p>
 </div>
 </body>
 </html>
