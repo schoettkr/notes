@@ -268,6 +268,9 @@ Use the =transmission-gui=
 ** Database GUI
 - SQL: Dbeaver
 
+** Image Viewer
+~yay -S sxiv~
+
 
 * Homefolder structure
 Create the following folder structure in the home directory:
