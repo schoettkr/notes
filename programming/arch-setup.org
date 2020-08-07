@@ -509,7 +509,7 @@ Since =.zshenv= is always sourced, it often contains exported variables that sho
 =.zprofile= is basically the same as .zlogin except that it's sourced directly before .zshrc is sourced instead of directly after it. According to the zsh documentation, ".zprofile is meant as an alternative to `.zlogin' for ksh fans; the two are not intended to be used together, although this could certainly be done if desired."
 
 =.zlogout= is sometimes used to clear and reset the terminal.
-** Ingoring aliases
+** Ignoring aliases
 To execute a command that is shadowed by an alias prefix it with an backslash, e.g `\vim`
 ** SSH
 Check for existing ssh keys:
