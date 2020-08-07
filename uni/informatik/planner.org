@@ -127,7 +127,7 @@ At 5 EVS + 5 SVS + 5 XML + 5 DB Grundlagen + 3 Medientools + 5 Medienretrieval +
 33
 
 SoSe 20:
-- WV: DB & Webtechniken, Betriebsysteme -> 43 LP
+- WV: ( DB & Webtechniken ) -> Medienapplikationen, Betriebsysteme -> 43 LP
 - Info 2, Datenstrukturen
 
 Missing: Forschungsseminar Informatik, Proseminar Informatik, Masterarbeit
