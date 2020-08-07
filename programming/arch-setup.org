@@ -68,7 +68,7 @@ makepkg -si
 * Packages
 ** Essential packages
 #+BEGIN_SRC bash
-yay -S polybar termite feh google-chrome chromium redshift zsh-autosuggestions neovim rofi
+yay -S polybar termite feh google-chrome chromium redshift zsh-autosuggestions neovim rofi bat exa nemo nemo-fileroller nemo-terminal
 #+END_SRC
 Tip: Use DuckDuckGoog as chrome search engine
 ** Setup (neo)vim
