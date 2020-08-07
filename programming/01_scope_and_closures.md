@@ -19,6 +19,11 @@
 - happens in the first step of compilation
 - lexical scope is scope that is defined at lexing time ==> based on where variables and blocks of scope are authored(written) at write time and thus set in stone (few exceptions) by the time the lexer proccesses(finishes?) the code 
 - scope look-up starts at the innermost scope and works it way up/outward and stops once it finds a match
+- this allows closure: a function /defined/ inside another functions will always
+  have access to the scope it was defined in, even when called from outside
+  - this is called lexical (or static) scoping vs for example dynamic scoping where a
+    function would only have access to the execution context where it was /run/
+    or got executed in
 
 ### Function Scope (vs Block Scope)
 - JS has function-based scope ==> each declaration of a function creates a level of scope
