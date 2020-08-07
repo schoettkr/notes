@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-04-18 Sat 15:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="John Doe" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type='text/css'>
+html {
+  font-size: 62.5%;
+  font-family: serif; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 60%;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
+
+@media (max-width: 684px) {
+  body {
+    max-width: 98%;
+    font-size: 1.53rem; } }
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
+hr {
+  border-color: #2c8898; }
+
+a {
+  text-decoration: none;
+  color: #2c8898; }
+  a:hover {
+    color: #982c61;
+    border-bottom: 2px solid #4a4a4a; }
+
+ul {
+  padding-left: 1.4em; }
+
+li {
+  margin-bottom: 0.4em; }
+
+blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2c8898; }
+
+img {
+  max-width: 100%; }
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a; }
+  input:focus, textarea:focus {
+    border: 1px solid #2c8898; }
+
+textarea {
+  width: 100%; }
+
+.button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #2c8898;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #2c8898;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
+    cursor: default;
+    opacity: .5; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
+    background-color: #982c61;
+    border-color: #982c61;
+    color: #f9f9f9;
+    outline: 0; }
+
+textarea, select, input[type] {
+  color: #4a4a4a;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #2c8898;
+    outline: 0; }
+
+input[type='checkbox']:focus {
+  outline: 1px dotted #2c8898; }
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+   </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgbb85eb6">Vorlesung</a>
+<ul>
+<li><a href="#orgcc02c8a">Sequentielle Suche</a>
+<ul>
+<li><a href="#org9c73adf">Java</a></li>
+<li><a href="#org090f103">Python</a></li>
+</ul>
+</li>
+<li><a href="#org0fd71a4">Binäre Suche</a>
+<ul>
+<li><a href="#org8b22b50">Java</a></li>
+<li><a href="#org703ea1b">Python</a></li>
+</ul>
+</li>
+<li><a href="#orga133e38">Bubble Sort</a>
+<ul>
+<li><a href="#orge8a244f">Java</a></li>
+<li><a href="#org452d4b6">Python</a></li>
+</ul>
+</li>
+<li><a href="#orge7f711c">Selection Sort</a>
+<ul>
+<li><a href="#org85c7fe5">Java</a></li>
+<li><a href="#orgb4a2818">Python</a></li>
+</ul>
+</li>
+<li><a href="#org50e12f5">Insertion Sort</a>
+<ul>
+<li><a href="#orgb8ebd91">Java</a></li>
+<li><a href="#orgb616e20">Python</a></li>
+</ul>
+</li>
+<li><a href="#org5b2b70d">Merge Sort</a>
+<ul>
+<li><a href="#orga3472eb">Java</a></li>
+<li><a href="#org17f38d5">Python</a></li>
+</ul>
+</li>
+<li><a href="#orga73e57d">QuickSort</a>
+<ul>
+<li><a href="#org5698be4">Java</a></li>
+<li><a href="#org144c88d">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7801ad0">Übung</a>
+<ul>
+<li><a href="#org9004915">1.) Ordnen Sie folgende Funktionen entsprechend ihrer Komplexität (beginnend mit der geringsten Komplexität). Geben Sie die Komplexitätsklasse in O-Notation an</a></li>
+<li><a href="#orga6f16d6">2.) Ausgabe in umgekehrter Reihenfolge</a>
+<ul>
+<li><a href="#org8ef0d01">2.a) Schreiben Sie eine Funktion, die Ihnen das Wort „Datenstrukturen“ in umgekehrter Reihenfolge ausgibt („nerutkurtsnetaD“)</a></li>
+<li><a href="#orgfa6a417">2.b) Schreiben Sie eine Funktion, die Ihnen ein Array „Früchte“ (Banane, Apfel, Erdbeere, Orange) in umgekehrter Reihenfolge ausgibt (Orange, Erdbeere, Apfel, Banane)</a></li>
+</ul>
+</li>
+<li><a href="#orgfb76875">3.) Finden Sie die sich wiederholende Zahl! Gegeben sei ein Integer Feld der Dimension N+1. Jeder Integer liegt zwischen 1 und n(inklusive).</a>
+<ul>
+<li><a href="#orgd0abc0c">3.a) Gibt es Zahlen die sich wiederholen? Wenn ja, wieso?</a></li>
+<li><a href="#org8005274">3.b) Finden Sie die sich doppelnde Zahl.</a></li>
+</ul>
+</li>
+<li><a href="#orgcb36e26">4.) Gegeben ist ein Array (3,7,5,10,6,2,8).</a>
+<ul>
+<li><a href="#orgdf45aff">4.a) Schreiben Sie eine Funktion, die das Array sortiert. Nutzen Sie hierfür das „Insertion Sort“ Verfahren.</a></li>
+<li><a href="#org07954ea">4.b) Welche weiteren Sortierverfahren kennen Sie? Welche Komplexitätsklassen weisen diese Verfahren auf?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb85eb6" class="outline-2">
+<h2 id="orgbb85eb6">Vorlesung</h2>
+<div class="outline-text-2" id="text-orgbb85eb6">
+</div>
+<div id="outline-container-orgcc02c8a" class="outline-3">
+<h3 id="orgcc02c8a">Sequentielle Suche</h3>
+<div class="outline-text-3" id="text-orgcc02c8a">
+</div>
+<div id="outline-container-org9c73adf" class="outline-4">
+<h4 id="org9c73adf">Java</h4>
+<div class="outline-text-4" id="text-org9c73adf">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">sequentialSearch</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">nums</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">toFind</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; nums.<span style="color: #ECBE7B;">length</span>; i++) {
+        <span style="color: #51afef;">if</span> (nums[i] == toFind) {
+            <span style="color: #51afef;">return</span> i;
+        }
+    }
+    <span style="color: #51afef;">return</span> -<span style="color: #da8548;">1</span>;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">numberToSearch</span> = <span style="color: #da8548;">16</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">expectedResultIndex</span> = <span style="color: #da8548;">23</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">index of where 16 is in unsortedArr</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">result</span> = sequentialSearch(unsortedArr, <span style="color: #da8548;">16</span>);
+
+    <span style="color: #51afef;">if</span> (result == expectedResultIndex) {
+        System.out.println(<span style="color: #98be65;">"Correct result, function works"</span>);
+    } <span style="color: #51afef;">else</span> {
+        System.out.println(<span style="color: #98be65;">"Wrong. Did not get the expected result"</span>);
+    }
+    System.out.println(<span style="color: #98be65;">"Expected: "</span> + expectedResultIndex);
+    System.out.println(<span style="color: #98be65;">"Result: "</span> + result);
+
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org090f103" class="outline-4">
+<h4 id="org090f103">Python</h4>
+</div>
+</div>
+<div id="outline-container-org0fd71a4" class="outline-3">
+<h3 id="org0fd71a4">Binäre Suche</h3>
+<div class="outline-text-3" id="text-org0fd71a4">
+<p>
+Die Bedingung <code>while (low &lt;= high)</code> fuer die Schleife ist passend, weil das Array
+immer weiter &ldquo;halbiert&rdquo; wird (indem die zulaessigen indices low und high veraendert werden -&gt; Grenzen),
+was zwangsweise dazu führt das irgendwann nur noch ein Element in dem Array ist.
+In diesem Fall ist der index low zb = 4 und der index high ebenfalls = 4, so dass das eine Element
+an Indexstelle 4 mit dem gesuchten Element verglichen wird, da immer am Mittelpunkt des zulaessigen Arrays
+verglichen wird also (4+4)/2 = 4. Ist dies nicht das gesuchte Element wird je nachdem ob das dort gefundene
+Element groesser oder kleiner ist, als das gesuchte Element, die <code>low</code> grenze auf <code>mid+1</code> oder die <code>high</code> grenze
+auf <code>mid-1</code> gesetzt, was dann der condition <code>while (low &lt;= high)</code> widerspricht.
+<a href="imgs/01_01.jpg">binary search</a>
+</p>
+</div>
+<div id="outline-container-org8b22b50" class="outline-4">
+<h4 id="org8b22b50">Java</h4>
+<div class="outline-text-4" id="text-org8b22b50">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">binarySearch</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">nums</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">toFind</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">low</span> = <span style="color: #da8548;">0</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">high</span> = nums.length - <span style="color: #da8548;">1</span>;
+
+    <span style="color: #51afef;">while</span> (low &lt; <span style="color: #ECBE7B;">high</span>) {
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">currentMiddle</span> = (low + high) / <span style="color: #da8548;">2</span>;
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">num</span> = nums[currentMiddle];
+        <span style="color: #51afef;">if</span> (num == toFind) {
+            <span style="color: #51afef;">return</span> currentMiddle;
+        } <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> (toFind &lt; <span style="color: #ECBE7B;">num</span>) {
+            high = currentMiddle - <span style="color: #da8548;">1</span>;
+        } <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> (toFind &gt; num) {
+            low = currentMiddle + <span style="color: #da8548;">1</span>;
+        }
+    }
+
+    <span style="color: #51afef;">return</span> -<span style="color: #da8548;">1</span>;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">numberToSearch</span> = <span style="color: #da8548;">16</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">expectedResultIndex</span> = <span style="color: #da8548;">16</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">index of where 16 is in sortedArr</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">result</span> = binarySearch(sortedArr, <span style="color: #da8548;">16</span>);
+
+    <span style="color: #51afef;">if</span> (result == expectedResultIndex) {
+        System.out.println(<span style="color: #98be65;">"Correct result, function works"</span>);
+    } <span style="color: #51afef;">else</span> {
+        System.out.println(<span style="color: #98be65;">"Wrong. Did not get the expected result"</span>);
+    }
+    System.out.println(<span style="color: #98be65;">"Expected: "</span> + expectedResultIndex);
+    System.out.println(<span style="color: #98be65;">"Result: "</span> + result);
+
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org703ea1b" class="outline-4">
+<h4 id="org703ea1b">Python</h4>
+</div>
+</div>
+<div id="outline-container-orga133e38" class="outline-3">
+<h3 id="orga133e38">Bubble Sort</h3>
+<div class="outline-text-3" id="text-orga133e38">
+</div>
+<div id="outline-container-orge8a244f" class="outline-4">
+<h4 id="orge8a244f">Java</h4>
+<div class="outline-text-4" id="text-orge8a244f">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">bubbleSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">swapped</span> = <span style="color: #a9a1e1;">false</span>;
+    <span style="color: #51afef;">do</span> {
+        swapped = <span style="color: #a9a1e1;">false</span>;
+        <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; arr.<span style="color: #ECBE7B;">length</span> - <span style="color: #da8548;">1</span>; i++) {
+            <span style="color: #51afef;">if</span> (arr[i] &gt; arr[i+<span style="color: #da8548;">1</span>]) {
+                swapped = <span style="color: #a9a1e1;">true</span>;
+                swap(arr, i, i+<span style="color: #da8548;">1</span>);
+            }
+        }
+    } <span style="color: #51afef;">while</span> (swapped);
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">swap</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx1</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx2</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">temp</span> = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    bubbleSort(unsortedArr);
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; unsortedArr.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(unsortedArr[i]);
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org452d4b6" class="outline-4">
+<h4 id="org452d4b6">Python</h4>
+</div>
+</div>
+<div id="outline-container-orge7f711c" class="outline-3">
+<h3 id="orge7f711c">Selection Sort</h3>
+<div class="outline-text-3" id="text-orge7f711c">
+<p>
+Wählt das jeweils kleinste Element im Restarray und packt es an die erste &ldquo;unsortierte&rdquo; Stelle
+See &ldquo;Algorithms, 4th Edition Essential Information about Algorithms and Data Structures by Robert Sedgewick&rdquo;, page 248
+</p>
+</div>
+<div id="outline-container-org85c7fe5" class="outline-4">
+<h4 id="org85c7fe5">Java</h4>
+<div class="outline-text-4" id="text-org85c7fe5">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">selectionSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; arr.<span style="color: #ECBE7B;">length</span>; i++) {
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">smallestUnsortedItem</span> = arr[i];
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">smallestUnsortedIdx</span> = i;
+        <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = i + <span style="color: #da8548;">1</span>; j &lt; arr.<span style="color: #ECBE7B;">length</span>; j++) {
+            <span style="color: #51afef;">if</span> (arr[j] &lt; smallestUnsortedItem) {
+                smallestUnsortedItem = arr[j];
+                smallestUnsortedIdx = j;
+            }
+        }
+        swap(arr, i, smallestUnsortedIdx);
+    }
+
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">swap</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx1</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx2</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">temp</span> = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    selectionSort(unsortedArr);
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; unsortedArr.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(unsortedArr[i]);
+    }
+}
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb4a2818" class="outline-4">
+<h4 id="orgb4a2818">Python</h4>
+</div>
+</div>
+<div id="outline-container-org50e12f5" class="outline-3">
+<h3 id="org50e12f5">Insertion Sort</h3>
+<div class="outline-text-3" id="text-org50e12f5">
+<p>
+Schiebt ein Element aus dem Array in den sortierten Teil direkt an die richtige Stelle von den bisher betrachteten Elementen
+See &ldquo;Introduction to algorithms by Thomas H. Cormen&rdquo;, page 16 and &ldquo;Algorithms, 4th Edition Essential Information about Algorithms and Data Structures by Robert Sedgewick&rdquo;, page 251
+</p>
+</div>
+
+<div id="outline-container-orgb8ebd91" class="outline-4">
+<h4 id="orgb8ebd91">Java</h4>
+<div class="outline-text-4" id="text-orgb8ebd91">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">insertionSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">1</span>; i &lt; arr.<span style="color: #ECBE7B;">length</span>; i++) {
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">current</span> = arr[i];
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = i - <span style="color: #da8548;">1</span>;
+        <span style="color: #51afef;">while</span> (j &gt;= <span style="color: #da8548;">0</span> &amp;&amp; current &lt; <span style="color: #ECBE7B;">arr</span>[j]) {
+            arr[j+<span style="color: #da8548;">1</span>] = arr[j];
+            j--;
+        }
+        arr[j+<span style="color: #da8548;">1</span>] = current;
+    }
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">swap</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx1</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">idx2</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">temp</span> = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    insertionSort(unsortedArr);
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; unsortedArr.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(unsortedArr[i]);
+    }
+}
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb616e20" class="outline-4">
+<h4 id="orgb616e20">Python</h4>
+</div>
+</div>
+<div id="outline-container-org5b2b70d" class="outline-3">
+<h3 id="org5b2b70d">Merge Sort</h3>
+<div class="outline-text-3" id="text-org5b2b70d">
+<p>
+See &ldquo;Algorithms, 4th Edition Essential Information about Algorithms and Data Structures by Robert Sedgewick&rdquo;, page 270
+and &ldquo;Introduction to algorithms by Thomas H. Cormen&rdquo;, page 34
+</p>
+</div>
+<div id="outline-container-orga3472eb" class="outline-4">
+<h4 id="orga3472eb">Java</h4>
+<div class="outline-text-4" id="text-orga3472eb">
+<p>
+Naive implementation with creating/copying/slicing a lot of arrays:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span>[] <span style="color: #c678dd;">mergeSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #51afef;">if</span> (arr.length &lt;= <span style="color: #da8548;">1</span>) {
+        <span style="color: #51afef;">return</span> arr;
+    }
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">mid</span> = arr.length/<span style="color: #da8548;">2</span>;
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">left</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[mid];
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">right</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[arr.length-mid]; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">one more slot when unequal eg 9/2=4.5=4 -&gt; 9/4 = 5</span>
+
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">fill left array</span>
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; <span style="color: #ECBE7B;">mid</span>; i++) {
+        left[i] = arr[i];
+    }
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">fill right array (has 1 more item when unequal arr length)</span>
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = mid; i &lt; arr.<span style="color: #ECBE7B;">length</span>; i++) {
+        right[i-mid] = arr[i];
+    }
+
+    <span style="color: #51afef;">return</span> merge(mergeSort(left), mergeSort(right)); <span style="color: #5B6268;">// </span><span style="color: #5B6268;">inline calls to avoid addiotional variables</span>
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span>[] <span style="color: #c678dd;">merge</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">left</span>, <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">right</span>) {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sorted</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[left.length+right.length];
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">leftIndex</span> = <span style="color: #da8548;">0</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">rightIndex</span> = <span style="color: #da8548;">0</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>;
+    <span style="color: #51afef;">while</span> (leftIndex &lt; left.<span style="color: #ECBE7B;">length</span> &amp;&amp; rightIndex &lt; right.<span style="color: #ECBE7B;">length</span>) {
+        <span style="color: #51afef;">if</span> (left[leftIndex] &lt;= right[rightIndex]) {
+            sorted[i] = left[leftIndex];
+            leftIndex++;
+        } <span style="color: #51afef;">else</span> {
+            sorted[i] = right[rightIndex];
+            rightIndex++;
+        }
+        i++;
+    }
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">Add remaining elements</span>
+    <span style="color: #51afef;">while</span> (leftIndex &lt; left.<span style="color: #ECBE7B;">length</span> ){
+        sorted[i++] = left[leftIndex++];
+    }
+    <span style="color: #51afef;">while</span> (rightIndex &lt; right.<span style="color: #ECBE7B;">length</span>) {
+        sorted[i++] = right[rightIndex++];
+    }
+
+    <span style="color: #51afef;">return</span> sorted;
+}
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">res</span> = mergeSort(unsortedArr);
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; res.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(res[i]);
+    }
+}
+</pre>
+</div>
+
+<p>
+With two aux arrays but modifying the original array in place:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">mergeSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">left</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">right</span>) {
+    <span style="color: #51afef;">if</span> (left &gt;= right) {
+        <span style="color: #51afef;">return</span>;
+    }
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">mid</span> = (left + right) / <span style="color: #da8548;">2</span>;
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid+<span style="color: #da8548;">1</span>, right);
+    stitch(arr, left, mid+<span style="color: #da8548;">1</span>, right);
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">stitch</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">left</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">mid</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">right</span>) {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">auxLeft</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[mid-left];
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">auxRight</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[right-mid+<span style="color: #da8548;">1</span>];
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = left; i &lt; <span style="color: #ECBE7B;">mid</span>; i++) {
+        auxLeft[i-left] = arr[i];
+    }
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = mid; i &lt;= right; i++) {
+        auxRight[i-mid] = arr[i];
+    }
+
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = <span style="color: #da8548;">0</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">k</span> = <span style="color: #da8548;">0</span>;
+
+    <span style="color: #51afef;">while</span> (j &lt; auxLeft.<span style="color: #ECBE7B;">length</span> &amp;&amp; k &lt; auxRight.<span style="color: #ECBE7B;">length</span>) {
+        <span style="color: #51afef;">if</span> (auxLeft[j] &lt; auxRight[k]) {
+            arr[left+j+k] = auxLeft[j];
+            j++;
+        } <span style="color: #51afef;">else</span> {
+            arr[left+j+k] = auxRight[k];
+            k++;
+        }
+    }
+
+    <span style="color: #51afef;">while</span> (j &lt; auxLeft.<span style="color: #ECBE7B;">length</span>) {
+        arr[left+j+k] = auxLeft[j];
+        j++;
+    }
+    <span style="color: #51afef;">while</span> (k &lt; auxRight.<span style="color: #ECBE7B;">length</span>) {
+        arr[left+j+k] = auxRight[k];
+        k++;
+    }
+}
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    mergeSort(unsortedArr, <span style="color: #da8548;">0</span>, unsortedArr.length-<span style="color: #da8548;">1</span>);
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; unsortedArr.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(unsortedArr[i]);
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org17f38d5" class="outline-4">
+<h4 id="org17f38d5">Python</h4>
+</div>
+</div>
+<div id="outline-container-orga73e57d" class="outline-3">
+<h3 id="orga73e57d">QuickSort</h3>
+<div class="outline-text-3" id="text-orga73e57d">
+<p>
+See <a href="https://www.youtube.com/watch?v=0Ds3KqYeXzA">https://www.youtube.com/watch?v=0Ds3KqYeXzA</a> , &ldquo;The algorithm design manual by Steven S. Skiena&rdquo;, page 123, &ldquo;Introduction to algorithms by Thomas H. Cormen&rdquo;, page 170 and &ldquo;Algorithms, 4th Edition Essential Information about Algorithms and Data Structures by Robert Sedgewick&rdquo;, page 288
+</p>
+</div>
+
+<div id="outline-container-org5698be4" class="outline-4">
+<h4 id="org5698be4">Java</h4>
+<div class="outline-text-4" id="text-org5698be4">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">quickSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    qsort(arr, <span style="color: #da8548;">0</span>, arr.length-<span style="color: #da8548;">1</span>);
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">qsort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">leftBound</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">rightBound</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">left</span> = leftBound;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">right</span> = rightBound;
+
+    <span style="color: #51afef;">if</span> (left &gt;= right) {
+        <span style="color: #51afef;">return</span>;
+    }
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">pivotIdx</span> = (leftBound+rightBound)/<span style="color: #da8548;">2</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">pivot</span> = arr[pivotIdx];
+
+    <span style="color: #51afef;">while</span> (left &lt; <span style="color: #ECBE7B;">right</span>) {
+        <span style="color: #51afef;">while</span> (left &lt; <span style="color: #ECBE7B;">rightBound</span> &amp;&amp; arr[left] &lt; pivot) {
+            left++;
+        }
+        <span style="color: #51afef;">while</span> (right &gt; leftBound &amp;&amp; arr[right] &gt; pivot) {
+            right--;
+        }
+        <span style="color: #51afef;">if</span> (left &lt;= right) {
+            swap(arr, left, right);
+            left++;
+            right--;
+        }
+    }
+
+    <span style="color: #51afef;">if</span> (leftBound &lt; <span style="color: #ECBE7B;">right</span>) {
+        qsort(arr, leftBound, right);
+    }
+
+    <span style="color: #51afef;">if</span> (rightBound &gt; left) {
+        qsort(arr, left, rightBound);
+    }
+}
+
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">swap</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">a</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">b</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">temp</span> = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
+
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">test</span>() {
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">unsortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> };
+    <span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">sortedArr</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span>[] { <span style="color: #da8548;">0</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">19</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">26</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span> };
+
+    quickSort(unsortedArr);
+
+
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; unsortedArr.<span style="color: #ECBE7B;">length</span>; i++) {
+        System.out.println(unsortedArr[i]);
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org144c88d" class="outline-4">
+<h4 id="org144c88d">Python</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7801ad0" class="outline-2">
+<h2 id="org7801ad0">Übung</h2>
+<div class="outline-text-2" id="text-org7801ad0">
+</div>
+<div id="outline-container-org9004915" class="outline-3">
+<h3 id="org9004915">1.) Ordnen Sie folgende Funktionen entsprechend ihrer Komplexität (beginnend mit der geringsten Komplexität). Geben Sie die Komplexitätsklasse in O-Notation an</h3>
+<div class="outline-text-3" id="text-org9004915">
+<p>
+<a href="imgs/01_aufg01.png">Funktionen</a>
+</p>
+<ul class="org-ul">
+<li>f1 = O(n<sup>2</sup>) =  quadratisch</li>
+<li>f2 =  O(n) = linear</li>
+<li>f3 =  O(c<sup>n</sup>) = exponentiell</li>
+<li>f4 =  O(c<sup>n</sup>) = exponentiell</li>
+<li>f5 =  O(log n) = logarithmish</li>
+<li>f6 =  O(n!) = factorial (Fakultät)</li>
+<li>f7 =  O(n) = linear</li>
+<li>f8 =  ???</li>
+</ul>
+
+<p>
+Reihenfolge: f2, f7, f5, f1, f4, f3, f6,    ??f8??
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6f16d6" class="outline-3">
+<h3 id="orga6f16d6">2.) Ausgabe in umgekehrter Reihenfolge</h3>
+<div class="outline-text-3" id="text-orga6f16d6">
+</div>
+<div id="outline-container-org8ef0d01" class="outline-4">
+<h4 id="org8ef0d01">2.a) Schreiben Sie eine Funktion, die Ihnen das Wort „Datenstrukturen“ in umgekehrter Reihenfolge ausgibt („nerutkurtsnetaD“)</h4>
+<div class="outline-text-4" id="text-org8ef0d01">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">reversePrint</span>(<span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">s</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = s.length()-<span style="color: #da8548;">1</span>; i &gt;= <span style="color: #da8548;">0</span>; i--) {
+        System.out.print(s.charAt(i));
+    }
+    System.out.println();
+}
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">reversePrint</span>(s):
+    <span style="color: #5B6268;"># </span><span style="color: #5B6268;">for i in range(len(s)-1, -1, -1):</span>
+    <span style="color: #dcaeea;">i</span> = <span style="color: #c678dd;">len</span>(s) - <span style="color: #da8548;">1</span>
+    <span style="color: #51afef;">while</span> (i &gt;= <span style="color: #da8548;">0</span>):
+        <span style="color: #51afef;">print</span>(s[i], end = <span style="color: #98be65;">""</span>)
+        <span style="color: #dcaeea;">i</span> -= <span style="color: #da8548;">1</span>
+    <span style="color: #51afef;">print</span>()
+
+reversePrint(<span style="color: #98be65;">"Datenstrukturen"</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa6a417" class="outline-4">
+<h4 id="orgfa6a417">2.b) Schreiben Sie eine Funktion, die Ihnen ein Array „Früchte“ (Banane, Apfel, Erdbeere, Orange) in umgekehrter Reihenfolge ausgibt (Orange, Erdbeere, Apfel, Banane)</h4>
+<div class="outline-text-4" id="text-orgfa6a417">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">reversePrint</span>(<span style="color: #ECBE7B;">String</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = arr.length-<span style="color: #da8548;">1</span>; i &gt;= <span style="color: #da8548;">0</span>; i--) {
+        System.out.println(arr[i]);
+    }
+}
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">reversePrint</span>(arr):
+    <span style="color: #5B6268;"># </span><span style="color: #5B6268;">for i in range(len(arr)-1, -1, -1):</span>
+    <span style="color: #dcaeea;">i</span> = <span style="color: #c678dd;">len</span>(arr) - <span style="color: #da8548;">1</span>
+    <span style="color: #51afef;">while</span> (i &gt;= <span style="color: #da8548;">0</span>):
+        <span style="color: #51afef;">print</span>(arr[i])
+        <span style="color: #dcaeea;">i</span> -= <span style="color: #da8548;">1</span>
+
+reversePrint([ <span style="color: #98be65;">"Banane"</span>, <span style="color: #98be65;">"Apfel"</span>, <span style="color: #98be65;">"Erdbeere"</span>, <span style="color: #98be65;">"Orange"</span> ])
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb76875" class="outline-3">
+<h3 id="orgfb76875">3.) Finden Sie die sich wiederholende Zahl! Gegeben sei ein Integer Feld der Dimension N+1. Jeder Integer liegt zwischen 1 und n(inklusive).</h3>
+<div class="outline-text-3" id="text-orgfb76875">
+</div>
+<div id="outline-container-orgd0abc0c" class="outline-4">
+<h4 id="orgd0abc0c">3.a) Gibt es Zahlen die sich wiederholen? Wenn ja, wieso?</h4>
+<div class="outline-text-4" id="text-orgd0abc0c">
+<p>
+Ja es gibt mind. eine sich wiederholende Zahl da das Array mehr Zahlen beinhaltet als es einzigartige Zahlen in dem Bereich zwischen 1 und n (inkl) gibt
+</p>
+</div>
+</div>
+<div id="outline-container-org8005274" class="outline-4">
+<h4 id="org8005274">3.b) Finden Sie die sich doppelnde Zahl.</h4>
+<div class="outline-text-4" id="text-org8005274">
+<p>
+Anmerkung: Es sei davon auszugehen, dass sich nur eine Zahl, dafür beliebig oft, wiederholen kann.
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">import</span> <span style="color: #a9a1e1;">java</span>.<span style="color: #a9a1e1;">util</span>.*;
+<span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">findFirstDuplicateNum</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #ECBE7B;">Set</span>&lt;<span style="color: #ECBE7B;">Integer</span>&gt; <span style="color: #dcaeea;">alreadySeen</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">HashSet</span>&lt;<span style="color: #ECBE7B;">Integer</span>&gt;();
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">0</span>; i &lt; arr.<span style="color: #ECBE7B;">length</span>; i++) {
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">current</span> = arr[i];
+        <span style="color: #51afef;">if</span> (alreadySeen.contains(current)) {
+            <span style="color: #51afef;">return</span> current;
+        }
+        alreadySeen.add(current);
+    }
+    <span style="color: #51afef;">return</span> -<span style="color: #da8548;">1</span>;
+}
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #5B6268;">#</span><span style="color: #5B6268;">!/usr/bin/env python</span>
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">findFirstDuplicate</span>(arr):
+    <span style="color: #dcaeea;">visited</span> = {}
+    <span style="color: #51afef;">for</span> num <span style="color: #51afef;">in</span> arr:
+        <span style="color: #51afef;">if</span> visited.get(num, <span style="color: #a9a1e1;">False</span>):
+            <span style="color: #51afef;">return</span> num
+        <span style="color: #51afef;">else</span>:
+            <span style="color: #dcaeea;">visited</span>[num] = <span style="color: #a9a1e1;">True</span>
+    <span style="color: #51afef;">return</span> -<span style="color: #da8548;">1</span>
+
+<span style="color: #dcaeea;">arr</span> = [<span style="color: #da8548;">1</span>,<span style="color: #da8548;">2</span>,<span style="color: #da8548;">3</span>,<span style="color: #da8548;">4</span>,<span style="color: #da8548;">5</span>,<span style="color: #da8548;">6</span>,<span style="color: #da8548;">7</span>,<span style="color: #da8548;">7</span>,<span style="color: #da8548;">8</span>,<span style="color: #da8548;">9</span>,<span style="color: #da8548;">10</span>,<span style="color: #da8548;">11</span>,<span style="color: #da8548;">12</span>,<span style="color: #da8548;">12</span>,<span style="color: #da8548;">13</span>,<span style="color: #da8548;">14</span>]
+<span style="color: #dcaeea;">dup</span> = findFirstDuplicate(arr)
+<span style="color: #51afef;">print</span>(dup)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcb36e26" class="outline-3">
+<h3 id="orgcb36e26">4.) Gegeben ist ein Array (3,7,5,10,6,2,8).</h3>
+<div class="outline-text-3" id="text-orgcb36e26">
+</div>
+<div id="outline-container-orgdf45aff" class="outline-4">
+<h4 id="orgdf45aff">4.a) Schreiben Sie eine Funktion, die das Array sortiert. Nutzen Sie hierfür das „Insertion Sort“ Verfahren.</h4>
+<div class="outline-text-4" id="text-orgdf45aff">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">insertionSort</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>) {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #da8548;">1</span>; i &lt; arr.<span style="color: #ECBE7B;">length</span>; i++) {
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = i - <span style="color: #da8548;">1</span>;
+        <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">k</span> = i;
+        <span style="color: #51afef;">while</span> (j &gt;= <span style="color: #da8548;">0</span> &amp;&amp; arr[k] &lt; arr[j]) {
+            swap(arr, k, j);
+            k--;
+            j--;
+        }
+    }
+}
+<span style="color: #51afef;">private</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">swap</span>(<span style="color: #ECBE7B;">int</span>[] <span style="color: #dcaeea;">arr</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">a</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">b</span>) {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">tmp</span> = arr[a];
+    arr[a] = arr[b];
+    arr[b] = tmp;
+}
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">insertionSort</span>(arr):
+    <span style="color: #51afef;">for</span> idx <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(arr)):
+        <span style="color: #dcaeea;">current</span> = arr[idx]
+        <span style="color: #dcaeea;">j</span> = idx-<span style="color: #da8548;">1</span>
+        <span style="color: #51afef;">while</span> j &gt;= <span style="color: #da8548;">0</span> <span style="color: #51afef;">and</span> arr[j] &gt; current:
+            <span style="color: #dcaeea;">arr</span>[j+<span style="color: #da8548;">1</span>] = arr[j]
+            <span style="color: #dcaeea;">j</span> -= <span style="color: #da8548;">1</span>
+        <span style="color: #dcaeea;">arr</span>[j+<span style="color: #da8548;">1</span>] = current
+
+
+<span style="color: #dcaeea;">unsortedArr</span> = [<span style="color: #da8548;">26</span>, <span style="color: #da8548;">20</span>, <span style="color: #da8548;">1</span>, <span style="color: #da8548;">22</span>, <span style="color: #da8548;">0</span>, <span style="color: #da8548;">25</span>, <span style="color: #da8548;">21</span>, <span style="color: #da8548;">2</span>, <span style="color: #da8548;">3</span>, <span style="color: #da8548;">5</span>, <span style="color: #da8548;">4</span>, <span style="color: #da8548;">7</span>, <span style="color: #da8548;">6</span>, <span style="color: #da8548;">10</span>, <span style="color: #da8548;">18</span>, <span style="color: #da8548;">13</span>, <span style="color: #da8548;">12</span>, <span style="color: #da8548;">9</span>, <span style="color: #da8548;">23</span>, <span style="color: #da8548;">24</span>, <span style="color: #da8548;">17</span>, <span style="color: #da8548;">8</span>, <span style="color: #da8548;">11</span>, <span style="color: #da8548;">16</span>, <span style="color: #da8548;">15</span>, <span style="color: #da8548;">14</span>, <span style="color: #da8548;">27</span>, <span style="color: #da8548;">28</span>, <span style="color: #da8548;">29</span>, <span style="color: #da8548;">19</span> ]
+
+insertionSort(unsortedArr)
+<span style="color: #51afef;">print</span>(unsortedArr)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org07954ea" class="outline-4">
+<h4 id="org07954ea">4.b) Welche weiteren Sortierverfahren kennen Sie? Welche Komplexitätsklassen weisen diese Verfahren auf?</h4>
+<div class="outline-text-4" id="text-org07954ea">
+<ul class="org-ul">
+<li>Bubblesort mit O(n<sup>2</sup>)</li>
+<li>Selection Sort mit O(n<sup>2</sup>)</li>
+<li>Insertion Sort O(n<sup>2</sup>)</li>
+<li>MergeSort mit O(n log n) aber auch O(n) space complexity</li>
+<li>Quicksort mit O(n log n) mit O(log n) space complexity im worst case</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2020-04-18 Sat 15:29</p>
+</div>
+</body>
+</html>

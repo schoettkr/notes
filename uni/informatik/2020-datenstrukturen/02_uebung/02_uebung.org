@@ -1,0 +1,37 @@
+#+TITLE: 02 Uebung
+
+1.
+a) Ja es kommt zu einem Fehler, da nur Speicherplatz fuer ein statisches Array mit 2 Plaetzen reserviert wird, aber in der main methode versucht wird 3 children hinzuzufuegen
+b) siehe Block
+c) unnoetig
+
+2.
+a)
+"number = 3"
+"this.number = 3"
+"SubKlasse.number = 5"
+"Scopes.SubKlasse.number = 5"
+""
+"number = 3"
+"this.number = 3"
+"SubKlasse.number = 5"
+"Scopes.SubKlasse.number = 5"
+""
+""
+"number = 3"
+"this.number = 3"
+"SubKlasse.number = 5"
+"Scopes.SubKlasse.number = 5"
+""
+"number = 3"
+"this.number = 3"
+"SubKlasse.number = 5"
+"Scopes.SubKlasse.number = 5"
+""
+"instance.number = 3"
+"SubKlasse.number = 5"
+"Scopes.SubKlasse.number = 5"
+b) unnoetig
+
+
+3. werde ich spaeter in python modellieren
