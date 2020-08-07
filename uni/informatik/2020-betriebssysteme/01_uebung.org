@@ -1,0 +1,100 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: green @@html:<font color="green">$1</font>@@
+#+MACRO: red @@html:<font color="red">$1</font>@@
+
+* Übung 01 - Selbsttest
+1. Entscheiden Sie, ob ein Betriebssystem für den Betrieb folgender Systeme notwendig und/oder hilfreich ist.
+   - Wetterstation mit Display und 3-Tage-Vorhersage -> {{{green(hilfreich)}}} {{{red(notwendig)}}}
+   - Smartphone -> {{{green(hilfreich)}}} {{{red(notwendig)}}}
+   - Tragbarer Computer -> {{{green(hilfreich)}}} {{{red(notwendig)}}}
+   - Großrechner -> {{{green(hilfreich)}}} {{{red(notwendig)}}}
+2. Ein Betriebssystem ist hilfreich\, weil es...
+   - [X] {{{green(Aufgaben zur Interaktion von Programmen erfüllt.)}}}
+   - [X] {{{green(Schnittstellen vereinheitlicht. Verschiedene Netzwerkkarten können so zum Beispiel über das gleiche Interface angesprochen werden.)}}}
+   - [X] {{{green(komplizierte\, unhandliche Schnittstellen (z.B. von Hardware-Interfaces) vereinfacht.)}}}
+   - [X] {{{green(Programme untereinander isolieren kann.)}}}
+3. Eine Wetterstation mit Display und 3-Tage-Vorhersage sollte über ein Betriebssystem verfügen\, weil...
+   - [ ] {{{red(die Temperatur sonst nicht gemessen werden kann.)}}}
+   - [X] {{{green(es die Programmierung erleichtert)}}}
+   - [X] {{{green(mehrere Vorgänge gleichzeitig stattfinden (z.B. Messen\, Anzeigen\, Vorhersagen) und diese untereinander koordiniert werden müssen.)}}}
+   - [ ] {{{red(das Kompilieren viel schneller erfolgt.)}}}
+4. Ein tragbarer Computer sollte über ein Betriebssystem verfügen\, weil...
+   - [X] {{{green(sich sonst jede Anwendung einzeln um die Realisierung einer Netzwerkverbindung kümmern muss)}}}
+   - [ ] {{{red(Hardwarefunktionen wie die Änderung der Helligkeit des Displays sonst nicht zu realisieren sind)}}}
+   - [X] {{{green(dies die Kommunikation zwischen Programmen enorm erleichtert)}}}
+   - [ ] {{{red(einige Programmierer und Programmiererinnen sich nicht ausreichend um einen effizienten Stromverbrauch durch ihre Anwendungen kümmern)}}}
+5. Die wichtigsten Grundkonzepte von Betriebssystemen sind:
+   - [X] {{{green(Virtualisierung)}}} \rightarrow Das Zur-Verfügung-Stellen von Ressourcen\, die tatsächlich nicht (oder nicht in der benötigten Menge/Qualität) vorhanden sind
+   - [X] {{{green(Persistenz)}}} \rightarrow Die Fähigkeit eines Zustands\, die ihn erzeugende Aktivität zu überleben
+   - [X] {{{green(Nebenläufigkeit)}}} \rightarrow Die Fähigkeit zur Ausführung von Aktivitäten außerhalb einer linearen Ordnung
+6. Abstraktion bedeutet...
+   - [X] {{{green(den betrachteten Gegenstand auf seine (gemäß einer Fragestellung) wesentlichen Eigenschaften zu reduzieren.)}}}
+   - [ ] {{{red(mithilfe allgemeiner Eigenschaften auf einen konkreten Fall zu schließen.)}}}
+   - [X] {{{green(sich auf einen Teil der zur Verfügung stehenden Informationen zu begrenzen.)}}}
+   - [ ] {{{red(einen Computer attraktiver zu gestalten)}}}
+7. Eine zeitliche Ressourcenverwaltung ist notwendig\, wenn verschiedene Anwendungen nacheinander auf die gleiche Ressource zugreifen. Welche der folgenden Ressourcen wird zeitlich verwaltet?
+   - [X] {{{green(Prozessorzeit)}}}
+   - [X] {{{green(Bildschirm)}}}
+   - [ ] {{{red(Hauptspeicher)}}}
+   - [X] {{{green(Netzwerkverbindung)}}}
+8. Eine räumliche Ressourcenverwaltung ist notwendig\, wenn verschiedene Anwendungen auf verschiedene Bereiche einer Ressource zugreifen. Welche der folgenden Ressourcen wird räumlich verwaltet?
+   - [ ] {{{red(Netzwerkverbindung)}}}
+   - [X] {{{gree(Hauptspeicher)}}}
+   - [ ] {{{red(Prozessorzeit)}}}
+   - [X] {{{green(Bildschirm)}}}
+9. Die Prozessorzeit\, der Haupspeicher\, die Netzwerkbandbreite und der Bildschirm werden vom Betriebssystem aktiv verwaltet. Für den Betrieb welcher Systeme ist die jeweilige Aufgabe des Betriebssystems vorrangig notwendig?
+   - [[file:imgs/02_uebung_01.png][Loesung]]
+10. Ein Betriebssystem bietet den Anwendungen eine Repräsentation der tatsächlichen physischen Hardware an\, welche in der Vorlesung als ‘virtuelle Maschine’ bezeichnet wird. Was sind die Vorteile einer solchen virtuellen Maschine?
+    - [X] {{{green(Tatsächliche Eigenschaften der Hardware werden vor Nutzerinnen und Nutzern "versteckt".)}}}
+    - [ ] {{{red(Auf einer Hardware wird genau eine Instanz einer virtuellen Maschine realisiert.)}}}
+    - [X] {{{green(Physische Ressourcen (z.B. CPU) können unter mehreren laufenden Anwendungen aufgeteilt werden.)}}}
+    - [X] {{{green(Verschiedene Programme können durch Schutzmechanismen und Zugriffsrechte voreinander geschützt werden.)}}}
+11. Nachteile einer virtuellen Maschine im Sinne der Vorlesung sind:
+    - [X] {{{green(Es ist ein zusätzlicher Aufwand für die Realisierung der virtuellen Maschine nötig.)}}}
+    - [ ] {{{red(Mit jeder neuen CPU Generation ändert sich auch die Schnittstelle der virtuellen Maschine nach außen.)}}}
+    - [X] {{{green(Man muss als Programmierer neue Konzepte verstehen?)}}}
+    - [X] {{{green(Es wird eine zusätzliche Indirektion eingeführt\, die zusätzliche Ressourcen benötigt (CPU\, Speicher\, ...).)}}}
+12. Ein Betriebssystem bietet Schnittstellen B an (z.B. für Programmierer und Anwender)\, mit denen Schnittstellen A (z.B. Hardware) genutzt werden können. Welche der folgenden Aussagen ist korrekt?
+    - [X] {{{green(Einige Möglichkeiten von A werden mittels B nicht unterstützt.)}}}
+    - [X] {{{green(B ist meist abstrakter als A.)}}}
+    - [ ] {{{red(B ist meist konkreter als A.)}}}
+    - [X] {{{green(B sollte „schöner“ sein als A.)}}}
+13. Welche Aussagen sind korrekt?
+    - [ ] {{{red(Betriebssysteme ohne standardisierte Hardware sind nicht sinnvoll.)}}}
+    - [X] {{{green(Standardisierung ermöglicht die Portabilität von Programmen zwischen verschiedenen Betriebssystemen.)}}}
+    - [X] {{{green(POSIX (Portable Operating System Interface) ist eine standardisierte Programmierschnittstelle zur Sicherstellung der Kompatibilität verschiedener Betriebssysteme.)}}}
+14. Zur Standardisierung von Schnittstellen eines Betriebssystem gehört zwingend:
+    - [X] {{{green(Die semantische Spezifikation der Schnittstelle)}}}
+    - [ ] {{{red(Eine feste Vorgabe zur Umsetzung der Schnittstellen)}}}
+    - [X] {{{green(Die formale Spezifikation der Schnittstelle)}}}
+    - [ ] {{{red(Die Verfügbarkeit von offenen und freien Schnittstellen im Sinne von freier Software.)}}}
+15. Textschnittstellen (Terminals) zur Benutzung von Betriebssystemen sind seit den 60er Jahren bis heute sinnvoll\, weil:
+    - [X] {{{green(für ihre Benutzung nur geringer Ressourcenbedarf besteht (wenig Bandbreite\, keine GUI\, ...).)}}}
+    - [X] {{{green(im Falle von fehlerhaften Treibern ein "Notfallbetrieb" gewährleistet werden kann)}}}
+    - [X] {{{green(SSH\, Telnet\, etc. einen Standard für die Fern-Administration darstellen.)}}}
+    - [ ] {{{red(der X-Server für eine Administration nicht sicher genug ist.)}}}
+16. In der Vorlesung wurden verschiedene Aufbauarten von Betriebssystemkernen besprochen.
+    - Lückentext ohne Loesung
+17. Ordnen Sie die Strukturelemente eines µ-Kernel-Betriebssystems in der richtigen Reihenfolge an!
+    - total behämmert
+
+* Übung 01 - Aufgaben
+1. Warum kann eine Wetterstation mit Display und 3-Tagevorhersage auch ohne Betriebssystem realisier werden\, bei einem Smartphone oder tragbaren Computer ist ein Betrieb ohne Betriebssystem aber kaum sinnvoll?
+   - Im Vergleich zur Wetterstation\, verfügen Smartphones oder tragbare Computer über weitaus mehr einzelne Komponenten\, die verwaltet werden müssen. Außerdem ist eine Wetterstation eher eine Art "Einzelstück" das an bestimmte Gegebenheiten angepasst wird\, während man bei Smartphones und tragbaren Computern Wert darauf legt\, dass es einheitliche Schnittstellen gibt\, um Kompatibilität zu wahren.
+   - Das Betriebssystem ist für Smartphones und tragbare Computer auch wichtig im Hinblick auf das Energiemanagement\, was hingegen bei einer Wetterstation nicht ganz so relevant ist\, da sie stationär ist.
+
+2. Welche Ressourcen sollte ein Betriebssystem möglichst verwalten und wie können die Ressourcen als zeitlich und räumlich verwaltet werden?
+   - Das Betriebssystem sollte alle Ressourcen verwalten\, die die zur Ausführung von Anwendungen benötigt werden oder diese unterstützen. Da kommt einem beispielsweise der Speicher in den Sinn\, der räumlich getrennt/verwaltet wird\, indem er in mehrere Bereiche unterteilt wird und so mehrere Anwendungen gleichzeitig auf diesen zugreifen können. Zeitlich verwaltet wird hingegen beispielsweise der Prozessor beziehungsweise "wer/was" gerade auf dem Prozessor rechnen darf. So läuft zum Beispiel gerade ein Prozess von Anwendung A auf dem Prozessor\, und anschließend ein Prozess von Anwendung B\, während A wartet.
+
+3. Warum wird der Aufwand einer Virtuellen Maschine (siehe Vorlesung) betrieben?
+   - das BS bietet Abstraktionslayer und virtualisiert so etwas wie zum beispiel eine "Datei" was eigentlich so auf HW ebene garnicht existiert
+   - (scheinbares) zur verfuegung stellen von ressourcen die tatsaechlich nicht (oder nicht in der menge o. qualitaet) vorhanden sind\, relevant zb fuer Speicher\, Adressraum
+   - Die virtuelle Maschine ist ein Abstraktionslayer\, der Dinge\, die auf Hardware-Ebene in der Form garnicht existieren "simulieren". So wird zum einen die Nutzung für den Enduser vereinfacht\, da er sich nicht mit internen Spezifika rumplagen muss\, sondern beispielsweise das zugänglichere & besser verständliche Konzept der "Datei" (Abstraktion) nutzen kann.
+Des Weiteren stellt der Abstraktionslayer Ressourcen zur Verfügung (logische Betriebsmittel) und erlaubt so den Zugriff bzw die Nutzung von Ressourcen die so in der Form/Menge oder Qualität garnicht existieren.
+
+
+1. Wie viel Standardisierung ist für ein Betriebssystem nötig? Hat sich der Bedarf für Standardisierung über die Zeit verändert?
+   - Zwingend notwendig ist eine Standardisierung für ein Betriebssystem nicht. Allerdings macht es viele Dinge simpler und vereinfacht zum Beispiel die Portierung von Code und Anwendungen\, wenn es beispielsweise standardisierte Schnittschnellen gibt.
+   - In den 80er-Jahren gab es ein besonderen Druck zur Standardisierung\, da es viele uneinheitliche Systeme und Schnittstellen gab\, sowie zahlreiche "Unixe". In dieser Zeit haben viele der bis heute genutzten Standards ihren Ursprung.

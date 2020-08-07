@@ -1,0 +1,87 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: green @@html:<font color="green">$1</font>@@
+#+MACRO: red @@html:<font color="red">$1</font>@@
+
+   - [ ] {{{red(s)}}}
+   - [X] {{{green(s)}}}
+
+* Übung 03 - Selbsttest
+1. Ein Treiber sollte nicht Teil des Kernels sein weil:
+   - [ ] {{{red(Die Kommunikation mit anderen Treibern ist ohne Betriebssystem möglich.)}}}
+   - [X] {{{green(Störungen durch Programmierfehler andere Treiber weitgehend ausgeschlossen werden.)}}}
+   - [ ] {{{red(Die Performance verbessert wird.)}}}
+2. Es handelt sich um ein Microkernel wenn:
+   - [X] {{{green(Nur die wichtigsten Funktionen (die nicht im Nutzermodus realisiert werden können) implementiert sind.)}}}
+   - [ ] {{{red(Der Kernel kleiner ist als der L1-Cache.)}}}
+   - [ ] {{{red(Der Hersteller einen Microkernel bewirbt (z.B. Windows NT).)}}}
+   - [ ] {{{red(Der Kernel weniger als 1000000 Zeilen Code aufweist.)}}}
+3. Welche Aussagen sind richtig:
+   - [ ] {{{red(Windows (7,8,10) ist ein Microkernel-Betriebssystem.)}}}
+   - [X] {{{green(Microkernel für PCs sind verfügbar (Mach, L4L, ...).)}}}
+   - [ ] {{{red(Die meisten PC-Betriebssysteme sind Microservices basiert.)}}}
+4. Ein Betriebssystem muss entscheiden welcher Prozess als nächster ausgeführt wird. Was bedeutet dies für Microkernel?
+   - [ ] {{{red(Der Microkernel muss die Entscheidung treffen, sonst ist Fairness nicht gewährleistet.)}}}
+   - [ ] {{{red(Ist die Entscheidung teil des Kernels, spricht man nicht mehr von einem Microkernel.)}}}
+   - [X] {{{green(Der Mechanismus der Zuweisung der CPU zum Prozess muss vom Microkernel übernommen werden, da der Kern die Prozessabstraktion bereitstellt.)}}}
+   - [X] {{{green(Ist die Entscheidung nicht Teil des Kernels kann der Algorithmus zur Auswahl des nächsten Prozesses einfacher ausgetaucht oder verändert werden.)}}}
+5. Welche Aussagen zu einem Hybrid-Kernel sind korrekt?
+   - [ ] {{{red(Der Neuste Treiber ist immer der beste.)}}}
+   - [ ] {{{red(Treiber sind immer teil des Kernels.)}}}
+   - [ ] {{{red(Wenn mehrere Treiber zur Auswahl stehen (für das selbe Gerät) ist der privilegierte Treiber die bessere Wahl.)}}}
+   - [X] {{{green(Die Qualität von Treibern mit privilegierten Modus kann mittels Kontrollen des Codes und Zertifizierung verbessert werden.)}}}
+6. Wird ein Treiber (als Teil des Kerns) in den privilegierten Modus realisiert, kann die Performance gesteigert werden weil:
+   - [X] {{{green(Nicht zwischen Treiber und privilegierten Modus ungeschälten werden muss.)}}}
+   - [X] {{{green(Direkt auf andere Teile des Kerns und andere Teile zugegriffen werden kann, ohne sich an starre Interfaces zu halten.)}}}
+   - [ ] {{{red(Die CPU hat im privilegierten Modus mehr Performance.)}}}
+   - [ ] {{{red(Nur im Privilegierten Modus kann der Hauptspeicher von Programmen die etwas darstellen wollen direkt zugegriffen werden, ohne zusätzliches Kopieren.)}}}
+7. Treiber für welche Geräte können vom privilegierten Modus (im Kernel) spürbar profitieren, oder nicht profitieren?
+   - [ ] {{{red(Die Maus profitiert, da das Einfrieren des Bildschirms vermieden wird.)}}}
+   - [ ] {{{red(Grafikkarten profitieren nicht, da die Anbindung an den Hauptspeicher die Performance bereits limitiert.)}}}
+   - [X] {{{green(Das Dateisystem profitiert nicht, da die Festplatte zu geringe Bandbreite bietet um von den Verbesserungen spürbar zu profitieren.)}}}
+   - [X] {{{green(Die Maus profitiert nicht, die Leistung ist bereits hoch genug und minimale Verbesserungen sind nicht spürbar.)}}}
+8. Welchen Aussagen zu Treibern von sicherheitsrelevanter Hardware (z.B. Fingerabdruckssensor)  sind sinnvoll?
+   - [ ] {{{red(Der Treiber muss Teil des Kernels sein, sonst kann er nicht geschützt werden.)}}}
+   - [X] {{{green(Bei der Programmierung des Treibers ist besondere Sorgfalt und die Überprüfung der Software nötig.)}}}
+   - [X] {{{green(Der Treiber muss aus einer überprüfbaren Quelle stammen, die Herkunft muss z.B. mit Signaturen nachgewiesen werden.)}}}
+9. Wann muss ein Betriebssystem heruntergefahren werden, wenn ein Programmierfehler auftritt?
+   - [ ] {{{red(Wenn ein Treiber im Nutzermodus einen nicht behebbaren Fehler hat (und der Treiber benötigt wird).)}}}
+   - [X] {{{green(Wenn ein Treiber im privilegierten Modus einen nicht behebbaren Fehler hat (und der Treiber benötigt wird).)}}}
+   - [X] {{{green(Wenn der Kernel selbst einen nicht behebbaren Fehler hat.)}}}
+   - [ ] {{{red(Wenn ein Programm einen nicht behebbaren Fehler hat.)}}}
+10. Welche Interfaces muss ein Betriebssystem eines nichtmonolithischen Systems bereitstellen?
+    - [ ] {{{red(Ein Application Programming Interface (API), sonst können keine Programme für das Betriebssystem programmiert werden.)}}}
+    - [X] {{{green(Ein Application Binary Interface (ABI), sonst können keine dynamischen Programme ausgeführt werden.)}}}
+    - [ ] {{{red(Eine IDE (Integrated Developer Environment), sonst können keine Programme für das Betriebssystem programmiert werden.)}}}
+    - [ ] {{{red(Ein Graphical User Interface (GUI), sonst kann es nicht genutzt werden.)}}}
+11. Die Ring-Architektur ist ...
+    - [ ] {{{red(... eine Software Architektur.)}}}
+    - [ ] {{{red(... die Aufteilung der Software in Kern (Betriebssystem) und Nutzerbereich (Programme).)}}}
+    - [X] {{{green(... ein Hardware-Schutz, der aus Ringen mit verschiedenen Privilegien besteht.)}}}
+    - [ ] {{{red(... ein Entwurfsmuster.)}}}
+12. Welche Aussagen zur Intel Ring-Architektur sind korrekt?
+    - [ ] {{{red(Ring 1 und 2  werden von Windows und Linux nicht verwendet.)}}}
+    - [X] {{{green(Im Ring 3 laufen Programme.)}}}
+    - [X] {{{green(Im Ring 0 läuft der Betriebssystemkern.)}}}
+13. Was wird mit der Ring-Architektur geschützt?
+    - [X] {{{green(Der Zugriff auf beliebige Adressen im Hauptspeicher ist nur in bestimmten Ringen möglich.)}}}
+    - [X] {{{green(Bestimmte Assembler/Binärbefehle können nur in bestimmten Ringen ausgeführt werden.)}}}
+    - [X] {{{green(Der Zugriff auf bestimmte Hardware und IO ist nur in bestimmten Ringen möglich.)}}}
+    - [ ] {{{red(Der Cache (CPU) kann nur in bestimmten Ringen zur Beschleunigung der Ausführung genutzt werden.)}}}
+14. Welche Aussagen sind korrekt?
+    - [ ] {{{red(echo "Hallo Welt" >> hallo.txt ->In der Datei steht anschließend nur: Hallo Welt)}}}
+    - [ ] {{{red(ls -la > verzeichnis.txt 2> fehler.txt ->Es wird in die Datei mit dem Namen 2 geschrieben)}}}
+    - [X] {{{green(echo "Hallo Welt" > hallo.txt ->Der Inhalt von hallo.txt vor dem Kommando geht verloren.)}}}
+    - [ ] {{{red(echo < hallo.txt ->Die Ausgabe lautet: hallo.txt)}}}
+
+* Übung 03 - Aufgaben
+1. Was ist der Unterschied zwischen Microkernel, Hybrid-Kernel und Monolith?
+   - Alle drei sind Architekturkonzepte für Kernel. Die spezifischen Unterschiede beziehen sich grundsätzlich auf die Trennung zwischen Nutzerbereich und Kernelbereich.
+   - Im monolithischem Kernel gibt es keine klare, strikte Trennung, und somit auch keinen Schutz, innerhalb des Betriebssystem und seinen Komponenten. Die Anwendungen im Nutzerbereich sind hingegen insoliert vom Kern. Dies eignet sich vorranging für zeitempflindiche Anwendungsfälle, da etwas schneller gearbeitet werden kann (allerdings auch absturzgefährdeter).
+   - Im Microkernel beinhaltet der Kernel bzw der Kernelbereich das absolute Minimum an Software, um die Mechanismen eines Betriebssystem zu implementieren und stellt die Funktionalität über eine Schnittstelle für die Programme im Nutzerbereich zur Verfügung.
+   - Der Hybdrid-Kernel zielt darauf ab Aspekte und Vorteile von Microkernel- und Monolith-Kerneln zu kombinieren. Die Services des Betriebssysteme laufen beispielsweise im Kernelbereich wie beim Monolith, während die grundlegende Struktur der von Microkerneln ähnelt.
+2. Warum kann Speicherverwaltung, Ausführung von (nebenläufigen) Prozessen und Interprozesskommunikation nicht im Nutzermodus realisiert werden?
+3. Wie und wo sollten Treiber realisiert werden? Was muss bei Microkernel, Hybrid-Kernel und Monolith beachtet werden.
+4. Graphical User Interface (GUI), Application Programming Interface (API) und Application Binary Interface (ABI), welches ist das wichtigste Interface für Betriebssysteme?
+   - das Application Binary Interface, da es mindestens benötigt wird, um bei nicht-monolithischem Kernel dynamische Programme auszuführen

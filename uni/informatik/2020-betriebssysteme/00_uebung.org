@@ -1,0 +1,117 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: green @@html:<font color="green">$1</font>@@
+#+MACRO: red @@html:<font color="red">$1</font>@@
+
+* Übung 00 - Selbsttest
+1. Welche Aussagen sind korrekt?
+   - [ ] {{{red(Eine Graph ist auch ein Baum. Ein Baum ist auch ein Liste.)}}}
+   - [ ] {{{red(Bäume sind immer schneller durchsuchbar als Listen gleicher Größe.)}}}
+   - [ ] {{{red(Bäume haben immer ein Ordnungskriterium.)}}}
+   - [X] {{{green(Eine Liste ist auch ein Baum. Ein Baum ist auch ein Graph.)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+
+2. Was drückt dieser Code aus: for(1..4) { 90m geradeaus\, links abbiegen }
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+   - [ ] {{{red(Es ist ein Suchverfahren nach einem Ziel.)}}}
+   - [ ] {{{red(Es handelt sich um eine formale Beschreibung.)}}}
+   - [X] {{{green(Es handelt sich um einen Weg zurück zum Startpunkt.)}}}
+   - [X] {{{green(Es ist eine Wegbeschreibung.)}}}
+
+3. Bei folgender Beschreibung handelt es sich um?
+   1. Füge den Startknoten zu einer leeren Liste hinzu. Sie dient der Speicherung von zu bearbeitenden Knoten.
+   2. Wenn die Liste leer ist\, bist du fertig Ende.
+   3. Entnehme den zuletzt zur Liste hinzugefügten Knoten A aus der Liste.
+   4. Ist A der gesuchte Knoten\, bist du fertig Ende.
+   5. Wurde A bereits markiert: springe zu 2.
+   6. Füge alle Knoten\, die von A aus erreicht werden können\, zur Liste hinzu.
+   7. Markiere A.
+   8. Springe zu 2.
+      - [ ] {{{red(der Heap Suche.)}}}
+      - [X] {{{green(der Tiefensuche.)}}}
+      - [ ] {{{red(das Sortieren einer Liste.)}}}
+      - [ ] {{{red(der Breitensuche.)}}}
+      - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+
+4. Welche der beschriebenen Vorgehensweisen sind sinnvoll?
+   - [ ] {{{red(Namen müssen kurz sein um die Performance zu verbessern.)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+   - [X] {{{green(Wenn möglich\, sollten - entsprechend der Fragestellung - bereits in Bibliotheken vorhandene Datenstrukturen und Algorithmen genutzt werden.)}}}
+   - [ ] {{{red(Funktionierender Code sollte zur Vermeidung von Tippfehlern möglichst per Cut & Paste kopiert werden.)}}}
+   - [ ] {{{red(Die Lösung von Stack-Overflow-Fragen sollte ab einer Bewertung von 50 Punkten direkt genutzt werden.)}}}
+
+5. Welches Vorgehen ist korrekt\, um ein ausführbares Programm in C zu erstellen?
+   - [X] {{{green(IDE benutzen und Reihenfolge automatisieren\, wenn man sich des zugrundeliegenden Vorgangs bewusst ist)}}}
+   - [ ] {{{red(schreiben\, assemblieren\, automatische Textersetzung mit Präprozessor\, compilieren\, linken)}}}
+   - [X] {{{green(schreiben\, automatische Textersetzung mit Präprozessor\, compilieren\, assemblieren\, linken)}}}
+   - [ ] {{{red(schreiben\, automatische Textersetzung mit Präprozessor\, compilieren\, linken\, assemblieren)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+
+6. Welche Aussagen sind korrekt? "man man" ...
+   - [ ] {{{red(entspricht "man -h")}}}
+   - [ ] {{{red(funktioniert auch als "frau frau".)}}}
+   - [X] {{{green(erklärt\, wie Sie das Werkzeug zum Lesen von Bedienungsanleitungen verwenden können.)}}}
+   - [X] {{{green(funktioniert nicht auf jedem Betriebssystem.)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+
+7. ~cat ~/.ssh/known_hosts | sort | uniq | wc -l  ...~
+   - [ ] {{{red(signalisiert ein away from keyboard (AFK).)}}}
+   - [X] {{{green(zeigt an\, mit wie vielen verschiedenen Systemen Sie sich per SSH ohne Sicherheitsabfrage verbinden können.)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+   - [ ] {{{red(zeigt an\, von wie vielen Systemen Sie sich per SSH auf diesem System angemeldet haben.)}}}
+   - [ ] {{{red(zeigt an\, wie oft Sie sich mit anderen Systemen per SSH verbunden haben.)}}}
+
+8. Ein Page Fault ...
+   - [ ] {{{red(zeigt immer an\, dass die Seite im Speicher noch nie zur Verfügung stand.)}}}
+   - [X] {{{green(zeigt an\, dass die angeforderte Seite im Speicher nicht zur Verfügung steht.)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+   - [ ] {{{red(zeigt immer an\, dass die Seite im Speicher von einem anderen Prozess verdrängt wurde.)}}}
+   - [ ] {{{red(zeigt immer an\, dass keine Berechtigung für die angeforderte Seite im Speicher besteht (Schutzverletzung).)}}}
+
+9. Ein Page Fault wird ausgelöst von...
+   - [X] {{{green(der MMU)}}}
+   - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+   - [ ] {{{red(der ALU)}}}
+   - [ ] {{{red(dem Mikroprogrammspeicher)}}}
+   - [ ] {{{red(dem Betriebssystem.)}}}
+
+10. Die MMU ist die ...
+    - [X] {{{green(memory management unit.)}}}
+    - [ ] {{{red(man man unit.)}}}
+    - [ ] {{{red(multi management unit.)}}}
+    - [ ] {{{red(monochrome management unit.)}}}
+
+11. Welche Aussagen sind korrekt?
+    - [ ] {{{red(Eine Trap wird immer von externen Ereignissen ausgelöst.)}}}
+    - [ ] {{{red(Ein Interrupt wird immer von internen Ereignissen ausgelöst.)}}}
+    - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+    - [ ] {{{red(Trap ist ein Oberbegriff für hardwaregesteuerte Exceptions in Programmiersprachen\, die das Exception-Konzept kennen (z.B. Java\, C++\, ...))}}}
+    - [X] {{{green(Interrupt und Trap werden konzeptionell gleich von der CPU verarbeitet.)}}}
+
+12. Was unterscheidet die von-Neumann- und die Harvard-Architektur?
+    - [ ] {{{red(Ob es nur einen oder mehrere ALUs gibt. )}}}
+    - [X] {{{green(Ob Befehls- und Datenspeicher gemeinsam oder getrennt sind)}}}
+    - [ ] {{{red(Ob die Maschinenbefehle durch Mikrocode oder festverdrahtet  realisiert werden)}}}
+    - [ ] {{{red(Ob ein mehrstufiger oder nur einstufiger/kein Cache vorhanden ist)}}}
+
+13. Welche Aussagen über die von-Neumann- und die Harvard-Architektur sind korrekt?
+    - [ ] {{{red(Die Harvard-Architektur ist nicht Turing-vollständig\, da die Befehle von den Daten getrennt sind und nicht programmintern veränderbar sind.)}}}
+    - [ ] {{{red(Die von-Neumann-Architektur kann mit Nebenläufigkeit besser umgehen als die Harvard-Architektur)}}}
+    - [ ] {{{red(Die Harvard-Architektur ist die akademische Variante und wird daher in der Lehre bevorzugt.)}}}
+    - [X] {{{green(Keine der anderen Antworten ist korrekt.)}}}
+    - [ ] {{{red(Die von-Neumann-Architektur ist effizienter\, da kein zweiter Speicher benötigt wird.)}}}
+
+14. Welche Aussage(n) gehört/gehören *nicht* zu den von-Neumann-Prinzipien?
+    - [ ] {{{red(Der Rechner verarbeitet externe Programme\, die intern gespeichert werden)}}}
+    - [ ] {{{red(Programme werden sequentiell abgearbeitet. Der Programmfluss kann durch Sprünge verändert werden.)}}}
+    - [X] {{{green(Die Ein- und Ausgabe erfolgt über Polling oder Interrupt-gesteuert.)}}}
+    - [ ] {{{red(Die Zentraleinheit arbeitet taktgesteuert.)}}}
+    - [ ] {{{red(Die Signale werden binär codiert.)}}}
+    - [X] {{{green(Der Speicher ist über einen Cache zeitlich entkoppelt.)}}}
+    - [ ] {{{red(Keine der anderen Antworten ist korrekt.)}}}
+
+15. Wie lautet der Standart-Zyklus der CPU?
+    1. Fetch
+    2. Execute
+    3. Interrupt Processing

@@ -1,0 +1,79 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: green @@html:<font color="green">$1</font>@@
+#+MACRO: red @@html:<font color="red">$1</font>@@
+
+* Übung 02 - Selbsttest
+1. KISS steht (im Rahmen der Vorlesung) für:
+   - [X] {{{green(Keep it simple, stupid)}}}
+   - [ ] {{{red(Die Bezeichnung einer Band)}}}
+   - [X] {{{green(Keep it small and simple)}}}
+   - [ ] {{{red(Keep it stupid and senseless)}}}
+2. Wird das KISS-Prinzip eingehalten, ergeben sich folgende Vorteile:
+   - [ ] {{{red(Es wird i.d.R. für die gleiche Funktionalität weniger Code benötigt)}}}
+   - [X] {{{green(Die Wartbarkeit von Code wird meist verbessert.)}}}
+   - [X] {{{green(Es werden Inkonsistenzen vermieden)}}}
+   - [ ] {{{red(Das System ist i.d.R. schneller)}}}
+3. SPOT steht (im Kontext dieser LV) für...
+   - [ ] {{{red(Slow in Primer, Optimize with Time)}}}
+   - [ ] {{{red(Self-Aligned Planar Oxidation Technology))}}}
+   - [X] {{{green(Single Point of Truth)}}}
+   - [ ] {{{red(Set Principle over Technology)}}}
+4. Wird das SPOT-Prinzip eingehalten, ergeben sich folgende Vorteile:
+   - [X] {{{green(UNIX Programme erfüllen oft das KISS-Prinzip, da sie eine Art von Aufgabe erledigen können aber nicht mehr.)}}}
+   - [ ] {{{red(UNIX Programme erfüllen das KISS-Prinzip nicht, da oft mehrere Programme kombiniert werden müssen, um eine komplexere Aufgabe zu bewältigen.)}}}
+   - [ ] {{{red(UNIX Programme erfüllen das KISS-Prinzip nicht, da der oft vorhandene Hilfetext (Option --help) für die Erfüllung der eigentlichen Aufgabe nicht notwendig ist.)}}}
+   - [ ] {{{red(UNIX Programme erfüllen das KISS-Prinzip nicht, da ein Programm alle möglichen Spezialfälle beherrscht, diese aber nur selten benötigt werden.)}}}
+5. Welche der folgenden Aussagen ist/sind korrekt?
+   - [ ] {{{red(Ein Programm kann nur effizient sein, wenn es auch effektiv ist.)}}}
+   - [X] {{{green(Kosten entsprechen Ressourcen bzw. dem Ressourcenverbrauch.)}}}
+   - [ ] {{{red(Das Programm mit der effizientesten Ausführung ist immer das Beste.)}}}
+   - [X] {{{green(Ein Programm ist effizienter, wenn es für die selbe Aufgabe weniger Ressourcen benötigt.)}}}
+6. Welche Ressourcen werden mindestens zur Programmausführung benötigt?
+   - [X] {{{green(Speicher)}}}
+   - [ ] {{{red(Festplatte)}}}
+   - [X] {{{green(Code)}}}
+   - [X] {{{green(CPU)}}}
+   - [ ] {{{red(Keyboard)}}}
+7. Entscheiden Sie, ob es sich bei den links stehenden Begriffen entweder um logische oder um physische (reale) Ressourcen handelt.
+   - [[file:imgs/02_uebung_02.png][Loesung]]
+8. Werden Systemrufe per Bibliothek eingebunden gilt:
+   - [ ] {{{red(Da die Bibliothek den Systemruf übernimmt wird ein Aufrufen des Betriebssystem vermieden.)}}}
+   - [X] {{{green(Bei der Programmierung/Verwendung besteht kein Unterschied zu anderen Bibliotheksrufen.)}}}
+   - [X] {{{green(Die Verwendung von Systemrufen ist unabhängig vom konkreten Betriebssystem.)}}}
+   - [X] {{{green(Die Bibliothek ist eine weitere Abstraktionsschicht.)}}}
+9. Warum kann es nützlich zu wissen sein, dass sich hinter einem Bibliotheksruf ein Systemruf verbirgt?
+   - [X] {{{green(Um die Antwortzeit auf den Ruf einschätzen zu können.)}}}
+   - [X] {{{green(Um die Erfolgschance des Rufs einschätzen zu können.)}}}
+   - [ ] {{{red(Um zu wissen, um welches Betriebssystem es sich handelt.)}}}
+   - [ ] {{{red(Um die Syntax des Rufs zu verstehen.)}}}
+10. Was kann bei dem Systemruf fork() schiefgehen? Nutzen Sie zur Beantwortung der Frage die Manpage!
+    - [ ] {{{red(Ein anderer Nutzer versucht zeitgleich einen neuen Prozess zu erzeugen.)}}}
+    - [X] {{{green(Es fehlt an Speicherplatz (RAM) für weitere Prozesse.)}}}
+    - [X] {{{green(Das Limit an möglichen Prozessen wurde bereits erreicht.)}}}
+11. Was kann bei dem Systemruf execve() schiefgehen? Nutzen Sie zur Beantwortung der Frage die Manpage!
+    - [X] {{{green(Die angegebene Datei ist nicht vorhanden.)}}}
+    - [X] {{{green(Es fehlen Rechte zur Ausführung der Datei.)}}}
+    - [X] {{{green(Die Datei ist nicht als Programm interpretierbar.)}}}
+12. Was kann bei dem Systemruf unlink() schiefgehen? Auch hier können Sie die Manpage zu Rate ziehen.
+   - [ ] {{{red(Teile des Pfads bestehen aus reservierten Schlüsselwörtern.)}}}
+   - [X] {{{green(Der Pfad führt zu einem Verzeichnis.)}}}
+   - [X] {{{green(Der Pfadname ist zu lang.)}}}
+   - [X] {{{green(Der Pfad existiert nicht.)}}}
+
+* Übung 02 - Aufgaben
+1. Kann und sollte man das KISS-Prinzip immer anwenden?
+   - Ich denke, falls das KISS-Prinzip anwendbar ist, dass man es dann auch immer anwenden sollte. Es spricht nichts dagegen etwas "einfach zu halten", solange dies möglich ist. Im Gegensatz spricht einiges dagegen etwas unnötig kompliziert machen. Daher sollte man das KISS-Prinzip immer anwenden oder zumindest im Hinterkopf behalten. Auf der anderen Seite ist es wahrscheinlich nicht möglich *immer* alles simpel zu halten. Einige Probleme erfordern aufgrund ihrer Natur einfach eine gewisse Komplexität. Jedoch kann man es dann immer noch so einfach wie möglich halten, indem man sich an semantische Namenskonventionen und eine passende Splittung von Funktionalität in Funktionen hält.
+2. Was haben die Begriffe Effizienz, Ressourcen, Effektiv, Kosten für eine Bedeutung und wie hängen die Begriffe zusammen?
+   - Effizienz = eine Handlung/Aktion mit möglichst geringem Ressourcenaufwand vollziehen
+   - Effektivität = das angestrebte Ziel oder einen angestrebten Zustand erreichen (unabhängig vom Ressourcenaufwand und der Effizienz); es geht lediglich darum ob das angestrebte Ziel erreicht worden ist (=1) oder nicht(=0)
+   - Ressourcen = im Kontext von Betriebssystemen sind dies begrenzte Betriebsmittel logischer oder physischer Natur
+   - Kosten = der Ressourcenaufwand bzw. Ressourceneinsatz (inverser Zusammenhang mit der Effizienz)
+   - Zusammenhang: Wenn ich eine bespielsweise eine Bibliotheksfunktion aufrufe entscheidet, die Implementation dieser Funktion darüber wie effizient diese ist. Und zwar anhand daran wieviele Betriebsmittel/Ressourcen aufgewendet werden um diese Aktion auszuführen. Daraus ergeben sich ebenfalls die Kosten. Ob das ganze im Endeffekt effektiv ist, hängt zum einen davon ab, ob die Aktion gelingt und zum anderen davon, ob dies auch die Intention/das Ziel des Aufrufs war bzw des Nutzers.
+3. Was ist der Unterschied von Systemrufen mit und ohne Bibliothek?
+   - der Hauptunterschied ist das der Systemruf mit bzw. via Bibliothek, den zugrunde liegenden Systemruf abstrahiert, so dass man sich um die zugrundeliegenden Details nicht mehr allzu viel Gedanken machen muss
+     - außerdem bleibt das Interface der Systemrufe via Bibliothek gleich zwischen verschiedenen Architekturen
+   - implementiert man hingegen einen Systemruf "manuell" muss man dies explizit und entsprechend der Architektur vollziehen, wobei der Kernel hierfür extra eine Schnittstelle  zur Verfügung stellen kann, wie beispielsweise vDSO auf modernem Linux
+     - dies ist sonst üblicherweise "versteckt" in den jeweiligen Bibliotheken
+   - außerdem vollzieht nicht jede Bibliotheksfunktion einen system call (steht ja auch nicht in der Aufgabe, aber kann man vielleicht nochmal erwähnen)

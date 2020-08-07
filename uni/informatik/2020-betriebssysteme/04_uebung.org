@@ -1,0 +1,11 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: green @@html:<font color="green">$1</font>@@
+#+MACRO: red @@html:<font color="red">$1</font>@@
+
+   - [ ] {{{red(s)}}}
+   - [X] {{{green(s)}}}
+
+* Übung 04 - Selbsttest
+* Übung 04 - Aufgaben

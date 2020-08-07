@@ -1,0 +1,49 @@
+#+TITLE: All Bs
+
+
+* Übung 01
+** Warum kann eine Wetterstation mit Display und 3-Tagevorhersage auch ohne Betriebssystem realisier werden, bei einem Smartphone oder tragbaren Computer ist ein Betrieb ohne Betriebssystem aber kaum sinnvoll?
+
+Im Vergleich zur Wetterstation, verfügen Smartphones oder tragbare Computer über weitaus mehr einzelne Komponenten, die verwaltet werden müssen. Außerdem ist eine Wetterstation eher eine Art "Einzelstück" das an bestimmte Gegebenheiten angepasst wird, während man bei Smartphones und tragbaren Computern Wert darauf legt, dass es einheitliche Schnittstellen gibt, um Kompatibilität zu wahren.
+Das Betriebssystem ist für Smartphones und tragbare Computer auch wichtig im Hinblick auf das Energiemanagement, was hingegen bei einer Wetterstation nicht ganz so relevant ist, da sie stationär ist.
+
+** Welche Ressourcen sollte ein Betriebssystem möglichst verwalten und wie können die Ressourcen als zeitlich und räumlich verwaltet werden?
+
+Das Betriebssystem sollte alle Ressourcen verwalten, die die zur Ausführung von Anwendungen benötigt werden oder diese unterstützen. Da kommt einem beispielsweise der Speicher in den Sinn, der räumlich getrennt/verwaltet wird, indem er in mehrere Bereiche unterteilt wird und so mehrere Anwendungen gleichzeitig auf diesen zugreifen können. Zeitlich verwaltet wird hingegen beispielsweise der Prozessor beziehungsweise "wer/was" gerade auf dem Prozessor rechnen darf. So läuft zum Beispiel gerade ein Prozess von Anwendung A auf dem Prozessor, und anschließend ein Prozess von Anwendung B, während A wartet.
+- PID, Bildschirm, IO, Festplatte, ...
+
+** Warum wird der Aufwand einer Virtuellen Maschine (siehe Vorlesung) betrieben?
+
+Die virtuelle Maschine ist ein Abstraktionslayer, der Dinge, die auf Hardware-Ebene in der Form garnicht existieren "simulieren". So wird zum einen die Nutzung für den Enduser vereinfacht, da er sich nicht mit internen Spezifika rumplagen muss, sondern beispielsweise das zugänglichere & besser verständliche Konzept der "Datei" (Abstraktion) nutzen kann.
+Des Weiteren stellt der Abstraktionslayer Ressourcen zur Verfügung (logische Betriebsmittel) und erlaubt so den Zugriff bzw die Nutzung von Ressourcen die so in der Form/Menge oder Qualität garnicht existieren.
+- "simulieren" und "vereinfacht" finde ich nicht ganz Präzise, aber gut.
+
+** Wie viel Standardisierung ist für ein Betriebssystem nötig? Hat sich der Bedarf für Standardisierung über die Zeit verändert?
+
+Zwingend notwendig ist eine Standardisierung für ein Betriebssystem nicht. Allerdings macht es viele Dinge simpler und vereinfacht zum Beispiel die Portierung von Code und Anwendungen, wenn es beispielsweise standardisierte Schnittschnellen gibt.
+In den 80er-Jahren gab es ein besonderen Druck zur Standardisierung, da es viele uneinheitliche Systeme und Schnittstellen gab, sowie zahlreiche "Unixe". In dieser Zeit haben viele der bis heute genutzten Standards ihren Ursprung.
+- Gut aber: Sollte die Netzwerkkommunikation einem Standard folgen?
+
+* Übung 02
+** Kann und sollte man das KISS-Prinzip immer anwenden?
+
+KISS meint so einfach wie möglich, nicht einfacher. Wenn etwas von Natur aus komplex ist, ist einfach (nach KISS) halt genau so Komplex (aber nicht Komplexer). Daher sollte man es immer anwenden.
+
+** Was haben die Begriffe Effizienz, Ressourcen, Effektiv, Kosten für eine Bedeutung und wie hängen die Begriffe zusammen?
+
+- Effizienz = eine Handlung/Aktion mit möglichst geringem Ressourcenaufwand vollziehen
+- Effektivität = das angestrebte Ziel oder einen angestrebten Zustand erreichen (unabhängig vom Ressourcenaufwand und der Effizienz); es geht lediglich darum ob das angestrebte Ziel erreicht worden ist (=1) oder nicht(=0)
+- Ressourcen = im Kontext von Betriebssystemen sind dies begrenzte Betriebsmittel logischer oder physischer Natur
+- Kosten = der Ressourcenaufwand bzw. Ressourceneinsatz (inverser Zusammenhang mit der Effizienz)
+- Zusammenhang: Wenn ich eine bespielsweise eine Bibliotheksfunktion aufrufe entscheidet, die Implementation dieser Funktion darüber wie effizient diese ist. Und zwar anhand daran wieviele Betriebsmittel/Ressourcen aufgewendet werden um diese Aktion auszuführen. Daraus ergeben sich ebenfalls die Kosten. Ob das ganze im Endeffekt effektiv ist, hängt zum einen davon ab, ob die Aktion gelingt und zum anderen davon, ob dies auch die Intention/das Ziel des Aufrufs war bzw des Nutzers.
+
+** Was ist der Unterschied von Systemrufen mit und ohne Bibliothek?
+- der Hauptunterschied ist das der Systemruf mit bzw. via Bibliothek, den zugrunde liegenden Systemruf abstrahiert, so dass man sich um die zugrundeliegenden Details nicht mehr allzu viel Gedanken machen muss
+- außerdem bleibt das Interface der Systemrufe via Bibliothek gleich zwischen verschiedenen Architekturen
+
+- implementiert man hingegen einen Systemruf "manuell" muss man dies explizit und entsprechend der Architektur vollziehen, wobei der Kernel hierfür extra eine Schnittstelle zur Verfügung stellen kann, wie beispielsweise vDSO auf modernem Linux
+- dies ist sonst üblicherweise "versteckt" in den jeweiligen Bibliotheken
+
+- außerdem vollzieht nicht jede Bibliotheksfunktion einen system call (steht ja auch nicht in der Aufgabe, aber kann man vielleicht nochmal erwähnen)
+
+** Implementieren Sie ein Programm, welches ein per Kommandozeilenparameter übergebenes (beliebig verschachteltes) Verzeichnis einliest. Die Länge aller regulären Dateien soll addiert und die Summe am Ende ausgegeben werden. Verwenden Sie unter UNIX opendir(), readdir(), closedir(), und lstat()
