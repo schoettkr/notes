@@ -1,0 +1,549 @@
+* Life
+** Uni
+*** SoSe 2019
+Module:
+- Datenstrukturen
+- Informatik II
+- Proseminar Informatik (?)
+- Rechnernete
+- Einfuehrung Kuenstliche Intelligenz (?)
+- Datenbanken & Webtechniken
+- Datenbanken & Objektorientierung (?)
+- Betriebssysteme
+- Sicherheit Verteilter Systeme (?)
+- Mediencodierung (?)
+
+
+Datenstrukturen
+- Vorlesungen: Donnerstag & Freitag 11:30 bis 13:00
+- Uebungen: divers an Montags und Donnerstags
+
+Info II
+- Vorlesung: Donnerstag 07:30 - 09:00
+- Uebungen: divers an Montag Mittwoch Donnerstag Freitag
+
+Rechnernetze
+- Vorlesung: Dienstag 11:30-13:00
+- Uebung: Termine 2x Donnerstags, 1 x Mittwochs
+
+Sicherheit Verteilter Systeme
+- Vorlesung: Dienstag 13:30-15:00
+- Uebung: Mittwoch 13:30 - 15:00
+
+500110 Proseminar Informatik (255030-D110) -> keine Angaben
+- Ergaenzung es gibt diverse Proseminare dies sollte wohl bedacht sein
+- es scheint als waere es keine schlechte Idee dieses Sem Proseminar zu machen
+
+Datenbaken & Webtechniken
+Vorlesung: Mittwoch 09:15 - 10:45
+Uebung: Termine Dienstag 07:30-09:00 oder Donnerstag 09:15-10:45
+
+Betriebssysteme
+- Vorlesung: Donnerstag 11:30-13:00 -> Kollaps with Datenstrukturen -.-
+- Uebungen: Freitag 09:30-11:00 o Montag 13:45-15:15
+
+Einfuehrung KI
+- Vorlesung: Montag 11:30-13:00
+- Uebung: Mittwoch o Donnerstag o Freitag
+
+Mediencodierung
+- klingt eig ganz gut
+- Vorlesung: Donnerstag 13:45-15:15
+- Uebungen: sehr divers
+
+*** SoSe 2020
+- Kurse:
+  - Betriebssysteme
+    - 565150 Betriebssysteme Übung Freitag (Wöchentlich) 09:15-10:45
+  - Datenstrukturen
+    - 500010 Datenstrukturen Übung Freitag (Wöchentlich) 11:30-13:00
+  - Grundlagen Info II
+    - 511050 Grundlagen der Informatik II Übung Mittwoch (14-tägig, ungerade KW) 15:30-17:00 	1/368 (neu: A10.368) 250110-060
+    - 511050 Grundlagen der Informatik II Praktikum Mittwoch (14-tägig, gerade KW) 15:30-17:00 	1/B202 (neu: A11.202)
+  - Datenbanken & Webtechniken
+    - keine Klausur sondern Projekt, attenden weder VL noch Uebung
+  - Franzoesisch
+    - 36000-300Kurs 1 (A1)Ü4AhrensMi 13:45 -15:152/W061 (C25.061)
+    - 36000-300ADo11:30 -13:002/W063 (C25.063)
+
+
+** Misc
+- Arzt: Michael Lewicki
+*** Programming Ressources
+- Frontend Masters past livestreams: https://livestream.com/accounts/4894689
+- Frontend Masters Handbook: https://frontendmasters.com/books/front-end-handbook/2019/
+- JavaScript Handbook: https://www.freecodecamp.org/news/the-complete-javascript-handbook-f26b2c71719c/
+- really comprehensive JavaScript info https://javascript.info/
+- gigantic comprehenisve org mode documentation http://doc.norang.ca/org-mode.html
+- JavaScript: https://exploringjs.com/impatient-js/toc.html
+- CS: https://teachyourselfcs.com/
+- https://pirple.thinkific.com/pages/courses
+- C++ https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
+- https://wiki.nikitavoloboev.xyz/
+- https://nathanwailes.atlassian.net/wiki/spaces/MTOVT/overview
+- https://www.reddit.com/r/learnprogramming/comments/gsansp/my_55step_selftaught_cs_curriculum_updated/
+- https://runestone.academy/runestone/books/published/pythonds/index.html
+- https://www.programiz.com/dsa/avl-tree
+*** Download from livestream.org
+1. Open the livestream video with network tab opened and filter for "m3u8"
+2. Copy that url, optionally remove suffix like start/end
+   - you can check the formats with -F but will probably 0
+3. youtube-dl -f 0 {URL}
+
+ Alternatively downloading the m3u8 file gives a list of all the associated TS (transport stream) files
+*** Record a frontend master livestream workshop
+1. Go to the live workshop
+2. Open the network tab
+3. Search for the source `livestream.com` url (e.g https://livestream.com/accounts/4894689/events/9130059/player?width=960&height=540&enableInfoAndActivity=true&autoPlay=true)
+   - can be found in the request origin header to `playback2.akamized.net` where the video is hosted
+4. Request the formats for the link acquired in step 3, eg: ~youtube-dl -F https://livestream.com/accounts/4894689/events/9130059/player?width=960&height=540&enableInfoAndActivity=true&autoPlay=true~
+5. Download the livestream as a usual video with the corresponding format, eg ~youtube-dl -f hls-5256-1 https://livestream.com/accounts/4894689/events/9130059/player\?width\=960\&height\=540\&enableInfoAndActivity\=true\&autoPlay\=true~
+   - beware about the fileformat in regards to resulting file sizes!
+   - also be careful when stopping the recording to not corrupt the file: press 'q', wait, press 'q', wait, press C-c once until it stops from itself and never twice
+   - TODO: this might stop randomly or when ~1 GB filesize is reached, automate this to restart the command (files will be kept because they have a timestamp but be careful still)
+   - i used this one successfully with good quality and efficient storage size ~youtube-dl -f hls-2756-1 https://livestream.com/accounts/4894689/events/9130059/player\?width\=960\&height\=540\&enableInfoAndActivity\=true\&autoPlay\=true~
+
+
+
+*** Convert vimeo blob
+- from StackOverflow: "Currently, for Vimeo it is much easier and doesn't require all the steps. Simply open a Vimeo video, find the <video> tag in the dev tools DOM structure and change the src attribute from blob:... to x. Nothing will happen - this is ok. Now change it again, to y. Chrome will convert it 'magically' to the URL like in step 8 or 9. :-)"
+*** Latex/PDF/Markdown
+- https://learnbyexample.github.io/tutorial/ebook-generation/customizing-pandoc/
+*** Master Study Plan [0/0]
+- [X] CS Fundamentals I
+- [X] CS Fundamentals II
+- [X] JavaScript: The Hard Parts, v2
+- [ ] JavaScript: The Hard Parts of Object Oriented JavaScript
+- [ ] Hard Parts: Functional JS Foundations
+- [ ] JavaScript: The New Hard Parts
+- [ ] The Hard Parts of Servers & Node.js
+- [ ] Digging Into Node.js
+- [ ] API Design in Node.js, v3
+**** Keep an eye on [0/5]
+- [ ] Advanced React Patterns
+- [ ] Testing React Applications v3
+- [ ] Angular 9 (April 29)
+- [ ] The Hard Parts of React (May 28)
+- [ ] Python Fundamentals v2 (June 4)
+**** Interview/Uni Prep [0/4]
+- [ ] A Practical Guide to Algorithms with JavaScript
+- [ ] Introduction to Data Structures for Interviews
+- [ ] Tree and Graph Data Structures
+- [ ] Interviewing for Front-End Engineers
+**** Leetcode
+**** Others
+- C++ https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+- Java https://java-programming.mooc.fi/part-1
+- Python https://www.fullstackpython.com/
+- Software Construction https://ocw.mit.edu/ans7870/6/6.005/s16/
+- for books in general https://teachyourselfcs.com
+- Angular https://www.newline.co/ng-book/2/#packages
+- LRU etc: https://open.appacademy.io/learn/full-stack-online/data-structures-and-algorithms/set-and-int-set
+- DS in general: https://open.appacademy.io/learn/full-stack-online/data-structures-and-algorithms/constant--linear--logarithmic-math-behavior
+- https://www.hackerearth.com/de/practice/
+- http://aosabook.org/en/index.html
+- https://frontendmasters.com/books/front-end-handbook/2019/
+- https://realpython.com/sorting-algorithms-python/
+*** Places to get stuff
+- https://eybooks.com
+- https://b-ok.org
+- https://rutracker.org
+- http://gen.lib.rus.ec
+- IRC
+- add `filetype:pdf` to google search
+*** Personal Data
+**** Postnummer
+862172253
+*** Body Workout Routine
+https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine
+*** Emacs Restclient Example
+#+BEGIN_SRC sh
+# -*- restclient -*-
+#
+# Gets  all Github APIs, formats JSON, shows response status and headers underneath.
+# Also sends a User-Agent header, because the Github API requires this.
+#
+GET https://api.github.com
+User-Agent: Emacs Restclient
+
+#
+# XML is supported - highlight, pretty-print
+#
+GET http://www.redmine.org/issues.xml?limit=10
+
+#
+# It can even show an image!
+#
+GET http://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png
+#
+# A bit of json GET, you can pass headers too
+#
+GET http://jira.atlassian.com/rest/api/latest/issue/JRA-9
+User-Agent: Emacs24
+Accept-Encoding: compress, gzip
+
+#
+# Post works too, entity just goes after an empty line. Same is for PUT.
+#
+POST https://jira.atlassian.com/rest/api/2/search
+Content-Type: application/json
+
+{
+        "jql": "project = HSP",
+        "startAt": 0,
+        "maxResults": 15,
+        "fields": [
+                "summary",
+                "status",
+                "assignee"
+        ]
+}
+#
+# And delete, will return not-found error...
+#
+DELETE https://jira.atlassian.com/rest/api/2/version/20
+#+END_SRC
+*** Screencast/record on Linux
+https://ubuntuforums.org/showthread.php?p=8746719#post8746719
+- ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 output.mkv
+*** Get free edu mail address
+I noticed a few posts on a way to get an .edu email but these were quite old and outdated. I figured out a way to make it work right now and you get your .edu email in 15 minutes.
+Here's how to get your free .edu email
+
+1. Go to cccapply.org and select Cuesta College from the dropdown menu and hit apply
+2. You will be taken to Cuesta College's website. Hit Apply Online Today for the latest term.
+3. You will be taken to Opencccapply.net, Create an account here using fake name, address, SSN from fakenamegenerator.com
+4. After you are done signing up press the start a new application button and select Cuesta College
+5. Press Start Application and fill up the application with the same data.
+6. Submit the application. If you have given your SSN (fake), You should get an email with instructions to get your .edu email ( your_name@my.cuesta.edu )
+7. Enjoy the benefits
+* Work
+** Accounts
+dayik37540@gilfun.com
+*** Main Dev Account
+- device: Redmi Note 8
+- credentials: lennartschoettker@hotmail.com
+*** Second Account
+- device: doggee Y6
+- credentials: why5@puppetmail.de Swordfish+1
+*** Third Account
+Emulator
+- thirdacc@puppetmail.de
+- Swordfish+1
+** Knexfile
+module.exports = {
+  host: {
+    client: 'mysql2',
+    useNullAsDefault: true,
+    connection: {
+      host: '172.17.0.2',
+      user: 'root',
+      socketPath: '/var/run/mysqld/mysqld.sock',
+      password: 'mypass',
+      database: 'ambitorio',
+    },
+  },
+
+  socket: {
+    client: 'mysql2',
+    useNullAsDefault: true,
+    connection: {
+      host: '172.17.0.2',
+      socketPath: '/var/run/mysqld/mysqld.sock',
+      user: 'root',
+      password: 'mypass',
+      database: 'ambitorio',
+    },
+  },
+  client: 'mysql2',
+  connection: {
+    host: '172.17.0.2',
+    socketPath: '/var/run/mysqld/mysqld.sock',
+    user: 'root',
+    password: 'mypass',
+    database: 'ambitorio',
+  },
+};
+** Docker
+Spin up the db container with the db data mounted in from the host via bind mount:
+#+BEGIN_SRC sh
+docker run --name ambi-db --mount type=bind,source=/home/eos/dev/ambitorio-database,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.4
+#+END_SRC
+Or spin up with the data mounted via an (existing) volume:
+#+BEGIN_SRC sh
+docker run --name ambi-db --mount type=volume,source=ambitorio-db-volume,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.4
+#+END_SRC
+(also see https://github.com/moby/moby/issues/25245#issuecomment-365970076)
+
+
+Start/stop the above container:
+#+BEGIN_SRC sh
+docker start ambi-db
+docker stop ambi-db
+#+END_SRC
+
+** Database
+- to create a db dump run: ~mysqldump ambitorio > backup-file.sql~
+- to restore make that you have the db (~create database ambitorio~) and then run ~mysql ambitorio < backup-file.sql~
+- current dump should be in [[file:work/backup-file.sql][backup-file.sql]]
+- tip: dump the db before every db change/modification and copy it out from the container to the host via ~cp ambi-db:/backup-file.sql ~/dev/notes/work/$(date +%s)-backup-file.sql~
+** CSS
+*** Dont expand flex childs to match heights of other (wrapping) child
+- use ~align-self~ on childs that should not expand to match
+** Identity Server
+- https://www.google.com/search?bih=954&biw=1875&hl=en&sxsrf=ALeKk00PQBNS7B8wNf6UkBLA3K7Kbaeg2w%3A1588795823920&ei=rxmzXrrXN-SBk74P3aO6uAk&q=identity+server+form&oq=identity+server+form&gs_lcp=CgZwc3ktYWIQAzIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoECAAQRzoECAAQQzoCCABQraABWLWkAWCppgFoAHACeACAAV6IAbIDkgEBNZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwj66tHVhaDpAhXkwMQBHd2RDpcQ4dUDCAs&uact=5
+- http://docs.identityserver.io/en/stable/topics/signin.html
+- http://docs.identityserver.io/en/3.1.0/endpoints/authorize.html
+- http://docs.identityserver.io/en/3.1.0/intro/big_picture.html
+*** Ambitorio Configuration
+**** Discover CL Auth
+The discovery endpoint can be used to retrieve metadata about your IdentityServer - it returns information like the issuer name, key material, supported scopes etc. See the spec for more details.
+The discovery endpoint is available via /.well-known/openid-configuration relative to the base address, e.g.:
+
+- env.CL_AUTH = https://auth-beta.coreledger.net
+
+#+BEGIN_SRC javascript
+async function discoverIssuer() {
+  try {
+    Issuer.defaultHttpOptions = {
+      timeout: 10000,
+    };
+    const issuer = await Issuer.discover(
+      `${process.env.CL_AUTH}/.well-known/openid-configuration`
+    );
+    authenticator(issuer);
+  } catch (err) {
+    logger.error(`
+    CoreLedger is down!
+    Error message: ${err}
+    Trying again in 5 min.
+    `);
+    setTimeout(discoverIssuer, 300000);
+  }
+}
+
+discoverIssuer();
+#+END_SRC
+
+**** Auth Parameters to pass to CL
+- env.TX_AUTH_SCOPE=beta.ambitorio.clmp.be
+- env.CLIENT_ID_FRONTEND=beta.ambitorio.fe
+- env.SERVER_HOST=http://127.0.0.1
+- env.SERVER_PORT=:3000
+
+#+BEGIN_SRC javascript
+  const client = new oidcIssuer.Client({
+    client_id: process.env.CLIENT_ID_FRONTEND,
+    response_types: ['id_token token'],
+  }); // => Client
+
+  client.CLOCK_TOLERANCE = 5;
+
+  const params = {
+    redirect_uri: `${process.env.SERVER_HOST}${process.env.SERVER_PORT}/auth/callback`,
+    scope: `openid profile ${process.env.TX_AUTH_SCOPE}`,
+    response_mode: 'form_post',
+  };
+  const passReqToCallback = false;
+  const usePKCE = true;
+#+END_SRC
+
+**** Auth Callback
+- env.CL_API=https://ambitorio-beta.coreledger.net/
+
+#+BEGIN_SRC javascript
+router.post(
+  '/auth/callback',
+  passport.authenticate('oidc', { failureRedirect: '/' }),
+  async (req, res) => {
+    logger.debug('Starting callback for OIDC login');
+    const options = {
+      url: `${process.env.CL_API}/api/auth/signin-oidc`,
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${req.user.token}`,
+      },
+      json: true,
+    };
+#+END_SRC
+
+** Environment Credentials
+- ClientId: #{ISNamespace}#.#{TenantName}#.wlp_fe
+- scopes: ["openid", "profile", "#{ISNamespace}#.txapi_core", "#{ISNamespace}#.#{TenantName}#.clmp.be"]
+- "cors": ["http://127.0.0.1:3000", "http://157.230.115.45"]
+- "redirecturis": ["http://127.0.0.1:3000/auth/callback", "http://157.230.115.45/auth/callback"]
+- "postlogoutredirecturis": ["http://127.0.0.1:3000", "http://157.230.115.45"],
+- #{ISNamespace}# = environment: "uat" or "pilot"
+- #{TenantName}# = tenant: "bankfrick", "swic" or "tamlan"
+
+
+export const uat_cl_REST_API_CONFIG = {
+    name: 'UAT CL',
+    API_HOST: "https://uattamlan.coreledger.net:58443",
+    TX_API_HOST: "https://txapi-uat.coreledger.net/v1.0/api",
+    TX_AUTH_HOST: "https://auth-uat.coreledger.net",
+    BLOB_URL: "https://tenantalldevacc.blob.core.windows.net/trading-app-configs",
+    WALLET_PREFIX: "tradeapp",
+    IS_CONFIG: {
+        response_type: "code",
+        redirect_uri: "tradingapp://login",
+        post_logout_redirect_uri: "tradingapp://logout",
+        client_id: "uat.trading.app.v1",
+        scope: "openid profile uat.txapi_core uat.txapi_device uat.tamlan.clmp.be offline_access"
+    }
+};
+*** Env backup
+# CLIENT_ID_FRONTEND=uat.tamlan.wlp_fe
+CLIENT_ID_FRONTEND=beta.ambitorio.fe
+
+# API_HOST=https://uattamlan.coreledger.net:58443
+API_HOST=https://ambitorio-beta.coreledger.net/
+TX_API_HOST=https://txapi-uat.coreledger.net/v1.0/api
+# TX_AUTH_HOST=https://auth-uat.coreledger.net
+TX_AUTH_HOST=https://auth-beta.coreledger.net
+
+# TX_SCOPE=uat.txapi_core
+# TX_SCOPE=beta.ambitorio.clmp.be
+# BACKEND_SCOPE=uat.tamlan.clmp.be
+
+
+
+
+SERVER_HOST=http://127.0.0.1
+SERVER_PORT=5000
+FRONTEND_PORT=3000
+
+BLOB_URL=https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs
+
+CL_AUTH=https://auth-beta.coreledger.net
+CLIENT_ID_FRONTEND=beta.ambitorio.fe
+TX_AUTH_SCOPE=beta.ambitorio.clmp.be
+CL_API=https://ambitorio-beta.coreledger.net/
+
+JWT_KEY=Swordfish+1
+SESSION_SECRET=Fishsword+1
+
+** WL App
+*** QR Code Scan Patterns
+- QR_TYPES.CHECK_ADDRESS
+  - {T: 'V', A: '0xabcdef0123'}
+*** Address/Wallet creation and storing
+#+BEGIN_SRC javascript
+let bytes = ethersUtils.randomBytes(32);
+let randomMnemonic = ethersUtils.HDNode.entropyToMnemonic(bytes, wordlists.en);
+const wallet = Wallet.fromMnemonic(randomMnemonic);
+
+Debugger.logAction({
+    label: 'wallet created',
+    type: 'LOCAL_DATA',
+    logType: Debugger.EVENT_TYPES.SUCCESS,
+    data: wallet,
+});
+const _deviceCredits = {
+    ...deviceCredits,
+    privateKey: wallet.privateKey,
+    publicKey: wallet.address,
+    mnemonic: randomMnemonic,
+    step: REGISTER_IN_TX_STEPS.GENERATE_KEYPAIR
+};
+dispatch(AppActions.storeDeviceCredits(_deviceCredits));
+await storeDeviceData(userId, _deviceCredits);
+Debugger.logAction({
+    label: 'save wallet data',
+    type: 'LOCAL_DATA',
+    logType: Debugger.EVENT_TYPES.SUCCESS,
+    data: {..._deviceCredits},
+});
+this.addWalletsToTx(userId, _deviceCredits);
+
+#+END_SRC
+
+** Unterschied zw oidc.credits.accessToken und deviceCredits.credits.txAccessToken
+*** Tokentype oidc
+- es gibt ein access token das man bei login via oidc bekommt womit man API_HOST querien kann
+  - wird hier gesetzt: ~static storeAccessCredits(credits)~
+  - das sind die tokens und credits die im tokenset enthalten sind bei normalem login
+    - die app haendelt zusaetzlich ein refresh token aber refresh tokens werden in vanilla passport nicht beachtet (https://github.com/fiznool/passport-oauth2-refresh)
+*** Tokentype tx
+- moechte man spez. die TX_API (nicht Auth) querien benoetigt man hierfuer ebenfalls ein access token extra fuer die tx api, das man sich auf anderem wege zuvor beschaffen muss
+* Snippets
+** Skeleton Wave Loading Effect
+Overflow of wavy component has to be hidden
+CSS:
+#+BEGIN_SRC css
+.card-wave {
+  position: relative;
+}
+
+.card-wave::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  animation: card-wave 2.5s infinite;
+}
+@keyframes card-wave {
+  100% {
+    transform: translateX(100%);
+  }
+}
+#+END_SRC
+#+BEGIN_SRC javascript
+<Card
+loading={loading}
+name={`${name} (${ticker})`}
+iconUrl={`${icon}`}
+description={`Price ${price} CHF`}
+/>
+#+END_SRC
+#+BEGIN_SRC javascript
+  loading = false,
+   svg,
+ }) => {
+   return (
+     <div
+      className={`${loading ? 'card-loading' : ''}
+                  overflow-hidden flex flex-col w-full
+                  bg-cl-indigo-light rounded border-t-1
+                  border-cl-indigo-dark`}
+#+END_SRC
+** Express Best Practices
+http://expressjs.com/en/advanced/best-practice-performance.html
+** Deploy remotely through git
+https://medium.com/@francoisromain/vps-deploy-with-git-fea605f1303b
+** Sum Org Table Cells
+01:20 Di + 09:15 Mi + 09:00 Do + 09:45 Fr = 29h 20m
+|    Mo |    Di |    Mi |    Do |    Fr |    Total |
+|-------+-------+-------+-------+-------+----------|
+| 00:00 | 01:20 | 09:15 | 09:00 | 09:45 | 29:20:00 |
+#+TBLFM: $6=$1+$2+$3+$4+$5;T
+
+* Misc Links
+** Open Source Legal Documents
+https://www.docracy.com/
+** Sign PDFs
+https://dochub.com/
+** Bitcoin Wiki
+- https://en.bitcoin.it/wiki/Main_Page
+** Leetcode
+- https://leetcode.com/discuss/interview-experience/687776/nda-facebook-e5-menlo-park-jun-2020-offer
+** Software Interviews
+- https://www.jarednelsen.dev/posts/The-horrifically-dystopian-world-of-software-engineering-interviews
+* Articles
+** JSON Web Tokens (JWT)
+- https://medium.com/ag-grid/a-plain-english-introduction-to-json-web-tokens-jwt-what-it-is-and-what-it-isnt-8076ca679843
+** NodeJs Error Handling
+- https://stackoverflow.com/questions/7310521/node-js-best-practice-exception-handling
+- https://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/
+- https://levelup.gitconnected.com/the-definite-guide-to-handling-errors-gracefully-in-javascript-58424d9c60e6
+
+** Git
+- https://nvie.com/posts/a-successful-git-branching-model/
