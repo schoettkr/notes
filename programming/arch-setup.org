@@ -695,6 +695,26 @@ rsync -a /home/eoshiru/Deezloader\ Music/mp3s/ /run/media/eoshiru/Elements/libra
 To download the audio mp3 only run:
 =youtube-dl --extract-audio --audio-format mp3 LINK=
 
+To get for example the first 30 seconds of a video run
+=ffmpeg -i input.mp4 -c copy -t 30 output.mp4=
+
+Or for to example skip the first 30 seconds and then extract 10 seconds run
+=ffmpeg -ss 00:00:30.0 -i input.wmv -c copy -t 00:00:10.0 output.wmv=
+- instead of hh:mm:ss:xxx format only seconds (s.msec) could be used aswell
+** Screenrecording
+Plain and simple:
+~ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 output.mkv~
+With audio:
+~ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 output.mkv~
+
+Record certain area (fullscreen but not the top 50px):
+~ffmpeg -video_size 1920x1030 -framerate 30 -f x11grab -i :0.0+0,50  output.mkv~
+
+Convert .mkv to .mp4:
+~ffmpeg -i output.mkv -codec copy output.mp4 ~
+
+Extract audio from a video:
+~ffmpeg -i Woche_1_02_SortierenUndSuchen.m4v -vn -acodec copy output-audio.aac~
 ** System Time
 The correct way to do this would be by enabling ntpd.service via systemd.
 pacman -Syu ntp Installed the required package
