@@ -1,0 +1,264 @@
+Übung 0 - KW 16 Wiederholungsaufgaben
+
+* Strukturen
+Aufgabe 7.4:
+Ein Farbbild sei gegeben durch eine Matrix mit 10×10Einträgen. Jeder Eintrag enthält die Farbinformation (Rot-, Grün- und Blauanteil jeweils von 0 bis 255) für den entsprechenden Bildpunkt. Schreiben Sie ein Programm, das die Anzahlvon weißen (rot=255, grün=255, blau=255) und schwarzen (rot=0, grün=0,blau=0) Punkten ermittelt. Die Farbinformation sei gegeben durch die folgende Struktur:
+#+BEGIN_SRC C++
+struct pix {
+  int r;
+  int g;
+  int b;
+};
+#+END_SRC
+Meine Loesung:
+#+BEGIN_SRC C++
+#include <iostream>
+
+
+struct pix {
+  int r;
+  int g;
+  int b;
+};
+
+void countWhiteAndBlack(pix farbbild[10][10]) {
+  int whiteCount = 0;
+  int blackCount = 0;
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      pix* point = &farbbild[i][j];
+      if ((*point).r == 0 && (*point).g == 0 && (*point).b == 0) {
+        blackCount++;
+      } else if ((*point).r == 255 && (*point).g == 255 && (*point).b == 255) {
+        whiteCount++;
+      }
+    }
+  }
+  std::cout << "Whitecount: " << whiteCount << std::endl;
+  std::cout << "Blackcount " << blackCount << std::endl;
+}
+
+int main(int argc, char *argv[]) {
+  pix farbbild[10][10];
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      bool ungerade = j % 2;
+      int val = ungerade ? 0 : 255;
+      farbbild[i][j].r = val;
+      farbbild[i][j].g = val;
+      farbbild[i][j].b = val;
+    }
+  }
+
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      std::cout << farbbild[i][j].r << "|";
+    }
+    std::cout << std::endl;
+  }
+  countWhiteAndBlack(farbbild);
+  return 0;
+}
+#+END_SRC
+Musterlösung: To be added
+
+
+Aufgabe 7.5:
+Schreiben Sie ein Programm, das die Eigenschaften Marke (char[ ]), Kilome-terstand (int), Alter (int), PS (int) und Unfallwagen (bool) für 10 vorgegebene PKW mittels einer Datenstruktur speichert. Alle Informationen sollen in einer Tabelle wohlformatiert ausgegeben und um die pro Jahr gefahrenen Kilometerergänzt werden. Geben Sie alle Tabelleneinträge geordnet nach dem Alter der Fahrzeuge aus. Ergänzen Sie anschließend eine Suche, ob die Lieblingsautomarkedes Nutzers enthalten ist
+
+Meine Loesung:
+#+BEGIN_SRC C++
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+
+//Definition Datensatz car
+struct car {
+  string marke;
+  int km;
+  int alter;
+  int ps;
+  bool unfall;
+};
+
+int main (void)
+{
+
+  ifstream einlesen ("autos.txt"); // oeffnen einer Datei zum Lesen ihrer Inhalte
+  if (!einlesen)
+    {
+      cout << "Datei konnte nicht geoeffnet werden" << endl;
+      return 0;
+    }
+
+  int i;
+  car cars[10];
+  for (i=0; i<10; i++)
+    {
+      car currentCar;
+      einlesen >> currentCar.marke >> currentCar.km >> currentCar.alter >> currentCar.ps >> currentCar.unfall;
+
+      cars[i] = currentCar;
+        }
+  einlesen.close();
+
+  //Sortieren: Alle Jahre von 0 ... 150 versuchen und bei Treffer auto ausgeben
+  //
+  for (int year = 0; year <= 150; year++) {
+    for (i = 0; i < 10; i++) {
+      if (cars[i].alter == year) {
+        cout << "Marke: " << cars[i].marke;
+        cout << " Km: " << cars[i].km;
+        cout << " Alter: " << cars[i].alter;
+        cout << " PS: " << cars[i].ps;
+        cout << " Unfallwagen: " << cars[i].unfall;
+        cout << " Km pro Jahr: " << cars[i].km/cars[i].alter;
+        cout << endl;
+      }
+    }
+  }
+  //Lieblingsmarke eingeben
+  //alle Autos damit vergleichen und wenn gefunden, dies dem Nutzer mitteilen
+  string marke;
+  cout << "Geben Sie ihre Lieblingsmarke ein um zu suchen: ";
+  cin >> marke;
+  for (i = 0; i < 10; i++) {
+    if (cars[i].marke == marke) {
+      cout << "Gefunden: ";
+      cout << "Marke: " << cars[i].marke;
+      cout << " Km: " << cars[i].km;
+      cout << " Alter: " << cars[i].alter;
+      cout << " PS: " << cars[i].ps;
+      cout << " Unfallwagen: " << cars[i].unfall;
+      cout << " Km pro Jahr: " << cars[i].km/cars[i].alter;
+      cout << endl;
+    }
+  }
+
+
+  return 0;
+}
+#+END_SRC
+Musterlösung: To be added
+
+* Funktionen
+Aufgabe 8.5/8.6:
+Schreiben Sie eine Funktion, die die Fakultät einer natürlichen Zahl berechnetund zurück gibt. Verwenden Sie die Fakultätsfunktion um folgende Zahlenfolge zu berechnen: $-1 + \frac{1}{2!} - \frac{1}{3!} + \frac{1}{4!} - .. + (-1)^N * \frac{1}{N!}$
+
+Meine Loesung:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int faculty(int n) {
+  int res = 1;
+  while (n > 1) {
+    res *= n;
+    n--;
+  }
+  return res;
+}
+
+int main() {
+  int res = faculty(5);
+  cout << res << endl;
+  return 0;
+}
+#+END_SRC
+Musterlösung:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+// berechnet a^b
+// Hinweis: nur korrekt fuer b>=0
+float pow(float basis, int exponent)
+{
+	float erg=1;
+
+	while (exponent--)
+		erg *= basis;
+
+	return erg;
+}
+
+int fakultaet(int n)
+{
+	int erg = 1;
+	for (int i=2; i<=n; i++)
+		erg *= i;
+
+	return erg;
+}
+
+int main()
+{
+	int n;
+	cout << "Wie viele Terme: ";
+	cin >> n;
+
+	float sum=0;
+	for (int i=1; i<=n; i++)
+	{
+		sum += pow(-1,i)*1/fakultaet(i);
+	}
+	cout << "Summe: " << sum << endl;
+
+	return 0;
+}
+#+END_SRC
+* Rekursion
+Aufgabe 9.5: Die Stirling-Zahl zweiter Art S(n, k)gibt die Anzahl der k-elementigen Partitionen einer n-elementigen Menge an. Einfach ausgedrückt: Alle Elemente (n) einer Menge müssen sich in eine bestimmte Anzahl von Guppen (k) aufteilen.Wie viele möglichkeiten gibt es?
+
+Meine Loesung:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int stirling(int n, int k) {
+  if (k > n || n < 0  || k < 0) {
+    return 0;
+  }
+  if (n == k || k == 1) {
+    return 1;
+  }
+
+  return stirling(n-1, k - 1) + k * stirling(n-1, k);
+}
+
+int main() {
+  for (int i = 1; i <= 10; i++) {
+    int res = stirling(i, 2);
+    cout << "Anzahl der Partitionen fuer n=" << i << " betraegt: " << res << endl;
+  }
+  return 0;
+}
+#+END_SRC
+Musterlösung:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int stirling(int n, int k)
+{
+	if (k>n) return 0;
+	if (k==1 || k==n) return 1;
+
+	return stirling(n-1, k-1) + k * stirling(n-1,k);
+}
+
+int main ()
+{
+	for(int n=1; n<10; n++)
+	{
+		for(int r=1; r<=n; r++)
+		{
+			cout << "Es gibt " << stirling(n,r) << " Moeglichkeiten " << n << " Elemente in " << r << "-er Gruppen anzuordnen" << endl;
+		}
+	}
+
+	return 0;
+}
+#+END_SRC

@@ -1,0 +1,218 @@
+#+TITLE: Informatik II - Übung 02
+
+
+* Kapitel 2 - Dynamische Speicherverwaltung
+** Aufgabe 01
+Legen Sie folgende Datenobjekte dynamisch an und initialisieren Sie sie mit den in Klammern angegebenen Werten. Der belegte Speicher soll anschließend wieder freigegeben werden.
+a. ein int (0) und ein double (3.14)
+b. in Feld aus 10 int (es ist jedes Element auf 0 zu setzen)
+c. ine Zeichenkette („Hello World“)
+d. in Punkt in der Ebene (0,0)
+e. Feld aus 5 Punkten (erster Punkt (0,0), zweiter Punkt (1,1) usw.)
+
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+struct point {
+  int x;
+  int y;
+};
+
+int main(int argc, char *argv[]) {
+  // a)
+  int* testInt = new int;
+  ,*testInt = 0;
+  delete testInt;
+  double* testDouble = new double;
+  ,*testDouble = 3.14;
+  delete testDouble;
+  // b)
+  int* testIntArr = new int[10]();
+  delete[] testIntArr;
+  // c)
+  string* testStr = new string;
+  ,*testStr = "Hello World";
+  delete testStr;
+  // d)
+  point* testPoint = new point;
+  (*testPoint).x = 0;
+  testPoint->y = 0;
+  delete testPoint;
+  // e)
+  // How I did it:
+  point** testPoints = new point*[5];
+  for (int i = 0; i < 5; i++) {
+    point* tmpPoint = new point;
+    (*tmpPoint).x = i;
+    (*tmpPoint).y = i;
+    testPoints[i] = tmpPoint;
+  }
+
+  for (int i = 0; i < 5; i++) {
+    delete testPoints[i];
+  }
+  delete[] testPoints;
+  //
+  // Musterloesung:
+  // point* punktfeld = new point[5];
+  // for (int i=0; i<5; i++)
+  //   {
+  //     punktfeld[i].x = i;
+  //     punktfeld[i].y = i;
+  //   }
+  // delete[] punktfeld;
+  
+  return 0;
+}
+#+END_SRC
+
+** Aufgabe 02
+Erstellen sie ein C++-Programm, welches die Norm eines Vektors berechnet. Anzahl der Komponenten und Inhalt des Vektors sind vom Nutzer anzugeben.
+#+BEGIN_SRC C++
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double norm ( double *vec, int len) {
+  int i;
+  double n =0.0;
+  for ( i  = 0; i < len; i++){
+    n = n + vec[i]*vec[i];
+  }
+  return sqrt(n);
+}
+
+
+int main () {
+  double *v;
+  int len, i;
+  double n;
+  cout << "Anzahl der Komponenten des Vektor:";
+  cin >> len;
+  v = new double[len];
+  cout << "Vektor eingeben:";
+  for (i = 0; i< len; i++){
+    cin >> v[i];
+  }
+  n = norm(v, len);
+  cout << "Norm des Vektors: " << n<< endl;
+  delete[] v;
+  return 0;
+}
+
+#+END_SRC
+
+** Aufgabe 03
+Entwerfen und implementieren Sie eine Funktion ~resize()~, die ein im Parameter enthaltenes Feld auf eine neue Größe erweitert. Die neue Größe wird in der Funktion vom Nutzer eingegeben. Testen Sie die Funktion in einer ~main()~-Funktion.
+
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+void resize(int* &arr, int &length) {
+  int newLength;
+  cout << "Please enter the new length for the array: ";
+  cin >> newLength;
+  while (newLength <= length) {
+    cout << endl << "Please enter a length, larger than the current length of " << length;
+    cout << endl;
+    cin >> newLength;
+  }
+
+  int* enlargedArr = new int[newLength];
+  for (int i = 0; i < newLength; i++) {
+    int num;
+    if (i < length) {
+      num = arr[i];
+    } else {
+      num = 0;
+    }
+    enlargedArr[i] = num;
+  }
+
+  delete[] arr; // delete 'old' array
+  arr = enlargedArr;
+  length = newLength;
+}
+
+int main(int argc, char *argv[]) {
+  int length = 5;
+  int* arr = new int[length];
+  for (int i = 0; i < length; i++) {
+    arr[i] = i;
+  }
+
+
+  resize(arr, length);
+
+  for (int i = 0; i < length; i++) {
+    cout << arr[i] << "|";
+  }
+  cout << endl;
+
+
+  delete[] arr; // delete 'new' resized array
+  return 0;
+}
+
+
+#+END_SRC
+** Aufgabe 04
+Erstellen Sie ein C++-Programm, das eine vom Anwender zu bestimmende Anzahl von Messwerten einliest und danach berechnet und ausgibt, wie viele Messwerte um mehr als 20 % vom Durchschnitt abweichen.
+#+BEGIN_SRC C++
+
+
+#+END_SRC
+** Aufgabe 05
+Erstellen Sie ein C++-Programm, welches eine Höchstanzahl N vom Nutzer einliest und alle Primzahlen bis zu dieser Anzahl ausgibt. Verwenden Sie den Algorithmus „Sieb des Eratosthenes“
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+  int upperLimit = 0;
+  cout << "Enter upper limit for primes: ";
+  cin >> upperLimit;
+  cout << endl;
+
+  char* nums = new char[upperLimit];
+  for (int i = 0; i < upperLimit; i++) {
+    nums[i] = 0;
+  }
+
+  for (int i = 2; i < upperLimit - 2; i++) { // alt.: i < sqrt(upperlimit)
+    if (nums[i-2] != 0) {
+      continue; // already marked
+    } else {
+      for (int j = i+i; j < upperLimit - 2; j += i) {
+        nums[j-2] = 1;
+      }
+      cout << i << "|";
+    }
+  }
+  cout << endl;
+
+  delete[] nums;
+
+  return 0;
+}
+#+END_SRC
+** Aufgabe 06
+Entwerfen und Implementieren Sie ein C++-Programm zur Verwaltung der Anmeldungen für ein Praktikum. Zuerst wird die maximale Teilnehmerzahl eingelesen. Die Daten der Teilnehmer werden in einem Feld des Typs student mit folgender Strukturdefinition gespeichert:
+#+BEGIN_SRC C++
+struct student {
+  int matnr;
+  string name;
+};
+#+END_SRC
+Das Programm soll folgende Aktionen erlauben:
+a) Ausgabe aller angemeldeten Studenten
+b) Einfügen einer neuen Einschreibung – nur möglich, wenn die maximaleTeilnehmerzahl noch nicht erreicht ist
+c) Erhöhung der maximalen Teilnehmerzahl – Achten Sie darauf, dass allebisherigen Anmeldungen erhalten bleiben
+d) Ausgabe aller Teilnehmer in eine Datei
+e) Einlesen von Teilnehmern aus einer Datei – Die Anzahl der in der Dateienthaltenen Studenten befindet sich als erste Information in der Datei.Die Aktion wird nur ausgeführt, wenn Anzahl der in der Datei enthalte-nen Teilnehmer zur aktuellen Anzahl eingetragener Studenten hinzuge-fügt werden kann. Informieren Sie den Nutzer über den Erfolg/Misserfolgdes Einfügens.
+
+#+BEGIN_SRC C++
+
+#+END_SRC

@@ -1,0 +1,220 @@
+#+TITLE: Informatik II - Übung 01
+
+
+* Kapitel 1 - Referenzen und Zeiger
+** Aufgabe 01
+Erstellen Sie eine Funktion ~void swap(int a, int b)~ die den Inhalt zweier Variablen vertauscht. Welches Ergebnis erwarten Sie?
+
+Das ist so nicht möglich, da Integer primitive values sind und by-copy uebergeben werden. Um wirklich zu tauschen müsste man Referenzen, Pointer oder Object wrapper übergeben.
+#+BEGIN_SRC C++
+#include <iostream>
+
+void swap(int a, int b) {
+  int tmp = b;
+  b = a;
+  a = tmp;
+}
+
+int main(int argc, char *argv[]) {
+  int a = 7;
+  int b = 3;
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  swap(a, b);
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| a: | 7 |
+| b: | 3 |
+| a: | 7 |
+| b: | 3 |
+
+** Aufgabe 02
+Erstellen Sie zwei weitere Versionen der Funktion swap, die nun jeweils das Problem der ersten Version von swap() beheben. Die zweite Version erhält dazu Referenzparameter, die dritte Version erhält die Adressen selbst.
+
+Variante mit Referenzparameter:
+#+BEGIN_SRC C++
+#include <iostream>
+
+void swap(int& a, int& b) {
+  int tmp = b;
+  b = a;
+  a = tmp;
+}
+
+int main(int argc, char *argv[]) {
+  int a = 7;
+  int b = 3;
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  swap(a, b);
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| a: | 7 |
+| b: | 3 |
+| a: | 3 |
+| b: | 7 |
+
+Variante mit Adressen/Pointer:
+#+BEGIN_SRC C++
+#include <iostream>
+
+void swap(int* a, int* b) {
+  int tmp = *b;
+  *b = *a;
+  *a = tmp;
+}
+
+int main(int argc, char *argv[]) {
+  int a = 7;
+  int b = 3;
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  swap(&a, &b);
+  std::cout << "a: " << a << std::endl;
+  std::cout << "b: " << b << std::endl;
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| a: | 7 |
+| b: | 3 |
+| a: | 3 |
+| b: | 7 |
+
+** Aufgabe 03
+Erstellen Sie eine Funktion, die den Inhalt eines Feldes auf den Bildschirm ausgibt. In der Funktion sollen ausschließlich Zeiger für den Zugriff auf das Feld verwendet werden. Der Funktionskopf ist vorgegeben: ~void print(int* array,int len)~
+
+#+BEGIN_SRC C++
+#include <iostream>
+
+void print(int* array, int len) {
+  std::cout << "[";
+  for (int i = 0; i < len; i++) {
+    std::cout << (array)[i] << ", ";;
+  }
+  std::cout << "]" << std::endl;
+}
+
+int main(int argc, char *argv[]) {
+  int nums[] = {0,1,2,3,4,5,6,7,8,9};
+  print(nums, 10);
+  return 0;
+}
+#+END_SRC
+
+** Aufgabe 04
+Implementieren Sie ein C++-Programm, das den Inhalt eines Feldes aufsteigend sortiert. Entwerfen Sie dazu eine Funktion sort(). Zur Vereinfachung können Sie swap() erneut verwenden. Geben Sie das Ergebnis auf den Bildschirmaus.
+
+Mit naiver bubblesort (O(n^2)):
+#+BEGIN_SRC C++
+#include <iostream>
+
+void swap(int& a, int& b) {
+  int tmp = b;
+  b = a;
+  a = tmp;
+}
+
+void print(int* array, int len) {
+  std::cout << "[";
+  for (int i = 0; i < len; i++) {
+    std::cout << (array)[i] << ", ";;
+  }
+  std::cout << "]" << std::endl;
+}
+
+void sort(int* array, int len) {
+  for (int i = 0; i < len-1; i++) {
+    for (int j = i+1; j < len; j++) {
+      if (array[i] > array[j]) {
+        swap(array[i], array[j]);
+      }
+    }
+  }
+}
+
+int main(int argc, char *argv[]) {
+  int nums[] = {9,8,7,6,5,4,3,2,1,0};
+  sort(nums, 10);
+  print(nums, 10);
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | ] |
+** Aufgabe 05
+Geben Sie an, welche Ausgabe das folgende Programmfragment liefert:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+  int a = 1, b = 2, c = 3;
+  int* pa = &a; int* pb = &b; int* pc = &c;
+  *pa = *pb;
+  pb = pc;
+  *pb = a-1;
+  b = *pc +3;
+  cout << a << b << c;
+  cout <<*pa << *pb << *pc;
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+: 2, 4, 1
+: 2, 1, 1
+1. Es werden die Variablen a=1, b=2, c=3 und die Pointer pa, pb und pc angelegt die auf diese zeigen.
+2. a wird auf 2 gesetzt
+3. pb zeigt nun auf c
+4. c wird auf a-1(= 1) gesetzt
+5. b wird auf 4 gesetzt
+6. Ausgabe der Variablen: 2, 4, 1
+7. Ausgabe der dereferenzierten Pointer: 2, 1, 1
+** Aufgabe 06
+Geben Sie an, welche Ausgabe das folgende Programmfragment liefert:
+#+BEGIN_SRC C++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+  int a[5] = {1, 2, 3, 4, 5};
+  int* pa = a;
+  int* pb = &a[3];
+  (*pa)++;
+  pa++;
+  (*pa)++;
+  *pb =*pa;
+  *(pa+1) +=1;
+  pb[1] += 1;
+
+  for (int i=0; i<5; i++) {
+    cout << a[i] << " ";
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+: 2 3 4 3 6
+
+1. pa zeigt auf erstes Element des Arrays a
+2. pb zeigt auf viertes Element des Arrays (4)
+3. Wert von pa->1 wird auf 2 inkrementiert
+4. Pointer pa wird inkrementiert und zeigt jetzt auf das zweite Element (2)
+5. Wert von pa->2 wird auf 3 inkrementiert
+6. Wert von pb->4 wird gleich Wert von pa->3 gesetzt
+7. Pointer pa + 1 also ein Element danach wird um 1 erhöht von 3 auf 4
+8. An der Stelle des vierten Elements (pb) plus Offset i.H.v 1 wird 5 auf 6 erhöht
+9. Ausgabe: 2 3 4 3 6
