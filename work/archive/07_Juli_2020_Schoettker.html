@@ -1,0 +1,2852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Logbook</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Lennart Schoettker" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style type='text/css'>
+html {
+  font-size: 62.5%;
+  font-family: serif; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 60%;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px; }
+
+@media (max-width: 684px) {
+  body {
+    max-width: 98%;
+    font-size: 1.53rem; } }
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+h1 {
+  font-size: 2.35em; }
+
+h2 {
+  font-size: 2.00em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
+hr {
+  border-color: #2c8898; }
+
+a {
+  text-decoration: none;
+  color: #2c8898; }
+  a:hover {
+    color: #982c61;
+    border-bottom: 2px solid #4a4a4a; }
+
+ul {
+  padding-left: 1.4em; }
+
+li {
+  margin-bottom: 0.4em; }
+
+blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2c8898; }
+
+img {
+  max-width: 100%; }
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a; }
+  input:focus, textarea:focus {
+    border: 1px solid #2c8898; }
+
+textarea {
+  width: 100%; }
+
+.button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #2c8898;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #2c8898;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled], button[disabled], input[type='submit'][disabled], input[type='reset'][disabled], input[type='button'][disabled] {
+    cursor: default;
+    opacity: .5; }
+  .button:focus, .button:hover, button:focus, button:hover, input[type='submit']:focus, input[type='submit']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='button']:focus, input[type='button']:hover {
+    background-color: #982c61;
+    border-color: #982c61;
+    color: #f9f9f9;
+    outline: 0; }
+
+textarea, select, input[type] {
+  color: #4a4a4a;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 1px solid #2c8898;
+    outline: 0; }
+
+input[type='checkbox']:focus {
+  outline: 1px dotted #2c8898; }
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+   </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Logbook</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org05970d4">1. Juli 2020 - Total</a></li>
+<li><a href="#org16c24a4">2. KW 27 01.07.2020-05.07.2020</a>
+<ul>
+<li><a href="#orgeadd9ad">2.1. 01.07 Mittwoch</a></li>
+<li><a href="#org3c056e7">2.2. 02.07 Donnerstag</a></li>
+<li><a href="#orgbf4998c">2.3. 03.07 Freitag</a></li>
+</ul>
+</li>
+<li><a href="#org2fd8c3f">3. KW 28 06.07.2020-12.07.2020</a>
+<ul>
+<li><a href="#org04e3f78">3.1. 06.07 Montag</a></li>
+<li><a href="#org88d3bde">3.2. 07.07 Dienstag</a></li>
+<li><a href="#org3812947">3.3. 08.07 Mittwoch</a></li>
+<li><a href="#org6e95bcb">3.4. 09.07 Donnerstag</a></li>
+<li><a href="#org664a7c2">3.5. 10.07 Freitag</a></li>
+</ul>
+</li>
+<li><a href="#org40b5acb">4. KW 29 13.07.2020-19.07.2020</a>
+<ul>
+<li><a href="#org425eab3">4.1. 13.07 Montag</a></li>
+<li><a href="#org7afb164">4.2. 14.07 Dienstag</a></li>
+<li><a href="#orgf668ded">4.3. 15.07 Mittwoch</a></li>
+<li><a href="#org2946d87">4.4. 16.07 Donnerstag</a></li>
+<li><a href="#org4b553f5">4.5. 17.07 Freitag</a></li>
+</ul>
+</li>
+<li><a href="#org54c574e">5. KW 30 20.07.2020-26.07.2020</a>
+<ul>
+<li><a href="#orga216be0">5.1. 20.07 Montag</a></li>
+<li><a href="#orga6fb946">5.2. 21.07 Dienstag</a></li>
+<li><a href="#orgb6583a0">5.3. 22.07 Mittwoch</a></li>
+<li><a href="#orgad103f4">5.4. 23.07 Donnerstag</a></li>
+<li><a href="#org5704bb9">5.5. 24.07 Freitag</a></li>
+</ul>
+</li>
+<li><a href="#orgb0e14dc">6. KW 31 27.07.2020-31.07.2020</a>
+<ul>
+<li><a href="#org64dd11d">6.1. 27.07 Montag</a></li>
+<li><a href="#org71e82d0">6.2. 28.07 Dienstag</a></li>
+<li><a href="#orgeea22ae">6.3. 29.07 Mittwoch</a></li>
+<li><a href="#orga4121d8">6.4. 30.07 Donnerstag</a></li>
+<li><a href="#orga69f287">6.5. 31.07 Freitag</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org05970d4" class="outline-2">
+<h2 id="org05970d4"><span class="section-number-2">1</span> Juli 2020 - Total</h2>
+<div class="outline-text-2" id="text-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">KW 27</th>
+<th scope="col" class="org-right">KW 28</th>
+<th scope="col" class="org-right">KW 29</th>
+<th scope="col" class="org-right">KW 30</th>
+<th scope="col" class="org-right">KW 31</th>
+<th scope="col" class="org-right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">16:25</td>
+<td class="org-right">35:20</td>
+<td class="org-right">33:00</td>
+<td class="org-right">42:50</td>
+<td class="org-right">28:45</td>
+<td class="org-right">156:20:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org16c24a4" class="outline-2">
+<h2 id="org16c24a4"><span class="section-number-2">2</span> KW 27 01.07.2020-05.07.2020</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-right"><b>16:25</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">KW 27 01.07.2020-05.07.2020</td>
+<td class="org-right">16:25</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;02.07 Donnerstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">8:25</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;03.07 Freitag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">8:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgeadd9ad" class="outline-3">
+<h3 id="orgeadd9ad"><span class="section-number-3">2.1</span> 01.07 Mittwoch</h3>
+<div class="outline-text-3" id="text-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>0:00</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org3c056e7" class="outline-3">
+<h3 id="org3c056e7"><span class="section-number-3">2.2</span> 02.07 Donnerstag</h3>
+<div class="outline-text-3" id="text-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:25</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;02.07 Donnerstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:25</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb2be2a3"></a>Organize<br />
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 09:00]--[2020-07-02 Thu 09:15] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgd7b53c0"></a>Call with Hannes, Jevgeny, Mikhail, Thomas<br />
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 09:15]--[2020-07-02 Thu 09:30] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org21a57bc"></a>Cleanup some code in regards to splitting the backend<br />
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 09:30]--[2020-07-02 Thu 11:15] </span> <span class="timestamp">(1:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orged4468a"></a>Sync swic and bf branches with newest stuff from dev/master<br />
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 11:15]--[2020-07-02 Thu 13:25] </span> <span class="timestamp">(2:10)</span>
+</span>
+</p>
+<ul class="org-ul">
+<li>checked assets, got acc, etc</li>
+</ul>
+</div>
+</li>
+<li><a id="org2552ecf"></a>Develop local branch with OIDC flow in frontend instead of BE<br />
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 14:10]--[2020-07-02 Thu 17:00] </span> <span class="timestamp">(2:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org8b4d967"></a>Call with Thomas to go through parts of TFS and plan next steps<br />
+<div class="outline-text-4" id="text-2-2-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-02 Thu 17:00]--[2020-07-02 Thu 18:10] </span> <span class="timestamp">(1:10)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgbf4998c" class="outline-3">
+<h3 id="orgbf4998c"><span class="section-number-3">2.3</span> 03.07 Freitag</h3>
+<div class="outline-text-3" id="text-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:00</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;03.07 Freitag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<ol class="org-ol">
+<li><a id="orge7ab7cf"></a>Organize<br />
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 16:05]--[2020-07-03 Fri 16:20] </span> <span class="timestamp">(0:17)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 09:00]--[2020-07-03 Fri 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgb3626d8"></a>Develop local branch with OIDC flow in frontend instead of BE<br />
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 12:55]--[2020-07-03 Fri 14:45] </span> <span class="timestamp">(1:50)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 09:10]--[2020-07-03 Fri 12:15] </span> <span class="timestamp">(3:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgdbdb733"></a>Prepare call<br />
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 14:45]--[2020-07-03 Fri 15:00] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgcfd00bc"></a>Call with Hannes, Jevgeny, Mikhail, Thomas<br />
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 15:00]--[2020-07-03 Fri 16:05] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org64dc0db"></a>Move logout flow into FE<br />
+<div class="outline-text-4" id="text-2-3-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-03 Fri 16:20]--[2020-07-03 Fri 17:40] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2fd8c3f" class="outline-2">
+<h2 id="org2fd8c3f"><span class="section-number-2">3</span> KW 28 06.07.2020-12.07.2020</h2>
+<div class="outline-text-2" id="text-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-right">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-right"><b>35:20</b></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">KW 28 06.07.2020-12.07.2020</td>
+<td class="org-right">35:20</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;06.07 Montag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:10</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;07.07 Dienstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:35</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;08.07 Mittwoch</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">2:15</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;09.07 Donnerstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:15</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;10.07 Freitag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:05</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org04e3f78" class="outline-3">
+<h3 id="org04e3f78"><span class="section-number-3">3.1</span> 06.07 Montag</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:10</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;06.07 Montag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:10</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org2e34812"></a>Organization<br />
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 09:00]--[2020-07-06 Mon 09:15] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org631b489"></a>Call with Thomas<br />
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 09:15]--[2020-07-06 Mon 10:20] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org38ab6e9"></a>Auth flow<br />
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 10:20]--[2020-07-06 Mon 11:10] </span> <span class="timestamp">(0:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgc856de7"></a>Prepare task for backend / call<br />
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 11:10]--[2020-07-06 Mon 11:45] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org6a074b5"></a>Alignment Call<br />
+<div class="outline-text-4" id="text-3-1-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 11:45]--[2020-07-06 Mon 12:25] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org3c41590"></a>Research and experiment in regards to external color theming<br />
+<div class="outline-text-4" id="text-3-1-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 12:25]--[2020-07-06 Mon 13:40] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org7f95a85"></a>Make assets configurable on external host/source<br />
+<div class="outline-text-4" id="text-3-1-7">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-06 Mon 14:20]--[2020-07-06 Mon 17:50] </span> <span class="timestamp">(3:30)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org88d3bde" class="outline-3">
+<h3 id="org88d3bde"><span class="section-number-3">3.2</span> 07.07 Dienstag</h3>
+<div class="outline-text-3" id="text-3-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:35</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;07.07 Dienstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:35</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org5dac14e"></a>Organization<br />
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 09:00]--[2020-07-07 Tue 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org1adc778"></a>Make assets configurable on external host/source<br />
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 09:10]--[2020-07-07 Tue 11:35] </span> <span class="timestamp">(2:25)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org2a5bb3b"></a>External Color Theming<br />
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 17:30]--[2020-07-07 Tue 18:15] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 14:10]--[2020-07-07 Tue 16:40] </span> <span class="timestamp">(2:30)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 11:35]--[2020-07-07 Tue 13:30] </span> <span class="timestamp">(1:55)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgd37be32"></a>Call with Thomas in regards to BE tasks<br />
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-07 Tue 16:40]--[2020-07-07 Tue 17:30] </span> <span class="timestamp">(0:50)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org3812947" class="outline-3">
+<h3 id="org3812947"><span class="section-number-3">3.3</span> 08.07 Mittwoch</h3>
+<div class="outline-text-3" id="text-3-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>2:15</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;08.07 Mittwoch</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgc47fc10"></a>Various smaller tasks throughout the day<br />
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-08 Wed 09:00]--[2020-07-08 Wed 11:15] </span> <span class="timestamp">(2:15)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org6e95bcb" class="outline-3">
+<h3 id="org6e95bcb"><span class="section-number-3">3.4</span> 09.07 Donnerstag</h3>
+<div class="outline-text-3" id="text-3-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:15</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;09.07 Donnerstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgebdfa12"></a>Deploy external asset config to uat<br />
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-09 Thu 09:00]--[2020-07-09 Thu 10:15] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgd73cda7"></a>External Color Theming<br />
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-09 Thu 13:35]--[2020-07-09 Thu 18:00] </span> <span class="timestamp">(4:25)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-09 Thu 10:15]--[2020-07-09 Thu 12:50] </span> <span class="timestamp">(2:35)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org664a7c2" class="outline-3">
+<h3 id="org664a7c2"><span class="section-number-3">3.5</span> 10.07 Freitag</h3>
+<div class="outline-text-3" id="text-3-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:05</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;10.07 Freitag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:05</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgfab21ec"></a>Organization<br />
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 09:00]--[2020-07-10 Fri 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orge3bc3b1"></a>Prepare &amp; deploy demo for bitcoin suisse<br />
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 09:10]--[2020-07-10 Fri 11:00] </span> <span class="timestamp">(1:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgc732c07"></a>Short call with Thomas<br />
+<div class="outline-text-4" id="text-3-5-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 11:00]--[2020-07-10 Fri 11:05] </span> <span class="timestamp">(0:07)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org6686615"></a>Setup blob for pilot presales<br />
+<div class="outline-text-4" id="text-3-5-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 11:05]--[2020-07-10 Fri 11:50] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org165b0d3"></a>Login/Register<br />
+<div class="outline-text-4" id="text-3-5-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 11:50]--[2020-07-10 Fri 12:15] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org0628fec"></a>Change checkout navigation<br />
+<div class="outline-text-4" id="text-3-5-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 13:30]--[2020-07-10 Fri 14:25] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 12:15]--[2020-07-10 Fri 12:50] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgf13bf00"></a>Disable checkout for empty cart<br />
+<div class="outline-text-4" id="text-3-5-7">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 14:25]--[2020-07-10 Fri 15:10] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org6831ae5"></a>Editable quant. field in cart<br />
+<div class="outline-text-4" id="text-3-5-8">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 15:10]--[2020-07-10 Fri 16:50] </span> <span class="timestamp">(1:40)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org807d634"></a>Add More details button to own wallet cards<br />
+<div class="outline-text-4" id="text-3-5-9">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 16:50]--[2020-07-10 Fri 17:20] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgd1e5cf0"></a>Also retrieve nonsignable (=all) addresses<br />
+<div class="outline-text-4" id="text-3-5-10">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-10 Fri 17:20]--[2020-07-10 Fri 17:45] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org40b5acb" class="outline-2">
+<h2 id="org40b5acb"><span class="section-number-2">4</span> KW 29 13.07.2020-19.07.2020</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-right">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-right"><b>33:00</b></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">KW 29 13.07.2020-19.07.2020</td>
+<td class="org-right">33:00</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;13.07 Montag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:05</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;14.07 Dienstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:05</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;16.07 Donnerstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:35</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;17.07 Freitag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org425eab3" class="outline-3">
+<h3 id="org425eab3"><span class="section-number-3">4.1</span> 13.07 Montag</h3>
+<div class="outline-text-3" id="text-4-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:05</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;13.07 Montag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:05</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org4983714"></a>Organize<br />
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-13 Mon 17:35]--[2020-07-13 Mon 17:50] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-13 Mon 09:00]--[2020-07-13 Mon 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orge073d5d"></a>UOM, Sparks, TUF<br />
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-13 Mon 13:45]--[2020-07-13 Mon 17:00] </span> <span class="timestamp">(3:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-13 Mon 09:10]--[2020-07-13 Mon 13:00] </span> <span class="timestamp">(3:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org9b7ecd0"></a>Call with Thomas<br />
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-13 Mon 17:00]--[2020-07-13 Mon 17:35] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org7afb164" class="outline-3">
+<h3 id="org7afb164"><span class="section-number-3">4.2</span> 14.07 Dienstag</h3>
+<div class="outline-text-3" id="text-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:05</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;14.07 Dienstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:05</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="org-ol">
+<li><a id="org34a5cf8"></a>Organize<br />
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 09:00]--[2020-07-14 Tue 09:05] </span> <span class="timestamp">(7:00)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org7c4f07a"></a>8868: Make features disableable/activateable via admin config settings<br />
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 09:05]--[2020-07-14 Tue 11:45] </span> <span class="timestamp">(2:40)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org348728d"></a>Call with Thomas<br />
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 15:15]--[2020-07-14 Tue 15:45] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 11:45]--[2020-07-14 Tue 12:05] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org85f4564"></a>8892 Make &rsquo;more details&rsquo; customizable via admin config<br />
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 15:45]--[2020-07-14 Tue 16:25] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 13:30]--[2020-07-14 Tue 15:15] </span> <span class="timestamp">(1:45)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 12:05]--[2020-07-14 Tue 13:00] </span> <span class="timestamp">(0:55)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgae28927"></a>8896 Make fees for collection methods customizable via admin config<br />
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-14 Tue 16:25]--[2020-07-14 Tue 17:35] </span> <span class="timestamp">(1:10)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgf668ded" class="outline-3">
+<h3 id="orgf668ded"><span class="section-number-3">4.3</span> 15.07 Mittwoch</h3>
+</div>
+<div id="outline-container-org2946d87" class="outline-3">
+<h3 id="org2946d87"><span class="section-number-3">4.4</span> 16.07 Donnerstag</h3>
+<div class="outline-text-3" id="text-4-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:35</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;16.07 Donnerstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:35</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge61763c"></a>Organize<br />
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 09:00]--[2020-07-16 Thu 09:15] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgdfe2565"></a>Call with Thomas regarding WLA<br />
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 09:15]--[2020-07-16 Thu 10:00] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org2eb1b8b"></a>Setup playground tamlan pilot<br />
+<div class="outline-text-4" id="text-4-4-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 10:00]--[2020-07-16 Thu 12:30] </span> <span class="timestamp">(2:30)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org1963515"></a>Deploy for tamlan pilot<br />
+<div class="outline-text-4" id="text-4-4-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 13:30]--[2020-07-16 Thu 14:30] </span> <span class="timestamp">(1:00)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgc9883a7"></a>CORS for pilots<br />
+<div class="outline-text-4" id="text-4-4-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 14:30]--[2020-07-16 Thu 17:20] </span> <span class="timestamp">(2:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org04dfb71"></a>QR Code configurable via config<br />
+<div class="outline-text-4" id="text-4-4-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-16 Thu 17:20]--[2020-07-16 Thu 18:35] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org4b553f5" class="outline-3">
+<h3 id="org4b553f5"><span class="section-number-3">4.5</span> 17.07 Freitag</h3>
+<div class="outline-text-3" id="text-4-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:15</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;17.07 Freitag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org51ec024"></a>Worked time<br />
+<div class="outline-text-4" id="text-4-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-17 Fri 13:45]--[2020-07-17 Fri 18:00] </span> <span class="timestamp">(4:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-17 Fri 09:00]--[2020-07-17 Fri 13:00] </span> <span class="timestamp">(4:00)</span>
+</span>
+</p>
+<ul class="org-ul">
+<li>habe meine detaillierten Logs heute vergessen, deshalb keine genauere Unterteilung</li>
+<li>hab von 9 bis 18 Uhr gearbeitet und von 13 bis 13:45 Mittagspause gemacht</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org54c574e" class="outline-2">
+<h2 id="org54c574e"><span class="section-number-2">5</span> KW 30 20.07.2020-26.07.2020</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-right">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-right"><b>42:50</b></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">KW 30 20.07.2020-26.07.2020</td>
+<td class="org-right">42:50</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;20.07 Montag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:00</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;21.07 Dienstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">9:55</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;22.07 Mittwoch</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:15</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;23.07 Donnerstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">7:00</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;24.07 Freitag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">9:40</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orga216be0" class="outline-3">
+<h3 id="orga216be0"><span class="section-number-3">5.1</span> 20.07 Montag</h3>
+<div class="outline-text-3" id="text-5-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:00</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;20.07 Montag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgc80df74"></a>Organize<br />
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 09:00]--[2020-07-20 Mon 09:20] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orge25d794"></a>Merge, update, deploy tamlan &amp; presales<br />
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 09:20]--[2020-07-20 Mon 09:40] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org09bdb75"></a>Add changes into SWIC webapp and setup configuration blob etc<br />
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 11:05]--[2020-07-20 Mon 11:30] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 09:40]--[2020-07-20 Mon 10:30] </span> <span class="timestamp">(0:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org5307a88"></a>Debug pilot-tamlan<br />
+<div class="outline-text-4" id="text-5-1-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 10:30]--[2020-07-20 Mon 11:05] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org4bffb69"></a>Make navigation step / ball coonfigruable (color)<br />
+<div class="outline-text-4" id="text-5-1-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 13:15]--[2020-07-20 Mon 13:20] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 11:30]--[2020-07-20 Mon 12:15] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org8c70303"></a>Remove uneeded parts from asset modals<br />
+<div class="outline-text-4" id="text-5-1-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 13:20]--[2020-07-20 Mon 13:40] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org8893f7e"></a>Pair Programming WLA SWIC<br />
+<div class="outline-text-4" id="text-5-1-7">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-20 Mon 13:40]--[2020-07-20 Mon 18:00] </span> <span class="timestamp">(4:20)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orga6fb946" class="outline-3">
+<h3 id="orga6fb946"><span class="section-number-3">5.2</span> 21.07 Dienstag</h3>
+<div class="outline-text-3" id="text-5-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>9:55</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;21.07 Dienstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">9:55</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org38b191b"></a>Organize<br />
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 13:00]--[2020-07-21 Tue 13:15] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 09:00]--[2020-07-21 Tue 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgf1c8007"></a>Make logo adjustable via config<br />
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 09:10]--[2020-07-21 Tue 10:30] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org5f3254b"></a>Enable/disable collection methods via config<br />
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 10:30]--[2020-07-21 Tue 12:15] </span> <span class="timestamp">(1:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgc493f70"></a>Small refactorment<br />
+<div class="outline-text-4" id="text-5-2-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 13:15]--[2020-07-21 Tue 13:35] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgb34df13"></a>Pair Programming WLA SWIC<br />
+<div class="outline-text-4" id="text-5-2-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 16:35]--[2020-07-21 Tue 18:10] </span> <span class="timestamp">(1:00)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 15:40]--[2020-07-21 Tue 15:45] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 13:35]--[2020-07-21 Tue 14:20] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgc6968c5"></a>Set max amount of buyable item via config<br />
+<div class="outline-text-4" id="text-5-2-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 14:20]--[2020-07-21 Tue 15:40] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgb7977b0"></a>Set min amount of buyable item via config<br />
+<div class="outline-text-4" id="text-5-2-7">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 15:45]--[2020-07-21 Tue 16:35] </span> <span class="timestamp">(0:50)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org1927200"></a>Auth into FE (rebase, fix merge conflicts)<br />
+<div class="outline-text-4" id="text-5-2-8">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-21 Tue 18:10]--[2020-07-21 Tue 19:40] </span> <span class="timestamp">(1:30)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgb6583a0" class="outline-3">
+<h3 id="orgb6583a0"><span class="section-number-3">5.3</span> 22.07 Mittwoch</h3>
+<div class="outline-text-3" id="text-5-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:15</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;22.07 Mittwoch</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgbd392cd"></a>Organize<br />
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 10:40]--[2020-07-22 Wed 10:50] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 09:00]--[2020-07-22 Wed 09:05] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orge8d6e01"></a>Update configs for all WLPs, upload new icons &amp; settings, add new section to styles.css<br />
+<div class="outline-text-4" id="text-5-3-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 09:05]--[2020-07-22 Wed 10:40] </span> <span class="timestamp">(1:35)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org407bedd"></a>Max Redeem amount via config<br />
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 12:55]--[2020-07-22 Wed 14:40] </span> <span class="timestamp">(1:45)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 10:50]--[2020-07-22 Wed 11:25] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgecca000"></a>Pair Programming WLA SWIC<br />
+<div class="outline-text-4" id="text-5-3-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 17:45]--[2020-07-22 Wed 18:15] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 14:40]--[2020-07-22 Wed 15:45] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 11:25]--[2020-07-22 Wed 12:55] </span> <span class="timestamp">(1:30)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org64be296"></a>Min Redeem amount via config<br />
+<div class="outline-text-4" id="text-5-3-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-22 Wed 16:45]--[2020-07-22 Wed 17:45] </span> <span class="timestamp">(1:00)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgad103f4" class="outline-3">
+<h3 id="orgad103f4"><span class="section-number-3">5.4</span> 23.07 Donnerstag</h3>
+<div class="outline-text-3" id="text-5-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>7:00</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;23.07 Donnerstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">7:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="org-ol">
+<li><a id="org253b275"></a>Organize<br />
+<div class="outline-text-4" id="text-5-4-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 10:55]--[2020-07-23 Thu 11:15] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 09:00]--[2020-07-23 Thu 09:05] </span> <span class="timestamp">(0:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org6928feb"></a>Scrollable Modal<br />
+<div class="outline-text-4" id="text-5-4-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 09:05]--[2020-07-23 Thu 10:10] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org20653b2"></a>Truncate long product names<br />
+<div class="outline-text-4" id="text-5-4-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 10:10]--[2020-07-23 Thu 10:55] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org81fe90a"></a>Auth Flow FE UAT<br />
+<div class="outline-text-4" id="text-5-4-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 11:05]--[2020-07-23 Thu 12:20] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org8082335"></a>Refactor sidebar links<br />
+<div class="outline-text-4" id="text-5-4-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 16:25]--[2020-07-23 Thu 16:40] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 13:10]--[2020-07-23 Thu 13:45] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org69bb9bb"></a>WLA Swic Call<br />
+<div class="outline-text-4" id="text-5-4-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-23 Thu 13:45]--[2020-07-23 Thu 16:25] </span> <span class="timestamp">(2:40)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org5704bb9" class="outline-3">
+<h3 id="org5704bb9"><span class="section-number-3">5.5</span> 24.07 Freitag</h3>
+<div class="outline-text-3" id="text-5-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>9:40</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;24.07 Freitag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">9:40</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<ol class="org-ol">
+<li><a id="orgd4c485f"></a>Fix pilots for demo<br />
+<div class="outline-text-4" id="text-5-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 08:45]--[2020-07-24 Fri 09:45] </span> <span class="timestamp">(1:00)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgcde69d7"></a>Organize<br />
+<div class="outline-text-4" id="text-5-5-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 09:45]--[2020-07-24 Fri 10:15] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org83192e2"></a>Call with Thomas<br />
+<div class="outline-text-4" id="text-5-5-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 10:15]--[2020-07-24 Fri 10:40] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org886007d"></a>Fix multiple addiditons to cart (limit)<br />
+<div class="outline-text-4" id="text-5-5-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 10:40]--[2020-07-24 Fri 12:00] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orge78b5f5"></a>Indicate to user when max amount/quant is exhausted<br />
+<div class="outline-text-4" id="text-5-5-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 12:00]--[2020-07-24 Fri 13:15] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgad48388"></a>WLA Swic Talk<br />
+<div class="outline-text-4" id="text-5-5-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 18:45]--[2020-07-24 Fri 19:15] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 17:10]--[2020-07-24 Fri 17:30] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 15:55]--[2020-07-24 Fri 16:45] </span> <span class="timestamp">(0:48)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 14:05]--[2020-07-24 Fri 15:00] </span> <span class="timestamp">(0:55)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org849cdc2"></a>Signal WebApi<br />
+<div class="outline-text-4" id="text-5-5-7">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 15:00]--[2020-07-24 Fri 15:55] </span> <span class="timestamp">(0:55)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org05a4649"></a>Draw Diagram for new decided signalR flow<br />
+<div class="outline-text-4" id="text-5-5-8">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 16:45]--[2020-07-24 Fri 17:10] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgb20ae32"></a>Merge &amp; deploy auth update for SWIC<br />
+<div class="outline-text-4" id="text-5-5-9">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 17:30]--[2020-07-24 Fri 18:05] </span> <span class="timestamp">(0:35)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgd0aaf39"></a>Merge &amp; deploy auth update for presales<br />
+<div class="outline-text-4" id="text-5-5-10">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 18:05]--[2020-07-24 Fri 18:20] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgf41a3e7"></a>Merge &amp; deploy auth update for pilot tamlan<br />
+<div class="outline-text-4" id="text-5-5-11">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-24 Fri 18:20]--[2020-07-24 Fri 18:45] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb0e14dc" class="outline-2">
+<h2 id="orgb0e14dc"><span class="section-number-2">6</span> KW 31 27.07.2020-31.07.2020</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-right">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-right"><b>28:45</b></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">KW 31 27.07.2020-31.07.2020</td>
+<td class="org-right">28:45</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;27.07 Montag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:10</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;28.07 Dienstag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:05</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;29.07 Mittwoch</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">4:20</td>
+</tr>
+
+<tr>
+<td class="org-left">&ensp;&ensp;31.07 Freitag</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">8:10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org64dd11d" class="outline-3">
+<h3 id="org64dd11d"><span class="section-number-3">6.1</span> 27.07 Montag</h3>
+<div class="outline-text-3" id="text-6-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:10</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;27.07 Montag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:10</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org2885582"></a>Organize<br />
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 09:00]--[2020-07-27 Mon 09:15] </span> <span class="timestamp">(0:15)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org878df47"></a>Research supposed amount field bug in redeem<br />
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 09:15]--[2020-07-27 Mon 09:45] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org888533d"></a>Number formatting<br />
+<div class="outline-text-4" id="text-6-1-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 09:45]--[2020-07-27 Mon 11:50] </span> <span class="timestamp">(2:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgda8dae8"></a>Tiles for payment process<br />
+<div class="outline-text-4" id="text-6-1-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 15:50]--[2020-07-27 Mon 16:30] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 14:45]--[2020-07-27 Mon 15:30] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 11:50]--[2020-07-27 Mon 14:15] </span> <span class="timestamp">(2:25)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgde8bebf"></a>Call with Thomas<br />
+<div class="outline-text-4" id="text-6-1-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 15:30]--[2020-07-27 Mon 15:50] </span> <span class="timestamp">(0:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgead6c3e"></a>Configuration of payment tiles via config<br />
+<div class="outline-text-4" id="text-6-1-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-27 Mon 16:30]--[2020-07-27 Mon 17:40] </span> <span class="timestamp">(1:10)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org71e82d0" class="outline-3">
+<h3 id="org71e82d0"><span class="section-number-3">6.2</span> 28.07 Dienstag</h3>
+<div class="outline-text-3" id="text-6-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:05</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;28.07 Dienstag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:05</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org6e07c18"></a>Organize<br />
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 12:55]--[2020-07-28 Tue 13:25] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 09:00]--[2020-07-28 Tue 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org5239781"></a>Configuration of payment tiles via config<br />
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 09:10]--[2020-07-28 Tue 10:50] </span> <span class="timestamp">(1:40)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org23332ab"></a>Setup blob for bankfrick<br />
+<div class="outline-text-4" id="text-6-2-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 10:50]--[2020-07-28 Tue 12:10] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org915ae2b"></a>Update, merge and deploy new bankfrick bundle<br />
+<div class="outline-text-4" id="text-6-2-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 12:10]--[2020-07-28 Tue 12:55] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org4836f17"></a>Extensions of Redemption Process<br />
+<ol class="org-ol">
+<li><a id="org30ebd4a"></a>From ethereum to erc20token<br />
+<div class="outline-text-5" id="text-6-2-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 14:20]--[2020-07-28 Tue 15:40] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orge42d0a3"></a>Show other screen instead of form by default<br />
+<div class="outline-text-5" id="text-6-2-5-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 16:35]--[2020-07-28 Tue 17:15] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="org1286982"></a>Add tiles to first screen<br />
+<div class="outline-text-5" id="text-6-2-5-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 17:15]--[2020-07-28 Tue 18:00] </span> <span class="timestamp">(0:45)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgd7f62ea"></a>Support WLA APP<br />
+<div class="outline-text-4" id="text-6-2-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-28 Tue 15:40]--[2020-07-28 Tue 16:35] </span> <span class="timestamp">(0:55)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgeea22ae" class="outline-3">
+<h3 id="orgeea22ae"><span class="section-number-3">6.3</span> 29.07 Mittwoch</h3>
+<div class="outline-text-3" id="text-6-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>4:20</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;29.07 Mittwoch</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">4:20</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org16fc7e0"></a>Organize<br />
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 11:00]--[2020-07-29 Wed 11:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 09:00]--[2020-07-29 Wed 09:10] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgf1310b7"></a>Fix + stabilize environments/server + minimize nodejs code<br />
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 09:10]--[2020-07-29 Wed 10:30] </span> <span class="timestamp">(1:20)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org1ed4ed3"></a>Update blobs for pilots<br />
+<div class="outline-text-4" id="text-6-3-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 10:30]--[2020-07-29 Wed 11:00] </span> <span class="timestamp">(0:30)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org622431e"></a>Deploy pilots<br />
+<div class="outline-text-4" id="text-6-3-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 11:10]--[2020-07-29 Wed 11:35] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org5e45f4f"></a>Extensions of Redemption Process<br />
+<ol class="org-ol">
+<li><a id="orgfc8cc09"></a>Add tiles to first screen + functional<br />
+<div class="outline-text-5" id="text-6-3-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-29 Wed 11:30]--[2020-07-29 Wed 13:15] </span> <span class="timestamp">(1:45)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orga4121d8" class="outline-3">
+<h3 id="orga4121d8"><span class="section-number-3">6.4</span> 30.07 Donnerstag</h3>
+</div>
+<div id="outline-container-orga69f287" class="outline-3">
+<h3 id="orga69f287"><span class="section-number-3">6.5</span> 31.07 Freitag</h3>
+<div class="outline-text-3" id="text-6-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>8:10</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;31.07 Freitag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">8:10</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<ol class="org-ol">
+<li><a id="org9113617"></a>Organize<br />
+<div class="outline-text-4" id="text-6-5-1">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 17:50]--[2020-07-31 Fri 18:00] </span> <span class="timestamp">(0:10)</span>
+</span>
+</p>
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 09:00]--[2020-07-31 Fri 09:25] </span> <span class="timestamp">(0:25)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orga67aee0"></a>Adapt Redemption process navigation<br />
+<div class="outline-text-4" id="text-6-5-2">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 09:25]--[2020-07-31 Fri 10:30] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+</div>
+</li>
+<li><a id="orgb23c60d"></a>Country fee configuration via config<br />
+<div class="outline-text-4" id="text-6-5-3">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 10:30]--[2020-07-31 Fri 14:00] </span> <span class="timestamp">(3:30)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org4ecd727"></a>Alignment call with CL &amp; Hegit<br />
+<div class="outline-text-4" id="text-6-5-4">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 14:00]--[2020-07-31 Fri 14:40] </span> <span class="timestamp">(0:40)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="org997bb4e"></a>Country fee configuration via config for each redemption method<br />
+<div class="outline-text-4" id="text-6-5-5">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 15:30]--[2020-07-31 Fri 16:45] </span> <span class="timestamp">(1:15)</span>
+</span>
+</p>
+</div>
+</li>
+
+<li><a id="orgcf345d3"></a>Join Swic Call<br />
+<div class="outline-text-4" id="text-6-5-6">
+<p>
+<span class="timestamp-wrapper">
+<span class="timestamp-kwd">CLOCK:</span> <span class="timestamp">[2020-07-31 Fri 16:45]--[2020-07-31 Fri 17:50] </span> <span class="timestamp">(1:05)</span>
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Lennart Schoettker</p>
+</div>
+</body>
+</html>

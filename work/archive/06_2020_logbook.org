@@ -1,0 +1,739 @@
+#+OPTIONS:     H:2
+#+OPTIONS: timestamp:nil
+#+TITLE: Logbook
+* Juni 2020 - Total
+| KW 23 | KW 24 | KW 25 | KW 26 | KW 27 |     Total |
+|-------+-------+-------+-------+-------+-----------|
+| 34:30 | 34:05 | 40:40 | 29:15 | 16:00 | 154:30:00 |
+#+TBLFM: $6=$1+$2+$3+$4+$5;T
+
+
+* KW 23 01.06.2020-07.06.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *34:30* |      |
+|-----------------------------+---------+------|
+| KW 23 01.06.2020-07.06.2020 | 34:30   |      |
+| \_  02.06 Dienstag          |         | 8:15 |
+| \_  03.06 Mittwoch          |         | 8:50 |
+| \_  04.06 Donnerstag        |         | 8:00 |
+| \_  05.06 Freitag           |         | 9:25 |
+#+END:
+
+** 01.06 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+
+** 02.06 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  02.06 Dienstag |        | 8:15 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 09:00]--[2020-06-02 Tue 09:15] =>  0:15
+:END:
+*** Continue with user logout flow
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 09:15]--[2020-06-02 Tue 10:45] =>  1:30
+:END:
+*** Research in the mobile app code how/where the connected address gets stored
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 10:45]--[2020-06-02 Tue 10:55] =>  0:10
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 10:55]--[2020-06-02 Tue 11:10] =>  0:15
+:END:
+*** Account View
+**** Top Tiles
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 13:00]--[2020-06-02 Tue 15:05] =>  2:05
+CLOCK: [2020-06-02 Tue 11:10]--[2020-06-02 Tue 12:05] =>  0:55
+:END:
+**** KYC Details Tile
+:LOGBOOK:
+CLOCK: [2020-06-02 Tue 15:05]--[2020-06-02 Tue 18:10] =>  3:05
+:END:
+
+** 03.06 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:50* |      |
+|--------------------+--------+------|
+| \_  03.06 Mittwoch |        | 8:50 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 09:00]--[2020-06-03 Wed 09:15] =>  0:15
+:END:
+*** Account View
+**** Bank Accounts Tile
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 09:35]--[2020-06-03 Wed 12:55] =>  3:20
+CLOCK: [2020-06-03 Wed 09:15]--[2020-06-03 Wed 09:30] =>  0:15
+:END:
+**** Crypto Wallets Tile
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 13:20]--[2020-06-03 Wed 16:15] =>  2:55
+:END:
+
+*** Call with Thomas & Robert
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 09:30]--[2020-06-03 Wed 09:35] =>  0:05
+:END:
+
+*** Payment Screen: Fake Credit Card Fields
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 16:15]--[2020-06-03 Wed 17:00] =>  0:45
+:END:
+
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 17:00]--[2020-06-03 Wed 17:30] =>  0:30
+:END:
+
+*** Fix width of top tiles/cards in Account
+:LOGBOOK:
+CLOCK: [2020-06-03 Wed 17:30]--[2020-06-03 Wed 18:15] =>  0:45
+:END:
+
+** 04.06 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:00* |      |
+|----------------------+--------+------|
+| \_  04.06 Donnerstag |        | 8:00 |
+#+END:
+
+*** Add shufti static mock modal (image)
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 08:55]--[2020-06-04 Thu 09:30] =>  0:35
+:END:
+*** Deploy and fix logout
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 09:30]--[2020-06-04 Thu 09:55] =>  0:25
+:END:
+*** Continue with Payment Screen: Fake Credit Card Fields
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 09:55]--[2020-06-04 Thu 13:20] =>  3:25
+:END:
+
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 14:25]--[2020-06-04 Thu 14:50] =>  0:25
+:END:
+*** Thank You Screen after Purchase
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 14:50]--[2020-06-04 Thu 17:05] =>  2:15
+:END:
+*** Small Refactors
+:LOGBOOK:
+CLOCK: [2020-06-04 Thu 17:05]--[2020-06-04 Thu 18:00] =>  0:55
+:END:
+- Acquire Tokens -> Purchase
+- Redeem Tokens -> Redeem
+
+** 05.06 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *9:25* |      |
+|-------------------+--------+------|
+| \_  05.06 Freitag |        | 9:25 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-05 Fri 08:50]--[2020-06-05 Fri 09:15] =>  0:25
+:END:
+
+*** Push code to remote VCS on Azure Devops
+:LOGBOOK:
+CLOCK: [2020-06-05 Fri 09:15]--[2020-06-05 Fri 10:50] =>  1:35
+:END:
+- add ssh keys
+- track remote origin
+- create branches and push
+- acquire required permissions
+
+*** Deploy azure web app
+:LOGBOOK:
+CLOCK: [2020-06-05 Fri 13:45]--[2020-06-05 Fri 18:00] =>  4:15
+CLOCK: [2020-06-05 Fri 10:50]--[2020-06-05 Fri 12:45] =>  3:01
+:END:
+
+*** Team Call
+:LOGBOOK:
+CLOCK: [2020-06-05 Fri 18:00]--[2020-06-05 Fri 18:45] =>  0:46
+:END:
+
+*** Get new droplet for BF demo
+:LOGBOOK:
+CLOCK: [2020-06-05 Fri 18:45]--[2020-06-05 Fri 19:15] =>  0:30
+:END:
+
+* KW 24 08.06.2020-14.06.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                          | Time    |      |
+|-----------------------------------+---------+------|
+| *Total time*                      | *34:05* |      |
+|-----------------------------------+---------+------|
+| KW 24 08.06 08.06.2020-14.06.2020 | 34:05   |      |
+| \_  08.06 Montag                  |         | 8:55 |
+| \_  09.06 Dienstag                |         | 8:05 |
+| \_  10.06 Mittwoch                |         | 8:15 |
+| \_  12.06 Freitag                 |         | 8:10 |
+| \_  13.06 Samstag                 |         | 0:40 |
+#+END:
+
+** 08.06 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:55* |      |
+|------------------+--------+------|
+| \_  08.06 Montag |        | 8:55 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-08 Mon 09:00]--[2020-06-08 Mon 09:15] =>  0:15
+:END:
+*** Update frontend for bankfrick requirements/adaptions/changes
+:LOGBOOK:
+CLOCK: [2020-06-08 Mon 13:30]--[2020-06-08 Mon 18:30] =>  4:59
+CLOCK: [2020-06-08 Mon 09:15]--[2020-06-08 Mon 12:25] =>  3:10
+:END:
+
+*** Call WLP Abnahme für BF Demo
+:LOGBOOK:
+CLOCK: [2020-06-08 Mon 13:00]--[2020-06-08 Mon 13:30] =>  0:30
+:END:
+
+** 09.06 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:05* |      |
+|--------------------+--------+------|
+| \_  09.06 Dienstag |        | 8:05 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-09 Tue 09:00]--[2020-06-09 Tue 09:20] =>  0:20
+:END:
+*** Refactor form fields & containers
+:LOGBOOK:
+CLOCK: [2020-06-09 Tue 09:20]--[2020-06-09 Tue 12:30] =>  3:10
+:END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-09 Tue 12:30]--[2020-06-09 Tue 13:25] =>  0:55
+:END:
+*** Dynamic stamp creation for adding bank account (saved in memory only)
+:LOGBOOK:
+CLOCK: [2020-06-09 Tue 14:20]--[2020-06-09 Tue 18:00] =>  3:40
+:END:
+
+** 10.06 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  10.06 Mittwoch |        | 8:15 |
+#+END:
+
+
+*** Dynamic stamp creation for adding wallets (saved in memory only)
+:LOGBOOK:
+CLOCK: [2020-06-10 Wed 09:00]--[2020-06-10 Wed 10:00] =>  1:00
+:END:
+*** Change credentials in Account Screen
+:LOGBOOK:
+CLOCK: [2020-06-10 Wed 12:30]--[2020-06-10 Wed 13:00] =>  0:30
+CLOCK: [2020-06-10 Wed 10:00]--[2020-06-10 Wed 11:30] =>  1:30
+:END:
+*** Order History (Mock)
+:LOGBOOK:
+CLOCK: [2020-06-10 Wed 13:00]--[2020-06-10 Wed 15:45] =>  2:45
+:END:
+
+*** Start with payrexx
+:LOGBOOK:
+CLOCK: [2020-06-10 Wed 15:45]--[2020-06-10 Wed 18:15] =>  2:30
+:END:
+
+** 11.06 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+** 12.06 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:10* |      |
+|-------------------+--------+------|
+| \_  12.06 Freitag |        | 8:10 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 09:00]--[2020-06-12 Fri 09:20] =>  0:20
+:END:
+*** Continue with payrexx
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 09:20]--[2020-06-12 Fri 12:05] =>  2:45
+:END:
+*** Call
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 12:05]--[2020-06-12 Fri 12:15] =>  0:10
+:END:
+*** Hegit Company Website
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 12:15]--[2020-06-12 Fri 13:20] =>  1:05
+:END:
+*** Implement wished for changes & adaptions of assets for generic demos
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 16:30]--[2020-06-12 Fri 18:00] =>  1:30
+CLOCK: [2020-06-12 Fri 14:10]--[2020-06-12 Fri 15:00] =>  0:50
+:END:
+*** Call with Luis, Thomas, Robert in regards to creating collections, definiton items in tenant
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 15:00]--[2020-06-12 Fri 16:00] =>  1:00
+:END:
+*** Call with Thomas, Robert
+:LOGBOOK:
+CLOCK: [2020-06-12 Fri 16:00]--[2020-06-12 Fri 16:30] =>  0:30
+:END:
+
+** 13.06 Samstag
+*** Adapt QR and deploy
+:LOGBOOK:
+CLOCK: [2020-06-13 Sat 15:30]--[2020-06-13 Sat 16:10] =>  0:40
+:END:
+
+* KW 25 15.06.2020-21.06.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *40:40* |      |
+|-----------------------------+---------+------|
+| KW 25 15.06.2020-21.06.2020 | 40:40   |      |
+| \_  15.06 Montag            |         | 7:50 |
+| \_  16.06 Dienstag          |         | 8:05 |
+| \_  17.06 Mittwoch          |         | 8:15 |
+| \_  18.06 Donnerstag        |         | 8:15 |
+| \_  19.06 Freitag           |         | 8:15 |
+#+END:
+
+** 15.06 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *7:50* |      |
+|------------------+--------+------|
+| \_  15.06 Montag |        | 7:50 |
+#+END:
+
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-15 Mon 09:00]--[2020-06-15 Mon 09:20] =>  0:20
+:END:
+*** SWIC Color Branding
+:LOGBOOK:
+CLOCK: [2020-06-15 Mon 09:20]--[2020-06-15 Mon 13:20] =>  4:00
+:END:
+*** SWIC Assets
+:LOGBOOK:
+CLOCK: [2020-06-15 Mon 14:00]--[2020-06-15 Mon 14:30] =>  0:30
+:END:
+*** SWIC Redeem Asset
+:LOGBOOK:
+CLOCK: [2020-06-15 Mon 14:30]--[2020-06-15 Mon 15:00] =>  0:30
+:END:
+
+*** Prepare deployment of SWIC client
+:LOGBOOK:
+CLOCK: [2020-06-15 Mon 15:00]--[2020-06-15 Mon 17:30] =>  2:30
+:END:
+
+- fix misaligned buttons in the meantime/waiting time
+
+** 16.06 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:05* |      |
+|--------------------+--------+------|
+| \_  16.06 Dienstag |        | 8:05 |
+#+END:
+
+
+*** Integrate changes branch SWIC
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 09:00]--[2020-06-16 Tue 09:35] =>  0:35
+:END:
+*** Update bankfrick
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 09:35]--[2020-06-16 Tue 10:00] =>  0:25
+:END:
+*** Logo for SWIC
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 10:00]--[2020-06-16 Tue 11:15] =>  1:15
+:END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 16:25]--[2020-06-16 Tue 18:05] =>  1:40
+CLOCK: [2020-06-16 Tue 15:00]--[2020-06-16 Tue 16:00] =>  1:00
+CLOCK: [2020-06-16 Tue 11:15]--[2020-06-16 Tue 11:50] =>  0:35
+:END:
+- in regards to: swic logo, tfs work items, database, tx api, research
+
+*** Research TX Address fetch
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 14:10]--[2020-06-16 Tue 14:25] =>  0:15
+CLOCK: [2020-06-16 Tue 11:50]--[2020-06-16 Tue 13:10] =>  1:20
+:END:
+
+*** Update swic assets
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 14:25]--[2020-06-16 Tue 15:00] =>  0:35
+:END:
+
+*** Q&A Call with Hannes, Luis, Thomas
+:LOGBOOK:
+CLOCK: [2020-06-16 Tue 16:00]--[2020-06-16 Tue 16:25] =>  0:25
+:END:
+
+** 17.06 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  17.06 Mittwoch |        | 8:15 |
+#+END:
+
+
+*** SWIC Branding
+:LOGBOOK:
+CLOCK: [2020-06-17 Wed 09:00]--[2020-06-17 Wed 12:00] =>  3:00
+:END:
+
+*** Feature: Validate signable addresses on QR checkout
+:LOGBOOK:
+CLOCK: [2020-06-17 Wed 14:00]--[2020-06-17 Wed 17:15] =>  3:15
+CLOCK: [2020-06-17 Wed 12:00]--[2020-06-17 Wed 13:15] =>  1:15
+:END:
+
+*** SWIC: Back to previous branding
+:LOGBOOK:
+CLOCK: [2020-06-17 Wed 17:15]--[2020-06-17 Wed 18:00] =>  0:45
+:END:
+
+** 18.06 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:15* |      |
+|----------------------+--------+------|
+| \_  18.06 Donnerstag |        | 8:15 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-18 Thu 09:00]--[2020-06-18 Thu 09:15] =>  0:15
+:END:
+*** Fetch spark factor for redeem
+:LOGBOOK:
+CLOCK: [2020-06-18 Thu 09:15]--[2020-06-18 Thu 10:30] =>  1:15
+:END:
+*** First research and planning in regards toSignalR
+:LOGBOOK:
+CLOCK: [2020-06-18 Thu 10:30]--[2020-06-18 Thu 12:10] =>  1:40
+:END:
+
+*** Establish WS connections between clients and server and send exemplary data
+:LOGBOOK:
+CLOCK: [2020-06-18 Thu 14:05]--[2020-06-18 Thu 18:05] =>  4:00
+CLOCK: [2020-06-18 Thu 12:10]--[2020-06-18 Thu 13:15] =>  1:05
+:END:
+
+** 19.06 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:15* |      |
+|-------------------+--------+------|
+| \_  19.06 Freitag |        | 8:15 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-19 Fri 09:00]--[2020-06-19 Fri 09:15] =>  0:15
+:END:
+*** WebSocket + EventEmitter
+:LOGBOOK:
+CLOCK: [2020-06-19 Fri 09:15]--[2020-06-19 Fri 12:45] =>  3:30
+:END:
+
+*** Fetch spark factor for redeem
+:LOGBOOK:
+CLOCK: [2020-06-19 Fri 14:25]--[2020-06-19 Fri 18:00] =>  3:35
+CLOCK: [2020-06-19 Fri 12:45]--[2020-06-19 Fri 13:40] =>  0:55
+:END:
+- lots of different tasks/stuff inbetween, too much track individually
+
+* KW 26 22.06.2020-27.06.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *29:15* |      |
+|-----------------------------+---------+------|
+| KW 26 22.06.2020-27.06.2020 | 29:15   |      |
+| \_  23.06 Dienstag          |         | 5:35 |
+| \_  24.06 Mittwoch          |         | 7:15 |
+| \_  25.06 Donnerstag        |         | 8:10 |
+| \_  26.06 Freitag           |         | 8:15 |
+#+END:
+
+** 22.06 Montag
+** 23.06 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *5:35* |      |
+|--------------------+--------+------|
+| \_  23.06 Dienstag |        | 5:35 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-23 Tue 07:55]--[2020-06-23 Tue 08:15] =>  0:20
+:END:
+*** Build Error Page and make use of it
+:LOGBOOK:
+CLOCK: [2020-06-23 Tue 08:15]--[2020-06-23 Tue 11:45] =>  3:30
+:END:
+
+*** Make error more dynamic and allow 'refresh'/redirect
+:LOGBOOK:
+CLOCK: [2020-06-23 Tue 16:30]--[2020-06-23 Tue 18:15] =>  1:45
+:END:
+
+** 24.06 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *7:15* |      |
+|--------------------+--------+------|
+| \_  24.06 Mittwoch |        | 7:15 |
+#+END:
+
+*** Various, mixed tasks
+:LOGBOOK:
+CLOCK: [2020-06-24 Wed 13:45]--[2020-06-24 Wed 14:35] =>  0:50
+CLOCK: [2020-06-24 Wed 09:00]--[2020-06-24 Wed 11:15] =>  2:15
+:END:
+*** Call with Hannes, Jevgeny, Thomas
+:LOGBOOK:
+CLOCK: [2020-06-24 Wed 11:15]--[2020-06-24 Wed 11:50] =>  0:35
+:END:
+*** Presales client
+:LOGBOOK:
+CLOCK: [2020-06-24 Wed 11:50]--[2020-06-24 Wed 13:00] =>  1:10
+:END:
+
+*** Call with Thomas, Medu
+:LOGBOOK:
+CLOCK: [2020-06-24 Wed 14:35]--[2020-06-24 Wed 15:15] =>  0:40
+:END:
+*** Assets for presales
+:LOGBOOK:
+CLOCK: [2020-06-24 Wed 15:15]--[2020-06-24 Wed 17:00] =>  1:45
+:END:
+
+** 25.06 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:10* |      |
+|----------------------+--------+------|
+| \_  25.06 Donnerstag |        | 8:10 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 08:55]--[2020-06-25 Thu 09:10] =>  0:15
+:END:
+*** Fix bankfric and swic error
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 09:10]--[2020-06-25 Thu 10:00] =>  0:50
+:END:
+*** Review WLA tasks for 3rd
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 10:00]--[2020-06-25 Thu 10:35] =>  0:35
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 10:35]--[2020-06-25 Thu 10:55] =>  0:20
+:END:
+
+*** Move APIs into frontend
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 12:40]--[2020-06-25 Thu 16:35] =>  3:55
+CLOCK: [2020-06-25 Thu 10:55]--[2020-06-25 Thu 12:00] =>  1:05
+:END:
+
+*** Create overview document with all important links, informations etc
+:LOGBOOK:
+CLOCK: [2020-06-25 Thu 16:35]--[2020-06-25 Thu 17:45] =>  1:10
+:END:
+
+** 26.06 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:15* |      |
+|-------------------+--------+------|
+| \_  26.06 Freitag |        | 8:15 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 08:55]--[2020-06-26 Fri 09:20] =>  0:25
+:END:
+*** Necessary research/prepare for signalR
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 09:20]--[2020-06-26 Fri 10:05] =>  0:45
+:END:
+*** Write down questions/topics in regards to upcoming call
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 10:05]--[2020-06-26 Fri 10:30] =>  0:25
+:END:
+*** Call with Jevgeny & Thomas in regards to SignalR and dev webapp
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 10:30]--[2020-06-26 Fri 11:05] =>  0:35
+:END:
+*** Webapp for dev purposes
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 11:05]--[2020-06-26 Fri 12:00] =>  0:55
+:END:
+*** Connect to signalR: get token & create hub
+:LOGBOOK:
+CLOCK: [2020-06-26 Fri 14:40]--[2020-06-26 Fri 18:10] =>  3:30
+CLOCK: [2020-06-26 Fri 12:00]--[2020-06-26 Fri 13:40] =>  1:40
+:END:
+
+* KW 27 29.06.2020-30.06.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *16:00* |      |
+|-----------------------------+---------+------|
+| KW 27 29.06.2020-30.06.2020 | 16:00   |      |
+| \_  29.06 Montag            |         | 8:40 |
+| \_  30.06 Dienstag          |         | 7:20 |
+#+END:
+
+** 29.06 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:40* |      |
+|------------------+--------+------|
+| \_  29.06 Montag |        | 8:40 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-29 Mon 09:00]--[2020-06-29 Mon 09:20] =>  0:20
+:END:
+*** SignalR Handshake
+:LOGBOOK:
+CLOCK: [2020-06-29 Mon 09:20]--[2020-06-29 Mon 14:00] =>  4:40
+:END:
+
+*** Call about WLA
+:LOGBOOK:
+CLOCK: [2020-06-29 Mon 14:05]--[2020-06-29 Mon 15:05] =>  1:00
+:END:
+
+*** Switch from longpolling to WebSocket
+:LOGBOOK:
+CLOCK: [2020-06-29 Mon 15:25]--[2020-06-29 Mon 17:00] =>  1:35
+:END:
+
+*** Back to longpolling because turns out ws is not supported
+:LOGBOOK:
+CLOCK: [2020-06-29 Mon 17:00]--[2020-06-29 Mon 18:05] =>  1:05
+:END:
+
+** 30.06 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *7:20* |      |
+|--------------------+--------+------|
+| \_  30.06 Dienstag |        | 7:20 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 09:00]--[2020-06-30 Tue 09:20] =>  0:20
+:END:
+*** Go through TFS, take notes, give estimations etc
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 09:20]--[2020-06-30 Tue 11:30] =>  2:10
+:END:
+*** Read into payrexx documentation, prepare for call in regads to payrexx brainstorming
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 11:30]--[2020-06-30 Tue 13:00] =>  1:30
+:END:
+*** Call with Jevgeny, Mikhail, Thomas regarding Payrexx
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 13:00]--[2020-06-30 Tue 13:40] =>  0:40
+:END:
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 14:00]--[2020-06-30 Tue 14:30] =>  0:30
+:END:
+*** Switch from beta to UAT
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 14:30]--[2020-06-30 Tue 15:30] =>  1:00
+:END:
+*** Call with Thomas regarding general organziation
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 15:30]--[2020-06-30 Tue 16:00] =>  0:30
+:END:
+*** Stash/backup/save/cleanup current signalR implementation for possibly later use
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 16:00]--[2020-06-30 Tue 16:20] =>  0:20
+:END:
+*** Set default val for add to cart to 1
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 16:20]--[2020-06-30 Tue 16:35] =>  0:15
+:END:
+*** Verify time logs and publish
+:LOGBOOK:
+CLOCK: [2020-06-30 Tue 16:35]--[2020-06-30 Tue 16:40] =>  0:05
+:END:

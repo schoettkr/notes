@@ -1,0 +1,793 @@
+#+OPTIONS:     H:2
+#+OPTIONS: timestamp:nil
+#+TITLE: Logbook
+* Juli 2020 - Total
+| KW 27 | KW 28 | KW 29 | KW 30 | KW 31 |     Total |
+|-------+-------+-------+-------+-------+-----------|
+| 16:25 | 35:20 | 33:00 | 42:50 | 28:45 | 156:20:00 |
+#+TBLFM: $6=$1+$2+$3+$4+$5;T
+
+
+* KW 27 01.07.2020-05.07.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *16:25* |      |
+|-----------------------------+---------+------|
+| KW 27 01.07.2020-05.07.2020 | 16:25   |      |
+| \_  02.07 Donnerstag        |         | 8:25 |
+| \_  03.07 Freitag           |         | 8:00 |
+#+END:
+
+** 01.07 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+
+** 02.07 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:25* |      |
+|----------------------+--------+------|
+| \_  02.07 Donnerstag |        | 8:25 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 09:00]--[2020-07-02 Thu 09:15] =>  0:15
+:END:
+*** Call with Hannes, Jevgeny, Mikhail, Thomas
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 09:15]--[2020-07-02 Thu 09:30] =>  0:15
+:END:
+*** Cleanup some code in regards to splitting the backend
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 09:30]--[2020-07-02 Thu 11:15] =>  1:45
+:END:
+*** Sync swic and bf branches with newest stuff from dev/master
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 11:15]--[2020-07-02 Thu 13:25] =>  2:10
+:END:
+- checked assets, got acc, etc
+*** Develop local branch with OIDC flow in frontend instead of BE
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 14:10]--[2020-07-02 Thu 17:00] =>  2:50
+:END:
+*** Call with Thomas to go through parts of TFS and plan next steps
+:LOGBOOK:
+CLOCK: [2020-07-02 Thu 17:00]--[2020-07-02 Thu 18:10] =>  1:10
+:END:
+
+** 03.07 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:00* |      |
+|-------------------+--------+------|
+| \_  03.07 Freitag |        | 8:00 |
+#+END:
+
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-03 Fri 16:05]--[2020-07-03 Fri 16:20] =>  0:17
+CLOCK: [2020-07-03 Fri 09:00]--[2020-07-03 Fri 09:10] =>  0:10
+:END:
+*** Develop local branch with OIDC flow in frontend instead of BE
+:LOGBOOK:
+CLOCK: [2020-07-03 Fri 12:55]--[2020-07-03 Fri 14:45] =>  1:50
+CLOCK: [2020-07-03 Fri 09:10]--[2020-07-03 Fri 12:15] =>  3:05
+:END:
+*** Prepare call
+:LOGBOOK:
+CLOCK: [2020-07-03 Fri 14:45]--[2020-07-03 Fri 15:00] =>  0:15
+:END:
+*** Call with Hannes, Jevgeny, Mikhail, Thomas
+:LOGBOOK:
+CLOCK: [2020-07-03 Fri 15:00]--[2020-07-03 Fri 16:05] =>  1:05
+:END:
+*** Move logout flow into FE
+:LOGBOOK:
+CLOCK: [2020-07-03 Fri 16:20]--[2020-07-03 Fri 17:40] =>  1:20
+:END:
+
+* KW 28 06.07.2020-12.07.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *35:20* |      |
+|-----------------------------+---------+------|
+| KW 28 06.07.2020-12.07.2020 | 35:20   |      |
+| \_  06.07 Montag            |         | 8:10 |
+| \_  07.07 Dienstag          |         | 8:35 |
+| \_  08.07 Mittwoch          |         | 2:15 |
+| \_  09.07 Donnerstag        |         | 8:15 |
+| \_  10.07 Freitag           |         | 8:05 |
+#+END:
+
+** 06.07 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:10* |      |
+|------------------+--------+------|
+| \_  06.07 Montag |        | 8:10 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 09:00]--[2020-07-06 Mon 09:15] =>  0:15
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 09:15]--[2020-07-06 Mon 10:20] =>  1:05
+:END:
+*** Auth flow
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 10:20]--[2020-07-06 Mon 11:10] =>  0:50
+:END:
+*** Prepare task for backend / call
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 11:10]--[2020-07-06 Mon 11:45] =>  0:35
+:END:
+*** Alignment Call
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 11:45]--[2020-07-06 Mon 12:25] =>  0:40
+:END:
+*** Research and experiment in regards to external color theming
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 12:25]--[2020-07-06 Mon 13:40] =>  1:15
+:END:
+
+*** Make assets configurable on external host/source
+:LOGBOOK:
+CLOCK: [2020-07-06 Mon 14:20]--[2020-07-06 Mon 17:50] =>  3:30
+:END:
+
+** 07.07 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:35* |      |
+|--------------------+--------+------|
+| \_  07.07 Dienstag |        | 8:35 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-07-07 Tue 09:00]--[2020-07-07 Tue 09:10] =>  0:10
+:END:
+*** Make assets configurable on external host/source
+:LOGBOOK:
+CLOCK: [2020-07-07 Tue 09:10]--[2020-07-07 Tue 11:35] =>  2:25
+:END:
+*** External Color Theming
+:LOGBOOK:
+CLOCK: [2020-07-07 Tue 17:30]--[2020-07-07 Tue 18:15] =>  0:45
+CLOCK: [2020-07-07 Tue 14:10]--[2020-07-07 Tue 16:40] =>  2:30
+CLOCK: [2020-07-07 Tue 11:35]--[2020-07-07 Tue 13:30] =>  1:55
+:END:
+
+*** Call with Thomas in regards to BE tasks
+:LOGBOOK:
+CLOCK: [2020-07-07 Tue 16:40]--[2020-07-07 Tue 17:30] =>  0:50
+:END:
+
+** 08.07 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *2:15* |      |
+|--------------------+--------+------|
+| \_  08.07 Mittwoch |        | 2:15 |
+#+END:
+
+*** Various smaller tasks throughout the day
+:LOGBOOK:
+CLOCK: [2020-07-08 Wed 09:00]--[2020-07-08 Wed 11:15] =>  2:15
+:END:
+
+** 09.07 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:15* |      |
+|----------------------+--------+------|
+| \_  09.07 Donnerstag |        | 8:15 |
+#+END:
+
+*** Deploy external asset config to uat
+:LOGBOOK:
+CLOCK: [2020-07-09 Thu 09:00]--[2020-07-09 Thu 10:15] =>  1:15
+:END:
+*** External Color Theming
+:LOGBOOK:
+CLOCK: [2020-07-09 Thu 13:35]--[2020-07-09 Thu 18:00] =>  4:25
+CLOCK: [2020-07-09 Thu 10:15]--[2020-07-09 Thu 12:50] =>  2:35
+:END:
+
+** 10.07 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:05* |      |
+|-------------------+--------+------|
+| \_  10.07 Freitag |        | 8:05 |
+#+END:
+
+*** Organization
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 09:00]--[2020-07-10 Fri 09:10] =>  0:10
+:END:
+*** Prepare & deploy demo for bitcoin suisse
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 09:10]--[2020-07-10 Fri 11:00] =>  1:50
+:END:
+*** Short call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 11:00]--[2020-07-10 Fri 11:05] =>  0:07
+:END:
+*** Setup blob for pilot presales
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 11:05]--[2020-07-10 Fri 11:50] =>  0:45
+:END:
+*** Login/Register
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 11:50]--[2020-07-10 Fri 12:15] =>  0:25
+:END:
+
+*** Change checkout navigation
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 13:30]--[2020-07-10 Fri 14:25] =>  0:40
+CLOCK: [2020-07-10 Fri 12:15]--[2020-07-10 Fri 12:50] =>  0:35
+:END:
+
+*** Disable checkout for empty cart
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 14:25]--[2020-07-10 Fri 15:10] =>  0:45
+:END:
+
+*** Editable quant. field in cart
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 15:10]--[2020-07-10 Fri 16:50] =>  1:40
+:END:
+
+*** Add More details button to own wallet cards
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 16:50]--[2020-07-10 Fri 17:20] =>  0:30
+:END:
+
+*** Also retrieve nonsignable (=all) addresses
+:LOGBOOK:
+CLOCK: [2020-07-10 Fri 17:20]--[2020-07-10 Fri 17:45] =>  0:25
+:END:
+
+* KW 29 13.07.2020-19.07.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *33:00* |      |
+|-----------------------------+---------+------|
+| KW 29 13.07.2020-19.07.2020 | 33:00   |      |
+| \_  13.07 Montag            |         | 8:05 |
+| \_  14.07 Dienstag          |         | 8:05 |
+| \_  16.07 Donnerstag        |         | 8:35 |
+| \_  17.07 Freitag           |         | 8:15 |
+#+END:
+
+** 13.07 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:05* |      |
+|------------------+--------+------|
+| \_  13.07 Montag |        | 8:05 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-13 Mon 17:35]--[2020-07-13 Mon 17:50] =>  0:15
+CLOCK: [2020-07-13 Mon 09:00]--[2020-07-13 Mon 09:10] =>  0:10
+:END:
+*** UOM, Sparks, TUF
+:LOGBOOK:
+CLOCK: [2020-07-13 Mon 13:45]--[2020-07-13 Mon 17:00] =>  3:15
+CLOCK: [2020-07-13 Mon 09:10]--[2020-07-13 Mon 13:00] =>  3:50
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-13 Mon 17:00]--[2020-07-13 Mon 17:35] =>  0:35
+:END:
+
+** 14.07 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:05* |      |
+|--------------------+--------+------|
+| \_  14.07 Dienstag |        | 8:05 |
+#+END:
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-14 Tue 09:00]--[2020-07-14 Tue 09:05] =>  7:00
+:END:
+*** 8868: Make features disableable/activateable via admin config settings
+:LOGBOOK:
+CLOCK: [2020-07-14 Tue 09:05]--[2020-07-14 Tue 11:45] =>  2:40
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-14 Tue 15:15]--[2020-07-14 Tue 15:45] =>  0:30
+CLOCK: [2020-07-14 Tue 11:45]--[2020-07-14 Tue 12:05] =>  0:20
+:END:
+*** 8892 Make 'more details' customizable via admin config
+:LOGBOOK:
+CLOCK: [2020-07-14 Tue 15:45]--[2020-07-14 Tue 16:25] =>  0:40
+CLOCK: [2020-07-14 Tue 13:30]--[2020-07-14 Tue 15:15] =>  1:45
+CLOCK: [2020-07-14 Tue 12:05]--[2020-07-14 Tue 13:00] =>  0:55
+:END:
+
+*** 8896 Make fees for collection methods customizable via admin config
+:LOGBOOK:
+CLOCK: [2020-07-14 Tue 16:25]--[2020-07-14 Tue 17:35] =>  1:10
+:END:
+
+** 15.07 Mittwoch
+** 16.07 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:35* |      |
+|----------------------+--------+------|
+| \_  16.07 Donnerstag |        | 8:35 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 09:00]--[2020-07-16 Thu 09:15] =>  0:15
+:END:
+
+*** Call with Thomas regarding WLA
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 09:15]--[2020-07-16 Thu 10:00] =>  0:45
+:END:
+
+*** Setup playground tamlan pilot
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 10:00]--[2020-07-16 Thu 12:30] =>  2:30
+:END:
+*** Deploy for tamlan pilot
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 13:30]--[2020-07-16 Thu 14:30] =>  1:00
+:END:
+*** CORS for pilots
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 14:30]--[2020-07-16 Thu 17:20] =>  2:50
+:END:
+*** QR Code configurable via config
+:LOGBOOK:
+CLOCK: [2020-07-16 Thu 17:20]--[2020-07-16 Thu 18:35] =>  1:15
+:END:
+
+** 17.07 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:15* |      |
+|-------------------+--------+------|
+| \_  17.07 Freitag |        | 8:15 |
+#+END:
+
+*** Worked time
+:LOGBOOK:
+CLOCK: [2020-07-17 Fri 13:45]--[2020-07-17 Fri 18:00] =>  4:15
+CLOCK: [2020-07-17 Fri 09:00]--[2020-07-17 Fri 13:00] =>  4:00
+:END:
+- habe meine detaillierten Logs heute vergessen, deshalb keine genauere Unterteilung
+- hab von 9 bis 18 Uhr gearbeitet und von 13 bis 13:45 Mittagspause gemacht
+* KW 30 20.07.2020-26.07.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *42:50* |      |
+|-----------------------------+---------+------|
+| KW 30 20.07.2020-26.07.2020 | 42:50   |      |
+| \_  20.07 Montag            |         | 8:00 |
+| \_  21.07 Dienstag          |         | 9:55 |
+| \_  22.07 Mittwoch          |         | 8:15 |
+| \_  23.07 Donnerstag        |         | 7:00 |
+| \_  24.07 Freitag           |         | 9:40 |
+#+END:
+
+** 20.07 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:00* |      |
+|------------------+--------+------|
+| \_  20.07 Montag |        | 8:00 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 09:00]--[2020-07-20 Mon 09:20] =>  0:20
+:END:
+*** Merge, update, deploy tamlan & presales
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 09:20]--[2020-07-20 Mon 09:40] =>  0:20
+:END:
+*** Add changes into SWIC webapp and setup configuration blob etc
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 11:05]--[2020-07-20 Mon 11:30] =>  0:25
+CLOCK: [2020-07-20 Mon 09:40]--[2020-07-20 Mon 10:30] =>  0:50
+:END:
+*** Debug pilot-tamlan
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 10:30]--[2020-07-20 Mon 11:05] =>  0:35
+:END:
+*** Make navigation step / ball coonfigruable (color)
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 13:15]--[2020-07-20 Mon 13:20] =>  0:05
+CLOCK: [2020-07-20 Mon 11:30]--[2020-07-20 Mon 12:15] =>  0:45
+:END:
+*** Remove uneeded parts from asset modals
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 13:20]--[2020-07-20 Mon 13:40] =>  0:20
+:END:
+*** Pair Programming WLA SWIC
+:LOGBOOK:
+CLOCK: [2020-07-20 Mon 13:40]--[2020-07-20 Mon 18:00] =>  4:20
+:END:
+
+** 21.07 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *9:55* |      |
+|--------------------+--------+------|
+| \_  21.07 Dienstag |        | 9:55 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 13:00]--[2020-07-21 Tue 13:15] =>  0:15
+CLOCK: [2020-07-21 Tue 09:00]--[2020-07-21 Tue 09:10] =>  0:10
+:END:
+*** Make logo adjustable via config
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 09:10]--[2020-07-21 Tue 10:30] =>  1:20
+:END:
+*** Enable/disable collection methods via config
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 10:30]--[2020-07-21 Tue 12:15] =>  1:45
+:END:
+*** Small refactorment
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 13:15]--[2020-07-21 Tue 13:35] =>  0:20
+:END:
+*** Pair Programming WLA SWIC
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 16:35]--[2020-07-21 Tue 18:10] =>  1:00
+CLOCK: [2020-07-21 Tue 15:40]--[2020-07-21 Tue 15:45] =>  0:05
+CLOCK: [2020-07-21 Tue 13:35]--[2020-07-21 Tue 14:20] =>  0:45
+:END:
+*** Set max amount of buyable item via config
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 14:20]--[2020-07-21 Tue 15:40] =>  1:20
+:END:
+*** Set min amount of buyable item via config
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 15:45]--[2020-07-21 Tue 16:35] =>  0:50
+:END:
+*** Auth into FE (rebase, fix merge conflicts)
+:LOGBOOK:
+CLOCK: [2020-07-21 Tue 18:10]--[2020-07-21 Tue 19:40] =>  1:30
+:END:
+
+** 22.07 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  22.07 Mittwoch |        | 8:15 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-22 Wed 10:40]--[2020-07-22 Wed 10:50] =>  0:10
+CLOCK: [2020-07-22 Wed 09:00]--[2020-07-22 Wed 09:05] =>  0:05
+:END:
+*** Update configs for all WLPs, upload new icons & settings, add new section to styles.css
+:LOGBOOK:
+CLOCK: [2020-07-22 Wed 09:05]--[2020-07-22 Wed 10:40] =>  1:35
+:END:
+*** Max Redeem amount via config
+:LOGBOOK:
+CLOCK: [2020-07-22 Wed 12:55]--[2020-07-22 Wed 14:40] =>  1:45
+CLOCK: [2020-07-22 Wed 10:50]--[2020-07-22 Wed 11:25] =>  0:35
+:END:
+
+*** Pair Programming WLA SWIC
+:LOGBOOK:
+CLOCK: [2020-07-22 Wed 17:45]--[2020-07-22 Wed 18:15] =>  0:30
+CLOCK: [2020-07-22 Wed 14:40]--[2020-07-22 Wed 15:45] =>  1:05
+CLOCK: [2020-07-22 Wed 11:25]--[2020-07-22 Wed 12:55] =>  1:30
+:END:
+
+*** Min Redeem amount via config
+:LOGBOOK:
+CLOCK: [2020-07-22 Wed 16:45]--[2020-07-22 Wed 17:45] =>  1:00
+:END:
+
+** 23.07 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *7:00* |      |
+|----------------------+--------+------|
+| \_  23.07 Donnerstag |        | 7:00 |
+#+END:
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 10:55]--[2020-07-23 Thu 11:15] =>  0:20
+CLOCK: [2020-07-23 Thu 09:00]--[2020-07-23 Thu 09:05] =>  0:05
+:END:
+*** Scrollable Modal
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 09:05]--[2020-07-23 Thu 10:10] =>  1:05
+:END:
+*** Truncate long product names
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 10:10]--[2020-07-23 Thu 10:55] =>  0:45
+:END:
+*** Auth Flow FE UAT
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 11:05]--[2020-07-23 Thu 12:20] =>  1:15
+:END:
+*** Refactor sidebar links
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 16:25]--[2020-07-23 Thu 16:40] =>  0:15
+CLOCK: [2020-07-23 Thu 13:10]--[2020-07-23 Thu 13:45] =>  0:35
+:END:
+*** WLA Swic Call
+:LOGBOOK:
+CLOCK: [2020-07-23 Thu 13:45]--[2020-07-23 Thu 16:25] =>  2:40
+:END:
+
+** 24.07 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *9:40* |      |
+|-------------------+--------+------|
+| \_  24.07 Freitag |        | 9:40 |
+#+END:
+
+
+*** Fix pilots for demo
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 08:45]--[2020-07-24 Fri 09:45] =>  1:00
+:END:
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 09:45]--[2020-07-24 Fri 10:15] =>  0:30
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 10:15]--[2020-07-24 Fri 10:40] =>  0:25
+:END:
+
+*** Fix multiple addiditons to cart (limit)
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 10:40]--[2020-07-24 Fri 12:00] =>  1:20
+:END:
+
+*** Indicate to user when max amount/quant is exhausted
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 12:00]--[2020-07-24 Fri 13:15] =>  1:15
+:END:
+
+*** WLA Swic Talk
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 18:45]--[2020-07-24 Fri 19:15] =>  0:30
+CLOCK: [2020-07-24 Fri 17:10]--[2020-07-24 Fri 17:30] =>  0:20
+CLOCK: [2020-07-24 Fri 15:55]--[2020-07-24 Fri 16:45] =>  0:48
+CLOCK: [2020-07-24 Fri 14:05]--[2020-07-24 Fri 15:00] =>  0:55
+:END:
+
+*** Signal WebApi
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 15:00]--[2020-07-24 Fri 15:55] =>  0:55
+:END:
+
+*** Draw Diagram for new decided signalR flow
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 16:45]--[2020-07-24 Fri 17:10] =>  0:25
+:END:
+
+*** Merge & deploy auth update for SWIC
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 17:30]--[2020-07-24 Fri 18:05] =>  0:35
+:END:
+
+*** Merge & deploy auth update for presales
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 18:05]--[2020-07-24 Fri 18:20] =>  0:30
+:END:
+
+*** Merge & deploy auth update for pilot tamlan
+:LOGBOOK:
+CLOCK: [2020-07-24 Fri 18:20]--[2020-07-24 Fri 18:45] =>  0:25
+:END:
+
+* KW 31 27.07.2020-31.07.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *28:45* |      |
+|-----------------------------+---------+------|
+| KW 31 27.07.2020-31.07.2020 | 28:45   |      |
+| \_  27.07 Montag            |         | 8:10 |
+| \_  28.07 Dienstag          |         | 8:05 |
+| \_  29.07 Mittwoch          |         | 4:20 |
+| \_  31.07 Freitag           |         | 8:10 |
+#+END:
+** 27.07 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:10* |      |
+|------------------+--------+------|
+| \_  27.07 Montag |        | 8:10 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 09:00]--[2020-07-27 Mon 09:15] =>  0:15
+:END:
+*** Research supposed amount field bug in redeem
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 09:15]--[2020-07-27 Mon 09:45] =>  0:30
+:END:
+*** Number formatting
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 09:45]--[2020-07-27 Mon 11:50] =>  2:05
+:END:
+*** Tiles for payment process
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 15:50]--[2020-07-27 Mon 16:30] =>  0:40
+CLOCK: [2020-07-27 Mon 14:45]--[2020-07-27 Mon 15:30] =>  0:45
+CLOCK: [2020-07-27 Mon 11:50]--[2020-07-27 Mon 14:15] =>  2:25
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 15:30]--[2020-07-27 Mon 15:50] =>  0:20
+:END:
+*** Configuration of payment tiles via config
+:LOGBOOK:
+CLOCK: [2020-07-27 Mon 16:30]--[2020-07-27 Mon 17:40] =>  1:10
+:END:
+
+** 28.07 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:05* |      |
+|--------------------+--------+------|
+| \_  28.07 Dienstag |        | 8:05 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 12:55]--[2020-07-28 Tue 13:25] =>  0:30
+CLOCK: [2020-07-28 Tue 09:00]--[2020-07-28 Tue 09:10] =>  0:10
+:END:
+*** Configuration of payment tiles via config
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 09:10]--[2020-07-28 Tue 10:50] =>  1:40
+:END:
+*** Setup blob for bankfrick
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 10:50]--[2020-07-28 Tue 12:10] =>  1:20
+:END:
+*** Update, merge and deploy new bankfrick bundle
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 12:10]--[2020-07-28 Tue 12:55] =>  0:45
+:END:
+*** Extensions of Redemption Process
+**** From ethereum to erc20token
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 14:20]--[2020-07-28 Tue 15:40] =>  1:20
+:END:
+**** Show other screen instead of form by default
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 16:35]--[2020-07-28 Tue 17:15] =>  0:40
+:END:
+**** Add tiles to first screen
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 17:15]--[2020-07-28 Tue 18:00] =>  0:45
+:END:
+*** Support WLA APP
+:LOGBOOK:
+CLOCK: [2020-07-28 Tue 15:40]--[2020-07-28 Tue 16:35] =>  0:55
+:END:
+
+** 29.07 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *4:20* |      |
+|--------------------+--------+------|
+| \_  29.07 Mittwoch |        | 4:20 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-29 Wed 11:00]--[2020-07-29 Wed 11:10] =>  0:10
+CLOCK: [2020-07-29 Wed 09:00]--[2020-07-29 Wed 09:10] =>  0:10
+:END:
+
+*** Fix + stabilize environments/server + minimize nodejs code
+:LOGBOOK:
+CLOCK: [2020-07-29 Wed 09:10]--[2020-07-29 Wed 10:30] =>  1:20
+:END:
+
+*** Update blobs for pilots
+:LOGBOOK:
+CLOCK: [2020-07-29 Wed 10:30]--[2020-07-29 Wed 11:00] =>  0:30
+:END:
+
+*** Deploy pilots
+:LOGBOOK:
+CLOCK: [2020-07-29 Wed 11:10]--[2020-07-29 Wed 11:35] =>  0:25
+:END:
+
+*** Extensions of Redemption Process
+**** Add tiles to first screen + functional
+:LOGBOOK:
+CLOCK: [2020-07-29 Wed 11:30]--[2020-07-29 Wed 13:15] =>  1:45
+:END:
+
+** 30.07 Donnerstag
+** 31.07 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:10* |      |
+|-------------------+--------+------|
+| \_  31.07 Freitag |        | 8:10 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 17:50]--[2020-07-31 Fri 18:00] =>  0:10
+CLOCK: [2020-07-31 Fri 09:00]--[2020-07-31 Fri 09:25] =>  0:25
+:END:
+
+*** Adapt Redemption process navigation
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 09:25]--[2020-07-31 Fri 10:30] =>  1:05
+:END:
+*** Country fee configuration via config
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 10:30]--[2020-07-31 Fri 14:00] =>  3:30
+:END:
+
+*** Alignment call with CL & Hegit
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 14:00]--[2020-07-31 Fri 14:40] =>  0:40
+:END:
+
+*** Country fee configuration via config for each redemption method
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 15:30]--[2020-07-31 Fri 16:45] =>  1:15
+:END:
+
+*** Join Swic Call
+:LOGBOOK:
+CLOCK: [2020-07-31 Fri 16:45]--[2020-07-31 Fri 17:50] =>  1:05
+:END:

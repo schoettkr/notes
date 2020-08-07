@@ -1,0 +1,104 @@
+#+OPTIONS:     H:2
+#+OPTIONS: timestamp:nil
+#+TITLE: Logbook
+
+* KW 32 03.08.2020-09.08.2020
+** 03.08 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:30* |      |
+|------------------+--------+------|
+| \_  03.08 Montag |        | 8:30 |
+#+END:
+
+
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 14:45]--[2020-08-03 Mon 15:00] =>  0:15
+CLOCK: [2020-08-03 Mon 12:25]--[2020-08-03 Mon 12:40] =>  0:10
+CLOCK: [2020-08-03 Mon 09:00]--[2020-08-03 Mon 09:20] =>  0:20
+:END:
+*** Country fee configuration via config for each redemption method
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 09:20]--[2020-08-03 Mon 10:40] =>  1:20
+:END:
+*** Redeem fees on top via config
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 10:40]--[2020-08-03 Mon 12:25] =>  1:45
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 15:00]--[2020-08-03 Mon 15:25] =>  0:25
+CLOCK: [2020-08-03 Mon 12:40]--[2020-08-03 Mon 13:10] =>  0:30
+:END:
+*** Walk through task blocks and outline where BE comes into play
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 13:10]--[2020-08-03 Mon 13:55] =>  0:45
+:END:
+
+*** Refactor auth flow to accomodate for future requests (confirm email, T&Cs, etc..)
+:LOGBOOK:
+CLOCK: [2020-08-03 Mon 15:25]--[2020-08-03 Mon 18:20] =>  2:55
+:END:
+
+** 04.08 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:10* |      |
+|--------------------+--------+------|
+| \_  04.08 Dienstag |        | 8:10 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-08-04 Tue 09:00]--[2020-08-04 Tue 09:10] =>  0:10
+:END:
+
+*** Refactor auth flow to accomodate for future requests (confirm email, T&Cs, etc..)
+:LOGBOOK:
+CLOCK: [2020-08-04 Tue 09:10]--[2020-08-04 Tue 11:55] =>  2:45
+:END:
+*** 'Confirm Email' Screen on unconfirmed login
+:LOGBOOK:
+CLOCK: [2020-08-04 Tue 15:00]--[2020-08-04 Tue 15:45] =>  0:45
+CLOCK: [2020-08-04 Tue 11:55]--[2020-08-04 Tue 14:10] =>  2:15
+:END:
+*** Add 'Resend Email' to confirm email screen
+:LOGBOOK:
+CLOCK: [2020-08-04 Tue 15:45]--[2020-08-04 Tue 16:35] =>  0:50
+:END:
+*** T & C feature
+:LOGBOOK:
+CLOCK: [2020-08-04 Tue 16:35]--[2020-08-04 Tue 18:00] =>  1:25
+:END:
+
+** 05.08 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *2:45* |      |
+|--------------------+--------+------|
+| \_  05.08 Mittwoch |        | 2:45 |
+#+END:
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-08-05 Wed 20:45]--[2020-08-05 Wed 21:10] =>  0:25
+:END:
+*** T & C feature
+:LOGBOOK:
+CLOCK: [2020-08-05 Wed 21:10]--[2020-08-05 Wed 23:30] =>  2:20
+:END:
+** 06.08 Donnerstag
+
+*** Finish T&C feature and connect it with unconfirmed email feature
+:LOGBOOK:
+CLOCK: [2020-08-06 Thu 15:25]--[2020-08-06 Thu 17:30] =>  2:05
+:END:
+*** CORS for WLP dev
+:LOGBOOK:
+CLOCK: [2020-08-06 Thu 17:30]--[2020-08-06 Thu 18:20] =>  0:50
+:END:

@@ -1,0 +1,118 @@
+#+TITLE: Overview
+
+* Repos
+- General/Overview: https://coreledgerag.visualstudio.com/
+- White Label Portal: https://coreledgerag.visualstudio.com/Whitelabel%20Portal/_git/whitelabel_portal
+- White Label App: https://coreledgerag.visualstudio.com/CLMarketplace/_git/whitelabel_app
+- Tx Server Api: https://coreledgerag.visualstudio.com/TX.Projects/_git/TxServer.Api
+
+* Azure Devops (Webapps)
+- General/Overview: https://portal.azure.com/#home
+
+* Live Versions
+- Bankfrick: https://wlp-bankfrick-pilot.coreledger.net/
+- Swic: https://wlp-swic-pilot.coreledger.net/
+- Presales: https://wlp-presales-pilot.coreledger.net/
+- Dev/UAT: https://wlp-dev-wa.azurewebsites.net
+
+* Blobs & Configuration
+- Presales: https://portal.azure.com/#blade/Microsoft_Azure_Storage/ContainerMenuBlade/overview/storageAccountId/%2Fsubscriptions%2F065ca036-3521-4051-a1aa-361d17ad05e3%2FresourceGroups%2Ftenant-presales-pilot-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftenantpilotpresalesacc/path/wlp-config/etag/%220x8D824B0EA15AE99%22/defaultEncryptionScope/%24account-encryption-key/denyEncryptionScopeOverride//defaultId//publicAccessVal/Blob
+- Dev/UAT: https://portal.azure.com/#blade/Microsoft_Azure_Storage/ContainerMenuBlade/overview/storageAccountId/%2Fsubscriptions%2Fdd62f32d-3e42-4d4f-880c-a5c44a6d00a4%2FresourceGroups%2Fcoreledger-dev-test-rg%2Fproviders%2FMicrosoft.Storage%2FstorageAccounts%2Ftenantalldevacc/path/wlp-config/etag/%220x8D821B236CE3DD3%22/defaultEncryptionScope/%24account-encryption-key/denyEncryptionScopeOverride//defaultId//publicAccessVal/Blob
+
+
+* Design Links
+- Adobe XD Normal Version: https://xd.adobe.com/view/fe53112a-fe29-46ef-6e5f-e00cb5a50fa4-8862/grid
+- Adobe XD Dev Version: https://xd.adobe.com/view/107ada2e-9332-40d2-7f65-03a389689099-664b/grid
+
+
+* Links to important messages and other misc
+- IS configuration: https://teams.microsoft.com/l/message/19:3220d23c41784dcd9397eb06e2e56b19@thread.tacv2/1590578331742?tenantId=aca70c4c-6fac-413e-9e55-3ae922e34bf8&groupId=b2830687-fcef-4975-8fcf-55efc0a3f8bc&parentMessageId=1590578331742&teamName=Whitelabel%20Portal%20Team&channelName=General&createdTime=1590578331742
+- Environment information: https://teams.microsoft.com/l/message/19:3220d23c41784dcd9397eb06e2e56b19@thread.tacv2/1590575548110?tenantId=aca70c4c-6fac-413e-9e55-3ae922e34bf8&groupId=b2830687-fcef-4975-8fcf-55efc0a3f8bc&parentMessageId=1590575548110&teamName=Whitelabel%20Portal%20Team&channelName=General&createdTime=1590575548110
+- TFS: https://coreledgerag.visualstudio.com/Whitelabel%20Portal/_workitems/recentlyupdated/
+- Hegit Homepage: https://hegit.net/HegitWeb/
+- Hegit Whereby: https://whereby.com/hegit
+
+
+* Dev: Environment Configs
+** UAT
+#+BEGIN_SRC sh
+SERVER_HOST=http://127.0.0.1
+SERVER_PORT=5000
+FRONTEND_PORT=:3000
+
+JWT_KEY=Swordfish+1
+SESSION_SECRET=Fishsword+1
+
+BLOB_URL=https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs
+
+CLIENT_ID_FRONTEND=uat.tamlan.wlp_fe
+
+API_HOST=https://uattamlan.coreledger.net:58443/
+TX_API_HOST=https://txapi-uat.coreledger.net/v1.0/api
+TX_AUTH_HOST=https://auth-uat.coreledger.net
+TX_SCOPE=uat.txapi_core
+BACKEND_SCOPE=uat.tamlan.clmp.be
+#+END_SRC
+** Bankfrick
+#+BEGIN_SRC sh
+SERVER_HOST=http://127.0.0.1
+SERVER_PORT=5000
+FRONTEND_PORT=:3000
+
+JWT_KEY=Swordfish+1
+SESSION_SECRET=Fishsword+1
+
+BLOB_URL=https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs
+
+CLIENT_ID_FRONTEND=pilot.bankfrick.wlp_fe
+
+API_HOST=https://bankfrick-pilot.coreledger.net/
+TX_API_HOST=https://txapi.coreledger.net/v1.0/api
+TX_AUTH_HOST=https://auth.coreledger.net
+TX_SCOPE=pilot.txapi_core
+BACKEND_SCOPE=pilot.bankfrick.clmp.be
+#+END_SRC
+
+** Swic
+#+BEGIN_SRC sh
+SERVER_HOST=http://127.0.0.1
+SERVER_PORT=5000
+FRONTEND_PORT=:3000
+
+JWT_KEY=Swordfish+1
+SESSION_SECRET=Fishsword+1
+
+BLOB_URL=https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs
+
+CLIENT_ID_FRONTEND=pilot.swic.wlp_fe
+
+API_HOST=https://swic-pilot.coreledger.net
+TX_API_HOST=https://txapi.coreledger.net
+TX_AUTH_HOST=https://auth.coreledger.net
+TX_SCOPE=pilot.txapi_core
+BACKEND_SCOPE=pilot.swic.clmp.be
+#+END_SRC
+** Presales
+#+BEGIN_SRC sh
+SERVER_HOST=http://127.0.0.1
+SERVER_PORT=5000
+FRONTEND_PORT=:3000
+
+JWT_KEY=Swordfish+1
+SESSION_SECRET=Fishsword+1
+
+BLOB_URL=https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs
+
+CLIENT_ID_FRONTEND=uat.tamlan.wlp_fe
+
+API_HOST=https://uattamlan.coreledger.net:58443/
+TX_API_HOST=https://txapi-uat.coreledger.net/v1.0/api
+TX_AUTH_HOST=https://auth-uat.coreledger.net
+TX_SCOPE=uat.txapi_core
+BACKEND_SCOPE=beta.presales.clmp.be
+#+END_SRC
+
+* Account Login Data
+** Thomas Pilot
+thomas.friedrich@hegit.net
+ugh3duc4scuh@DIRK

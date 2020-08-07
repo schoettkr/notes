@@ -1,0 +1,171 @@
+#+TITLE: Notes
+Make someone check CORS for auth/signin-oidc  from wlp-dev on UAT
+* Porting Notes
+- tos (terms of service) in blob
+- .symbol-muted {color: #01486f;} in styles
+
+- country fees (redeem)
+  - inkl fallback
+- feesOnTop
+- "paymentMethods": {
+		"vanillaCreditCard": {
+			"enabled": true,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"payrexx": {
+			"enabled": true,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"bitcoin": {
+			"enabled": true,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	},
+* Porting Notes
+- styles.css: logo settings, navigation step settings
+- icons: add logo
+- config: add logo section
+- config: enable: true for collection methods
+- alte logos aus src loeschen
+- maxAmount fuer assets avl
+- max/min fuer reddeem
+- IMPORTANT AUTH: frontend host in production env!!
+
+
+
+* Temp
+Grundthema
+Config file:
+
+
+
+
+PAUSED: 8888 ist ja da direkt im Zusammenhang
+DONE: 8891, da fehlt ja nur noch die customization, dann ist das auch abgeschlossen
+DONE: Ob Token Card, Signable Addresses oder Addresses gewählt werden können
+DONE:Logo im Blob, egal wie scheisse es aussieht, 9281
+ACTIONABLE ALMOST DONE: 8886 ->,Begrenzen des Maximums von Einkäufen, des Minimums |  ebenfalls customization. Wie verhält es sich mit dem auschecken der Sparks?
+ACTIONABLE: Bei Zeit und Gelegenheit Weiteres wie Max. / Min. bei Redeem o.ä.
+
+* DONE✔ 8868
+Redeem und Purchase entfernen durch den Admin
+
+* DONE✔ 8892
+Das anschauen
+Weiche, ob Text oder URL
+Customizing
+
+* IN-PROGRESS/WAITING⚐ 8896
+Fees
+** TODO⚑ Fuer Payment getTotal beruecksichtigen
+- viaTokenCard komplett ausbauen
+- kosten richtig berechnen
+- alles via konstanten
+
+* TODO⚑ 8941
+Teile davon hattest Du schon erwähnt, ist relativ gross - aber ergibt schon Sinn.
+
+
+
+
+
+
+
+      Welcome to
+      <br />
+      SWIC Gateway
+    </h1>
+    <h2 className="text-main-text text-2xl mt-12 text-right">
+      Token distribution management. Fully customizable. Simple.
+
+
+                    A: '0x9d58c6acb52c40c998591b864d31c46470c219de',
+                    I: ASSET_ID,
+const ASSET_ID = '698611949065754022869145';
+
+const ASSET_ID = '698611949065754022869145';
+
+* Times
+11:45-12:05 call with T
+
+* Country list
+https://datahub.io/core/country-list
+
+* 4 Blocks
+** Block Screen after login
+- no BE involvement required (as far as it can be currently foreseen)
+
+** Bank Payment (Purchase)
+- BE is needed to generate and store a Reference Number (Verwendungszweck) which is linked to the user and will be shown to the user when the bank transfer info is shown
+  - the BE should also calculate the prices for the order itself and store that together with the order
+  - ideal: BE can somehow track whether or not a payment with a certain Reference Number has been fullfilled and update the order status accordingly
+    - hurdles: at first thought this seems hard to achieve. monitoring a bank account and parsing/comparing reference numbers seems unrealistic
+    - compromise: the BE has an endpoint where users with admin privileges can confirm a payment as fulfilled, and the BE updates the specific order + history
+      - Frontend will give the admin user an UI where he then can confirm successfull bank transfers manually himself
+        - this should also include an option to revoke a successfull bank transfer if the admin user for example set it on confirmed by accident
+
+** Payrexx Payment (Purchase)
+- BE is needed even more than for bank transfer
+  - BE needs to provide endpoints for invoice creation (gateway)
+  - BE needs to track invoice + status (database)
+  - BE needs to provide endpoint to check/update invoice status
+
+** Purchase Complete
+- just some general thoughts since BE involvement depends on the exact requirements/features which are hard to foresee
+- BE needs to track orders and thus order history
+  - an order is either linked to a payrexx invoice or a bank transfer reference number (Verwendungszweck) and includes the payment status (eg waiting/confirm/canceled or similar)
+- BE needs to provide endpoints where an user with admin privileges can fetch that order history
+* Authentication Rewrite Sources
+- https://auth0.com/blog/complete-guide-to-react-user-authentication/
+- https://www.freecodecamp.org/news/build-a-react-hooks-front-end-app-with-routing-and-authentication/
+- https://www.youtube.com/watch?v=996OiexHze0&feature=youtu.be
+- smartmo
+
+* T & Cs
+** Send TC confirmation
+      if (user.newUser) {
+        navigation.navigate('PrivacyPolicyScreen');
+
+curl 'https://uattamlan.coreledger.net:58443/api/auth/signup' \
+  -H 'authority: uattamlan.coreledger.net:58443' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'x-correlation-id: f1719e42-2cef-43be-91ae-592becb4ff97' \
+  -H 'language: null' \
+  -H 'authorization: Bearer cec9fa78959b48f1ade245fe11744b4c56c375be673a9557ce35a40652b8877c' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36' \
+  -H 'content-type: application/json;charset=UTF-8' \
+  -H 'origin: https://uattamlan.coreledger.net:58443' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uattamlan.coreledger.net:58443/Signup' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'cookie: _hjid=a19d8ab4-cc5e-48df-b166-702bfcff492d; _hjIncludedInSample=1; _hjAbsoluteSessionInProgress=1' \
+  --data-binary '{"language":"en-US","timeZoneId":"W. Europe Standard Time","isDataPolicyAccepted":true}' \
+  --compressed
+
+
+** Send email again
+curl 'https://uattamlan.coreledger.net:58443/api/auth/confirmation' \
+  -X 'POST' \
+  -H 'authority: uattamlan.coreledger.net:58443' \
+  -H 'content-length: 0' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'x-correlation-id: 061f97c8-bf97-422a-925a-c91e601cc11c' \
+  -H 'language: null' \
+  -H 'authorization: Bearer cec9fa78959b48f1ade245fe11744b4c56c375be673a9557ce35a40652b8877c' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36' \
+  -H 'origin: https://uattamlan.coreledger.net:58443' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://uattamlan.coreledger.net:58443/userStatus' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'cookie: _hjid=a19d8ab4-cc5e-48df-b166-702bfcff492d; _hjIncludedInSample=1; _hjAbsoluteSessionInProgress=1' \
+  --compressed
+* Smartmo Auth Inspection
+Haltbar bis Mittwoch abend 18:22
+https://smartmoportal.coreledger.net/
+
+key: oidc.user:https://auth.coreledger.net:prod.smartmo.portal_fe
+val: {"id_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjZCRkY0MTQwMTY4RDgwMDA3NDFFNjdFMzFEODFFOUZFRDFEN0ExRDAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJhXzlCUUJhTmdBQjBIbWZqSFlIcF90SFhvZEEifQ.eyJuYmYiOjE1OTY0NzE3MDksImV4cCI6MTU5NjQ3MTc2OSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmNvcmVsZWRnZXIubmV0IiwiYXVkIjoicHJvZC5zbWFydG1vLnBvcnRhbF9mZSIsIm5vbmNlIjoiOTc0MjQ0ZTVmNDE2NDE1NDk3MjA2NTM4YTQ4MjM5NzMiLCJpYXQiOjE1OTY0NzE3MDksImF0X2hhc2giOiJEWTFfYndfVEc4M05ZTFZNNTZ4N2dRIiwic2lkIjoiZWE3MWUxMzIyYjk2YjY2YzE1MGU3MzEzMDdmYjI1ZjQiLCJzdWIiOiIwZTU2YzVhOS03NjQwLTRiM2YtODYyMS1mNzAwYWYxZDY2ZjciLCJhdXRoX3RpbWUiOjE1OTY0NzE3MDksImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.Cz5upCElD50JW7ajJocnM8IK9AzKFvelWKwcFcXyW7FCvJzU1KAFSzNG0ymBsgUf_48ZLkMr_hXg4BPrUQ7mIDb2KWdrvKwAaK1ydRkFrP0wnoGoK2Y4scFEE5byMRn6_vqFiZRgT7iUtBJ1yOqwCr8GFm0DoSBf-MxbU2ay4dhreAWQS0OU_dQEaFXevxC5OBerT84sr7BBchwBIUejIR3FhJxewbBq0iOnWiVP1GHQoAVcjXsrpW5JVCNE5bn2tmrak8DSxyUwhCd3kXbIgA8ImCueShUroOFzWc0ZH_kggl3TJBUT5kHhBI7YhUqlWh_HRzsaK-L_VEEPLg5w3A","session_state":"norfxiuaxAcp6OUb10hT4WC-x1Y4Dp_sjfZyQxYO1RI.03e57befec0426eae83b3325f90e6f91","access_token":"9dc78ce8b5cd5ee5c1f5e6cbffdb51f5a36e988481f2362948a58c10e90ebaef","token_type":"Bearer","scope":"openid profile prod.smartmo.clmp.be prod.smartmows","profile":{"sid":"ea71e1322b96b66c150e731307fb25f4","sub":"0e56c5a9-7640-4b3f-8621-f700af1d66f7","auth_time":1596471709,"idp":"local","amr":["pwd"],"preferred_username":"Reineke","name":"Thomas Friedrich","given_name":"Thomas","family_name":"Friedrich","email":"conkerthesquirrel@bluewin.ch","email_verified":true},"expires_at":1596644509}

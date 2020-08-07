@@ -1,0 +1,864 @@
+#+OPTIONS:     H:2
+#+OPTIONS: timestamp:nil
+#+TITLE: Logbook
+* Mai 2020 - Total
+| KW 19 | KW 20 | KW 21 | KW 22 |     Total |
+|-------+-------+-------+-------+-----------|
+| 28:20 | 40:30 | 37:15 | 41:30 | 147:35:00 |
+#+TBLFM: $5=$1+$2+$3+$4;T
+
+* KW 19 04.05.2020-10.05.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *28:20* |      |
+|-----------------------------+---------+------|
+| KW 19 04.05.2020-10.05.2020 | 28:20   |      |
+| \_  05.05 Dienstag          |         | 1:20 |
+| \_  06.05 Mittwoch          |         | 9:15 |
+| \_  07.05 Donnerstag        |         | 9:00 |
+| \_  08.05 Freitag           |         | 8:45 |
+#+END:
+
+** 04.05 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
+
+** 05.05 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *1:20* |      |
+|--------------------+--------+------|
+| \_  05.05 Dienstag |        | 1:20 |
+#+END:
+
+*** Intro Call
+:LOGBOOK:
+CLOCK: [2020-05-05 Tue 10:30]--[2020-05-05 Tue 11:50] =>  1:20
+:END:
+** 06.05 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *9:15* |      |
+|--------------------+--------+------|
+| \_  06.05 Mittwoch |        | 9:15 |
+#+END:
+
+*** Research, Planning & Brainstorming
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 09:00]--[2020-05-06 Wed 10:30] =>  1:30
+:END:
+*** Primary Topics Call (Thomas, Hannes, Tony, Robert, Lenno) & Secondary Topics Call (Thomas, Robert, Lenno)
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 10:30]--[2020-05-06 Wed 12:00] =>  1:30
+:END:
+*** 1on1-Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 12:00]--[2020-05-06 Wed 12:45] =>  0:45
+:END:
+- focus outline
+- decide on mocks and first steps
+
+*** Frontend Project Initialization
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 13:45]--[2020-05-06 Wed 14:15] =>  0:30
+:END:
+
+*** Integrating Tailwind.css
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 14:15]--[2020-05-06 Wed 14:45] =>  0:30
+:END:
+
+*** Welcome Page component & Sidebar Component
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 14:45]--[2020-05-06 Wed 18:30] =>  3:45
+:END:
+
+*** Call with Thomas in regards to responsiveness (flexbox etc) and the contract
+:LOGBOOK:
+CLOCK: [2020-05-06 Wed 18:30]--[2020-05-06 Wed 19:15] =>  0:45
+:END:
+
+** 07.05 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *9:00* |      |
+|----------------------+--------+------|
+| \_  07.05 Donnerstag |        | 9:00 |
+#+END:
+
+*** Plan the day
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 09:00]--[2020-05-07 Thu 09:15] =>  0:15
+:END:
+*** Review & commit code from prev. day
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 09:15]--[2020-05-07 Thu 09:30] =>  0:15
+:END:
+*** Product Card Component
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 09:30]--[2020-05-07 Thu 11:45] =>  2:15
+:END:
+
+*** Acquire Tokens Page Component (with Mock data)
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 11:45]--[2020-05-07 Thu 14:00] =>  2:15
+:END:
+
+*** Install WhiteLabel-App + first look at its code
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 15:00]--[2020-05-07 Thu 15:30] =>  0:30
+:END:
+
+*** Call with Thomas + Robert (showcase first views/screens, coordinate next tasks, questions)
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 15:30]--[2020-05-07 Thu 16:45] =>  1:15
+:END:
+
+*** Find out where the App fetches the demo tokens (coiffeur, consulting etc)
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 16:45]--[2020-05-07 Thu 17:15] =>  0:30
+:END:
+    - 'https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs' + '/[${lang}]Assets.v1.json'
+      - -> https://tenantbetatamlanacc.blob.core.windows.net/trading-app-configs/[en]Assets.v1.json
+      - for icons: source={{uri: `${API_CONFIG.BLOB_URL}/${item.icon}`}}
+
+*** Fetch tokens blob into webapp 'Acquire Token' component
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 17:15]--[2020-05-07 Thu 18:30] =>  1:15
+:END:
+    - create server on the fly to fetch from blob store
+    - show asset info in asset card components
+      - add click handler for opening details
+    - TODO: icons are round, does not work with design where border goes up until the image
+
+*** Call with Thomas to cleanup misconceptions about the flow / "Finka Token" logo placement in Payout Screen, review the current progress and touch on next tasks
+:LOGBOOK:
+CLOCK: [2020-05-07 Thu 18:30]--[2020-05-07 Thu 19:00] =>  0:30
+:END:
+
+** 08.05 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *7:45* |      |
+|-------------------+--------+------|
+| \_  08.05 Freitag |        | 7:45 |
+#+END:
+
+*** Cleanup, review & commit code from prev. day
+:LOGBOOK:
+CLOCK: [2020-05-08 Fri 09:00]--[2020-05-08 Fri 09:30] =>  0:30
+:END:
+*** Write first code for own nodejs/express powered server which will later be a central point
+:LOGBOOK:
+CLOCK: [2020-05-08 Fri 09:30]--[2020-05-08 Fri 10:15] =>  0:45
+:END:
+
+*** Mock Payout Component
+:LOGBOOK:
+CLOCK: [2020-05-08 Fri 14:30]--[2020-05-08 Fri 18:45] =>  4:15
+CLOCK: [2020-05-08 Fri 10:15]--[2020-05-08 Fri 13:30] =>  3:15
+:END:
+- 10:15-10:30 Gather specifications
+- 10:30-10:45 Add & use 'Nunito Sans' font as more content gets added
+- 10:45-11:30 Create custom form text element for later reuse
+- 11:30-12:15 Long discussion about ordering of fields on small/larger screens
+- 12:15-13:30 Add text fields for Payout Page
+- 13:30-14:30 Lunch Break
+- 14:30-14:45 Add submit button
+- 14:45-15:00 Add T&C + Checkbox
+- 15:00-15:30 Add (for now naive) Form Validation
+- 15:30-16:00 Call with Thomas (Alignment, Review new design by Robert)
+- 16:00-18:15 Add (for now naive client-side) Form Validation [Continuation]
+- 18:15-18:45 Review & commit todays code to prevent memory loss on Monday
+
+* KW 20 11.05.2020-17.05.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *40:30* |      |
+|-----------------------------+---------+------|
+| KW 20 11.05.2020-17.05.2020 | 40:30   |      |
+| \_  11.05 Montag            |         | 8:00 |
+| \_  12.05 Dienstag          |         | 8:30 |
+| \_  13.05 Mittwoch          |         | 9:30 |
+| \_  14.05 Donnerstag        |         | 6:30 |
+| \_  15.05 Freitag           |         | 8:00 |
+#+END:
+
+** 11.05 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:00* |      |
+|------------------+--------+------|
+| \_  11.05 Montag |        | 8:00 |
+#+END:
+
+*** Catch up and plan the day
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 09:00]--[2020-05-11 Mon 09:15] =>  0:15
+:END:
+
+*** Custom Amount Stepper Component from Robert's new Design
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 09:15]--[2020-05-11 Mon 10:30] =>  1:15
+:END:
+- TODO: add static currency inside (CHF)
+- TODO: clarify how the 'ample' works and add it
+ 
+*** Alignment with Thomas and Robert
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 10:30]--[2020-05-11 Mon 11:30] =>  1:00
+:END:
+
+*** Add nested navigation indicators to Header
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 11:30]--[2020-05-11 Mon 13:00] =>  1:30
+:END:
+
+*** QR Verification Screen (with mock QR Code provided by Hannes)
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 14:00]--[2020-05-11 Mon 15:45] =>  1:45
+:END:
+
+*** 'Finish Payout' Screen
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 15:45]--[2020-05-11 Mon 16:30] =>  0:45
+:END:
+
+*** Change styling for cards and header to result in a fixed width incl reordering/wrapping
+:LOGBOOK:
+CLOCK: [2020-05-11 Mon 16:30]--[2020-05-11 Mon 18:00] =>  1:30
+:END:
+
+** 12.05 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:30* |      |
+|--------------------+--------+------|
+| \_  12.05 Dienstag |        | 8:30 |
+#+END:
+
+*** Plan the day
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 09:00]--[2020-05-12 Tue 09:15] =>  0:15
+:END:
+
+*** Add Bitcoin Option and Form to Payout Component
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 09:15]--[2020-05-12 Tue 11:00] =>  1:45
+:END:
+
+*** Add Ethereum Option and Form to Payout Component
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 11:00]--[2020-05-12 Tue 11:30] =>  0:30
+:END:
+
+*** Call with Thomas (share progress and organize next tasks/steps in regards to hosting, asset storage and Cart)
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 11:30]--[2020-05-12 Tue 12:00] =>  0:30
+:END:
+
+*** Cart (with static content)
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 15:15]--[2020-05-12 Tue 15:30] =>  0:15
+CLOCK: [2020-05-12 Tue 14:30]--[2020-05-12 Tue 14:45] =>  0:15
+CLOCK: [2020-05-12 Tue 12:00]--[2020-05-12 Tue 13:30] =>  1:30
+:END:
+
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 14:45]--[2020-05-12 Tue 15:15] =>  0:30
+:END:
+
+*** Multiple small changes
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 15:30]--[2020-05-12 Tue 15:45] =>  0:15
+:END:
+- rename QR-Verification
+- replace onClick QR-Code with onKey 43 to proceed to finish payout screen
+
+*** First Checkout Screen (Select a token collection method)
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 15:45]--[2020-05-12 Tue 17:30] =>  1:45
+:END:
+
+*** Add static asset content provided by Thomas instead of fetching from Blob
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 17:30]--[2020-05-12 Tue 18:00] =>  0:30
+:END:
+
+*** Add link from 'Add to cart' to static Cart, from 'Checkout' in Cart to Checkout Process
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 18:00]--[2020-05-12 Tue 18:15] =>  0:15
+:END:
+
+*** Prepare and create video of current state
+:LOGBOOK:
+CLOCK: [2020-05-12 Tue 18:15]--[2020-05-12 Tue 18:30] =>  0:15
+:END:
+** 13.05 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *9:30* |      |
+|--------------------+--------+------|
+| \_  13.05 Mittwoch |        | 9:30 |
+#+END:
+
+*** Review code from prev. day and plan the day
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 09:00]--[2020-05-13 Wed 09:30] =>  0:30
+:END:
+*** Fix/deactivate fading of form content to prevent flash on submit
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 09:30]--[2020-05-13 Wed 10:30] =>  1:00
+:END:
+*** Add wave effects to cards but deactivate for now
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 10:30]--[2020-05-13 Wed 11:15] =>  0:45
+:END:
+*** Prepare for hosting
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 11:15]--[2020-05-13 Wed 11:30] =>  0:15
+:END:
+
+*** Call with Thomas in regards to hosting (payment, credentials etc)
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 11:30]--[2020-05-13 Wed 11:35] =>  0:05
+:END:
+
+*** Prepare for hosting
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 11:35]--[2020-05-13 Wed 12:15] =>  0:40
+:END:
+
+*** Setup droplet
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 12:15]--[2020-05-13 Wed 13:30] =>  1:15
+:END:
+- 12:15-12:30 Add non-root users with superuser accesses
+- 12:30-13:00 Update packages, remove outdated nodejs installation that came by default and install nodejs v12
+- 13:00-13:15 Enable firewall and allow ssh connections
+- 13:15-13:30 Disable/close non-essential ports
+*** Setup nginx for digital ocean droplet
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 14:30]--[2020-05-13 Wed 15:30] =>  1:00
+:END:
+*** Deploy
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 15:30]--[2020-05-13 Wed 16:30] =>  1:00
+:END:
+*** Add protected and unprotected routes
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 16:30]--[2020-05-13 Wed 17:30] =>  1:00
+:END:
+*** Add barebone login
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 17:30]--[2020-05-13 Wed 18:30] =>  1:00
+:END:
+
+*** Apply multiple other changes for demo
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 18:30]--[2020-05-13 Wed 19:15] =>  0:45
+:END:
+- exchange QR Code
+- exchange some texts
+- swap, remove and add Links
+
+*** Deploy for demo on next day
+:LOGBOOK:
+CLOCK: [2020-05-13 Wed 19:15]--[2020-05-13 Wed 19:30] =>  0:15
+:END:
+
+** 14.05 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *6:30* |      |
+|----------------------+--------+------|
+| \_  14.05 Donnerstag |        | 6:30 |
+#+END:
+
+*** Add changes that were requested for the demo (SSL, white border on QR, keycode, etc) and deploy
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 09:15]--[2020-05-14 Thu 10:30] =>  1:15
+:END:
+- SSL not feasible
+
+*** Cleanup and organization of stuff that occured during this sprint
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 12:00]--[2020-05-14 Thu 13:30] =>  1:30
+:END:
+
+*** Plan next steps
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 14:30]--[2020-05-14 Thu 14:45] =>  0:15
+:END:
+
+*** Render QR code based on amount value from the form
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 14:45]--[2020-05-14 Thu 15:15] =>  0:30
+:END:
+
+*** Order Overview (mock, for collection method = Wallet)
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 15:15]--[2020-05-14 Thu 17:30] =>  2:15
+:END:
+
+*** Order Overview (mock, for collection method = Token Card)
+:LOGBOOK:
+CLOCK: [2020-05-14 Thu 17:30]--[2020-05-14 Thu 18:15] =>  0:45
+:END:
+
+** 15.05 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:00* |      |
+|-------------------+--------+------|
+| \_  15.05 Freitag |        | 8:00 |
+#+END:
+
+*** 09:00-09:30 Review code from prev. day, commit, plan the day
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 09:00]--[2020-05-15 Fri 09:30] =>  0:30
+:END:
+
+***  09:30-12:00 'Your details' Component View
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 09:30]--[2020-05-15 Fri 12:00] =>  2:30
+:END:
+- 10:30-11:30 Custom(ize) Telephone Input
+- 11:30-11:45 Add Phone number validation
+
+*** 12:00-13:10 Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 12:00]--[2020-05-15 Fri 13:10] =>  1:10
+:END:
+
+*** 13:10-13:30 Finish 'Your Details' view, add navigation to step 4, show nothing yet (later probably Payrrex)
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 13:10]--[2020-05-15 Fri 13:30] =>  0:20
+:END:
+
+*** 14:30-17:00 Dynamic Cart
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 14:30]--[2020-05-15 Fri 17:00] =>  2:30
+:END:
+
+*** 17:00-18:00 Dynamic Order Details/Overview
+:LOGBOOK:
+CLOCK: [2020-05-15 Fri 17:00]--[2020-05-15 Fri 18:00] =>  2:30
+:END:
+
+* KW 21 18.05.2020-24.05.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *37:15* |      |
+|-----------------------------+---------+------|
+| KW 21 18.05.2020-24.05.2020 | 37:15   |      |
+| \_  18.05 Montag            |         | 8:15 |
+| \_  19.05 Dienstag          |         | 8:15 |
+| \_  20.05 Mittwoch          |         | 8:15 |
+| \_  21.05 Donnerstag        |         | 4:15 |
+| \_  22.05 Freitag           |         | 8:15 |
+#+END:
+
+
+
+** 18.05 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:15* |      |
+|------------------+--------+------|
+| \_  18.05 Montag |        | 8:15 |
+#+END:
+*** Organize and plan the day
+:LOGBOOK:
+CLOCK: [2020-05-18 Mon 09:00]--[2020-05-18 Mon 09:30] =>  0:30
+:END:
+- review code from Friday
+- commit
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-18 Mon 09:30]--[2020-05-18 Mon 10:10] =>  0:40
+:END:
+*** Implement 'More Details' Modal
+:LOGBOOK:
+CLOCK: [2020-05-18 Mon 14:00]--[2020-05-18 Mon 17:00] =>  3:00
+CLOCK: [2020-05-18 Mon 10:10]--[2020-05-18 Mon 13:00] =>  2:50
+:END:
+- develop custom but generic Modal component
+- implement design into a custom Details-Modal
+- add functionality to add the specified amount of the items into the cart
+*** Familiarize with Identity-Server
+:LOGBOOK:
+CLOCK: [2020-05-18 Mon 17:00]--[2020-05-18 Mon 18:00] =>  1:00
+:END:
+*** Create and export time tables
+:LOGBOOK:
+CLOCK: [2020-05-18 Mon 18:00]--[2020-05-18 Mon 18:15] =>  0:15
+:END:
+** 19.05 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  19.05 Dienstag |        | 8:15 |
+#+END:
+
+*** Review code from prev. day, commit, organize, plan the day
+:LOGBOOK:
+CLOCK: [2020-05-19 Tue 09:00]--[2020-05-19 Tue 09:30] =>  0:30
+:END:
+*** Short call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-19 Tue 09:30]--[2020-05-19 Tue 09:45] =>  0:15
+:END:
+*** Deploy new version
+:LOGBOOK:
+CLOCK: [2020-05-19 Tue 09:45]--[2020-05-19 Tue 10:00] =>  0:15
+:END:
+*** Identity Server
+:LOGBOOK:
+CLOCK: [2020-05-19 Tue 14:00]--[2020-05-19 Tue 18:15] =>  4:15
+CLOCK: [2020-05-19 Tue 10:00]--[2020-05-19 Tue 13:00] =>  3:00
+:END:
+- start with looking at app code and ambitorio code
+- install dotnet-cli to checkout auth flow from react scaffold
+- scaffold code for white label app
+
+** 20.05 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:15* |      |
+|--------------------+--------+------|
+| \_  20.05 Mittwoch |        | 8:15 |
+#+END:
+
+*** Planning & Organizing
+:LOGBOOK:
+CLOCK: [2020-05-20 Wed 09:00]--[2020-05-20 Wed 09:15] =>  0:15
+:END:
+*** Add oicd authentication to backend
+:LOGBOOK:
+CLOCK: [2020-05-20 Wed 09:15]--[2020-05-20 Wed 13:00] =>  3:45
+:END:
+*** Add jwt authentication to backend
+:LOGBOOK:
+CLOCK: [2020-05-20 Wed 14:00]--[2020-05-20 Wed 15:15] =>  1:15
+:END:
+*** Add and configure server logging mechanism
+:LOGBOOK:
+CLOCK: [2020-05-20 Wed 15:15]--[2020-05-20 Wed 18:15] =>  3:00
+:END:
+
+** 21.05 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *4:15* |      |
+|----------------------+--------+------|
+| \_  21.05 Donnerstag |        | 4:15 |
+#+END:
+
+*** Adapt frontend to authentication process
+:LOGBOOK:
+CLOCK: [2020-05-21 Thu 09:00]--[2020-05-21 Thu 13:15] =>  4:15
+:END:
+- remove the mock frontend authentication
+- protect/authorize routes based on JWT
+- store jwt on redirect to /acquire
+- transmit jwt on requests to backend
+- add authorization state/context + reducer
+
+** 22.05 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:15* |      |
+|-------------------+--------+------|
+| \_  22.05 Freitag |        | 8:15 |
+#+END:
+
+
+*** Adapt frontend to authentication process
+:LOGBOOK:
+CLOCK: [2020-05-22 Fr 09:00]--[2020-05-22 Fr 10:30] =>  1:30
+:END:
+- finish stuff I couldn't finish on Thursday
+
+*** Add loading spinner
+:LOGBOOK:
+CLOCK: [2020-05-22 Fr 10:30]--[2020-05-22 Fr 11:30] =>  1:00
+:END:
+- show for 1.2s on page load to mock a fetch of user data
+
+*** Add error handling to server
+:LOGBOOK:
+CLOCK: [2020-05-22 Fri 14:00]--[2020-05-22 Fri 14:30] =>  0:30
+CLOCK: [2020-05-22 Fri 11:30]--[2020-05-22 Fri 12:30] =>  1:00
+:END:
+- research current state of the art error handling in Node
+
+*** Teams Call (Hannes, Thomas, Stefan, Lennart)
+:LOGBOOK:
+CLOCK: [2020-05-22 Fri 12:30]--[2020-05-22 Fri 14:00] =>  1:30
+:END:
+- 09.06 Bank Demo
+- Ende Juni POC fuer Kunden mit KYC
+
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-22 Fri 15:30]--[2020-05-22 Fri 16:00] =>  0:30
+:END:
+
+*** Enrich 'Redeem/Payout' Form with Country Selector Input
+:LOGBOOK:
+CLOCK: [2020-05-22 Fri 16:00]--[2020-05-22 Fri 18:00] =>  2:00
+:END:
+*** Organize, go through noition, examine log entries
+:LOGBOOK:
+CLOCK: [2020-05-22 Fri 18:00]--[2020-05-22 Fri 18:15] =>  0:15
+:END:
+* KW 22 25.05.2020-31.05.2020
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline                    | Time    |      |
+|-----------------------------+---------+------|
+| *Total time*                | *41:30* |      |
+|-----------------------------+---------+------|
+| KW 22 25.05.2020-31.05.2020 | 41:30   |      |
+| \_  22.05 Montag            |         | 8:25 |
+| \_  23.05 Dienstag          |         | 8:20 |
+| \_  24.05 Mittwoch          |         | 8:25 |
+| \_  25.05 Donnerstag        |         | 8:10 |
+| \_  26.05 Freitag           |         | 8:10 |
+#+END:
+
+** 22.05 Montag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline         | Time   |      |
+|------------------+--------+------|
+| *Total time*     | *8:25* |      |
+|------------------+--------+------|
+| \_  22.05 Montag |        | 8:25 |
+#+END:
+
+*** Plan & organize
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 09:00]--[2020-05-25 Mon 09:20] =>  0:20
+:END:
+*** Add fees to Redeem form
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 09:20]--[2020-05-25 Mon 12:45] =>  3:25
+:END:
+*** Payout -> Redeem
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 12:45]--[2020-05-25 Mon 13:15] =>  0:30
+:END:
+- rename components
+- rename folders
+- adapt imports to rename
+- adapt code to rename
+- change texts
+*** QR Code adaptions
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 13:45]--[2020-05-25 Mon 14:45] =>  1:00
+:END:
+- include fees
+*** Aufgabenfindung
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 14:45]--[2020-05-25 Mon 15:00] =>  0:15
+:END:
+*** Add functionality to change item quanitity in cart
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 15:00]--[2020-05-25 Mon 17:30] =>  2:30
+:END:
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-25 Mon 17:30]--[2020-05-25 Mon 17:55] =>  0:25
+:END:
+** 23.05 Dienstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:20* |      |
+|--------------------+--------+------|
+| \_  23.05 Dienstag |        | 8:20 |
+#+END:
+
+*** Plan & organize
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 09:00]--[2020-05-26 Tue 09:15] =>  0:15
+:END:
+*** Preparations for cart icon indicator
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 09:15]--[2020-05-26 Tue 09:45] =>  0:30
+:END:
+*** Call with Thomas & Robert
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 09:45]--[2020-05-26 Tue 10:40] =>  0:55
+:END:
+- about Cart Icon design & position
+*** Realize Cart Icon
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 10:40]--[2020-05-26 Tue 12:00] =>  1:20
+:END:
+- add cart icon into header
+- add badge to cart icon -> text instead of badge for now until greenlight
+- make badge dynamic / show the count of different items
+- link to /cart route
+*** Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 12:00]--[2020-05-26 Tue 12:15] =>  0:15
+:END:
+- about dynamic QR code to verify address on checkout
+- about contract situation with Germany
+*** Investigate WL App's QR Code parsing and code in general
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 12:15]--[2020-05-26 Tue 13:15] =>  1:00
+:END:
+- AppActions:     static storeDeviceCredits(credits)
+  - gets mostly called from AuthFlowContainer
+  - if deviceCredits are present they are saved that way, else the device gets registered (registerDevice) and then the credits are stored
+*** Show QR Code with "users" (mock) address when selecting 'Own Wallet' method
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 14:15]--[2020-05-26 Tue 17:00] =>  2:45
+:END:
+- included a call with robert to finalize the modal design
+*** Call/Alignment with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 17:00]--[2020-05-26 Tue 17:20] =>  0:20
+:END:
+*** Test QR Code with diff addresses
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 17:20]--[2020-05-26 Tue 17:40] =>  0:20
+:END:
+*** Refactor button components out
+:LOGBOOK:
+CLOCK: [2020-05-26 Tue 17:40]--[2020-05-26 Tue 18:20] =>  0:40
+:END:
+- TODO:
+** 24.05 Mittwoch
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline           | Time   |      |
+|--------------------+--------+------|
+| *Total time*       | *8:25* |      |
+|--------------------+--------+------|
+| \_  24.05 Mittwoch |        | 8:25 |
+#+END:
+
+*** Plan & Organize
+:LOGBOOK:
+CLOCK: [2020-05-27 Wed 09:00]--[2020-05-27 Wed 09:15] =>  0:15
+:END:
+*** Review code from prev. day
+:LOGBOOK:
+CLOCK: [2020-05-27 Wed 09:15]--[2020-05-27 Wed 09:30] =>  0:15
+:END:
+*** Prepare 'Thank you' screen for tokencard checkout
+:LOGBOOK:
+CLOCK: [2020-05-27 Wed 09:30]--[2020-05-27 Wed 11:00] =>  1:30
+:END:
+*** Setup generic theming
+:LOGBOOK:
+CLOCK: [2020-05-27 Wed 14:00]--[2020-05-27 Wed 16:40] =>  2:40
+CLOCK: [2020-05-27 Wed 11:00]--[2020-05-27 Wed 13:15] =>  2:15
+:END:
+- define generic color sets for components
+- apply to all current components and keep integrity
+*** Test IS client config creds
+:LOGBOOK:
+CLOCK: [2020-05-27 Wed 16:40]--[2020-05-27 Wed 18:10] =>  1:30
+:END:
+
+** 25.05 Donnerstag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline             | Time   |      |
+|----------------------+--------+------|
+| *Total time*         | *8:10* |      |
+|----------------------+--------+------|
+| \_  25.05 Donnerstag |        | 8:10 |
+#+END:
+
+
+*** Organize
+:LOGBOOK:
+CLOCK: [2020-05-28 Thu 09:00]--[2020-05-28 Thu 09:15] =>  0:15
+:END:
+*** Fix tools / editor because it misbehaves after system update from prev. day
+:LOGBOOK:
+CLOCK: [2020-05-28 Thu 09:15]--[2020-05-28 Thu 09:45] =>  0:30
+:END:
+*** Configure Environment(s)
+:LOGBOOK:
+CLOCK: [2020-05-28 Thu 14:30]--[2020-05-28 Thu 18:10] =>  3:40
+CLOCK: [2020-05-28 Thu 09:45]--[2020-05-28 Thu 13:30] =>  3:45
+:END:
+
+** 26.05 Freitag
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *8:10* |      |
+|-------------------+--------+------|
+| \_  26.05 Freitag |        | 8:10 |
+#+END:
+
+*** Organizational Tasks
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 09:00]--[2020-05-29 Fri 09:20] =>  0:20
+:END:
+- request automatic approval of users
+- get greenlight for deployal
+*** Align with Jevgeny (+ Thomas) in regards to UAT administration & authentication
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 10:00]--[2020-05-29 Fri 10:30] =>  0:30
+:END:
+*** Investigate user confirmation process, Call with Thomas
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 10:30]--[2020-05-29 Fri 11:15] =>  0:45
+:END:
+
+*** Deploy and configure additional stuff on the server
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 11:15]--[2020-05-29 Fri 12:45] =>  1:30
+CLOCK: [2020-05-29 Fri 09:20]--[2020-05-29 Fri 10:00] =>  0:40
+:END:
+- add file logging
+*** Make redirects on production work which currently fail
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 12:45]--[2020-05-29 Fri 14:00] =>  1:15
+:END:
+- probably related to proxy settings
+
+*** Verify production functionality and logs
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 14:00]--[2020-05-29 Fri 14:40] =>  0:30
+:END:
+*** Call with Thomas for new insights and delivering estimates
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 15:00]--[2020-05-29 Fri 15:30] =>  0:30
+:END:
+*** Add logout functionality
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 15:30]--[2020-05-29 Fri 17:20] =>  1:50
+:END:
+*** Finalize & publish monthly logs/hours
+:LOGBOOK:
+CLOCK: [2020-05-29 Fri 17:20]--[2020-05-29 Fri 17:30] =>  0:10
+:END:
