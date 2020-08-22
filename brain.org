@@ -112,14 +112,14 @@ Mediencodierung
 - from StackOverflow: "Currently, for Vimeo it is much easier and doesn't require all the steps. Simply open a Vimeo video, find the <video> tag in the dev tools DOM structure and change the src attribute from blob:... to x. Nothing will happen - this is ok. Now change it again, to y. Chrome will convert it 'magically' to the URL like in step 8 or 9. :-)"
 *** Latex/PDF/Markdown
 - https://learnbyexample.github.io/tutorial/ebook-generation/customizing-pandoc/
-*** Master Study Plan [0/0]
+*** Master Study Plan [7/9]
 - [X] CS Fundamentals I
 - [X] CS Fundamentals II
 - [X] JavaScript: The Hard Parts, v2
-- [ ] JavaScript: The Hard Parts of Object Oriented JavaScript
-- [ ] Hard Parts: Functional JS Foundations
-- [ ] JavaScript: The New Hard Parts
-- [ ] The Hard Parts of Servers & Node.js
+- [X] JavaScript: The Hard Parts of Object Oriented JavaScript
+- [X] Hard Parts: Functional JS Foundations
+- [X] JavaScript: The New Hard Parts
+- [X] The Hard Parts of Servers & Node.js
 - [ ] Digging Into Node.js
 - [ ] API Design in Node.js, v3
 **** Keep an eye on [0/5]
