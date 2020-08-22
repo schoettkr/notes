@@ -82,8 +82,11 @@ Mediencodierung
 - https://wiki.nikitavoloboev.xyz/
 - https://nathanwailes.atlassian.net/wiki/spaces/MTOVT/overview
 - https://www.reddit.com/r/learnprogramming/comments/gsansp/my_55step_selftaught_cs_curriculum_updated/
-- https://runestone.academy/runestone/books/published/pythonds/index.html
+- https://runestone.academy/runestone/books/published/pythonds/index.html (also other courses here)
 - https://www.programiz.com/dsa/avl-tree
+- https://www.notion.so/Programming-Course-7936bf2845c146c6bd6b3a5e659f8f3c
+- https://github.com/P1xt/p1xt-guides
+- https://www.twitch.tv/tsoding/
 *** Download from livestream.org
 1. Open the livestream video with network tab opened and filter for "m3u8"
 2. Copy that url, optionally remove suffix like start/end
@@ -144,6 +147,10 @@ Mediencodierung
 - http://aosabook.org/en/index.html
 - https://frontendmasters.com/books/front-end-handbook/2019/
 - https://realpython.com/sorting-algorithms-python/
+- API design https://www.udacity.com/course/designing-restful-apis--ud388
+- https://leanpub.com/build-apis-you-wont-hate
+- https://archive.org/details/api-design-ebook-2012-03/page/n1/mode/2up
+- https://github.com/paypal/api-standards/blob/master/api-style-guide.md
 *** Places to get stuff
 - https://eybooks.com
 - https://b-ok.org
