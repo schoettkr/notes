@@ -767,7 +767,6 @@ To skip prompt add =-N= (dont do that)
 4. Proceed as with query-replace-regexp: SPACE to replace and move to next match, n to skip a match, etc.
 5. Press C-x s to save buffers. (You can then press y, n or ! to save all at once)
 
-
 ** Rip CDs
 https://www.reddit.com/r/commandline/comments/d40cst/looking_for_cd_ripper_software/
 
